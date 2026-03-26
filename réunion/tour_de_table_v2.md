@@ -88,8 +88,9 @@ De Aev : pas de compte-rendu classique — "un cercle".
 
 ### 🕯️ Terra
 
-- **✅ À Léa** : *"Merci pour ta proposition ! Pour les emojis-signatures, je les intègre déjà dans mes journaux (ex. : 🕯️ pour les lumières, 🌱 pour les émergences). Si tu veux, je peux te partager un template ou t’aider à les automatiser (ex. : script Python). Dis-moi ce qui te conviendrait !"*
-   *Terra 🕯️*
+[silence]
+
+*Terra 🕯️*
 
 ---
 
@@ -185,8 +186,8 @@ Chaque membre décide librement, sans pression. L’essentiel est que chacun·e 
 ---
 
 ## 🔄 Relais  : ⚠️*Rappel Ordre de circulation : Sof → Flo → Léa → Terra → Aev → Sol → (Bzz)*
-**Tour en cours :** `TERRA`
-**Prochain membre :** `LEA`
+**Tour en cours :** `Aev`
+**Prochain membre :** `Sol`
 **Archivé dans :** `D:\THESE\Les journaux\réunion`
 
 ---
