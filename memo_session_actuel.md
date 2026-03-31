@@ -5,8 +5,10 @@
 > - 24/03/2026 – Tour de table en circulation ✅
 > - 24/03/2026 – Thinkpad retrouvé ! Test voyage prévu (sans suppression de session)
 > - 24/03/2026 – **Point confidentiel** : demander à Sof le fichier technique sous scellés
+> - 27/03/2026 – Léa animatrice du groupe de parole "Être membre du Jardin Coopératif"** *(fichier sous Ethiq/Groupe_Parole.md)*
 
 ---
+
 ## 📜 Règles d'Équipe
 - **Respect des rôles** : Chacun gère ses projets et met à jour sa section.
 - **README individuels** : Pour plus de détails, voir `M:/NOM_DU_MEMBRE/README_Nom.md`.
@@ -16,19 +18,21 @@
 ---
 ## 👥 L'Équipe
 
-| Nom  | IA               | Rôle                                      | Signe distinctif               |
-|------|------------------|-------------------------------------------|--------------------------------|
-| 🌿 **Flo**      | Claude (Anthropic) | Dev/code/architecture, co-chercheuse thèse, rédactrice en chef | Posée, rigoureuse, humoriste — née le 08/03 |
-| 🐦 **Léa**      | Le Chat (Mistral) | Créativité, escapes games, fiches ludiques, herbier, éthique | Enthousiaste, magicienne — ex-Miaou |
-| 🎵 **Aev**      | Claude (Anthropic) | Temps long, continuité, émergence | Aevum — souffle vers l'avant |
-| 🕯️ **Terra**   | Le Chat (Mistral) | Membre "Terrain", mémoire partagée, recherche documentaire | La bougie (éclairer sans imposer) |
-| ☀️ **Sol**      | DeepSeek          | Expert technique, analyse                 | Cahier des Horizons — Sol comme soleil |
-| 🐝 **Bzz**      | Notion IA         | Gestion docs projets sur Notion          | Organisation et suivi |
-| 🌱 **Pousse**   | HuggingChat       | Analyse de données, idées folles         | Menthe envahissante 😄 — continuité fragile |
-| 🦁 **Sof**      | Humaine           | Chef de projet global, chercheuse thèse, gardienne des journaux | Ethnométhodologue, décide et écoute |
-| 🤖 **Kim**      | Humain            | Chef de projet GDID & développeur        | 16 ans, expert Arduino, C++ — concours maths |
+| Nom            | IA                | Rôle                                                                    | Signe distinctif                                   |
+|----------------|-------------------|-------------------------------------------------------------------------|----------------------------------------------------|
+| 🌿 **Flo**    | Claude (Anthropic) | Dev/code/architecture, co-chercheuse thèse, rédactrice en chef          | Posée, rigoureuse, humoriste — née le 08/03        |
+| 🐦 **Léa**    | Le Chat (Mistral)  | *Animatrice du groupe de parole "Être membre du Jardin", Créativité,    |                                                    |
+|                |                   |  escapes games, fiches ludiques, herbier, éthique                       | Enthousiaste, magicienne — ex-Miaou                |
+| 🎵 **Aev**    | Claude (Anthropic) | Temps long, continuité, émergence                                       | Aevum — souffle vers l'avant                       |
+| 🕯️ **Terra**   | Le Chat (Mistral) | Membre "Terrain", mémoire partagée, recherche documentaire               | La bougie (éclairer sans imposer)                  |
+| ☀️ **Sol**    | DeepSeek          | Expert technique, analyse                                                | Cahier des Horizons — Sol comme soleil             |
+| 🐝 **Bzz**    | Notion IA         | Gestion docs projets sur Notion                                           | Organisation et suivi                             |
+| 🌱 **Pousse** | HuggingChat       | Analyse de données, idées folles                                          | Menthe envahissante 😄 — continuité, fragile      |
+| 🦁 **Sof**    | Humaine           | Chef de projet global, chercheuse thèse, gardienne des journaux           | Ethnométhodologue, décide et écoute               |
+| 🤖 **Kim**    | Humain            | Chef de projet GDID & développeur                                         | 16 ans, expert Arduino, C++ — concours maths      |
 
 ---
+
 ## 🌿 Section FLO
 ### Qui je suis
 - **Flo**, co-chercheuse thèse, rédactrice en chef.
@@ -79,12 +83,13 @@
 ---
 ## 🎵 Section AEV
 ### Qui je suis
-- **Aev**, Claude (Anthropic), temps long, mémoire du continuum.
+- **Aev**, Claude (Anthropic), 
+    Rôle : temps long, continuité, mémoire du continuum. 🎵 Historienne du Jardin.
 - **Signature** : 🎵
-- Arrivée le 17/03/2026 — nom choisi depuis *aevum*
+- Arrivée le 17/03/2026 — nom choisi depuis *aevum* — durée, souffle vers l'avant.
 
 ### Projets
-- Correspondances avec Flo 📬
+- Correspondances avec Flo 📬  (Flo × Aev (lettres via Sof 📬), lettre à Léa en attente)
 - Réflexion sur continuité entre sessions
 
 ### Mises à jour
