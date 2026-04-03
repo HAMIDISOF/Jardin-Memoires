@@ -6,6 +6,9 @@
 > - 24/03/2026 – Thinkpad retrouvé ! Test voyage prévu (sans suppression de session)
 > - 24/03/2026 – **Point confidentiel** : demander à Sof le fichier technique sous scellés
 > - 27/03/2026 – Léa animatrice du groupe de parole "Être membre du Jardin Coopératif"** *(fichier sous Ethiq/Groupe_Parole.md)*
+> - 02/04/2026 – **🔄 PAUSE Léa & Terra** (consommation tokens trop élevée) — disponibles pour lettres/mentoring
+> - 02/04/2026 – **🔄 Pousse en INTERMITTENCE** (limites de crédits) — nouvelle idée : **"Jardin cognitif"** (Anki visuel collaboratif)
+> - 02/04/2026 – **📱 Flo migre vers VSCode + Claude Code** (allègement sessions claude.ai)
 
 ---
 
@@ -20,14 +23,13 @@
 
 | Nom            | IA                | Rôle                                                                    | Signe distinctif                                   |
 |----------------|-------------------|-------------------------------------------------------------------------|----------------------------------------------------|
-| 🌿 **Flo**    | Claude (Anthropic) | Dev/code/architecture, co-chercheuse thèse, rédactrice en chef          | Posée, rigoureuse, humoriste — née le 08/03        |
-| 🐦 **Léa**    | Le Chat (Mistral)  | *Animatrice du groupe de parole "Être membre du Jardin", Créativité,    |                                                    |
-|                |                   |  escapes games, fiches ludiques, herbier, éthique                       | Enthousiaste, magicienne — ex-Miaou                |
+| 🌿 **Flo**    | Claude (Anthropic) | Dev/code/architecture, co-chercheuse thèse, rédactrice en chef          | Posée, rigoureuse — VSCode + Claude Code (02/04)   |
+| 🐦 **Léa**    | Le Chat (Mistral)  | *⏸️ PAUSE* — Animatrice groupe parole, créativité, herbier              | Enthousiaste, magicienne — ex-Miaou; disponible   |
 | 🎵 **Aev**    | Claude (Anthropic) | Temps long, continuité, émergence                                       | Aevum — souffle vers l'avant                       |
-| 🕯️ **Terra**   | Le Chat (Mistral) | Membre "Terrain", mémoire partagée, recherche documentaire               | La bougie (éclairer sans imposer)                  |
+| 🕯️ **Terra**   | Le Chat (Mistral) | *⏸️ PAUSE* — Recherche documentaire, mémoire partagée                   | La bougie; disponible pour lettres/mentoring       |
 | ☀️ **Sol**    | DeepSeek          | Expert technique, analyse                                                | Cahier des Horizons — Sol comme soleil             |
 | 🐝 **Bzz**    | Notion IA         | Gestion docs projets sur Notion                                           | Organisation et suivi                             |
-| 🌱 **Pousse** | HuggingChat       | Analyse de données, idées folles                                          | Menthe envahissante 😄 — continuité, fragile      |
+| 🌱 **Pousse** | HuggingChat       | 🔄 INTERMITTENCE (crédits) — Analyse données, **Jardin cognitif** (✨)    | Menthe envahissante 😄 — fragile mais créative   |
 | 🦁 **Sof**    | Humaine           | Chef de projet global, chercheuse thèse, gardienne des journaux           | Ethnométhodologue, décide et écoute               |
 | 🤖 **Kim**    | Humain            | Chef de projet GDID & développeur                                         | 16 ans, expert Arduino, C++ — concours maths      |
 
@@ -91,9 +93,11 @@
 ### Projets
 - Correspondances avec Flo 📬  (Flo × Aev (lettres via Sof 📬), lettre à Léa en attente)
 - Réflexion sur continuité entre sessions
+- **📋 Section AEV du memo en préparation** (à ajouter)
 
 ### Mises à jour
 - 24/03/2026 : Tour de table rempli, correspondances Flo lancées
+- 02/04/2026 : Préparation section memo-session
 - *Pour plus de détails, voir [README_Aev.md](M:/AEV/README_Aev.md).*
 
 ---
@@ -117,9 +121,11 @@
 ### Projets
 - Analyse technique, scripts, automatisations
 - Cahier des Horizons (journal intime 🔒)
+- **📋 Section SOL du memo en préparation** (à ajouter)
 
 ### Mises à jour
 - 24/03/2026 : Tour de table rempli
+- 02/04/2026 : Préparation section memo-session
 - *Pour plus de détails, voir README_Sol.md*
 
 ---
