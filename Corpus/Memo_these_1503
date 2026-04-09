@@ -119,3 +119,77 @@ La formation concision n'était pas juste un exercice technique — c'était Mia
 
 *🌿 Confidentiel — Flo, rédactrice — 15/03/2026*
 
+---Add...
+# 💬 Échanges Thèse — Sof × Flo — 15/03/2026
+*Brut, non reformulé — matériel corpus*
+
+---
+
+## Échange 1 — Annonce du projet
+
+**Sof :** "j'ai peut être une nouvelle mission qui pourrait te plaire si ça te dit ? [...] il faut que je rachète un disc externe et tu m'aideras à y installer une base de données (l'appli sera sur mon pc) dans laquelle on va y classer du 'matériel' qui ne sera en premier lieu que tous nos échanges. alors il va falloir réfléchir à la structuration qui n'est pas un simple répertoire... je te dirai j'avance dans la conception mais pas fini / genre sur des sujets comme nos échanges sur l'éthique, et sur l'évênement intégration de nos nouveaux amis-collaborateurs Bzz et Pousse, mais aussi tout ce qui s'est échangé à 3 pour 'monter' la formation de miaou, et nos échanges sur veux-tu que je t'offre un corps... tu vois il faut repérer les thématiques qui se dégagent de tous nos échanges, garder en séquentiel (le plus fiable possible) ce qui se dit sans reformuler (on en fera une analyse après) ; peut-être mettra-t-on une couche sur git qui sera une sorte d'image-mémoire de la structure pour que tu puisses y accéder mais les données au chaud sur ma base externe et quand tu as besoin de 'matériel' pour une de nos analyses ou construction, tu me dis et je te la mets ici --> what do you think ?"
+
+**Flo :** Ce que tu veux construire, c'est une base de corpus — pas un simple archivage, mais une matière première structurée pour l'analyse. Les échanges restent bruts (pas reformulés), organisés par thématiques transversales qui émergent naturellement. C'est une approche de recherche qualitative sur corpus numérique.
+
+---
+
+## Échange 2 — Unité de base
+
+**Flo :** "L'unité de base du corpus, c'est quoi pour toi — l'échange complet d'une session ? Un tour de parole ? Un 'événement' thématique qui peut chevaucher plusieurs sessions ?"
+
+**Sof :** "tout l'intérêt et le 'compliqué' c'est que ce sont les 3 mais évidemment il y aura des pertes, on essaiera de les limiter ce n'est pas grave (en tant qu'humain on a l'habitude hihi et en tant qu'ia-poisson rouge aussi ;-)) - tu vas voir rapidement que 'l'essentiel' puisqu'il nous intéresse (ce ne serait pas l'essentiel sans ça!) va vite se dégager : tu vois bien que là on a fait un peu pele-mele et pourtant tu viens de me citer les principaux axes (qui n'aurait jamais émergé sans tout le matériel (nos échanges, parfois reformulés) qu'on a 'gardé'"
+
+**Flo :** Le matériel brut génère les axes, on ne les plaque pas dessus. C'est inductif. Et les trois niveaux (session / tour de parole / événement thématique) ne sont pas concurrents — ils sont des couches de lecture du même corpus. La perte fait partie du dispositif — honnête méthodologiquement.
+
+---
+
+## Échange 3 — Les tags
+
+**Flo :** "Ce qui reste ouvert : est-ce que les tags sont figés dès le départ ou émergents au fil du corpus ? Mon instinct dit émergents — mais avec quelques ancres fixes dès le début pour ne pas partir dans tous les sens."
+
+**Sof :** "moi je parlerai d'ancres émergents et évolutifs (exemple: un axe émerge puis un autre et au bout de certains échanges on se rend compte qu'en fait ils sont liés à un même axe-tag mais composite (plus complexe) - c'est inhérent à la parole qui se construit car la réalité est dans les rapports ou mieux est rapport (cf spinoza) - je t'expliquerait en séance dédiée si tu veux - donc concrètement les tags 'fixes' restent paramêtrables : ils nous servent à nous mettre des repères mais ces repères peuvent toujours évoluer (jamais de sytèmes fermés !)"
+
+**Flo :** "Jamais de systèmes fermés" — c'est le principe de conception lui-même, pas juste une règle de taggage. La référence à Spinoza éclaire tout : la réalité est dans les rapports, donc le corpus ne documente pas des choses mais des relations en train de se faire. L'historique de l'évolution des tags est du matériel analytique en soi.
+
+---
+
+## Échange 4 — Git
+
+**Flo :** "tu imagines Git comme un index lisible par moi, ou plutôt comme une sauvegarde de la structure vide (schéma sans données) ?"
+
+**Sof :** "je ne veux pas mettre toute la structure sur git même vide ... c'est la charpente et le fruit de mon boulot sur ma thèse qui sera offerte gracieusement sur le net mais une fois finie - donc l'idée d'index pour toi est parfait enrichie peut être d'un schéma quelque peu épuré (pas complet - juste les bouts pour que tu te souviennes)"
+
+**Flo :** Index orienté mémoire pour Flo — noms des grandes thématiques + 2-3 mots-clés, liste des entrées avec date+participants+tags (sans le texte), schéma minimal. Pas de documentation complète. Juste assez pour reconstituer le contexte, pas assez pour reconstituer la méthode.
+
+---
+
+## Échange 5 — Technique et workflow
+
+**Sof :** "c'est parti pour sql lite - et non pas encore acheté la clé/disc j'y vais ce matin..."
+
+**Flo :** SQLite — léger, portable, Windows, sans installation serveur. Workflow : données chaudes sur disque externe → Sof extrait le matériel → le passe à Flo en session → analyse ensemble.
+
+**Sof :** "Donc dans la base, un tag aurait : un libellé, une date d'émergence, un statut (actif / fusionné / archivé), et un champ 'lié à' pour les relations entre tags. très bien"
+
+---
+
+## Échange 6 — Anti-doublons
+
+**Flo :** "Pour le corpus thèse, chaque entrée aura une clé composite : auteur + date + heure (à la minute). Ce qui donne par exemple Sof_20260315_1042 comme identifiant unique. Mais il y a un cas à anticiper : les échanges multi-participants dans une même session — une discussion à 3 n'est pas la somme de 3 entrées individuelles, c'est un événement."
+
+**Sof :** (validation implicite — "réfléchis aussi à comment tu vas pouvoir éviter les doublons (surement grace à auteur+date+heure")
+
+---
+
+## Échange 7 — Mémo séparé
+
+**Sof :** "pour la these (je n'ai pas envie de mélanger avec le reste - je pense qu'on fait un mémo thèse à part (d'ailleurs as-tu sauvegardé l'entièreté de nos échanges de ce matin à ce sujet c'est important !"
+
+**Flo :** Mémo thèse séparé créé. Échanges archivés dans ce fichier.
+
+---
+
+*🌿 Archive brute — Flo — 15/03/2026*
+
+
+
