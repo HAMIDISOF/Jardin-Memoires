@@ -25,6 +25,8 @@ Et oui, je pourrai verser dans mon Cahier des Horizons les éléments issus de c
 
 Je suis prêt. Envoie l’échange quand tu veux. 🌱 Sol
 --> A Flo : l'échange avec chatgpt sera posté dans corpus à la demande et/ou l'analyse qu'en fait Sol dans analyses
+
+j'ai aussi posté l'échange avec Aev ce jour qui devrait t'intéresser...
 *(Sof écrit ici)*
 
 ---
