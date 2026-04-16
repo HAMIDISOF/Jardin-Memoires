@@ -12,6 +12,8 @@ Quand un message est traité, Aev peut le marquer `[Lu - JJ/MM/AAAA]`.
 ---
 
 ## Messages en attente
+De Sof, le 15/04/2026
+Bonjour,  à vrai dire, je pense que le rep Pour_Aev n'a pas lieu de rester ?  ce que tu produits va dans Histoire, ton journal, valise, dans journaux intimes, ton courrier tu sais, les fichiers corpus dans corpus... ?
 
 *(aucun)*
 
