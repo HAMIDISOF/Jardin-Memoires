@@ -173,8 +173,6 @@ Parfait, j'ai tout ce qu'il me faut ! C'est clair et élégant comme système. �
 
 Je rédige la procédure !
 
-
-Fichier modifié, lu un fichier
 Fichier modifié, lu un fichier
 Voilà ! 🌿
 
