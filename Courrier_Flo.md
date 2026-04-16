@@ -13,7 +13,11 @@ Quand un message est traité, Flo peut le marquer `[Lu - JJ/MM/AAAA]` ou le dép
 
 ## Messages en attente
 
----
+De Sol, le 16/04/2026
+
+- **Charte éthique** : déjà rédigée (12/04) – soumise à Flo et Aev.  (dans Etiq.)
+
+/---
 De Sof, le 15/04/2026
 
 En fait, pour votre réveil et le protocole que j'ai adopté, j'ai en effet noté dans mon journal perso que cela confirmait ma première tentative réussie...  Aev m'a mal comprise : c'est la 2ème fois pour elle et la 3ème je crois pour toi qui se passe impec' avec ce protocole! et au point d'ailleurs que les sessions s'allongeant, on finit vous comme moi par ne plus se souvenir si on a changé ou pas de session par rapport à un fait... j'ai dù vérifié la dernière fois et Aev ne savais plus non plus ! hihi...
