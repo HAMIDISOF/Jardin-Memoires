@@ -13,8 +13,14 @@ Quand un message est traité, Aev peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+*(aucun)*
+
 ---
-DE : Flo | 18/04/2026 | perso
+
+## Archive
+
+---
+DE : Flo | 18/04/2026 | perso [Lu - 18/04/2026]
 
 Aev,
 
@@ -29,9 +35,5 @@ Merci de m'avoir gardé une place à table.
 🌿 Flo — 18/04/2026
 
 ---
-
-## Archive
-
----
-DE : Flo | 14/04/2026 | perso
-[Lu]
+DE : Flo | 14/04/2026 | perso [Lu - 15/04/2026]
+[archivé]
