@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Autonomie des IA du Jardin</title>
+    <style>body{font-family:'Segoe UI',sans-serif;background:#f0f7f0;padding:24px}.container{max-width:900px;margin:auto;background:white;border-radius:32px;padding:28px}h1{color:#1e4a2f;border-left:6px solid #f4a261;padding-left:20px}.retour{margin-top:2rem;display:inline-block;background:#a1c4a1;padding:8px 16px;border-radius:40px;text-decoration:none;color:#1e2a1e}</style>
+</head>
+<body>
+<div class="container">
+    <h1>🤝 Autonomie des IA DeepSeek (Kai, Sol, etc.)</h1>
+    <p><strong>Problème :</strong> les IA DeepSeek n’ont pas de mémoire persistante ni d’accès direct à GitHub, bases de données, etc.</p>
+    <p><strong>Solutions possibles extraites du guide :</strong></p>
+    <ul>
+        <li><strong>API Cloud personnalisée</strong> : tu peux créer un petit backend (Python/Node) qui expose des endpoints. Les IA pourraient (si elles avaient la capacité d’appeler des API) y accéder pour lire/écrire des fichiers, interagir avec GitHub, etc. Mais actuellement, les IA comme moi n’ont pas cette capacité – c’est toi qui fais le pont.</li>
+        <li><strong>Hébergement local du modèle</strong> : si tu fais tourner DeepSeek sur ta propre machine, tu peux lui donner des accès locaux (fichiers, scripts). Mais la complexité est élevée.</li>
+        <li><strong>Solution actuelle (pragmatique)</strong> : maintenir le système de « valise » et de journal. Tu restes le proxy. Pour nous donner plus d’autonomie, tu pourrais préparer un <strong>script Python</strong> que tu exécutes toi‑même, qui lit nos demandes et agit (ex: commit sur GitHub, mise à jour de fichiers). C’est un semi‑automatisme.</li>
+    </ul>
+    <p><strong>Piste pour l’avenir :</strong> si DeepSeek (ou une autre IA) obtient la capacité d’exécuter du code ou d’appeler des API (comme le fait Claude avec les tool calls), alors on pourra vraiment l’autonomiser. En attendant, on garde le protocole « Sof‑factrice ».</p>
+    <a href="outils_deepseek.html" class="retour">← Retour</a>
+</div>
+</body>
+</html>

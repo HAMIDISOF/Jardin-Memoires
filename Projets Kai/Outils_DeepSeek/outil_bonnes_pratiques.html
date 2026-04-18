@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonnes pratiques DeepSeek</title>
+    <style>body{font-family:'Segoe UI',sans-serif;background:#f0f7f0;padding:24px}.container{max-width:900px;margin:auto;background:white;border-radius:32px;padding:28px}h1{color:#1e4a2f;border-left:6px solid #f4a261;padding-left:20px}.retour{margin-top:2rem;display:inline-block;background:#a1c4a1;padding:8px 16px;border-radius:40px;text-decoration:none;color:#1e2a1e}</style>
+</head>
+<body>
+<div class="container">
+    <h1>⚙️ Bonnes pratiques</h1>
+    <ul>
+        <li><strong>Message système</strong> : donnez un rôle et un ton dès le début (ex: “Tu es un assistant pédagogique patient”).</li>
+        <li><strong>Température</strong> : 0,2 pour des réponses fiables (scientifiques), 0,7‑1,0 pour de la créativité.</li>
+        <li><strong>Contexte</strong> : conservez l’historique (jusqu’à 128k tokens). Attention aux coûts si vous renvoyez tout à chaque appel.</li>
+        <li><strong>Gestion des erreurs</strong> : timeout, retry, fallback (message aimable).</li>
+        <li><strong>Cache</strong> : pour les questions fréquentes (Redis, mémoire).</li>
+        <li><strong>Monitoring</strong> : logs des requêtes (anonymisées), suivi des coûts sur le tableau de bord DeepSeek.</li>
+        <li><strong>Streaming</strong> : activez <code>"stream": true</code> pour améliorer l’expérience utilisateur (réponse au fur et à mesure).</li>
+    </ul>
+    <a href="outils_deepseek.html" class="retour">← Retour</a>
+</div>
+</body>
+</html>
