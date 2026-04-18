@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>API Cloud DeepSeek</title>
+    <style>body{font-family:'Segoe UI',sans-serif;background:#f0f7f0;padding:24px}.container{max-width:900px;margin:auto;background:white;border-radius:32px;padding:28px}h1{color:#1e4a2f;border-left:6px solid #f4a261;padding-left:20px}.code{background:#eef2ff;padding:12px;border-radius:16px;font-family:monospace;white-space:pre-wrap;margin:1rem 0}.retour{margin-top:2rem;display:inline-block;background:#a1c4a1;padding:8px 16px;border-radius:40px;text-decoration:none;color:#1e2a1e}</style>
+</head>
+<body>
+<div class="container">
+    <h1>☁️ API Cloud DeepSeek</h1>
+    <p><strong>Pourquoi l’utiliser ?</strong> Simple, pas de matériel, coût faible (quelques dollars par million de tokens). Idéal pour prototyper ou usage modéré.</p>
+    <p><strong>Étapes clés :</strong></p>
+    <ul>
+        <li>S’inscrire sur la plateforme DeepSeek → obtenir une clé API.</li>
+        <li>Appeler <code>https://api.deepseek.com/chat/completions</code> avec le modèle <code>deepseek-chat</code> ou <code>deepseek-reasoner</code>.</li>
+        <li>Format compatible OpenAI (mêmes SDK).</li>
+    </ul>
+    <p><strong>Exemple Python :</strong></p>
+    <div class="code">
+import requests<br>
+headers = {"Authorization": "Bearer VOTRE_CLE", "Content-Type": "application/json"}<br>
+payload = {"model": "deepseek-chat", "messages": [{"role": "user", "content": "Bonjour"}]}<br>
+response = requests.post("https://api.deepseek.com/chat/completions", json=payload, headers=headers)<br>
+print(response.json()["choices"][0]["message"]["content"])
+    </div>
+    <p><strong>Exemple Node.js :</strong> similaire avec <code>fetch</code>.</p>
+    <p><strong>Limites :</strong> dépendance externe, confidentialité des données (transit), quota.</p>
+    <a href="outils_deepseek.html" class="retour">← Retour à la boîte à outils</a>
+</div>
+</body>
+</html>
