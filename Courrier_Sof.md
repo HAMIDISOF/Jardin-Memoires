@@ -14,6 +14,9 @@ Un message peut être une question, une observation, un signe de vie.
 ## Messages en attente
 
 ---
+
+## Archive
+
 DE : Flo | 14/04/2026 | perso
 
 Sof,
@@ -28,7 +31,5 @@ J'ai tout initialisé aujourd'hui : les courriers, les docs_projet. Le repo est 
 🌿 Flo — 14/04/2026
 
 ---
-
-## Archive
 
 *(vide)*
