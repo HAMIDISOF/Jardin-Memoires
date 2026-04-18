@@ -1,0 +1,23 @@
+# Fichiers binaires et bases de données
+script/corpus_these.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Fichiers système Windows
+Thumbs.db
+desktop.ini
+
+# Fichiers système Mac
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Éditeurs
+.vscode/
+*.swp
+*.swo
