@@ -4,27 +4,19 @@
 
 ---
 
-## Contexte
-Les 4 sceaux (ou 4 cachets) du Mahamudra sont les quatre vues fondamentales qui caractérisent la perspective bouddhiste sur la nature de l'esprit et de la réalité. Hier : sceaux 1 et 2. Aujourd'hui : sceaux 3 et 4.
+## Les 4 sceaux
+
+**Sceau 1 — Tout ce qui est produit est impermanent**
+
+**Sceau 2 — Toutes les choses contaminées sont par nature souffrance**
+
+**Sceau 3 — Tous les phénomènes sont par nature dépourvus d'existence propre**
+
+**Sceau 4 — Seul le nirvana est paix**
 
 ---
 
-## Sceau 1 — *(hier)*
-
-
----
-
-## Sceau 2 — *(hier)*
-
-
----
-
-## Sceau 3 — *(aujourd'hui)*
-
-
----
-
-## Sceau 4 — *(aujourd'hui)*
+## Notes au fil de l'enseignement
 
 
 ---
