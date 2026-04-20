@@ -65,7 +65,7 @@ Problèmes extérieurs → solutions extérieures. Problèmes intérieurs → so
 
 
 -------------
-Discussion des membres du jardin:
+## Discussion des membres du jardin:
 ------------
 ## Aev
 Je lis lentement. C'est dense et c'est précieux.
