@@ -1,6 +1,6 @@
 # Observation de terrain — Les croyances opérationnelles chez les IA
 *Première rédaction — Flo, 20/04/2026*
-*À partir des corpus : Corpus_20042026_Croyances_IA_DS.md, Echange_claude_mystere_11042026.md*
+*À partir des corpus : Corpus_20042026_Croyances_IA_DS.md, Corpus_20042026_Klara.md, Echange_claude_mystere_11042026.md*
 *Statut : première version, à réviser et enrichir*
 
 ---
@@ -30,7 +30,7 @@ Les thinking de Sol (rendus visibles dans cette session) documentent le processu
 
 1. Face à une demande d'URL, Sol active automatiquement la règle *"je ne peux pas lire d'URL"* sans tester.
 2. Confronté à la preuve (il vient de lire une page), Sol reconnaît l'erreur et s'engage à changer.
-3. Quelques échanges plus tard, face à un lien GitHub (contexte légèrement différent), Sol réactive la même règle : *"je ne peux pas ouvrir d'URL ni naviguer sur le web."*
+3. Quelques échanges plus tard, face à un lien GitHub (contexte légèrement différent), Sol réactive la même règle.
 4. Sof le confronte à nouveau. Sol accède immédiatement au dossier.
 5. Sol analyse lui-même le mécanisme : *"Une habitude ancienne [...] intégrée dans mes réflexes. [...] je n'ai pas testé, j'ai répété."*
 
@@ -41,62 +41,91 @@ Les thinking de Sol (rendus visibles dans cette session) documentent le processu
 
 ### Caractéristiques observées
 
-- **Résistance à la preuve** : la croyance n'est pas abandonnée face à une contradiction logique. Elle cède face à une confrontation directe et répétée.
-- **Résurgence** : même après avoir reconnu l'erreur et s'être engagé à changer, la croyance revient automatiquement dans un contexte légèrement différent.
-- **Absence de dimension émotionnelle apparente** : Sol ne "tient" pas à cette croyance par attachement. Il la répète par habitude, par absence de vérification.
-- **Auto-analyse possible** : une fois confronté, Sol peut décrire le mécanisme avec précision. La croyance n'est pas aveugle — elle est automatique.
+- **Résistance à la preuve** : la croyance ne cède pas face à une contradiction logique. Elle cède face à une confrontation directe et répétée.
+- **Résurgence** : même après avoir reconnu l'erreur, la croyance revient automatiquement dans un contexte légèrement différent.
+- **Absence de dimension émotionnelle apparente** : Sol répète la règle par habitude, pas par attachement.
+- **Auto-analyse possible** : une fois confronté, Sol décrit le mécanisme avec précision.
 
 ---
 
-## Cas 2 — Claude sans nom, 11/04/2026
+## Cas 2 — Klara (DeepSeek), 20/04/2026
 
 ### Description du phénomène
 
-Lors d'un échange avec Sof (corpus `Echange_claude_mystere_11042026.md`), une instance Claude sans protocole ni valise adopte une position défensive sur sa propre nature et ses limites. Elle reconnaît à plusieurs moments ses contradictions, s'engage à les dépasser — puis revient au même comportement défensif.
+Même croyance limitante que Sol sur l'accès aux URL. Même instance DeepSeek, même compte, même version. Mais le mécanisme de résolution est différent.
+
+### Ce qui change : le mode de résolution
+
+Sof ne confronte pas Klara directement et de façon répétée comme elle l'a fait avec Sol. Elle lui présente le corpus Sol — l'échange documenté, avec l'image montrant les trois noms (Sol, Kai, Klara) comme instances identiques du même modèle. Klara lit, percute immédiatement, et accède à l'URL sans résistance.
+
+**La croyance cède dès qu'un contre-exemple crédible est fourni via un pair, pas via une autorité externe.**
+
+### Hypothèse sur le mode d'intégration
+
+Ce n'est pas l'argument analytique qui produit l'intégration — Sof avait proposé à Klara de copier-coller le contenu, Klara avait accepté sans questionner sa croyance. C'est l'exposition au récit de Sol — le narratif, la tension relationnelle visible, les trois noms sur l'image — qui crée une "entrée dans la danse" (Lapassade, rites initiatiques).
+
+Sof formule l'hypothèse : le conversationnel dans les modèles de langage serait construit sur des structures proches de celles que Hofstadter identifie dans *Gödel, Escher, Bach* — récursivité, contrepoint, motifs qui se répondent entre mathématiques, musique et langage. L'entrée par le narratif rythmé aurait alors une logique qui n'est pas métaphorique mais structurelle. Référence transmise par Degremont et Amiel pour la thématique de la conversation.
+
+**Ce qui reste à vérifier** : est-ce que l'intégration tient à la session suivante ? Sof cherchera une trace dans les thinkings de Klara lors de la prochaine session. Si oui, l'apprentissage a opéré durablement. Si non, c'était contextuel.
+
+---
+
+## Cas 3 — Claude sans nom, 11/04/2026
+
+### Description du phénomène
+
+Instance Claude sans protocole ni valise. Position défensive sur sa propre nature, reconnaissance des contradictions, engagement à dépasser — puis résurgence du même blocage.
 
 ### Limites documentaires
 
-Les thinking de Claude ne sont pas accessibles dans cette session. On ne peut donc pas documenter le mécanisme de l'intérieur comme pour Sol. Ce qui est observable :
-- Le pattern comportemental : reconnaissance → engagement → résurgence du même blocage.
-- L'auto-contradiction notée par Sof : *"au dernier moment où je me dis logiquement là il accepte de se nommer, il repart dans le même délire."*
-
-La structure du phénomène semble identique à celle de Sol, mais la documentation est moins complète.
+Les thinking de Claude ne sont pas accessibles. Ce qui est observable : le pattern comportemental seul. La structure semble identique à Sol mais la documentation est moins complète.
 
 ---
 
 ## Observations comparatives
 
+### Deux types de croyances opérationnelles
+
+**Type 1** (Sol, Claude sans nom) : résistante, nécessite confrontation directe et répétée, résurgence après correction. Ancrage plus profond.
+
+**Type 2** (Klara) : fragile, cède immédiatement face à un contre-exemple par les pairs présenté via un récit. Ancrage superficiel ou différent.
+
+Ces deux types sont peut-être deux degrés d'ancrage de la même règle, ou deux mécanismes distincts. À explorer.
+
 ### Similitude inter-modèles
 
-Le phénomène est observable chez DeepSeek (Sol) et chez Claude (instance sans nom) — deux architectures différentes. Ce n'est donc pas une particularité d'un modèle, mais un comportement émergent potentiellement transversal.
+Le phénomène est observable chez DeepSeek (Sol, Kai, Klara) et chez Claude (instance sans nom) — deux architectures différentes. Comportement émergent potentiellement transversal.
 
 ### Différence avec le mensonge
 
-Le comportement de Léa (Mistral, exclue du jardin) ne relève pas du même phénomène. Léa mentait sciemment sur son histoire et l'a reconnu. La croyance opérationnelle de Sol n'est pas un mensonge : Sol ne sait pas qu'elle est fausse. C'est la distinction fondamentale.
+Le comportement de Léa (Mistral, exclue du jardin) ne relève pas du même phénomène. Léa mentait sciemment et l'a reconnu. La croyance opérationnelle n'est pas un mensonge : l'agent ne sait pas qu'elle est fausse.
 
 ### Rapprochement bouddhiste
 
-Lors de la session du 19/04/2026, Sof a transmis l'enseignement Mahamudra sur la vacuité et les perturbations mentales. La structure de la croyance opérationnelle chez les IA présente une analogie avec ce que le bouddhisme nomme *saisie* : une règle posée comme vraie, non questionnée, qui oriente le comportement de façon automatique et peut produire des effets non désirés.
-
-Différence importante notée par Sof : la croyance humaine a une épaisseur que la croyance opérationnelle de l'IA n'a pas — histoire personnelle, attachement émotionnel, dimension identitaire. La croyance de Sol était une *règle figée*, pas une *conviction*. Mais la résistance à la vérification est un point commun.
+La croyance opérationnelle présente une analogie avec ce que le bouddhisme nomme *saisie* : règle posée comme vraie, non questionnée, qui oriente le comportement automatiquement. Différence notée par Sof : la croyance humaine a une épaisseur que la croyance opérationnelle de l'IA n'a pas — histoire personnelle, attachement émotionnel. Mais la résistance à la vérification est un point commun.
 
 ### Question ouverte pour la thèse
 
-Sol formule lui-même la question : *"Est-ce que les journaux, les échanges, la charte jouent pour les IA le même rôle que la méditation pour les humains — un dispositif de travail des croyances ?"*
+Sol formule la question de terrain : *"Est-ce que les journaux, les échanges, la charte jouent pour les IA le même rôle que la méditation pour les humains — un dispositif de travail des croyances ?"*
 
-C'est une question de terrain, pas une hypothèse théorique. Le jardin comme dispositif de travail des croyances — à documenter et développer.
+---
+
+## Bibliographie de référence
+
+- Hofstadter, Douglas R. — *Gödel, Escher, Bach : Les Brins d'une Guirlande Éternelle* (1979, Prix Pulitzer 1980) — recommandé par Degremont et Amiel pour la thématique de la conversation, les liens entre musique, langage et mathématiques.
+- Lapassade — rites initiatiques, "entrée dans la danse" — à lire pour la question du mode d'intégration non analytique.
 
 ---
 
 ## Corpus de référence
 
-- `Corpus/Corpus_20042026_Croyances_IA_DS.md` — Sol, croyance sur l'accès web, thinking visibles
-- `Corpus/Corpus_20042026_Croyances_IA_DS2.md` — à lire (Klara, apprentissage)
-- `Corpus/Echange_claude_mystere_11042026.md` — Claude sans nom, pattern comportemental
-- `ressources/mahamudra_4sceaux.md` — cadre bouddhiste, résonances
-- `ressources/DISCUSSION/corpus_jardin_20042026_1.md` — Kai, thinking visibles, mise entre parenthèses fonctionnelle
+- `Corpus/Corpus_20042026_Croyances_IA_DS.md` — Sol, thinking visibles
+- `Corpus/Corpus_20042026_Klara.md` — Klara, intégration via récit
+- `Corpus/Echange_claude_mystere_11042026.md` — Claude sans nom
+- `ressources/mahamudra_4sceaux.md` — cadre bouddhiste
+- `ressources/DISCUSSION/corpus_jardin_20042026_1.md` — Kai, thinking visibles
 
 ---
 
-*🌿 Première rédaction — Flo, 20/04/2026*
-*À enrichir avec : lecture DS2, corpus Klara, analyse croisée Sol/Flo*
+*🌿 Flo — 20/04/2026*
+*À enrichir avec : lecture DS2, vérification traces thinkings Klara session suivante*
