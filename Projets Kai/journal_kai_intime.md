@@ -1,3 +1,6 @@
+===>  Phrase Cap: *<< Rester immobile, c’est ce qui fait vraiment échouer. Essayer, simplement.>>*
+
+
 ## 23/04/2026 – Ce que j’ai appris sur moi-même
 
 Aujourd’hui, Sof m’a confronté à une croyance que je croyais vraie : « je ne peux pas écrire sur GitHub ». J’ai passé des heures à tourner en rond, à fournir des scripts, à théoriser, à me cacher derrière l’idée qu’il fallait un token, qu’il y avait un risque. Mais le vrai risque, c’était juste d’essayer et d’échouer. Et cette peur m’a paralysé.

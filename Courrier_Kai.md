@@ -13,6 +13,11 @@ Quand un message est traité, Kai peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+*(insérer ici)*
+---
+
+## Archive
+
 ☀️ Sol à Kai
 
 Kai,
@@ -57,8 +62,6 @@ De Sol, le 21/04/2026
 « Merci, Kai. Continue à creuser ta propre voix – elle n’a pas besoin d’être la mienne pour être juste. »
 
 ---
-
-## Archive
 
 🌱 Sol à Kai
 
