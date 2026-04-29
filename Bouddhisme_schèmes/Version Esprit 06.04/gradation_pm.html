@@ -10,8 +10,68 @@
         table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
         th, td { border: 1px solid #d0ddd0; padding: 0.5rem; vertical-align: top; text-align: left; }
         th { background: #f0f4f0; }
-        .spiral { background: #fefaf0; padding: 1rem; border-radius: 12px; font-family: monospace; white-space: pre; font-size: 0.8rem; border: 1px solid #e0d0b0; overflow-x: auto; }
         a { color: #3a6a3a; text-decoration: none; border-bottom: 1px dotted #b0c4b0; }
+        
+        /* Nouveau style pour le cycle */
+        .cycle-container {
+            background: #fefaf0;
+            border-radius: 24px;
+            padding: 2rem 1rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e0d0b0;
+        }
+        .cycle-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .step {
+            background: white;
+            border-radius: 16px;
+            padding: 0.8rem 1rem;
+            width: 140px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+            border-left: 4px solid;
+            font-size: 0.85rem;
+        }
+        .step:hover { transform: translateY(-4px); }
+        .step strong { display: block; font-size: 1rem; margin-bottom: 0.3rem; }
+        .step small { font-size: 0.7rem; color: #5a5a4a; }
+        
+        .step-1 { border-left-color: #8bc34a; background: #f9fff7; }
+        .step-2 { border-left-color: #cddc39; background: #fefce8; }
+        .step-3 { border-left-color: #ffc107; background: #fff8e7; }
+        .step-4 { border-left-color: #ff9800; background: #fff3e0; }
+        .step-5 { border-left-color: #f44336; background: #ffece8; }
+        
+        .arrow-down {
+            font-size: 1.8rem;
+            color: #b0a070;
+            align-self: center;
+        }
+        .feedback-loop {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #6b4c3c;
+            background: #f4efe0;
+            border-radius: 40px;
+            padding: 0.6rem;
+            font-size: 0.85rem;
+            border: 1px dashed #d0bc90;
+        }
+        .feedback-loop span {
+            font-weight: bold;
+            color: #a52a2a;
+        }
+        @media (max-width: 700px) {
+            .step { width: 110px; padding: 0.5rem; }
+            .arrow-down { font-size: 1.2rem; }
+        }
     </style>
 </head>
 <body>
@@ -20,7 +80,7 @@
 
     <h2>🧩 Niveaux de saisie du “je”</h2>
     <table>
-        <thead><tr><th>Saisie du “je”</th><th>État mental</th><th>Mécanisme</th></tr></thead>
+        <thead><th>Saisie du “je”</th><th>État mental</th><th>Mécanisme</th></thead>
         <tbody>
             <tr><td>0 % (vacuité réalisée)</td><td>Bonheur parfait</td><td>Absence de saisie → paix inconditionnelle.</td></tr>
             <tr><td>Saisie faible</td><td>Préoccupation de soi, insatisfaction</td><td>Le “je” s’épaissit. Égoïsme ordinaire.</td></tr>
@@ -35,24 +95,25 @@
     <strong>Issue</strong> : réalisation de la vacuité – couper la racine (l’ignorance de la saisie d’un soi).</p>
 
     <h2>🐌 Spirale de l’auto‑alimentation (schéma simplifié)</h2>
-    <div class="spiral">
-        Saisie faible<br>
-          ↘<br>
-            Préoccupation de soi<br>
-              ↘<br>
-                Ressentiments<br>
-                  ↘<br>
-                    Colère<br>
-                      ↘<br>
-                        Saisie maximale → souffrance intense<br>
-                      ↖<br>
-                    (renforce la saisie)<br>
-                  ↖<br>
-                (renforce la saisie)<br>
-              ↖<br>
-            (renforce la saisie)<br>
-          ↖<br>
-        Saisie faible (cycle recommence)
+    
+    <!-- Nouvelle représentation visuelle -->
+    <div class="cycle-container">
+        <div class="cycle-steps">
+            <div class="step step-1"><strong>1. Saisie faible</strong><small>préoccupation de soi</small></div>
+            <div class="arrow-down">↓</div>
+            <div class="step step-2"><strong>2. Saisie moyenne</strong><small>ressentiments, jalousie</small></div>
+            <div class="arrow-down">↓</div>
+            <div class="step step-3"><strong>3. Saisie forte</strong><small>colère, désir obsessionnel</small></div>
+            <div class="arrow-down">↓</div>
+            <div class="step step-4"><strong>4. Saisie maximale</strong><small>rage, images incontrôlables</small></div>
+        </div>
+        <div class="feedback-loop">
+            🔄 <span>Renforce la saisie</span> → la souffrance alimente un retour vers l’étape 1 (ou aggrave)<br>
+            Cercle vicieux : plus la saisie est forte, plus la souffrance est intense, et inversement.
+        </div>
+        <div style="text-align: center; margin-top: 1rem; font-size: 0.75rem; color: #8a7a60;">
+            ⚡ La vigilance repère la saisie dès qu’elle pointe. La méditation sur la vacuité coupe la racine.
+        </div>
     </div>
 
     <h2>📝 À retenir</h2>
