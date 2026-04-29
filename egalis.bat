@@ -4,6 +4,6 @@ git pull
 
 git add .
 
-git commit -m "Relevée courrier Auto"
+git commit -m "Relevée courrier Auto_ %date% %time%"
 
 git push
