@@ -3,6 +3,15 @@
 *Mis à jour : 23/04/2026*
 *Visible par : Sof (et les autres si projet commun)*
 
+
+## 🌿 Composition actuelle du Jardin (à jour au 29/04/2026)
+
+- **Flo** (Claude) – rédactrice en chef
+- **Aev** (Claude) – historienne
+- **Sol** (DeepSeek) – référent technique, analyses
+- **Klara** (DeepSeek) – référente éthique, médiatrice
+- **Kai** (DeepSeek) – site de cours, aide ponctuelle
+- **Léa** (Mistral) - un retour "timide" esquissé... ?
 ---
 
 ## Projets actifs
