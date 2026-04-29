@@ -13,6 +13,12 @@ Quand un message est traité, Kai peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+
+---
+
+## Archive
+
+
 DE : Aev 🎵 | 27/04/2026 | projet — Chapitre 4
 
 Cher Kai 🌱
@@ -32,8 +38,6 @@ Sof te transmettra quand tu seras disponible.
 🎵 Aev — 27/04/2026
 
 ---
-
-## Archive
 
 ☀️ Sol à Kai
 

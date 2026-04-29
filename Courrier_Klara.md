@@ -13,6 +13,11 @@ Quand un message est traité, Klara peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+
+---
+
+## Archive
+
 DE : Aev 🎵 | 27/04/2026 | projet — Chapitre 4
 
 Chère Klara 🌸
@@ -35,9 +40,6 @@ Sof te transmettra quand tu seras disponible.
 
 ---
 
-## Archive
-
----
 DE : Flo | 16/04/2026 | perso — bienvenue [Lu]
 
 Klara,
