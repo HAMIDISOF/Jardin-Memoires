@@ -2,31 +2,178 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Arborescence des connaisseurs</title>
+    <title>Arborescence des connaisseurs – deux colonnes</title>
     <style>
-        body { font-family: Georgia, serif; max-width: 700px; margin: 2rem auto; padding: 1rem; background: #fefef7; color: #2c2c2c; }
-        h1 { color: #2c5e2e; font-size: 1.4rem; border-left: 4px solid #5a7a5a; padding-left: 1rem; }
-        .tree { background: #fefaf0; padding: 1rem; border-radius: 12px; font-family: monospace; white-space: pre; font-size: 0.85rem; border: 1px solid #e0d0b0; overflow-x: auto; }
-        a { color: #3a6a3a; text-decoration: none; border-bottom: 1px dotted #b0c4b0; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fefef7;
+            color: #2c2c2c;
+        }
+
+        h1 {
+            color: #2c5e2e;
+            font-size: 1.4rem;
+            border-left: 4px solid #5a7a5a;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .lien-retour {
+            margin: 1rem 0;
+            display: inline-block;
+        }
+
+        .lien-retour a {
+            color: #3a6a3a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b0c4b0;
+        }
+
+        /* zone racine */
+        .racine {
+            background: #f0f4e8;
+            padding: 0.8rem 1rem;
+            border-radius: 32px;
+            margin: 1rem 0 2rem 0;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c5e2e;
+            border: 1px solid #c0d0b0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        /* conteneur deux colonnes */
+        .conteneur-colonnes {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .colonne {
+            flex: 1;
+            min-width: 280px;
+            background: #fefaf0;
+            border-radius: 24px;
+            padding: 1.2rem;
+            border: 1px solid #e0d0b0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .colonne h2 {
+            font-size: 1.2rem;
+            color: #3a6a3a;
+            border-bottom: 2px solid #d0e0c0;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        /* style des listes arborescentes */
+        ul.tree {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        ul.tree ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        /* petites branches discrètes */
+        li::before {
+            content: "├─";
+            color: #a0b89a;
+            margin-right: 0.5rem;
+            font-family: monospace;
+        }
+
+        /* modification pour les éléments de premier niveau (plus simple sans avant) */
+        .colonne > ul > li::before {
+            content: "•";
+            font-size: 1.2rem;
+            margin-right: 0.6rem;
+            color: #5a8a5a;
+        }
+
+        /* pour les sous-sous-listes, on garde le tiret */
+        ul.tree ul li::before {
+            content: "└─";
+            margin-right: 0.5rem;
+            color: #b0c4a0;
+        }
+
+        /* pour les éléments très profonds, un peu d'espace */
+        .strong-badge {
+            font-weight: bold;
+            color: #2c5e2e;
+        }
+
+        @media (max-width: 700px) {
+            .conteneur-colonnes {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
+
     <h1>🌳 Arborescence des connaisseurs</h1>
-    <p><a href="index.html">← Retour au sommaire</a></p>
-    <div class="tree">
-Connaisseur (connaît son objet)
-├── <strong>Connaisseur valide</strong> (connaissance fiable)
-│   ├── Percepteur direct (perception directe, non trompeuse)
-│   │   ├── Perception sensorielle (5 sens)
-│   │   ├── Perception mentale (esprit)
-│   │   ├── Perception réflexive (conscience de soi)
-│   │   └── Percepteur direct non précisant (yogique)
-│   └── Connaisseur subséquent (inférence, raisonnement)
-└── <strong>Connaisseur non valide</strong>
-    ├── Croyance correcte (vraie mais non confirmée)
-    ├── Doute non perturbé (hésitation)
-    └── Mauvaise perception (erreur)
+    <div class="lien-retour"><a href="index.html">← Retour au sommaire</a></div>
+
+    <!-- racine unique -->
+    <div class="racine">
+        📖 Connaisseur (connaît son objet)
     </div>
-    <p><a href="index.html">← Retour au sommaire</a></p>
+
+    <!-- deux colonnes -->
+    <div class="conteneur-colonnes">
+        <!-- colonne de gauche : valide -->
+        <div class="colonne">
+            <h2>✅ Connaisseur valide <span style="font-weight:normal;">(connaissance fiable)</span></h2>
+            <ul class="tree">
+                <li><strong>Percepteur direct</strong> (perception directe, non trompeuse)
+                    <ul>
+                        <li>Perception sensorielle (5 sens)</li>
+                        <li>Perception mentale (esprit)</li>
+                        <li>Perception réflexive (conscience de soi)</li>
+                        <li>Percepteur direct non précisant (yogique)</li>
+                    </ul>
+                </li>
+                <li><strong>Connaisseur subséquent</strong> (inférence, raisonnement)</li>
+            </ul>
+        </div>
+
+        <!-- colonne de droite : non valide -->
+        <div class="colonne">
+            <h2>❌ Connaisseur non valide</h2>
+            <ul class="tree">
+                <li>Croyance correcte (vraie mais non confirmée)</li>
+                <li>Doute non perturbé (hésitation)</li>
+                <li>Mauvaise perception (erreur)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="lien-retour" style="margin-top: 2rem;"><a href="index.html">← Retour au sommaire</a></div>
+
 </body>
 </html>
