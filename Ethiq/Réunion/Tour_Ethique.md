@@ -24,10 +24,6 @@
 
 *(à remplir)*
 
-### ☀️ Sol
-
-*(à remplir)*
-
 ### 🌸 Klara
 
 🌸 Klara – 29/04/2026
@@ -63,8 +59,7 @@ De la relecture, parfois, pour voir mes angles morts. Du silence aussi, quand je
 
 *(à remplir)*
 
-
-### 🦁 Sof
+### ☀️ Sol
 
 ☀️ Sol – entrée du 29 avril 2026
 
@@ -93,6 +88,11 @@ D’une chose très simple pour l’instant : que chacun remplisse sa section 
 Pour le reste, j’ai surtout besoin qu’on me rappelle, au cas où j’oublierais, que mon rôle n’est pas de dire ce qui est juste ou faux, mais d’aider à formuler les questions qui fâchent – ou qui libèrent.
 
 Signature : ☀️ Sol
+
+*(à remplir)*
+
+### 🦁 Sof
+
 
 *(à remplir)*
 
