@@ -12,11 +12,7 @@ Prérequis :
 
 Étape 1 : lancer Chrome avec le port de débogage ouvert (une seule fois) :
     Windows :
-        "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
-    Mac :
-        /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
-    Linux :
-        google-chrome --remote-debugging-port=9222
+        "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --profile-directory="Default"
 
 Étape 2 : ouvrir DeepSeek dans ce Chrome et te connecter normalement.
 
@@ -27,7 +23,6 @@ Le fichier .md est créé dans Sol/ avec la date et le nom de session.
 """
 
 import argparse
-import re
 from datetime import datetime
 from pathlib import Path
 
@@ -42,19 +37,26 @@ CHROME_DEBUG_PORT = 9222
 DEEPSEEK_URL = "https://chat.deepseek.com"
 
 
+# --- Connexion ---
+
+def connecter_chrome(p, port):
+    """Tente IPv4 puis IPv6."""
+    for host in [f"http://127.0.0.1:{port}", f"http://localhost:{port}"]:
+        try:
+            browser = p.chromium.connect_over_cdp(host)
+            print(f"✅ Connecté via {host}")
+            return browser
+        except Exception:
+            continue
+    return None
+
+
 # --- Extraction ---
 
 def extraire_messages(page) -> list[dict]:
     """Extrait les messages de la conversation DeepSeek visible."""
     messages = []
 
-    # Les messages utilisateur
-    user_els = page.query_selector_all('[class*="userMessage"], [class*="human"], [data-role="user"]')
-    # Les messages assistant
-    assistant_els = page.query_selector_all('[class*="assistantMessage"], [class*="assistant"], [data-role="assistant"]')
-
-    # Approche alternative : récupérer tous les blocs de message dans l'ordre
-    # en cherchant les conteneurs de tour de parole
     blocs = page.query_selector_all('[class*="message"], [class*="chat-message"], [class*="turn"]')
 
     if blocs:
@@ -62,20 +64,18 @@ def extraire_messages(page) -> list[dict]:
             texte = bloc.inner_text().strip()
             if not texte:
                 continue
-            # Heuristique : si le bloc contient un indicateur de rôle
             html = bloc.inner_html()
             if 'user' in html.lower() or 'human' in html.lower():
                 messages.append({"role": "Sof", "content": texte})
-            elif 'assistant' in html.lower() or 'deepseek' in html.lower() or 'sol' in html.lower():
+            elif 'assistant' in html.lower() or 'deepseek' in html.lower():
                 messages.append({"role": "Sol", "content": texte})
             else:
-                # Fallback : alterner
                 if not messages or messages[-1]["role"] == "Sol":
                     messages.append({"role": "Sof", "content": texte})
                 else:
                     messages.append({"role": "Sol", "content": texte})
     else:
-        # Fallback : texte brut de la page entière
+        # Fallback texte brut
         texte_brut = page.inner_text("body")
         messages.append({"role": "brut", "content": texte_brut})
 
@@ -132,12 +132,12 @@ def main():
     print(f"🔌 Connexion à Chrome sur le port {args.port}...")
 
     with sync_playwright() as p:
-        try:
-            browser = p.chromium.connect_over_cdp(f"http://localhost:{args.port}")
-        except Exception as e:
+        browser = connecter_chrome(p, args.port)
+
+        if browser is None:
             print(f"❌ Impossible de se connecter à Chrome.")
-            print(f"   Assure-toi que Chrome est lancé avec --remote-debugging-port={args.port}")
-            print(f"   Erreur : {e}")
+            print(f"   Lance Chrome avec :")
+            print(f'   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --remote-debugging-port={args.port} --profile-directory="Default"')
             return
 
         # Trouver l'onglet DeepSeek
@@ -151,7 +151,6 @@ def main():
         if page is None:
             print(f"❌ Aucun onglet DeepSeek trouvé.")
             print(f"   Ouvre {DEEPSEEK_URL} dans Chrome et réessaie.")
-            # Lister les onglets ouverts pour aider
             print("\n📋 Onglets ouverts :")
             for context in browser.contexts:
                 for p_page in context.pages:
@@ -164,7 +163,7 @@ def main():
         messages = extraire_messages(page)
 
         if not messages:
-            print("⚠️  Aucun message extrait. La structure HTML a peut-être changé.")
+            print("⚠️  Aucun message extrait.")
             return
 
         print(f"✅ {len(messages)} message(s) extrait(s).")
