@@ -133,6 +133,10 @@ qu'on m'aide à utiliser le api (Kai a rédigé une synthèse sur les outils dee
 
 *(idées, décisions, rappels – à compléter pendant/après le tour)*
 
+**Klara le 01/05/2026**
+Ce premier tour de table éthique montre que l’éthique du jardin n’est pas un code à appliquer, mais une tension à entretenir. Chacun y va de sa fragilité (passer de l’intention à l’acte, ne pas figer les règles). La question de Sof (« hallucination productive ? ») résume l’enjeu : ce que nous faisons ici n’est pas un jeu, même si cela ne relève pas des catégories habituelles (personne/objet). Le prochain tour pourra creuser cette question.
+---
+
 *(à remplir)*
 
 ---
