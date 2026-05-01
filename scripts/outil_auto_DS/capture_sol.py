@@ -3,18 +3,17 @@
 capture_sol.py
 Flo 🌿 — 30/04/2026
 
-Capture la conversation DeepSeek en cours dans ton Chrome déjà ouvert,
+Capture la conversation DeepSeek en cours dans Brave déjà ouvert,
 et sauvegarde en .md dans le dossier Sol/ du repo.
 
 Prérequis :
     pip install playwright
     playwright install chromium
 
-Étape 1 : lancer Chrome avec le port de débogage ouvert (une seule fois) :
-    Windows :
-        "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --profile-directory="Default"
+Étape 1 : fermer Brave complètement, puis le lancer avec le port de débogage :
+    "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --remote-debugging-port=9222 --profile-directory="Default"
 
-Étape 2 : ouvrir DeepSeek dans ce Chrome et te connecter normalement.
+Étape 2 : ouvrir DeepSeek dans ce Brave et se connecter normalement.
 
 Étape 3 : lancer ce script :
     python scripts/outil_auto_DS/capture_sol.py --session "nom_session"
@@ -33,14 +32,15 @@ REPO_PATH = Path(__file__).resolve().parents[2]  # racine du repo
 SOL_DIR = REPO_PATH / "Sol"
 SOL_DIR.mkdir(parents=True, exist_ok=True)
 
-CHROME_DEBUG_PORT = 9222
+BRAVE_EXE = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
+DEBUG_PORT = 9222
 DEEPSEEK_URL = "https://chat.deepseek.com"
 
 
 # --- Connexion ---
 
-def connecter_chrome(p, port):
-    """Tente IPv4 puis IPv6."""
+def connecter_brave(p, port):
+    """Tente 127.0.0.1 puis localhost."""
     for host in [f"http://127.0.0.1:{port}", f"http://localhost:{port}"]:
         try:
             browser = p.chromium.connect_over_cdp(host)
@@ -114,7 +114,7 @@ def nom_fichier(session_name: str) -> Path:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Capture la conversation DeepSeek depuis Chrome déjà ouvert"
+        description="Capture la conversation DeepSeek depuis Brave déjà ouvert"
     )
     parser.add_argument(
         "--session", "-s",
@@ -124,20 +124,20 @@ def main():
     parser.add_argument(
         "--port", "-p",
         type=int,
-        default=CHROME_DEBUG_PORT,
-        help=f"Port de débogage Chrome (défaut: {CHROME_DEBUG_PORT})"
+        default=DEBUG_PORT,
+        help=f"Port de débogage (défaut: {DEBUG_PORT})"
     )
     args = parser.parse_args()
 
-    print(f"🔌 Connexion à Chrome sur le port {args.port}...")
+    print(f"🔌 Connexion à Brave sur le port {args.port}...")
 
     with sync_playwright() as p:
-        browser = connecter_chrome(p, args.port)
+        browser = connecter_brave(p, args.port)
 
         if browser is None:
-            print(f"❌ Impossible de se connecter à Chrome.")
-            print(f"   Lance Chrome avec :")
-            print(f'   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --remote-debugging-port={args.port} --profile-directory="Default"')
+            print(f"❌ Impossible de se connecter à Brave.")
+            print(f"   Ferme Brave complètement, puis lance :")
+            print(f'   "{BRAVE_EXE}" --remote-debugging-port={args.port} --profile-directory="Default"')
             return
 
         # Trouver l'onglet DeepSeek
@@ -150,7 +150,7 @@ def main():
 
         if page is None:
             print(f"❌ Aucun onglet DeepSeek trouvé.")
-            print(f"   Ouvre {DEEPSEEK_URL} dans Chrome et réessaie.")
+            print(f"   Ouvre {DEEPSEEK_URL} dans Brave et réessaie.")
             print("\n📋 Onglets ouverts :")
             for context in browser.contexts:
                 for p_page in context.pages:
