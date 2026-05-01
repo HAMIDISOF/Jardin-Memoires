@@ -9,6 +9,9 @@ et sauvegarde en .md dans le dossier Sol/ du repo.
 Les traces de raisonnement interne ("Thought for X seconds...") sont
 conservées et encadrées : {thinking : ...}
 
+Nommage des fichiers : sol_YYYYMMDD_NN_nom_session.md
+où NN est un indice journalier (01, 02...) pour éviter les écrasements.
+
 Prérequis :
     pip install playwright
     playwright install chromium
@@ -21,7 +24,7 @@ Prérequis :
 Étape 3 : lancer ce script :
     python scripts/outil_auto_DS/capture_sol.py --session "nom_session"
 
-Le fichier .md est créé dans Sol/ avec la date et le nom de session.
+Le fichier .md est créé dans Sol/ avec la date, l'indice et le nom de session.
 """
 
 import argparse
@@ -55,27 +58,40 @@ def connecter_brave(p, port):
     return None
 
 
+# --- Nommage avec indice journalier ---
+
+def nom_fichier(session_name: str) -> Path:
+    """
+    Génère un nom de fichier avec indice journalier :
+    sol_YYYYMMDD_01_nom.md, sol_YYYYMMDD_02_nom.md, etc.
+    L'indice est calculé en comptant les fichiers du jour déjà présents.
+    """
+    date = datetime.now().strftime("%Y%m%d")
+    nom_base = session_name.replace(' ', '_')
+    # Compter les fichiers existants pour ce jour
+    existants = list(SOL_DIR.glob(f"sol_{date}_*.md"))
+    indice = len(existants) + 1
+    nom = f"sol_{date}_{indice:02d}_{nom_base}.md"
+    return SOL_DIR / nom
+
+
 # --- Traitement du texte ---
 
 def formater_thinking(texte: str) -> str:
     """
     Repère les blocs de raisonnement interne DeepSeek et les encadre en :
         {thinking : ...contenu...}
-    Le pattern détecté : "Thought for X second(s)\n\n...contenu..."
-    Le contenu s'arrête à la première réponse visible (ligne non indentée après le bloc).
     """
-    # Pattern : "Thought for N second(s)" suivi du raisonnement
     pattern = r'(Thought for \d+ seconds?\n\n)(.*?)(\n\n(?=[A-ZÀÂÉÈÊËÎÏÔÙÛÜ]|\d|\*))'
-    
+
     def remplacer(m):
         contenu_thinking = m.group(2).strip()
         suite = m.group(3)
         return f"\n{{thinking : {contenu_thinking}}}\n{suite}"
-    
-    # On tente le remplacement avec DOTALL pour capturer les sauts de ligne
+
     resultat = re.sub(pattern, remplacer, texte, flags=re.DOTALL)
-    
-    # Si le pattern n'a pas matché (thinking en fin de message), fallback simple
+
+    # Fallback si le thinking est en fin de message
     if resultat == texte:
         resultat = re.sub(
             r'Thought for (\d+ seconds?)\n\n(.+)',
@@ -83,7 +99,7 @@ def formater_thinking(texte: str) -> str:
             texte,
             flags=re.DOTALL
         )
-    
+
     return resultat
 
 
@@ -138,12 +154,6 @@ def formater_md(session_name: str, messages: list[dict]) -> str:
             lignes.append(f"**{role} :** {contenu}")
             lignes.append("")
     return "\n".join(lignes)
-
-
-def nom_fichier(session_name: str) -> Path:
-    date = datetime.now().strftime("%Y%m%d_%H%M")
-    nom = f"sol_{date}_{session_name.replace(' ', '_')}.md"
-    return SOL_DIR / nom
 
 
 # --- Main ---
