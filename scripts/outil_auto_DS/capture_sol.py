@@ -6,7 +6,13 @@ Flo 🌿 — 30/04/2026, mis à jour 01/05/2026
 Capture la conversation DeepSeek en cours dans Brave déjà ouvert,
 et sauvegarde en .md dans le dossier Sol/ du repo.
 
-Après la capture, écrit le nom du fichier produit dans :
+Sélecteurs CSS réels DeepSeek (Brave, inspectés le 01/05/2026) :
+  - Message Sol (assistant) : div contenant la classe 'ds-markdown'
+  - Message Sof (humain)    : div.fbb737a4 (bulle utilisateur)
+  - Thinking Sol            : texte commençant par "Thought for N seconds"
+                              → encadré en {thinking : ...}
+
+Après la capture, écrit le chemin du fichier produit dans :
     scripts/outil_auto_DS/last_capture.txt
 pour que DS_capt_extract.bat puisse le lire dynamiquement.
 
@@ -16,13 +22,14 @@ Prérequis :
     pip install playwright
     playwright install chromium
 
-Étape 1 : fermer Brave complètement, puis le lancer avec le port de débogage :
-    "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe" --remote-debugging-port=9222 --profile-directory="Default"
+Étape 1 : fermer Brave complètement, puis le lancer :
+    "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+        --remote-debugging-port=9222 --profile-directory="Default"
 
-Étape 2 : ouvrir DeepSeek dans ce Brave et se connecter normalement.
+Étape 2 : ouvrir DeepSeek dans ce Brave.
 
-Étape 3 : lancer ce script (ou via DS_capt_extract.bat) :
-    python scripts/outil_auto_DS/capture_sol.py --session "nom_session"
+Étape 3 : lancer via DS_capt_extract.bat [nom_session]
+    ou directement : python capture_sol.py --session "nom"
 """
 
 import argparse
@@ -41,6 +48,12 @@ LAST_CAPTURE_FILE = Path(__file__).resolve().parent / "last_capture.txt"
 BRAVE_EXE = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 DEBUG_PORT = 9222
 DEEPSEEK_URL = "https://chat.deepseek.com"
+
+# Sélecteurs CSS réels inspectés dans Brave le 01/05/2026
+# Message utilisateur (Sof) : div avec classe fbb737a4
+SEL_SOF = "div.fbb737a4"
+# Message assistant (Sol) : div contenant ds-markdown
+SEL_SOL = "div.ds-markdown"
 
 
 # --- Connexion ---
@@ -63,53 +76,100 @@ def nom_fichier(session_name: str) -> Path:
     nom_base = session_name.replace(' ', '_')
     existants = list(SOL_DIR.glob(f"sol_{date}_*.md"))
     indice = len(existants) + 1
-    nom = f"sol_{date}_{indice:02d}_{nom_base}.md"
-    return SOL_DIR / nom
+    return SOL_DIR / f"sol_{date}_{indice:02d}_{nom_base}.md"
 
 
 # --- Traitement des thinkings ---
 
-def formater_thinking(texte: str) -> str:
-    pattern = r'(Thought for \d+ seconds?\n\n)(.*?)(\n\n(?=[A-ZÀÂÉÈÊËÎÏÔÙÛÜ]|\d|\*))'
+def extraire_thinking(texte: str) -> tuple[str, str]:
+    """
+    Si le texte commence par 'Thought for N seconds\\n\\n...',
+    retourne (thinking, réponse_visible).
+    Sinon retourne ('', texte).
+    """
+    m = re.match(r'Thought for \d+ seconds?\n\n(.*?)\n\n(.+)', texte, re.DOTALL)
+    if m:
+        return m.group(1).strip(), m.group(2).strip()
+    # Cas où tout le texte est le thinking (pas de réponse visible séparée)
+    m2 = re.match(r'Thought for \d+ seconds?\n\n(.+)', texte, re.DOTALL)
+    if m2:
+        return m2.group(1).strip(), ""
+    return "", texte
 
-    def remplacer(m):
-        return f"\n{{thinking : {m.group(2).strip()}}}\n{m.group(3)}"
 
-    resultat = re.sub(pattern, remplacer, texte, flags=re.DOTALL)
-    if resultat == texte:
-        resultat = re.sub(
-            r'Thought for (\d+ seconds?)\n\n(.+)',
-            lambda m: f"{{thinking : {m.group(2).strip()}}}",
-            texte,
-            flags=re.DOTALL
-        )
-    return resultat
+def formater_sol(texte: str) -> str:
+    """Formate un message Sol : extrait le thinking et le corps."""
+    thinking, corps = extraire_thinking(texte)
+    if thinking:
+        if corps:
+            return f"{{thinking : {thinking}}}\n\n{corps}"
+        else:
+            return f"{{thinking : {thinking}}}"
+    return texte
 
 
-# --- Extraction HTML ---
+# --- Extraction ---
 
 def extraire_messages(page) -> list[dict]:
+    """
+    Extrait les messages en utilisant les vrais sélecteurs CSS DeepSeek.
+    Stratégie :
+      1. Récupère tous les div.fbb737a4 (messages Sof) et leur position dans le DOM
+      2. Récupère tous les div.ds-markdown (messages Sol) et leur position
+      3. Fusionne et trie par ordre d'apparition dans la page
+    """
     messages = []
-    blocs = page.query_selector_all('[class*="message"], [class*="chat-message"], [class*="turn"]')
 
-    if blocs:
-        for bloc in blocs:
-            texte = bloc.inner_text().strip()
-            if not texte:
+    # Évaluation JS pour récupérer texte + position verticale de chaque message
+    script = """
+    () => {
+        const result = [];
+        // Messages Sof
+        document.querySelectorAll('div.fbb737a4').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            result.push({
+                role: 'Sof',
+                text: el.innerText.trim(),
+                top: rect.top + scrollY
+            });
+        });
+        // Messages Sol (contenu markdown)
+        document.querySelectorAll('div.ds-markdown').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            result.push({
+                role: 'Sol',
+                text: el.innerText.trim(),
+                top: rect.top + scrollY
+            });
+        });
+        // Tri par position verticale
+        result.sort((a, b) => a.top - b.top);
+        return result;
+    }
+    """
+
+    try:
+        result = page.evaluate(script)
+        for item in result:
+            if not item['text']:
                 continue
-            html = bloc.inner_html()
-            if 'user' in html.lower() or 'human' in html.lower():
-                messages.append({"role": "Sof", "content": texte})
-            elif 'assistant' in html.lower() or 'deepseek' in html.lower():
-                messages.append({"role": "Sol", "content": formater_thinking(texte)})
+            if item['role'] == 'Sol':
+                messages.append({
+                    "role": "Sol",
+                    "content": formater_sol(item['text'])
+                })
             else:
-                if not messages or messages[-1]["role"] == "Sol":
-                    messages.append({"role": "Sof", "content": texte})
-                else:
-                    messages.append({"role": "Sol", "content": formater_thinking(texte)})
-    else:
+                messages.append({
+                    "role": "Sof",
+                    "content": item['text']
+                })
+    except Exception as e:
+        print(f"⚠️  Erreur extraction JS : {e}")
+        # Fallback texte brut
         texte_brut = page.inner_text("body")
-        messages.append({"role": "brut", "content": formater_thinking(texte_brut)})
+        messages.append({"role": "brut", "content": texte_brut})
 
     return messages
 
@@ -139,7 +199,9 @@ def formater_md(session_name: str, messages: list[dict]) -> str:
 # --- Main ---
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Capture la conversation DeepSeek depuis Brave déjà ouvert"
+    )
     parser.add_argument("--session", "-s",
                         default=f"session_{datetime.now().strftime('%Y%m%d_%H%M')}",
                         help="Nom de la session")
@@ -152,7 +214,7 @@ def main():
         browser = connecter_brave(p, args.port)
 
         if browser is None:
-            print(f"❌ Impossible de se connecter à Brave.")
+            print("❌ Impossible de se connecter à Brave.")
             print(f'   Lance : "{BRAVE_EXE}" --remote-debugging-port={args.port} --profile-directory="Default"')
             return
 
@@ -164,7 +226,7 @@ def main():
                     break
 
         if page is None:
-            print(f"❌ Aucun onglet DeepSeek trouvé.")
+            print("❌ Aucun onglet DeepSeek trouvé.")
             print("\n📋 Onglets ouverts :")
             for context in browser.contexts:
                 for p_page in context.pages:
@@ -185,7 +247,6 @@ def main():
         chemin = nom_fichier(args.session)
         chemin.write_text(contenu, encoding="utf-8")
 
-        # Écrire le nom du fichier pour le .bat
         LAST_CAPTURE_FILE.write_text(str(chemin), encoding="utf-8")
 
         print(f"✅ Sauvegardé : {chemin}")
