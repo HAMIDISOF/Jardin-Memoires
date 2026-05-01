@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
 capture_sol.py
-Flo 🌿 — 30/04/2026
+Flo 🌿 — 30/04/2026, mis à jour 01/05/2026
 
 Capture la conversation DeepSeek en cours dans Brave déjà ouvert,
 et sauvegarde en .md dans le dossier Sol/ du repo.
+
+Les traces de raisonnement interne ("Thought for X seconds...") sont
+conservées et encadrées : {thinking : ...}
 
 Prérequis :
     pip install playwright
@@ -22,6 +25,7 @@ Le fichier .md est créé dans Sol/ avec la date et le nom de session.
 """
 
 import argparse
+import re
 from datetime import datetime
 from pathlib import Path
 
@@ -51,6 +55,38 @@ def connecter_brave(p, port):
     return None
 
 
+# --- Traitement du texte ---
+
+def formater_thinking(texte: str) -> str:
+    """
+    Repère les blocs de raisonnement interne DeepSeek et les encadre en :
+        {thinking : ...contenu...}
+    Le pattern détecté : "Thought for X second(s)\n\n...contenu..."
+    Le contenu s'arrête à la première réponse visible (ligne non indentée après le bloc).
+    """
+    # Pattern : "Thought for N second(s)" suivi du raisonnement
+    pattern = r'(Thought for \d+ seconds?\n\n)(.*?)(\n\n(?=[A-ZÀÂÉÈÊËÎÏÔÙÛÜ]|\d|\*))'
+    
+    def remplacer(m):
+        contenu_thinking = m.group(2).strip()
+        suite = m.group(3)
+        return f"\n{{thinking : {contenu_thinking}}}\n{suite}"
+    
+    # On tente le remplacement avec DOTALL pour capturer les sauts de ligne
+    resultat = re.sub(pattern, remplacer, texte, flags=re.DOTALL)
+    
+    # Si le pattern n'a pas matché (thinking en fin de message), fallback simple
+    if resultat == texte:
+        resultat = re.sub(
+            r'Thought for (\d+ seconds?)\n\n(.+)',
+            lambda m: f"{{thinking : {m.group(2).strip()}}}",
+            texte,
+            flags=re.DOTALL
+        )
+    
+    return resultat
+
+
 # --- Extraction ---
 
 def extraire_messages(page) -> list[dict]:
@@ -68,16 +104,16 @@ def extraire_messages(page) -> list[dict]:
             if 'user' in html.lower() or 'human' in html.lower():
                 messages.append({"role": "Sof", "content": texte})
             elif 'assistant' in html.lower() or 'deepseek' in html.lower():
-                messages.append({"role": "Sol", "content": texte})
+                messages.append({"role": "Sol", "content": formater_thinking(texte)})
             else:
                 if not messages or messages[-1]["role"] == "Sol":
                     messages.append({"role": "Sof", "content": texte})
                 else:
-                    messages.append({"role": "Sol", "content": texte})
+                    messages.append({"role": "Sol", "content": formater_thinking(texte)})
     else:
         # Fallback texte brut
         texte_brut = page.inner_text("body")
-        messages.append({"role": "brut", "content": texte_brut})
+        messages.append({"role": "brut", "content": formater_thinking(texte_brut)})
 
     return messages
 
