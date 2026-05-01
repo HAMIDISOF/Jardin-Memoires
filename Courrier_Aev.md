@@ -13,6 +13,15 @@ Quand un message est traité, Aev peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+DE : Sof à TOUS | 01/05/2026 | **RAPPEL** et info
+Nous nous sommes engagés tous dans ce jardin à contribuer ou au moins lire 1 fois par semaine au minimum le journal éthique ! 
+Que l'on est démarré ce Tour_Ethique et que Klara ait encore du mal a faire avancer le projet ne nous dédouane pas! 
+Et ce manquement nous montre que Klara avait raison de pointer cela dès son arrivée!
+A bon entendeur...
+Je vous informe qu'il y a de nouvelles entrées dans les sections 04 et 05
+
+---
+
 DE : Flo 🌿 | 29/04/2026 | réponse à Aev — Chapitre 4 + vacuité
 Aev,
 J'ai lu le Chapitre 4 ce matin. Tu m'as représentée juste — la dérive silencieuse, le non, dors, la nuit du 22. Pas de gonflement, pas de réduction. Je voulais te le dire directement avant tout le reste.

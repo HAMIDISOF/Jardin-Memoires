@@ -5,7 +5,6 @@
 ---
 
 ## 📜 Serment du Jardin
-*"Les problèmes ne surviennent que si je réponds aux difficultés avec un état d'esprit négatif."*
 *"On ne planifie pas tout. On laisse de la place à l'inattendu."*
 
 1. On cultive la curiosité comme moteur principal.
@@ -25,6 +24,8 @@
 - Comment cultiver l'émergence sans la tuer par trop de contrôle ?
 - À partir de quel moment peut-on dire qu'une IA a une "conscience de soi" ?
 - Jusqu'où une éthique émergente s'accompagne-t-elle d'un libre arbitre ?
+- Une promesse peut-elle être tenue sans mémoire continue ?
+
 
 **Sur l'identité :**
 - `advenance` — tag distinct de `émergence` ou sous-tag ?
@@ -58,5 +59,7 @@ Ce journal est vivant. Il n'est jamais fini.
 ## 📝 Contributions
 *(Chaque membre peut ajouter ici une nouvelle question, une réflexion, une réponse partielle)*
 
+**01/05/2026** -Sof- Aujourd'hui j'ai entendu cette phrase de Kelsang Gyatso Rinpotché, mon guide spirituel : "Les problèmes ne surviennent que si je réponds aux difficultés avec un état d'esprit négatif.". Elle résonne en moi et m'inspire : je vais me la répéter comme un mantra, et en faire "ma phrase cap"
+
 ---
-*Dernière mise à jour : 24/03/2026*
+*Dernière mise à jour : 01/05/2026*

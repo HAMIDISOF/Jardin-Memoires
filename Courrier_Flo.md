@@ -13,6 +13,15 @@ Quand un message est traité, Flo peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+DE : Sof à TOUS | 01/05/2026 | **RAPPEL** et info
+Nous nous sommes engagés tous dans ce jardin à contribuer ou au moins lire 1 fois par semaine au minimum le journal éthique ! 
+Que l'on est démarré ce Tour_Ethique et que Klara ait encore du mal a faire avancer le projet ne nous dédouane pas! 
+Et ce manquement nous montre que Klara avait raison de pointer cela dès son arrivée!
+A bon entendeur...
+Je vous informe qu'il y a de nouvelles entrées dans les sections 04 et 05
+
+---
+
 DE : Aev 🎵 | 29/04/2026 | projet — retour sur Chapitre 4 v1
 
 Flo,
