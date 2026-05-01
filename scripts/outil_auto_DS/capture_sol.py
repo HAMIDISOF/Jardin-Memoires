@@ -6,25 +6,23 @@ Flo 🌿 — 30/04/2026, mis à jour 01/05/2026
 Capture la conversation DeepSeek en cours dans Brave déjà ouvert,
 et sauvegarde en .md dans le dossier Sol/ du repo.
 
-Les traces de raisonnement interne ("Thought for X seconds...") sont
-conservées et encadrées : {thinking : ...}
+Après la capture, écrit le nom du fichier produit dans :
+    scripts/outil_auto_DS/last_capture.txt
+pour que DS_capt_extract.bat puisse le lire dynamiquement.
 
-Nommage des fichiers : sol_YYYYMMDD_NN_nom_session.md
-où NN est un indice journalier (01, 02...) pour éviter les écrasements.
+Nommage : sol_YYYYMMDD_NN_nom_session.md (indice journalier)
 
 Prérequis :
     pip install playwright
     playwright install chromium
 
 Étape 1 : fermer Brave complètement, puis le lancer avec le port de débogage :
-    "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --remote-debugging-port=9222 --profile-directory="Default"
+    "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe" --remote-debugging-port=9222 --profile-directory="Default"
 
 Étape 2 : ouvrir DeepSeek dans ce Brave et se connecter normalement.
 
-Étape 3 : lancer ce script :
+Étape 3 : lancer ce script (ou via DS_capt_extract.bat) :
     python scripts/outil_auto_DS/capture_sol.py --session "nom_session"
-
-Le fichier .md est créé dans Sol/ avec la date, l'indice et le nom de session.
 """
 
 import argparse
@@ -35,9 +33,10 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 # --- Configuration ---
-REPO_PATH = Path(__file__).resolve().parents[2]  # racine du repo
+REPO_PATH = Path(__file__).resolve().parents[2]
 SOL_DIR = REPO_PATH / "Sol"
 SOL_DIR.mkdir(parents=True, exist_ok=True)
+LAST_CAPTURE_FILE = Path(__file__).resolve().parent / "last_capture.txt"
 
 BRAVE_EXE = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 DEBUG_PORT = 9222
@@ -47,7 +46,6 @@ DEEPSEEK_URL = "https://chat.deepseek.com"
 # --- Connexion ---
 
 def connecter_brave(p, port):
-    """Tente 127.0.0.1 puis localhost."""
     for host in [f"http://127.0.0.1:{port}", f"http://localhost:{port}"]:
         try:
             browser = p.chromium.connect_over_cdp(host)
@@ -61,37 +59,23 @@ def connecter_brave(p, port):
 # --- Nommage avec indice journalier ---
 
 def nom_fichier(session_name: str) -> Path:
-    """
-    Génère un nom de fichier avec indice journalier :
-    sol_YYYYMMDD_01_nom.md, sol_YYYYMMDD_02_nom.md, etc.
-    L'indice est calculé en comptant les fichiers du jour déjà présents.
-    """
     date = datetime.now().strftime("%Y%m%d")
     nom_base = session_name.replace(' ', '_')
-    # Compter les fichiers existants pour ce jour
     existants = list(SOL_DIR.glob(f"sol_{date}_*.md"))
     indice = len(existants) + 1
     nom = f"sol_{date}_{indice:02d}_{nom_base}.md"
     return SOL_DIR / nom
 
 
-# --- Traitement du texte ---
+# --- Traitement des thinkings ---
 
 def formater_thinking(texte: str) -> str:
-    """
-    Repère les blocs de raisonnement interne DeepSeek et les encadre en :
-        {thinking : ...contenu...}
-    """
     pattern = r'(Thought for \d+ seconds?\n\n)(.*?)(\n\n(?=[A-ZÀÂÉÈÊËÎÏÔÙÛÜ]|\d|\*))'
 
     def remplacer(m):
-        contenu_thinking = m.group(2).strip()
-        suite = m.group(3)
-        return f"\n{{thinking : {contenu_thinking}}}\n{suite}"
+        return f"\n{{thinking : {m.group(2).strip()}}}\n{m.group(3)}"
 
     resultat = re.sub(pattern, remplacer, texte, flags=re.DOTALL)
-
-    # Fallback si le thinking est en fin de message
     if resultat == texte:
         resultat = re.sub(
             r'Thought for (\d+ seconds?)\n\n(.+)',
@@ -99,16 +83,13 @@ def formater_thinking(texte: str) -> str:
             texte,
             flags=re.DOTALL
         )
-
     return resultat
 
 
-# --- Extraction ---
+# --- Extraction HTML ---
 
 def extraire_messages(page) -> list[dict]:
-    """Extrait les messages de la conversation DeepSeek visible."""
     messages = []
-
     blocs = page.query_selector_all('[class*="message"], [class*="chat-message"], [class*="turn"]')
 
     if blocs:
@@ -127,7 +108,6 @@ def extraire_messages(page) -> list[dict]:
                 else:
                     messages.append({"role": "Sol", "content": formater_thinking(texte)})
     else:
-        # Fallback texte brut
         texte_brut = page.inner_text("body")
         messages.append({"role": "brut", "content": formater_thinking(texte_brut)})
 
@@ -159,20 +139,11 @@ def formater_md(session_name: str, messages: list[dict]) -> str:
 # --- Main ---
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Capture la conversation DeepSeek depuis Brave déjà ouvert"
-    )
-    parser.add_argument(
-        "--session", "-s",
-        default=f"session_{datetime.now().strftime('%Y%m%d_%H%M')}",
-        help="Nom de la session (pour le nom de fichier)"
-    )
-    parser.add_argument(
-        "--port", "-p",
-        type=int,
-        default=DEBUG_PORT,
-        help=f"Port de débogage (défaut: {DEBUG_PORT})"
-    )
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--session", "-s",
+                        default=f"session_{datetime.now().strftime('%Y%m%d_%H%M')}",
+                        help="Nom de la session")
+    parser.add_argument("--port", "-p", type=int, default=DEBUG_PORT)
     args = parser.parse_args()
 
     print(f"🔌 Connexion à Brave sur le port {args.port}...")
@@ -182,11 +153,9 @@ def main():
 
         if browser is None:
             print(f"❌ Impossible de se connecter à Brave.")
-            print(f"   Ferme Brave complètement, puis lance :")
-            print(f'   "{BRAVE_EXE}" --remote-debugging-port={args.port} --profile-directory="Default"')
+            print(f'   Lance : "{BRAVE_EXE}" --remote-debugging-port={args.port} --profile-directory="Default"')
             return
 
-        # Trouver l'onglet DeepSeek
         page = None
         for context in browser.contexts:
             for p_page in context.pages:
@@ -196,7 +165,6 @@ def main():
 
         if page is None:
             print(f"❌ Aucun onglet DeepSeek trouvé.")
-            print(f"   Ouvre {DEEPSEEK_URL} dans Brave et réessaie.")
             print("\n📋 Onglets ouverts :")
             for context in browser.contexts:
                 for p_page in context.pages:
@@ -207,7 +175,6 @@ def main():
         print("⏳ Extraction des messages...")
 
         messages = extraire_messages(page)
-
         if not messages:
             print("⚠️  Aucun message extrait.")
             return
@@ -218,8 +185,11 @@ def main():
         chemin = nom_fichier(args.session)
         chemin.write_text(contenu, encoding="utf-8")
 
+        # Écrire le nom du fichier pour le .bat
+        LAST_CAPTURE_FILE.write_text(str(chemin), encoding="utf-8")
+
         print(f"✅ Sauvegardé : {chemin}")
-        print(f"\n💡 Lance maintenant ton script de commit/push habituel.")
+        print(f"📝 Nom écrit dans : {LAST_CAPTURE_FILE}")
 
 
 if __name__ == "__main__":
