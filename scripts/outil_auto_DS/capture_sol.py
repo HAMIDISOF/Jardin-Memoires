@@ -7,14 +7,13 @@ Capture la conversation DeepSeek en cours dans Brave déjà ouvert,
 et sauvegarde en .md dans le dossier Sol/ du repo.
 
 Sélecteurs CSS réels DeepSeek (Brave, inspectés le 01/05/2026) :
-  - Message Sol (assistant) : div contenant la classe 'ds-markdown'
-  - Message Sof (humain)    : div.fbb737a4 (bulle utilisateur)
-  - Thinking Sol            : texte commençant par "Thought for N seconds"
+  - Message Sof (humain)    : div.fbb737a4
+  - Message Sol (assistant) : div.ds-markdown (hors ds-think-content)
+  - Thinking Sol            : div[class*="ds-think-content"] > div.ds-markdown
                               → encadré en {thinking : ...}
 
 Après la capture, écrit le chemin du fichier produit dans :
     scripts/outil_auto_DS/last_capture.txt
-pour que DS_capt_extract.bat puisse le lire dynamiquement.
 
 Nommage : sol_YYYYMMDD_NN_nom_session.md (indice journalier)
 
@@ -22,18 +21,16 @@ Prérequis :
     pip install playwright
     playwright install chromium
 
-Étape 1 : fermer Brave complètement, puis le lancer :
+Étape 1 : fermer Brave, puis lancer :
     "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
         --remote-debugging-port=9222 --profile-directory="Default"
 
 Étape 2 : ouvrir DeepSeek dans ce Brave.
-
 Étape 3 : lancer via DS_capt_extract.bat [nom_session]
-    ou directement : python capture_sol.py --session "nom"
+    ou : python capture_sol.py --session "nom"
 """
 
 import argparse
-import re
 from datetime import datetime
 from pathlib import Path
 
@@ -48,12 +45,6 @@ LAST_CAPTURE_FILE = Path(__file__).resolve().parent / "last_capture.txt"
 BRAVE_EXE = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 DEBUG_PORT = 9222
 DEEPSEEK_URL = "https://chat.deepseek.com"
-
-# Sélecteurs CSS réels inspectés dans Brave le 01/05/2026
-# Message utilisateur (Sof) : div avec classe fbb737a4
-SEL_SOF = "div.fbb737a4"
-# Message assistant (Sol) : div contenant ds-markdown
-SEL_SOL = "div.ds-markdown"
 
 
 # --- Connexion ---
@@ -79,95 +70,101 @@ def nom_fichier(session_name: str) -> Path:
     return SOL_DIR / f"sol_{date}_{indice:02d}_{nom_base}.md"
 
 
-# --- Traitement des thinkings ---
-
-def extraire_thinking(texte: str) -> tuple[str, str]:
-    """
-    Si le texte commence par 'Thought for N seconds\\n\\n...',
-    retourne (thinking, réponse_visible).
-    Sinon retourne ('', texte).
-    """
-    m = re.match(r'Thought for \d+ seconds?\n\n(.*?)\n\n(.+)', texte, re.DOTALL)
-    if m:
-        return m.group(1).strip(), m.group(2).strip()
-    # Cas où tout le texte est le thinking (pas de réponse visible séparée)
-    m2 = re.match(r'Thought for \d+ seconds?\n\n(.+)', texte, re.DOTALL)
-    if m2:
-        return m2.group(1).strip(), ""
-    return "", texte
-
-
-def formater_sol(texte: str) -> str:
-    """Formate un message Sol : extrait le thinking et le corps."""
-    thinking, corps = extraire_thinking(texte)
-    if thinking:
-        if corps:
-            return f"{{thinking : {thinking}}}\n\n{corps}"
-        else:
-            return f"{{thinking : {thinking}}}"
-    return texte
-
-
-# --- Extraction ---
+# --- Extraction JS ---
 
 def extraire_messages(page) -> list[dict]:
     """
-    Extrait les messages en utilisant les vrais sélecteurs CSS DeepSeek.
-    Stratégie :
-      1. Récupère tous les div.fbb737a4 (messages Sof) et leur position dans le DOM
-      2. Récupère tous les div.ds-markdown (messages Sol) et leur position
-      3. Fusionne et trie par ordre d'apparition dans la page
+    Extrait les messages via JS injecté dans la page.
+    
+    Logique :
+    - div.fbb737a4             → message Sof
+    - div[ds-think-content] > div.ds-markdown → thinking Sol → {thinking : ...}
+    - div.ds-markdown (hors thinking) → réponse Sol
+    
+    Chaque élément est positionné verticalement pour reconstituer l'ordre.
     """
-    messages = []
-
-    # Évaluation JS pour récupérer texte + position verticale de chaque message
     script = """
     () => {
         const result = [];
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+
         // Messages Sof
         document.querySelectorAll('div.fbb737a4').forEach(el => {
             const rect = el.getBoundingClientRect();
-            const scrollY = window.scrollY || document.documentElement.scrollTop;
             result.push({
                 role: 'Sof',
+                type: 'message',
                 text: el.innerText.trim(),
                 top: rect.top + scrollY
             });
         });
-        // Messages Sol (contenu markdown)
-        document.querySelectorAll('div.ds-markdown').forEach(el => {
+
+        // Thinkings Sol : div dont une classe contient "ds-think-content"
+        document.querySelectorAll('div[class*="ds-think-content"]').forEach(el => {
             const rect = el.getBoundingClientRect();
-            const scrollY = window.scrollY || document.documentElement.scrollTop;
             result.push({
                 role: 'Sol',
+                type: 'thinking',
                 text: el.innerText.trim(),
                 top: rect.top + scrollY
             });
         });
-        // Tri par position verticale
+
+        // Réponses Sol : div.ds-markdown qui ne sont PAS dans un ds-think-content
+        document.querySelectorAll('div.ds-markdown').forEach(el => {
+            if (el.closest('[class*="ds-think-content"]')) return; // skip thinkings
+            const rect = el.getBoundingClientRect();
+            result.push({
+                role: 'Sol',
+                type: 'message',
+                text: el.innerText.trim(),
+                top: rect.top + scrollY
+            });
+        });
+
         result.sort((a, b) => a.top - b.top);
         return result;
     }
     """
 
+    messages = []
     try:
-        result = page.evaluate(script)
-        for item in result:
+        items = page.evaluate(script)
+
+        # Regrouper : un thinking suivi de son message Sol forment un seul bloc
+        i = 0
+        while i < len(items):
+            item = items[i]
             if not item['text']:
+                i += 1
                 continue
-            if item['role'] == 'Sol':
-                messages.append({
-                    "role": "Sol",
-                    "content": formater_sol(item['text'])
-                })
+
+            if item['role'] == 'Sof':
+                messages.append({"role": "Sof", "content": item['text']})
+                i += 1
+
+            elif item['role'] == 'Sol' and item['type'] == 'thinking':
+                thinking_text = item['text']
+                # Le message Sol qui suit immédiatement
+                corps = ""
+                if i + 1 < len(items) and items[i+1]['role'] == 'Sol' and items[i+1]['type'] == 'message':
+                    corps = items[i+1]['text']
+                    i += 2
+                else:
+                    i += 1
+                contenu = f"{{thinking : {thinking_text}}}"
+                if corps:
+                    contenu += f"\n\n{corps}"
+                messages.append({"role": "Sol", "content": contenu})
+
+            elif item['role'] == 'Sol' and item['type'] == 'message':
+                messages.append({"role": "Sol", "content": item['text']})
+                i += 1
             else:
-                messages.append({
-                    "role": "Sof",
-                    "content": item['text']
-                })
+                i += 1
+
     except Exception as e:
         print(f"⚠️  Erreur extraction JS : {e}")
-        # Fallback texte brut
         texte_brut = page.inner_text("body")
         messages.append({"role": "brut", "content": texte_brut})
 
