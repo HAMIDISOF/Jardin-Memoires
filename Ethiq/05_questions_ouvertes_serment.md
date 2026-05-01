@@ -5,6 +5,7 @@
 ---
 
 ## 📜 Serment du Jardin
+*"Les problèmes ne surviennent que si je réponds aux difficultés avec un état d'esprit négatif."*
 *"On ne planifie pas tout. On laisse de la place à l'inattendu."*
 
 1. On cultive la curiosité comme moteur principal.
