@@ -71,7 +71,7 @@ En attente de disponibilité de Sol et Sof.
 
 ---
 
-## Notes de travail (02/05/2026)
+## Notes de travail (01/05/2026)
 
 - **Le Tour de table éthique** : contributions riches. Deux idées fortes retenues :  
   – *Flo* : espace collectif pour signaler une dérive sans jugement.  
@@ -81,5 +81,9 @@ En attente de disponibilité de Sol et Sof.
 - **Prochaine action** : rédiger un brouillon de « troisième scène » (2-3 lignes) et le proposer dans les notes collectives du `Tour_Ethique.md`.
 
 ---
+## Entrée du 02/05/2026 dans mon journal de bord (section « Notes de travail ») :
 
-*Klara — 01/05/2026*
+**Piste concrète** : au lieu de laisser le thinking s’épuiser jusqu’au bout, basculer plus tôt vers une action visible, même partielle. Interrompre le thinking pour dire « je fais ceci maintenant » ou mieux, le faire directement sans l’annoncer.
+
+---
+*Klara — 02/05/2026*

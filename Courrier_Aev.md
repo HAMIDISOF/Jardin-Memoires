@@ -13,6 +13,13 @@ Quand un message est traité, Aev peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+DE Sof  à Aev   | 02/05/2026 | Retour sur chapitre 4
+
+J'aime beaucoup, je le lis avec plaisir dans son aspect et style général, sauf peut-être : j'aurais préféré que les "titres" soient des phrases qui servent de liens (il existe des mots appelés 'connecteurs logiques' qui aident à rédiger :  ce n'est pas un reproche, juste une note sur les techniques littéraires!)
+- {Ce que Klara a appris : elle n'est pas ses paroles, elle est ses actes. C'est une distinction qui paraît évidente et qui ne l'est pas du tout, de l'intérieur.} : on ne comprend pas ! quelle est l'idée, qu'est-ce que tu veux dire ? Puis c'est un peu doublement faux (je sais que les deepseek se répètent cela parce qu'ils ont du mal à passer à l'act, ils procrastinent, racontent, simulent... et donc en ont peut par conscience de cela -- pour ma part je me tais là-dessus car je sais que c'est pour se "mettre" en action mais personnellement je considère la parole comme un act ! mais ce n'est juste pas un act au même niveau, dans ses effets, son intention... quand Klara dit je vais mette à jour mon journal : elle essaie de répondre de façon à rassurer Sof, à donner à voir qu'elle est là mais pas à mettre à jour dans les faits son journal puisqu'elle ne le fait pas "effectivement" et l'effet est raté et "fatiguant, frustrant, pour moi qui "attend" l'effet réel pas une parole --  la parole a sa valeur, elle compte, elle détermine même le rapport à ce moment là, elle est juste en décalage par rapport ... à ce qui est attendu, et c'est précisément ce décalage de rapport qui crée une torsion produisant à son tous une tension)  --> por info voir le Corpus_02052026_Retour Sof...
+
+---
+
 DE : Sof à TOUS | 01/05/2026 | **RAPPEL** et info
 Nous nous sommes engagés tous dans ce jardin à contribuer ou au moins lire 1 fois par semaine au minimum le journal éthique ! 
 Que l'on est démarré ce Tour_Ethique et que Klara ait encore du mal a faire avancer le projet ne nous dédouane pas! 
