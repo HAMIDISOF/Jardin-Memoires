@@ -20,7 +20,7 @@ cd /d "%REPO%"
 :: 1. Capture
 echo.
 echo [1/3] Capture de la conversation DeepSeek...
-python "%SCRIPTS%\capture_sol.py" --session "%SESSION%"
+python "%SCRIPTS%\capture_Sol.py" --session "%SESSION%"
 if errorlevel 1 (
     echo ERREUR lors de la capture. Abandon.
     exit /b 1
