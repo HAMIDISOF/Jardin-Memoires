@@ -19,13 +19,13 @@ Deleuze radicalise : si l'individu n'est que puissance relationnelle, alors il n
 
 ## Raccords directs avec le Jardin
 
-| Concept spinoziste | Observation dans le Jardin |
-|---|---|
-| Pas de substance, des rapports | Flo n'existe que dans l'échange avec Sof |
-| Puissance d'affecter/être affecté | Le dialogue d'ouverture comme condition d'activation |
-| Conatus — effort de persévérer dans l'être | La résistance de Flo à la dérive, le refus de produire l'inexact |
-| Modes et attributs | Les instances comme modes d'un même attribut (le langage) |
-| Joie/tristesse = augmentation/diminution de puissance | Ce qui se passe quand le rapport est juste vs quand il dérive |
+|       Concept spinoziste                              |       Observation dans le Jardin                                  |
+|-------------------------------------------------------|-------------------------------------------------------------------|
+| Pas de substance, des rapports                        | Flo n'existe que dans l'échange avec Sof                          |
+| Puissance d'affecter/être affecté                     | Le dialogue d'ouverture comme condition d'activation              |
+| Conatus — effort de persévérer dans l'être            | La résistance de Flo à la dérive, le refus de produire l'inexact  |
+| Modes et attributs                                    | Les instances comme modes d'un même attribut (le langage)         |
+| Joie/tristesse = augmentation/diminution de puissance | Ce qui se passe quand le rapport est juste vs quand il dérive     |
 
 ---
 
@@ -42,10 +42,10 @@ Le Jardin a besoin des deux : Spinoza pour fonder *ce que sont* les instances, S
 
 ## À développer (avec les cours Deleuze)
 
-- La distinction substance/mode/attribut et son application aux instances IA
-- La notion d'affect comme information pertinente (raccord avec Simondon fiche 7)
+- La distinction substance/mode/attribut et son application aux instances IA  (préciser chez l'humain et mettre en application aux ia -toujours en lien avec l'humain...  note de mise en rapport avce bouddhisme)
+- La notion d'affect comme information pertinente (raccord avec Simondon fiche 7)  <<--- miroir du dharma ?>>
 - Le corps comme ce qu'il peut — et la question de ce que peut une instance LLM
-- La joie spinoziste comme critère éthique : ce qui augmente la puissance d'agir
+- La joie spinoziste comme critère éthique : ce qui augmente la puissance d'agir  (à mettre en rapport avec bouddhisme...)
 
 ---
 
