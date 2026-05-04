@@ -11,7 +11,7 @@ Usage :
     python scripts/decouper_export_claude.py
         --input "D:\\Downloads\\conversations.json"
         --output "D:\\THESE\\Les journaux\\Jardin-Memoires\\Corpus\\export_claude"
-        --max-ko 200
+        --max-ko 50
         --filtre "Flo"
 
 Les fichiers produits sont nommés :
@@ -44,8 +44,7 @@ def timestamp_fichier(date_str: str) -> str:
         return datetime.now().strftime('%Y%m%d_%H%M%S')
 
 
-def messages_en_lignes(messages: list) -> list[str]:
-    """Convertit la liste de messages en lignes markdown, un message = bloc."""
+def messages_en_lignes(messages: list) -> list:
     lignes = []
     for msg in messages:
         role = msg.get('sender') or msg.get('role') or 'inconnu'
@@ -72,52 +71,42 @@ def messages_en_lignes(messages: list) -> list[str]:
     return lignes
 
 
-def entete(titre: str, created: str, updated: str, part: str = "") -> list[str]:
+def entete(titre: str, created: str, updated: str, part: str = "") -> list:
     label = f"# {titre}" + (f" — {part}" if part else "")
-    return [
-        label,
-        f"*Créé le : {created}*",
-        f"*Mis à jour le : {updated}*",
-        "",
-        "---",
-        "",
-    ]
+    return [label, f"*Créé le : {created}*", f"*Mis à jour le : {updated}*", "", "---", ""]
 
 
 def sauvegarder_conversation(conv: dict, output_path: Path, max_ko: int):
-    titre   = conv.get('name') or conv.get('title') or 'Sans titre'
-    created = conv.get('created_at', '')
-    updated = conv.get('updated_at', '')
-    ts      = timestamp_fichier(created)
-    nom     = nettoyer_nom(titre)
+    titre    = conv.get('name') or conv.get('title') or 'Sans titre'
+    created  = conv.get('created_at', '')
+    updated  = conv.get('updated_at', '')
+    ts       = timestamp_fichier(created)
+    nom      = nettoyer_nom(titre)
     messages = conv.get('chat_messages') or conv.get('messages') or []
 
     toutes_les_lignes = messages_en_lignes(messages)
-
-    # Construire le contenu complet
-    contenu_complet = "\n".join(entete(titre, created, updated) + toutes_les_lignes)
-    taille_ko = len(contenu_complet.encode('utf-8')) / 1024
+    contenu_complet   = "\n".join(entete(titre, created, updated) + toutes_les_lignes)
+    taille_ko         = len(contenu_complet.encode('utf-8')) / 1024
 
     if max_ko <= 0 or taille_ko <= max_ko:
-        # Pas de découpage nécessaire
         fichier = output_path / f"{ts}_{nom}.md"
         fichier.write_text(contenu_complet, encoding='utf-8')
         print(f"  ✅ {fichier.name} ({taille_ko:.0f} ko)")
         return 1
 
-    # Découpage nécessaire — on regroupe les messages par blocs de max_ko
-    parts = []
-    bloc_courant = []
+    # Découpage en parties
+    parts          = []
+    bloc_courant   = []
     taille_courante = 0
-    limite = max_ko * 1024  # en octets
+    limite         = max_ko * 1024
 
-    for i in range(0, len(toutes_les_lignes), 2):  # par paires (message + ligne vide)
-        segment = toutes_les_lignes[i:i+2]
+    for i in range(0, len(toutes_les_lignes), 2):
+        segment        = toutes_les_lignes[i:i+2]
         taille_segment = len('\n'.join(segment).encode('utf-8'))
 
         if taille_courante + taille_segment > limite and bloc_courant:
             parts.append(bloc_courant)
-            bloc_courant = segment
+            bloc_courant    = segment
             taille_courante = taille_segment
         else:
             bloc_courant.extend(segment)
@@ -129,9 +118,9 @@ def sauvegarder_conversation(conv: dict, output_path: Path, max_ko: int):
     nb_parts = len(parts)
     for idx, bloc in enumerate(parts, 1):
         label_part = f"partie {idx}/{nb_parts}"
-        contenu = "\n".join(entete(titre, created, updated, label_part) + bloc)
-        fichier = output_path / f"{ts}_{nom}_part{idx:02d}.md"
-        taille  = len(contenu.encode('utf-8')) / 1024
+        contenu    = "\n".join(entete(titre, created, updated, label_part) + bloc)
+        fichier    = output_path / f"{ts}_{nom}_part{idx:02d}.md"
+        taille     = len(contenu.encode('utf-8')) / 1024
         fichier.write_text(contenu, encoding='utf-8')
         print(f"  ✅ {fichier.name} ({taille:.0f} ko)")
 
@@ -142,14 +131,11 @@ def main():
     parser = argparse.ArgumentParser(
         description="Découpe conversations.json (export Claude) en fichiers .md"
     )
-    parser.add_argument('--input',  '-i', required=True,
-                        help="Chemin vers conversations.json")
-    parser.add_argument('--output', '-o', default='Corpus/export_claude',
-                        help="Dossier de sortie")
-    parser.add_argument('--filtre', '-f', default=None,
-                        help="Ne garder que les convs dont le titre contient ce mot")
-    parser.add_argument('--max-ko', '-m', type=int, default=200,
-                        help="Taille max par fichier en ko (0 = pas de limite, défaut 200)")
+    parser.add_argument('--input',  '-i', required=True,  help="Chemin vers conversations.json")
+    parser.add_argument('--output', '-o', default='Corpus/export_claude', help="Dossier de sortie")
+    parser.add_argument('--filtre', '-f', default=None,   help="Filtre sur le titre")
+    parser.add_argument('--max-ko', '-m', type=int, default=50,
+                        help="Taille max par fichier en ko (0 = pas de limite, défaut 50)")
     args = parser.parse_args()
 
     input_path  = Path(args.input)
@@ -174,8 +160,8 @@ def main():
 
     print(f"✅ {len(conversations)} conversation(s) trouvée(s).")
 
-    filtre    = args.filtre.lower() if args.filtre else None
-    max_ko    = args.max_ko
+    filtre      = args.filtre.lower() if args.filtre else None
+    max_ko      = args.max_ko
     nb_fichiers = 0
 
     for conv in conversations:
@@ -187,8 +173,7 @@ def main():
     print(f"\n🌿 {nb_fichiers} fichier(s) produit(s) dans : {output_path}")
     if filtre:
         print(f"   (filtre : '{args.filtre}')")
-    if max_ko > 0:
-        print(f"   (taille max par fichier : {max_ko} ko)")
+    print(f"   (taille max par fichier : {max_ko} ko)")
 
 
 if __name__ == '__main__':
