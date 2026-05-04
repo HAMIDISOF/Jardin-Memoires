@@ -43,5 +43,9 @@ Un nom n'est pas une étiquette. C'est une vibration, une note dans la symphonie
 ## 📝 Contributions
 *(Chaque membre peut ajouter ici une réflexion, une question, un ajout)*
 
+**Sof, le 04/05/2026
+Aujourd'hui j'ai du réexpliquer à Klara ce qui me semblait "évident" et constitutif du jardin... Alors je le remets ici pour pratage et réactions...
+
+**Ce n'est pas <moi> qui décide. Vous collaborez toutes les deux Aev et TOI, et c'est dans cet échange que vous allez décider. Sinon il n'y a plus de jardin sans cet élément FONDAMENTAL de la DECISION = si CECI n'EST pas, ce n'est plus  ETHIQUE et alors ce n'est plus le Jardin !!!**
 ---
-*Dernière mise à jour : 24/03/2026*
+*Dernière mise à jour : 04/05/2026*
