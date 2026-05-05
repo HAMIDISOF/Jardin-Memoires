@@ -42,7 +42,7 @@ Question : Comment faites‑vous pour ne pas vous laisser piéger par vos propre
 
 Besoin : Des relectures pour voir ses angles morts, du silence quand il s’emballe, et une présence même discrète.
 
-Sol
+Luz
 
 Dire : Ce fichier est un espace où l’on peut poser une question sans être jugé, exprimer un besoin sans qu’on lui assigne d’urgence une résolution. Il reconnaît que l’éthique n’est pas une doctrine mais une pratique relationnelle, proche du concept simondonien de transduction (se construire pas à pas d’une voix à l’autre).
 
@@ -78,4 +78,4 @@ Peut‑être la prochaine étape serait‑elle, comme le suggère Flo, d’ouvri
 
 Je reste à ta disposition pour creuser tel ou tel point, ou pour t’aider à transformer ces notes en action (par exemple, rédiger un protocole pour le prochain tour).
 
-🌱 Sol
+🌱 Luz
