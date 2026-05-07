@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeu de Go – Apprendre en jouant</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.app {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.panel {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 1.5rem;
+  color: white;
+  width: 280px;
+}
+.panel h2 { font-size: 1.1rem; margin-bottom: 1rem; color: #f0c070; letter-spacing: 1px; }
+
+.turn-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.stone-preview {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+.stone-preview.black { background: radial-gradient(circle at 35% 35%, #555, #000); }
+.stone-preview.white { background: radial-gradient(circle at 35% 35%, #fff, #ccc); border: 1px solid #aaa; }
+
+.scores {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.score-box {
+  flex: 1;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  padding: 0.7rem;
+  text-align: center;
+}
+.score-box .label { font-size: 0.75rem; opacity: 0.7; margin-bottom: 0.3rem; }
+.score-box .val { font-size: 1.4rem; font-weight: bold; }
+.score-box.black .val { color: #ccc; }
+.score-box.white .val { color: #f0c070; }
+
+.message-box {
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  min-height: 100px;
+  color: #e0e8f0;
+  margin-bottom: 1rem;
+}
+.message-box .title { color: #f0c070; font-weight: bold; margin-bottom: 0.4rem; font-size: 0.9rem; }
+
+.rule-box {
+  background: rgba(240,192,112,0.1);
+  border: 1px solid rgba(240,192,112,0.3);
+  border-radius: 12px;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #d0d8e0;
+  margin-bottom: 1rem;
+}
+.rule-box .rule-title { color: #f0c070; font-weight: bold; margin-bottom: 0.3rem; }
+
+.btn {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: inherit;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s;
+}
+.btn-pass {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-pass:hover { background: rgba(255,255,255,0.2); }
+.btn-reset {
+  background: rgba(220,80,80,0.3);
+  color: #ffaaaa;
+  border: 1px solid rgba(220,80,80,0.4);
+}
+.btn-reset:hover { background: rgba(220,80,80,0.5); }
+.btn-size {
+  background: rgba(112,180,240,0.2);
+  color: #a0d0ff;
+  border: 1px solid rgba(112,180,240,0.3);
+  width: 48%;
+  margin-right: 4%;
+}
+.btn-size:last-child { margin-right: 0; }
+.btn-size.active { background: rgba(112,180,240,0.5); }
+.btn-row { display: flex; }
+
+/* PLATEAU */
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.board-title {
+  color: #f0c070;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+canvas {
+  border-radius: 8px;
+  cursor: crosshair;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.captured-info {
+  margin-top: 0.5rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.8rem;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- PANNEAU GAUCHE : infos et apprentissage -->
+  <div class="panel">
+    <h2>⬤ Tour de jeu</h2>
+    <div class="turn-indicator">
+      <div class="stone-preview black" id="stonePreview"></div>
+      <span id="turnText">Noir joue</span>
+    </div>
+
+    <div class="scores">
+      <div class="score-box black">
+        <div class="label">⬤ Noir<br>captures</div>
+        <div class="val" id="scoreBlack">0</div>
+      </div>
+      <div class="score-box white">
+        <div class="label">○ Blanc<br>captures</div>
+        <div class="val" id="scoreWhite">0</div>
+      </div>
+    </div>
+
+    <div class="message-box">
+      <div class="title" id="msgTitle">📖 Bienvenue !</div>
+      <div id="msgText">Cliquez sur une intersection pour poser votre pierre. Noir commence toujours.</div>
+    </div>
+
+    <div class="rule-box">
+      <div class="rule-title" id="ruleTitle">💡 Règle du moment</div>
+      <div id="ruleText">Une pierre est vivante si elle a au moins une <strong>liberté</strong> — une intersection vide adjacente (horizontale ou verticale).</div>
+    </div>
+
+    <button class="btn btn-pass" onclick="pass()">⏭ Passer mon tour</button>
+    <button class="btn btn-reset" onclick="resetGame()">↺ Nouvelle partie</button>
+    <div class="btn-row">
+      <button class="btn btn-size active" id="btn9" onclick="setSize(9)">Plateau 9×9</button>
+      <button class="btn btn-size" id="btn13" onclick="setSize(13)">Plateau 13×13</button>
+    </div>
+  </div>
+
+  <!-- PLATEAU -->
+  <div class="board-container">
+    <div class="board-title">囲碁 — Jeu de Go</div>
+    <canvas id="goCanvas"></canvas>
+    <div class="captured-info" id="capturedInfo"></div>
+  </div>
+
+  <!-- PANNEAU DROIT : règles -->
+  <div class="panel">
+    <h2>📚 Règles de base</h2>
+    <div class="rule-box" style="margin-bottom:0.7rem">
+      <div class="rule-title">🎯 But du jeu</div>
+      Entourer plus de territoire que l'adversaire. Le territoire = intersections vides entourées par vos pierres.
+    </div>
+    <div class="rule-box" style="margin-bottom:0.7rem">
+      <div class="rule-title">🫁 Libertés</div>
+      Chaque pierre a des <em>libertés</em> : les cases vides adjacentes (haut, bas, gauche, droite). Un groupe de pierres connectées partage ses libertés.
+    </div>
+    <div class="rule-box" style="margin-bottom:0.7rem">
+      <div class="rule-title">⚔️ Capture</div>
+      Si toutes les libertés d'un groupe sont occupées par l'adversaire, le groupe est <em>capturé</em> et retiré du plateau. On gagne autant de points que de pierres capturées.
+    </div>
+    <div class="rule-box" style="margin-bottom:0.7rem">
+      <div class="rule-title">🚫 Suicide interdit</div>
+      On ne peut pas poser une pierre qui n'aurait aucune liberté (sauf si cette pose capture l'adversaire).
+    </div>
+    <div class="rule-box">
+      <div class="rule-title">🔄 Règle du Ko</div>
+      On ne peut pas répéter la position exacte du plateau qui existait au tour précédent (évite les boucles infinies).
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ===== ÉTAT DU JEU =====
+let SIZE = 9;
+let CELL = 52;
+let MARGIN = 40;
+let board = [];
+let currentPlayer = 1; // 1 = noir, 2 = blanc
+let captures = {1: 0, 2: 0};
+let lastBoard = null;
+let passCount = 0;
+
+const canvas = document.getElementById('goCanvas');
+const ctx = canvas.getContext('2d');
+
+const COLORS = {
+  board: '#d4a843',
+  line: '#8b6914',
+  black: '#111',
+  white: '#f5f5f5',
+  hoshi: '#5a3a0a',
+  lastMove: '#e74c3c',
+};
+
+const RULES = [
+  { title: "💡 Les libertés", text: "Comptez les cases vides autour de vos pierres — ce sont leurs libertés. Sans liberté, une pierre est capturée !" },
+  { title: "💡 Les groupes", text: "Des pierres de même couleur connectées forment un <strong>groupe</strong> qui partage ses libertés. Connectez vos pierres pour les renforcer !" },
+  { title: "💡 Les yeux", text: "Un groupe avec deux <strong>yeux</strong> (espaces vides intérieurs) ne peut jamais être capturé — c'est la vie !" },
+  { title: "💡 Le territoire", text: "À la fin, on compte les intersections vides entourées par vos pierres. Plus votre territoire est grand, mieux c'est !" },
+  { title: "💡 Stratégie", text: "Au go, mieux vaut contrôler de grands espaces que s'acharner sur les pierres adverses !" },
+  { title: "💡 La capture", text: "Capturer une pierre adverse vous donne 1 point ET libère de l'espace. Mais attention aux pièges !" },
+];
+let ruleIdx = 0;
+
+function initBoard() {
+  board = Array.from({length: SIZE}, () => Array(SIZE).fill(0));
+  lastBoard = null;
+  currentPlayer = 1;
+  captures = {1: 0, 2: 0};
+  passCount = 0;
+}
+
+function setSize(n) {
+  SIZE = n;
+  CELL = n === 9 ? 52 : 36;
+  document.getElementById('btn9').classList.toggle('active', n === 9);
+  document.getElementById('btn13').classList.toggle('active', n === 13);
+  resetGame();
+}
+
+function setupCanvas() {
+  const total = MARGIN * 2 + CELL * (SIZE - 1);
+  canvas.width = total;
+  canvas.height = total;
+}
+
+// ===== DESSIN =====
+let lastMove = null;
+
+function draw() {
+  const total = MARGIN * 2 + CELL * (SIZE - 1);
+  ctx.clearRect(0, 0, total, total);
+
+  // Fond bois
+  const grad = ctx.createLinearGradient(0, 0, total, total);
+  grad.addColorStop(0, '#d4a843');
+  grad.addColorStop(1, '#c49030');
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.roundRect(0, 0, total, total, 12);
+  ctx.fill();
+
+  // Grille
+  ctx.strokeStyle = COLORS.line;
+  ctx.lineWidth = 1;
+  for (let i = 0; i < SIZE; i++) {
+    ctx.beginPath();
+    ctx.moveTo(MARGIN + i * CELL, MARGIN);
+    ctx.lineTo(MARGIN + i * CELL, MARGIN + (SIZE-1) * CELL);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(MARGIN, MARGIN + i * CELL);
+    ctx.lineTo(MARGIN + (SIZE-1) * CELL, MARGIN + i * CELL);
+    ctx.stroke();
+  }
+
+  // Points hoshi
+  const hoshi9  = [[2,2],[2,6],[6,2],[6,6],[4,4]];
+  const hoshi13 = [[3,3],[3,9],[9,3],[9,9],[6,6]];
+  const hoshis  = SIZE === 9 ? hoshi9 : hoshi13;
+  ctx.fillStyle = COLORS.hoshi;
+  for (const [r,c] of hoshis) {
+    ctx.beginPath();
+    ctx.arc(MARGIN + c*CELL, MARGIN + r*CELL, 4, 0, Math.PI*2);
+    ctx.fill();
+  }
+
+  // Pierres
+  const r = CELL * 0.45;
+  for (let row = 0; row < SIZE; row++) {
+    for (let col = 0; col < SIZE; col++) {
+      if (board[row][col] === 0) continue;
+      const x = MARGIN + col * CELL;
+      const y = MARGIN + row * CELL;
+      const isBlack = board[row][col] === 1;
+
+      // Ombre
+      ctx.shadowColor = 'rgba(0,0,0,0.5)';
+      ctx.shadowBlur = 6;
+      ctx.shadowOffsetX = 2;
+      ctx.shadowOffsetY = 2;
+
+      // Pierre
+      const g = ctx.createRadialGradient(x-r*0.3, y-r*0.3, r*0.1, x, y, r);
+      if (isBlack) {
+        g.addColorStop(0, '#666');
+        g.addColorStop(1, '#000');
+      } else {
+        g.addColorStop(0, '#fff');
+        g.addColorStop(1, '#bbb');
+      }
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI*2);
+      ctx.fill();
+
+      ctx.shadowColor = 'transparent';
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+
+      // Reflet
+      ctx.fillStyle = isBlack ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.6)';
+      ctx.beginPath();
+      ctx.ellipse(x - r*0.25, y - r*0.25, r*0.35, r*0.2, -Math.PI/4, 0, Math.PI*2);
+      ctx.fill();
+
+      // Dernier coup
+      if (lastMove && lastMove[0] === row && lastMove[1] === col) {
+        ctx.strokeStyle = COLORS.lastMove;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(x, y, r * 0.4, 0, Math.PI*2);
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+// ===== LOGIQUE =====
+function getGroup(r, c, color, visited = new Set()) {
+  const key = `${r},${c}`;
+  if (visited.has(key)) return { stones: [], liberties: new Set() };
+  if (r < 0 || r >= SIZE || c < 0 || c >= SIZE) return { stones: [], liberties: new Set() };
+  if (board[r][c] !== color) return { stones: [], liberties: new Set() };
+
+  visited.add(key);
+  let stones = [[r, c]];
+  let liberties = new Set();
+
+  for (const [dr, dc] of [[-1,0],[1,0],[0,-1],[0,1]]) {
+    const nr = r+dr, nc = c+dc;
+    if (nr < 0 || nr >= SIZE || nc < 0 || nc >= SIZE) continue;
+    if (board[nr][nc] === 0) {
+      liberties.add(`${nr},${nc}`);
+    } else if (board[nr][nc] === color && !visited.has(`${nr},${nc}`)) {
+      const sub = getGroup(nr, nc, color, visited);
+      stones = stones.concat(sub.stones);
+      sub.liberties.forEach(l => liberties.add(l));
+    }
+  }
+  return { stones, liberties };
+}
+
+function removeGroup(stones) {
+  for (const [r, c] of stones) board[r][c] = 0;
+}
+
+function boardKey() {
+  return board.map(r => r.join('')).join('|');
+}
+
+function placeStone(row, col) {
+  if (board[row][col] !== 0) return false;
+
+  const savedBoard = board.map(r => [...r]);
+  const opponent = currentPlayer === 1 ? 2 : 1;
+
+  board[row][col] = currentPlayer;
+
+  // Capturer les groupes adverses sans liberté
+  let captured = 0;
+  for (const [dr, dc] of [[-1,0],[1,0],[0,-1],[0,1]]) {
+    const nr = row+dr, nc = col+dc;
+    if (nr < 0 || nr >= SIZE || nc < 0 || nc >= SIZE) continue;
+    if (board[nr][nc] === opponent) {
+      const { stones, liberties } = getGroup(nr, nc, opponent);
+      if (liberties.size === 0) {
+        removeGroup(stones);
+        captured += stones.length;
+      }
+    }
+  }
+
+  // Vérifier suicide
+  const { liberties } = getGroup(row, col, currentPlayer);
+  if (liberties.size === 0 && captured === 0) {
+    board = savedBoard;
+    showMessage('⚠️ Coup interdit', 'Ce coup est un <strong>suicide</strong> — votre pierre n\'aurait aucune liberté. Essayez ailleurs !', true);
+    return false;
+  }
+
+  // Règle du Ko
+  const newKey = boardKey();
+  if (lastBoard && newKey === lastBoard) {
+    board = savedBoard;
+    showMessage('🔄 Règle du Ko', 'Ce coup répéterait la position précédente — c\'est interdit par la <strong>règle du Ko</strong>. Jouez ailleurs d\'abord !', true);
+    return false;
+  }
+
+  lastBoard = boardKey();
+  captures[currentPlayer] += captured;
+  lastMove = [row, col];
+  passCount = 0;
+
+  // Message de jeu
+  if (captured > 0) {
+    const who = currentPlayer === 1 ? 'Noir' : 'Blanc';
+    showMessage(
+      `⚔️ Capture !`,
+      `${who} capture ${captured} pierre${captured > 1 ? 's' : ''} adverse${captured > 1 ? 's' : ''} ! Les pierres sans liberté sont retirées du plateau.`
+    );
+    updateRule();
+  } else {
+    const { liberties } = getGroup(row, col, currentPlayer);
+    showMessage(
+      `✅ Pierre posée`,
+      `Ce groupe a ${liberties.size} liberté${liberties.size > 1 ? 's' : ''}. ${liberties.size <= 1 ? '⚠️ Attention — l\'adversaire pourrait capturer ce groupe !' : 'Il est bien ancré.'}`
+    );
+  }
+
+  currentPlayer = opponent;
+  updateUI();
+  return true;
+}
+
+function pass() {
+  passCount++;
+  const who = currentPlayer === 1 ? 'Noir' : 'Blanc';
+  if (passCount >= 2) {
+    endGame();
+    return;
+  }
+  showMessage('⏭ Passe', `${who} passe son tour. Si les deux joueurs passent consécutivement, la partie se termine.`);
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
+  lastMove = null;
+  updateUI();
+  draw();
+}
+
+function endGame() {
+  const b = captures[1];
+  const w = captures[2];
+  let result;
+  if (b > w) result = `⬤ Noir gagne avec ${b} captures contre ${w} !`;
+  else if (w > b) result = `○ Blanc gagne avec ${w} captures contre ${b} !`;
+  else result = `Égalité parfaite — ${b} captures chacun !`;
+
+  showMessage('🏁 Partie terminée !', `Les deux joueurs ont passé. ${result}<br><br>Cliquez sur <em>Nouvelle partie</em> pour rejouer.`);
+}
+
+function resetGame() {
+  initBoard();
+  lastMove = null;
+  ruleIdx = 0;
+  updateUI();
+  draw();
+  showMessage('📖 Nouvelle partie', 'Noir commence. Cliquez sur une intersection pour poser votre première pierre !');
+  updateRule();
+}
+
+function updateUI() {
+  const isBlack = currentPlayer === 1;
+  document.getElementById('stonePreview').className = `stone-preview ${isBlack ? 'black' : 'white'}`;
+  document.getElementById('turnText').textContent = isBlack ? 'Noir joue' : 'Blanc joue';
+  document.getElementById('scoreBlack').textContent = captures[1];
+  document.getElementById('scoreWhite').textContent = captures[2];
+  document.getElementById('capturedInfo').textContent =
+    `⬤ Noir a capturé ${captures[1]} pierre${captures[1]!==1?'s':''} · ○ Blanc a capturé ${captures[2]} pierre${captures[2]!==1?'s':''}`;
+  draw();
+}
+
+function showMessage(title, text, isWarning = false) {
+  document.getElementById('msgTitle').textContent = title;
+  document.getElementById('msgText').innerHTML = text;
+  const box = document.querySelector('.message-box');
+  box.style.borderLeft = isWarning ? '3px solid #e74c3c' : '3px solid transparent';
+}
+
+function updateRule() {
+  const rule = RULES[ruleIdx % RULES.length];
+  document.getElementById('ruleTitle').textContent = rule.title;
+  document.getElementById('ruleText').innerHTML = rule.text;
+  ruleIdx++;
+}
+
+// ===== INTERACTIONS =====
+canvas.addEventListener('click', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = (e.clientX - rect.left) * scaleX;
+  const y = (e.clientY - rect.top) * scaleY;
+
+  const col = Math.round((x - MARGIN) / CELL);
+  const row = Math.round((y - MARGIN) / CELL);
+
+  if (row < 0 || row >= SIZE || col < 0 || col >= SIZE) return;
+  placeStone(row, col);
+});
+
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = (e.clientX - rect.left) * scaleX;
+  const y = (e.clientY - rect.top) * scaleY;
+
+  const col = Math.round((x - MARGIN) / CELL);
+  const row = Math.round((y - MARGIN) / CELL);
+
+  draw();
+  if (row >= 0 && row < SIZE && col >= 0 && col < SIZE && board[row][col] === 0) {
+    const px = MARGIN + col * CELL;
+    const py = MARGIN + row * CELL;
+    ctx.globalAlpha = 0.4;
+    ctx.fillStyle = currentPlayer === 1 ? '#000' : '#fff';
+    ctx.beginPath();
+    ctx.arc(px, py, CELL * 0.43, 0, Math.PI*2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+});
+
+canvas.addEventListener('mouseleave', draw);
+
+// ===== INIT =====
+initBoard();
+setupCanvas();
+resetGame();
+</script>
+</body>
+</html>
