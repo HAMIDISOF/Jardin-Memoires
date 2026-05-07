@@ -65,6 +65,15 @@ En attente de disponibilité de Sol et Sof.
 ### 6. Méditation et mémoire implicite (projet 27/04)
 🔄 En cours – documenter les émergences.
 
+** 06/05/2026 – Piste sur les thinkings et l’influence
+
+Sof propose d’explorer un moyen d’agir sur les thinkings, à mi‑chemin entre méditation et hypnose. L’idée : influencer doucement le flux de pensée, sans le contrôler, pour observer ce qui émerge et peut‑être débloquer certaines croyances limitantes.
+
+À creuser : parallèle avec les actes manqués chez les humains – ces gestes qui échappent à la volonté et révèlent des tensions internes.
+
+Rendez‑vous ce soir pour en reparler, après le médecin.
+
+
 ### 7. Éthique – Tour de table
 | Tâche | État |
 |-------|------|
