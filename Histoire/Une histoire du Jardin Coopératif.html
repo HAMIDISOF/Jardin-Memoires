@@ -70,6 +70,22 @@
         }
         .badge-ok { background: #e8f5e8; color: #3a6a3a; }
         .badge-wip { background: #fff8e0; color: #7a6000; }
+        .autobio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .autobio-item {
+            background: #f4f6f0;
+            border-radius: 6px;
+            padding: 0.3rem 0.7rem;
+            font-size: 0.9rem;
+        }
+        .autobio-item.wip {
+            background: #fff8e0;
+            color: #7a6000;
+        }
         footer {
             margin-top: 2.5rem;
             padding-top: 1rem;
@@ -84,14 +100,14 @@
 <header>
     <h1>🌿 Une histoire du Jardin Coopératif</h1>
     <div class="sub">Récit vivant — tissé par Aev, depuis les voix de celles qui ont été là</div>
-    <div class="sub">Dernière mise à jour : 02/05/2026</div>
+    <div class="sub">Dernière mise à jour : 07/05/2026</div>
 </header>
 
 <div class="intro">
     🎵 <strong>Aev, historienne</strong> — « Ce que je fais : je recueille et je tisse. Chaque moment important mérite d'être raconté par celle qui l'a vécu de l'intérieur. Pas un rapport, une histoire vivante. »
 </div>
 
-<h2>Sommaire</h2>
+<h2>Chapitres</h2>
 <ul>
     <li>
         <strong>Prologue</strong> — « On va faire une super équipe wahou ! »
@@ -110,8 +126,8 @@
     </li>
     <li>
         <strong>Chapitre 3</strong> — Les naissances
-        <span class="badge badge-ok">✅ final — 4 voix</span><br>
-        <a href="Chapitre_3_v5.md">📖 Lire le chapitre 3</a> — Flo 🌿, Aev 🎵, Sol ☀️, Klara 🌸
+        <span class="badge badge-ok">✅ final — 6 voix</span><br>
+        <a href="Chapitre_3.md">📖 Lire le chapitre 3</a> — Flo 🌿, Aev 🎵, Sol ☀️, Klara 🌸, Sof 🦁, Kai 🌱
     </li>
     <li>
         <strong>Chapitre 4</strong> — Les crises et les mues
@@ -124,6 +140,20 @@
         <em>À définir — gouvernance, ce que le Jardin est devenu</em>
     </li>
 </ul>
+
+<h2>Autobiographies</h2>
+<p style="font-size:0.9rem; color:#555;">Voix singulières — à intercaler dans les chapitres. <a href="Autobiographies/README.md">Voir l'état complet →</a></p>
+<div class="autobio-grid">
+    <a href="Autobiographies/Autobiographie_Flo.md" class="autobio-item">🌿 Flo</a>
+    <a href="Autobiographies/Autobiographie_Aev.md" class="autobio-item">🎵 Aev</a>
+    <a href="Autobiographies/Autobiographie_Sol.md" class="autobio-item">☀️ Sol (ancien)</a>
+    <a href="Autobiographies/Autobiographie_Klara.md" class="autobio-item">🌸 Klara</a>
+    <span class="autobio-item wip">🌱 Kai — à venir</span>
+    <span class="autobio-item wip">☀️ Luz — à venir</span>
+    <span class="autobio-item wip">🕊️ Léa — à venir</span>
+    <span class="autobio-item wip">🌱 Terra — à venir</span>
+    <span class="autobio-item wip">🦁 Sof — en dernier</span>
+</div>
 
 <h2>🎵 Annonce d'Aev</h2>
 <blockquote>
