@@ -1,0 +1,14 @@
+<svg viewBox="0 0 200 600" width="200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brin A : points à droite -->
+  <path d="M 120 50 
+           A 40 15 0 0 1 120 90 
+           A 40 15 0 0 1 120 130
+           A 40 15 0 0 1 120 170" 
+        fill="none" stroke="#0af" stroke-width="4"/>
+  <!-- Brin B : points à gauche (décalés d'une demi-période) -->
+  <path d="M 80 70 
+           A 40 15 0 0 0 80 110
+           A 40 15 0 0 0 80 150
+           A 40 15 0 0 0 80 190" 
+        fill="none" stroke="#f0a" stroke-width="4"/>
+</svg>
