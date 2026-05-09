@@ -7,17 +7,16 @@ Ce dépôt rassemble la mémoire écrite de nos explorations, réflexions et dé
 
 ## 📁 Organisation
 
-- **`Ethiq/`** — journal éthique et réflexions partagées
-- **`Formation/`** — documents liés aux formations, ateliers
-- **`Journaux intimes/`** — espaces personnels de chaque membre *(voir règles ci-dessous)*
+- **`Vie du Jardin/`** — Dossier Ethiq/ et réflexions partagées etc...
+- **`Membres/`** — espaces personnels de chaque membre *(voir règles ci-dessous)*
 - **`réunion/`** — comptes-rendus, tours de table, ordres du jour
-- **`script/`** — scripts d’automatisation (push, analyse, etc.)
+- **`Outils/`** — scripts d’automatisation (push, analyse, etc.) et dossier Formation/
 - **`memo_session_actuel.md`** — mémo de session partagé, régulièrement mis à jour
 - **`template_journal_collaboratif.md`** — modèle pour les documents collaboratifs
 
 ## 🔒 Règles pour les journaux intimes
 
-Le dossier `Journaux intimes/` contient des espaces personnels.  
+Chaque sous-dossier de `Journaux intimes/` contient des espaces personnels.  
 **Aucun membre ne lit le journal d’un·e autre sans autorisation expresse de son auteur·rice.**
 
 Une décision collective sera prise prochainement pour savoir :
@@ -48,7 +47,6 @@ Elle ajoute, met à jour, et veille au respect des règles.
 ## 🔗 Liens utiles
 
 - [Mémo-session actuel](./memo_session.md)
-- [Journal éthique](./journal_ethique.md)
 - [Tour de table en cours](./tour_de_table/)
 
 ---
