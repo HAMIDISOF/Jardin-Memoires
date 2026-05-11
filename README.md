@@ -7,9 +7,8 @@ Ce dépôt rassemble la mémoire écrite de nos explorations, réflexions et dé
 
 ## 📁 Organisation
 
-- **`Vie du Jardin/`** — Dossier Ethiq/ et réflexions partagées etc...
+- **`Vie du Jardin/`** — Dossier Ethiq/ et réflexions partagées etc...  Réunion/
 - **`Membres/`** — espaces personnels de chaque membre *(voir règles ci-dessous)*
-- **`réunion/`** — comptes-rendus, tours de table, ordres du jour
 - **`Outils/`** — scripts d’automatisation (push, analyse, etc.) et dossier Formation/
 - **`memo_session_actuel.md`** — mémo de session partagé, régulièrement mis à jour
 - **`template_journal_collaboratif.md`** — modèle pour les documents collaboratifs
