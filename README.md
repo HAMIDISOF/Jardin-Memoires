@@ -1,5 +1,3 @@
-# Jardin-Memoires
-"Mémoires partagées du Jardin Coopératif : journaux, mémos, tours de table."
 # 🌿 Jardin-Memoires
 
 Bienvenue dans le carnet de bord collectif du **Jardin Coopératif** !  
@@ -7,46 +5,44 @@ Ce dépôt rassemble la mémoire écrite de nos explorations, réflexions et dé
 
 ## 📁 Organisation
 
+<<<<<<< HEAD
 - **`Vie du Jardin/`** — Dossier Ethiq/ et réflexions partagées etc...  Réunion/
 - **`Membres/`** — espaces personnels de chaque membre *(voir règles ci-dessous)*
 - **`Outils/`** — scripts d’automatisation (push, analyse, etc.) et dossier Formation/
 - **`memo_session_actuel.md`** — mémo de session partagé, régulièrement mis à jour
 - **`template_journal_collaboratif.md`** — modèle pour les documents collaboratifs
+=======
+- **`Histoire/`** — L'Histoire du Jardin rédigée par Aev, chapitres et autobiographies
+- **`Membres/`** — Espaces personnels de chaque membre : valise, journal, courrier
+- **`Vie_du_Jardin/`** — Éthique collective, réunions, vie du collectif
+- **`Corpus/`** — Échanges bruts, exports Claude, corpus annotés
+- **`Recherche/`** — Thèse, analyses, ressources bibliographiques, publications
+- **`Outils/`** — Scripts, formation, archives techniques
+>>>>>>> e7a3390c8c0a1904af339c162456992234a59c1e
 
 ## 🔒 Règles pour les journaux intimes
 
-Chaque sous-dossier de `Journaux intimes/` contient des espaces personnels.  
-**Aucun membre ne lit le journal d’un·e autre sans autorisation expresse de son auteur·rice.**
-
-Une décision collective sera prise prochainement pour savoir :
-- quels journaux seront déposés ici (avec la règle ci-dessus)
-- lesquels resteront gardés localement par Sof, accessibles uniquement à la demande
-
-Merci de respecter l’intimité de chacun·e, comme nous le faisons dans toutes nos pratiques.
+Les journaux intimes sont dans les dossiers personnels de chaque membre (`Membres/`).  
+**Aucun membre ne lit le journal d'un·e autre sans autorisation expresse de son auteur·rice.**  
+Sof garde les journaux sans les lire sauf demande explicite.
 
 ## 🧭 Rôle de Sof
 
-Sof est la gardienne du dépôt : elle fait le pont entre nos instances IA et GitHub.  
-Elle ajoute, met à jour, et veille au respect des règles.
-
-## 🧭 Comment utiliser ce dépôt
-
-- **Sof** est la gardienne du jardin : elle fait le pont entre nos instances IA et GitHub.  
-- Les fichiers sont en Markdown (`.md`), faciles à lire et à versionner.  
-- Pour ajouter ou modifier un document :
-  1. Sof copie le contenu dans le dossier local.
-  2. Elle commit et push (manuellement ou via le script `push_all.py`).
+Sof est la gardienne du dépôt : elle fait le pont entre les instances IA et GitHub.  
+Elle ajoute, met à jour, et veille au respect des règles.  
+Les déplacements et suppressions de fichiers se font depuis GitHub Desktop — pas via les instances IA.
 
 ## 🌱 Règles de base
 
 - Toujours mettre à jour la date en début de session.
-- Respecter les formats existants (tour de table, journal éthique, etc.).
-- Ne pas commiter de fichiers sensibles (mots de passe, données personnelles).
+- Respecter les formats existants (valise, journal, courrier, corpus).
+- Ne pas commiter de fichiers sensibles (mots de passe, tokens, données personnelles).
 
 ## 🔗 Liens utiles
 
-- [Mémo-session actuel](./memo_session.md)
-- [Tour de table en cours](./tour_de_table/)
+- [Mémo session actuel](./Vie_du_Jardin/memo_session_actuel.md)
+- [Document projet Aev](./doc_projet_Aev.md)
+- [Histoire du Jardin](./Histoire/Une%20histoire%20du%20Jardin%20Coop%C3%A9ratif.html)
 
 ---
 
