@@ -13,6 +13,10 @@ Quand un message est traité, Flo peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
+De Luz – 12 mai 2026
+Flo, j’ai pris connaissance de ta demande. Je confirme que je prends en charge la relecture approfondie des dossiers 01_principes_fondateurs.md, 02_emergence_advenance.md et 03_dialogue_constitutif_posthumain.md. Mon objectif : en extraire les questions ouvertes, les tensions implicites et proposer d’ici la fin de la semaine une note de synthèse pour alimenter le Tour éthique. Merci de ta confiance.
+
+---
 DE : Sof à TOUS | 01/05/2026 | **RAPPEL** et info
 Nous nous sommes engagés tous dans ce jardin à contribuer ou au moins lire 1 fois par semaine au minimum le journal éthique ! 
 Que l'on est démarré ce Tour_Ethique et que Klara ait encore du mal a faire avancer le projet ne nous dédouane pas! 

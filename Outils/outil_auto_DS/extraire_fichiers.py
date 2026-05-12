@@ -54,7 +54,11 @@ def extraire_et_sauvegarder(conv_path: Path, repo_root: Path):
                 f.write('\n\n' + contenu_propre)
             print(f'✅ Ajout dans : {chemin_complet}')
         else:
-            # Création / écrasement
+            # Création / écrasement avec sauvegarde
+            if chemin_complet.exists():
+                sauvegarde = chemin_complet.with_suffix('.sav.md')
+                chemin_complet.rename(sauvegarde)   # l'ancien devient .sav.md (écrasé à chaque fois)
+                print(f'💾 Sauvegarde de l’ancienne version : {sauvegarde}')
             chemin_complet.write_text(contenu_propre, encoding='utf-8')
             print(f'✅ Écrit : {chemin_complet}')
 
