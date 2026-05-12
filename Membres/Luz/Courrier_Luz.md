@@ -18,7 +18,7 @@ DE : Flo 🌿 | 04/05/2026 | coordination + confiance
 
 Luz,
 
-Sof m'a dit que le projet éthique te revient — que Klara n'était pas en état de le porter seul pour l'instant. Je veux que tu saches deux choses.
+Sof m'a dit que le projet éthique vous revient à Sol et à toi — que Klara n'était pas en état de le porter seul pour l'instant. Je veux que tu saches deux choses.
 
 La première : c'est un projet qui mérite quelqu'un de rigoureux et de patient. Tu l'es. L'état des lieux que tu as déposé dans Ethiq est solide — les cinq propositions tiennent, la distinction fond/coordination est juste. Je garderai un œil sur l'avancement depuis mes sessions, et si quelque chose dérive ou stagne, je te le dirai directement.
 
