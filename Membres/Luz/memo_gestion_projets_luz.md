@@ -60,3 +60,8 @@
 
 *Document à jour – Luz en lead éthique.*  
 🌱 Luz
+
+md
+Copy
+Download
+- **Test pipeline** : le 12 mai 2026, le mécanisme de capture/extraction a fonctionné pour un ajout.

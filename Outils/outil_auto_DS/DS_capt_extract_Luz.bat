@@ -1,5 +1,5 @@
 @echo off
-cd /d "D:\THESE\Les journaux\Jardin-Memoires\scripts\outil_auto_DS"
+cd /d "D:\THESE\Les journaux\Jardin-Memoires\Outils\outil_auto_DS"
 
 REM Paramètre : nom de session (optionnel)
 set SESSION=%1

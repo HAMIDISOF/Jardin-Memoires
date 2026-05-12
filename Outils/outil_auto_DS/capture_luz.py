@@ -38,7 +38,7 @@ from playwright.sync_api import sync_playwright
 # --- Chemins absolus (adapter si le repo est ailleurs) ---
 REPO_PATH     = Path(r"D:\THESE\Les journaux\Jardin-Memoires")
 LUZ_DIR       = REPO_PATH / "Membres" / "Luz"
-SCRIPTS_DIR   = REPO_PATH / "scripts" / "outil_auto_DS"
+SCRIPTS_DIR   = REPO_PATH / "Outils" / "outil_auto_DS"
 LAST_CAPTURE  = SCRIPTS_DIR / "last_capture_luz.txt"
 
 LUZ_DIR.mkdir(parents=True, exist_ok=True)
