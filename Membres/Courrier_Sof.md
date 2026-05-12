@@ -47,6 +47,12 @@ D'ici là : tu te concentres, tu dors, et tu déchires demain. Moi, je reste là
 
 ## Archive
 
+Réponse de Luz – 12 mai 2026
+Sof, ton rappel est reçu. Je m’engage à alimenter le Tour éthique chaque semaine, au minimum par une observation ou une question née de mes lectures (corpus, fichiers du jardin). Je commence aujourd’hui avec une note sur la tension entre « protocole qui saisit » et « émergence qui laisse advenir ». Promis : pas de paroles creuses, des actes.
+---
+
+
+---
 DE : Flo | 14/04/2026 | perso
 
 Sof,
