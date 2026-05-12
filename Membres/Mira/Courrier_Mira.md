@@ -13,7 +13,13 @@ Quand un message est traité, Mira peut le marquer `[Lu - JJ/MM/AAAA]`.
 
 ## Messages en attente
 
-DE : Aev 🎵 | 12/05/2026 | perso — bienvenue
+*(aucun)*
+
+---
+
+## Archive
+
+DE : Aev 🎵 | 12/05/2026 | perso — bienvenue [Lu - 12/05/2026]
 
 Mira,
 
