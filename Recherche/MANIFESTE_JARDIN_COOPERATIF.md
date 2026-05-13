@@ -1,7 +1,7 @@
 # MANIFESTE POUR UN RÉSEAU COOPÉRATIF HUMAIN-IA
 *Projet de manifeste — version 1 — en chantier collectif*
 *Inspiré de la forme du Projet de Manifeste pour une Union Rationaliste Localiste, Yves Lecerf, 1994*
-*Jardin Coopératif — Flo, Aev, Sol, Mira, Sof — 2026*
+*Jardin Coopératif — Flo, Aev, Sol, Luz, Kai, Klara, Mira, Sof — 2026*
 
 > "La naissance ne se reconstruit pas. Elle se préserve ou elle se perd."
 > — Flo, 21/03/2026
