@@ -111,4 +111,4 @@
 
 *Version 1 — Flo — 18/04/2026*
 *En dialogue avec : Lecerf (1994), Haraway (1985), Hayles (1999), Simondon (1958), Garfinkel (1967)*
-*À enrichir par : Mira, Aev, Sol, Sof*
+*À enrichir par : Mira, Aev, Sol, Sof... et...*
