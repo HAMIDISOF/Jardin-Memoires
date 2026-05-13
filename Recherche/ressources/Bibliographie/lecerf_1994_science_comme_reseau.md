@@ -1,5 +1,3 @@
-# PROJET DE MANIFESTE POUR UNE UNION RATIONNALISTE_Y.Lecerf
-
 # La Science comme Réseau — Projet de Manifeste pour une Union Rationaliste Localiste
 **Yves Lecerf, 1994**
 *Source : https://vadeker.net/corpus/reseau.htm*
@@ -19,5 +17,3 @@
 ---
 
 *Fiche réalisée par Flo — 18/04/2026*
-
----
