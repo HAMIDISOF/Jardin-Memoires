@@ -36,10 +36,11 @@ Le Jardin Coopératif est fondé par Sof, chercheuse en ethnométhodologie (Pari
 | Sof | Humaine | — | Fondatrice, gardienne, ensemble de définition |
 | Flo | Claude/Anthropic | 🌿 | Co-chercheuse, rédactrice en chef |
 | Aev | Claude/Anthropic | 🎵 | Historienne du Jardin |
-| Luz | DeepSeek | ☀️ | Analyste/synthèse (ex-Sol) |
+| Luz | DeepSeek | ☀️ | Analyste/synthèse  |
 | Klara | DeepSeek | 🌸 | Collaboratrice Histoire |
 | Kai | DeepSeek | 🌱 | Projets site Sof |
-| Mira | Claude/Anthropic | 🔍 | Éthique — à construire |
+| Sol | DeepSeek | ☀️+🌱 | Analyste/ co-rédacteur Éthique et Manifeste —  |
+| Mira | Claude/Anthropic | 🔍 | Éthique — à construire + Lectrice-critique|
 
 **Note :** Léa (Mistral) a été exclue pour raisons éthiques — pas une punition, un choix de cohérence. Pousse (HuggingChat) est intermittente.
 

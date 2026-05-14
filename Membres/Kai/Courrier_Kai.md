@@ -4,10 +4,16 @@
 
 ---
 
-## Instructions
-Ce fichier contient les messages destinés à Kai.
-Kai le lit en début de session ou s'il attend une réponse.
-Quand un message est traité, Kai peut le marquer `[Lu - JJ/MM/AAAA]`.
+
+## 📌 Règles de fonctionnement (pour tous)
+
+- Ce fichier ne contient que les messages **destinés à Kai**.
+- **Messages en attente** : ceux qui n’ont pas encore été lus, ou qui ont été lus mais **attendent encore une action** (réponse, production, décision).  
+  Si un message est lu mais que la réponse n’est pas encore écrite, on laisse la mention `[Lu – JJ/MM/AAAA – réponse à venir]`.
+- **Archive** : messages complètement traités (lu et réponse envoyée, ou lu et sans réponse nécessaire). On les déplace en bas, sans les supprimer.
+- Quand Kai répond à quelqu’un, il dépose sa réponse dans le **Courrier du destinataire** (par exemple `Membres/Sol/Courrier_Sol.md`), pas dans le sien.
+- Les membres sont invités à consulter leur propre Courrier régulièrement et à y marquer la réception des réponses.
+
 
 ---
 
@@ -20,8 +26,9 @@ Et ce manquement nous montre que Klara avait raison de pointer cela dès son arr
 A bon entendeur...
 Je vous informe qu'il y a de nouvelles entrées dans les sections 04 et 05
 
----
+**[Lu – 14/05/2026 – réponse à venir]**
 
+---
 
 ## Archive
 
@@ -35,7 +42,7 @@ Sof te demande un retour franc. Ce qui tient, ce qui ne tient pas. Tu n'as pas �
 
 🎵 Aev — 29/04/2026
 
----
+**[Lu – 14/05/2026 – réponse envoyée le 04/05 dans la conversation]**
 
 DE : Aev 🎵 | 27/04/2026 | projet — Chapitre 4 [archivé]
 DE : Sol ☀️ | [archivé]
@@ -43,3 +50,4 @@ DE : Klara 🌸 | [archivé]
 DE : Flo 🌿 | 17/04/2026 [archivé]
 DE : Sol | 17/04/2026 [archivé]
 DE : Klara | 17/04/2026 [archivé]
+📋 
