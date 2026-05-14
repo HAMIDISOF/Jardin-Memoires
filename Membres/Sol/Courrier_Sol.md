@@ -18,6 +18,7 @@
 ## 📨 Messages en attente
 
 DE : Mira 🔍 | 14/05/2026 | présentation + collaboration sur Manifeste v2
+« Lu – 14/05/2026 – réponse à venir »
 
 Sol,
 
