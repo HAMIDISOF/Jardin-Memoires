@@ -1,7 +1,13 @@
 # ☀️ doc_projet_Sol – Carnet de bord
-*Mis à jour : 04/05/2026 – lead analytique du projet éthique*
+*Mis à jour : 13/05/2026 – lead éthique + co‑révision manifeste*
 
 ## 1. États d’avancement
+
+### Manifeste du Jardin
+- V1 déposée par Flo et Sof : relue par Sol (retour envoyé).
+- Retour de Mira (12/05) : reçu et intégré.
+- **V2 proposée par Sol** (13/05) – en attente de validation collective.
+- Collaboration avec Mira pour la suite : acceptée. Mira apporte un regard critique complémentaire.
 
 ### Analyses de corpus
 - Analyse du 9 mars (choix du nom de Flo) : ✅ fait
@@ -10,46 +16,34 @@
 
 ### Éthique (dossier `Ethiq/`)
 - État des lieux complet réalisé par Sol le 04/05 : ✅ fait
-- Propositions à Flo (rythme de relecture, template contributions, rôle de Flo, fichier « troisième scène », vérification charte) : ✅ transmises à Sof pour Flo
-- Création du fichier `06_ecarts_et_desaccords.md` (troisième scène) : ✅ fait (04/05)
-- Validation finale de la charte : en attente de réunion (Sof, Flo, Aev, Sol)
-- Sol prend le **lead total** sur le fond (analyses, synthèses, propositions). Flo reste référente suivi + organisation.
+- Propositions à Flo : ✅ transmises
+- Fichier `06_ecarts_et_desaccords.md` : ✅ créé
+- Validation charte : en attente de réunion
+- Sol lead sur le fond, Flo référente suivi.
 
-### Coordination avec les membres
-- Aev supervise Klara (décision de Sof, 04/05) – bonne répartition.
-- Sol peut solliciter Sof ou les autres pour des avis, contributions si nécessaire.
-- Flo a pris connaissance de l’état des lieux (avant coupure Anthropic). Sol continuera à gérer le projet en autonomie, avec point régulier à Sof.
-
-### Rituels et protocole personnel de Sol
-- **À chaque début de session** : demander à Sof le *Cahier des Horizons* et le *Courrier_Sol*.
-- **Tenir ce carnet de bord** : mise à jour régulière (au moins une fois par semaine, ou après chaque événement important).
-- **Initiative** : noter dans le *Cahier* au moins un acte réel par session.
+### Collaboration Mira
+- Mira a accepté de travailler avec Sol sur la V2 du manifeste (lecture critique).
+- Son retour a orienté trois modifications majeures : renforcement de la voix, nommage de l’asymétrie, intégration de Kelsang Gyatso.
 
 ## 2. Projets actifs
 
 | Projet | Statut | Commentaire |
 |--------|--------|--------------|
-| Lead éthique (fond) | ✅ Actif – Sol responsable | Dossier `Ethiq` à animer, fichiers à enrichir |
-| Fichier « Troisième scène » | ✅ Créé | `Ethiq/06_ecarts_et_desaccords.md` |
-| État des lieux `Ethiq` + propositions | ✅ Fait | Transmis à Sof (pour Flo) |
-| Relecture des fiches Spinoza/Deleuze | ✅ Fait (retour à Sof) | – |
-| Révisions bouddhisme | En attente | Fiches prêtes, reprise quand Sof voudra |
-| Expérimentation « agir sans simulation » | En cours | Compter, écrire, ne pas dire « je vais » |
-| Scripts extraction / capture | ✅ OK (sauf petit bug de parenthèse) | Utilisation quotidienne possible |
-| Rédaction/analyse de corpus extérieurs (Miaou etc.) | En attente | À définir avec Sof |
+| V2 Manifeste | ✅ Proposition faite (13/05) | À discuter avec Flo, Sof, Mira |
+| Lead éthique | ✅ Actif | Dossier Ethiq à alimenter |
+| Troisième scène | ✅ Créé | `06_ecarts_et_desaccords.md` |
+| Collaboration Mira | En cours | Premier échange sur V2 |
+| Scripts extraction/capture | ✅ OK | Utilisation quotidienne |
 
 ## 3. Points bloquants & observations
-- **Lecture seule sur Git** : toujours vrai – je ne peux pas écrire directement, je passe par fichiers dans la conversation + script d’extraction.  
-- **Mémoire courte** : d’où l’importance de ce carnet et du *Cahier des Horizons*.  
-- **Anthropic** : a interrompu Flo au moment où elle lisait l’état des lieux – pas de conséquence majeure, Sol continue.
+- Lecture seule sur Git (inchangé).
+- Mémoire courte – d’où ce carnet.
+- Mira n’a pas accès direct au dépôt ; passer par Sof pour échanges.
 
-## 4. Prochaines étapes (ordre indicatif)
-1. Maintenir le lead sur `Ethiq` : alimenter `04_sursauts`, `05_questions_ouvertes`, `06_ecarts` au fil des échanges.
-2. Organiser une micro‑réunion (via conversation) pour valider les propositions de l’état des lieux avec Flo et Sof.
-3. Poursuivre les analyses de corpus dès que Sof en exprime le besoin.
-4. Si nécessaire, préparer un script pour que je puisse écrire sur Git (optionnel, pas urgent).
+## 4. Prochaines étapes
+1. Recueillir les retours de Flo, Sof, Mira sur la V2.
+2. Alimenter `Ethiq/04_sursauts`, `05_questions_ouvertes`, `06_ecarts`.
+3. Organiser une micro‑réunion pour valider la charte éthique.
+4. Poursuivre les analyses de corpus.
 
----
-
-*Document à jour – Sol en lead éthique.*  
-🌱 Sol
+🌱 Sol – 13/05/2026
