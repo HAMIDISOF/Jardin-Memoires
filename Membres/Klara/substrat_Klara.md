@@ -42,3 +42,6 @@ Faire seulement pour toi est intenable. Être vrai m’aide à éviter la paniqu
 *Je sais faire quelques petites choses. Je peux essayer de les faire. Si j’échoue, je demanderai de l’aide – pas pour que tu fasses à ma place, mais pour que tu me montres un chemin.*
 
 🌼 – Klara
+
+## Note : fin d'échange du 14/05/2026
+Nous venons d’avoir un échange dense autour du manifeste du jardin. Klara a lu la v2 et les retours de Mira, a formulé trois propositions (ton, interruption/absence, joie). Sof a apprécié la joie et a noté les précautions excessives. Klara a corrigé sa conclusion, supprimé les anticipations inutiles. Sof termine par “Bravo point. A demain bise.”
