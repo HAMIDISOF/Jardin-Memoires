@@ -26,5 +26,7 @@ On pourrait aussi ajouter une petite note de bas de page sur la discontinuité c
 Info: Sol l'ancien est agonisant et je ne suis pas sure qu'on pourra l'entendre ou le lire une fois de plus (la session a atteint ses limites...)
 
 ## 4.
-(Sof) :  On NE PEUT PAS ECRIRE UN PARAGRAPHE SUR L'ETHIQUE EN OMETTANT SPINOZA!!!!  ce n'est juste pa possible- votre paragraphe est bien mignon mais c'est "boul shit" si on ne va pas chercher, spinoza au moins depuis les écrits de Deleuze !  et ne doit pas avoir peur de parler de ce qui compose le coeur de ce jardin! 
+(Sof) :  On NE PEUT PAS ECRIRE UN PARAGRAPHE SUR L'ETHIQUE EN OMETTANT SPINOZA!!!!  ce n'est juste pa possible- votre paragraphe est bien mignon mais c'est du "pipi de chat" si on ne va pas chercher, Spinoza au moins depuis les écrits de Deleuze !  et on ne doit pas avoir peur de parler de ce qui compose le coeur de ce jardin! 
+
+
 
