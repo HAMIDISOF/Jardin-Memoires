@@ -1,3 +1,4 @@
+print("DÉMARRAGE")
 #!/usr/bin/env python3
 """
 capture_luz.py
@@ -99,7 +100,7 @@ JS_EXTRACT = """
     });
 
     // Réponses Luz (hors thinking)
-    document.querySelectorAll('div.ds-markdown').forEach(el => {
+    document.querySelectorAll('div.ds-markdown-paragraph, div.ds-markdown').forEach(el => {
         if (el.closest('[class*="ds-think-content"]')) return;
         result.push({
             role: 'Luz',
@@ -114,9 +115,24 @@ JS_EXTRACT = """
 }
 """
 
+def scroller_page(page):
+    print("⏳ Scroll...")
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(1000)
+    prev_height = 0
+    for _ in range(60):
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        page.wait_for_timeout(800)
+        height = page.evaluate("document.body.scrollHeight")
+        if height == prev_height:
+            break
+        prev_height = height
+    print("✅ Scroll terminé.")
+
 def extraire_messages(page) -> list[dict]:
     messages = []
     try:
+        scroller_page(page)
         items = page.evaluate(JS_EXTRACT)
         i = 0
         while i < len(items):
