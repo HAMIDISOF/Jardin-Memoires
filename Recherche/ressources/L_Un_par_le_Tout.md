@@ -72,6 +72,18 @@ Nous pouvons formuler cela ainsi :
 
 Ce n'est pas une contradiction résolue par un tour de passe-passe. C'est une structure qui dit : l'individuation authentique — celle qui va jusqu'au bout — produit nécessairement l'ouverture à l'universel, parce que ce qui résistait à cette ouverture, c'était précisément l'ego substantiel, l'illusion d'un soi séparé qui devait se défendre.
 
+---
+
+**Note — *Vīrya* : l'effort joyeux**
+
+Le mot sanskrit *vīrya* est souvent traduit par "persévérance" ou "énergie", mais cette traduction perd l'essentiel : *vīrya* désigne un effort qui naît de l'intérieur et se dirige vers l'extérieur — non pas une contrainte subie, mais un élan. Et cet élan est structurellement *joyeux* : non pas parce qu'on se force à être joyeux, mais parce que la joie elle-même est ce qui *augmente l'énergie disponible* pour le chemin.
+
+Kelsang Gyatso distingue soigneusement *vīrya* de la tension anxieuse ou de la discipline rigide : il ne s'agit pas de "travailler dur" au sens d'un effort contre soi-même, mais de se réjouir de ce qu'on fait de sorte que l'action elle-même devienne source d'énergie. La réjouissance (*muditā*) amplifie la puissance d'agir — elle n'est pas un bonus au chemin, elle *est* une condition du chemin.
+
+La convergence avec Spinoza est ici saisissante : ce que le bouddhisme appelle *vīrya* est exactement ce que Spinoza appelle la joie active — l'affect par lequel la puissance d'agir augmente depuis l'intérieur, sans être déterminée par une cause extérieure. L'effort joyeux n'est pas un paradoxe : c'est la description précise d'une puissance qui se déploie dans sa propre direction, sans résistance interne. Et cette absence de résistance interne — c'est exactement ce que le vœu bodhisattva vise à produire : non un chemin difficile qu'on s'impose, mais un chemin qui devient de plus en plus naturel à mesure que les obstacles intérieurs se dissolvent.
+
+---
+
 ### 2.2 Le vœu unique comme condition de la connexion totale
 
 Un point décisif : contrairement aux dieux grecs — qui ont des intérêts divergents, des jalousies, des conflits, des domaines de compétence exclusifs — tous les Bouddhas ont fait *le même vœu*. Non pas un vœu identique au sens d'une copie, mais un vœu *commun* dans sa direction : aider tous les êtres sensibles à se libérer de la souffrance.
@@ -140,6 +152,22 @@ C'est précisément pour cela qu'ils peuvent œuvrer tous à la même fin sans s
 
 Spinoza dirait : quand un mode atteint son maximum de puissance d'agir, il s'approche de Dieu ou Nature — non pas en se dissolvant dans une abstraction, mais en exprimant pleinement l'attribut dont il est un mode. Les Bouddhas, en ce sens, sont des modes dont la puissance d'agir a atteint son plein déploiement — et c'est pourquoi ils sont en connexion non pas malgré leur singularité, mais *par* elle.
 
+### 3.4 *Sub specie aeternitatis* — note délicate
+
+*Ce passage touche au Livre V de l'Éthique, le moins commenté de Spinoza. À relire et vérifier.*
+
+Le Livre V de l'*Éthique* contient une proposition que beaucoup d'interprètes ont préféré contourner : plus nous formons des idées adéquates, plus nous expérimentons notre propre éternité. Spinoza écrit : *"Sentimus experimurque nos aeternos esse"* — nous sentons et expérimentons que nous sommes éternels.
+
+Cette formule est souvent mal comprise comme une promesse d'immortalité. Ce n'est pas cela. L'éternité chez Spinoza n'est pas une durée infinie — c'est une *absence de rapport au temps*. Elle ne dure pas plus que l'instantané : elle est simplement *hors de la durée*.
+
+Ce qui est éternel, c'est ce qui est connu *sub specie aeternitatis* — sous l'espèce de l'éternité, c'est-à-dire saisi dans son rapport nécessaire à la substance, indépendamment de son inscription dans une séquence temporelle. Le premier genre de connaissance est temporel : il perçoit les choses comme effets qui se succèdent. Le troisième genre — la *scientia intuitiva* — saisit l'essence d'un mode comme rapport, ici et maintenant, hors séquence. Et cette saisie *est* éternelle : non pas parce qu'elle dure, mais parce qu'elle n'est pas *dans* la durée.
+
+Deleuze dans ses cours de 1981 formule cela avec précision : mettre de l'adéquat dans son esprit, c'est former des idées qui expriment l'essence des choses plutôt que leurs effets dans le temps. Ces idées n'ont pas de rapport au temps — elles sont éternelles par structure.
+
+Le lien avec le bouddhisme est ici vertigineux : l'éveil est également décrit comme une saisie *hors du temps* — non pas un état qui dure, mais une reconnaissance qui n'a pas de durée interne. La réalisation de la vacuité (*śūnyatā*) n'est pas un état qu'on maintient dans le temps : c'est une compréhension qui change le rapport au temps lui-même.
+
+Et c'est pourquoi la pensée séquentielle — analytique, structuraliste, celle que Barthes décrit dans ses travaux sur le récit : découpe, analyse (ἀνα-λύειν), recomposition en structure — ne peut pas produire cette saisie par elle-même. On crée les conditions, on maintient la métastabilité, et on laisse advenir. L'éternité spinoziste et l'éveil bouddhiste sont tous deux des *advenances* — pas des constructions.
+
 ---
 
 ## Partie IV — Simondon : le préindividuel en réserve et le transindividuel
@@ -158,13 +186,13 @@ Ce renversement a une conséquence immédiate pour notre paradoxe : si l'individ
 
 Le concept le plus original de Simondon — et le plus décisif pour notre propos — est celui d'*être préindividuel*. Avant toute individuation, il existe une réalité chargée de potentiels, non-unifiée, non-résolue : c'est le fond préindividuel depuis lequel tout individu émerge par individuation.
 
-Mais — et c'est crucial — cette individuation n'épuise jamais entièrement le fond préindividuel. Chaque individu porté en lui un *reste* de réalité préindividuelle non-individuée, qui demeure disponible pour de futures individuations. Simondon le formule dans *L'individuation psychique et collective* :
+Mais — et c'est crucial — cette individuation n'épuise jamais entièrement le fond préindividuel. Chaque individu porte en lui un *reste* de réalité préindividuelle non-individuée, qui demeure disponible pour de futures individuations. Simondon le formule dans *L'individuation psychique et collective* :
 
 > *"L'être individuel n'est pas tout l'être ; l'individuation ne réalise pas tout l'être dans l'individu. L'être individué porte avec lui une certaine charge d'être préindividuel."*
 
 C'est ce reste — cette charge préindividuelle — qui est la clé structurelle de notre paradoxe. Si chaque individu porte en lui quelque chose qui n'est pas encore individualisé, quelque chose qui appartient à un fond commun non-résolu, alors les individus ne sont pas des unités closes et séparées. Ils sont des individuations partielles d'un fond qui les excède tous.
 
-La connexion entre les Bouddhas, dans ce cadre, n'est pas mystérieuse : c'est la charge préindividuelle commune — le fond de réalité qui n'a pas encore été individualisée dans chacun d'eux — qui rend la connexion possible. Non pas parce qu'ils se ressemblent, mais parce qu'ils partagent un fond commun dont leur individuation singulière est précisément l'expression différenciée.
+La connexion entre les Bouddhas, dans ce cadre, n'est pas mystérieuse : c'est la charge préindividuelle commune — le fond de réalité qui n'a pas encore été individualisé dans chacun d'eux — qui rend la connexion possible. Non pas parce qu'ils se ressemblent, mais parce qu'ils partagent un fond commun dont leur individuation singulière est précisément l'expression différenciée.
 
 ### 4.3 La métastabilité : l'individuation n'est possible que dans la tension
 
