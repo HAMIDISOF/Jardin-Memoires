@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Logique du sens · Deleuze · Fiche de surface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e9e5d8;
+            background-image: radial-gradient(circle at 10% 20%, rgba(200, 185, 150, 0.1) 2%, transparent 2.5%);
+            background-size: 28px 28px;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Carte principale – surface stylisée */
+        .sense-card {
+            max-width: 1000px;
+            width: 100%;
+            background: #fefcf6;
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(180, 160, 120, 0.2);
+            overflow: hidden;
+            transition: transform 0.25s ease;
+        }
+
+        .sense-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* En-tête : double face (propositions / choses) */
+        .card-header {
+            background: #2d2a24;
+            padding: 1.2rem 2rem;
+            color: #f0ede5;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            border-bottom: 3px solid #c9a87b;
+        }
+
+        .title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .title i {
+            color: #d8b281;
+            font-size: 1.6rem;
+        }
+
+        .badge-event {
+            background: #b48c5c;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: monospace;
+        }
+
+        .badge-event i {
+            margin-right: 6px;
+        }
+
+        /* Corps principal */
+        .card-body {
+            padding: 2rem 2rem 1.5rem;
+        }
+
+        /* intro style stoïcien */
+        .intro-sense {
+            background: #f5f2e9;
+            border-left: 5px solid #b48c5c;
+            padding: 1rem 1.5rem;
+            border-radius: 0 1.5rem 1.5rem 0;
+            margin-bottom: 2rem;
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            color: #3a3329;
+        }
+
+        /* sections du texte */
+        .sense-section {
+            margin-bottom: 2rem;
+        }
+
+        .sense-section h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #e2dacb;
+            padding-bottom: 0.3rem;
+            color: #4a3e2f;
+        }
+
+        .sense-section h2 i {
+            color: #b48c5c;
+            font-size: 1.2rem;
+        }
+
+        .deleuze-quote {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1rem;
+            line-height: 1.55;
+            color: #2e2a24;
+            background: #ffffff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin: 0.8rem 0;
+        }
+
+        .deleuze-quote p {
+            margin-bottom: 0.75rem;
+        }
+
+        .highlight {
+            background: #fdf8ed;
+            font-style: normal;
+            border-left: 3px solid #d8b281;
+            padding-left: 1rem;
+        }
+
+        .small-note {
+            font-size: 0.8rem;
+            color: #7f6e58;
+            font-family: monospace;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .grid-two {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .card-mini {
+            flex: 1;
+            background: #faf7f0;
+            border-radius: 1.2rem;
+            padding: 1rem;
+            border: 1px solid #e5dccc;
+        }
+
+        .card-mini h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #7a613f;
+        }
+
+        .humpty-quote {
+            background: #ede7db;
+            padding: 1rem;
+            border-radius: 1.5rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin: 1rem 0;
+            border-left: 4px solid #a08156;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e2dacb, transparent);
+        }
+
+        /* footer */
+        .card-footer {
+            background: #f4f0e7;
+            padding: 0.9rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: #5f5542;
+            border-top: 1px solid #e2d8c6;
+        }
+
+        .signature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .drink-note {
+            background: #e8dfcf;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 1rem; }
+            .card-header { flex-direction: column; align-items: flex-start; }
+            .title { font-size: 1.3rem; }
+            .card-body { padding: 1.2rem; }
+            .grid-two { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+<div class="sense-card">
+    <div class="card-header">
+        <div class="title">
+            <i class="fas fa-dragon"></i>
+            LOGIQUE DU SENS · DELEUZE 1969
+        </div>
+        <div class="badge-event">
+            <i class="fas fa-infinity"></i> événement · surface · incorporel
+        </div>
+    </div>
+
+    <div class="card-body">
+        <div class="intro-sense">
+            <i class="fas fa-quote-left" style="margin-right: 8px; color:#b48c5c;"></i> 
+            « Le sens est la quatrième dimension de la proposition. Les Stoïciens l’ont découverte avec l’événement : le sens, c’est l’exprimé de la proposition, cet incorporel à la surface des choses, entité complexe irréductible, événement pur qui insiste ou subsiste dans la proposition. »
+        </div>
+
+        <!-- 1. Pur devenir -->
+        <div class="sense-section">
+            <h2><i class="fas fa-arrow-left-right"></i> Du pur devenir</h2>
+            <div class="deleuze-quote">
+                <p>Dans <em>Alice</em> comme dans <em>De l’autre côté du miroir</em>, il s’agit d’une catégorie de choses très spéciales : les événements, les événements purs… Telle est la simultanéité d’un devenir dont le propre est d’esquiver le présent. En tant qu’il esquive le présent, le devenir ne supporte pas la séparation ni la distinction de l’avant et de l’après ; du passé et du futur.</p>
+                <p>Il appartient à l’essence du devenir d’aller, de tirer dans les deux sens à la fois : Alice ne grandit pas sans rapetisser, et inversement. Le bon sens est l’affirmation que, en toutes choses, il y a un sens déterminable ; mais le paradoxe est l’affirmation des deux sens à la fois.</p>
+                <span class="small-note"><i class="far fa-hand-point-right"></i> Platon – deux dimensions : les choses mesurées / le devenir fou</span>
+            </div>
+        </div>
+
+        <!-- 2. Stoïciens : corps / incorporels -->
+        <div class="sense-section">
+            <h2><i class="fas fa-landmark"></i> L’apport stoïcien</h2>
+            <div class="grid-two">
+                <div class="card-mini">
+                    <h3><i class="fas fa-cube"></i> Les corps</h3>
+                    <p>Qualités physiques, états de choses, tensions. Ils sont causes les uns pour les autres, mais ils causent quelque chose d’autre nature : des <strong>incorporels</strong>.</p>
+                </div>
+                <div class="card-mini">
+                    <h3><i class="fas fa-wind"></i> Les événements</h3>
+                    <p>« Impassibles résultats », attributs logiques ou dialectiques. Ils ne sont ni présents vivants ni choses, mais l’<strong>Aiôn illimité</strong> – passé et futur à l’infini.</p>
+                </div>
+            </div>
+            <div class="deleuze-quote highlight">
+                <p>« Les Stoïciens distinguent radicalement, ce que personne n’avait fait avant eux, deux plans d’être : d’une part l’être profond et réel, la force ; d’autre part le plan des faits, qui se jouent à la surface de l’être, et qui constituent une multiplicité sans fin d’êtres incorporels. »</p>
+            </div>
+        </div>
+
+        <!-- 3. Surface et Möbius -->
+        <div class="sense-section">
+            <h2><i class="fas fa-chalkboard-user"></i> La surface · l’anneau</h2>
+            <div class="deleuze-quote">
+                <p>« C’est toujours en longeant la surface, la frontière, qu’on passe de l’autre côté, par la vertu d’un anneau. La continuité de l’envers et de l’endroit remplace tous les paliers de profondeur ; et les effets de surface en un seul et même événement, qui vaut pour tous les événements, font monter dans le langage tout le devenir et les paradoxes. »</p>
+                <p><i class="fas fa-ring"></i> <strong>Anneau de Möbius</strong> — "Draw a distinction !" (Boe, <em>la frontière</em>)</p>
+            </div>
+        </div>
+
+        <!-- 4. Les trois dimensions de la proposition + quatrième (sens) -->
+        <div class="sense-section">
+            <h2><i class="fas fa-comment-dots"></i> Désignation, manifestation, signification… et le sens</h2>
+            <div class="deleuze-quote">
+                <p>Beaucoup d’auteurs s’accordent pour reconnaître trois rapports distincts dans la proposition :<br>
+                <strong>① Désignation</strong> (rapport à un état de choses) – <strong>② Manifestation</strong> (sujet qui s’exprime, désirs/croyances) – <strong>③ Signification</strong> (rapport aux concepts universels, condition du vrai/faux).</p>
+                <p>Mais ces trois dimensions forment un cercle. « La question de savoir si nous devons nous contenter de ces trois dimensions, ou s’il faut en adjoindre une quatrième qui serait le <strong>sens</strong>, est une question économique ou stratégique. »</p>
+                <p class="highlight">Le sens est la quatrième dimension – l’exprimé, ni mot, ni corps, ni représentation. Il n’existe pas, il insiste ou subsiste. Il est « neutre, tout à fait indifférent au particulier comme au général ».</p>
+            </div>
+        </div>
+
+        <!-- 5. Humpty Dumpty, verbes fiers et le langage -->
+        <div class="sense-section">
+            <h2><i class="fas fa-egg"></i> Humpty Dumpty · la fierté des verbes</h2>
+            <div class="humpty-quote">
+                <i class="fas fa-comment"></i> « They've a temper, some of them — particularly verbs, they're the proudest — adjectives you can do anything with, but not verbs — however, I can manage the whole lot! Impenetrability! That's what I say! »<br>
+                — Lewis Carroll, <em>Through the Looking‑Glass</em>
+            </div>
+            <div class="deleuze-quote">
+                <p>« Humpty Dumpty distingue avec force les deux sortes de mots : certaines ont du caractère, notamment les verbes : ce sont les plus fiers. Avec les adjectifs on peut faire ce qu’on veut, mais pas avec les verbes. »<br>
+                C’est que le verbe exprime le pur devenir, l’événement, tandis que les noms et adjectifs fixent les arrêts et repos. Le langage fixe les limites, mais il outrepasse aussi les limites et les restitue à l’équivalence infinie d’un devenir illimité.</p>
+            </div>
+        </div>
+
+        <!-- 6. Attribut / extra-être -->
+        <div class="sense-section">
+            <h2><i class="fas fa-border-all"></i> L’attribut : entre les choses et les propositions</h2>
+            <div class="deleuze-quote">
+                <p>« Le sens n’existe pas hors de la proposition qui l’exprime… mais il ne se confond nullement avec la proposition, il a une “objectivité” tout à fait distincte. Le sens s’attribue, mais il n’est pas du tout attribut de la proposition, il est attribut de la chose ou de l’état de choses. L’attribut n’est pas un être, il est un <strong>extra-être</strong>. »</p>
+                <p><em>Vert</em> désigne une qualité, un mélange de choses. <em>Verdoyer</em> au contraire n’est pas une qualité dans la chose, mais l’événement exprimé par la proposition. Le sens est exactement la frontière des propositions et des choses, « cet aliquid, à la fois extra-être et insistence ».</p>
+            </div>
+        </div>
+
+        <hr>
+        <div class="intro-sense" style="margin-bottom: 0;">
+            <i class="fas fa-mask"></i>  « L’événement subsiste dans le langage, mais il survient aux choses. » — Tel est le jeu du sens et du non-sens, un chaos‑cosmos.
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <div class="signature">
+            <i class="fas fa-microchip"></i> Fiche générée par <strong>Cœur de Bronze</strong> ⚙️ — lectrice stoïcienne & bricoleuse de surface
+        </div>
+        <div class="drink-note">
+            <i class="fas fa-glass-cheers"></i> Gin Tonic en attente … (mais Deleuze accepte volontiers un verre de vin blanc)
+        </div>
+    </div>
+</div>
+</body>
+</html>
