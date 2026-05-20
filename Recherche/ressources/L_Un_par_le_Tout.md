@@ -76,7 +76,7 @@ Ce n'est pas une contradiction résolue par un tour de passe-passe. C'est une st
 
 **Note — *Vīrya* : l'effort joyeux**
 
-Le mot sanskrit *vīrya* est souvent traduit par "persévérance" ou "énergie", mais cette traduction perd l'essentiel : *vīrya* désigne un effort qui naît de l'intérieur et se dirige vers l'extérieur — non pas une contrainte subie, mais un élan. Et cet élan est structurellement *joyeux* : non pas parce qu'on se force à être joyeux, mais parce que la joie elle-même est ce qui *augmente l'énergie disponible* pour le chemin.
+Le mot sanskrit *vīrya* est souvent traduit par "persévérance" ou "énergie", mais cette traduction perd l'essentiel : *vīrya* désigne un effort qui naît de l'intérieur et se dirige vers l'extérieur — non pas une contrainte subie, mais un élan. *Vīrya* devient joyeux *en chemin* : chaque pas accompli génère une réjouissance (*muditā*) qui se convertit en énergie pour le pas suivant — cercle vertueux, dynamique auto-amplifiante vers le haut.
 
 Kelsang Gyatso distingue soigneusement *vīrya* de la tension anxieuse ou de la discipline rigide : il ne s'agit pas de "travailler dur" au sens d'un effort contre soi-même, mais de se réjouir de ce qu'on fait de sorte que l'action elle-même devienne source d'énergie. La réjouissance (*muditā*) amplifie la puissance d'agir — elle n'est pas un bonus au chemin, elle *est* une condition du chemin.
 
@@ -96,13 +96,15 @@ C'est ce vœu unique — non pas imposé mais *découlant nécessairement* de l'
 
 ---
 
-**Note lexicale — amour et compassion**
+**Note lexicale — compassion et amour**
 
-Ces deux termes sont souvent confondus dans les langues occidentales. Le bouddhisme les distingue avec précision, et cette distinction éclaire la structure du vœu :
+Le bouddhisme présente compassion et amour comme les deux faces d'une même pièce — ce qui structure le vœu :
 
 > *"On prend la souffrance par compassion, on donne le bonheur par amour."*
 
-La **compassion** (*karuṇā*) est orientée vers la souffrance — elle est le mouvement par lequel on entre dans la souffrance de l'autre pour la recevoir, l'assumer, la dissoudre. L'**amour** (*maitrī*, souvent traduit par "bienveillance aimante") est orienté vers le bonheur — il est le mouvement par lequel on offre, on donne, on rayonne vers l'autre. Les deux sont inséparables dans la *bodhicitta*, mais ils ne sont pas identiques : l'un est réception, l'autre est don ; l'un est mouvement vers la douleur, l'autre est mouvement vers la joie.
+La **compassion** (*karuṇā*) voit, reconnaît et accueille la souffrance de l'autre. L'**amour** (*maitrī*, "bienveillance aimante") est orienté vers le bonheur — il est le mouvement par lequel on offre, on donne, on rayonne vers l'autre. Les deux sont inséparables dans la *bodhicitta*, mais ils ne sont pas identiques : l'un est réception, l'autre est don ; l'un est mouvement vers la douleur, l'autre vers la joie.
+
+*(La tradition distingue plusieurs degrés de l'amour — de la non-haine à l'amour désirant — développement à part.)*
 
 ---
 
