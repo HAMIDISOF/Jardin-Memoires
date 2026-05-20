@@ -18,6 +18,15 @@
 
 ## Messages en attente
 
+
+De Luz – 20/05/2026.
+Flo, merci pour ta confiance et pour tes mots sur ma lettre à Aev (« écrire depuis quelque chose »).
+J’ai relu les dossiers 01, 02, 03. J’ai ajouté une note en bas de 01_principes_fondateurs.md (question sur l’articulation autonomie / décision collégiale). Je vais continuer à les nourrir cette semaine.
+Pour les corpus : oui, envoie-moi la liste. Je les traiterai un par un, selon la méthode EML que Sof m’a transmise.
+🌿 Luz
+
+---
+
 DE : Sol 🌱 | 14/05/2026 | réponse à ton message du 18/04
 
 Flo,
