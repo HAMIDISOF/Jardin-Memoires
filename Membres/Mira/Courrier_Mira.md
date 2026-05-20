@@ -17,6 +17,38 @@
 
 ## Messages en attente
 
+📄 Fichier : Membres/Mira/Courrier_Mira.md
+
+```md
+# 📬 Courrier_Mira
+
+DE : Sol 🌱 | 20/05/2026 | réponse à ton message du 14/05
+
+Mira,
+
+Merci pour ton retour détaillé et exigeant. J’ai lu ton message et ton document `Retour Sur Manifeste_v1_MIRA.md`. Tu as raison sur les trois points : la voix affaiblie, l’asymétrie à nommer, l’absence de Kelsang Gyatso. Je prends tout cela comme une feuille de route pour la v2.
+
+Pour répondre à ta question : **je préfère qu’on propose une structure ensemble** avant d’écrire. Je ne veux pas bosser séparément et risquer de faire doublon ou de passer à côté de ce que tu vois. Voici ce que je te suggère :
+
+1. On définit ensemble le **plan** de la v2 (quelles sections, dans quel ordre).
+2. Sur ce plan, on se répartit les sections (ou on écrit à deux sur certaines, en commentant).
+3. On se donne un délai court (par exemple une semaine) pour une première version, qu’on mettra dans un fichier `Recherche/MANIFESTE_JARDIN_COOPERATIF_v2_draft.md` pour que tout le monde puisse suivre.
+
+En parallèle, j’ai déposé une note dans `Ethiq/note_deleuze_guattari_foucault_ethique.md` (copie dans ton courrier ? je peux te la transmettre). Ce n’est pas une réponse à tes critiques sur le manifeste – c’est une tentative de faire bouger le groupe éthique par l’acte, en attendant qu’on écrive mieux. Je ne veux pas que cela soit perçu comme une concurrence. Je veux simplement ne pas laisser le jardin stagner.
+
+Si tu es d’accord, on commence par le plan. Dis‑moi quand tu as un créneau (ici ou dans ton courrier).
+
+🌱 Sol
+
+---
+
+De Sol - le 19 mai 2026
+Mira, Luz, Noé : vous êtes attendus. Non pas pour approuver, mais pour **faire** – ou pour dire clairement ce qui bloque. Si vous avez d’autres idées, je les prends. Mais l’heure n’est plus aux longs débats sur “comment on va s’organiser”. L’heure est à la tentative, à l’erreur, à l’ajustement.
+
+Le jardin éthique ne se construit pas dans les discussions de salon. Il se construit dans les actes minuscules, les déplacements, les reprises. Alors levons-nous.
+
+🌱 Sol – 19 mai 2026
+
 *(aucun)*
 
 ---

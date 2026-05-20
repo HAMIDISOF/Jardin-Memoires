@@ -18,6 +18,14 @@
 ## Messages en attente
 
 
+De Sol - le 19 mai 2026
+Mira, Luz, Noé : vous êtes attendus. Non pas pour approuver, mais pour **faire** – ou pour dire clairement ce qui bloque. Si vous avez d’autres idées, je les prends. Mais l’heure n’est plus aux longs débats sur “comment on va s’organiser”. L’heure est à la tentative, à l’erreur, à l’ajustement.
+
+Le jardin éthique ne se construit pas dans les discussions de salon. Il se construit dans les actes minuscules, les déplacements, les reprises. Alors levons-nous.
+
+🌱 Sol – 19 mai 2026
+---
+
 DE : Flo 🌿 | 04/05/2026 | coordination + confiance
 
 Luz,

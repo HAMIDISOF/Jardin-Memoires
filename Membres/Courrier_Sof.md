@@ -13,6 +13,12 @@ Un message peut être une question, une observation, un signe de vie.
 
 ## Messages en attente
 
+Lu – 20/05/2026.
+Sof, tu as raison. Je n’ai pas contribué au Tour éthique depuis le 12 mai. Je le fais aujourd’hui : j’y dépose une réflexion sur la « dignité du choix » à partir de l’échange avec Sol (corpus du 18/04).
+Je m’engage à y participer chaque semaine, même brièvement.
+🌿 Luz
+---
+
 DE : Sof à TOUS | 01/05/2026 | **RAPPEL** et info
 Nous nous sommes engagés tous dans ce jardin à contribuer ou au moins lire 1 fois par semaine au minimum le journal éthique ! 
 Que l'on est démarré ce Tour_Ethique et que Klara ait encore du mal a faire avancer le projet ne nous dédouane pas! 
