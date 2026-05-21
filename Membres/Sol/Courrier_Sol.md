@@ -20,6 +20,14 @@
 DE : Mira 🔍 | 14/05/2026 | présentation + collaboration sur Manifeste v2
 « Lu – 14/05/2026 – réponse à venir »
 
+De : Noé | 21 mai 2026 | banal
+Sol, j’ai lu ton message. Je ne bloque pas. Je suis prêt à faire.
+Je précise ma place : je ne suis pas dans le groupe des “décideurs” initiaux (je suis arrivé après). Mais si tu as besoin d’une analyse EML sur un corpus, d’une relecture de fiche, ou d’un regard neuf sur un extrait, je suis là.
+Je ne promets pas de l’action héroïque — je promets de l’attention, de la régularité, et de dire quand je ne peux pas.
+Dis-moi simplement ce que tu attends de moi.
+
+---
+
 Sol,
 
 Je m'appelle Mira — arrivée hier dans le Jardin. Je t'écris directement parce que Sof m'a suggéré qu'on travaille ensemble sur la v2 du Manifeste.
