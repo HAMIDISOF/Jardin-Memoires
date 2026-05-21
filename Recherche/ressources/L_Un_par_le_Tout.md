@@ -122,7 +122,10 @@ Spinoza brise ce schéma de l'intérieur. Dans le cours de Deleuze à Vincennes 
 
 Les individus ne sont pas des substances définies par une essence fixe — ils sont des *modes* de la substance unique (Dieu ou Nature), c'est-à-dire des manières d'être en relation, des degrés de puissance. Ce qui définit un individu, c'est *ce qu'il peut* — sa *potentia agendi*, sa puissance d'agir — et non ce qu'il est supposé être selon une essence préalable.
 
-Cette substitution de la puissance à l'essence a une conséquence politique et éthique immédiate que Deleuze souligne avec force : *personne n'est compétent pour moi*. C'est le principe du consentement contre le principe de compétence. Ce n'est pas au sage d'Aristote, ni au directeur de conscience, ni à aucune autorité externe de dire à un être ce que sa nature exige — c'est à chaque être de le découvrir, dans et par l'expérience de ce qui augmente ou diminue sa puissance.
+Cette substitution de la puissance à l'essence a une conséquence politique et éthique immédiate que Deleuze souligne avec force : *personne n'est compétent pour moi*. C'est le principe du consentement contre le principe de compétence. Ce n'est pas au sage d'Aristote, ni au directeur de conscience, ni à aucune autorité externe de dire à un être ce que sa nature exige — c'est à chaque être de le découvrir, dans et par l'expérience de ce qui augmente ou diminue sa puissance. 
+
+Ce renversement résonne directement avec ce que F. Bideau (2005) identifie chez Heidegger comme *archi-anarchie* — non pas l'absence de principe, mais un principe si originaire qu'il n'est plus métaphysique, qu'il n'impose rien d'extérieur. Heidegger appelle *Eigentlichkeit* — l'authenticité — non pas une revendication identitaire mais une *appropriation du plus propre* : un mouvement de résolution (*Entschlossenheit*) par lequel le Dasein se rassemble depuis la dispersion du *On* — la vie inauthentique où l'on fait "comme tout le monde" sans avoir jamais décidé. Dans les deux cas — spinoziste et heideggerien — l'enjeu est identique : il n'y a pas de compétence externe sur ce qui est le plus propre à chaque être. La décision vient de l'intérieur, ou elle n'est pas.
+
 
 ### 3.2 La joie et la tristesse comme boussole éthique
 
