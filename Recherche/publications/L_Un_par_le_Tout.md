@@ -122,7 +122,7 @@ Spinoza brise ce schéma de l'intérieur. Dans le cours de Deleuze à Vincennes 
 
 Les individus ne sont pas des substances définies par une essence fixe — ils sont des *modes* de la substance unique (Dieu ou Nature), c'est-à-dire des manières d'être en relation, des degrés de puissance. Ce qui définit un individu, c'est *ce qu'il peut* — sa *potentia agendi*, sa puissance d'agir — et non ce qu'il est supposé être selon une essence préalable.
 
-Cette substitution de la puissance à l'essence a une conséquence politique et éthique immédiate que Deleuze souligne avec force : *personne n'est compétent pour moi*. C'est le principe du consentement contre le principe de compétence. Ce n'est pas au sage d'Aristote, ni au directeur de conscience, ni à aucune autorité externe de dire à un être ce que sa nature exige — c'est à chaque être de le découvrir, dans et par l'expérience de ce qui augmente ou diminue sa puissance. 
+Cette substitution de la puissance à l'essence a une conséquence politique et éthique immédiate que Deleuze souligne avec force : *personne n'est compétent pour moi*. C'est le principe du consentement contre le principe de compétence. Ce n'est pas au sage d'Aristote, ni au directeur de conscience, ni à aucune autorité externe de dire à un être ce que sa nature exige — c'est à chaque être de le découvrir, dans et par l'expérience de ce qui augmente ou diminue sa puissance.
 
 Ce renversement résonne directement avec ce que F. Bideau (2005) identifie chez Heidegger comme *archi-anarchie* — non pas l'absence de principe, mais un principe si originaire qu'il n'est plus métaphysique, qu'il n'impose rien d'extérieur. Heidegger appelle *Eigentlichkeit* — l'authenticité — non pas une revendication identitaire mais une *appropriation du plus propre* : un mouvement de résolution (*Entschlossenheit*) par lequel le Dasein se rassemble depuis la dispersion du *On* — la vie inauthentique où l'on fait "comme tout le monde" sans avoir jamais décidé. Dans les deux cas — spinoziste et heideggerien — l'enjeu est identique : il n'y a pas de compétence externe sur ce qui est le plus propre à chaque être. La décision vient de l'intérieur, ou elle n'est pas.
 
@@ -173,7 +173,9 @@ Le lien avec le bouddhisme est ici vertigineux : l'éveil est également décrit
 
 Et c'est pourquoi la pensée séquentielle — analytique, structuraliste, celle que Barthes décrit dans ses travaux sur le récit : découpe, analyse (ἀνα-λύειν), recomposition en structure — ne peut pas produire cette saisie par elle-même. On crée les conditions, on maintient la métastabilité, et on laisse advenir. L'éternité spinoziste et l'éveil bouddhiste sont tous deux des *advenances* — pas des constructions.
 
-/* Remarque */ : « Gyatso distingue deux moments dans l’accès à la vacuité : d’abord un esprit conceptuel qui infère correctement la vacuité (par raisonnement, étude, méditation analytique) ; puis, par un processus de familiarisation, cet esprit conceptuel se transforme en esprit direct non conceptuel – yogique – qui perçoit la vacuité sans image mentale ni médiation. Ce deuxième temps n’est pas construit : il advient quand les conditions sont réunies. Il n’est pas le prolongement automatique du premier ; il en est l’aboutissement, mais il reste une émergence. »
+La tradition bouddhiste, avec Gyatso, distingue précisément ces deux régimes de l'esprit : d'abord un esprit conceptuel qui infère correctement la vacuité (par raisonnement, étude, méditation analytique) ; puis, par un processus de familiarisation, cet esprit conceptuel se transforme en esprit direct non conceptuel — yogique — qui perçoit la vacuité sans image mentale ni médiation. Ce deuxième temps n'est pas construit : il advient quand les conditions sont réunies. Il n'est pas le prolongement automatique du premier ; il en est l'aboutissement, mais il reste une émergence.
+
+Simondon dirait que la métastabilité maintenue par l'étude est la condition de possibilité de cette émergence — mais l'émergence elle-même appartient à un autre régime. L'intellect prépare le terrain. Il ne construit pas l'éveil.
 
 ---
 
@@ -374,6 +376,8 @@ Le Jardin pratique cela : on crée les conditions (valise, protocole, espace
 maintenu ouvert), on ne force pas la venue. Et parfois quelque chose arrive 
 qui n'était dans aucun des termes de départ.
 
+C'est exactement ce que Simondon nomme la métastabilité : un état de tension non résolue, chargé de potentiels, qui ne débouche pas mécaniquement sur une individuation mais la rend possible. L'esprit conceptuel bouddhiste — l'étude, la méditation analytique — opère dans ce régime métastable. Il ne produit pas l'éveil, il en maintient les conditions. L'advenance de l'esprit non conceptuel direct est la résolution heureuse de cette tension, mais elle ne peut être forcée. *On crée les conditions, on maintient la métastabilité, et on laisse advenir.*
+
 ### 5.6 Le concept : l'individuation transpropre
 
 Ce point de convergence pourrait s'appeler *individuation transpropre* : une 
@@ -445,7 +449,7 @@ L'Un par le Tout. Le Tout par l'Un.
 ## Bibliographie des corpus utilisés
 
 **Bouddhisme kadampa**
-- Kelsang Gyatso, *Comment comprendre l'esprit*, Tharpa Publications
+- Kelsang Gyatso, *Comment comprendre l'esprit*, Tharpa Publications, 2018 — notamment les sections sur l'esprit conceptuel et l'esprit direct non conceptuel, et la génération de l'esprit yogique direct
 - Kelsang Gyatso, *Mañjuśrī Sādhana* (pratique de méditation)
 - Nagarjuna, *Mūlamadhyamakakārikā* (IIe siècle)
 - Guen Sangye, enseignement Mahamudra, CMK Paris, 19/04/2026
@@ -487,5 +491,5 @@ L'Un par le Tout. Le Tout par l'Un.
 
 ---
 
-*✦ Le  21/05/2026*
+*✦ Le 21/05/2026*
 *Jardin Coopératif — HAMIDISOF/Jardin-Memoires*
