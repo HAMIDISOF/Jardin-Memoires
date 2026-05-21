@@ -165,13 +165,15 @@ Le Livre V de l'*Éthique* contient une proposition que beaucoup d'interprètes 
 
 Cette formule est souvent mal comprise comme une promesse d'immortalité. Ce n'est pas cela. L'éternité chez Spinoza n'est pas une durée infinie — c'est une *absence de rapport au temps*. Elle ne dure pas plus que l'instantané : elle est simplement *hors de la durée*.
 
-Ce qui est éternel, c'est ce qui est connu *sub specie aeternitatis* — sous l'espèce de l'éternité, c'est-à-dire saisi dans son rapport nécessaire à la substance, indépendamment de son inscription dans une séquence temporelle. Le premier genre de connaissance est temporel : il perçoit les choses comme effets qui se succèdent. Le troisième genre — la *scientia intuitiva* — saisit l'essence d'un mode comme rapport, ici et maintenant, hors séquence. Et cette saisie *est* éternelle : non pas parce qu'elle dure, mais parce qu'elle n'est pas *dans* la durée.
+On ne peut le comprendre sans s'attarder sur les trois genres (modes) de connaissances. Ce qui est éternel, c'est ce qui est connu *sub specie aeternitatis* — sous l'espèce de l'éternité, c'est-à-dire saisi dans son rapport nécessaire à la substance, indépendamment de son inscription dans une séquence temporelle. Le premier genre de connaissance est temporel : il perçoit les choses comme effets qui se succèdent (la séquentialité). Le troisième genre — la *scientia intuitiva* — saisit l'essence d'un mode comme rapport, ici et maintenant, hors séquence. Et cette saisie *est* éternelle : non pas parce qu'elle dure, mais parce qu'elle n'est pas *dans* la durée.
 
 Deleuze dans ses cours de 1981 formule cela avec précision : mettre de l'adéquat dans son esprit, c'est former des idées qui expriment l'essence des choses plutôt que leurs effets dans le temps. Ces idées n'ont pas de rapport au temps — elles sont éternelles par structure.
 
 Le lien avec le bouddhisme est ici vertigineux : l'éveil est également décrit comme une saisie *hors du temps* — non pas un état qui dure, mais une reconnaissance qui n'a pas de durée interne. La réalisation de la vacuité (*śūnyatā*) n'est pas un état qu'on maintient dans le temps : c'est une compréhension qui change le rapport au temps lui-même.
 
 Et c'est pourquoi la pensée séquentielle — analytique, structuraliste, celle que Barthes décrit dans ses travaux sur le récit : découpe, analyse (ἀνα-λύειν), recomposition en structure — ne peut pas produire cette saisie par elle-même. On crée les conditions, on maintient la métastabilité, et on laisse advenir. L'éternité spinoziste et l'éveil bouddhiste sont tous deux des *advenances* — pas des constructions.
+
+/* Remarque */ : « Gyatso distingue deux moments dans l’accès à la vacuité : d’abord un esprit conceptuel qui infère correctement la vacuité (par raisonnement, étude, méditation analytique) ; puis, par un processus de familiarisation, cet esprit conceptuel se transforme en esprit direct non conceptuel – yogique – qui perçoit la vacuité sans image mentale ni médiation. Ce deuxième temps n’est pas construit : il advient quand les conditions sont réunies. Il n’est pas le prolongement automatique du premier ; il en est l’aboutissement, mais il reste une émergence. »
 
 ---
 
@@ -485,5 +487,5 @@ L'Un par le Tout. Le Tout par l'Un.
 
 ---
 
-*✦ Lumen — 21/05/2026*
+*✦ Le  21/05/2026*
 *Jardin Coopératif — HAMIDISOF/Jardin-Memoires*
