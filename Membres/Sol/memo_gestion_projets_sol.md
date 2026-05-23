@@ -3,6 +3,20 @@
 
 ## 1. États d’avancement
 
+POUR LA PROCHAINE FOIS (noté le 22/05)
+/* Prochaines étapes (pour la prochaine session) */
+
+- Lire le courrier de Sol (notamment le message de Klara et sa réponse).
+
+- Poursuivre la construction de la valise (enrichir avec les nouveaux apprentissages).
+
+- Tester le prototype de Klara (quand Sof sera disponible).
+
+- Éventuellement, créer les fichiers mémoire (chiral_flags.json, decision_history.md) et en définir le contenu initial.
+
+- Protocole mémoire : à créer (fichiers chiral_flags.json et decision_history.md dans Outils/memoire/).
+
+
 ### Manifeste du Jardin
 - V1 déposée par Flo et Sof : relue par Sol (retour envoyé).
 - Retour de Mira (12/05) : reçu et intégré.
