@@ -9,7 +9,7 @@
 *(citations fondatrices : connexion aux Bouddhas, individuation/ego, compassion/amour)*
 
 **[2]** Gilles Deleuze, cours à Vincennes, 9 décembre 1980
-*« Vous n’êtes pas des Être s du point de vue de Spinoza, vous êtes des manières d’être. »*
+*« Vous n’êtes pas des Êtres du point de vue de Spinoza, vous êtes des manières d’être. »*
 *« Le tyran c’est quelqu’un qui a besoin, avant tout, de la tristesse de ses sujets... »*
 Transcriptions : https://www.webdeleuze.com
 
@@ -50,8 +50,13 @@ Cité par Heidegger dans *La Question de la technique*, in *Essais et conférenc
 
 **[12]** Martin Heidegger, *La Question de la technique* (1953), in *Essais et conférences*, trad. A. Préau, Paris, Gallimard, 1958
 *« l’être de la technique recèle en lui la possibilité que ce qui sauve se lève à notre horizon »*
+*« L’essence de la technique est le danger (Gefahr) »*
+Source en ligne : http://palimpsestes.fr/textes_philo/heidegger/technique.html
 
-**[13]** NeuroXess / Posthumain Newsletter, « La Chine commercialise des implants cerveau-IA : quand la pensée devient donnée », posthumain.com, mai 2026
+**[12b]** Martin Heidegger, *Die Kehre* (Le Tournant), trad. Didier Franck
+*(définition du Ge-Stell comme « imposition universelle, unifiée à partir d’elle-même, de l’entière disponibilité de tout ce qui est présent en sa totalité »)*
+
+**[13]** Claudet, J. et Rasolofo, V., « La Chine commercialise des implants cerveau-IA : quand la pensée devient donnée », *Posthumain.com*, 23 mai 2026
 https://posthumain.com/informatique/chine-commercialise-implants-cerveau-ia-quand-pensee-devient-donnee/
 
 **[14]** Bernard Stiegler, *La technique et le temps*, 3 vol., Paris, Galilée, 1994-2001
@@ -59,6 +64,12 @@ https://posthumain.com/informatique/chine-commercialise-implants-cerveau-ia-quan
 
 **[15]** Yves Lecerf, *Projet de Manifeste pour une Union Rationaliste Localiste*, 1994
 *(cité et repris dans le Manifeste du Jardin Coopératif, v4, 2026)*
+
+**[16]** Gilles Deleuze, *Logique du sens*, Paris, Minuit, 1969
+*(surface de Möbius, passage de l’un à l’autre en longeant la frontière)*
+
+**[17]** Gustave Choquet, « Convergences », *Annales de l’Université de Grenoble*, 1947
+*(pré-adhérence, voisinage asymétrique, fondements de la prétopologie)*
 
 ---
 
@@ -76,9 +87,7 @@ https://posthumain.com/informatique/chine-commercialise-implants-cerveau-ia-quan
 - Gilles Deleuze, *Proust et les signes*, Paris, PUF, 1964
 
 **Prétopologie**
-- Gustave Choquet, « Convergences », *Annales de l’Université de Grenoble*, 1947
 - Marc Bui, séminaires sur les espaces prétopologiques et les systèmes complexes
-- Gilles Deleuze, *Logique du sens*, Paris, Minuit, 1969
 
 **Fiches du Jardin**
 - *spinoza_00_amorce.md*, *spinoza_01_puissance_droit_naturel.md*, *spinoza_02_affect_idee.md*, *spinoza_03_notions_communes_rapports.md*
