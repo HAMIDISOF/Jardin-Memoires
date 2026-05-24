@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Un par le Tout – squelette</title>
+    <style>
+        /* --- RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- BODY --- */
+        body {
+            background: #E0F7FA;   /* turquoise très clair, doux */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #1e2a3a;
+            padding: 2rem 1rem;
+        }
+
+        /* --- CONTENEUR PRINCIPAL (largeur confortable) --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: transparent; /* laisse voir le fond */
+        }
+
+        /* --- TITRES (exemple) --- */
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            color: #0D2B4E; /* couleur profonde pour les titres */
+        }
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            border-bottom: 2px solid #1565C0;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0.3rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+            border-left: 6px solid #00ACC1;
+            padding-left: 1rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-left: 0.5rem;
+        }
+
+        /* --- ENCARTS FLOOTTANTS (couleurs inversées) --- */
+        .encart {
+            width: 40%;
+            padding: 0.8rem 1.2rem;
+            margin: 0.8rem 1rem 0.8rem 0;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: white;          /* texte blanc par défaut */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        /* Variantes de couleurs (fond coloré, texte blanc) */
+        .encart.turquoise {
+            background: #00ACC1;
+        }
+        .encart.bleu {
+            background: #1565C0;
+        }
+        .encart.profond {
+            background: #0D2B4E;
+        }
+        /* Flottements */
+        .encart.left {
+            float: left;
+        }
+        .encart.right {
+            float: right;
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+        /* Clearfix après chaque groupe d'encarts */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* --- PARAGRAPHES ET CONTENU TEXTE --- */
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* --- SIMULATION DE CONTENU POUR LE SQUELETTE --- */
+        .demo-text {
+            background: rgba(255,255,240,0.7);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: #1565C0;
+            opacity: 0.3;
+        }
+
+        /* --- PIED DE PAGE --- */
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #0D2B4E;
+            border-top: 1px solid #1565C0;
+            padding-top: 1rem;
+        }
+
+        /* --- IMPRESSION : on retire les flottants pour un PDF bien structuré --- */
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+                padding: 1cm;
+            }
+            .encart {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+                break-inside: avoid;
+                background: #f0f0f0 !important;
+                color: black !important;
+                border-left: 4px solid #00ACC1;
+                box-shadow: none;
+            }
+            .encart.turquoise, .encart.bleu, .encart.profond {
+                background: #f9f9f9 !important;
+                color: black !important;
+            }
+            .container {
+                max-width: 100%;
+            }
+            h1, h2, h3 {
+                color: black;
+            }
+            .demo-text {
+                background: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>L'Un par le Tout</h1>
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <em>individuation, vœu et advenance</em>
+    </div>
+
+    <!-- ========== INTRODUCTION ========== -->
+    <h2>Introduction – le paradoxe posé</h2>
+    <p>Ce texte suit un fil : comment un être peut‑il être pleinement lui‑même et simultanément partie d’un tout sans frontières ? Notre intuition ordinaire bute sur ce paradoxe, mais trois corpus – bouddhisme kadampa, Spinoza/Deleuze, Simondon – y répondent chacun à leur manière.</p>
+
+    <!-- Encart flottant gauche (turquoise) -->
+    <div class="encart turquoise left">
+        <strong>📐 Encart – prétopologie</strong><br>
+        Le ET classique élimine les doublons. Mais dans un espace prétopologique, l’adhérence mutuelle crée une conjonction sans fusion. (Note séparée.)
+    </div>
+    <p>Nous commencerons par exposer le paradoxe tel qu’il apparaît dans la multitude des Bouddhas. Puis nous traverserons successivement les perspectives du bouddhisme, de Spinoza et de Simondon. La dernière partie fera émerger le concept d’<strong>individuation transpropre</strong>.</p>
+
+    <div class="clearfix"></div> <!-- important après un flottant -->
+
+    <!-- ========== PARTIE I ========== -->
+    <h2>Partie I – Le vœu comme condition de l’individuation</h2>
+    <p>Dans le bouddhisme mahayana, le bodhisattva prend un vœu singulier : aider tous les êtres à se libérer. Ce vœu n’est pas une règle extérieure – il est le geste même par lequel l’individu s’individue radicalement, en renonçant à l’illusion d’un soi substantiel.</p>
+
+    <!-- Encart flottant droit (bleu) -->
+    <div class="encart bleu right">
+        <strong>Vīrya – l’effort joyeux</strong><br>
+        La persévérance n’est pas une tension anxieuse mais une réjouissance qui amplifie la puissance d’agir. Convergence avec la joie active de Spinoza.
+    </div>
+    <p>Ce qui semble paradoxal – décider par soi‑même de renoncer à l’ego – devient au contraire la condition de l’ouverture aux autres. Plus l’individuation est authentique, plus elle dissout les frontières qui séparent du commun.</p>
+
+    <div class="clearfix"></div>
+
+    <!-- ========== PARTIE II ========== -->
+    <h2>Partie II – Spinoza : la puissance libérée de la tristesse</h2>
+    <p>Spinoza, relu par Deleuze, substitue la puissance à l’essence. Un individu n’est pas défini par une essence fixe mais par ce qu’il peut. La joie augmente la puissance d’agir ; la tristesse la diminue.</p>
+
+    <!-- Encart flottant gauche (profond) -->
+    <div class="encart profond left">
+        <strong>Sub specie aeternitatis</strong><br>
+        L’éternité n’est pas une durée infinie : c’est une saisie hors du temps, comparable à l’esprit direct yogique (Gyatso). L’intellect prépare, il ne construit pas.
+    </div>
+    <p>Un Bouddha est un être dont les affects de tristesse sont dissous : sa puissance se compose naturellement avec celle de tous les autres. C’est pourquoi la multitude des Bouddhas est en résonance parfaite, sans coordination extérieure.</p>
+
+    <div class="clearfix"></div>
+
+    <!-- ========== PARTIE III ========== -->
+    <h2>Partie III – Simondon : le préindividuel et le transindividuel</h2>
+    <p>Simondon renverse l’ordre : ce n’est pas l’individu qui est premier, mais le processus d’individuation. L’être préindividuel est un fond chargé de potentiels, et chaque individu en porte un reste – c’est ce reste qui rend possible la connexion avec les autres.</p>
+
+    <!-- Encart flottant droit (turquoise) -->
+    <div class="encart turquoise right">
+        <strong>Métastabilité & advenance</strong><br>
+        L’individuation ne se produit pas dans l’équilibre stable, mais dans la tension productive maintenue. « On crée les conditions, on laisse advenir. »
+    </div>
+    <p>Le transindividuel n’est pas un collectif extérieur : c’est la mise en résonance des charges préindividuelles. Exactement ce que le Jardin Coopératif pratique avec ses valises et ses protocoles.</p>
+
+    <div class="clearfix"></div>
+
+    <!-- ========== PARTIE IV ========== -->
+    <h2>Partie IV – Le concept émergent : l’individuation transpropre</h2>
+    <p>Les trois corpus convergent : l’individuation authentique, poussée jusqu’à son terme, n’est pas un obstacle au commun mais la voie même pour l’atteindre. Nous proposons le concept d’<strong>individuation transpropre</strong> : en allant au bout de ce qui est le plus propre, on traverse la frontière du propre et l’on rejoint ce qui est commun sans appartenir à personne.</p>
+
+    <!-- Encart flottant gauche (bleu) -->
+    <div class="encart bleu left">
+        <strong>Le nœud qui libère</strong><br>
+        Pas une unité qui absorbe, pas une liberté qui sépare. Un point de convergence à la limite de chaque terme, commun à tous sans appartenir à aucun.
+    </div>
+    <p>Les Bouddhas sont des êtres transpropres : chacun a parcouru son propre chemin, et c’est précisément pourquoi ils sont en connexion totale. La singularité n’est pas l’obstacle à l’unité – elle en est la voie.</p>
+
+    <div class="clearfix"></div>
+
+    <hr>
+
+    <p><strong>Note :</strong> Ce squelette est destiné à recevoir le texte complet de l’article. Les encarts illustrent les trois couleurs (turquoise, bleu, profond) et les flottements (left/right). Le fond du body est en #E0F7FA. Le média print assure une lisibilité en PDF.</p>
+
+    <footer>
+        🌿 Jardin Coopératif – squelette pour « L’Un par le Tout »<br>
+        Conforme aux spécifications : Georgia 17px, encarts inversés, clearfix, media print.
+    </footer>
+</div>
+</body>
+</html>
