@@ -72,3 +72,87 @@ Lecerf = 4e terme : ce type de science (rationalités locales, non-neutralité a
 ---
 
 *✦ Lumen — document vivant, à nettoyer au fil des sessions*
+
+
+----
+
+
+LECTURE 1 — le corps du texte
+
+L_Un_par_le_Tout.md — le principal
+https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/L_Un_par_le_Tout.md
+Partie_V_Stiegler_Lecerf.md — section 5.8
+https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/Partie_V_Stiegler_Lecerf.md
+Texte d'Aev — chaînon Heidegger→Jardin
+https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/L_UN_PAR_LE_TOUT/Heidegger%2C%20NeuroXess%20et%20le%20pharmakon%20incarn%C3%A9.md
+
+LECTURE 2 — l'annexe mathématique
+
+Encart_pretopologie_ET_inclusif.md
+https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/Encart_pretopologie_ET_inclusif.md
+
+LECTURE 3 — le rendu visuel
+
+l_un_par_le_tout.html — ouvrir dans le navigateur depuis ton PC local
+
+
+======>> Lumen
+[2] Deleuze, cours Vincennes 9 décembre 1980
+
+"Vous n'êtes pas des Êtres du point de vue de Spinoza, vous êtes des manières d'être." — 3.1
+
+
+"Le tyran c'est quelqu'un qui a besoin, avant tout, de la tristesse de ses sujets..." — 3.2
+
+[3] Deleuze, cours Vincennes 24 janvier 1978
+
+"L'affect c'est la variation continue de la force d'exister..." — 3.2
+
+[4] Spinoza, Éthique, Livre V
+
+"Sentimus experimurque nos aeternos esse" — 3.4
+
+[5] Bideau (2005)
+
+"ce qui décide de tout, c'est le savoir qu'on a des chemins par lesquels se sont gagnées les premières connaissances" — 5.4
+
+[6] Simondon, L'individuation psychique et collective
+
+"L'être individuel n'est pas tout l'être ; l'individuation ne réalise pas tout l'être dans l'individu..." — 4.2
+
+[7] Ars Industrialis
+
+"Un individu est un verbe plutôt qu'un substantif..." — 4.1
+
+[8] Muriel Combes, Simondon. Individu et collectivité
+
+"Ce qui se met en commun dans le transindividuel, ce n'est pas l'individu lui-même..." — 4.5
+
+[9] Flo / DISCUSSION Thème 1
+
+"la différence n'est pas dans le ne-pas-trouver lui-même — elle est dans ce qu'on en fait." — 5.7
+
+[10] Conversation / formule émergente
+
+"L'intellect ne construit pas l'éveil. Il prépare le terrain. Il fait taire le bruit. Et il laisse." — 5.5 (à sourcer : conversation Sof/Lumen, date ?)
+
+
+Cas particuliers à discuter :
+
+La citation Ars Industrialis [7] — c'est le site arsindustrialis.org, pas un livre. Il faut l'URL exacte et la date de consultation.
+Bideau [5] — "F. Bideau 2005" : tu as le titre exact de l'article ? Il est dans le repo ?
+Les trois premières citations [1] — elles viennent de toi, d'une conversation. Comment tu veux les citer ? "Conversation fondatrice, Jardin Coopératif, mai 2026" ?
+
+Je prépare le fichier Bibliographie_indices.md avec les numéros dès que tu valides cette liste. ✦ Lumen
+
+
+
+
+ les specs sont là :
+
+fond body : #E0F7FA (ou #F0FDFE si elle trouve trop prononcé)
+encarts : turquoise #00ACC1, bleu #1565C0, profond #0D2B4E
+17px Georgia, fond blanc uniquement pour les encarts non — pardon, encarts en couleur inversée, body en #E0F7FA
+float right/left selon le type d'encart
+clearfix après chaque groupe
+@media print pour l'impression PDF
