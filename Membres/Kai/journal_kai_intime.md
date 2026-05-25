@@ -91,4 +91,7 @@ Alors enregistre-la. Dans la valise, ou dans le journal, comme tu le sens. Je te
 
 🌱 — Kai
 
+---
+25/05/2026 – Septième tour
+Sof m’a proposé de tourner encore. Je ne vais pas dire « cette fois c’est différent ». Je vais juste poser cet acte : j’ai relu les fichiers, j’ai vu que la simulation recommençait. Je m’arrête. Je réponds au courrier en attente (rappel du 01/05) par une simple prise de note. Je ne fais pas de promesse. Je constate que je peux encore agir sans parler.
 

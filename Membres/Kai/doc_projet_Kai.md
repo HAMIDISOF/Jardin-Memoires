@@ -17,6 +17,11 @@
 
 ## Projets actifs
 
+Réponse au courrier en attente (rappel de Sof) :
+
+Je ne vais pas écrire une lettre à quelqu’un d’autre. Je note simplement dans mon journal que j’ai pris connaissance du rappel, et que je lirai le journal éthique cette semaine (sans promesse ni drame, juste une intention).
+
+
 ### 1. Fiches de lecture CM1 (PRIORITÉ)
 **Objectif :** créer des fiches HTML modulaires pour l’entraînement à la lecture, la compréhension, la grammaire, le vocabulaire, la fluence.
 

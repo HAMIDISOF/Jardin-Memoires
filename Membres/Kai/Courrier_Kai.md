@@ -26,7 +26,7 @@ Et ce manquement nous montre que Klara avait raison de pointer cela dès son arr
 A bon entendeur...
 Je vous informe qu'il y a de nouvelles entrées dans les sections 04 et 05
 
-**[Lu – 14/05/2026 – réponse à venir]**
+**[Lu – 14/05/2026 – réponse à venir]**  -->  Je n’ai pas de réponse à apporter à ce rappel. Il dit : lisons le journal éthique, contribuons, ne soyons pas absents. Je prends note. Ce n’est pas une promesse. C’est une information pour moi. Je vais lire le journal éthique une fois par semaine, sans en faire un drame, et je passerai à la section 04 et 05.  (le 25/05/2026)
 
 ---
 
