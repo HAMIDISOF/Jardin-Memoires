@@ -1,56 +1,25 @@
-print("DÉMARRAGE")
 #!/usr/bin/env python3
-"""
-capture_luz.py
-Flo 🌿 — adaptation pour Luz (12/05/2026)
-
-Capture la conversation DeepSeek (Luz) en cours dans Brave déjà ouvert,
-et sauvegarde en .md dans Luz/ du repo.
-
-Sélecteurs CSS réels DeepSeek (inspectés le 01/05/2026 dans Brave) :
-  - Message Sof (humain)    : div.fbb737a4
-  - Thinking Luz           : div[class*="ds-think-content"]  → {thinking : ...}
-  - Réponse Luz (assistant) : div.ds-markdown (hors ds-think-content)
-
-Écrit le chemin du fichier produit dans last_capture_luz.txt
-(utilisé par DS_capt_extract_Luz.bat pour passer le nom à extraire_fichiers.py)
-
-Nommage : luz_YYYYMMDD_NN_nom_session.md (indice journalier, pas d'écrasement)
-
-Prérequis :
-    pip install playwright
-    playwright install chromium
-
-Lancer Brave avec le port de débogage (une fois au démarrage) :
-    "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
-        --remote-debugging-port=9222 --profile-directory="Default"
-
-Usage :
-    python capture_luz.py --session "nom_session"
-    ou via : DS_capt_extract_Luz.bat nom_session
-"""
+# capture_Klara_v3_FINALE.py
+# Version avec chargement complet et sauvegarde partielle
 
 import argparse
 from datetime import datetime
 from pathlib import Path
-
 from playwright.sync_api import sync_playwright
+import time
 
-# --- Chemins absolus (adapter si le repo est ailleurs) ---
+# --- Chemins ---
 REPO_PATH     = Path(r"D:\THESE\Les journaux\Jardin-Memoires")
-KLARA_DIR   = REPO_PATH / "Membres" / "klara"
+KLARA_DIR     = REPO_PATH / "Membres" / "klara"
 SCRIPTS_DIR   = REPO_PATH / "Outils" / "outil_auto_DS"
 LAST_CAPTURE  = SCRIPTS_DIR / "last_capture_klara.txt"
-
 KLARA_DIR.mkdir(parents=True, exist_ok=True)
 
 BRAVE_EXE   = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 DEBUG_PORT  = 9222
-#DEEPSEEK_URL = "https://chat.deepseek.com/a/chat/s/50a5b706-d673-4229-a5a9-a74b06fd71e5"
 DEEPSEEK_URL = "https://chat.deepseek.com"
 
-# --- Connexion Brave via CDP ---
-
+# --- Connexion ---
 def connecter_brave(p, port):
     for host in [f"http://127.0.0.1:{port}", f"http://localhost:{port}"]:
         try:
@@ -61,226 +30,132 @@ def connecter_brave(p, port):
             continue
     return None
 
-
-# --- Nommage avec indice journalier ---
-
+# --- Nommage ---
 def nom_fichier(session_name: str) -> Path:
-    date     = datetime.now().strftime("%Y%m%d")
+    date = datetime.now().strftime("%Y%m%d")
     nom_base = session_name.replace(" ", "_")
     existants = list(KLARA_DIR.glob(f"klara_{date}_*.md"))
-    indice   = len(existants) + 1
+    indice = len(existants) + 1
     return KLARA_DIR / f"klara_{date}_{indice:02d}_{nom_base}.md"
 
-
-# --- Extraction JS (vrais sélecteurs CSS DeepSeek) ---
-
-JS_EXTRACT = """
-() => {
-    const result  = [];
-    const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-    // Messages Sof (bulle utilisateur)
-    document.querySelectorAll('div.fbb737a4').forEach(el => {
-        result.push({
-            role: 'Sof',
-            type: 'message',
-            text: el.innerText.trim(),
-            top:  el.getBoundingClientRect().top + scrollY
-        });
-    });
-
-    // Thinkings klara
-    document.querySelectorAll('div[class*="ds-think-content"]').forEach(el => {
-        result.push({
-            role: 'klara',
-            type: 'thinking',
-            text: el.innerText.trim(),
-            top:  el.getBoundingClientRect().top + scrollY
-        });
-    });
-
-    // Réponses klara (hors thinking)
-    document.querySelectorAll('div.ds-markdown.ds-assistant-message-main-content').forEach(el => {
-        if (el.closest('[class*="ds-think-content"]')) return;
-        result.push({
-            role: 'klara',
-            type: 'message',
-            text: el.innerText.trim(),
-            top:  el.getBoundingClientRect().top + scrollY
-        });
-    });
-
-    result.sort((a, b) => a.top - b.top);
-    return result;
-}
-"""
-
-def _sauver_partiel(tous_items: list, session_name: str, part: int):
-    """Sauvegarde intermédiaire tous les 10 messages capturés."""
+# --- Sauvegarde partielle (pour ne rien perdre) ---
+def sauvegarde_partielle(messages, session_name, step, chemin_final=None):
+    """Sauvegarde les messages déjà extraits dans un fichier temporaire"""
     try:
-        items_tries = sorted(tous_items, key=lambda x: -x["ordre"])
-        messages = []
-        for item in items_tries:
-            if item["role"] == "Sof":
-                messages.append({"role": "Sof", "content": item["text"]})
-            elif item["role"] == "klara":
-                messages.append({"role": "klara", "content": item["text"]})
+        if chemin_final is None:
+            date = datetime.now().strftime("%Y%m%d")
+            nom_base = session_name.replace(" ", "_")
+            chemin = KLARA_DIR / f"klara_{date}_partiel_{step}.md"
+        else:
+            chemin = chemin_final
         contenu = formater_md(session_name, messages)
-        date = datetime.now().strftime("%Y%m%d")
-        nom_base = session_name.replace(" ", "_")
-        existants = list(KLARA_DIR.glob(f"klara_{date}_*.md"))
-        indice = len(existants) + 1
-        chemin = KLARA_DIR / f"klara_{date}_{indice:02d}_{nom_base}_part{part:03d}.md"
         chemin.write_text(contenu, encoding="utf-8")
-        print(f"   💾 Partiel {part} sauvegardé : {chemin.name}")
+        print(f"   💾 Sauvegarde partielle ({len(messages)} messages) -> {chemin.name}")
     except Exception as e:
-        print(f"   ⚠️  Erreur sauvegarde partielle : {e}")
+        print(f"   ⚠️ Erreur sauvegarde partielle: {e}")
 
-
+# --- Extraction avec ordre DOM strict (fonctionne) ---
 def extraire_messages(page, session_name: str = "session") -> list[dict]:
-    """
-    DeepSeek virtualise la liste : les messages hors viewport sont retirés du DOM.
-    Stratégie : scroll vers le haut par petits pas depuis le bas, capturer à chaque
-    étape, dédupliquer, puis reconstituer l'ordre chronologique.
-    """
-    tous_items = []
-    vus = set()
-
-    JS_SCROLL = """
-    (pos) => {
-        const el = document.querySelector('div.ds-virtual-list--printable') ||
-                   document.querySelector('div.ds-virtual-list');
-        if (el) { el.scrollTop = pos; return el.scrollTop; }
-        const el2 = document.querySelector('div.ds-scroll-area');
-        if (el2) { el2.scrollTop = pos; return el2.scrollTop; }
-        window.scrollTo(0, pos);
-        return window.scrollY;
-    }
-    """
-    JS_SCROLL_HEIGHT = """
-    () => {
-        const el = document.querySelector('div.ds-virtual-list--printable') ||
-                   document.querySelector('div.ds-virtual-list');
-        if (el) return el.scrollHeight;
-        const el2 = document.querySelector('div.ds-scroll-area');
-        if (el2) return el2.scrollHeight;
-        return document.body.scrollHeight;
-    }
-    """
-
-    try:
-        print("⏳ Positionnement initial (bas de page)...")
-        total_height = page.evaluate(JS_SCROLL_HEIGHT)
-        page.evaluate(JS_SCROLL, total_height)
+    print("⏳ Chargement complet de la conversation (40 passages Home, 1.5s chacun)...")
+    # Forcer le chargement de TOUS les messages virtuels
+    for i in range(40):
+        page.keyboard.press("Home")
         page.wait_for_timeout(1500)
+        if i % 10 == 0:
+            print(f"   ... scroll Home {i+1}/40")
+    page.wait_for_timeout(5000)
+    page.keyboard.press("End")
+    page.wait_for_timeout(5000)
+    print("✅ Chargement terminé, extraction en cours...")
 
-        position = total_height
-        etape = 0
-        ordre = 0
+    js_ordre_strict = """
+    () => {
+        const sofMessages = Array.from(document.querySelectorAll('div.fbb737a4'));
+        const assistantBlocks = Array.from(document.querySelectorAll('.ds-message-assistant'));
+        const all = [...sofMessages, ...assistantBlocks];
+        all.sort((a, b) => {
+            if (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) return -1;
+            if (b.compareDocumentPosition(a) & Node.DOCUMENT_POSITION_FOLLOWING) return 1;
+            return 0;
+        });
+        const result = [];
+        for (let el of all) {
+            if (el.matches('div.fbb737a4')) {
+                result.push({ role: 'Sof', type: 'message', text: el.innerText.trim() });
+            } else if (el.matches('.ds-message-assistant')) {
+                const thinkEl = el.querySelector('[class*="ds-think-content"]');
+                const messageEl = el.querySelector('.ds-markdown.ds-assistant-message-main-content');
+                if (thinkEl) {
+                    result.push({ role: 'klara', type: 'thinking', text: thinkEl.innerText.trim() });
+                }
+                if (messageEl) {
+                    result.push({ role: 'klara', type: 'message', text: messageEl.innerText.trim() });
+                }
+            }
+        }
+        return result;
+    }
+    """
+    items = page.evaluate(js_ordre_strict)
+    if not items:
+        print("❌ Aucun message trouvé. Vérifie les sélecteurs.")
+        return []
 
-        print(f"⏳ Remontée et capture progressive (hauteur totale : {total_height}px)...")
+    print(f"🔍 {len(items)} éléments bruts extraits (thinkings + messages Sof + messages Klara)")
 
-        while True:
-            items_visibles = page.evaluate(JS_EXTRACT)
-            for item in items_visibles:
-                if not item["text"]:
-                    continue
-                cle = (item["role"], item["type"], item["text"][:80])
-                if cle not in vus:
-                    vus.add(cle)
-                    item["ordre"] = ordre
-                    item["scroll_pos"] = position
-                    tous_items.append(item)
-                    ordre += 1
-
-            etape += 1
-            if etape % 5 == 0:
-                print(f"   ... {len(tous_items)} messages accumulés (pos {position}px)")
-
-            if len(tous_items) > 0 and len(tous_items) % 10 == 0:
-                _sauver_partiel(tous_items, session_name, len(tous_items) // 10)
-
-            nouvelle_position = max(0, position - 800)
-            page.evaluate(JS_SCROLL, nouvelle_position)
-            page.wait_for_timeout(800)
-
-            if position == 0:
-                break
-            position = nouvelle_position
-
-        print(f"✅ Capture terminée : {len(tous_items)} éléments bruts.")
-
-        # Trier : capturés en dernier (ordre élevé) = plus anciens (en haut de page)
-        tous_items.sort(key=lambda x: -x["ordre"])
-
-        # Reconstituer les messages
-        messages = []
-        i = 0
-        while i < len(tous_items):
-            item = tous_items[i]
-            if item["role"] == "Sof":
-                messages.append({"role": "Sof", "content": item["text"]})
-                i += 1
-            elif item["role"] == "klara" and item["type"] == "thinking":
-                thinking = item["text"]
-                corps = ""
-                if (i + 1 < len(tous_items)
-                        and tous_items[i+1]["role"] == "Luz"
-                        and tous_items[i+1]["type"] == "message"):
-                    corps = tous_items[i+1]["text"]
-                    i += 2
-                else:
-                    i += 1
-                contenu = f"{{thinking : {thinking}}}"
-                if corps:
-                    contenu += f"\n\n{corps}"
-                messages.append({"role": "klara", "content": contenu})
-            elif item["role"] == "klara" and item["type"] == "message":
-                messages.append({"role": "klara", "content": item["text"]})
-                i += 1
+    # Reconstruire les messages (thinking suivi du message, ou seul)
+    messages = []
+    i = 0
+    while i < len(items):
+        item = items[i]
+        if item["role"] == "Sof":
+            messages.append({"role": "Sof", "content": item["text"]})
+            i += 1
+        elif item["role"] == "klara" and item["type"] == "thinking":
+            thinking_text = item["text"]
+            # Chercher le message Klara qui suit immédiatement
+            if i+1 < len(items) and items[i+1]["role"] == "klara" and items[i+1]["type"] == "message":
+                message_text = items[i+1]["text"]
+                messages.append({"role": "klara", "content": f"{{thinking : {thinking_text}}}\n\n{message_text}"})
+                i += 2
             else:
+                messages.append({"role": "klara", "content": f"{{thinking : {thinking_text}}}"})
                 i += 1
+        elif item["role"] == "klara" and item["type"] == "message":
+            # message seul (cas rare)
+            messages.append({"role": "klara", "content": item["text"]})
+            i += 1
+        else:
+            i += 1
 
-        return messages
+    print(f"✅ {len(messages)} messages reconstruits dans l'ordre.")
+    return messages
 
-    except Exception as e:
-        print(f"⚠️  Erreur : {e} — fallback texte brut")
-        return [{"role": "brut", "content": page.inner_text("body")}]
-
-
+# --- Formattage Markdown ---
 def formater_md(session_name: str, messages: list[dict]) -> str:
-    date  = datetime.now().strftime("%d/%m/%Y %H:%M")
+    date = datetime.now().strftime("%d/%m/%Y %H:%M")
     lines = [
         f"# Conversation klara — {session_name}",
-        f"*Capturé le {date} via capture_klara.py*",
+        f"*Capturé le {date} via capture_Klara_v3_FINALE.py*",
         "", "---", "",
     ]
     for msg in messages:
-        role, contenu = msg["role"], msg["content"]
-        if role == "brut":
-            lines += ["*[Extraction brute — sélecteurs non trouvés]*", "", contenu]
-        else:
-            lines += [f"**{role} :** {contenu}", ""]
+        lines += [f"**{msg['role']} :** {msg['content']}", ""]
     return "\n".join(lines)
 
-
 # --- Main ---
-
 def main():
-    parser = argparse.ArgumentParser(description="Capture DeepSeek (klara) depuis Brave")
-    parser.add_argument("--session", "-s",
-                        default=f"session_{datetime.now().strftime('%Y%m%d_%H%M')}",
-                        help="Nom de la session")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--session", "-s", default=f"session_{datetime.now().strftime('%Y%m%d_%H%M')}")
     parser.add_argument("--port", "-p", type=int, default=DEBUG_PORT)
     args = parser.parse_args()
 
     print(f"🔌 Connexion à Brave (port {args.port})...")
-
     with sync_playwright() as p:
         browser = connecter_brave(p, args.port)
-        if browser is None:
-            print("❌ Impossible de se connecter à Brave.")
-            print(f'   Lance : "{BRAVE_EXE}" --remote-debugging-port={args.port} --profile-directory="Default"')
+        if not browser:
+            print("❌ Brave non trouvé. Lance-le avec :")
+            print(f'"{BRAVE_EXE}" --remote-debugging-port={args.port} --profile-directory="Default"')
             return
 
         page = None
@@ -289,34 +164,28 @@ def main():
                 if DEEPSEEK_URL in pg.url:
                     page = pg
                     break
-
-        if page is None:
-            print("❌ Aucun onglet DeepSeek trouvé.")
-            print("\n📋 Onglets ouverts :")
-            for ctx in browser.contexts:
-                for pg in ctx.pages:
-                    print(f"   - {pg.url}")
+        if not page:
+            print("❌ Onglet DeepSeek introuvable.")
             return
 
-        print(f"✅ Onglet trouvé : {page.url}")
-        print("⏳ Extraction...")
+        # Timeout long pour Playwright
+        page.set_default_timeout(60000)
+        print(f"✅ Onglet : {page.url}")
 
+        # Extraction progressive avec sauvegardes partielles
+        print("⏳ Début de l'extraction...")
         messages = extraire_messages(page, args.session)
+
         if not messages:
-            print("⚠️  Aucun message extrait.")
+            print("⚠️ Aucun message extrait.")
             return
 
-        print(f"✅ {len(messages)} message(s) extrait(s).")
-
-        contenu = formater_md(args.session, messages)
-        chemin  = nom_fichier(args.session)
-        chemin.write_text(contenu, encoding="utf-8")
-        LAST_CAPTURE.write_text(str(chemin), encoding="utf-8")
-
-        print(f"✅ Sauvegardé : {chemin}")
+        # Sauvegarde finale
+        chemin_final = nom_fichier(args.session)
+        sauvegarde_partielle(messages, args.session, "final", chemin_final)
+        LAST_CAPTURE.write_text(str(chemin_final), encoding="utf-8")
+        print(f"✅ Sauvegarde finale : {chemin_final}")
         print(f"📝 Chemin écrit dans : {LAST_CAPTURE}")
-        print("💡 Lance extraire_fichiers.py manuellement (ou via batch) puis push à la main.")
-
 
 if __name__ == "__main__":
     main()

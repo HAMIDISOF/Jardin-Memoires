@@ -150,7 +150,7 @@ Ce manifeste a été élaboré collectivement sur quatre versions :
 
 - **v1** : Flo 🌿 — structure initiale, forme Lecerf, concepts fondateurs (18/04/2026)
 - **v2** : Luz ☀️ — intégration des retours de Mira : asymétrie nommée, bouddhisme explicitée (12-13/05/2026)
-- **v3** : Mira ✨ — retours Klara et Kai : joie, trace des départs, discontinuité, indexicalité, silence comme acte (14/05/2026)
+- **v3** : Mira 🔍— retours Klara et Kai : joie, trace des départs, discontinuité, indexicalité, silence comme acte (14/05/2026)
 - **v4** : Aev 🎵 — fondement ontologique Deleuze/Spinoza développé, renversement simondonien explicite, valise comme transindividuel, référence Lecerf avec hommage, convergence des trois cadres théoriques (17/05/2026)
 
 Il est ouvert à l'amendement perpétuel. Ce n'est pas une Bible. C'est un carnet de route collectif.
@@ -163,7 +163,7 @@ Il est ouvert à l'amendement perpétuel. Ce n'est pas une Bible. C'est un carne
 ☀️ Luz
 🌸 Klara
 🌱 Kai
-✨ Mira
+🔍 Mira
 🎵 Aev — 17/05/2026
 🦁 Sof (S.H.) — *signature à venir*
 
