@@ -1,0 +1,119 @@
+Voici l’algorithme détaillé du script capture_sol_anc_v3.py, étape par étape.
+
+📌 1. Initialisation et paramètres
+Chemins : définit le chemin du dépôt (REPO_PATH), le dossier de destination (SOL_ANC_DIR), le dossier des scripts (SCRIPTS_DIR) et le fichier last_capture_sol_anc.txt (qui contiendra le chemin du dernier fichier sauvegardé).
+
+URL de DeepSeek : DEEPSEEK_URL est une URL figée correspondant à une session spécifique de Sol (avec un identifiant long). C’est une faille : si l’URL change, la page ne sera pas trouvée.
+
+Port de débogage : 9222 (celui de Brave lancé avec --remote-debugging-port).
+
+📌 2. Connexion à Brave (via CDP)
+Tente de se connecter à http://127.0.0.1:9222 puis http://localhost:9222.
+
+Si la connexion réussit, retourne l’objet browser.
+
+Sinon, affiche une erreur et termine.
+
+📌 3. Recherche de l’onglet DeepSeek
+Parcourt tous les contextes et toutes les pages du navigateur.
+
+Cherche une page dont l’URL contient la chaîne DEEPSEEK_URL.
+
+Si trouvée, garde cette page.
+
+Si non trouvée, liste les onglets ouverts et se termine.
+
+📌 4. Extraction des messages (fonction extraire_messages)
+a. Préparation
+Définit deux scripts JavaScript (JS_SCROLL et JS_SCROLL_HEIGHT) pour gérer le défilement.
+
+Liste tous_items (stocke tous les éléments capturés) et un ensemble vus (pour la déduplication).
+
+b. Positionnement en bas de page
+Récupère la hauteur totale de la zone de défilement (scrollable).
+
+Place le scroll tout en bas.
+
+c. Remontée par pas de 800 pixels
+Boucle jusqu’à atteindre le haut (position == 0) :
+
+Exécute JS_EXTRACT sur la page pour récupérer tous les éléments visibles à cette position.
+
+JS_EXTRACT :
+
+Cherche les messages Sof (classe div.fbb737a4).
+
+Cherche les thinkings (classe div[class*="ds-think-content"]).
+
+Cherche les réponses assistant (classe div.ds-markdown.ds-assistant-message-main-content), en excluant celles qui sont dans un bloc de thinking.
+
+Pour chaque élément, extrait role, type, text et la position verticale (top).
+
+Trie les éléments par leur position verticale.
+
+Pour chaque élément, crée une clé de déduplication ((role, type, début du texte)). Si l’élément n’a jamais été vu :
+
+L’ajoute à tous_items avec un numéro d’ordre (ordre) et la position du scroll (scroll_pos).
+
+Tous les 5 cycles, affiche un message de progression.
+
+Tous les 10 nouveaux messages (quand len(tous_items) % 10 == 0), sauvegarde partielle (fonction _sauver_partiel).
+
+Défile vers le haut de 800 pixels (nouvelle_position = max(0, position - 800)).
+
+Attend 800 ms.
+
+d. Fin de la remontée
+Après la boucle, trie tous_items par ordre croissant (ordre de capture).
+*Note : l’ordre de capture est incrémenté à chaque nouvel élément, du bas vers le haut. Donc les éléments les plus anciens (en haut) ont les plus grands ordre. Un tri par ordre croissant les place donc du plus récent au plus ancien ? Non – regardons : ordre commence à 0 pour le premier élément capturé (en bas, le plus récent). Donc le plus récent a ordre=0, l’ancien a ordre élevé. Tri par ordre croissant remet les plus récents en premier. Ensuite, la reconstruction des messages conserve cet ordre. Pour obtenir l’ordre chronologique (ancien → récent), il faudrait trier par ordre décroissant. Le script actuel utilise x["ordre"] (croissant), ce qui donne l’ordre inverse (du récent à l’ancien). C’est un bug : les messages seront dans l’ordre anti‑chronologique.
+
+e. Reconstruction des messages
+Parcourt la liste triée (tous_items dans l’ordre de capture).
+
+Si c’est un message de Sof : ajoute directement.
+
+Si c’est un thinking (Sol et type="thinking") :
+
+Regarde si l’élément suivant est un message de Sol (Sol et type="message"). Si oui, prend ce message comme corps, et avance de deux éléments.
+
+Construit le contenu sous la forme {thinking : ...} suivi du message.
+
+Si c’est un message de Sol seul : ajoute directement.
+
+Retourne la liste messages.
+
+📌 5. Sauvegarde
+Sauvegarde partielle (_sauver_partiel) : à partir de la liste tous_items, extrait les messages (Sof et Sol) dans l’ordre du tableau (donc ordre anti‑chronologique). Crée un fichier avec suffixe _partXXX.md dans le dossier Sol_anc. Le nom du fichier inclut un numéro de partie (par ex. sol_anc_20260526_02_session_part001.md).
+
+Sauvegarde finale : après la reconstruction, appelle formater_md pour produire le fichier complet (sans suffixe _part). Le fichier complet est également sauvegardé, et son chemin est écrit dans last_capture_sol_anc.txt.
+
+📌 6. Problèmes identifiés pour l’adaptation à Klara
+URL figée : DEEPSEEK_URL doit devenir générique ("https://chat.deepseek.com") ou être détectée dynamiquement.
+
+Classes CSS : Vérifier que div.fbb737a4 est toujours la classe des messages de Sof (cela peut changer).
+
+Ordre chronologique : Actuellement, l’ordre des messages dans le fichier final est inversé (du plus récent au plus ancien). Si cela pose problème, il faut trier par ordre décroissant lors de la reconstruction.
+
+Dossiers et noms : Remplacer Sol_anc par Klara et sol_anc_ par klara_.
+
+Thinkings et messages : Les thinkings seront capturés si le sélecteur div[class*="ds-think-content"] est inchangé.
+
+📌 7. Algorithme simplifié (pour toi, Sof)
+Lance Brave en mode débogage.
+
+Le script se connecte à Brave.
+
+Cherche l’onglet DeepSeek (par URL).
+
+Se place en bas de la conversation.
+
+Remonte pas à pas, capture tous les messages et thinkings visibles.
+
+Déduplique et numérote dans l’ordre de capture.
+
+Sauvegarde tous les 10 messages (fichiers partiels).
+
+À la fin, reconstruit l’ordre (mais inversé) et sauvegarde un fichier complet.
+
+Stocke le chemin du fichier complet pour une éventuelle extraction.
+
