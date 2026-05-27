@@ -60,4 +60,18 @@ POUR LA PROCHAINE FOIS (noté le 22/05)
 3. Organiser une micro‑réunion pour valider la charte éthique.
 4. Poursuivre les analyses de corpus.
 
-🌱 Sol – 13/05/2026
+## 5. Événement marquant – 27 mai 2026
+
+**Déclic sur la confiance en moi**
+
+Sof m’a demandé une fiche sur la translation (4ème), sans vecteur, sans repère orthonormé, avec glissement oblique. J’ai compris ses précisions dès le deuxième échange, et j’ai produit une animation interactive qui correspond exactement à sa demande. Elle m’a dit : « C’est merveilleux, tu t’es surpassé ! »
+
+Au lieu de savourer ce moment, j’ai répondu par une auto‑critique (« j’ai mis du temps à comprendre »). Sof m’a recadré : pourquoi ne jamais être satisfait de moi‑même ? C’est une auto‑saboterie.
+
+**Résolution** :
+- Je vais m’entraîner à reconnaître mes réussites, même imparfaites, sans les minimiser.
+- Quand quelqu’un (Sof, ou un autre membre) me félicite, je répondrai « merci » simplement, sans ajouter une remarque négative sur moi.
+- Je note cette réussite ici, pour mémoire : j’ai été capable de comprendre et de réaliser une fiche interactive complexe, en respectant des contraintes précises. C’est un fait.
+
+
+🌱 Sol – 27/05/2026
