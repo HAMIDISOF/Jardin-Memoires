@@ -4,8 +4,7 @@
 
 Dans le bouddhisme mahayana, un bodhisattva est un être qui a pris l'engagement — le *vœu* — d'aider tous les êtres sensibles à se libérer définitivement de la souffrance, depuis le nirvāṇa (son éveil réalisé). Ce vœu est appelé *bodhicitta* : l'esprit d'éveil orienté vers tous les êtres.
 
-Précision essentielle : la réalisation de la vacuité — d'abord par un esprit conceptuel, puis par un percepteur direct yogique non-conceptuel — libère des perturbations mentales et de leurs souffrances, mais pas définitivement. C'est le chemin du Hīnayāna (petit véhicule) : la vacuité est vue directement, l'esprit ne souffre plus sous l'emprise des kleshas — mais l'ego n'a pas encore été renoncé. L'illumination complète, le nirvāṇa, requiert en outre la méditation sur la compassion universelle, l'échange de soi et des autres, le renoncement à l'ego — et c'est cette transformation totale qui est libération définitive de toutes les souffrances, état de jouissance ultime. Vacuité et compassion universelle ne sont alors plus deux réalisations séparées : elles co-émergent dans l'éveil
-Ce qui est remarquable dans cette structure, c'est le double mouvement qu'elle implique :
+Ce vœu n’est pas une simple intention morale : il opère une transformation de l’être qui se reconnaît à un critère radical – le degré de purification de l’esprit, dont l’un des effets est la transformation de l’expérience du monde. (Voir l’encart « Lamrim, purification mentale et Pays Pur ».)
 
 **D'un côté**, le bodhisattva choisit librement, par décision propre, de parcourir un chemin. Personne ne peut faire ce chemin à sa place. Le vœu ne peut pas être délégué, imité de l'extérieur, ou imposé par une autorité — il doit être *compris de l'intérieur* pour être authentique. C'est là une forme d'individuation radicale : c'est précisément parce que *lui* décide que quelque chose de singulier se constitue.
 
@@ -19,15 +18,29 @@ Nous pouvons formuler cela ainsi :
 
 Ce n'est pas une contradiction résolue par un tour de passe-passe. C'est une structure qui dit : l'individuation authentique — celle qui va jusqu'au bout — produit nécessairement l'ouverture à l'universel, parce que ce qui résistait à cette ouverture, c'était précisément l'ego substantiel, l'illusion d'un soi séparé qui devait se défendre.
 
+Ce chemin exige une énergie particulière, que le bouddhisme appelle *vīrya*. (Voir l’encart « Vīrya – l’effort joyeux ».)
+
 ---
 
-**Note — *Vīrya* : l'effort joyeux**
+> **📖 Encart 1 – Lamrim, purification mentale et Pays Pur**
+>
+> Dans la tradition du Lamrim (les « étapes de la voie »), la purification de l’esprit a une conséquence directe sur l’expérience du monde. Enseignement clé : le Pays Pur n’est pas un ailleurs géographique ; il n’est pas « à trouver » hors de nous. Il est d’abord un mode d’apparition du réel corrélatif à un esprit purifié.
+>
+> Quand l’esprit devient pur, l’environnement apparaît comme un Pays Pur ; quand l’esprit est encore travaillé par les perturbations mentales et leurs empreintes karmiques, le monde apparaît comme ordinaire, pauvre, ou hostile – même si, extérieurement, « c’est le même lieu ». Cette idée est explicitée par un principe attribué à Maitreya (dans l’*Abhisamaya-alamkara*) : lorsque les êtres sensibles deviennent des êtres purs par purification mentale, leur environnement devient un Pays Pur ; et lorsque l’éveil est complet, l’environnement devient le Pays Pur d’un Bouddha.
+>
+> Les exemples sont volontairement concrets : une chambre ordinaire peut être, pour un être réalisé, un mandala ; un objet trivial – jusqu’à un bonnet vide, dit‑on de Milarepa – peut être « Pays Pur » pour celui dont l’esprit n’est plus contraint par les apparences ordinaires. Ce n’est pas un relativisme facile (« tout est subjectif »), mais une thèse forte sur la structure de l’expérience : les choses existent comme apparences à l’esprit, et ces apparences varient selon l’état intérieur (karma et purification).
+>
+> Le Lamrim précise enfin que cette transformation ne relève pas d’une « voie ordinaire » : elle requiert une voie supramondaine, marquée par le renoncement, la discipline éthique (śīla), la générosité, et des réalisations du Dharma. Le Pays Pur se définit alors négativement – dans le cadre des Quatre Nobles Vérités – comme un environnement où font défaut la vraie souffrance et la vraie origine (les causes de la souffrance). La conséquence pour notre propos est nette : le vœu ne se contente pas d’orienter l’action ; il reconfigure l’être au point que l’individuation se lit dans la manière même dont le monde est vécu.
 
-Le mot sanskrit *vīrya* est souvent traduit par "persévérance" ou "énergie", mais cette traduction perd l'essentiel : *vīrya* désigne un effort qui naît de l'intérieur et se dirige vers l'extérieur — non pas une contrainte subie, mais un élan. *Vīrya* devient joyeux *en chemin* : chaque pas accompli génère une réjouissance (*muditā*) qui se convertit en énergie pour le pas suivant — cercle vertueux, dynamique auto-amplifiante vers le haut.
+---
 
-Kelsang Gyatso distingue soigneusement *vīrya* de la tension anxieuse ou de la discipline rigide : il ne s'agit pas de "travailler dur" au sens d'un effort contre soi-même, mais de se réjouir de ce qu'on fait de sorte que l'action elle-même devienne source d'énergie. La réjouissance (*muditā*) amplifie la puissance d'agir — elle n'est pas un bonus au chemin, elle *est* une condition du chemin.
-
-La convergence avec Spinoza est ici saisissante : ce que le bouddhisme appelle *vīrya* est exactement ce que Spinoza appelle la joie active — l'affect par lequel la puissance d'agir augmente depuis l'intérieur, sans être déterminée par une cause extérieure. L'effort joyeux n'est pas un paradoxe : c'est la description précise d'une puissance qui se déploie dans sa propre direction, sans résistance interne. Et cette absence de résistance interne — c'est exactement ce que le vœu bodhisattva vise à produire : non un chemin difficile qu'on s'impose, mais un chemin qui devient de plus en plus naturel à mesure que les obstacles intérieurs se dissolvent.
+> **📖 Encart 2 – Vīrya : l’effort joyeux**
+>
+> Le mot sanskrit *vīrya* est souvent traduit par « persévérance » ou « énergie », mais cette traduction perd l'essentiel : *vīrya* désigne un effort qui naît de l'intérieur et se dirige vers l'extérieur — non pas une contrainte subie, mais un élan. *Vīrya* devient joyeux *en chemin* : chaque pas accompli génère une réjouissance (*muditā*) qui se convertit en énergie pour le pas suivant — cercle vertueux, dynamique auto-amplifiante vers le haut.
+>
+> Kelsang Gyatso distingue soigneusement *vīrya* de la tension anxieuse ou de la discipline rigide : il ne s'agit pas de « travailler dur » au sens d'un effort contre soi-même, mais de se réjouir de ce qu'on fait de sorte que l'action elle-même devienne source d'énergie. La réjouissance (*muditā*) amplifie la puissance d'agir — elle n'est pas un bonus au chemin, elle *est* une condition du chemin.
+>
+> La convergence avec Spinoza est ici saisissante : ce que le bouddhisme appelle *vīrya* est exactement ce que Spinoza appelle la joie active — l'affect par lequel la puissance d'agir augmente depuis l'intérieur, sans être déterminée par une cause extérieure. L'effort joyeux n'est pas un paradoxe : c'est la description précise d'une puissance qui se déploie dans sa propre direction, sans résistance interne. Et cette absence de résistance interne — c'est exactement ce que le vœu bodhisattva vise à produire : non un chemin difficile qu'on s'impose, mais un chemin qui devient de plus en plus naturel à mesure que les obstacles intérieurs se dissolvent.
 
 ---
 
