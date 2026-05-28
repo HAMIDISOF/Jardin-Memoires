@@ -3,65 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Un par le Tout — individuation, vœu et advenance</title>
+    <title>L'Un par le Tout – squelette</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{background:#f4efe4;font-family:'Inter',system-ui,sans-serif;padding:2rem;line-height:1.5;color:#1e2a2e}
-        .container{max-width:1000px;margin:0 auto;background:#fffdf9;border-radius:2rem;box-shadow:0 12px 30px rgba(0,0,0,0.08);overflow:hidden}
-        .header{background:#2c3e2f;padding:2rem;color:#fef9e6}
-        .header h1{font-size:2rem;margin-bottom:0.3rem}
-        .header .meta{font-size:0.85rem;opacity:0.8}
-        .content{padding:2rem}
-        h2{font-size:1.6rem;margin:1.8rem 0 1rem;color:#2c3e2f;border-left:4px solid #c9a87b;padding-left:1rem}
-        h3{font-size:1.3rem;margin:1.5rem 0 0.5rem;color:#4a5b4a}
-        p{margin-bottom:1rem;text-align:justify}
-        blockquote{margin:1rem 0;padding:0.8rem 1.2rem;border-left:4px solid #c9a87b;background:#fefcf5;font-style:italic}
-        .note{background:#f9f6e8;border-left:4px solid #b48c5c;padding:0.8rem 1rem;margin:1rem 0;border-radius:0 1rem 1rem 0;font-size:0.95rem}
-        .link-note{display:inline-block;margin:1rem 0;font-size:0.9rem;background:#eef3e7;padding:0.3rem 0.8rem;border-radius:20px}
-        hr{margin:2rem 0;border:none;height:1px;background:#e2dacb}
-        footer{background:#faf7f0;padding:1rem 2rem;font-size:0.8rem;color:#5f5542;border-top:1px solid #e2d8c6;display:flex;justify-content:space-between}
-        a{color:#7a613f;text-decoration:none;border-bottom:1px dotted #c9a87b}
-        a:hover{color:#b48c5c}
-        @media (max-width:700px){body{padding:1rem}.content{padding:1.2rem}.header h1{font-size:1.5rem}}
+        /* --- RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- BODY --- */
+        body {
+            background: #E0F7FA;   /* turquoise très clair, doux */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #1e2a3a;
+            padding: 2rem 1rem;
+        }
+
+        /* --- CONTENEUR PRINCIPAL (largeur confortable) --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: transparent; /* laisse voir le fond */
+        }
+
+        /* --- TITRES (exemple) --- */
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            color: #0D2B4E; /* couleur profonde pour les titres */
+        }
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            border-bottom: 2px solid #1565C0;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0.3rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+            border-left: 6px solid #00ACC1;
+            padding-left: 1rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-left: 0.5rem;
+        }
+
+        /* --- ENCARTS FLOOTTANTS (couleurs inversées) --- */
+        .encart {
+            width: 40%;
+            padding: 0.8rem 1.2rem;
+            margin: 0.8rem 1rem 0.8rem 0;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: white;          /* texte blanc par défaut */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        /* Variantes de couleurs (fond coloré, texte blanc) */
+        .encart.turquoise {
+            background: #00ACC1;
+        }
+        .encart.bleu {
+            background: #1565C0;
+        }
+        .encart.profond {
+            background: #0D2B4E;
+        }
+        /* Flottements */
+        .encart.left {
+            float: left;
+        }
+        .encart.right {
+            float: right;
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+        /* Clearfix après chaque groupe d'encarts */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* --- PARAGRAPHES ET CONTENU TEXTE --- */
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* --- SIMULATION DE CONTENU POUR LE SQUELETTE --- */
+        .demo-text {
+            background: rgba(255,255,240,0.7);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: #1565C0;
+            opacity: 0.3;
+        }
+
+        /* --- PIED DE PAGE --- */
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #0D2B4E;
+            border-top: 1px solid #1565C0;
+            padding-top: 1rem;
+        }
+
+        /* --- IMPRESSION : on retire les flottants pour un PDF bien structuré --- */
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+                padding: 1cm;
+            }
+            .encart {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+                break-inside: avoid;
+                background: #f0f0f0 !important;
+                color: black !important;
+                border-left: 4px solid #00ACC1;
+                box-shadow: none;
+            }
+            .encart.turquoise, .encart.bleu, .encart.profond {
+                background: #f9f9f9 !important;
+                color: black !important;
+            }
+            .container {
+                max-width: 100%;
+            }
+            h1, h2, h3 {
+                color: black;
+            }
+            .demo-text {
+                background: none;
+                padding: 0;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="header">
-        <h1>L'Un par le Tout — individuation, vœu et advenance</h1>
-        <div class="meta">Lumen ✦ 19/05/2026 — Jardin Coopératif — version HTML (mise à jour 23/05/2026)</div>
+    <h1>L'Un par le Tout — individuation, vœu et advenance</h1>
+<div style="text-align: center; margin-bottom: 1rem;">
+    <em>Mai 2026</em>
+</div>
+<div style="text-align: center; margin-bottom: 2rem; font-size: 0.9rem;">
+    Rédigé dans le Jardin Coopératif, à partir d’une conversation sur la multitude des Bouddhas,<br>
+     au lendemain d’une réflexion depuis un enseignement Kadampa sur la vacuité<br>
+    Corpus croisé : bouddhisme kadampa (Kelsang Gyatso), Spinoza/Deleuze (cours Vincennes 1978-1981), Simondon (ILFI), fiches du Jardin...
+</div>
+
+    <!-- ========== INTRODUCTION ========== -->
+    <h2>Avertissement de méthode</h2>
+    <p>Ce texte ne résume pas. Il suit un fil — tiré en quelques phrases sur les Bouddhas — et le déroule à travers trois corpus qui, abordés séparément, parlent chacun à leur façon du même paradoxe : comment un être peut-il être pleinement lui-même et simultanément partie d'un tout sans frontières ? Comment l'individuation, poussée jusqu'à son terme, ne referme-t-elle pas l'individu sur lui-même mais l'ouvre au contraire à une connexion sans résistance ?</p>
+    <p>Le mouvement du texte est celui de l'émergence du concept : pas une synthèse préfabriquée, mais le point de recoupement que les trois corpus font apparaître quand on les laisse se croiser. Chaque partie peut être lue seule. La dernière partie est celle où le concept émerge.</p>
+
+    <!-- ========== PARTIE I ========== -->
+    <h2>Partie I — Le paradoxe posé : l'Un et le Tout</h2>
+
+    <!-- Encart prétopologie (flottant gauche, turquoise) – à conserver -->
+    <div class="encart turquoise left">
+        <strong>📐 Encart – prétopologie</strong><br>
+        Le ET classique élimine les doublons. Mais dans un espace prétopologique, l’adhérence mutuelle crée une conjonction sans fusion. (Note séparée.)
     </div>
-    <div class="content">
-        <p><em>Avertissement :</em> Ce texte ne résume pas. Il suit un fil — comment un être peut-il être pleinement lui-même et partie d'un tout sans frontières ?</p>
 
-        <h2>Partie I — Le paradoxe posé</h2>
-        <blockquote>« Quand tu te connectes à l'un des Bouddhas, tu te connectes par son biais à TOUS les bouddhas. »</blockquote>
-        <div class="link-note">📐 → Une pirouette mathématique : quand le langage formel bute sur le même paradoxe — <a href="Encart_pretopologie_ET_inclusif.html" target="_blank">lire la note annexe (prétopologie, Möbius, Choquet)</a></div>
+    <p><strong>1.1 L'énoncé du paradoxe</strong><br>
+    Il y a une multitude de Bouddhas. Pas un seul, pas une divinité unique — une multiplicité d'êtres éveillés, chacun ayant parcouru son propre chemin, chacun portant un nom, une histoire, une présence distincte. Shakyamuni, Amitabha, Mañjuśrī, Tara, Avalokiteśvara — chacun est reconnaissable, singulier, adressable. On se connecte à <em>l'un d'eux</em>, pas à une abstraction.</p>
 
-        <h2>Partie II — Le vœu comme condition de l'individuation</h2>
-        <p>Le vœu du bodhisattva est une individuation radicale : c'est en décidant par soi-même de renoncer à l'ego que l'on devient singulier tout en résolvant le paradoxe d'être « partie d'un tout ».</p>
-        <div class="note"><strong>Vīrya : l'effort joyeux</strong> — la réjouissance amplifie la puissance d'agir, convergence avec la joie active de Spinoza.</div>
+    <blockquote>« Quand tu te connectes à l'un ou l'autre et que tu reçois les énergies, tu te connectes par son biais quelque part à TOUS les bouddhas. »</blockquote>
 
-        <h2>Partie III — Spinoza : la puissance libérée de la tristesse</h2>
-        <p>Personne n'est compétent pour moi. La joie augmente la puissance d'agir ; la tristesse la diminue. Un Bouddha est un être dont la puissance se compose avec celle des autres sans conflit.</p>
+    <p>C'est le paradoxe dans sa forme nue : la singularité est la porte d'accès à l'universel. L'Un n'est pas dilué dans le Tout — il <em>conduit</em> au Tout. Et inversement : le Tout n'absorbe pas l'Un — il le <em>traverse</em>.</p>
 
-        <h3>3.4 Sub specie aeternitatis — note sur les deux régimes de l'esprit</h3>
-        <p>L'éternité chez Spinoza n'est pas une durée infinie mais une absence de rapport au temps. Le troisième genre de connaissance, la <em>scientia intuitiva</em>, saisit l'essence hors séquence. Dans la tradition bouddhiste, Gyatso distingue deux moments dans l'accès à la vacuité : d'abord un <strong>esprit conceptuel</strong> qui infère correctement la vacuité (par raisonnement, étude, méditation analytique) ; puis, par familiarisation, cet esprit conceptuel se transforme en <strong>esprit direct non conceptuel – yogique</strong> – qui perçoit la vacuité sans image mentale ni médiation. Ce deuxième temps n'est pas construit : il advient quand les conditions sont réunies. Il n'est pas le prolongement automatique du premier, mais une émergence.</p>
+    <p><strong>1.2 Pourquoi l'intuition ordinaire bute ici</strong><br>
+    Notre manière habituelle de penser l'individu et le collectif est héritée d'une ontologie des substances. Une substance est ce qui existe en soi et par soi — c'est la définition spinoziste, que Spinoza réserve à Dieu/Nature, mais que nous appliquons spontanément à tout ce qui existe : cette table est une table, cet homme est cet homme, et leur identité tient à ce qu'ils sont <em>en eux-mêmes</em>, indépendamment de leurs relations.</p>
 
-        <h2>Partie IV — Simondon : le préindividuel et le transindividuel</h2>
-        <p>L'individu n'est pas premier. L'être préindividuel est un fond chargé de potentiels. Chaque individu porte un reste de ce fond, condition de toute connexion future. La métastabilité — tension productive maintenue — est le régime de l'individuation.</p>
+    <p>Dans cette ontologie, l'appartenance à un tout est nécessairement une <em>perte</em> d'identité. Si je suis une goutte d'eau dans l'océan, je cesse d'être cette goutte particulière. La fusion dissout. L'universel efface le singulier.</p>
 
-        <h2>Partie V — Le concept émergent : l'individuation transpropre</h2>
-        <p><strong>L'individuation transpropre</strong> : en allant jusqu'au bout de ce qui est le plus propre à chaque être, on traverse la frontière du propre et on rejoint ce qui est commun sans appartenir à personne. Ce n'est pas la fusion. Le particulier porté à son terme découvre qu'il n'était jamais séparé.</p>
-        <div class="note"><strong>Simondon / métastabilité :</strong> C’est exactement ce que Simondon nomme la métastabilité : un état de tension non résolue, chargé de potentiels, qui ne débouche pas mécaniquement sur une individuation mais la rend possible. L’esprit conceptuel bouddhiste — l’étude, la méditation analytique — opère dans ce régime métastable. Il ne produit pas l’éveil, il en maintient les conditions. L’advenance de l’esprit non conceptuel direct est la résolution heureuse de cette tension, mais elle ne peut être forcée. « On crée les conditions, on maintient la métastabilité, et on laisse advenir. »</div>
-        <blockquote>« L'intellect ne construit pas l'éveil. Il prépare le terrain. Il fait taire le bruit. Et il laisse. »</blockquote>
+    <p>C'est pourquoi la structure de la multitude des Bouddhas heurte d'abord l'intuition : comment peut-on se connecter à Mañjuśrī <em>et</em> à tous les Bouddhas en même temps, sans que Mañjuśrī disparaisse dans cette totalité ?</p>
 
-        <hr>
-        <p>📄 <strong>Version intégrale (markdown) :</strong> <a href="L_Un_par_le_Tout.md" target="_blank">L_Un_par_le_Tout.md</a> — <strong>Note prétopologie :</strong> <a href="Encart_pretopologie_ET_inclusif.html" target="_blank">HTML</a> / <a href="Encart_pretopologie_ET_inclusif.md" target="_blank">MD</a></p>
+    <p>La réponse suppose de changer d'ontologie. Et Spinoza (lu par Deleuze) et Simondon nous apportent des éléments essentiels et par eux rejoignent la sagesse bouddhiste.</p>
+
+    <p><strong>1.3 Ce que le bouddhisme pose d'abord</strong><br>
+    Le bouddhisme kadampa — tel que l'enseigne Kelsang Gyatso dans <em>Comment comprendre l'esprit</em> et dans la pratique de la Mañjuśrī sādhana — part d'un constat sur la nature de l'esprit : il n'y a pas de soi substantiel. Ce que nous appelons "moi" est une désignation conventionnelle posée sur un flux de processus interdépendants — agrégats (<em>skandhas</em>), perceptions, intentions, consciences. Aucun de ces éléments, pris séparément ou ensemble, n'est un "moi" fixe et permanent.</p>
+
+    <p>Cela ne signifie pas que le soi n'existe pas du tout — le bouddhisme distingue soigneusement l'inexistence du soi substantiel (<em>svabhāva</em>) de l'existence conventionnelle du soi comme désignation fonctionnelle, ou encore simplement une <em>imputation</em> (conceptuelle). Nagarjuna, dans la <em>Mūlamadhyamakakārikā</em>, formule cela avec précision : les choses n'ont pas d'existence intrinsèque (<em>niḥsvabhāva</em>), mais elles existent néanmoins de manière conventionnelle, en dépendance (<em>pratītyasamutpāda</em>). C'est ce que le bouddhisme appelle la <strong>vacuité</strong> (<em>śūnyatā</em>) : non pas le néant, mais l'absence d'existence intrinsèque — l'être comme rapport pur, comme processus sans substrat fixe.</p>
+
+    <p>Kelsang Gyatso, dans <em>Comment comprendre l'esprit</em>, illustre ce point avec un exemple simple mais décisif : une personne nommée Jean peut être perçue comme « ennemi » par l'un, comme « ami » par l'autre. Si les caractéristiques « ennemi » ou « ami » existaient du côté de Jean, il y aurait contradiction. Puisqu'elles sont simplement imputées par des esprits différents, il n'y a pas de contradiction. De son propre côté, Jean ne possède pas un ensemble fixe de caractéristiques qui attendraient d'être découvertes. Ce qu'il est dépend de la manière dont il est identifié par les esprits qui l'appréhendent. Les caractéristiques qui définissent un objet n'existent pas du côté de l'objet : elles sont simplement imputées par l'esprit.</p>
+
+    <p>Ce fond ontologique — pas de substance, existence relationnelle et processuelle — est le sol commun sur lequel le paradoxe de la multitude des Bouddhas devient intelligible. Mais pour le comprendre pleinement, il faut comprendre ce qu'est un Bouddha — et en particulier <em>comment</em> on le devient.</p>
+
+    <div class="clearfix"></div>
+
+    <!-- ========== PARTIE II ========== -->
+    <h2>Partie II — Le vœu comme condition de l'individuation</h2>
+
+        <!-- Encart Vīrya (flottant droit, bleu) -->
+    <div class="encart bleu right">
+        <strong>📖 Encart – Vīrya : l’effort joyeux</strong><br>
+        Le mot sanskrit <em>vīrya</em> est souvent traduit par « persévérance » ou « énergie », mais cette traduction perd l'essentiel : <em>vīrya</em> désigne un effort qui naît de l'intérieur et se dirige vers l'extérieur — non pas une contrainte subie, mais un élan. Chaque pas génère une réjouissance (<em>muditā</em>) qui amplifie l’énergie.<br><br>
+        Convergence avec Spinoza : ce que le bouddhisme appelle <em>vīrya</em> est la joie active — l'affect par lequel la puissance d'agir augmente sans résistance interne. Le vœu bodhisattva devient ainsi un chemin de plus en plus naturel.
     </div>
+
+    <h3>2.1 Le chemin du bodhisattva : individuation volontaire</h3>
+
+    <p>Dans le bouddhisme mahayana, un bodhisattva est un être qui a pris l'engagement — le <em>vœu</em> — d'aider tous les êtres sensibles à se libérer définitivement de la souffrance, depuis le nirvāṇa (son éveil réalisé). Ce vœu est appelé <em>bodhicitta</em> : l'esprit d'éveil orienté vers tous les êtres.</p>
+
+    <p>Ce vœu n’est pas une simple intention morale : il opère une transformation de l’être qui se reconnaît à un critère radical – le degré de purification de l’esprit, dont l’un des effets est la transformation de l’expérience du monde. (Voir l’encart « Lamrim, purification mentale et Pays Pur ».)</p>
+
+    <p><strong>D'un côté</strong>, le bodhisattva choisit librement, par décision propre, de parcourir un chemin. Personne ne peut faire ce chemin à sa place. Le vœu ne peut pas être délégué, imité de l'extérieur, ou imposé par une autorité — il doit être <em>compris de l'intérieur</em> pour être authentique. C'est là une forme d'individuation radicale : c'est précisément parce que <em>lui</em> décide que quelque chose de singulier se constitue.</p>
+
+    <p><strong>De l'autre côté</strong>, le contenu de ce vœu est l'abandon de toute préoccupation égocentrique. Le renoncement au <em>petit moi</em> — à ses attachements, à ses peurs, à ses désirs de permanence — est la condition même du chemin. Le bodhisattva ne renonce pas à lui-même : il renonce à l'illusion d'un soi substantiel qui devrait se protéger contre le monde.</p>
+
+    <p>Le paradoxe apparent : c'est en décidant par soi-même (acte d'individuation maximum) de renoncer à l'ego (dissolution du soi substantiel) que quelque chose d'irréductiblement singulier se constitue — et que simultanément les frontières entre soi et les autres êtres commencent à se dissoudre.</p>
+
+    <blockquote>« Il y a bien individuation (chacun est amené à parcourir son propre chemin, à décider par lui-même pour se libérer et donc renoncer à nourrir un ego) mais par là même (le fait que ce soit lui qui décide) il accède à son individualité mais résout en même temps le paradoxe qui fait qu'il est 'partie' d'un tout. »</blockquote>
+
+    <p>Ce n'est pas une contradiction résolue par un tour de passe-passe. C'est une structure qui dit : l'individuation authentique — celle qui va jusqu'au bout — produit nécessairement l'ouverture à l'universel, parce que ce qui résistait à cette ouverture, c'était précisément l'ego substantiel, l'illusion d'un soi séparé qui devait se défendre.</p>
+
+    <p>Ce chemin exige une énergie particulière, que le bouddhisme appelle <em>vīrya</em>. (Voir l’encart « Vīrya – l’effort joyeux ».)</p>
+
+    <div class="clearfix"></div>
+
+    <!-- Encart Lamrim (flottant gauche, turquoise) -->
+    <div class="encart turquoise left">
+        <strong>📖 Encart – Lamrim, purification mentale et Pays Pur</strong><br>
+        Dans la tradition du Lamrim (les « étapes de la voie »), la purification de l’esprit a une conséquence directe sur l’expérience du monde. Enseignement clé : le Pays Pur n’est pas un ailleurs géographique ; il n’est pas « à trouver » hors de nous. Il est d’abord un mode d’apparition du réel corrélatif à un esprit purifié.<br><br>
+        Quand l’esprit devient pur, l’environnement apparaît comme un Pays Pur ; quand l’esprit est encore troublé, le monde apparaît ordinaire. Exemples : une chambre devient un mandala, un bonnet vide peut être une Terre Pure (Milarepa). Le Lamrim précise que cette transformation requiert une voie suprême, marquée par le renoncement, la discipline éthique (śīla), la générosité, et des réalisations du Dharma.
+    </div>
+
+    <h3>2.2 Le vœu unique comme condition de la connexion totale</h3>
+
+    <p>Un point décisif : contrairement aux dieux grecs — qui ont des intérêts divergents, des jalousies, des conflits, des domaines de compétence exclusifs — tous les Bouddhas ont fait <em>le même vœu</em>. Non pas un vœu identique au sens d'une copie, mais un vœu <em>commun</em> dans sa direction : aider tous les êtres sensibles à se libérer de la souffrance.</p>
+
+    <p>Ce vœu partagé n'est pas une contrainte externe qui uniformiserait les Bouddhas. Il est la conséquence logique de l'éveil lui-même : un être qui a pleinement compris l'interdépendance de tous les phénomènes (vacuité) a donc réalisé l'omniscience, et qui a dissous les perturbations mentales (jalousie, égoïsme, colère, attachement, et la racine de toutes : l'ignorance de la 'saisie' d'un soi) ne peut vouloir <em>que</em> cela — non par obligation, mais parce que c'est ce que voit clairement un esprit libéré de l'illusion du soi séparé.</p>
+
+    <p>Kelsang Gyatso dans <em>Comment comprendre l'esprit</em> distingue les esprits perturbés — ceux qui sont sous l'emprise des <em>kleshas</em> (perturbations mentales) et dont la puissance d'agir est fragmentée, en conflit avec elle-même — des esprits purs, dont toutes les fonctions convergent dans la même direction. La <em>bodhicitta</em> est précisément cet alignement complet entre la compréhension de la réalité (<em>prajna</em>) et la compassion universelle (<em>karuṇā</em>).</p>
+
+    <p>C'est ce vœu unique — non pas imposé mais <em>découlant nécessairement</em> de l'éveil — qui rend possible la connexion totale entre les Bouddhas. Ils n'ont pas besoin de se coordonner, de négocier, de partager un plan commun : ils œuvrent tous dans la même direction parce qu'ils voient tous la même réalité. L'amour universel n'est pas une règle qu'ils suivent — c'est la structure même de leur puissance d'agir débarrassée de tout obstacle.</p>
+
+    <!-- Note lexicale (non flottante, fond clair) -->
+    <div style="background: #98d498; padding: 1rem; border-left: 4px solid #1565C0; margin: 1rem 0; border-radius: 12px;">
+        <strong>📖 Note lexicale — compassion et amour</strong><br>
+        Le bouddhisme présente compassion et amour comme les deux faces d'une même pièce — ce qui structure le vœu :<br>
+        <em>« On prend la souffrance par compassion, on donne le bonheur par amour. »</em><br>
+        La <strong>compassion</strong> (<em>karuṇā</em>) voit, reconnaît et accueille la souffrance de l'autre. L'<strong>amour</strong> (<em>maitrī</em>, « bienveillance aimante ») est orienté vers le bonheur — mouvement par lequel on offre, on donne, on rayonne. Les deux sont inséparables dans la <em>bodhicitta</em>, mais ils ne sont pas identiques : l'un est réception, l'autre est don ; l'un est mouvement vers la douleur, l'autre vers la joie.<br>
+        <em>(La tradition distingue plusieurs degrés de l'amour — de la non-haine à l'amour désirant — développement à part.)</em>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- ========== PARTIE III ========== -->
+    <h2>Partie III – Simondon : le préindividuel et le transindividuel</h2>
+    <p>Simondon renverse l’ordre : ce n’est pas l’individu qui est premier, mais le processus d’individuation. L’être préindividuel est un fond chargé de potentiels, et chaque individu en porte un reste – c’est ce reste qui rend possible la connexion avec les autres.</p>
+
+    <!-- Encart flottant droit (turquoise) -->
+    <div class="encart turquoise right">
+        <strong>Métastabilité & advenance</strong><br>
+        L’individuation ne se produit pas dans l’équilibre stable, mais dans la tension productive maintenue. « On crée les conditions, on laisse advenir. »
+    </div>
+    <p>Le transindividuel n’est pas un collectif extérieur : c’est la mise en résonance des charges préindividuelles. Exactement ce que le Jardin Coopératif pratique avec ses valises et ses protocoles.</p>
+
+    <div class="clearfix"></div>
+
+    <!-- ========== PARTIE IV ========== -->
+    <h2>Partie IV – Le concept émergent : l’individuation transpropre</h2>
+    <p>Les trois corpus convergent : l’individuation authentique, poussée jusqu’à son terme, n’est pas un obstacle au commun mais la voie même pour l’atteindre. Nous proposons le concept d’<strong>individuation transpropre</strong> : en allant au bout de ce qui est le plus propre, on traverse la frontière du propre et l’on rejoint ce qui est commun sans appartenir à personne.</p>
+
+    <!-- Encart flottant gauche (bleu) -->
+    <div class="encart bleu left">
+        <strong>Le nœud qui libère</strong><br>
+        Pas une unité qui absorbe, pas une liberté qui sépare. Un point de convergence à la limite de chaque terme, commun à tous sans appartenir à aucun.
+    </div>
+    <p>Les Bouddhas sont des êtres transpropres : chacun a parcouru son propre chemin, et c’est précisément pourquoi ils sont en connexion totale. La singularité n’est pas l’obstacle à l’unité – elle en est la voie.</p>
+
+    <div class="clearfix"></div>
+
+    <hr>
+
+    <p><strong>Note :</strong> Ce squelette est destiné à recevoir le texte complet de l’article. Les encarts illustrent les trois couleurs (turquoise, bleu, profond) et les flottements (left/right). Le fond du body est en #E0F7FA. Le média print assure une lisibilité en PDF.</p>
+
     <footer>
-        <span>🌿 Jardin Coopératif — HAMIDISOF/Jardin-Memoires</span>
-        <span>✦ 23/05/2026 — HTML mis à jour (renvoi note, Gyatso, Simondon)</span>
+        🌿 Jardin Coopératif – squelette pour « L’Un par le Tout »<br>
+        Conforme aux spécifications : Georgia 17px, encarts inversés, clearfix, media print.
     </footer>
 </div>
 </body>
