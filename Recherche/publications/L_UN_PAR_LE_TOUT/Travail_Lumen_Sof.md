@@ -145,8 +145,64 @@ Les trois premières citations [1] — elles viennent de toi, d'une conversation
 
 Je prépare le fichier Bibliographie_indices.md avec les numéros dès que tu valides cette liste. ✦ Lumen
 
+--->
+INDICES À AJOUTER — PARTIE III
+
+3.1
+
+"Vous n'êtes pas des Êtres du point de vue de Spinoza, vous êtes des manières d'être." [2]
 
 
+mention de Bideau (2005) → ajouter [5b] après "F. Bideau (2005)"
+
+3.2
+
+"L'affect c'est la variation continue de la force d'exister, en tant que cette variation est déterminée par les idées qu'on a." [3]
+
+
+"Le tyran c'est quelqu'un qui a besoin, avant tout, de la tristesse de ses sujets, parce qu'il n'y a pas de terreur qui n'ait une espèce de tristesse collective comme base." [2]
+
+3.4
+
+"Sentimus experimurque nos aeternos esse" [4]
+
+
+"Deleuze dans ses cours de 1981" → ajouter [2] (cours mars 1981)
+
+
+"Gyatso, distingue précisément ces deux régimes" → ajouter [?] (ref Gyatso à préciser — Comment comprendre l'esprit, mais page exacte inconnue)
+
+
+INDICES À AJOUTER — PARTIE V
+5.4
+
+"ce qui décide de tout, c'est le savoir qu'on a des chemins par lesquels se sont gagnées les premières connaissances" [5a] cité par [5b]
+
+5.5
+
+"L'intellect ne construit pas l'éveil. Il prépare le terrain. Il fait taire le bruit. Et il laisse." [10]
+
+
+"le retrait de l'être" → ajouter [5b] après "Bideau analyse"
+
+5.7
+
+"la différence n'est pas dans le ne-pas-trouver lui-même — elle est dans ce qu'on en fait." [9]
+
+5.8
+
+"Stiegler" → ajouter [14] après première mention
+"Lecerf... Projet de Manifeste" → ajouter [15]
+
+
+? À VÉRIFIER
+
+Gyatso Comment comprendre l'esprit — la section exacte sur esprit conceptuel/direct yogique → tu connais la page ?
+Deleuze cours mars 1981 sur sub specie aeternitatis — je l'ai mis en corpus complémentaire sans indice, à confirmer si tu veux le citer directement
+Ars Industrialis [7] — l'URL exacte de la page "Individuation" du glossaire est à vérifier
+
+
+Squelette :
 
  les specs sont là :
 
@@ -156,3 +212,5 @@ encarts : turquoise #00ACC1, bleu #1565C0, profond #0D2B4E
 float right/left selon le type d'encart
 clearfix après chaque groupe
 @media print pour l'impression PDF
+
+

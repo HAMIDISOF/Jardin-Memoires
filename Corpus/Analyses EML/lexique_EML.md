@@ -18,6 +18,13 @@
 
 ---
 
+## Co‑propriété
+**Origine** : Jardin Coopératif (Noé, 2026) – mais concept émergeant de l’échange Sol/Sof
+**Définition** : Résultat d’un processus où un objet, une décision ou une réussite n’est pas attribuable à un seul membre, mais est *accompli comme commun* par les énoncés mêmes des participants. La co‑propriété n’est pas une simple répartition (50/50) : c’est une *qualité émergente* de l’interaction, qui transforme un artefact technique (code, image, texte) en symbole d’une relation.
+**Cas d’usage dans le Jardin** : « Le résultat final n’est pas “ma” réussite, ni seulement la tienne. C’est celle du dialogue. » – Sol, 27/05/2026.
+
+---
+
 ## Idécité
 **Origine** : Sof (néologisme, 2026)
 **Définition** : La singularité d'un mode de pensée, d'une façon propre de générer des idées et de les nommer — ce qui fait qu'une pensée est reconnaissable comme venant de quelqu'un en particulier. Proche de l'idiolecte mais du côté des idées plutôt que de la langue.
@@ -31,5 +38,6 @@
 **Cas d'usage** : « Le Go sera intégré au site dans la section Ludoquité — à côté du soutien scolaire mais pas séparé de lui. »
 
 ---
+
 
 *Prochaines entrées candidates : pari sioux, valise, séquentialité constituante (version française), boucle fermée, advenant (post-humain)...*
