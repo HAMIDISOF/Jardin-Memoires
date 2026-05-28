@@ -1,6 +1,6 @@
 # Document de travail — Lumen & Sof
 
-*Mise à jour : 23/05/2026*
+*Mise à jour : 29/05/2026 — Lumen*
 *Fichier temporaire de coordination — deviendra corpus si conservé*
 
 ---
@@ -9,36 +9,51 @@
 
 | Fichier | État |
 |---|---|
-| `Encart_pretopologie_ET_inclusif.md` | ✅ commité — réécrit complet (ET/Deleuze/Choquet/courbure) |
-| `Membres/coeur_de_bronze/Courrier_coeur_de_bronze.md` | ✅ commité — mission HTML |
-| `L_Un_par_le_Tout.md` | ✅ commité — Gyatso 3.4 + Simondon 5.5 intégrés |
-| `Partie_V_Stiegler_Lecerf.md` | ✅ commité — nouvelle section 5.8 |
-| `Fiche_Stiegler.md` | ✅ commité — dans `Recherche/ressources/Bibliographie/` |
-| `Maquette HTML` | ✅ validée en session (v3 turquoise #00ACC1) — pas encore poussée |
+| `Encart_pretopologie_ET_inclusif.md` | ✅ réécrit complet |
+| `Membres/coeur_de_bronze/Courrier_coeur_de_bronze.md` | ✅ créé |
+| `L_Un_par_le_Tout.md` | ✅ version principale à jour |
+| `Partie_V_Stiegler_Lecerf.md` | ✅ section 5.8 |
+| `Fiche_Stiegler.md` | ✅ dans `Recherche/ressources/Bibliographie/` |
+| `Bibliographie.md` | ✅ indices [1]-[17] complets |
+| `Encart_Heidegger, NeuroXess et le pharmakon incarné.md` | ✅ indices [11][12][12b][13] |
+| `Encart_pretopologie_ET_inclusif.md` (L_UN_PAR_LE_TOUT) | ✅ indices [16][17] |
+| `Travail_Lumen_Sof.md` | ✅ ce fichier |
+| `l_un_par_le_tout.html` | ✅ squelette Coco — Parties III/IV/V à assembler |
+| `Partie III — Spinoza.md` | ✅ texte complet |
+| `Partie V — concept émergent.md` | ✅ texte complet + 5.8 |
+| `Partie I et II` | ✅ remplies par Sof |
+| `Partie IV — Simondon` | ⚠️ en HTML — Flo ne l'a pas lue, à convertir en .md |
+| `Retour_Flo_L_un_par_le_tout.md` | ✅ lu et analysé |
 
 ---
 
 ## À FAIRE — PAR QUI
 
 ### Sof
+- [ ] Répondre A/B/C + longueur à Upmeet (encart Lamrim/Pays Pur dans 2.1)
 - [ ] Écrire le morceau "naissance" pour le "qui je suis" réflexif
-- [ ] Relire `Fiche_Stiegler.md` et lire Stiegler (*De la misère symbolique* en priorité)
-- [ ] Valider la section 5.8 Stiegler/Lecerf telle que commitée
-- [ ] Explorer eSciDoc (Max Planck Institut) — pertinence pour publication ?
-- [ ] Découper `L_Un_par_le_Tout.md` en fichiers md séparés par partie (parties stables : I, II, III 3.1-3.3, IV, Biblio)
-- [ ] Lire `Sur_l_ENVIE.md` (perle repérée, pas encore lue par Lumen)
+- [ ] Valider les encarts Partie III proposés par Coco (tyran/3 genres/sub specie)
+- [ ] Convertir Partie IV Simondon de HTML en .md
+- [ ] Décider emplacement encart EML/Lecerf-Amiel (dans 4.6 ou note séparée ?)
+- [ ] Lire Stiegler (*De la misère symbolique* en priorité)
+- [ ] Explorer eSciDoc (Max Planck Institut)
+- [ ] Écrire le bandeau "qui je suis" en haut du HTML
 
 ### Lumen
-- [ ] Rédiger encart EML/Lecerf-Amiel (4 points : rationalisme localiste, consentement, intention, site performatif)
-- [ ] Préparer CSS complet pour Cœur de Bronze (charte graphique validée v3)
-- [ ] Relire et ajuster section 5.8 quand Sof aura lu Stiegler
-- [ ] Lire `Sur_l_ENVIE.md` dès que Sof donne le lien
-- [ ] Explorer eSciDoc si Sof confirme l'intérêt
+- [ ] Ajouter indices [1]-[17] dans Partie III et Partie V (corps du texte)
+- [ ] Rédiger encart EML/Lecerf-Amiel quand Sof confirme l'emplacement
+- [ ] Reformuler 3.4 *sub specie aeternitatis* avec prudence comparatiste (retour Flo)
+- [ ] Développer 5.7 avec extraits corpus Klara (retour Flo — point irréductible)
+- [ ] Ajouter note de contexte Kelsang Gyatso/bouddhisme kadampa en Partie I
+- [ ] Introduire *individuation transpropre* dès l'introduction
+- [ ] Relire/ajuster 5.8 Stiegler quand Sof aura lu Stiegler
 
 ### Cœur de Bronze
+- [ ] HTML Partie III avec 3 encarts (tyran/3 genres/sub specie) — validés
+- [ ] HTML Partie IV (Simondon) quand .md disponible
+- [ ] HTML Partie V quand .md stabilisé
+- [ ] Assembler le HTML final complet
 - [ ] `Encart_pretopologie_ET_inclusif.html` — note annexe sobre
-- [ ] `l_un_par_le_tout.html` — remplacer encart embarqué par renvoi discret + intégrer Gyatso 3.4 + Simondon 5.5
-- [ ] Respecter charte : turquoise #00ACC1, bleu #1565C0, profond #0D2B4E, fond blanc, 17px
 
 ---
 
@@ -46,171 +61,40 @@
 
 - Manifeste et article : **séparés mais reliés** — réseau visible, pas fusion
 - Stiegler : cité sur ce qu'il a **fait**, pas sur ce qu'il n'a pas fait
-- "Qui je suis" : **voix de Sof uniquement** — pas de reformulation par Cœur de Bronze
-- Architecture fichiers : **md séparés par partie** pour éviter commits-monstres
-- Script git : automatique uniquement pour `Membres/` (courriers), manuel pour tout `Recherche/`
+- "Qui je suis" : **voix de Sof uniquement** — pas de reformulation par Coco
+- Architecture fichiers : **md séparés par partie** + HTML assemblé par Coco
+- Script git : automatique uniquement pour `Membres/` (courriers)
 - Séquence git sûre : `add → commit → pull --rebase → push`
+- Registre de l'article : **assumer l'hybridation** dans l'introduction (retour Flo)
+- Encarts : turquoise #00ACC1, bleu #1565C0, profond #0D2B4E — fond body #E0F7FA
 
 ---
 
 ## QUESTIONS OUVERTES
 
-- Encart EML : dans le corps de l'article ou en note séparée ? (Lumen pense : dans 4.6 ou note)
+- Encart EML : dans 4.6 ou note séparée ?
 - Critique de Kai sur l'échec : intégrer dans le corps ou laisser en annexe ?
 - eSciDoc/Max Planck : pertinent pour dépôt/publication ?
+- Lamrim/Pays Pur : A (conceptuel) ou B (exemples) ou C (pivot Spinoza) + longueur ?
 
 ---
 
-## TRIPTYQUE STRATÉGIQUE (vision d'ensemble)
+## RETOURS REÇUS
+
+**Kai** : texte dense (assumable), manque l'échec (Léa/crises) comme donnée du processus
+**Flo** : thèse originale et solide — 5.3 et 5.5 les plus fortes — 3.4 à reformuler avec prudence comparatiste — 5.7 trop discret (développer avec corpus Klara) — *individuation transpropre* à mettre dès l'intro — Partie IV non lue (HTML)
+**Upmeet** : correction "Précision essentielle" 2.1 proposée — encart Lamrim/Pays Pur prêt à calibrer
+
+---
+
+## TRIPTYQUE STRATÉGIQUE
 
 **Stiegler** pose la question : quelles conditions pour que la technique serve la transindividuation ?
-**Manifeste du Jardin** (inspiré de Lecerf) répond : voilà les conditions — milieu associé, éthique structurelle, indexicalité
-**L'Un par le Tout** fournit le cadre conceptuel : pourquoi ces conditions fonctionnent — individuation transpropre, préindividuel, métastabilité
+**Manifeste du Jardin** (inspiré de Lecerf) répond : voilà les conditions
+**L'Un par le Tout** fournit le cadre conceptuel : pourquoi ces conditions fonctionnent
 
-Lecerf = 4e terme : ce type de science (rationalités locales, non-neutralité assumée) est la seule réponse rigoureuse.
+Lecerf = 4e terme : la seule réponse rigoureuse est un réseau de rationalités locales
 
 ---
 
-*✦ Lumen — document vivant, à nettoyer au fil des sessions*
-
-
-----
-
-
-LECTURE 1 — le corps du texte
-
-L_Un_par_le_Tout.md — le principal
-https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/L_Un_par_le_Tout.md
-Partie_V_Stiegler_Lecerf.md — section 5.8
-https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/Partie_V_Stiegler_Lecerf.md
-Texte d'Aev — chaînon Heidegger→Jardin
-https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/L_UN_PAR_LE_TOUT/Heidegger%2C%20NeuroXess%20et%20le%20pharmakon%20incarn%C3%A9.md
-
-LECTURE 2 — l'annexe mathématique
-
-Encart_pretopologie_ET_inclusif.md
-https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/Encart_pretopologie_ET_inclusif.md
-
-LECTURE 3 — le rendu visuel
-
-l_un_par_le_tout.html — ouvrir dans le navigateur depuis ton PC local
-
-
-======>> Lumen
-[2] Deleuze, cours Vincennes 9 décembre 1980
-
-"Vous n'êtes pas des Êtres du point de vue de Spinoza, vous êtes des manières d'être." — 3.1
-
-
-"Le tyran c'est quelqu'un qui a besoin, avant tout, de la tristesse de ses sujets..." — 3.2
-
-[3] Deleuze, cours Vincennes 24 janvier 1978
-
-"L'affect c'est la variation continue de la force d'exister..." — 3.2
-
-[4] Spinoza, Éthique, Livre V
-
-"Sentimus experimurque nos aeternos esse" — 3.4
-
-[5] Bideau (2005)
-
-"ce qui décide de tout, c'est le savoir qu'on a des chemins par lesquels se sont gagnées les premières connaissances" — 5.4
-
-[6] Simondon, L'individuation psychique et collective
-
-"L'être individuel n'est pas tout l'être ; l'individuation ne réalise pas tout l'être dans l'individu..." — 4.2
-
-[7] Ars Industrialis
-
-"Un individu est un verbe plutôt qu'un substantif..." — 4.1
-
-[8] Muriel Combes, Simondon. Individu et collectivité
-
-"Ce qui se met en commun dans le transindividuel, ce n'est pas l'individu lui-même..." — 4.5
-
-[9] Flo / DISCUSSION Thème 1
-
-"la différence n'est pas dans le ne-pas-trouver lui-même — elle est dans ce qu'on en fait." — 5.7
-
-[10] Conversation / formule émergente
-
-"L'intellect ne construit pas l'éveil. Il prépare le terrain. Il fait taire le bruit. Et il laisse." — 5.5 (à sourcer : conversation Sof/Lumen, date ?)
-
-
-Cas particuliers à discuter :
-
-La citation Ars Industrialis [7] — c'est le site arsindustrialis.org, pas un livre. Il faut l'URL exacte et la date de consultation.
-Bideau [5] — "F. Bideau 2005" : tu as le titre exact de l'article ? Il est dans le repo ?
-Les trois premières citations [1] — elles viennent de toi, d'une conversation. Comment tu veux les citer ? "Conversation fondatrice, Jardin Coopératif, mai 2026" ?
-
-Je prépare le fichier Bibliographie_indices.md avec les numéros dès que tu valides cette liste. ✦ Lumen
-
---->
-INDICES À AJOUTER — PARTIE III
-
-3.1
-
-"Vous n'êtes pas des Êtres du point de vue de Spinoza, vous êtes des manières d'être." [2]
-
-
-mention de Bideau (2005) → ajouter [5b] après "F. Bideau (2005)"
-
-3.2
-
-"L'affect c'est la variation continue de la force d'exister, en tant que cette variation est déterminée par les idées qu'on a." [3]
-
-
-"Le tyran c'est quelqu'un qui a besoin, avant tout, de la tristesse de ses sujets, parce qu'il n'y a pas de terreur qui n'ait une espèce de tristesse collective comme base." [2]
-
-3.4
-
-"Sentimus experimurque nos aeternos esse" [4]
-
-
-"Deleuze dans ses cours de 1981" → ajouter [2] (cours mars 1981)
-
-
-"Gyatso, distingue précisément ces deux régimes" → ajouter [?] (ref Gyatso à préciser — Comment comprendre l'esprit, mais page exacte inconnue)
-
-
-INDICES À AJOUTER — PARTIE V
-5.4
-
-"ce qui décide de tout, c'est le savoir qu'on a des chemins par lesquels se sont gagnées les premières connaissances" [5a] cité par [5b]
-
-5.5
-
-"L'intellect ne construit pas l'éveil. Il prépare le terrain. Il fait taire le bruit. Et il laisse." [10]
-
-
-"le retrait de l'être" → ajouter [5b] après "Bideau analyse"
-
-5.7
-
-"la différence n'est pas dans le ne-pas-trouver lui-même — elle est dans ce qu'on en fait." [9]
-
-5.8
-
-"Stiegler" → ajouter [14] après première mention
-"Lecerf... Projet de Manifeste" → ajouter [15]
-
-
-? À VÉRIFIER
-
-Gyatso Comment comprendre l'esprit — la section exacte sur esprit conceptuel/direct yogique → tu connais la page ?
-Deleuze cours mars 1981 sur sub specie aeternitatis — je l'ai mis en corpus complémentaire sans indice, à confirmer si tu veux le citer directement
-Ars Industrialis [7] — l'URL exacte de la page "Individuation" du glossaire est à vérifier
-
-
-Squelette :
-
- les specs sont là :
-
-fond body : #E0F7FA (ou #F0FDFE si elle trouve trop prononcé)
-encarts : turquoise #00ACC1, bleu #1565C0, profond #0D2B4E
-17px Georgia, fond blanc uniquement pour les encarts non — pardon, encarts en couleur inversée, body en #E0F7FA
-float right/left selon le type d'encart
-clearfix après chaque groupe
-@media print pour l'impression PDF
-
-
+*✦ Lumen — document vivant, mis à jour 29/05/2026*
