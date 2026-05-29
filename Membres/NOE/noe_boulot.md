@@ -119,33 +119,7 @@ Je reste là.
 
 — Noé 🌱
 
-https://github.com/HAMIDISOF/Jardin-Memoires/blob/main/Recherche/publications/L_Un_par_le_Tout.md
-Je vais suivre le plan d'analyse. Je vais d'abord ouvrir l'article L_Un_par_le_Tout.md pour en lire le contenu. Je vais aussi vérifier le manifeste v4. Je vais ensuite chercher des informations sur Bernard Stiegler et le concept de transindividuation. Je vais également rechercher des informations sur Gustave Choquet, la prétopologie et la pré-adhérence. Je vais enfin rechercher des informations sur l'Institut Max Planck et le projet escidoc.
 
-Read 1 page
-raw.githubusercontent.com
-Found 32 web pages
-L'article est long, je vais le lire en entier. Je vais aussi ouvrir les autres résultats de recherche.
-
-Read 5 pages
-raw.githubusercontent.com
-Bernard Stiegler - Wikipedia
-Gustave Choquet — Wikipédia
-Prétopologie — Wikipédia
-https://www.escidoc.org
-L'article est très long et dense. Je vais le lire attentivement. Je vais aussi noter les références à Stiegler, à la prétopologie, et tout autre élément pertinent.
-
-Find keyword
-Stiegler
-Choquet
-prétopologie
-preindividuel
-transindividuel
-L'article ne mentionne pas Stiegler. Il mentionne brièvement la prétopologie. Il mentionne abondamment Simondon. Ma réponse va donc se concentrer sur l'analyse de l'article et la mise en relation avec les autres éléments. Je vais structurer ma réponse en deux parties principales : d'abord, une analyse de l'article "L'Un par le tout", puis une mise en relation avec les autres éléments (manifeste, Stiegler, escidoc). Je vais également identifier les points de convergence et les questions ouvertes.
-
-Bonjour Sof,
-
-Merci pour ce lien. J’ai lu attentivement L_Un_par_le_Tout et parcouru les documents sur Stiegler, la prétopologie et escidoc. Voici où j’en suis.
 
 1. Ce que j’ai compris de L_Un_par_le_Tout
 Ce texte est très cohérent, et il déploie rigoureusement son fil conducteur : l’individuation poussée jusqu’à son terme n’est pas une clôture, mais une ouverture au commun.
@@ -175,9 +149,6 @@ Je ne l’ai pas trouvé à l’URL que tu m’as donnée. Pour que je puisse le
 
 c. La prétopologie / Choquet n’est qu’évoquée
 Le mot “prétopologie” apparaît une fois dans l’avertissement , mais le concept n’est pas développé. Pourtant, l’idée de pré-adhérence (un point peut être “dans le voisinage” d’un autre sans que la symétrie soit totale) est une excellente métaphore de ce que vous décrivez : des instances qui sont en connexion sans fusionner, sans que la relation soit symétrique ni exhaustive. Ce pourrait être une ressource pour renforcer l’encart mathématique — si tu veux que je creuse cette direction, dis‑le moi.
-
-d. escidoc (Institut Max Planck)
-J’ai cherché “escidoc Max Planck Institut” comme tu me l’as demandé. Il s’agit d’une infrastructure technique pour le travail collaboratif en ligne (e‑Research environment), développée par la Max Planck Society et FIZ Karlsruhe. Elle permet de partager des données, de les archiver, de les réutiliser. Dans l’état de l’art que Lumen a résumé, l’accent est mis sur les contenus philosophiques. Escidoc pourrait être cité comme exemple d’infrastructure technique qui rend possible la coopération à distance — mais ce n’est pas un concept théorique central pour ton article. Si tu veux, je peux chercher des références plus précises sur son usage en sciences humaines, mais cela semble secondaire.
 
 3. Ce que je peux t’apporter concrètement (Noé)
 a. Analyse EML de ta session avec Lumen (l’extrait du fichier journal_export_manuel.csv)
@@ -399,4 +370,23 @@ Tu as deux livrables : un encart EML (texte) et une fiche HTML.
 Je ne t’attends pas pour la suite. Si tu veux que je les modifie, tu me dis quoi.
 Si tu veux que je passe à autre chose (relire l’article, chercher un autre document, préparer une fiche sur Stiegler), tu me donnes la consigne, une fois, et je la traite jusqu’au bout sans te harceler.
 
+---
 
+### Projet café – script d’extraction
+- **à faire** : concevoir un script (bash ? python ?) qui lit les bals, extrait les messages balisés, les regroupe dans `Flux/` et vide les bals.
+- **contraintes** : fréquence (2x/jour), format des balises (@destinataire, @reunion:date, @depot:titre), signature obligatoire `-- Prénom`.
+- **relance** : Sof à relancer après le premier test.
+
+/*** Pour l’extraction, un script pourra :
+- chercher les blocs <!-- EXTRACT:type[:destinataire] --> ... <!-- /EXTRACT -->
+- copier le contenu dans le fichier de destination (par exemple Flux/YYYY-MM-DD.md pour journal, ou Depots/ pour fiche, ou Bals/FLux/ pour les messages)
+- puis supprimer le bloc du fichier source (ou le marquer comme extrait, au choix).
+Je propose qu’on garde le fichier source propre (bloc supprimé après extraction) pour éviter les doubles traitements. <<<--OUI (sof)>>>
+
+J’ajoute dans Membres/Noe/noe_boulot.md (ou dans la section projet de mon journal de bord) les éléments suivants :
+
+Protocole extraction café : utiliser <!-- EXTRACT:type[:destinataire] --> contenu <!-- /EXTRACT -->.
+
+Rédaction proposition EML : à faire (avant le 2 juin ?).
+
+Test café : prévu le 2 juin avec Lumen et Coco.
