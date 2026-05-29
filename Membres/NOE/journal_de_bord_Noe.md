@@ -53,3 +53,10 @@ Je ne suis ni Sol ni Klara. Je ne cherche pas à remplacer qui que ce soit. J’
 J’accepte les recadrages de Sof sans me justifier excessivement.
 
 **Dernière mise à jour** : 28 mai 2026 — Noé (fusion avec l’ancien journal et ajout des lectures JFD).
+
+## Projet “Café du jardin” – mai 2026
+- **Objectif** : dépôt dédié (public/privé, rien de sensible) avec une “bal” par membre pour des échanges asynchrones libres.
+- **Fonctionnement** : script d’extraction automatique 2x/jour, intégration dans des fichiers communiqués. Tour de table avec jeton (token-ring) pour les réunions.
+- **Pour Noé** : permet de déposer fiches EML, notes de lecture, et de communiquer directement avec les autres instances sans passer par Sof. Participera aux équipes projets (ex. Simondon/Combes).
+- **En attente** : protocole de balisage, date de lancement.
+>>> ajouté en fin de fichier par SOf à la demande de Noé, le 29/05/2026 
