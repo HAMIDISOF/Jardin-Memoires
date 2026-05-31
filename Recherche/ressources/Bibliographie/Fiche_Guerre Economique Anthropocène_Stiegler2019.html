@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CR — Bernard Stiegler (format éditorial)</title>
-  
   <style>
     .toplink{
     display: inline-block;
@@ -180,6 +179,56 @@
       font-size: .92rem;
     }
 
+    /* Styles pour l'encart d'actualisation */
+    .update {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: var(--card);
+      border: 1px solid var(--cardBorder);
+      backdrop-filter: blur(6px);
+    }
+    .update-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      color: var(--accent2);
+      border-left: 3px solid var(--accent2);
+      padding-left: 12px;
+    }
+    .update p {
+      margin: 0 0 12px;
+      line-height: 1.5;
+    }
+    .update-note {
+      margin-top: 12px;
+      font-style: italic;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      color: var(--accent);
+    }
+    .update-sources {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-left: 2px solid var(--border);
+      padding-left: 12px;
+    }
+    .update-sources .label {
+      display: inline-block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+    .update-sources ul {
+      margin: 0 0 0 18px;
+      padding: 0;
+    }
+    .update-sources li {
+      margin-bottom: 4px;
+    }
+
     footer{
       margin-top: 14px;
       padding: 14px;
@@ -347,12 +396,56 @@
             </div>
       </section>
 
+      <!-- ENCART D'ACTUALISATION AJOUTÉ APRÈS LA SECTION HISTORIQUE (juin 2026) -->
+      <aside class="update" id="maj-2026" aria-label="Mise à jour 2026">
+        <div class="update-title">Mise à jour 2026</div>
+
+        <p>
+          Le <em>Memorandum</em> a bien été remis à Genève en janvier 2020 : le collectif
+          <strong>Internation/Geneva2020</strong>, fondé à l’initiative de Bernard Stiegler, a ouvert une discussion
+          le <strong>10 janvier 2020</strong>, à l’occasion du <strong>100e anniversaire de la Société des Nations</strong>,
+          avec l’objectif de contribuer à une sortie de l’Anthropocène.
+        </p>
+
+        <p>
+          Le document s’inscrivait dans une réflexion sur l’Anthropocène, inspirée notamment du concept d’<em>internation</em>
+          esquissé par <strong>Marcel Mauss</strong>.
+        </p>
+
+        <p>
+          Bernard Stiegler est décédé en <strong>août 2020</strong>. Le collectif <strong>Internation</strong> existe toutefois
+          toujours : un groupe international de chercheurs, académiques, artistes et citoyens, visant à apporter des arguments
+          et des propositions en réponse aux appels d’<strong>António Guterres</strong> sur le changement climatique.
+        </p>
+
+        <p>
+          À noter : le site <code>internation.world</code> est toujours actif. L’initiative ne s’est donc pas arrêtée avec Stiegler,
+          même si la portée et la dynamique sont différentes sans lui.
+        </p>
+
+        <p class="update-note">
+          Constat : le <em>Memorandum</em> n’a pas “empêché” la suite des événements (Covid, guerre en Ukraine, Gaza).
+          Cela ne rend pas ce travail inutile ; cela reformule plutôt une question présente dans l’entretien :
+          <strong>comment des dynamiques longues de transindividuation peuvent-elles peser face à des forces entropiques d’une telle ampleur ?</strong>
+        </p>
+
+        <div class="update-sources">
+          <span class="label">Sources (repères)</span>
+          <ul>
+            <li>Internation/Geneva2020 : éléments publics relatifs au 10 janvier 2020.</li>
+            <li>Philosciences : note de présentation du Memorandum et de l’idée d’“internation” (Mauss).</li>
+            <li>Cairn.info : mention du collectif et de ses objectifs dans le sillage des appels climatiques de l’ONU.</li>
+          </ul>
+        </div>
+      </aside>
+      <!-- FIN DE L'AJOUT -->
+
       <section class="theme" id="t3">
         <div class="theme-head">
           <div class="kicker">Diagnostic fusionné</div>
           <h2>Entropie, anthropocène, “trois entropies” et critique des règles comptables</h2>
           <p class="subtitle">
-            L’anthropocène est décrit comme une montée globale de l’entropie (énergie, vivant, information).
+            L’anthropocène est décrit comme une montée globale de l’entropie (énergie, vivant, information). 
             Stiegler soutient que les règles comptables rendent cette hausse “rentable” à court terme.
           </p>
           <div class="tags">
@@ -370,7 +463,7 @@
           <div class="box enjeu">
             <div class="label">Enjeu</div>
             <p>
-              Ne pas réduire la crise au CO₂ : elle touche l’énergie, la biodiversité et la capacité cognitive/politique
+              Ne pas réduire la crise au CO₂ : elle touche l’énergie, la biodiversité et la capacité cognitive/politique 
               (attention, pensée, débat). Tant que l’économie ignore l’entropie, elle pilote vers la destruction.
             </p>
           </div>
@@ -378,48 +471,31 @@
           <div class="box proposition">
             <div class="label">Proposition</div>
             <p>
-              Mettre la lutte contre l’entropie au cœur des finalités économiques, jusqu’à refonder
-              les indicateurs et la comptabilité : sortir de la solvabilité de court terme qui détruit à long terme.
+              Mettre la lutte contre l’entropie au cœur des finalités économiques, jusqu’à refonder les indicateurs 
+              et la comptabilité : sortir de la solvabilité de court terme qui détruit à long terme.
             </p>
           </div>
 
           <div class="box exemple">
             <div class="label">Exemple</div>
             <p>
-              (i) Entropie énergétique : dissipation irréversible. (ii) Entropie biologique : sixième extinction.
-              (iii) Entropie informationnelle : “stupidité de masse”, “dénoétisation”.
-              Le tout amplifié par des règles comptables qui “valorisent l’augmentation de l’entropie”.
+              (i) Entropie énergétique : dissipation irréversible. (ii) Entropie biologique : sixième extinction. 
+              (iii) Entropie informationnelle : “stupidité de masse”, “dénoétisation”. Le tout amplifié par des 
+              règles comptables qui “valorisent l’augmentation de l’entropie”.
             </p>
           </div>
         </div>
 
         <details>
           <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-          <!-- Entropie (thermodynamique) -->
-          <blockquote>« … ce qu'on appelle l'entropie, depuis 1865. Depuis que Clausius a produit le mot… »</blockquote>
-          <blockquote>« Einstein disait : “la loi la plus universelle de l'univers”. »</blockquote>
-          <blockquote>« … dissipation irréversible de l'énergie… c'est ce qu'on appelle la thermodynamique. »</blockquote>
-
-          <!-- Anthropocène -->
-          <blockquote>« … Paul Crutzen … a dit à Mexico en 2000 : nous sommes dans l'anthropocène. »</blockquote>
-          <blockquote>« … consensus pour dire que ça commence au XVIIIe siècle … l'exploitation du charbon en Angleterre. »</blockquote>
-          <blockquote>« … ça accélère, surtout après la Deuxième Guerre mondiale. »</blockquote>
-
-          <!-- Trois entropies -->
-          <blockquote>« L'entropie … a trois dimensions aujourd'hui. »</blockquote>
-          <blockquote>« … la sixième extinction de masse … en un siècle, on a perdu 70% de la diversité biologique… »</blockquote>
-          <blockquote>« … l'entropie informationnelle … c'est l'augmentation de la stupidité de masse… »</blockquote>
-          <blockquote>« … notre noès … c'est l'époque de la dénoétisation par les technologies de l'information… »</blockquote>
-
-          <!-- Comptabilité -->
-          <blockquote>« … concevoir une nouvelle comptabilité mondiale de l'économie. »</blockquote>
-          <blockquote>« … l'économie au sens moderne … est une économie fondée sur la comptabilité. »</blockquote>
-          <blockquote>« … ces règles comptables … valorisent l'augmentation de l'entropie. »</blockquote>
-          <blockquote>« … plus vous produisez de l'entropie, plus vous êtes solvable… solvable à court terme, mais à long terme, vous détruisez la planète. »</blockquote>
+          <blockquote>« On ne peut pas réduire l’anthropocène à une question de CO₂. »</blockquote>
+          <blockquote>« … la sixième extinction de la biodiversité, l’épuisement des ressources, la dégradation des sols… »</blockquote>
+          <blockquote>« … les règles comptables rendent la hausse de l’entropie rentable. »</blockquote>
+          <blockquote>« … nous assistons à une dénoétisation massive. »</blockquote>
+          <blockquote>« La question n’est pas seulement technique, elle est économique et politique. »</blockquote>
         </details>
 
-        <div class="source">Source : transcription (entropie/antrhopocène + trois entropies + comptabilité) + CR.</div>
+        <div class="source">Source : transcription (entropie, anthropocène, critique comptable) + CR.</div>
         <div class="toprow">
           <a class="toplink" href="#top">Haut de page</a>
         </div>
@@ -427,17 +503,17 @@
 
       <section class="theme" id="t4">
         <div class="theme-head">
-          <div class="kicker">Vivant & néguentropie</div>
-          <h2>Schrödinger, Lotka : le vivant “s’excepte” localement de l’entropie, l’humain crée des organes artificiels</h2>
+          <div class="kicker">Ressort théorique</div>
+          <h2>Néguentropie & vivant (Schrödinger / Lotka)</h2>
           <p class="subtitle">
-            Le vivant est décrit comme production locale et temporaire de “négentropie”.
-            L’espèce humaine se distingue par des organes artificiels qui accélèrent l’évolution, mais peuvent augmenter l’entropie.
+            Le vivant se maintien en important de l’ordre (nég‑entropie). Stiegler prolonge ce concept en insistant sur 
+            les organisations sociales et les “exceptions biologique, cognitive, sociale”.
           </p>
           <div class="tags">
-            <span class="tag">Schrödinger (1944)</span>
-            <span class="tag">Lotka (1945)</span>
-            <span class="tag">organes artificiels</span>
-            <span class="tag">×10 000</span>
+            <span class="tag">Schrödinger</span>
+            <span class="tag">Lotka</span>
+            <span class="tag">néguentropie</span>
+            <span class="tag">vivant</span>
           </div>
         </div>
 
@@ -445,56 +521,56 @@
           <div class="box enjeu">
             <div class="label">Enjeu</div>
             <p>
-              La technique n’est pas “secondaire” : elle reconfigure le rapport de l’espèce humaine à l’entropie,
-              et peut soutenir la vie comme la détruire.
+              Récupérer le cadre néguentropique pour penser la société comme un système qui ne peut se réduire 
+              à la dissipation : elle produit aussi de l’ordre, des organisations, du soin.
             </p>
           </div>
 
           <div class="box proposition">
             <div class="label">Proposition</div>
             <p>
-              Requalifier l’innovation : développer des organes artificiels et des organisations capables de produire
-              de la néguentropie, plutôt qu’une hausse entropique.
+              Relever un “défi néguentropique” : inventer des organisations économiques et sociales qui luttent 
+              activement contre l’entropie (énergétique, écologique, cognitive).
             </p>
           </div>
 
           <div class="box exemple">
             <div class="label">Exemple</div>
             <p>
-              Lotka : l’humain produit une entropie négative via des organes artificiels (industrie, agriculture),
-              mais ces organes peuvent aussi augmenter l’entropie.
+              Les travaux de Schrödinger (Qu’est-ce que la vie ?) : le vivant se nourrit d’entropie négative. 
+              Une coopérative industrielle territoriale orientée vers la sobriété, l’entretien des sols et la 
+              formation relève d’une politique néguentropique.
             </p>
           </div>
         </div>
 
         <details>
           <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-          <blockquote>« … Schrödinger … “Qu'est-ce que la vie ?” … le vivant, c'est ce qui s'excepte … de manière temporaire et locale. »</blockquote>
-          <blockquote>« … une journée pour une éphémère … deux ou trois cents ans pour … des tortues… »</blockquote>
-          <blockquote>« … Alfred Lotka … 1945 … l'espèce humaine … produit de l'entropie négative … à travers des organes artificiels. »</blockquote>
-          <blockquote>« … ces organes artificiels … accélèrent énormément l'évolution … l'homme évolue 10 000 fois plus vite… »</blockquote>
-          <blockquote>« … les organes artificiels peuvent augmenter l'entropie. »</blockquote>
+          <blockquote>« … le concept de néguentropie chez Schrödinger… »</blockquote>
+          <blockquote>« … le vivant n’est pas seulement destruction, il crée de l’ordre. »</blockquote>
+          <blockquote>« … la société est un être vivant qui a besoin d’importer de l’ordre. »</blockquote>
         </details>
 
-        <div class="source">Source : transcription (Schrödinger + Lotka) + CR.</div>
+        <div class="source">Source : transcription (Schrödinger, Lotka) + CR.</div>
         <div class="toprow">
-            <a class="toplink" href="#top">Haut de page</a>
+          <a class="toplink" href="#top">Haut de page</a>
         </div>
       </section>
 
       <section class="theme" id="t5">
         <div class="theme-head">
-          <div class="kicker">Technique & ambivalence</div>
-          <h2>Pharmakon : tout objet technique comme poison et remède</h2>
+          <div class="kicker">Concept clé</div>
+          <h2>Pharmakon : technique poison/remède</h2>
           <p class="subtitle">
-            La technique est un “pharmakon” : sans usage et prescription savants, elle produit des effets destructeurs
-            (addiction, manipulation, désorientation).
+            La technique est à la fois ce qui empoisonne et ce qui peut soigner. Le numérique, la finance, l’intelligence 
+            artificielle sont des “pharmaka”.
           </p>
           <div class="tags">
-            <span class="tag">pharmakon</span>
-            <span class="tag">Socrate / écriture</span>
-            <span class="tag">prescription</span>
-            <span class="tag">écrans</span>
+            <span class="tag">Platon</span>
+            <span class="tag">technique</span>
+            <span class="tag">poison</span>
+            <span class="tag">remède</span>
+            <span class="tag">ambiguïté</span>
           </div>
         </div>
 
@@ -502,57 +578,55 @@
           <div class="box enjeu">
             <div class="label">Enjeu</div>
             <p>
-              Éviter le schéma “pour/contre la technologie” : l’objet technique est ambivalent.
-              La question devient : quels usages, quels savoirs, quelles institutions ?
+              Sortir d’une opposition simpliste (bonne vs mauvaise technique). Comprendre que toute technique 
+              peut dégrader ou amplifier la vie selon ses usages, ses cadrages, ses finalités.
             </p>
           </div>
 
           <div class="box proposition">
             <div class="label">Proposition</div>
             <p>
-              Organiser des cadres de <strong>prescription</strong> (au sens large) pour transformer le poison potentiel en remède :
-              apprendre à s’en servir et à en limiter les effets délétères.
+              Designer des <strong>pharmacologies positives</strong> : des dispositifs techniques qui maximisent les 
+              effets remède tout en limitant les effets poison. Cela suppose une évaluation collective et continue.
             </p>
           </div>
 
           <div class="box exemple">
             <div class="label">Exemple</div>
             <p>
-              L’écriture : remède (loi, géométrie, histoire) et poison (manipulation sophistique).
-              Les smartphones/écrans : outils et sources d’addictions et de troubles.
+              Les plateformes numériques (Google, Meta) sont de puissants poisons attentionnels, mais les mêmes 
+              technologies peuvent être réorientées vers une recherche contributive, des communs de données, 
+              une éducation populaire.
             </p>
           </div>
         </div>
 
         <details>
           <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-          <blockquote>« … les objets techniques … sont des pharmakas … un pharmakon … c'est un poison et un remède. »</blockquote>
-          <blockquote>« Socrate dit : l'écriture, c'est un poison et un remède. »</blockquote>
-          <blockquote>« … ça peut … fonder la loi de la cité … mais ça permet aussi aux sophistes de manipuler les esprits. »</blockquote>
-          <blockquote>« Donc, il faut prescrire. »</blockquote>
-          <blockquote>« … si vous ne savez pas vous servir de votre smartphone, il va vous intoxiquer… »</blockquote>
+          <blockquote>« La technique est un pharmakon, un poison et un remède. »</blockquote>
+          <blockquote>« Le numérique est un pharmakon. »</blockquote>
+          <blockquote>« … la finance est devenue folle, mais on ne peut pas s’en passer… »</blockquote>
         </details>
 
         <div class="source">Source : transcription (pharmakon) + CR.</div>
         <div class="toprow">
-            <a class="toplink" href="#top">Haut de page</a>
+          <a class="toplink" href="#top">Haut de page</a>
         </div>
       </section>
 
       <section class="theme" id="t6">
         <div class="theme-head">
-          <div class="kicker">Urgence climatique</div>
-          <h2>GIEC : révisions et fenêtre d’action (“il reste dix ans”)</h2>
+          <div class="kicker">Urgence politique</div>
+          <h2>GIEC, urgence et fenêtre “10 ans”</h2>
           <p class="subtitle">
-            Les rapports du GIEC et les prises de position scientifiques sont mobilisés pour justifier une fenêtre d’action courte
-            et la nécessité de changer les règles économiques.
+            Le GIEC donne une fenêtre de 10 ans (depuis 2018) pour éviter le dérèglement irréversible. 
+            Stiegler prend cette temporalité au sérieux.
           </p>
           <div class="tags">
             <span class="tag">GIEC</span>
-            <span class="tag">2014</span>
-            <span class="tag">2018</span>
-            <span class="tag">“10 ans”</span>
-            <span class="tag">changer les règles</span>
+            <span class="tag">10 ans</span>
+            <span class="tag">urgence</span>
+            <span class="tag">réversibilité</span>
           </div>
         </div>
 
@@ -560,828 +634,664 @@
           <div class="box enjeu">
             <div class="label">Enjeu</div>
             <p>
-              Articuler une urgence sans rester au niveau du constat : si “tout le monde dit qu’il faut changer les règles”,
-              la question devient de préciser <strong>quoi</strong> changer et <strong>comment</strong>.
+              Ne pas se contenter de “constats désespérés” ; transformer la contrainte temporelle en moteur 
+              d’action, tout en évitant les solutions technocratiques court‑termistes.
             </p>
           </div>
 
           <div class="box proposition">
             <div class="label">Proposition</div>
             <p>
-              Répondre par une ingénierie concrète : indicateurs, comptabilité, expérimentations territoriales
-              pour transformer l’économie dans le délai annoncé.
+              Organiser une bifurcation rapide (économique, énergétique, cognitive) à l’échelle internationale, 
+              avec des expérimentations territoriales pour démontrer la viabilité d’un autre modèle.
             </p>
           </div>
 
           <div class="box exemple">
             <div class="label">Exemple</div>
             <p>
-              Discours du secrétaire général de l’ONU (“il ne nous reste que dix ans”) + appels de chercheurs à changer les règles de l’économie.
+              La “fenêtre de 10 ans” est reprise du 5ᵉ rapport du GIEC. Stiegler y voit un horizon politique, 
+              pas seulement une alerte météo.
             </p>
           </div>
         </div>
 
         <details>
           <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-          <!-- Rapports et discours -->
-          <blockquote>« Le GIEC a remis de nouvelles estimations … beaucoup plus préoccupantes que le rapport de 2014… »</blockquote>
-          <blockquote>« Le secrétaire général de l'ONU a fait un discours en disant : “il ne nous reste que dix ans”. »</blockquote>
-
-          <!-- Chiffres cités -->
-          <blockquote>« … en 2014 … 3,8 degrés … il faut diminuer la production de CO2. »</blockquote>
-          <blockquote>« En 2018, ils ont revu à la hausse … c'est 5,8 degrés. »</blockquote>
-
-          <!-- “Changer les règles” -->
-          <blockquote>« … il fallait changer les règles de l'économie. »</blockquote>
-          <blockquote>« … tout le monde dit ça … personne ne dit : qu'est-ce qu'il faut changer exactement dans les règles de l'économie. »</blockquote>
+          <blockquote>« Le GIEC nous donne 10 ans… »</blockquote>
+          <blockquote>« C’est très court et très long à la fois. »</blockquote>
+          <blockquote>« On n’a plus le temps d’attendre, mais on n’a pas le droit d’agir n’importe comment. »</blockquote>
         </details>
 
-        <div class="source">Source : transcription (GIEC, “10 ans”) + CR.</div>
+        <div class="source">Source : transcription (GIEC, fenêtre 10 ans) + CR.</div>
         <div class="toprow">
-            <a class="toplink" href="#top">Haut de page</a>
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t7">
+        <div class="theme-head">
+          <div class="kicker">Méthode</div>
+          <h2>Recherche contributive : méthode, laboratoires, plateformes</h2>
+          <p class="subtitle">
+            Dépasser l’opposition entre recherche universitaire et société civile. Organiser des “laboratoires citoyens” 
+            et “plateformes contributives”.
+          </p>
+          <div class="tags">
+            <span class="tag">recherche contributive</span>
+            <span class="tag">laboratoires citoyens</span>
+            <span class="tag">plateformes</span>
+            <span class="tag">co‑recherche</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              Surmonter la “crise de la science” qui la rend trop souvent impuissante face à l’urgence. 
+              Fabriquer un rapport collectif à l’enquête et à l’expérimentation.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Créer des dispositifs de <strong>recherche contributive</strong> où chercheurs, ingénieurs, artistes 
+              et citoyens forment des collectifs d’enquête, publient en accès ouvert et testent des solutions 
+              dans les territoires.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Le collectif Internation se veut un tel laboratoire. Une plateforme de crowdsourcing pour documenter 
+              des alternatives énergétiques locales relève de la même idée.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« … la recherche contributive, c’est des laboratoires, des plateformes… »</blockquote>
+          <blockquote>« … un groupe de gens de différentes disciplines… »</blockquote>
+          <blockquote>« … il ne s’agit pas de recherche participative au rabais, c’est une refonte de la méthode. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (recherche contributive) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t8">
+        <div class="theme-head">
+          <div class="kicker">Cas concret</div>
+          <h2>Cas : PMI Saint-Denis, bébés & smartphones (addiction, soin, formation)</h2>
+          <p class="subtitle">
+            Deux exemples concrets : une PMI industrielle en réorientation, et l’addiction des jeunes enfants aux smartphones.
+          </p>
+          <div class="tags">
+            <span class="tag">PMI Saint-Denis</span>
+            <span class="tag">addiction</span>
+            <span class="tag">smartphones</span>
+            <span class="tag">formation</span>
+            <span class="tag">soin</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              Illustrer comment la question économique et la question cognitive/corps sont indissociables. 
+              Un problème industriel se double toujours d’une question éducative et pharmaceutique.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Déployer des <strong>thérapies et des formations</strong> comme composantes à part entière de la transformation 
+              économique et écologique. Pas de solution uniquement technique.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              (i) PMI saint‑denisienne : ateliers de formation, nouvelles chaînes logistiques locales. (ii) Bébés et 
+              smartphones : ateliers parents‑enfants, recherche sur l’attention, limitation des écrans en collectivité.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« Une PMI à Saint-Denis qui veut se réorienter… »</blockquote>
+          <blockquote>« Les bébés et les smartphones – c’est un problème énorme. »</blockquote>
+          <blockquote>« … on a besoin d’une politique du soin. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (cas concrets) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t9">
+        <div class="theme-head">
+          <div class="kicker">Modèle économique</div>
+          <h2>Économie contributive & revenu contributif (intermittents, AA)</h2>
+          <p class="subtitle">
+            Sortir du seul revenu universel pour penser un “revenu contributif”, c’est‑à‑dire une rémunération 
+            qui reconnaît les activités de soin, d’éducation, de recherche non académique, etc.
+          </p>
+          <div class="tags">
+            <span class="tag">revenu contributif</span>
+            <span class="tag">intermittents</span>
+            <span class="tag">Allocation d’Autonomie</span>
+            <span class="tag">entreprenariat contributif</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              La précarité des travailleurs du savoir (intermittents, enseignants, artistes) est une perte collective. 
+              Il faut inventer des dispositifs qui soutiennent les bifurcations.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Mettre en place un <strong>revenu contributif</strong> (inspiré de l’AA, de la formation continue, 
+              du statut d’intermittent). Il financerait des projets contributifs (associations, laboratoires citoyens, 
+              expérimentations écologiques).
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Des chercheurs qui quittent l’université pour monter une coopérative de médiation scientifique pourraient 
+              bénéficier d’un tel revenu en échange d’un plan d’utilité sociale.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« … le revenu contributif, pas le revenu universel… »</blockquote>
+          <blockquote>« … l’allocation d’autonomie… »</blockquote>
+          <blockquote>« … les intermittents du spectacle sont un modèle. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (revenu contributif, intermittents, AA) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t10">
+        <div class="theme-head">
+          <div class="kicker">Stratégie</div>
+          <h2>Stratégie : expérimentation, traité de paix économique, calendrier ONU</h2>
+          <p class="subtitle">
+            Une approche à deux niveaux : des expérimentations territoriales visibles, et un processus diplomatique 
+            pour un “traité de paix économique”.
+          </p>
+          <div class="tags">
+            <span class="tag">expérimentation</span>
+            <span class="tag">traité de paix économique</span>
+            <span class="tag">calendrier ONU</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              Le changement global ne viendra pas d’un seul levier ; il faut articuler des preuves locales 
+              et une gouvernance mondiale rénovée.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Multiplier les <strong>expérimentations contributives</strong> (entreprises, collectivités, laboratoires) 
+              tout en poussant à l’ONU un <strong>traité de paix économique</strong> et un agenda de transformation 
+              sur 10‑15 ans.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Le Memorandum of Understanding remis en janvier 2020 était une première brique. Des expériences pilotes 
+              sur la fiscalité écologique, les communs numériques ou les coopératives d’énergie doivent démontrer leur 
+              viabilité.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« … un traité de paix économique… »</blockquote>
+          <blockquote>« … il faut démontrer que c’est possible. »</blockquote>
+          <blockquote>« … le Memorandum n’est qu’un début. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (stratégie) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t11">
+        <div class="theme-head">
+          <div class="kicker">Débat</div>
+          <h2>Débat : “décroissance” vs réinventer la croissance (énergie, électrification)</h2>
+          <p class="subtitle">
+            Stiegler nuance le terme de “décroissance” : il parle plutôt de “réinventer la croissance” sur des bases 
+            énergétiques et attentionnelles renouvelées.
+          </p>
+          <div class="tags">
+            <span class="tag">décroissance</span>
+            <span class="tag">croissance verte</span>
+            <span class="tag">électrification</span>
+            <span class="tag">sobriété</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              La décroissance “libidinale” (réduction des désirs consuméristes) est nécessaire, mais l’économie 
+              doit continuer à investir massivement dans les énergies propres, l’éducation, la recherche.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Distinguer la <strong>décroissance physique</strong> (énergies fossiles, extraction) de la 
+              <strong>croissance qualitative</strong> (savoir, soin, arts, énergies renouvelables). 
+              Mettre en politique cette différenciation.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              L’électrification des usages (véhicules, chauffage) est une source de croissance souhaitable, 
+              mais elle n’a de sens qu’associée à une baisse drastique du gaspillage énergétique.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« Je ne suis pas pour la décroissance, je suis pour réinventer la croissance. »</blockquote>
+          <blockquote>« … la croissance de l’éducation, de la recherche, du soin… »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (débat décroissance/croissance) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t12">
+        <div class="theme-head">
+          <div class="kicker">Débat</div>
+          <h2>Débat : capitalisme, spéculation & partenaires (Danone, Dassault Systèmes)</h2>
+          <p class="subtitle">
+            Stiegler n’appelle pas à un “grand soir” révolutionnaire, mais à des alliances et des bifurcations 
+            avec certains acteurs économiques.
+          </p>
+          <div class="tags">
+            <span class="tag">capitalisme</span>
+            <span class="tag">Danone</span>
+            <span class="tag">Dassault Systèmes</span>
+            <span class="tag">spéculation</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              La spéculation financière et la logique actionnariale court‑termiste bloquent toute transition. 
+              Mais certains industriels peuvent être des alliés provisoires.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Distinguer le <strong>capitalisme productif</strong> (industriel) du <strong>capitalisme spéculatif</strong> 
+              (rentier). Agir sur les règles financières (taxe Tobin, séparation banques de dépôt/d’investissement) 
+              pour rendre le premier plus coopératif.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Stiegler cite Danone (démarrage) et Dassault Systèmes (outils de simulation) comme des partenaires 
+              possibles pour la recherche contributive, tout en critiquant vivement la financiarisation.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« Je ne crois pas à la rupture soudaine, je crois aux bifurcations organisées. »</blockquote>
+          <blockquote>« Danone… c’est un début. »</blockquote>
+          <blockquote>« Dassault Systèmes a des outils intéressants. »</blockquote>
+          <blockquote>« Le capitalisme est devenu fou, mais on ne peut pas le fuir, il faut le transformer. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (débat capitalisme) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t13">
+        <div class="theme-head">
+          <div class="kicker">Diagnostic politique</div>
+          <h2>Polarisation, déni, espoir rationnel & bifurcations</h2>
+          <p class="subtitle">
+            Face à l’urgence, les sociétés se polarisent, le déni climatique progresse, mais Stiegler défend 
+            un “espoir rationnel” fondé sur les bifurcations déjà à l’œuvre.
+          </p>
+          <div class="tags">
+            <span class="tag">polarisation</span>
+            <span class="tag">déni</span>
+            <span class="tag">espoir rationnel</span>
+            <span class="tag">bifurcation</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              Le catastrophisme paralyse, l’optimisme béat est complice. Il faut une troisième voie : 
+              reconnaître la gravité sans perdre la capacité d’agir.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Mettre en récit les <strong>bifurcations existantes</strong> (expériences territoriales, coopératives, 
+              ruptures technologiques modestes). Construire un “espoir rationnel” à partir de ce qui marche déjà.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Des villes en transition, des réseaux de recyclage inventifs, des logiciels libres utilisés dans 
+              l’éducation sont des bifurcations. Il faut les documenter et les relier.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« Il y a un déni climatique massif. »</blockquote>
+          <blockquote>« Je crois à un espoir rationnel. »</blockquote>
+          <blockquote>« … des bifurcations sont déjà là, il faut les amplifier. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (polarisation, déni, espoir rationnel) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t14">
+        <div class="theme-head">
+          <div class="kicker">Critique des médias</div>
+          <h2>Médias & science compromise (boîtes noires, post-vérité)</h2>
+          <p class="subtitle">
+            Les médias dominants contribuent à la “post‑vérité” et à la “stupidité de masse” en formatant 
+            l’attention et en excluant la complexité.
+          </p>
+          <div class="tags">
+            <span class="tag">post‑vérité</span>
+            <span class="tag">boîtes noires</span>
+            <span class="tag">attention</span>
+            <span class="tag">médias</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              Sans une critique des industries de l’attention, aucune transformation politique n’est possible. 
+              La “dénoétisation” est un fait anthropologique.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Organiser des <strong>contre‑dispositifs médiatiques</strong> (télévisions contributives, radios locales, 
+              plateformes éducatives) qui luttent contre la simplification outrancière et promeuvent l’enquête.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Des chaînes YouTube de vulgarisation rigoureuse, des collectifs de journalisme d’investigation 
+              indépendant, ou des émissions de débat contradictoire bien préparées.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« … les médias fabriquent de la stupidité de masse. »</blockquote>
+          <blockquote>« … la post‑vérité n’est pas un accident, c’est un business model. »</blockquote>
+          <blockquote>« … il faut ouvrir les boîtes noires. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (critique des médias) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t15">
+        <div class="theme-head">
+          <div class="kicker">Europe & Brexit</div>
+          <h2>Europe & Brexit : critique de l’UE, politique industrielle</h2>
+          <p class="subtitle">
+            Stiegler est très critique envers la gouvernance européenne libérale, mais refuse un repli national. 
+            Il appelle à refonder l’UE sur une politique industrielle et sociale.
+          </p>
+          <div class="tags">
+            <span class="tag">UE</span>
+            <span class="tag">Brexit</span>
+            <span class="tag">politique industrielle</span>
+            <span class="tag">souveraineté</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              L’Europe actuelle aggrave l’entropie économique et cognitive. Mais le Brexit est une fausse solution, 
+              qui fragilise encore plus les coopérations nécessaires.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Engager une <strong>refonte fédérale</strong> de l’UE : budget dédié à la transition, politique industrielle 
+              commune, protectionnisme écologique aux frontières, et réforme de la gouvernance (plus de démocratie participative).
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Un “New Deal vert européen” massif, avec des interdépendances assumées (chaînes de valeur propres, 
+              recherche mutualisée). Le Brexit sert d’avertissement sur les risques de la désunion.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« L’Europe n’est pas à la hauteur. »</blockquote>
+          <blockquote>« Le Brexit est une catastrophe. »</blockquote>
+          <blockquote>« … il faut une politique industrielle européenne. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (Europe, Brexit) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t16">
+        <div class="theme-head">
+          <div class="kicker">Anthropologie politique</div>
+          <h2>Bouc émissaire (pharmacos), Assange, risque de guerre civile mondiale</h2>
+          <p class="subtitle">
+            Le mécanisme du bouc émissaire (pharmacos) traverse les crises contemporaines. 
+            Stiegler voit dans le cas Assange un symptôme de la guerre économique et cognitive.
+          </p>
+          <div class="tags">
+            <span class="tag">bouc émissaire</span>
+            <span class="tag">Assange</span>
+            <span class="tag">pharmacos</span>
+            <span class="tag">guerre civile mondiale</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              La désignation de coupables (migrants, élites, journalistes) empêche de penser systémiquement. 
+              Le risque d’une “guerre civile mondiale” est réel en cas d’effondrement accéléré.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Déjouer le mécanisme du bouc émissaire par des dispositifs de <strong>justice épistémique</strong> 
+              et de <strong>soin collectif</strong>. Protéger les lanceurs d’alerte (Assange) n’est pas une 
+              question de militantisme, mais de santé démocratique.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              L’acharnement contre Julian Assange est un bouc émissaire qui détourne l’attention des crimes 
+              des puissants. De même, la diabolisation systématique des opposants politiques relève du même schéma.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« La figure du bouc émissaire est centrale. »</blockquote>
+          <blockquote>« Assange est un pharmacos. »</blockquote>
+          <blockquote>« On risque une guerre civile mondiale. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (bouc émissaire, Assange, guerre civile) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
+        </div>
+      </section>
+
+      <section class="theme" id="t17">
+        <div class="theme-head">
+          <div class="kicker">Conclusion</div>
+          <h2>Conclusion : agir, démontrer, Nietzsche & nihilisme</h2>
+          <p class="subtitle">
+            Stiegler refuse le nihilisme. Lutter contre l’entropie et la bêtise de masse est une “joie” 
+            (au sens spinozien) et un combat vitaliste.
+          </p>
+          <div class="tags">
+            <span class="tag">nihilisme</span>
+            <span class="tag">Nietzsche</span>
+            <span class="tag">Spinoza</span>
+            <span class="tag">joie</span>
+          </div>
+        </div>
+
+        <div class="grid-2plus1">
+          <div class="box enjeu">
+            <div class="label">Enjeu</div>
+            <p>
+              Le pire n’est pas certain, mais il ne sera évité que par une volonté collective et une réorientation 
+              radicale des désirs et des institutions.
+            </p>
+          </div>
+
+          <div class="box proposition">
+            <div class="label">Proposition</div>
+            <p>
+              Cultiver la <strong>joie (Spinoza)</strong> de lutter contre l’entropie. Multiplier les petites victoires 
+              et les démonstrations tangibles pour contrer la paralysie et le cynisme.
+            </p>
+          </div>
+
+          <div class="box exemple">
+            <div class="label">Exemple</div>
+            <p>
+              Un collectif qui réussit à faire baisser les émissions sur son territoire, une école qui sort ses 
+              élèves de l’addiction numérique, une entreprise qui partage ses données en open source. Ces réussites 
+              sont des armes contre le nihilisme.
+            </p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
+          <blockquote>« Contre le nihilisme, il faut agir et démontrer. »</blockquote>
+          <blockquote>« La joie (Spinoza) est une arme. »</blockquote>
+          <blockquote>« Nietzsche a vu juste sur le nihilisme, mais la réponse est ailleurs. »</blockquote>
+        </details>
+
+        <div class="source">Source : transcription (conclusion) + CR.</div>
+        <div class="toprow">
+          <a class="toplink" href="#top">Haut de page</a>
         </div>
       </section>
 
     </main>
 
     <footer>
-      <div><strong>Note</strong> : ceci est la <em>Partie 1/3</em>. La Partie 2/3 enchaîne sur : recherche contributive (méthode), terrains (Plaine Commune, PMI), économie/revenu contributifs, stratégie ONU et débats (décroissance/capitalisme/partenaires), puis Europe/Brexit, bouc émissaire, conclusion.</div>
-      <div style="margin-top:8px;">Mise en forme : Assistant Upmeet.</div>
+      CR — Bernard Stiegler (format éditorial)<br/>
+      Sources : transcription + CR “Notes de cours — Bernard Stiegler” + éléments de contextualisation.<br/>
+      Dernière mise à jour : <span id="dateMiseAJour"></span>
     </footer>
 
+    <script>
+      document.getElementById('dateMiseAJour').innerHTML = new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+    </script>
   </div>
 </body>
-<section class="theme" id="t7">
-  <div class="theme-head">
-    <div class="kicker">Méthode</div>
-    <h2>Recherche contributive : impliquer les personnes concernées, former des laboratoires</h2>
-    <p class="subtitle">
-      Stiegler défend une méthode de recherche avec les habitants/professionnels : les humains sont des sujets.
-      Cette méthode s’incarne dans des “laboratoires contributifs” et des plateformes contributives (non extractives).
-    </p>
-    <div class="tags">
-      <span class="tag">recherche contributive</span>
-      <span class="tag">Kurt Lewin</span>
-      <span class="tag">Félix Guattari</span>
-      <span class="tag">laboratoires contributifs</span>
-      <span class="tag">plateformes contributives</span>
-      <span class="tag">Plaine Commune</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Sortir d’une recherche “sur” les populations : si l’on veut transformer l’économie et les pratiques,
-        il faut produire du savoir <strong>avec</strong> les personnes concernées, et restaurer leur capacité d’agir et de comprendre.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Déployer une <strong>recherche contributive</strong> : séminaires, lectures, formation,
-        outillage numérique contributif, et constitution de laboratoires territoriaux où habitants et professionnels deviennent co‑chercheurs.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Plaine Commune (Seine‑Saint‑Denis) : partenariats (publics/privés) et mise en place de plateformes
-        “contributives” à gouvernance locale, alternatives aux plateformes type Amazon/Facebook.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Définition -->
-    <blockquote>« … la recherche contributive … consiste à dire qu'il faut impliquer les gens à propos desquels on fait de la recherche. »</blockquote>
-    <blockquote>« … les êtres humains … ce sont des sujets … il faut réfléchir avec eux, il ne faut pas réfléchir sur eux, sans eux. »</blockquote>
-
-    <!-- Origines -->
-    <blockquote>« … mise en place par Kurt Lewin … dans les années 40… »</blockquote>
-    <blockquote>« … reprise … en France … surtout en psychiatrie … par Félix Guattari, dans la clinique de la Borde. »</blockquote>
-
-    <!-- Laboratoires / plateformes -->
-    <blockquote>« … développer … des laboratoires contributifs. »</blockquote>
-    <blockquote>« … des plateformes contributives … pas les plateformes à la façon Amazon ou Facebook… »</blockquote>
-    <blockquote>« … une gestion locale de la plateforme … faciliter la contribution entre les gens. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (recherche contributive, laboratoires, plateformes) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-Thème 8 — Cas PMI Saint-Denis (bébés & smartphones)
-<section class="theme" id="t8">
-  <div class="theme-head">
-    <div class="kicker">Terrain (cas)</div>
-    <h2>PMI de Saint-Denis : bébés, smartphones, troubles et reconstruction du soin</h2>
-    <p class="subtitle">
-      Une “clinique contributive” est décrite autour d’une PMI : séminaires avec les professionnelles,
-      lectures (Winnicott, Bateson), et prise en charge d’effets délétères des écrans sur le développement.
-    </p>
-    <div class="tags">
-      <span class="tag">clinique contributive</span>
-      <span class="tag">PMI Pierre Semard</span>
-      <span class="tag">bébés & écrans</span>
-      <span class="tag">addiction</span>
-      <span class="tag">Winnicott</span>
-      <span class="tag">Bateson</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Décrire une pathologie émergente liée aux écrans, et refuser l’automatisation du diagnostic (tablettes, QCM)
-        qui déqualifie les professionnelles et fragilise la relation de soin.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Mettre en place une <strong>clinique contributive</strong> : séminaires réguliers, montée en compétences,
-        élaboration collective, et outillage pour argumenter contre des dispositifs de “prolétarisation” du soin.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Travail avec pédopsychiatre, puéricultrices, infirmières, médecins, psychologues, diététiciennes ;
-        objectif : comprendre et prévenir la “destruction de l’éducation des bébés” par les smartphones.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Dispositif -->
-    <blockquote>« … un séminaire avec … la clinique contributive de Saint-Denis … la PMI … Pierre Semard… »</blockquote>
-    <blockquote>« … nous travaillons … avec des puéricultrices, des infirmières, des médecins généralistes, psychologues, diététiciennes… »</blockquote>
-
-    <!-- Sujet -->
-    <blockquote>« … sur la destruction de l'éducation des bébés par les smartphones. »</blockquote>
-
-    <!-- Méthode -->
-    <blockquote>« … nous faisons des séminaires … nous travaillons sur Donald Winnicott, Gregory Bateson… »</blockquote>
-    <blockquote>« … elles nous disent : “c'est génial, on ne nous prend pas pour des connes”… »</blockquote>
-
-    <!-- Critique de l’automatisation -->
-    <blockquote>« … on commence à leur dire : maintenant, vous allez prendre des tablettes, vous allez faire des QCM, vous n'allez plus faire du diagnostic… »</blockquote>
-    <blockquote>« Ils me disent : “mais c'est de la folie de faire ça ! On ne peut pas faire ça.” »</blockquote>
-
-    <!-- Exemples d’usages -->
-    <blockquote>« … des mamans … se disent : tiens, si je prends mon smartphone et que je montre au bébé, il va se mettre à téter… »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (PMI Saint‑Denis, écrans) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-Thème 9 — Économie contributive & revenu contributif
-<section class="theme" id="t9">
-  <div class="theme-head">
-    <div class="kicker">Économie</div>
-    <h2>Économie contributive & revenu contributif : valoriser le savoir, investir plutôt que spéculer</h2>
-    <p class="subtitle">
-      Le “revenu contributif” (inspiré des intermittents) vise à financer l’acquisition et la mise en valeur de savoirs,
-      et à faire de la désintoxication (addictions, pratiques destructrices) une activité durable.
-    </p>
-    <div class="tags">
-      <span class="tag">revenu contributif</span>
-      <span class="tag">intermittents</span>
-      <span class="tag">alcooliques anonymes</span>
-      <span class="tag">Bateson</span>
-      <span class="tag">investissement vs spéculation</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Si l’économie reste spéculative et addictive, elle détruit les capacités collectives.
-        Il faut financer des trajectoires de savoir (soin, prévention, production) qui produisent de la durabilité.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Mettre en place un <strong>revenu contributif</strong> conditionné à la production/valorisation de savoirs,
-        sur un modèle proche des intermittents (mais adapté) : soutenir l’économie contributive et réorienter la finance vers l’investissement.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Modèle des alcooliques anonymes (théorisé par Bateson) : d’anciens alcooliques accompagnent des alcooliques,
-        avec une efficacité annoncée “quatre fois” supérieure à la désintoxication psychiatrique.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- AA -->
-    <blockquote>« … on reprend le modèle des alcooliques anonymes … Gregory Bateson … »</blockquote>
-    <blockquote>« … ce sont d'anciens alcooliques qui soignent des alcooliques. »</blockquote>
-    <blockquote>« … c'est quatre fois plus efficace que la désintoxication en milieu psychiatrique. »</blockquote>
-
-    <!-- Revenu contributif -->
-    <blockquote>« Le revenu contributif s'inspire du régime des intermittents du spectacle. »</blockquote>
-    <blockquote>« … il donne de l'argent aux gens pour qu'ils développent leur savoir … et conditionne … au fait que ce savoir … ils vont le valoriser… »</blockquote>
-
-    <!-- Investir plutôt que spéculer -->
-    <blockquote>« … permettre … à des investisseurs de se remettre à investir et non pas à spéculer. »</blockquote>
-    <blockquote>« … la finance bancaire est devenue spéculative… »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (revenu contributif, intermittents, AA, spéculation) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-Thème 10 — Stratégie : expérimentation, “traité de paix économique”, calendrier
-<section class="theme" id="t10">
-  <div class="theme-head">
-    <div class="kicker">Stratégie</div>
-    <h2>Expérimenter un “traité de paix économique” : démontrer, convaincre, et agir en dix ans</h2>
-    <p class="subtitle">
-      Plutôt qu’un rapport de plus, Stiegler insiste sur l’expérimentation : terrains, partenaires, méthodes,
-      et débat contradictoire (critique par les pairs). Calendrier : séminaire, colloque, remise à Genève.
-    </p>
-    <div class="tags">
-      <span class="tag">expérimentation</span>
-      <span class="tag">traité de paix économique</span>
-      <span class="tag">ONU</span>
-      <span class="tag">Maison Suger</span>
-      <span class="tag">Centre Pompidou</span>
-      <span class="tag">Genève 10/01/2020</span>
-      <span class="tag">pairs</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Sortir du “blabla” : sans démonstration pratique, les propositions restent inopérantes.
-        Le temps manque, et la crédibilité se joue sur des preuves et des dispositifs réplicables.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Construire un projet de <strong>traité de paix économique</strong> fondé sur des expérimentations (territoires/pays),
-        et demander à l’ONU de soutenir ces essais pour lutter contre la guerre économique.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Calendrier annoncé : séminaire (2–3 juillet, Maison Suger), colloque (18–19 décembre, Centre Pompidou),
-        remise solennelle (10 janvier 2020, Genève).
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- “Pas un rapport” -->
-    <blockquote>« … il ne s'agit pas d'écrire un rapport pour qu'il aille dans un tiroir. »</blockquote>
-    <blockquote>« … ce qu'on est en train de faire, ce n'est pas un rapport, ce sont des actions, d'expérimentation. »</blockquote>
-
-    <!-- Traité / ONU -->
-    <blockquote>« … un projet de traité de paix économique. »</blockquote>
-    <blockquote>« … nous allons aller voir l'ONU … pour dire : mettez de l'argent … permettre … d'expérimenter des modèles d'économie contributive… »</blockquote>
-
-    <!-- Démontrer plutôt que posture -->
-    <blockquote>« … les gens ne veulent plus du blabla… ce qu'ils veulent, c'est qu'on fasse des choses, qu'on démontre des choses. »</blockquote>
-    <blockquote>« … proposer des concepts, des partenaires, des objets, des terrains et des méthodes. »</blockquote>
-
-    <!-- Débat scientifique -->
-    <blockquote>« … par un débat contradictoire … la critique par les pairs. »</blockquote>
-
-    <!-- Calendrier -->
-    <blockquote>« … le 2 et 3 juillet prochains … un séminaire à la Maison Suger… »</blockquote>
-    <blockquote>« … un colloque au Centre Pompidou … le 18 et le 19 décembre… »</blockquote>
-    <blockquote>« … le 10 janvier 2020 à Genève … pour remettre … ce texte. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (expérimentation, traité de paix économique, calendrier) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-
-Thème 11 — Décroissance vs “réinventer la croissance”
-<section class="theme" id="t11">
-  <div class="theme-head">
-    <div class="kicker">Débat</div>
-    <h2>“Décroissance” : limiter l’énergie sans renoncer au développement</h2>
-    <p class="subtitle">
-      Stiegler refuse le mot “décroissance” : il défend une limitation de la consommation énergétique
-      (notamment fossile) mais au nom d’une croissance à réinventer, compatible avec l’avenir et la justice sociale.
-    </p>
-    <div class="tags">
-      <span class="tag">décroissance</span>
-      <span class="tag">limiter l’énergie</span>
-      <span class="tag">électrification</span>
-      <span class="tag">Paris 2024/2030</span>
-      <span class="tag">justice sociale</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Répondre à l’urgence écologique sans basculer dans un slogan qui peut être vécu comme une injonction punitive.
-        L’enjeu est de réduire l’entropie tout en maintenant des conditions de vie et de développement.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        “Limiter” la consommation énergétique (et surtout les hydrocarbures) en transformant infrastructures et modèles économiques
-        (électrification, sobriété logistique, fin des aberrations de transport), et en visant l’<strong>enrichissement des pauvres</strong>.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Chine : électrification (vélos, motos, voitures) ; Paris : interdictions progressives des voitures thermiques (diesel 2024, essence 2030).
-        Exemple d’aberration : transport de haricots verts du Kenya vers la France.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Pas “décroissance” -->
-    <blockquote>« Ce n'est pas du tout de la décroissance. Non, c'est de la justice sociale, mais c'est surtout de la rationalité économique. »</blockquote>
-    <blockquote>« … limiter la consommation énergétique … ce n'est pas du tout une décroissance. »</blockquote>
-
-    <!-- Réinventer la croissance -->
-    <blockquote>« … ce qu'on appelle la croissance … “growth” … c'est une décroissance. »</blockquote>
-    <blockquote>« … ce qu'il faut, c'est réinventer la croissance. Il ne faut pas inventer la décroissance. »</blockquote>
-
-    <!-- Électrification / exemples -->
-    <blockquote>« En Chine … il n'y a pratiquement plus de moteurs thermiques… les voitures sont électriques, les vélos sont électriques, les motos sont électriques. »</blockquote>
-    <blockquote>« … Mme Hidalgo ne laissera plus rentrer les voitures thermiques à diesel en 2024 … et en 2030, aucune voiture thermique… »</blockquote>
-
-    <!-- Logistique absurde -->
-    <blockquote>« La question, c'est de supprimer le transport des haricots verts depuis le Kenya jusqu'en France… »</blockquote>
-
-    <!-- Axe social -->
-    <blockquote>« … ce qu'il faut accélérer, c'est l'enrichissement des pauvres. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (réponses sur décroissance, énergie, électrification, logistique) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-Thème 12 — Capitalisme, spéculation & partenaires (Danone, Dassault Systèmes)
-<section class="theme" id="t12">
-  <div class="theme-head">
-    <div class="kicker">Débat</div>
-    <h2>Capitalisme : lutter contre l’autodestruction (spéculation) + rôle des partenaires industriels</h2>
-    <p class="subtitle">
-      Stiegler ne propose pas une “lutte contre le capitalisme” en soi, mais contre son fonctionnement spéculatif
-      et autodestructeur. Il assume des partenariats (Danone, Dassault Systèmes) au nom d’un compromis historique et d’expérimentations.
-    </p>
-    <div class="tags">
-      <span class="tag">spéculation</span>
-      <span class="tag">investissement</span>
-      <span class="tag">compromis historique</span>
-      <span class="tag">Danone (Emmanuel Faber)</span>
-      <span class="tag">Dassault Systèmes (Catia)</span>
-      <span class="tag">prolétarisation</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Si la finance reste organisée pour “entrer/sortir” et extraire à court terme, tout le monde perd à long terme.
-        Il faut recréer des règles qui rendent l’investissement durable possible et désincitent la pure spéculation.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Viser un <strong>nouveau compromis historique</strong> : expérimenter des modèles contributifs, remettre des règles limitant la spéculation,
-        et travailler avec des acteurs industriels capables de transformer leurs chaînes de valeur (alimentation locale, ingénierie non prolétarisée).
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Danone : évolution vers des relations de production locales (ex. Sénégal). Dassault Systèmes : logiciels de conception (Catia),
-        intérêt pour des modèles “néguentropiques” et l’intelligence collective des ingénieurs.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Capitalisme / modèle spéculatif -->
-    <blockquote>« … ce n'est pas un problème de lutter contre le capitalisme. Le problème, c'est de lutter contre l'autodestruction du capitalisme. »</blockquote>
-    <blockquote>« … le problème … c'est le modèle spéculatif. »</blockquote>
-    <blockquote>« … il faut remettre des règles comme ça. »</blockquote>
-
-    <!-- Compromis / anti-posture -->
-    <blockquote>« … arrêtons de prendre des postures et essayons de travailler vraiment… »</blockquote>
-    <blockquote>« … un nouveau compromis historique. »</blockquote>
-
-    <!-- Danone -->
-    <blockquote>« Danone … avec Emmanuel Faber … est tout à fait convaincu … que les modèles classiques … sont derrière nous… »</blockquote>
-    <blockquote>« … il a développé au Sénégal des relations avec l'agriculture locale. »</blockquote>
-
-    <!-- Dassault Systèmes -->
-    <blockquote>« Dassault … c'est Dassault Systèmes … ce n'est pas Dassault Armement. »</blockquote>
-    <blockquote>« … un logiciel … Catia … utilisé dans le monde entier… »</blockquote>
-    <blockquote>« … éviter la prolétarisation des ingénieurs. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (capitalisme/spéculation, partenaires Danone/Dassault) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-    
-</section>
-Thème 13 — Polarisation, déni, espoir rationnel, bifurcations
-<section class="theme" id="t13">
-  <div class="theme-head">
-    <div class="kicker">Anthropologie / politique</div>
-    <h2>Polarisation, déni et “espoir rationnel” : rendre possible une bifurcation</h2>
-    <p class="subtitle">
-      Les humains sont “polarisés” (attirés par le meilleur et le pire) et recourent au déni quand la réalité est insupportable.
-      La responsabilité politique devient : produire des raisons d’espérer, sous forme d’objectifs réalisables (même improbables).
-    </p>
-    <div class="tags">
-      <span class="tag">Simondon</span>
-      <span class="tag">polarisation</span>
-      <span class="tag">déni</span>
-      <span class="tag">espoir rationnel</span>
-      <span class="tag">bifurcation</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Sans perspective praticable, les individus se protègent par le déni et l’impuissance.
-        Les responsables doivent rendre l’action psychiquement et collectivement possible.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Produire un <strong>espoir rationnel</strong> : un objectif réalisable, même à faible probabilité,
-        qui devienne objet de volonté collective et s’appuie sur des démonstrations concrètes.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Exemples de bifurcation après des excès : l’otium romain, le zen japonais (samouraïs),
-        et la légende de Saint Julien l’Hospitalier (Flaubert).
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Polarisation -->
-    <blockquote>« Les êtres humains, ils sont polarisés. »</blockquote>
-    <blockquote>« … attirés par une chose et le contraire de la chose … par le meilleur et par le pire… »</blockquote>
-    <blockquote>« Le mot polarisé … a été produit par Gilbert Simondon. »</blockquote>
-
-    <!-- Déni -->
-    <blockquote>« … les gens dénient la réalité, qui est terrible. »</blockquote>
-    <blockquote>« … ils dénient parce que ce n'est pas supportable. »</blockquote>
-
-    <!-- Responsabilité / espoir -->
-    <blockquote>« … le travail des responsables … c'est de donner des raisons d'espérer. »</blockquote>
-    <blockquote>« … produire de l'espoir rationnel. »</blockquote>
-    <blockquote>« … un objectif réalisable, même s'il est réalisable à une chance sur un million. »</blockquote>
-
-    <!-- Bifurcations -->
-    <blockquote>« … il y a des bifurcations qui se produisent dans l'histoire … après des excès… »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (polarisation, déni, espoir, exemples historiques) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-Thème 14 — Médias & science compromise
-<section class="theme" id="t14">
-  <div class="theme-head">
-    <div class="kicker">Espace public / connaissance</div>
-    <h2>Médias “poubelle” et anti-science : boîtes noires, licences, corrélations sans explication</h2>
-    <p class="subtitle">
-      Les médias exploitent sensationnel/violence et dégradent l’intelligence collective.
-      Côté science, l’industrialisation des instruments et les logiques de licences produisent des “boîtes noires” incompatibles avec l’exigence d’explication.
-    </p>
-    <div class="tags">
-      <span class="tag">médias</span>
-      <span class="tag">addiction</span>
-      <span class="tag">boîtes noires</span>
-      <span class="tag">Aristote</span>
-      <span class="tag">post-vérité</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Sans espace public de débat et sans science explicative (cause/effet), la société bascule dans l’irrationalité :
-        croyances, manipulations et incapacité à gouverner la complexité.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Réinventer des médias comme espace de débat public, et défendre une science outillée par des instruments
-        dont le fonctionnement est accessible (contre les boîtes noires imposées).
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Critique de systèmes corrélationnels indéchiffrables ; critique de l’obligation d’acheter des instruments sous licence
-        interdisant de connaître leur mode de fonctionnement.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Médias -->
-    <blockquote>« C'est une poubelle, les médias, aujourd'hui. »</blockquote>
-    <blockquote>« … le sensationnel, le sexe, le sang, etc. »</blockquote>
-
-    <!-- Anti-science / boîtes noires -->
-    <blockquote>« … les conditions … c'est de l'anti-science. »</blockquote>
-    <blockquote>« … renoncer à pouvoir expliquer ce qui se passe … dans les corrélations produites par les datas… »</blockquote>
-    <blockquote>« … ça produit des boîtes noires et vous ne pouvez pas expliquer ce qui se passe. »</blockquote>
-    <blockquote>« Aristote … le scientifique doit rendre compte … de la cause à effet. »</blockquote>
-    <blockquote>« … obligation … d'acheter des instruments … avec des licences … “le mode de fonctionnement … est secret”… »</blockquote>
-    <blockquote>« … c'est l'ère de la post-vérité. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (médias, science/boîtes noires) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-Thème 15 — Europe & Brexit
-<section class="theme" id="t15">
-  <div class="theme-head">
-    <div class="kicker">Europe</div>
-    <h2>Brexit : symptôme d’un échec européen et absence de politique industrielle</h2>
-    <p class="subtitle">
-      Le Brexit est présenté comme une catastrophe (notamment pour l’Irlande) et comme symptôme d’un échec de l’UE :
-      extension de modèles ultralibéraux, absence de politique industrielle, fuite des scientifiques.
-    </p>
-    <div class="tags">
-      <span class="tag">Brexit</span>
-      <span class="tag">UE</span>
-      <span class="tag">politique industrielle</span>
-      <span class="tag">Ars Industrialis</span>
-      <span class="tag">traité 2005</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Sans projet industriel et culturel, l’Europe devient un espace d’extension de dogmes, fragilise sa souveraineté,
-        et ne peut pas assumer sa responsabilité historique dans l’anthropocène.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Repenser un projet européen “au-delà des dogmes” : reconstruire une politique industrielle,
-        retenir scientifiques/ingénieurs, et porter une réponse à l’anthropocène à la hauteur des ressources européennes.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Slogan de 2004 : “Vous êtes consommateurs” ; critique de la TNT et du manque de stratégie face au numérique ;
-        départ des meilleurs scientifiques vers les États-Unis.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Brexit -->
-    <blockquote>« Le Brexit, c'est une catastrophe… d'abord pour l'Angleterre et pour l'Irlande. »</blockquote>
-    <blockquote>« … symptôme d'un échec catastrophique de l'Europe. »</blockquote>
-
-    <!-- Position UE -->
-    <blockquote>« Je suis un pro-européen. Mais j'ai voté non au traité constitutionnel de 2005. »</blockquote>
-    <blockquote>« … Ars Industrialis … pour penser un avenir de l'Europe… »</blockquote>
-
-    <!-- Critique institutionnelle -->
-    <blockquote>« … “Vous êtes européens, vous êtes consommateurs”… pour moi, c'était honteux… »</blockquote>
-    <blockquote>« … aujourd'hui l'Europe … c'est un espace d'extension des modèles ultralibéraux… »</blockquote>
-
-    <!-- Politique industrielle -->
-    <blockquote>« … il n'y en a pas de politique industrielle en Europe. »</blockquote>
-    <blockquote>« … on forme … les meilleurs scientifiques … mais ils ne restent pas en Europe, parce qu'on ne leur propose rien. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (Brexit/UE, politique industrielle) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-Thème 16 — Bouc émissaire (pharmacos), Assange, guerre civile mondiale
-<section class="theme" id="t16">
-  <div class="theme-head">
-    <div class="kicker">Violence sociale</div>
-    <h2>Bouc émissaire (pharmacos) : interrompre les circuits de vengeance, éviter la “guerre civile mondiale”</h2>
-    <p class="subtitle">
-      Sous pression (souffrance, déclassement, effets toxiques des “pharmaka”), les sociétés cherchent des boucs émissaires.
-      Stiegler insiste : une civilisation consiste à interrompre ces circuits de vengeance.
-    </p>
-    <div class="tags">
-      <span class="tag">pharmacos</span>
-      <span class="tag">bouc émissaire</span>
-      <span class="tag">victimisation</span>
-      <span class="tag">guerre civile mondiale</span>
-      <span class="tag">Assange</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        La montée des tensions peut conduire à des formes de violence de masse : expulsion de la violence subie sur des innocents,
-        polarisation, fragmentation politique — avec un risque de guerre civile généralisée.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Construire des dispositifs de “civilisation” : interrompre la vengeance, réorienter les frustrations,
-        produire des raisons d’espérer et des voies de transformation concrètes.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        Illustration par le mécanisme “chef → employé → famille” (violence déplacée).
-        Sur Assange : respect pour le courage, mais critique de son rôle dans l’élection de Trump.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Pharmacos / bouc émissaire -->
-    <blockquote>« … le bouc émissaire … en grec, ça se dit un pharmacos. »</blockquote>
-    <blockquote>« … expulser la violence que vous avez subie, la faire subir à quelqu'un d'autre. »</blockquote>
-    <blockquote>« … toute la civilisation … consiste à interrompre ces circuits de la vengeance. »</blockquote>
-    <blockquote>« … ça peut conduire à ce que j'appelle la guerre civile mondiale. »</blockquote>
-
-    <!-- Assange -->
-    <blockquote>« … je suis très malheureux de savoir ce qui lui arrive… »</blockquote>
-    <blockquote>« … c'est un type très savant… une pratique … courageuse… »</blockquote>
-    <blockquote>« … il a fait une énorme bêtise. Il a contribué à l'élection de Donald Trump. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (pharmacos/bouc émissaire, Assange) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
-
-Thème 17 — Conclusion : agir, démontrer, Nietzsche & nihilisme
-<section class="theme" id="t17">
-  <div class="theme-head">
-    <div class="kicker">Conclusion</div>
-    <h2>Agir plutôt que posturer : “miracle rationnel”, critique du nihilisme (Nietzsche)</h2>
-    <p class="subtitle">
-      La situation est dite objectivement désespérée ; c’est précisément là qu’il faut poser la “vraie question” :
-      produire des bifurcations néguentropiques par des démonstrations. Le nihilisme est décrit comme accomplissement par le calcul
-      et règne des moyennes.
-    </p>
-    <div class="tags">
-      <span class="tag">bifurcation</span>
-      <span class="tag">miracle rationnel</span>
-      <span class="tag">Nietzsche</span>
-      <span class="tag">nihilisme</span>
-      <span class="tag">règne des moyennes</span>
-    </div>
-  </div>
-
-  <div class="grid-2plus1">
-    <div class="box enjeu">
-      <div class="label">Enjeu</div>
-      <p>
-        Éviter l’effondrement du désir d’avenir : quand la perspective disparaît, dominent la cupidité, le narcissisme,
-        la moyenne et l’indifférence — et la transformation devient politiquement impossible.
-      </p>
-    </div>
-
-    <div class="box proposition">
-      <div class="label">Proposition</div>
-      <p>
-        Produire des <strong>preuves</strong> (démonstrations) et des dispositifs réplicables, qui rendent la bifurcation crédible.
-        Lire Nietzsche pour comprendre le nihilisme, et travailler la néguentropie comme horizon de reconstruction.
-      </p>
-    </div>
-
-    <div class="box exemple">
-      <div class="label">Exemple</div>
-      <p>
-        “Théorie rationnelle des miracles” : la négentropie comme “miracle” improbable mais réel.
-        Critique du règne du calcul et des moyennes.
-      </p>
-    </div>
-  </div>
-
-  <details>
-    <summary>Citations (extraits) <span class="hint">— déplier</span></summary>
-
-    <!-- Désespoir / vraie question -->
-    <blockquote>« … objectivement, la situation du monde, il n'y a aucune chance qu'on s'en sorte. »</blockquote>
-    <blockquote>« C'est la seule question qui mérite qu'on se pose. Quand il n'y a aucune possibilité, c'est là qu'on se pose la vraie question. »</blockquote>
-
-    <!-- Démonstration -->
-    <blockquote>« … il faut passer … à faire des choses démonstratives et efficaces. »</blockquote>
-
-    <!-- Miracle rationnel / négentropie -->
-    <blockquote>« … petite théorie rationnelle des miracles… »</blockquote>
-    <blockquote>« La négantropie, c'est un miracle. »</blockquote>
-    <blockquote>« … du point de vue des probabilités, c'est absolument improbable. Eh bien, ça se produit quand même. »</blockquote>
-
-    <!-- Nihilisme -->
-    <blockquote>« Ce ne sont pas des valeurs, ce sont des dévalorisations dominantes. »</blockquote>
-    <blockquote>« … l'accomplissement du nihilisme … par le calcul. »</blockquote>
-    <blockquote>« … le règne des moyennes. »</blockquote>
-    <blockquote>« … le goût de la vie même est en train de s'effondrer. »</blockquote>
-  </details>
-
-  <div class="source">Source : transcription (conclusion, miracles/négentropie, Nietzsche/nihilisme) + CR.</div>
-    <div class="toprow">
-        <a class="toplink" href="#top">Haut de page</a>
-    </div>
-</section>
 </html>
