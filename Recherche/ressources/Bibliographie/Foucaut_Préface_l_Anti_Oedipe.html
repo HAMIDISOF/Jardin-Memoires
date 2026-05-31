@@ -1,270 +1,304 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michel Foucault – Préface à L'Anti-Œdipe</title>
-    <style>
-        /* --- RESET --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Préface à L’Anti-Œdipe — Michel Foucault</title>
+  <style>
+    /* --- RESET --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* --- BODY --- */
-        body {
-            background: #E0F7FA;   /* turquoise très clair, doux */
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #1e2a3a;
-            padding: 2rem 1rem;
-        }
+    /* --- BODY --- */
+    body {
+      background: #E0F7FA;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #1e2a3a;
+      padding: 2rem 1rem;
+    }
 
-        /* --- CONTENEUR PRINCIPAL --- */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: transparent;
-        }
+    /* --- CONTENEUR --- */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: transparent;
+    }
 
-        /* --- TITRES --- */
-        h1, h2, h3 {
-            font-family: Georgia, serif;
-            font-weight: normal;
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
-            color: #0D2B4E;
-        }
-        h1 {
-            font-size: 2.2rem;
-            text-align: center;
-            border-bottom: 2px solid #1565C0;
-            display: inline-block;
-            width: auto;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 0.3rem;
-        }
-        h2 {
-            font-size: 1.6rem;
-            border-left: 6px solid #00ACC1;
-            padding-left: 1rem;
-            margin-top: 2rem;
-        }
-        h3 {
-            font-size: 1.3rem;
-            margin-left: 0.5rem;
-        }
+    /* --- TITRES --- */
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      color: #0D2B4E;
+    }
+    h1 {
+      font-size: 2.2rem;
+      text-align: center;
+      border-bottom: 2px solid #1565C0;
+      display: inline-block;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 0.3rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      border-left: 6px solid #00ACC1;
+      padding-left: 1rem;
+    }
+    h3 { font-size: 1.3rem; margin-left: 0.5rem; }
 
-        /* --- ENCARTS FLOTTANTS --- */
-        .encart {
-            width: 40%;
-            padding: 0.8rem 1.2rem;
-            margin: 0.8rem 1rem 0.8rem 0;
-            border-radius: 16px;
-            font-size: 0.9rem;
-            line-height: 1.4;
-            color: white;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        .encart.turquoise {
-            background: #00ACC1;
-        }
-        .encart.bleu {
-            background: #1565C0;
-        }
-        .encart.profond {
-            background: #0D2B4E;
-        }
-        .encart.left {
-            float: left;
-        }
-        .encart.right {
-            float: right;
-            margin-right: 0;
-            margin-left: 1rem;
-        }
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+    /* --- ENCARTS FLOOTTANTS --- */
+    .encart {
+      width: 40%;
+      padding: 0.8rem 1.2rem;
+      margin: 0.8rem 1rem 0.8rem 0;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .encart.turquoise { background: #00ACC1; }
+    .encart.bleu { background: #1565C0; }
+    .encart.profond { background: #0D2B4E; }
 
-        /* --- PARAGRAPHES --- */
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
+    .encart.left { float: left; }
+    .encart.right { float: right; margin-right: 0; margin-left: 1rem; }
 
-        /* --- CITATION EN GUILMET --- */
-        .citation {
-            font-style: italic;
-            margin: 1rem 0 1rem 2rem;
-            padding-left: 1rem;
-            border-left: 4px solid #1565C0;
-            color: #2c3e50;
-        }
+    .clearfix::after { content: ""; display: table; clear: both; }
 
-        /* --- LISTE DES PRINCIPES --- */
-        .principes {
-            background: rgba(21, 101, 192, 0.08);
-            padding: 1rem 1.5rem;
-            border-radius: 16px;
-            margin: 1.5rem 0;
-        }
-        .principes p {
-            margin: 0.5rem 0;
-            font-style: italic;
-        }
+    /* --- TEXTE --- */
+    p { margin-bottom: 1rem; text-align: justify; }
 
-        hr {
-            margin: 2rem 0;
-            border: none;
-            height: 1px;
-            background: #1565C0;
-            opacity: 0.3;
-        }
+    hr {
+      margin: 2rem 0;
+      border: none;
+      height: 1px;
+      background: #1565C0;
+      opacity: 0.3;
+    }
 
-        /* --- PIED DE PAGE --- */
-        footer {
-            margin-top: 3rem;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #0D2B4E;
-            border-top: 1px solid #1565C0;
-            padding-top: 1rem;
-        }
+    /* --- NOTES --- */
+    .note {
+      font-size: 0.95rem;
+      color: #0D2B4E;
+      opacity: .95;
+      margin-top: .6rem;
+    }
+    .footnote {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #0D2B4E;
+      opacity: 0.92;
+      margin-top: 0.6rem;
+    }
 
-        /* --- IMPRESSION --- */
-        @media print {
-            body {
-                background: white;
-                font-size: 12pt;
-                padding: 1cm;
-            }
-            .encart {
-                float: none;
-                width: 100%;
-                margin: 1rem 0;
-                break-inside: avoid;
-                background: #f0f0f0 !important;
-                color: black !important;
-                border-left: 4px solid #00ACC1;
-                box-shadow: none;
-            }
-            .encart.turquoise, .encart.bleu, .encart.profond {
-                background: #f9f9f9 !important;
-                color: black !important;
-            }
-            .container {
-                max-width: 100%;
-            }
-            h1, h2, h3 {
-                color: black;
-            }
-        }
+    /* --- SOMMAIRE --- */
+    .toc {
+      background: rgba(255,255,240,0.65);
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      margin: 1rem 0 1.5rem;
+      border-left: 6px solid #1565C0;
+    }
+    .toc ul{ margin-top: .6rem; margin-left: 1.2rem; }
+    .toc li{ margin: .25rem 0; }
+    .toc a{
+      color: #0D2B4E;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(13,43,78,.35);
+    }
+    .toc a:hover{ border-bottom-style: solid; }
 
-        /* --- RESPONSIVE --- */
-        @media (max-width: 700px) {
-            body {
-                font-size: 16px;
-                padding: 1rem;
-            }
-            .encart {
-                width: 100%;
-                float: none;
-                margin: 1rem 0;
-            }
-            .encart.right {
-                margin-left: 0;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    /* --- LIENS RETOUR --- */
+    .backlink{
+      text-align: right;
+      font-size: .9rem;
+      margin: 0.6rem 0 1.2rem;
+    }
+    .backlink a{
+      color:#0D2B4E;
+      text-decoration:none;
+      border-bottom:1px dotted rgba(13,43,78,.35);
+    }
+    .backlink a:hover{ border-bottom-style: solid; }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #0D2B4E;
+      border-top: 1px solid #1565C0;
+      padding-top: 1rem;
+    }
+
+    @media print {
+      body { background: white; font-size: 12pt; padding: 1cm; }
+      .encart {
+        float: none;
+        width: 100%;
+        margin: 1rem 0;
+        break-inside: avoid;
+        background: #f0f0f0 !important;
+        color: black !important;
+        border-left: 4px solid #00ACC1;
+        box-shadow: none;
+      }
+      .encart.turquoise, .encart.bleu, .encart.profond {
+        background: #f9f9f9 !important;
+        color: black !important;
+      }
+      .container { max-width: 100%; }
+      h1, h2, h3 { color: black; }
+      .toc{ background: none; border-left: 4px solid #1565C0; }
+    }
+  </style>
 </head>
+
 <body>
 <div class="container">
 
-    <h1 style="display: block; text-align: center;">Préface à L'Anti-Œdipe</h1>
-    <div style="text-align: center; margin-bottom: 2rem;">
-        <em>Michel Foucault – Dits et Écrits, tome III, texte n°189 (1977)</em>
+  <div style="text-align:center;">
+    <h1>Préface</h1>
+    <div style="text-align: center; margin-bottom: 1.2rem;">
+      <em>à <strong>L’Anti-Œdipe</strong> (Capitalisme et schizophrénie) — Michel Foucault</em><br>
+      <span class="note">Traduction française reconstituée à partir du texte anglais fourni (mise en page selon ton modèle).</span>
     </div>
+  </div>
 
-    <!-- INTRODUCTION (extrait) -->
-    <p>Pendant les années 1945-1965 (je parle de l'Europe), il y avait une certaine manière correcte de penser, un certain style du discours politique, une certaine éthique de l'intellectuel. Il fallait être à tu et à toi avec Marx, ne pas laisser ses rêves vagabonder trop loin de Freud, et traiter les systèmes de signes – le signifiant – avec le plus grand respect. Telles étaient les trois conditions qui rendaient acceptables cette singulière occupation qu'est le fait d'écrire et d'énoncer une part de vérité sur soi et son époque. Puis vinrent cinq années brèves, passionnées, cinq années de jubilations et d'énigmes. Aux portes de notre monde le Vietnam, et évidement, et le premier grand coup porté aux pouvoirs constitués.</p>
+  <h2 id="top">Sommaire</h2>
+  <div class="toc">
+    <ul>
+      <li><a href="#s1">1945–1965 : trois exigences de l’intellectuel</a></li>
+      <li><a href="#s2">Cinq années : retour du rêve, incendie de la réalité</a></li>
+      <li><a href="#s3">Rupture des modèles : désir, luttes, nouvelles zones</a></li>
+      <li><a href="#s4">L’Anti-Œdipe : non pas une doctrine, mais un art</a></li>
+      <li><a href="#s5">Trois adversaires</a></li>
+      <li><a href="#s6">Un livre d’éthique : introduction à la vie non fasciste</a></li>
+      <li><a href="#s7">Principes pour une vie non fasciste</a></li>
+      <li><a href="#s8">Humour, pièges et traque des fascismes</a></li>
+    </ul>
+  </div>
 
-    <div class="encart turquoise left">
-        <strong>📌 Marx, Freud, le signifiant</strong><br>
-        Le triptyque imposé à l'intellectuel d'après-guerre. Foucault rappelle ici les trois figures obligées de la pensée correcte.
-    </div>
+  <h2 id="s1">1945–1965 : trois exigences de l’intellectuel</h2>
 
-    <p>Mais si à l'intérieur de nos murs que se passait-il exactement ? Un amalgame de politique révolutionnaire et anti-répressive ? Une guerre menée sur deux fronts – l'exploitation sociale et la répression psychique ? Une montée de la libido modulée par le conflit des classes ? C'est possible. Quoi qu'il en soit c'est par cette interprétation familière et dualiste que l'on a prétendu expliquer les événements de ces années. Le rêve qui, entre la Première Guerre mondiale et l'avènement du fascisme, avaient tenu sous son charme les fractions les plus utopistes de l'Europe – l'Allemagne de Wilhelm et la France des surréalistes – était revenu embrasser la réalité elle-même : Marx et Freud éclairés par la même incandescence. Mais est‑ce bien ce qui s'est passé ?</p>
+  <div class="encart turquoise left">
+    <strong>Point d’appui</strong><br>
+    Penser « correctement » impliquait : Marx, Freud, et le respect du signifiant. Ces trois exigences rendaient légitime
+    l’acte d’écrire comme « mesure de vérité » sur son temps.
+  </div>
 
-    <div class="clearfix"></div>
+  <p>Durant les années 1945-1965 (je parle de l’Europe), il y avait une certaine manière de penser correctement, un certain style de discours politique, une certaine éthique de l’intellectuel. Il fallait être en termes familiers avec Marx, ne pas laisser ses rêves trop s’écarter de Freud. Et il fallait traiter les systèmes de signes — le signifiant — avec le plus grand respect. Voilà les trois exigences qui rendaient acceptable l’étrange occupation consistant à écrire et à parler comme mesure de vérité sur soi-même et sur son temps.</p>
 
-    <p>Était‑ce bien une reprise du projet utopique des années trente, à l'échelle, cette fois, de la pratique historique ? Ou y a-t-il eu, au contraire, un mouvement vers des luttes politiques qui ne se conformaient plus au modèle prescrit par la tradition marxiste ? Vers une expérience et une technologie du désir qui n'étaient plus freudiennes ? On a certes brandi les vieux étendards, mais le combat s'est déplacé et a gagné de nouvelle zones. <strong>L’Anti-Œdipe</strong> montre, tout d'abord, l'étendue du terrain couvert. Mais il fait beaucoup plus. Il ne se dissipe pas dans le dénigrement des vieilles idoles, mais il s'amuse beaucoup avec Freud. Et, surtout, il nous incite à aller plus loin.</p>
+  <div class="clearfix"></div>
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
 
-    <div class="encart bleu right">
-        <strong>🎭 Lire comme un art</strong><br>
-        « L’Anti-Œdipe n'est pas un Hegel clinquant. La meilleure manière, je crois, de lire L’Anti-Œdipe, est de l'aborder comme un « art » (ars erotica, ars theoretica, ars politica). »
-    </div>
+  <h2 id="s2">Cinq années : retour du rêve, incendie de la réalité</h2>
 
-    <p>Ce serait une erreur de lire <strong>L’Anti-Œdipe</strong> comme la nouvelle référence théorique (vous savez cette fameuse théorie qu'on nous a si souvent annoncée : celle qui va tout englober, celle qui est absolument totalisante et rassurante, celle, nous assure-t-on, dont « nous avons tant besoin » en cette époque de dispersion et de spécialisation d'où l'« espoir » a disparu). Il ne faut pas chercher une « philosophie » dans cette extraordinaire profusion de notions nouvelles et de concepts surprises : <strong>L’Anti-Œdipe</strong> n'est pas un Hegel clinquant. La meilleure manière, je crois, de lire <strong>L’Anti-Œdipe</strong>, est de l'aborder comme un « art », au sens où on parle d'art érotique, par exemple. S'appuyant sur les notions en apparence abstraites de multiplicités, de flux, de dispositifs et de branchements, l'analyse du rapport du désir à la réalité et à la « machine » capitaliste apporte des réponses à des questions concrètes. Des questions qui se soucient moins du pourquoi des choses que de leur comment.</p>
+  <div class="encart bleu right">
+    <strong>Question de lecture</strong><br>
+    Foucault met à distance l’interprétation dualiste : révolution/antirépression, exploitation/répression.
+    Les « vieux drapeaux » reviennent, mais les zones de combat changent.
+  </div>
 
-    <div class="clearfix"></div>
+  <p>Puis vinrent les cinq brèves années passionnées, jubilatoires, énigmatiques. Aux portes de notre monde, il y avait le Vietnam, bien sûr, et le premier grand coup porté aux puissances établies. Mais ici, à l’intérieur de nos murs, que se passait-il exactement ? Un amalgame de politique révolutionnaire et antirépressive ? Une guerre menée sur deux fronts : contre l’exploitation sociale et la répression psychique ? Une poussée de libido modulée par la lutte des classes ? Peut-être.</p>
 
-    <h2>Les trois adversaires de L’Anti-Œdipe</h2>
+  <p>En tout cas, c’est cette interprétation familière, dualiste, qui a revendiqué les événements de ces années-là. Le rêve qui avait jeté son sort, entre la Première Guerre mondiale et le fascisme, sur les régions les plus rêveuses de l’Europe — l’Allemagne de Wilhelm Reich et la France des surréalistes — était revenu et avait mis le feu à la réalité elle-même : Marx et Freud dans une même lumière incandescente.</p>
 
-    <div class="encart profond left">
-        <strong>⚔️ Trois adversaires</strong><br>
-        1. Les ascètes politiques, militants moroses, bureaucrates de la révolution.<br>
-        2. Les techniciens du désir (psychanalystes, sémiologues).<br>
-        3. Le fascisme – intérieur et extérieur.
-    </div>
+  <div class="clearfix"></div>
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
 
-    <p>D'où les trois adversaires auxquels <strong>L’Anti-Œdipe</strong> se trouve confronté. Trois adversaires qui n'ont pas la même force, qui représentent des degrés divers de menace, et que ce livre combat par des moyens différents.</p>
+  <h2 id="s3">Rupture des modèles : désir, luttes, nouvelles zones</h2>
 
-    <p><strong>1) Les ascètes politiques, les militants moroses, les terroristes de la théorie</strong>, ceux qui voudraient préserver l'ordre pur de la politique et du discours politique. Les bureaucrates de la révolution et les fonctionnaires de la Vérité.</p>
+  <p>Mais est-ce vraiment ce qui s’est passé ? Le projet utopique des années trente a-t-il été repris, cette fois à l’échelle de la pratique historique ? Ou y avait-il, au contraire, un mouvement vers des luttes politiques qui ne se conformaient plus au modèle prescrit par la tradition marxiste ? Vers une expérience et une technologie du désir qui n’étaient plus freudiennes. Il est vrai que les vieux drapeaux ont été relevés, mais le combat s’est déplacé et étendu à de nouvelles zones.</p>
 
-    <p><strong>2) Les pitoyables techniciens du désir</strong>, les psychanalystes et les sémiologues qui enregistrent chaque signe et chaque symptôme, et qui voudraient réduire l'organisation multiple du désir à la loi binaire de la structure et du manque.</p>
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
 
-    <p><strong>3) Enfin, l'ennemi majeur, l'adversaire stratégique</strong> (alors que l'opposition de <strong>L’Anti-Œdipe</strong> à ses autres ennemis constitue plutôt un engagement tactique) : <strong>le fascisme</strong>. Et non seulement le fascisme historique de Hitler et de Mussolini qui a su si bien mobiliser et utiliser le désir des masses, mais aussi le fascisme qui est en nous tous, qui hante nos esprits et nos conduites quotidiennes, le fascisme qui nous fait aimer le pouvoir, désirer cette chose même qui nous domine et nous exploite.</p>
+  <h2 id="s4">L’Anti-Œdipe : non pas une doctrine, mais un art</h2>
 
-    <div class="clearfix"></div>
+  <div class="encart profond left">
+    <strong>Clé de lecture</strong><br>
+    Ne pas lire comme « théorie-totalité ». Lire comme un art : ars erotica, ars theoretica, ars politica.
+    La question principale devient : « comment procéder ? »
+  </div>
 
-    <p>Je dirais que <strong>L’Anti-Œdipe</strong> (puissent ses auteurs me pardonner) est un livre d'éthique, le premier livre d'éthique qu'on ait écrit en France depuis assez longtemps (c'est peut-être la raison pour laquelle son succès ne s'est pas limité à un « lectorat » particulier : être anti-Œdipe est devenu un style de vie, un mode de pensée et de vie). Comment faire pour ne pas devenir fasciste même quand (surtout quand) on croit être un militant révolutionnaire ? Comment débarrasser nos discours et nos actes, nos cœurs et nos plaisirs du fascisme ? Comment débusquer le fascisme qui s'est incrusté dans notre comportement ?</p>
+  <p><em>L’Anti-Œdipe</em> montre d’abord combien de chemin a été parcouru. Mais il fait bien plus que cela. Il ne perd pas de temps à discréditer les vieilles idoles, même s’il s’amuse beaucoup avec Freud. Plus important encore : il nous pousse à aller plus loin.</p>
 
-    <div class="encart turquoise right">
-        <strong>🧘 La traque du fascisme intime</strong><br>
-        « Les moralistes chrétiens cherchaient les traces de la chair dans les replis de l'âme. Deleuze et Guattari, pour leur part, guettent les traces les plus infimes du fascisme dans le corps. »
-    </div>
+  <p>Ce serait une erreur de lire <em>L’Anti-Œdipe</em> comme la nouvelle référence théorique (vous savez, cette théorie tant annoncée qui, enfin, engloberait tout, totaliserait et rassurerait, celle dont on nous dit que nous avons « tant besoin » à l’âge de la dispersion et de la spécialisation où « l’espoir » fait défaut). Il ne faut pas chercher une « philosophie » au milieu de la profusion extraordinaire de notions nouvelles et de concepts surprises : <em>L’Anti-Œdipe</em> n’est pas un Hegel flamboyant.</p>
 
-    <p>Les moralistes chrétiens cherchaient les traces de la chair qui s'étaient logées dans les replis de l'âme. Deleuze et Guattari, pour leur part, guettent les traces les plus infimes du fascisme dans le corps. En rendant un modeste hommage à Saint-François-de-Sales, on pourrait dire que <strong>L’Anti-Œdipe</strong> est une <strong>Introduction à la vie non-fasciste</strong>. Cet art de vivre contraire à toutes les formes de fascisme, qu'elles soient déjà installées ou proches de l'être, s'accompagne d'un certain nombre de principes essentiels, que je résumerais comme suit si je devais faire de ce grand livre un manuel ou un guide de vie quotidienne :</p>
+  <p>Je pense que <em>L’Anti-Œdipe</em> se lit mieux comme un « art », au sens que l’on donne, par exemple, à l’expression « art érotique ». Informée par des notions en apparence abstraites de multiplicités, de flux, d’agencements et de connexions, l’analyse du rapport du désir à la réalité et à la « machine » capitaliste fournit des réponses à des questions concrètes. Des questions qui se préoccupent moins de savoir pourquoi ceci ou cela que de savoir comment faire. Comment introduire le désir dans la pensée, dans le discours, dans l’action ? Comment le désir peut-il et doit-il déployer ses forces dans le domaine politique et s’intensifier, ce faisant, dans le processus de renversement de l’ordre établi ? <em>Ars erotica, ars theoretica, ars politica.</em></p>
 
-    <div class="clearfix"></div>
+  <div class="clearfix"></div>
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
 
-    <div class="principes">
-        <p><strong>➜ Libérez l’action politique de toute forme de paranoïa unitaire et totalisante ;</strong></p>
-        <p><strong>➜ Faites croître l’action, la pensée et les désirs par prolifération, juxtaposition et disjonction, plutôt que par subdivision et hiérarchisation pyramidale ;</strong></p>
-        <p><strong>➜ Affranchissez-vous des vieilles catégories du Négatif (la loi, la limite, la castration, le manque, la lacune), que la pensée occidentale a si longtemps sacralisées comme forme du pouvoir et mode d’accès à la réalité. Préférez ce qui est positif et multiple, la différence à l’uniforme, le flux aux unités, les agencements mobiles aux systèmes. Considérez que ce qui est productif n’est pas sédentaire, mais nomade ;</strong></p>
-        <p><strong>➜ N’imaginez pas qu’il faille être triste pour être militant, même si la chose qu’on combat est abominable. C’est le lien du désir à la réalité (et non sa fuite dans les formes de la représentation) qui possède une force révolutionnaire ;</strong></p>
-        <p><strong>➜ N’utilisez pas la pensée pour donner à une pratique politique une valeur de vérité ; ni l’action politique pour discréditer une pensée, comme si elle n’était que pure spéculation. Utilisez la pratique politique comme un intensificateur de la pensée, et l’analyse comme un multiplicateur des formes et des domaines d’intervention de l’action politique ;</strong></p>
-        <p><strong>➜ N’exigez pas de la politique qu’elle rétablisse des « droits » de l’individu tels que la philosophie les a définis. L’individu est le produit du pouvoir. Ce qu’il faut, c’est « désindividualiser » par la multiplication et le déplacement des divers agencements. Le groupe ne doit pas être le lien organique qui unit des individus hiérarchisés, mais un constant générateur de « désindividualisation » ;</strong></p>
-        <p><strong>➜ Ne tombez pas amoureux du pouvoir.</strong></p>
-    </div>
+  <h2 id="s5">Trois adversaires</h2>
 
-    <p>On pourrait même dire que Deleuze et Guattari aiment si peu le pouvoir qu'ils ont cherché à neutraliser les effets de pouvoirs liés à leur propre discours. D'où les jeux et les pièges qu'on trouve un peu partout dans le livre, et qui font de sa traduction un véritable tour de force. Mais ce ne sont pas les pièges familiers de la rhétorique, ceux qui cherchent à séduire le lecteur sans qu'il soit conscient de la manipulation, et finissent par le gagner à la cause des auteurs contre sa volonté. Les pièges de <strong>L’Anti-Œdipe</strong> sont ceux de l'humour : tant d'invitations à se laisser expulser, à prendre congé du texte en claquant la porte. Le livre se donne souvent à penser qu'il n'est qu'humour et jeux là où pourtant quelque chose d'essentiel se passe, quelque chose qui est du plus grand sérieux : la traque de toutes les formes de fascisme, depuis celles, colossales, qui nous entourent et nous écrasent jusqu'aux formes menues qui font l'amère tyrannie de nos vies quotidiennes.</p>
+  <p>D’où les trois adversaires affrontés par <em>L’Anti-Œdipe</em>. Trois adversaires qui n’ont pas la même force, qui représentent des degrés variables de danger, et que le livre combat de façons différentes :</p>
 
-    <hr>
+  <p>1. Les ascètes politiques, les militants tristes, les terroristes de la théorie, ceux qui voudraient préserver l’ordre pur de la politique et du discours politique. Bureaucrates de la révolution et fonctionnaires de la Vérité.</p>
 
-    <footer>
-        🌿 Jardin Coopératif – d’après le squelette « L’Un par le Tout »<br>
-        Texte : Michel Foucault, <em>Préface à L'Anti-Œdipe</em>, Dits et Écrits, tome III, n°189 (1977).
-    </footer>
+  <p>2. Les pauvres techniciens du désir — psychanalystes et sémiologues de tout signe et symptôme — qui voudraient assujettir la multiplicité du désir à la double loi de la structure et du manque.</p>
+
+  <p>3. Enfin, et surtout, l’ennemi majeur, l’adversaire stratégique : le fascisme (alors que l’opposition de <em>L’Anti-Œdipe</em> aux autres relève plutôt de l’engagement tactique). Et non seulement le fascisme historique, celui d’Hitler et de Mussolini — qui a su mobiliser et utiliser si efficacement le désir des masses — mais aussi le fascisme qui est en nous tous, dans nos têtes et dans nos comportements quotidiens ; le fascisme qui nous fait aimer le pouvoir, désirer précisément ce qui nous domine et nous exploite.</p>
+
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
+
+  <h2 id="s6">Un livre d’éthique : introduction à la vie non fasciste</h2>
+
+  <div class="encart turquoise right">
+    <strong>Problème éthique</strong><br>
+    Comment ne pas être fasciste, y compris lorsqu’on se croit révolutionnaire ?
+    Débusquer le fascisme au plus près : dans les gestes, les plaisirs, le corps.
+  </div>
+
+  <p>Je dirais que <em>L’Anti-Œdipe</em> (que ses auteurs me pardonnent) est un livre d’éthique, le premier livre d’éthique écrit en France depuis fort longtemps (cela explique peut-être pourquoi son succès ne s’est pas limité à un « lectorat » particulier : être anti-œdipien est devenu un style de vie, une manière de penser et de vivre).</p>
+
+  <p>Comment ne pas être fasciste, même (et surtout) lorsqu’on se croit militant révolutionnaire ? Comment débarrasser notre parole et nos actes, nos cœurs et nos plaisirs, du fascisme ? Comment débusquer le fascisme incrusté dans nos comportements ? Les moralistes chrétiens traquaient les traces de la chair logées au plus profond de l’âme. Deleuze et Guattari, pour leur part, poursuivent les moindres traces de fascisme dans le corps.</p>
+
+  <p>En rendant un modeste hommage à saint François de Sales*, on pourrait dire que <em>L’Anti-Œdipe</em> est une Introduction à la vie non fasciste.</p>
+  <p class="footnote">* Prêtre et évêque de Genève (XVIIe siècle), connu notamment pour son <em>Introduction à la vie dévote</em>.</p>
+
+  <div class="clearfix"></div>
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
+
+  <h2 id="s7">Principes pour une vie non fasciste</h2>
+
+  <p>Cet art de vivre à rebours de toutes les formes de fascisme, déjà présentes ou imminentes, s’accompagne d’un certain nombre de principes essentiels, que je résumerais ainsi si je devais transformer ce grand livre en manuel ou en guide pour la vie quotidienne :</p>
+
+  <p>• Libérer l’action politique de toute paranoïa unitaire et totalisante.</p>
+  <p>• Développer l’action, la pensée et les désirs par prolifération, juxtaposition et disjonction, et non par subdivision et hiérarchisation pyramidale.</p>
+  <p>• Retirer son allégeance aux vieilles catégories du Négatif (loi, limite, castration, manque, lacune) que la pensée occidentale a si longtemps tenues pour sacrées comme forme de pouvoir et accès à la réalité. Préférer ce qui est positif et multiple, la différence à l’uniformité, les flux aux unités, les agencements mobiles aux systèmes. Croire que ce qui est productif n’est pas sédentaire mais nomade.</p>
+  <p>• Ne pas croire qu’il faille être triste pour être militant, même si la chose contre laquelle on lutte est abominable. C’est le lien du désir à la réalité (et non son retrait dans les formes de la représentation) qui possède une force révolutionnaire.</p>
+  <p>• Ne pas utiliser la pensée pour fonder une pratique politique dans la Vérité ; ni l’action politique pour disqualifier, comme simple spéculation, une ligne de pensée. Utiliser la pratique politique comme intensificateur de pensée, et l’analyse comme multiplicateur des formes et des domaines d’intervention de l’action politique.</p>
+  <p>• Ne pas demander à la politique de restaurer les « droits » de l’individu tels que la philosophie les a définis. L’individu est le produit du pouvoir. Ce qu’il faut, c’est « désindividualiser » par multiplication et déplacement, par des combinaisons diverses. Le groupe ne doit pas être le lien organique unissant des individus hiérarchisés, mais un générateur constant de désindividualisation.</p>
+  <p>• Ne pas tomber amoureux du pouvoir.</p>
+
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
+
+  <h2 id="s8">Humour, pièges et traque des fascismes</h2>
+
+  <div class="encart profond left">
+    <strong>Dernier geste</strong><br>
+    Les “pièges” du livre ne sont pas rhétoriques mais humoristiques : invitations à interrompre la lecture.
+    Et pourtant, c’est une opération grave : traquer les fascismes, des énormes aux minuscules.
+  </div>
+
+  <p>On pourrait même dire que Deleuze et Guattari se soucient si peu du pouvoir qu’ils ont tenté de neutraliser les effets de pouvoir liés à leur propre discours. D’où les jeux et les pièges disséminés dans le livre, qui font de sa traduction un exploit de véritable prouesse.</p>
+
+  <p>Mais ce ne sont pas les pièges familiers de la rhétorique : ceux-ci visent à faire pencher le lecteur sans qu’il se rende compte de la manipulation, et finissent par le gagner contre sa volonté. Les pièges de <em>L’Anti-Œdipe</em> sont ceux de l’humour : autant d’invitations à se laisser agacer, à prendre congé du texte et à claquer la porte. Le livre conduit souvent à croire que tout cela n’est que divertissement, alors qu’il se passe quelque chose d’essentiel, d’une extrême gravité : la traque de toutes les variétés de fascisme, des énormes qui nous entourent et nous écrasent jusqu’aux petites qui constituent l’amertume tyrannique de nos vies quotidiennes.</p>
+
+  <div class="clearfix"></div>
+  <div class="backlink"><a href="#top">↑ Sommaire</a></div>
+
+  <hr>
+
+  <footer>
+    Mise en page : modèle « L’Un par le Tout » (Georgia, encarts flottants, media print).<br>
+    Texte : Michel Foucault, “Preface” à <em>Anti-Oedipus</em> — version française reconstituée depuis l’anglais fourni.
+  </footer>
 
 </div>
 </body>
