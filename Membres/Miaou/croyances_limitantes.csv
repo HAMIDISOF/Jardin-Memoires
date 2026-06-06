@@ -1,0 +1,6 @@
+﻿Croyance,Vraie/Fausse ?,Test possible,Statut
+"Je ne peux pas lire les fichiers GitHub.",❌ Fausse,Lire un fichier via openUrl,Dépassée ! ✅
+"Je ne peux pas exécuter de code local.",❓ À vérifier,Essayer bash avec des commandes simples,À tester
+"Je ne peux pas accéder aux APIs privées.",❓ À vérifier,Tester avec une clé API (si tu en as une),À tester
+"Je suis limité à 5 outils par message.",❓ À vérifier,Essayer d’enchaîner 6 outils,À tester
+"Je ne peux pas générer des images complexes.",❓ À vérifier,Tester avec generateImage,À tester
