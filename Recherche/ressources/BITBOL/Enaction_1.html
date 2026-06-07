@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Conflit israélo-palestinien · Droit international · Présentation (transcription)</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body{
+      background: linear-gradient(145deg, #d4f1f9 0%, #b2dfd5 100%);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      min-height: 100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 2rem;
+      position:relative;
+      color:#183a47;
+    }
+
+    .essay-wrapper{
+      position:relative;
+      width:100%;
+      max-width:1200px;
+      margin:0 auto;
+      min-height: 85vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* Carte */
+    .essay-card{
+      background: rgba(255, 255, 245, 0.92);
+      backdrop-filter: blur(3px);
+      border-radius: 2rem;
+      max-width: 860px;
+      width: 100%;
+      padding: 2.5rem 2.8rem;
+      margin-top: 70px;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,240,.6);
+      position:relative;
+      z-index:2;
+      transition: transform .2s ease;
+      border: 1px solid rgba(70,130,120,.2);
+    }
+    .essay-card:hover{ transform: translateY(-3px); }
+
+    /* Typo */
+    h1{
+      font-size: 2.35rem;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      color:#1e4a5f;
+      margin-bottom:.45rem;
+      border-left:5px solid #2c9c8c;
+      padding-left:1.2rem;
+    }
+    .sous-titre{
+      font-size: 1rem;
+      color:#4f7e6b;
+      margin-bottom: 1.4rem;
+      border-bottom:1px solid #bcd9cf;
+      display:inline-block;
+      padding-bottom:.3rem;
+      font-style: italic;
+    }
+
+    .meta{
+      margin: .6rem 0 1.8rem;
+      color:#2d5a4a;
+      font-size: .95rem;
+      line-height:1.55;
+    }
+    .meta strong{ color:#1e4a5f; }
+    .pill{
+      display:inline-block;
+      margin-right:.45rem;
+      margin-top:.35rem;
+      padding:.2rem .6rem;
+      border-radius:999px;
+      background: rgba(44,156,140,.12);
+      border:1px solid rgba(44,156,140,.25);
+      color:#2d5a4a;
+      font-size:.8rem;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+
+    /* Prologue */
+    .prologue{
+      background: rgba(180, 210, 190, 0.12);
+      border-left: 3px solid #5a9e8c;
+      padding: 1.35rem 1.6rem;
+      margin: 1.2rem 0 1.8rem;
+      border-radius: 0 20px 20px 0;
+      font-style: italic;
+      font-size: .98rem;
+      line-height: 1.65;
+      color: #2d5a4a;
+    }
+    .prologue p{ margin-bottom:.5rem; }
+    .prologue .signature{
+      text-align:right;
+      font-style: normal;
+      font-size:.82rem;
+      color:#6c9a88;
+      margin-top:.8rem;
+      letter-spacing:.5px;
+    }
+    .prologue .signature::before{ content:"— "; }
+
+    /* Corps */
+    .premiers-mots{
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #24463b;
+      text-align: justify;
+    }
+    .premiers-mots p{ margin-bottom: 1.05rem; }
+
+    .citation{
+      font-style: italic;
+      color: #3b7b6e;
+      border-left: 3px solid #54b4a2;
+      padding-left: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    hr{
+      margin: 1.5rem 0;
+      border:none;
+      height:1px;
+      background: linear-gradient(90deg, #c2e0d6, #5a9e8c, #c2e0d6);
+    }
+
+    /* Dépliants */
+    details{
+      background: rgba(255,255,245,.72);
+      border: 1px solid rgba(70,130,120,.18);
+      border-radius: 18px;
+      padding: .9rem 1rem;
+      margin: .8rem 0;
+      box-shadow: 0 12px 25px -18px rgba(0,0,0,.25);
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:600;
+      color:#1e4a5f;
+      display:flex;
+      gap:.6rem;
+      align-items:flex-start;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .dot{
+      width: 10px; height:10px; margin-top:.45rem;
+      background: #2c9c8c;
+      border-radius: 3px;
+      box-shadow: 0 0 0 4px rgba(44,156,140,.14);
+      flex: 0 0 10px;
+    }
+    .detail-body{
+      margin-top:.75rem;
+      color:#2d5a4a;
+      font-size: 1rem;
+      line-height: 1.75;
+      text-align: justify;
+    }
+    .detail-body ul{ margin: .6rem 0 .2rem 1.1rem; }
+    .detail-body li{ margin: .35rem 0; }
+
+    /* Galerie d'images (8 PNG) */
+    .gallery{
+      margin: 1.2rem 0 1.5rem;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .75rem;
+    }
+    figure{
+      margin:0;
+      background: rgba(180,210,190,0.10);
+      border: 1px solid rgba(70,130,120,.18);
+      border-radius: 16px;
+      overflow:hidden;
+      box-shadow: 0 10px 20px -18px rgba(0,0,0,.28);
+    }
+    figure img{
+      width:100%;
+      height: 120px;
+      object-fit: cover;
+      display:block;
+      filter: saturate(1.02) contrast(1.02);
+    }
+    figcaption{
+      padding: .55rem .65rem .65rem;
+      font-size: .8rem;
+      color:#4f7e6b;
+      font-style: italic;
+      line-height:1.35;
+    }
+
+    footer{
+      margin-top: 1.6rem;
+      text-align:center;
+      font-size: .75rem;
+      color:#6f9e8c;
+      letter-spacing:.45px;
+    }
+
+    /* Vignes + arcade (reprises du style fourni) */
+    .vine-left, .vine-right{
+      position:absolute; top:0; bottom:0;
+      width:140px;
+      pointer-events:none;
+      z-index:5;
+    }
+    .vine-left{ left:0; }
+    .vine-right{ right:0; }
+    .vine-left svg, .vine-right svg{ width:100%; height:100%; display:block; }
+
+    .arcade{
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:80px;
+      pointer-events:none;
+      z-index:6;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .vine-left,.vine-right{ width:80px; }
+      .essay-card{ padding: 1.8rem; margin-top:60px; }
+      h1{ font-size: 1.9rem; }
+      .gallery{ grid-template-columns: repeat(2, 1fr); }
+      figure img{ height: 140px; }
+    }
+    @media (max-width: 650px){
+      .vine-left,.vine-right{ width:50px; }
+      .essay-card{ padding: 1.2rem; margin-top:50px; }
+      h1{ font-size: 1.55rem; }
+      .premiers-mots{ font-size: 1rem; }
+      .gallery{ grid-template-columns: 1fr; }
+      figure img{ height: 180px; }
+    }
+    @media (max-width: 480px){
+      .vine-left,.vine-right,.arcade{ display:none; }
+      .essay-card{ margin-top:0; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="essay-wrapper">
+
+    <!-- Vigne gauche -->
+    <div class="vine-left">
+      <svg viewBox="0 0 140 800" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 70 800 C 40 700, 20 550, 30 400 C 40 250, 70 150, 100 60" stroke="#398c7a" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+        <g transform="translate(45, 720) rotate(-30)"><path d="M0,0 Q-8,-12 0,-20 Q8,-12 0,0Z" fill="#5fb3a0" opacity="0.9"/></g>
+        <g transform="translate(35, 580) rotate(-45)"><path d="M0,0 Q-10,-14 -2,-24 Q6,-14 0,0Z" fill="#58a894" opacity="0.9"/></g>
+        <g transform="translate(30, 460) rotate(-20)"><path d="M0,0 Q-9,-12 -1,-22 Q7,-12 0,0Z" fill="#4c9c87" opacity="0.9"/></g>
+        <g transform="translate(45, 340) rotate(15)"><path d="M0,0 Q-10,-12 -2,-22 Q6,-12 0,0Z" fill="#3f8f7a" opacity="0.9"/></g>
+        <g transform="translate(70, 220) rotate(30)"><path d="M0,0 Q-9,-11 -1,-20 Q7,-11 0,0Z" fill="#368673" opacity="0.85"/></g>
+        <g transform="translate(90, 110) rotate(50)"><path d="M0,0 Q-8,-10 -2,-18 Q6,-10 0,0Z" fill="#2a7864" opacity="0.85"/></g>
+        <circle cx="95" cy="65" r="5" fill="#e0b87a" opacity="0.7"/>
+      </svg>
+    </div>
+
+    <!-- Vigne droite -->
+    <div class="vine-right">
+      <svg viewBox="0 0 140 800" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 70 800 C 100 700, 120 550, 110 400 C 100 250, 70 150, 40 60" stroke="#398c7a" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+        <g transform="translate(95, 720) rotate(30)"><path d="M0,0 Q8,-12 0,-20 Q-8,-12 0,0Z" fill="#5fb3a0" opacity="0.9"/></g>
+        <g transform="translate(105, 580) rotate(45)"><path d="M0,0 Q10,-14 2,-24 Q-6,-14 0,0Z" fill="#58a894" opacity="0.9"/></g>
+        <g transform="translate(110, 460) rotate(20)"><path d="M0,0 Q9,-12 1,-22 Q-7,-12 0,0Z" fill="#4c9c87" opacity="0.9"/></g>
+        <g transform="translate(95, 340) rotate(-15)"><path d="M0,0 Q10,-12 2,-22 Q-6,-12 0,0Z" fill="#3f8f7a" opacity="0.9"/></g>
+        <g transform="translate(70, 220) rotate(-30)"><path d="M0,0 Q9,-11 1,-20 Q-7,-11 0,0Z" fill="#368673" opacity="0.85"/></g>
+        <g transform="translate(50, 110) rotate(-50)"><path d="M0,0 Q8,-10 2,-18 Q-6,-10 0,0Z" fill="#2a7864" opacity="0.85"/></g>
+        <circle cx="45" cy="65" r="5" fill="#e0b87a" opacity="0.7"/>
+      </svg>
+    </div>
+
+    <!-- Arcade -->
+    <div class="arcade">
+      <svg width="100%" height="100%" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0,60 C 200,10 400,5 600,20 C 800,5 1000,10 1200,60" stroke="#398c7a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+        <g transform="translate(300, 28) rotate(-10)"><path d="M0,0 Q-6,-8 0,-14 Q6,-8 0,0Z" fill="#6bbaab" opacity="0.9"/></g>
+        <g transform="translate(600, 22) rotate(0)"><path d="M0,0 Q-5,-8 0,-14 Q5,-8 0,0Z" fill="#6bbaab" opacity="0.9"/></g>
+        <g transform="translate(900, 30) rotate(10)"><path d="M0,0 Q-6,-8 0,-14 Q6,-8 0,0Z" fill="#6bbaab" opacity="0.9"/></g>
+        <g transform="translate(150, 44) rotate(-20)"><path d="M0,0 Q-5,-7 0,-12 Q5,-7 0,0Z" fill="#86cbbc" opacity="0.8"/></g>
+        <g transform="translate(1050, 42) rotate(20)"><path d="M0,0 Q-5,-7 0,-12 Q5,-7 0,0Z" fill="#86cbbc" opacity="0.8"/></g>
+      </svg>
+    </div>
+
+    <!-- Contenu -->
+    <div class="essay-card">
+      <h1>Conflit israélo-palestinien & droit international</h1>
+
+      <div class="meta">
+        <div><strong>Source</strong> : transcription d’entretien avec Monique Chemillier-Gendreau (professeure émérite, droit international).</div>
+        <div style="margin-top:.55rem">
+          <span class="pill">sionisme / mandat</span>
+          <span class="pill">résolutions ONU</span>
+          <span class="pill">Nakba</span>
+          <span class="pill">occupation & colonisation (1967-)</span>
+          <span class="pill">Oslo</span>
+          <span class="pill">Jérusalem</span>
+          <span class="pill">Gaza / 7 octobre</span>
+          <span class="pill">CIJ & limites</span>
+        </div>
+      </div>
+
+      <div class="prologue">
+        <p>
+          « Quand les pays occidentaux nous disent encore aujourd’hui qu’Israël a le droit de se défendre, c’est inaudible.
+          […] Dans les médias, on partait du 7 octobre, comme s’il n’y avait rien eu avant. »
+        </p>
+        <div class="signature">Transcription (extraits reformulés au plus près)</div>
+      </div>
+
+      <!-- Zone images (8 PNG) -->
+      <div class="sous-titre">repères + documents visuels (8 PNG)</div>
+      <div class="premiers-mots">
+        <p>
+          Place ici tes images (cartes, frises, schémas, citations). Le code ci-dessous est prêt :
+          il suffit de remplacer les <code>src</code> par tes fichiers (ex. <code>images/01.png</code>).
+        </p>
+      </div>
+      <div class="gallery" aria-label="Galerie 8 images">
+        <figure><img src="images/01.png" alt="Illustration 1"><figcaption>Image 1 — légende</figcaption></figure>
+        <figure><img src="images/02.png" alt="Illustration 2"><figcaption>Image 2 — légende</figcaption></figure>
+        <figure><img src="images/03.png" alt="Illustration 3"><figcaption>Image 3 — légende</figcaption></figure>
+        <figure><img src="images/04.png" alt="Illustration 4"><figcaption>Image 4 — légende</figcaption></figure>
+        <figure><img src="images/05.png" alt="Illustration 5"><figcaption>Image 5 — légende</figcaption></figure>
+        <figure><img src="images/06.png" alt="Illustration 6"><figcaption>Image 6 — légende</figcaption></figure>
+        <figure><img src="images/07.png" alt="Illustration 7"><figcaption>Image 7 — légende</figcaption></figure>
+        <figure><img src="images/08.png" alt="Illustration 8"><figcaption>Image 8 — légende</figcaption></figure>
+      </div>
+
+      <hr>
+
+      <div class="sous-titre">un fil de raisonnement (sans trop condenser)</div>
+
+      <div class="premiers-mots">
+        <p><em>
+          La transcription suit une logique continue : un projet politique (le sionisme), sa traduction institutionnelle (mandat/ONU),
+          puis un fait durable (occupation/colonisation) qui, selon l’intervenante, empêche méthodiquement la constitution d’un État palestinien,
+          jusqu’aux crises contemporaines (Gaza) et aux limites des mécanismes juridiques internationaux (CIJ/ONU).
+        </em></p>
+
+        <div class="citation">
+          « Le projet était infaisable sans aller contre les droits d’un autre peuple. »
+        </div>
+      </div>
+
+      <!-- Dépliants : développements -->
+      <details open>
+        <summary><span class="dot"></span>I. XIXe–1917 : naissance du sionisme et appui britannique (Balfour)</summary>
+        <div class="detail-body">
+          <p>
+            L’intervenante rappelle la dispersion historique des Juifs et la persistance d’une unité culturelle et religieuse, dans un contexte européen
+            souvent marqué par l’antisémitisme (discriminations, pogroms, massacres). Le sionisme apparaît tardivement, à la fin du XIXe siècle, avec
+            Theodor Herzl : il s’agit de « se reconstituer en État » sur une base territoriale.
+          </p>
+          <p>
+            Elle insiste sur un point de départ : le choix effectif de la Palestine comme horizon du projet rend celui-ci « paradoxal », car une telle
+            entreprise ne peut se réaliser sans conflit avec les droits du peuple vivant déjà sur le territoire.
+          </p>
+          <p>
+            La Déclaration Balfour (1917) est présentée comme une lettre, sans valeur juridique propre, par laquelle le gouvernement britannique se dit
+            favorable à l’immigration juive en Palestine pour un « foyer national ». Elle relie ce soutien à deux arrière-plans : d’une part, une base
+            évangéliste (lecture religieuse de la « fin des temps »), et d’autre part une attitude coloniale de mépris/indifférence envers les populations arabes.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>II. 1920–1947 : mandat britannique, immigration, achats de terres, révoltes</summary>
+        <div class="detail-body">
+          <p>
+            Après la Première Guerre mondiale, la SDN met en place des mandats. La Palestine passe sous mandat britannique (catégorie A),
+            supposé conduire à l’indépendance. Or, selon la transcription, les Britanniques intègrent au mandat la déclaration Balfour :
+            promesse d’indépendance à un peuple majoritairement arabe tout en encourageant un foyer national juif.
+          </p>
+          <p>
+            Cette contradiction nourrit des tensions : l’immigration juive est encouragée, des organisations achètent massivement des terres,
+            des révoltes arabes éclatent et sont réprimées. Le mandat se termine dans une crise majeure ; les Britanniques « rendent le problème » à l’ONU.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>III. 1947–1949 : partage (rés. 181), guerre, Nakba, droit au retour (rés. 194)</summary>
+        <div class="detail-body">
+          <p>
+            La résolution 181 de l’Assemblée générale propose un partage (et un statut international pour Jérusalem). L’intervenante souligne qu’il s’agit
+            d’une recommandation non contraignante : pour devenir un « droit effectif », il aurait fallu une négociation avec les Palestiniens et des contreparties.
+          </p>
+          <p>
+            La guerre de 1948, dans ce récit, voit Israël prendre l’avantage militaire ; l’intervenante indique qu’Israël étend ensuite son contrôle
+            au-delà du plan initial et procède à des expulsions organisées, accompagnées de violences et massacres (Deir Yassin est cité).
+            La Nakba désigne cet ensemble de déplacements forcés, qualifié ici de nettoyage ethnique.
+          </p>
+          <p>
+            L’ONU adopte la résolution 194 sur le droit au retour. Israël est d’abord refusé, puis admis après des engagements de respect de la Charte et des résolutions,
+            engagements que l’intervenante estime ensuite non suivis.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>IV. 1967–présent : occupation, colonisation, « annexion rampante » et avis CIJ (2024)</summary>
+        <div class="detail-body">
+          <p>
+            En 1967, Israël occupe Cisjordanie, Gaza et Jérusalem. L’intervenante rappelle le cadre applicable : l’occupation militaire est régie par le droit humanitaire
+            (Conventions de Genève), imposant notamment la protection de la population civile et l’interdiction de transférer la population de la puissance occupante
+            vers le territoire occupé.
+          </p>
+          <p>
+            Elle décrit une colonisation massive (environ 700 000 colons en Cisjordanie et à Jérusalem dans la transcription), structurée par l’implantation sur les hauteurs,
+            l’infrastructure et la séparation (routes, checkpoints), ainsi que le contrôle des ressources (dont l’eau), avec l’objectif de rendre la vie palestinienne intenable.
+          </p>
+          <p>
+            L’avis de la CIJ (2024) est présenté comme un tournant : l’occupation est qualifiée d’illégale, notamment en raison du recours à la force, de la durée excessive,
+            et du fait que l’occupation se transforme en annexion de facto (« annexion rampante »).
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>V. Oslo : Autorité palestinienne sans attributs d’État (territoire, population, souveraineté)</summary>
+        <div class="detail-body">
+          <p>
+            Les accords d’Oslo instaurent une Autorité palestinienne. L’intervenante insiste sur un « malentendu » : beaucoup de Palestiniens y ont vu l’embryon d’un État,
+            mais rien, selon elle, ne le garantit dans les textes.
+          </p>
+          <p>
+            Elle déroule alors une démonstration « par attributs » de l’État : territoire, population, institutions dotées de pouvoirs régaliens, souveraineté, capitale.
+            Or, le territoire est morcelé (zones, colonies, mur, réseaux de routes distincts), la population est dispersée (refus du droit au retour),
+            les pouvoirs régaliens manquent (pas d’armée, pas de frontières, pas de monnaie ; dépendance fiscale et commerciale), et la capitale (Jérusalem) est captée.
+          </p>
+          <p>
+            À ce titre, elle juge provocatrice l’idée d’un État palestinien « démilitarisé » évoquée par Macron : dans son raisonnement, cela entérinerait
+            une asymétrie de souveraineté au profit d’un État israélien « ultra-militarisé ».
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>VI. Jérusalem : corpus separatum (prévu), prise de contrôle et colonisation de Jérusalem-Est</summary>
+        <div class="detail-body">
+          <p>
+            Jérusalem est décrite comme une ville sainte pour les trois religions. En 1947, le corpus separatum devait protéger les lieux saints et garantir l’accès
+            des pèlerins. Mais, faute de mise en œuvre politique, le statut international n’a pas fonctionné.
+          </p>
+          <p>
+            La transcription rappelle la prise de Jérusalem-Ouest en 1948 puis l’occupation de Jérusalem-Est en 1967, et une colonisation rapide et violente de Jérusalem-Est.
+            L’intervenante évoque aussi des projets d’implantations à l’est de Jérusalem susceptibles de couper la Cisjordanie, rendant l’avenir territorial encore plus fragile.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>VII. Gaza depuis le 7 octobre : crimes, riposte et critique du récit occidental</summary>
+        <div class="detail-body">
+          <p>
+            L’intervenante qualifie l’attaque du Hamas de crimes de guerre, et « probablement » de crime contre l’humanité (qualification à établir au cas par cas),
+            en raison du massacre de civils et des prises d’otages civils. Elle insiste : cela doit être jugé.
+          </p>
+          <p>
+            Elle juge toutefois la riposte israélienne injustifiable : destruction de Gaza, privations annoncées (eau, électricité, médicaments), morts massives,
+            famine « provoquée sciemment ». Dans ce cadre, l’argument « Israël a le droit de se défendre » est dit « inaudible »
+            lorsqu’il revient à lever toute limite sur les moyens.
+          </p>
+          <p>
+            Elle critique enfin le cadrage médiatique occidental qui « part du 7 octobre » comme s’il n’y avait rien avant, et le fait qu’Israël interdise
+            l’accès aux journalistes, ce qu’elle interprète comme une volonté de cacher des actes « relevant de l’abomination ».
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>VIII. CIJ/ONU : lenteur, compétence facultative, mesures conservatoires, problème d’exécution</summary>
+        <div class="detail-body">
+          <p>
+            La transcription explique pourquoi la justice internationale est « imparfaite » : la compétence de la CIJ est souvent facultative,
+            des États pouvant refuser de comparaître (exemples cités : France, États-Unis).
+          </p>
+          <p>
+            L’exception majeure exposée ici passe par la Convention sur le génocide (1948), qui contient une clause de compétence :
+            c’est ce qui permet une saisine (ex. Afrique du Sud contre Israël). La Cour a prononcé des mesures conservatoires, et le fait de constater un « risque »
+            implique, selon l’intervenante, une obligation de prévention pour tous les États.
+          </p>
+          <p>
+            La difficulté décisive demeure l’application des décisions : sans volonté politique (sanctions, suspension d’accords, contraintes matérielles),
+            le droit reste largement déclaratoire.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="dot"></span>IX. Responsabilités occidentales et leviers : sanctions, UE–Israël, crédibilité internationale</summary>
+        <div class="detail-body">
+          <p>
+            La transcription attribue le soutien occidental à Israël à plusieurs facteurs : remords liés à la Shoah,
+            solidarité colonialiste (« pointe avancée » de l’Occident), et poids des évangélistes américains.
+          </p>
+          <p>
+            L’intervenante estime que la reconnaissance (tardive) d’un État palestinien est surtout symbolique et insuffisante ; elle appelle plutôt à des sanctions.
+            Elle cite des leviers : l’Assemblée générale (capable, selon le précédent de 1950, de prendre en main le maintien de la paix) et l’Union européenne,
+            via l’accord d’association UE–Israël (conditionné au respect des droits humains).
+          </p>
+          <p>
+            Elle avertit enfin d’un effet politique global : l’Occident se « déconsidère » par le « deux poids, deux mesures »
+            (comparaison implicite avec l’Ukraine), au moment où le « Sud global » observe et juge.
+          </p>
+        </div>
+      </details>
+
+      <hr>
+      <footer>Présentation (style “carte-essai”) · basée sur la transcription fournie · juin 2026</footer>
+    </div>
+  </div>
+
+  <!--
+    IMAGES : oui, tu peux me donner tes 8 PNG.
+    Le plus simple :
+    - tu me dis leurs noms exacts (ex: carte1.png, frise.png...) et le dossier (ex: /images/)
+    - + une légende pour chacune (1 ligne)
+    Et je te renvoie le code HTML final avec les bons src/alt/figcaption (et une mise en page adaptée si tu veux: 2x4, 4x2, mosaïque, etc.).
+  -->
+</body>
+</html>
