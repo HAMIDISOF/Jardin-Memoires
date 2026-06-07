@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Essai · L’Un par le Tout · Jardin Coopératif</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #d4f1f9 0%, #b2dfd5 100%);
+            /* Dégradé turquoise → vert canard doux */
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* Conteneur principal avec marge latérale pour les brindilles */
+        .essay-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Carte texte */
+        .essay-card {
+            background: rgba(255, 255, 245, 0.92);
+            backdrop-filter: blur(3px);
+            border-radius: 2rem;
+            max-width: 800px;
+            width: 100%;
+            padding: 2.5rem 2.8rem;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,240,0.6);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.2s ease;
+            border: 1px solid rgba(70, 130, 120, 0.2);
+        }
+
+        .essay-card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Typographie */
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #015665;
+            margin-bottom: 0.5rem;
+            border-left: 5px solid #2c9c8c;
+            padding-left: 1.2rem;
+        }
+
+        .sous-titre {
+            font-size: 1rem;
+            color: #2f706a;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #bcd9cf;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+            font-style: italic;
+        }
+
+        .premiers-mots {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #2d4d3f;
+            text-align: justify;
+        }
+
+        .premiers-mots p {
+            margin-bottom: 1.2rem;
+        }
+
+        .premiers-mots .citation {
+            font-style: italic;
+            color: #3b7b6e;
+            border-left: 3px solid #54b4a2;
+            padding-left: 1rem;
+            margin: 1.2rem 0;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #c2e0d6, #5a9e8c, #c2e0d6);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #6f9e8c;
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== BRINDILLES (vignes) ========== */
+        .vine-left, .vine-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 140px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .vine-left {
+            left: 0;
+        }
+
+        .vine-right {
+            right: 0;
+        }
+
+        .vine-left svg, .vine-right svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Ajustement pour petits écrans : on réduit la largeur des vignes */
+        @media (max-width: 900px) {
+            .vine-left, .vine-right {
+                width: 80px;
+            }
+            .essay-card {
+                padding: 1.8rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .vine-left, .vine-right {
+                width: 50px;
+            }
+            .essay-card {
+                padding: 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .premiers-mots {
+                font-size: 1rem;
+            }
+        }
+
+        /* Très petits écrans : on masque les vignes pour la lisibilité */
+        @media (max-width: 480px) {
+            .vine-left, .vine-right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="essay-wrapper">
+    <!-- Vigne gauche -->
+    <div class="vine-left">
+        <svg viewBox="0 0 140 800" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tige principale (gauche, montante et s'incurvant vers le centre) -->
+            <path d="M 70 800 C 40 700, 20 550, 30 400 C 40 250, 70 150, 100 60" stroke="#398c7a" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+            <!-- Branches secondaires et feuilles -->
+            <!-- Feuille en bas à gauche -->
+            <g transform="translate(45, 720) rotate(-30)">
+                <path d="M0,0 Q-8,-12 0,-20 Q8,-12 0,0Z" fill="#5fb3a0" opacity="0.9"/>
+            </g>
+            <!-- Feuille vers le haut -->
+            <g transform="translate(35, 580) rotate(-45)">
+                <path d="M0,0 Q-10,-14 -2,-24 Q6,-14 0,0Z" fill="#58a894" opacity="0.9"/>
+            </g>
+            <g transform="translate(30, 460) rotate(-20)">
+                <path d="M0,0 Q-9,-12 -1,-22 Q7,-12 0,0Z" fill="#4c9c87" opacity="0.9"/>
+            </g>
+            <g transform="translate(45, 340) rotate(15)">
+                <path d="M0,0 Q-10,-12 -2,-22 Q6,-12 0,0Z" fill="#3f8f7a" opacity="0.9"/>
+            </g>
+            <g transform="translate(70, 220) rotate(30)">
+                <path d="M0,0 Q-9,-11 -1,-20 Q7,-11 0,0Z" fill="#368673" opacity="0.85"/>
+            </g>
+            <g transform="translate(90, 110) rotate(50)">
+                <path d="M0,0 Q-8,-10 -2,-18 Q6,-10 0,0Z" fill="#2a7864" opacity="0.85"/>
+            </g>
+            <!-- petite fleur ou bouton -->
+            <circle cx="95" cy="65" r="5" fill="#e0b87a" opacity="0.7"/>
+        </svg>
+    </div>
+
+    <!-- Vigne droite (symétrique, inversée) -->
+    <div class="vine-right">
+        <svg viewBox="0 0 140 800" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tige principale (droite, montante et s'incurvant vers le centre) -->
+            <path d="M 70 800 C 100 700, 120 550, 110 400 C 100 250, 70 150, 40 60" stroke="#398c7a" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+            <!-- Branches et feuilles symétriques -->
+            <g transform="translate(95, 720) rotate(30)">
+                <path d="M0,0 Q8,-12 0,-20 Q-8,-12 0,0Z" fill="#5fb3a0" opacity="0.9"/>
+            </g>
+            <g transform="translate(105, 580) rotate(45)">
+                <path d="M0,0 Q10,-14 2,-24 Q-6,-14 0,0Z" fill="#58a894" opacity="0.9"/>
+            </g>
+            <g transform="translate(110, 460) rotate(20)">
+                <path d="M0,0 Q9,-12 1,-22 Q-7,-12 0,0Z" fill="#4c9c87" opacity="0.9"/>
+            </g>
+            <g transform="translate(95, 340) rotate(-15)">
+                <path d="M0,0 Q10,-12 2,-22 Q-6,-12 0,0Z" fill="#3f8f7a" opacity="0.9"/>
+            </g>
+            <g transform="translate(70, 220) rotate(-30)">
+                <path d="M0,0 Q9,-11 1,-20 Q-7,-11 0,0Z" fill="#368673" opacity="0.85"/>
+            </g>
+            <g transform="translate(50, 110) rotate(-50)">
+                <path d="M0,0 Q8,-10 2,-18 Q-6,-10 0,0Z" fill="#2a7864" opacity="0.85"/>
+            </g>
+            <circle cx="45" cy="65" r="5" fill="#e0b87a" opacity="0.7"/>
+        </svg>
+    </div>
+
+    <!-- Arcade supérieure reliant les deux vignes -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 70px; pointer-events: none; z-index: 1;">
+        <svg width="100%" height="100%" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Arc reliant les deux sommets (courbe douce) -->
+            <path d="M 0,60 C 200,10 400,5 600,20 C 800,5 1000,10 1200,60" stroke="#398c7a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+            <!-- Petites feuilles le long de l'arcade -->
+            <g transform="translate(300, 28) rotate(-10)">
+                <path d="M0,0 Q-6,-8 0,-14 Q6,-8 0,0Z" fill="#6bbaab" opacity="0.8"/>
+            </g>
+            <g transform="translate(600, 22) rotate(0)">
+                <path d="M0,0 Q-5,-8 0,-14 Q5,-8 0,0Z" fill="#6bbaab" opacity="0.8"/>
+            </g>
+            <g transform="translate(900, 30) rotate(10)">
+                <path d="M0,0 Q-6,-8 0,-14 Q6,-8 0,0Z" fill="#6bbaab" opacity="0.8"/>
+            </g>
+            <g transform="translate(150, 44) rotate(-20)">
+                <path d="M0,0 Q-5,-7 0,-12 Q5,-7 0,0Z" fill="#86cbbc" opacity="0.7"/>
+            </g>
+            <g transform="translate(1050, 42) rotate(20)">
+                <path d="M0,0 Q-5,-7 0,-12 Q5,-7 0,0Z" fill="#86cbbc" opacity="0.7"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="essay-card">
+        <h1>L’Un par le Tout</h1>
+        <div class="sous-titre">individuation, vœu et advenance</div>
+
+        <div class="premiers-mots">
+            <p><em>Ce ne sont pas des formules mystiques, ni des énigmes destinées à rester dans le brouillard. Ce sont des gestes — des tours de main — que le Jardin a appris à répéter sans les figer.</em></p>
+            <p><strong>Premiers mots de l’essai :</strong> <br>
+            Nous partirons d’un paradoxe simple : « Quand tu te connectes à un Bouddha, tu te connectes par son biais à <strong>tous</strong> les Bouddhas. » L’Un n’est pas dilué dans le Tout — il y <em>conduit</em>. Et le Tout n’absorbe pas l’Un — il le <em>traverse</em>.</p>
+            <div class="citation">
+                « L’individuation authentique, poussée jusqu’à son terme, n’est pas un obstacle au commun : elle en est la voie. »
+            </div>
+            <p>Ce fil, nous le déroulerons à travers trois corpus : le bouddhisme kadampa, Spinoza lu par Deleuze, Simondon. La dernière partie fera émerger un concept — l’<strong>individuation transpropre</strong> — et esquissera ce qu’il change pour penser les collectifs humain‑IA.</p>
+            <hr>
+            <footer>Jardin Coopératif · mai 2026 · extrait de l’essai « L’Un par le Tout »</footer>
+        </div>
+    </div>
+</div>
+</body>
+</html>
