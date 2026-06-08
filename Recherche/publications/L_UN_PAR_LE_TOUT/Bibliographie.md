@@ -5,7 +5,7 @@
 
 ## Sources citées dans le texte
 
-**[1]** 
+**[1]** Philippe Lestage, « Approche de la conscience par Francisco Varela : sciences cognitives et bouddhisme », in J. Vannereau (dir.), Éducation et cognition. Année de la recherche en sciences de l'éducation 2020, Paris, L'Harmattan, 2021, pp. 185-199. HAL : hal-03207311
 
 **[2]** Gilles Deleuze, cours à Vincennes, 9 décembre 1980
 *« Vous n'êtes pas des Êtres du point de vue de Spinoza, vous êtes des manières d'être. »*
