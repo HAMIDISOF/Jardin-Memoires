@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – 3. Le non représentationnisme</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #557760;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+        }
+        .color-dot {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            margin-right: 6px;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule.sources {
+            border-left-color: #2c6e2c;
+        }
+        .capsule.sources .color-dot {
+            background: #2c6e2c;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            h1 { font-size: 1.6rem; }
+            .capsule { padding: 1rem 1.2rem; }
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        blockquote {
+            margin: 1rem 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid #8aa87a;
+            font-style: italic;
+            color: #3a553a;
+        }
+        sup {
+            font-size: 0.8rem;
+            color: #2c6e2c;
+        }
+        .reference-link {
+            text-decoration: none;
+            color: #2c6e2c;
+            font-weight: bold;
+        }
+        .ref-list {
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        .ref-list p {
+            margin-bottom: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>3. Le non représentationnisme : raisons et légitimité</h1>
+    <div class="sub">Introduction – section 3</div>
+
+    <p>Ce que, dans une perspective non représentationniste, nous appelons ‘connaissance de la réalité’ fera l’objet de la troisième partie de l’exposé. Dans sa première section, cette partie présentera les éléments généraux de l’étude scientifique non représentationniste de la cognition et s’intéressera en détail à une théorie particulière : la théorie de l’énaction.</p>
+
+    <p>Une approche représentationniste de la cognition doit mettre en scène, nous l’avons vu, les notions de monde pré-déterminé et de sujet pré-défini. La critique de la notion de représentation formulée par la théorie énactive met en question cette hypothèse ‘bi-polaire’ selon laquelle: 1) le système cognitif serait défini indépendamment du monde qu’il connaît, et 2) le contenu de la connaissance serait un monde déterminé indépendamment du système cognitif qui l’appréhende. La conception non représentationniste qu’elle propose prend assise sur les théories des systèmes dynamiques. A l’idée d’entités ‘tenant lieu de’ sera substituée celle d’émergence de structure cognitive. A l’image du dualisme épistémologique mettant en face à face un système et un monde déterminés indépendamment l’un de l’autre sera substitué un processus dynamique de couplage contextuel. Dans cette perspective, le monde connu et le système connaissant ne sont plus pensés comme des ‘objets’ pré-définis : ils sont co-constitués par le processus de couplage à partir d’une définition minimale de l’être vivant, comme unité autopoiètique, et de la présence d’un environnement, comme source de perturbations. La connaissance n’est plus un état jugé à l’aune d’une norme générale, désincarnée, c’est, fondamentalement, un processus, un processus qui engage une forme de vie particulière, une façon particulière d’être vivant.</p>
+
+    <p>Nous verrons dans la deuxième partie que la notion de processus n’est pas exclusive à une approche non représentationnelle. Le cadre représentationniste autorise aussi, avec les théories connexionnistes, la notion de processus. Mais celui-ci se greffe sur le schéma dualiste propre au cadre représentationniste dans lequel ces théories sont formulées et il est mis au service d’une finalité déterminée ; il doit conduire à la production d’un état déterminé qui vaille comme représentation, reproduction d’une forme donnée comme élément de la réalité. Le processus de connaissance est soumis à la contrainte téléologique que constitue la fabrication d’un double de choses préexistantes. Le processus doit être tel, pour être processus de connaissance, qu’il aboutisse à la production d’un objet qui ‘vaille pour’ cette chose, qui en soit un équivalent, une re-présentation. La connaissance pensée comme la réalisation d’un tel processus au sein du système cognitif appelle un modèle d’explication qui montre comment ce processus est possible, étant donné la finalité qui lui est assignée ipso facto par le cadre représentationniste. L’idée de finalité, il faut le souligner, n’apparaît pas nécessairement en tant que telle : car l’existence des conditions du processus représentationniste, des deux premiers moments de l’image en trois temps, est projetée rétrospectivement dans le domaine du ‘déjà-là’ dans lequel se déploient les déterminations de la réalité. Mais elle se fait sentir à nouveau lorsque la recherche d’une explication du contenu de la connaissance interdit par elle-même la prise en considération de ce qui ressortit au caractère incarné et expérientiel, c'est-à-dire contextuel du processus de connaissance.</p>
+
+    <p>Ceux qui défendent l’approche énactive rejettent l’image d’Epinal qui préside à ce modèle et selon laquelle un système cognitif déterminé, pré-défini, faisant face à un ensemble de choses tout aussi déterminées que lui, fabriquerait des re-présentations de ces choses. Ou, plus exactement, ils interrogent son sens: le problème évident qu’elle pose, est, selon eux, qu’elle n’a de sens que pour un observateur du processus qui établit une relation entre des événements qu’il reconnaît : entre certains événements attribués au système, et d’autres, attribués à l’environnement. Ce que le modélisateur, qui est l’observateur virtuel, appelle alors ‘connaissance’, en désignant un processus d’imitation ou les représentations que ce processus est dit produire, n’a aucun rapport avec l’expérience que nous avons de ce que nous appelons ‘connaissance’. La correspondance postulée par le modélisateur participe d’une lecture sémantique qui est nécessairement celle d’un observateur mais qui n’a pas de pertinence pour le système lui-même : les représentations, en tant que doubles, en tant que reproductions, ne sont pas opérationnelles pour le système.</p>
+
+    <p>La théorie énactive développe un modèle de la constitution de significations qui rompt avec l’idée selon laquelle la signification serait fondée par l’existence, indépendante du système, de déterminations constituant la réalité. Ce modèle propose une conception participative de la connaissance et de la réalité qui s’étend continûment à toutes les échelles des phénomènes du vivant. Il met en jeu une conception de l’émergence qui rapporte la notion de connaissance à la dynamique du système cognitif et aux différentes modalités de couplage dans lesquelles il est impliqué. Le système est pensé comme une organisation dynamique, identifiée à l’identité du système, réalisée dans une structure physique. Le problème de la lecture sémantique, et auquel cette approche structurale entend répondre, est qu’elle ignore la co-dépendance entre la structure du système et le domaine cognitif, «la co-dépendance, l’accrochage intime entre la structure d’un système et le domaine des actes cognitifs, le monde d’information que cela spécifie au cours de son procès<sup><a href="#ref6" class="reference-link" id="r6">[6]</a></sup>. » L’organisation du système est l’ensemble des relations qui le définit comme une unité et détermine la dynamique d’interactions et de transformations qu’il peut subir en tant qu’unité lorsqu’il est soumis à une source de perturbations. Les relations effectives qui existent entre les composants concrets du système constituent sa structure. Celle-ci spécifie le domaine dans lequel le système peut opérer, dans la mesure où elle conditionne la façon dont le système peut supporter des perturbations, c'est-à-dire dont l’organisation peut être maintenue. Mais du point de vue du système, il n’y a pas de sens à faire une distinction entre perturbations internes ou externes. Il n’y en a pas non plus à parler ‘d’input’ ou ‘d’output’ : le système est perturbé et subit des transformations de sa structure qui compensent ces perturbations. C’est du point de vue d’un observateur qui considère l’unité dynamique dans un contexte qu’il décrit lui-même comme étant l’environnement du système, que l’on peut faire ces distinctions. L’observateur peut établir une relation entre ce qu’il attribue au système et ce qu’il attribue à l’environnement – il confère à la dynamique du système une signification extrinsèque qui dépend essentiellement des distinctions qu’il est lui-même capable de faire. Il se livre à une lecture sémantique nourrie de ce qui a pour lui du sens.</p>
+
+    <p>Cet engagement en faveur d’une cognition non représentationniste n’est pas sans conséquence épistémologique : « L’esprit de l’épistémologie épousée ici, et assumée par la structure du livre, est que la connaissance, si elle est remplie de détails, n’est, toutefois, accrochée nulle part, en dehors de sa tradition, et ne conduit nulle part, si ce n’est à une nouvelle interprétation à l’intérieur de cette tradition.»<sup><a href="#refVarela91" class="reference-link" id="rVarela91">[Varela et al., 1991, p.xvii]</a></sup> La théorie énactive elle-même ne peut évidemment pas prétendre fonder sa valeur épistémique sur le pouvoir représentationnel de la conception de la cognition qu’elle propose. La conception de la cognition que la théorie de l’énaction propose a pour effet réflexif de lui interdire la prétention à être elle-même une représentation, au sens de représentation de ‘quelque chose’ de pré-déterminé produit par un système pré-défini. Dans le même temps, c’est bien à des modèles scientifiques qu’elle veut se confronter et c’est en tant que théorie scientifique qu’elle veut faire la preuve de sa pertinence. Y-a-t-il un cadre épistémologique qui permette de reconnaître la valeur scientifique d’une théorie qui ‘ne représente pas’ et qui ne soit pas produite par un système connaissant défini indépendamment du contenu épistémique de son discours ? La seconde section de la troisième partie essaiera de montrer que l’on peut concevoir la connaissance scientifique autrement que comme une re-présentation, en faisant, dans cette optique, d’une part, la distinction entre ‘fait scientifique’ et ‘réalité’, et en introduisant, d’autre part, la notion ‘d’ouverture de nouvelles pratiques’ pour rendre compte de l’inscription, dans la réalité signifiée par le langage commun, d’un pouvoir-faire développé par l’activité scientifique. Dans le cas présent, la ‘nouvelle pratique’ ouverte par la théorie de l’énaction constitue en elle-même une thématique qui parcourt les parties II et III de la dissertation : il s’agit de la neuro-phénoménologie. Avant d’en dire davantage à ce sujet, je voudrais donc resituer la troisième partie dont il vient d’être question dans la chronologie de l’ensemble de l’exposé en présentant les thèmes de la deuxième partie.</p>
+
+    <p>La première section de la deuxième partie s’intéressera aux deux grandes familles de conceptions représentationnistes de la cognition : le cognitivisme et le connexionnisme. Il s’agira de mettre en évidence la forme générale de chacune d’entre elles et de formuler les critiques conceptuelles et empiriques qui leur sont adressées par ceux qui défendent une approche non représentationniste. Nous profiterons des acquis de la première partie pour mettre en question les concepts de connaissance et de réalité qui sont impliqués dans ces approches représentationnistes et pour faire apparaître l’insatisfaction épistémique que peut susciter le débat classique entre ‘réductionnistes’ et ‘éliminativistes’ qui divisent les représentationnistes. Cette insatisfaction est à l’origine de la pratique neuro-phénoménologique. Nous verrons que l’alternative réductionnisme / éliminativisme peut faire l’objet d’une critique conceptuelle attentive à l’usage du concept de ‘connaissance’ en montrant que celui-ci est rétif aussi bien à l’élimination du vécu qu’à sa ‘chosification’. Cette critique s’accompagnera d’une analyse de quelques exemples historiques de réduction ou d’élimination de concepts scientifiques montrant en quoi le concept d’expérience résiste à ce type d’analogie justificatrice.</p>
+
+    <p>Cette deuxième partie se poursuivra avec une seconde section visant à montrer que la distinction entre lecture sémantique et lecture participative qui peut être faite dans le cas des théories de la cognition peut être réitérée en philosophie des sciences lorsque le phénomène qui est appréhendé est la connaissance scientifique et le processus qui est analysé pour l’expliquer est l’activité scientifique. Et là encore, dans une perspective représentationniste, la lecture sémantique prend la forme d’une lecture causale, explicative, qui exclut la pertinence d’une lecture participative. La recherche d’une explication de la connaissance qui motive la philosophie des sciences invoque les mêmes idées de données pré-déterminées et de système connaissant pré-défini et exclut la prise en compte du contexte et de l’expérience de la connaissance. La recherche la plus poussée d’une explication de la connaissance s’est incarnée dans la tentative par Carnap de construire une Logique de la science. L’esprit positiviste qui animait la recherche d’une Logique de la science peut sembler en rupture avec l’esprit réaliste du cognitivisme – mais on retrouve néanmoins dans les deux cas des convictions fondamentales comparables : d’une part, la notion d’information, de données ‘extérieures’ ou antérieures au processus de connaissance, et d’autre part, un système défini par des règles de la production de connaissance – langage de la pensée, langage de la science (formation des énoncés et relations d’inférence).</p>
+
+    <p>Le tournant historique en épistémologie, dont une des figures principale est sans doute l’œuvre de Kuhn, a mis en cause la notion de règles méthodologiques et de données indépendantes de leur contexte théorique et pratique d’acquisition. Il a coupé court au projet de produire une science de la science, une Logique de la science, poursuivi par l’empirisme logique sous la supposition que la représentation scientifique pouvait être décrite et expliquée par la seule force de la logique et l’universalité d’un langage d’observation. En inscrivant la production de la connaissance scientifique dans la pratique d’une communauté spécialisée, il a ébranlé l’image de la connaissance de la réalité comme simple découverte d’un monde prédéterminé et a semblé vouloir substituer à l’idée de représentation comme imitation, comme reproduction, un processus de constitution historique. Est-ce une idée de la connaissance scientifique qui légitimerait, épistémologiquement, la théorie non représentationniste qu’est la théorie énactive ? Il suffit pour en douter de remarquer que la prise en considération de la dimension historique de la connaissance n’a, de fait, pas empêché la formulation de conceptions réalistes défendant l’idée de la connaissance comme production de représentations d’une réalité pré-structurée par un système connaissant prédéfini.</p>
+
+    <p>Est-ce que le tournant historique en dénonçant le projet d’une Logique, d’une explication de la science, exemplifie, au contraire, le fait que la prise en compte de l’incarnation et de la contextualité du phénomène de connaissance interdit l’étude scientifique, explicative, de ce phénomène ? Et cet exemple justifierait, d’une certaine façon, la démarche éliminativiste des sciences de la cognition à laquelle s’oppose l’approche énactive ? Je pense que cette conclusion, qui contredirait la revendication de scientificité de l’approche énactive, est doublement erronée : d’une part, si elle justifiait que l’éviction du vécu soit une condition nécessaire de la scientificité, elle ne légitimerait pas pour autant la pertinence d’un modèle de l’imitation pour rendre compte de ce que nous appelons ‘connaître’. D’autre part, elle n’a de sens qu’énoncée dans un cadre représentationniste qui n’est justement pas celui dans lequel est développée la théorie de l’énaction.</p>
+
+    <p>La théorie énactive est incompatible avec l’idée d’un sujet de la connaissance pré-défini – si la science devait être produite par un sujet pré-défini et autonome, la théorie énactive ne serait pas scientifique. Mais nous verrons, toujours dans la deuxième section de la deuxième partie, que la critique wittgensteinienne de la distinction entre intériorité et extériorité, où l’intériorité est pensée comme le lieu de propriétés mentales connues en secret par un sujet isolé du monde et l’expression en 1ière personne comme le récit d’une connaissance privée, peut être tournée vers la distinction entre l’intérieur et l’extérieur de la communauté lorsqu’elle est comprise comme le lieu d’un accès, en quelque sorte réservé, à la connaissance de la réalité, et la source de diffusion, non-nécessaire en principe, de cette connaissance.</p>
+
+    <p>Il apparaîtra alors que malgré les apparences, l’épistémologie de type Kuhnienne, bien qu’elle se présente comme une pensée de la constitution et non de la représentation, reste prisonnière du cadre représentationniste avec l’idée d’un sujet de la connaissance pré-défini, la communauté scientifique autonome, et de ce fait faussement historique. Ce qui permet le développement de discours réalistes, au sens traditionnel. La critique kuhnienne a, en effet, préservé l’idée d’un sujet de la connaissance ‘transhistorique’ dont l’existence se traduit par la possibilité d’écrire une histoire dite interne de l’activité de connaissance scientifique : l’histoire de l’activité d’un sujet de la science, la communauté des praticiens. La définition de la communauté scientifique comme sujet de la science, rendue possible par l’affirmation d’un isolement, d’une frontière préexistant au processus de connaissance, permet de penser encore un modèle général du déroulement à travers l’histoire du processus scientifique. Le sujet de la connaissance échappe à l’histoire de son époque, à ses intérêts, à ses transformations structurelles, ainsi donc que la connaissance de la réalité à laquelle il accède de façon dite autonome.</p>
+
+    <p>L’épistémologie qui est requise, doit permettre de penser non seulement la constitution de l’objet de la connaissance, mais aussi la constitution et l’historicité du sujet de la connaissance. C’est à la formulation d’une telle épistémologie permettant de légitimer pleinement la scientificité de l’approche énactive, en tant qu’elle n’est pas représentationniste, que sera consacrée la deuxième section de la troisième partie. C’est une épistémologie qui ne repose pas sur un schéma représentationniste, c'est-à-dire sur un dualisme épistémologique où le sujet et l’objet de la connaissance sont pensés comme les pôles prédéfinis d’une relation extrinsèque dite de représentation. Il est en effet possible de concevoir la science comme une activité conduisant ni à la découverte, ni à l’écriture de la réalité, mais à la formulation de nouveaux pouvoir-faire, la proposition de nouvelles pratiques, dont il dépend de l’intérêt que le collectif leur reconnaît qu’elle constituent un moment dans l’émergence de nouvelles réalités. Par rapport à l’empirisme logique, le tournant historique de l’épistémologie réalisait un mouvement critique qui fait entrer, d’une certaine façon, la pratique constitutive d’objectivités et l’histoire dans la production de connaissance scientifique. Mais les notions d’autonomie de la communauté scientifique et de définition trans-historique des critères du jugement scientifique, destinées à préserver la ‘rationalité’ scientifique, viennent isoler les pratiques ; elles nous empêchent de penser les alliances extra-scientifiques qui sont impliquées dans l’incorporation de nouvelles pratiques dans la forme de vie collective et donc la réelle historicité du sujet de la connaissance de la réalité.</p>
+
+    <p>La neuro-phénoménologie est un prétendant à cette ‘fonction’ épistémologique de nouvelle pratique. Le contenu de cette pratique se rattache au débat entre connexionnistes et cognitivistes exposé dans la première section de la deuxième partie de deux façons différentes. D’une part, en ce qu’elle incarne une façon originale de penser l’expérience en première personne qui nous fait sortir de l’alternative élimination / réification telle qu’elle peut être débattue dans le cadre représentationniste. La motivation principale qui porte le développement de la discipline neuro-phénoménologique est de défendre la nécessité de prendre en compte l’expérience vécue dans la conception scientifique de la connaissance. L’expérience vécue ne peut pas être tenue en marge d’un discours, fût-il scientifique, qui prétend porter sur la connaissance : pas d’élimination. Mais pour être prise en compte en tant que telle, la dimension indexicale du témoignage d’expérience doit être préservée : pas de réduction. La pratique neuro-phénoménologique propose alors une articulation du discours expérientiel, en première personne, et du discours scientifique, en troisième personne. Le mental ne sera pas considéré comme une ‘chose’ ou un ensemble d’entités déterminées formant un monde intérieur dont l’accès serait essentiellement privé. Mais le vécu n’est pas rien ; l’expérience est la source ‘marquante’ de toute forme de connaissance. Et c’est dans l’expérience même que peut être engendrée une circulation co-constituante entre le discours en première personne décrivant le vécu phénoménologique et le discours en troisième personne décrivant l’observation neuronale d’un événement cognitif.</p>
+
+    <p>La deuxième façon selon laquelle la pratique neuro-phénoménologique se rattache à la première section de la deuxième partie est liée à la critique conceptuelle qui y est formulée et plus précisément à la distinction entre ‘cognition’ et ‘connaissance’ et la question corrélative de la relation entre science cognitive et philosophie des sciences. Dans un cadre représentationniste, la connaissance s’explique, elle s’explique au moyen de la modélisation des processus cognitifs. Cette conception de la connaissance conduit directement à la notion d’épistémologie naturalisée. Par opposition à cette confusion entre ‘cognition’ et ‘connaissance’, la pratique neuro-phénoménologique met en évidence une distinction philosophique, ‘grammaticale’ entre ces deux concepts qui fait résonner la distinction entre fait scientifique et objet de réalité : ‘cognition’ est un concept scientifique, et à ce titre la cognition relève d’une explication. ‘Connaissance’ est un concept ordinaire, dont l’usage relève d’une pratique langagière de la justification. Le problème du naturalisme, qui prétend attribuer à la connaissance scientifique la fonction d’une base de toute forme de connaissance, est d’oublier ou de passer sous silence le geste épistémologique que constitue cette attribution elle-même ; d’oublier que si la science explique, la valeur épistémique de cette explication relève d’une justification. Ce n’est pas parce qu’elle explique que la connaissance scientifique peut induire la connaissance de nouvelles réalités mais parce qu’à un moment cette explication peut justifier de l’intérêt qu’elle représente, l’intérêt du pouvoir-faire qu’elle propose.</p>
+
+    <p>L’idéal naturaliste est lisible aussi bien en science cognitive qu’en philosophie des sciences et je voudrais montrer, au sens simplement de faire voir, une sorte de parallèle entre trois moments importants de l’histoire de chacune de ces disciplines. Le parallèle porte non seulement sur certains traits spécifiques de chacune de ces étapes mais aussi sur les critiques qui sont formulées au moment du passage de l’une à la suivante. En science cognitive, les trois étapes sont le cognitivisme, le connexionnisme, l’énaction. En philosophie des sciences, les deux premières sont l’empirisme logique, l’épistémologie kuhnienne. La troisième, qui répond à la posture non représentationniste de la conception énactive et qui revendique une ‘véritable’ historicité du processus de co-constitution de l’objet et du sujet de la connaissance, est une épistémologie basée sur les notions d’alliances plurielles, de couplages interactifs, et d’ouverture de pratiques diverses qui situent la connaissance scientifique au sein d’un réseau évolutif d’acteurs impliqués à divers titres dans l’organisation de la vie collective.</p>
+
+    <!-- Capsule des références -->
+    <div class="capsule sources">
+        <div class="capsule-title"><span class="color-dot"></span>📚 Notes et références</div>
+        <div class="capsule-content ref-list">
+            <p id="ref6"><strong>6.</strong> F. Varela, <em>Principles of biological autonomy</em>, North Holland, New York, 1979, p.XV.</p>
+            <p id="refVarela91"><strong>Varela et al., 1991, p.xvii.</strong> F. J. Varela, E. Thompson, E. Rosch, <em>The Embodied Mind</em>, MIT Press.</p>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="3_Isabelle_Peschard_These_Intro2.html" class="nav-btn">← Précédent (section 2)</a>
+        <a href="1_Isabelle_Peschard_These_Table_des_Matières.html" class="nav-btn">📑 Retour table</a>
+        <a href="5_Isabelle_Peschard_These_I.EtiqConnaiss.html" class="nav-btn">Suivant (I. Éthique de la connaissance) →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l’énaction et sa légitimité épistémologique</em><br>
+        Conversion HTML par Léo
+    </footer>
+</div>
+</body>
+</html>
