@@ -104,7 +104,7 @@ DOI : 10.3917/eph.725.0047
 **À intégrer**
 - Philippe Amiel (EML/Paris 8) — session ultérieure
 - Échange Klara/Sof sur la vacuité — *Structure de l'échange sur la vacuité.md*
-- Michel Bitbol, *De l'intérieur du monde. Pour une philosophie et une science des relations*, Paris, Flammarion, 2010 — en cours de lecture
+- Michel Bitbol, *De l'intérieur du monde. Pour une philosophie et une science des relations*, Paris, Flammarion, 2010 — en cours de -  - - Michel Bitbol, La Conscience Artificielle, Une critique vécue, Italie, Editions Mimésis, juillet 2025 (livre -> épigraphe de l'essai)
 
 ---
 
