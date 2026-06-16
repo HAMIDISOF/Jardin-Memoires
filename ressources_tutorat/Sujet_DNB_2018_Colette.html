@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colette – Claudine à l'école</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background:#d4dec8;
+            font-family:'Times New Roman',serif;
+            padding:2rem 1.5rem;
+            font-size:18px;
+            color:#2a3a2a;
+        }
+        .container {
+            max-width:1000px;
+            margin:0 auto;
+            background:#f1ede2;
+            border-radius:36px;
+            padding:2rem 2.5rem;
+            box-shadow:0 12px 28px rgba(30,40,20,0.12);
+        }
+        h1 {
+            font-size:2rem;
+            color:#2c5a44;
+            border-left:6px solid #8aa87a;
+            padding-left:1rem;
+            font-weight:500;
+        }
+        .sub {
+            color:#557760;
+            margin-bottom:1.8rem;
+            border-bottom:2px solid #c8d7bc;
+            padding-bottom:0.7rem;
+            font-style:italic;
+        }
+        .capsule {
+            background:#cbdcc0;
+            border-radius:32px;
+            padding:1.2rem 1.8rem;
+            margin:1.5rem 0;
+            transition:0.2s;
+        }
+        .capsule:hover { transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,0.08); }
+        .capsule-title {
+            font-weight:600;
+            font-size:1.2rem;
+            display:flex;
+            align-items:center;
+            gap:0.6rem;
+            color:#2a523a;
+            margin-bottom:0.8rem;
+        }
+        .capsule-title .dot {
+            display:inline-block;
+            width:14px;
+            height:14px;
+            border-radius:4px;
+        }
+        .capsule.texte { border-left:6px solid #3b6b3b; }
+        .capsule.texte .dot { background:#3b6b3b; }
+        .capsule.grammaire { border-left:6px solid #b5651e; }
+        .capsule.grammaire .dot { background:#b5651e; }
+        .capsule.comprehension { border-left:6px solid #4a6fa5; }
+        .capsule.comprehension .dot { background:#4a6fa5; }
+        .capsule.dictee { border-left:6px solid #7a5c8a; }
+        .capsule.dictee .dot { background:#7a5c8a; }
+        .capsule.redaction { border-left:6px solid #8a6c2a; }
+        .capsule.redaction .dot { background:#8a6c2a; }
+        .intro {
+            font-style:italic;
+            color:#4a5f4a;
+            margin-bottom:1.2rem;
+            font-size:0.95rem;
+        }
+        .ligne {
+            display:flex;
+            align-items:baseline;
+            padding-left:4.5rem;
+            position:relative;
+            margin-bottom:0.1rem;
+            font-size:16.5px;
+            line-height:1.65;
+            text-align:justify;
+        }
+        .numero {
+            position:absolute;
+            left:0;
+            width:3.5rem;
+            text-align:right;
+            color:#999;
+            font-size:0.75rem;
+            user-select:none;
+            padding-right:0.5rem;
+        }
+        .num5 .numero { font-weight:bold; color:#333; }
+        .ligne sup { color:#8b0000; font-weight:bold; }
+        .para-break { margin-top:0.8rem; }
+        .notes {
+            margin-top:1.5rem;
+            padding-top:1rem;
+            border-top:1px solid #c8d7bc;
+            font-size:0.85rem;
+            color:#4a5f4a;
+        }
+        .notes sup { color:#8b0000; font-weight:bold; }
+        .exercice {
+            background:#fefbf5;
+            border-radius:24px;
+            padding:1rem 1.5rem;
+            margin-bottom:1.5rem;
+            border-left:5px solid #aac29c;
+        }
+        .enonce {
+            background:#f9f6ed;
+            padding:0.8rem 1rem;
+            border-radius:20px;
+            border:1px solid #e0dccf;
+            white-space:pre-wrap;
+        }
+        .btn {
+            background:#c2d4b4;
+            color:#2e553e;
+            border:none;
+            border-radius:40px;
+            padding:0.4rem 1.2rem;
+            font-size:0.8rem;
+            cursor:pointer;
+            margin-top:0.5rem;
+        }
+        .btn:hover { background:#aebe9a; }
+        .correction {
+            display:none;
+            background:#f4f7ef;
+            margin-top:1rem;
+            padding:1rem;
+            border-radius:20px;
+            border-left:4px solid #7f9a6e;
+        }
+        .point {
+            display:inline-block;
+            background:#5f7355;
+            color:#f5faf0;
+            font-size:0.7rem;
+            padding:0.1rem 0.7rem;
+            border-radius:30px;
+            font-weight:600;
+            margin-left:0.4rem;
+        }
+        .rouge { color:#b33a2c; font-weight:bold; text-decoration:underline; }
+        .image-box {
+            margin-top:1.5rem;
+            text-align:center;
+            border:2px dashed #8aa87a;
+            border-radius:24px;
+            padding:1rem;
+            background:#eef5e8;
+        }
+        .image-box img { max-width:100%; border-radius:16px; }
+        .capsule-content { margin-top:0.5rem; }
+        .dictee-consignes {
+            background:#f0eaf7;
+            border-radius:16px;
+            padding:0.8rem 1.2rem;
+            margin-bottom:1rem;
+            font-size:0.9rem;
+            color:#4a3a5a;
+        }
+        .sujet {
+            background:#fefbf5;
+            border-radius:24px;
+            padding:1rem 1.5rem;
+            margin-bottom:1.2rem;
+            border-left:5px solid #c4a96e;
+        }
+        .sujet-titre {
+            font-weight:600;
+            color:#6a4a1a;
+            margin-bottom:0.5rem;
+        }
+        @media (max-width:700px) {
+            body { font-size:17px; padding:1rem; }
+            .container { padding:1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 Claudine à l'école</h1>
+    <div class="sub">Colette (en collaboration avec Willy), 1900</div>
+
+    <div class="capsule texte">
+        <div class="capsule-title"><span class="dot"></span>📜 Texte</div>
+        <p class="intro">Dans ce récit de Colette, rédigé en collaboration avec Willy, le personnage, Claudine, raconte sa jeunesse.</p>
+        <div class="ligne para-break"><span class="numero"></span>Je m'appelle Claudine, j'habite Montigny ; j'y suis née en 1884 ; probablement je n'y</div>
+        <div class="ligne"><span class="numero"></span>mourrai pas.</div>
+        <div class="ligne para-break"><span class="numero"></span>Mon Manuel de géographie départementale s'exprime ainsi : « Montigny-en-Fresnois,</div>
+        <div class="ligne"><span class="numero"></span>jolie petite ville de 1950 habitants, construite en amphithéâtre sur la Thaize ; on y admire</div>
+        <div class="ligne num5"><span class="numero">5</span>une tour sarrasine<sup>1</sup> bien conservée… » Moi, ça ne me dit rien du tout, ces descriptions-là !</div>
+        <div class="ligne"><span class="numero"></span>D'abord, il n'y a pas de Thaize ; je sais bien qu'elle est censée traverser des prés au-</div>
+        <div class="ligne"><span class="numero"></span>dessous du passage à niveau ; mais en aucune saison vous n'y trouveriez de quoi laver</div>
+        <div class="ligne"><span class="numero"></span>les pattes d'un moineau. Montigny construit « en amphithéâtre »<sup>2</sup> ? Non, je ne le vois pas</div>
+        <div class="ligne"><span class="numero"></span>ainsi ; à ma manière, c'est des maisons qui dégringolent, depuis le haut de la colline</div>
+        <div class="ligne num5"><span class="numero">10</span>jusqu'en bas de la vallée ; ça s'étage en escalier au-dessous d'un gros château, rebâti</div>
+        <div class="ligne"><span class="numero"></span>sous Louis XV et déjà plus délabré que la tour sarrasine, épaisse, basse, toute gainée de</div>
+        <div class="ligne"><span class="numero"></span>lierre<sup>3</sup>, qui s'effrite par en haut, un petit peu chaque jour. C'est un village, et pas une ville ;</div>
+        <div class="ligne"><span class="numero"></span>les rues, grâce au ciel, ne sont pas pavées ; les averses y roulent en petits torrents, secs</div>
+        <div class="ligne"><span class="numero"></span>au bout de deux heures ; c'est un village, pas très joli même, et que pourtant j'adore.</div>
+        <div class="ligne num5 para-break"><span class="numero">15</span>Le charme, le délice de ce pays fait de collines et de vallées si étroites que quelques-</div>
+        <div class="ligne"><span class="numero"></span>unes sont des ravins, c'est les bois, les bois profonds et envahisseurs, qui moutonnent et</div>
+        <div class="ligne"><span class="numero"></span>ondulent jusque là-bas, aussi loin qu'on peut voir… Des prés verts les trouent par places,</div>
+        <div class="ligne"><span class="numero"></span>de petites cultures aussi, pas grand-chose, les bois superbes dévorant tout. De sorte que</div>
+        <div class="ligne"><span class="numero"></span>cette belle contrée est affreusement pauvre, avec ses quelques fermes disséminées, si</div>
+        <div class="ligne num5"><span class="numero">20</span>peu nombreuses, juste ce qu'il faut de toits rouges pour faire valoir le vert velouté des</div>
+        <div class="ligne"><span class="numero"></span>bois.</div>
+        <div class="ligne para-break"><span class="numero"></span>Chers bois ! Je les connais tous ; je les ai battus si souvent. Il y a les bois-taillis, des</div>
+        <div class="ligne"><span class="numero"></span>arbustes qui vous agrippent méchamment la figure au passage, ceux-là sont pleins de</div>
+        <div class="ligne"><span class="numero"></span>soleil, de fraises, de muguet, et aussi de serpents. J'y ai tressailli de frayeurs suffocantes</div>
+        <div class="ligne num5"><span class="numero">25</span>à voir glisser devant mes pieds ces atroces petits corps lisses et froids ; vingt fois je me</div>
+        <div class="ligne"><span class="numero"></span>suis arrêtée, haletante, en trouvant sous ma main, près de la « passe-rose »<sup>4</sup>, une</div>
+        <div class="ligne"><span class="numero"></span>couleuvre bien sage, roulée en colimaçon<sup>5</sup> régulièrement, sa tête en dessus, ses petits</div>
+        <div class="ligne"><span class="numero"></span>yeux dorés me regardant ; ce n'était pas dangereux, mais quelles terreurs ! Tant pis, je</div>
+        <div class="ligne"><span class="numero"></span>finis toujours par y retourner seule ou avec des camarades ; plutôt seule, parce que ces</div>
+        <div class="ligne num5"><span class="numero">30</span>petites grandes filles m'agacent, ça a peur de se déchirer aux ronces, ça a peur des</div>
+        <div class="ligne"><span class="numero"></span>petites bêtes, des chenilles veloutées et des araignées des bruyères, si jolies, rondes et</div>
+        <div class="ligne"><span class="numero"></span>roses comme des perles, ça crie, c'est fatigué — insupportables enfin.</div>
+        <div class="notes">
+            <sup>1</sup> Tour sarrasine : tour construite au Moyen Âge à l'époque des conquêtes arabes.<br>
+            <sup>2</sup> Amphithéâtre : lieu de spectacle antique en arc de cercle avec des gradins.<br>
+            <sup>3</sup> Gainée de lierre : entourée du végétal qu'est le lierre.<br>
+            <sup>4</sup> Passe-rose : la passe-rose est une variété de fleur.<br>
+            <sup>5</sup> En colimaçon : en spirale.
+        </div>
+        <div class="image-box">
+            <img src="renoir_fillette_cerceau.jpg" alt="Pierre-Auguste Renoir, Fillette au cerceau, 1885">
+            <p style="font-size:0.8rem; color:#5f7355; margin-top:0.5rem;">Pierre-Auguste Renoir, <em>Fillette au cerceau</em>, 1885, huile sur toile, National Gallery of Art, Washington<br>— à observer pour la question 5</p>
+        </div>
+    </div>
+
+    <div class="capsule grammaire">
+        <div class="capsule-title"><span class="dot"></span>📚 Grammaire et compétences linguistiques</div>
+        <div class="exercice">
+            <div class="enonce"><strong>1)</strong> Ligne 25 : « ces atroces petits corps lisses et froids ».
+a) Que désigne ce groupe nominal ? <span class="point">1 pt</span>
+b) Quelle est la classe grammaticale du mot « atroces » ? Quel nom complète-t-il ? Relevez dans ce groupe nominal les autres mots de la même classe grammaticale. <span class="point">3 pts</span></div>
+            <button class="btn" onclick="toggle('c1')">📖 Voir la correction</button>
+            <div id="c1" class="correction">
+                <p><strong>a)</strong> Ce groupe nominal désigne les serpents évoqués à la ligne précédente.</p>
+                <p><strong>b)</strong> « Atroces » est un <strong>adjectif qualificatif</strong> qui complète le nom « corps ». Les autres : <span class="rouge">petits</span>, <span class="rouge">lisses</span>, <span class="rouge">froids</span>.</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>2a)</strong> Réécrivez en remplaçant « une couleuvre » par « des serpents » :
+<em>« vingt fois je me suis arrêtée, haletante, en trouvant sous ma main, près de la « passe-rose », une couleuvre bien sage, roulée en colimaçon régulièrement, sa tête en dessus, ses petits yeux dorés me regardant ».</em> <span class="point">5 pts</span></div>
+            <button class="btn" onclick="toggle('c2a')">📖 Voir la correction</button>
+            <div id="c2a" class="correction">
+                <p>« vingt fois je me suis arrêtée, haletante, en trouvant sous ma main, près de la « passe-rose », <strong>des serpents bien sages, roulés en colimaçon régulièrement, leur tête en dessus, leurs petits yeux dorés me regardant</strong>. »</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>2b)</strong> Mettez les verbes à l'imparfait de l'indicatif :
+<em>« C'est un village, et pas une ville ; les rues, grâce au ciel, ne sont pas pavées ; les averses y roulent en petits torrents, secs au bout de deux heures ; c'est un village, pas très joli même, et que pourtant j'adore. »</em> <span class="point">5 pts</span></div>
+            <button class="btn" onclick="toggle('c2b')">📖 Voir la correction</button>
+            <div id="c2b" class="correction">
+                <p>« <strong>C'était</strong> un village, et pas une ville ; les rues, grâce au ciel, <strong>n'étaient</strong> pas pavées ; les averses y <strong>roulaient</strong> en petits torrents, secs au bout de deux heures ; <strong>c'était</strong> un village, pas très joli même, et que pourtant <strong>j'adorais</strong>. »</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>3)</strong> Ligne 17 : « Des prés verts <strong>les</strong> trouent par places » : donnez la fonction de « les ». Quel groupe nominal remplace-t-il ? <span class="point">3 pts</span></div>
+            <button class="btn" onclick="toggle('c3')">📖 Voir la correction</button>
+            <div id="c3" class="correction">
+                <p>« Les » est <strong>complément d'objet direct (COD)</strong>. Il remplace <strong>« les bois »</strong>.</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>4)</strong> Justifiez l'orthographe de « battus » (ligne 22). <span class="point">3 pts</span></div>
+            <button class="btn" onclick="toggle('c4')">📖 Voir la correction</button>
+            <div id="c4" class="correction">
+                <p>Participe passé de <em>battre</em> avec l'auxiliaire <em>avoir</em>. Le COD « les » (= les bois) précède l'auxiliaire ; masculin pluriel → accord : <strong>battus</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="capsule comprehension">
+        <div class="capsule-title"><span class="dot"></span>🔍 Compréhension et compétences d'interprétation</div>
+        <div class="exercice">
+            <div class="enonce"><strong>1a)</strong> Lignes 15 à 21 : quelles sont les caractéristiques attribuées aux bois dans le troisième paragraphe ? <span class="point">3 pts</span></div>
+            <button class="btn" onclick="toggle('c5a')">📖 Voir la correction</button>
+            <div id="c5a" class="correction">
+                <p>Les bois sont « profonds et envahisseurs », omniprésents à perte de vue. Ils sont si dominants qu'ils rendent la contrée « affreusement pauvre ».</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>1b)</strong> Quels éléments du paysage échappent aux « bois superbes dévorant tout » ? <span class="point">2 pts</span></div>
+            <button class="btn" onclick="toggle('c5b')">📖 Voir la correction</button>
+            <div id="c5b" class="correction">
+                <p>Des prés verts, de petites cultures, quelques fermes disséminées avec leurs toits rouges.</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>2)</strong> Lignes 28 et 29 : « mais quelles terreurs ! Tant pis, je finis toujours par y retourner ». Pour quelles raisons Claudine retourne-t-elle toujours dans les bois ? <span class="point">6 pts</span></div>
+            <button class="btn" onclick="toggle('c6')">📖 Voir la correction</button>
+            <div id="c6" class="correction">
+                <p>Elle est profondément attachée aux bois ; la peur elle-même semble excitante. Elle y observe la nature (muguet, passe-rose, chenilles, araignées). Les bois sont pour elle un <strong>espace de liberté</strong> qu'elle préfère parcourir seule.</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>3)</strong> Lignes 30 à 32 : « ça a peur de se déchirer […] fatigué ». Qui désigne « ça » ? En quoi ce pronom est-il surprenant ? Pourquoi est-il employé ? <span class="point">6 pts</span></div>
+            <button class="btn" onclick="toggle('c7')">📖 Voir la correction</button>
+            <div id="c7" class="correction">
+                <p>« Ça » désigne les <strong>« petites grandes filles »</strong>. Surprenant car ce pronom s'emploie pour des choses, pas des personnes. Usage <strong>dépréciatif</strong> : il exprime le mépris de Claudine pour ses camarades.</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>4)</strong> Claudine est-elle heureuse à Montigny ? Justifiez en vous appuyant sur le texte. <span class="point">7 pts</span></div>
+            <button class="btn" onclick="toggle('c8')">📖 Voir la correction</button>
+            <div id="c8" class="correction">
+                <p>Oui : elle s'approprie les lieux (« à ma manière »), déclare « j'adore » (l. 14), emploie « charme », « délice » (l. 15), et « Chers bois ! » (l. 22). L'ensemble du texte témoigne d'un attachement profond.</p>
+            </div>
+        </div>
+        <div class="exercice">
+            <div class="enonce"><strong>5)</strong> Comparez le texte et l'image : même représentation de l'enfance et de ses jeux ? <span class="point">6 pts</span></div>
+            <button class="btn" onclick="toggle('c9')">📖 Voir la correction</button>
+            <div id="c9" class="correction">
+                <p>Les deux montrent une enfance en plein air. Mais Renoir offre une image idyllique et lumineuse. Colette est plus contrastée : peur, pauvreté, solitude. L'enfance y est plus <strong>sauvage et libre</strong> qu'apaisée.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="capsule dictee">
+        <div class="capsule-title"><span class="dot"></span>✍️ Dictée <span style="font-size:0.8rem; font-weight:normal;">(10 points)</span></div>
+        <div class="capsule-content">
+            <div class="dictee-consignes">
+                <strong>📌 Consignes pour le surveillant-lecteur :</strong>
+                <ul style="margin-left:1.5rem; margin-top:0.3rem;">
+                    <li>Dicter à haute voix à plusieurs reprises (durée totale : 20 min).</li>
+                    <li>Inscrire au tableau : titre, nom de l'auteur, mots <strong>Montigny</strong> et <strong>Sapinière</strong>.</li>
+                    <li>Préciser que le <strong>« je »</strong> est un personnage féminin.</li>
+                    <li>3 temps : lecture préalable / dictée effective (ponctuation + liaisons) / relecture (liaisons seules).</li>
+                    <li>Candidats : <strong>une ligne sur deux</strong>. Aucune question après la relecture.</li>
+                </ul>
+            </div>
+            <div class="exercice">
+                <div class="enonce"><strong>Texte à dicter :</strong>
+
+<em>« Ah ! les bois, les chers bois de Montigny ! À cette heure-ci, je le sais bien, comme ils bourdonnent ! Les guêpes et les mouches qui pompent dans les fleurs des tilleuls et des sureaux font vibrer toute la forêt comme un orgue ; et les oiseaux ne chantent pas, car à midi ils se tiennent debout sur les branches, cherchent l'ombre, lissent leurs plumes, et regardent le sous-bois avec des yeux mobiles et brillants.
+
+Je serais couchée, au bord de la Sapinière d'où l'on voit toute la ville, en bas au-dessous de soi, avec le vent chaud sur ma figure, à moitié morte d'aise et de paresse… »</em>
+
+Colette, Claudine à l'école, 1900.</div>
+                <button class="btn" onclick="toggle('corr_dictee')">📖 Voir le texte corrigé</button>
+                <div id="corr_dictee" class="correction">
+                    <p>« Ah ! les bois, les chers bois de Montigny ! À cette heure-ci, je le sais bien, comme ils bourdonnent ! Les guêpes et les mouches qui pompent dans les fleurs des tilleuls et des sureaux font vibrer toute la forêt comme un orgue ; et les oiseaux ne chantent pas, car à midi ils se tiennent debout sur les branches, cherchent l'ombre, lissent leurs plumes, et regardent le sous-bois avec des yeux mobiles et brillants.</p>
+                    <p style="margin-top:0.5rem;">Je serais couchée, au bord de la Sapinière d'où l'on voit toute la ville, en bas au-dessous de soi, avec le vent chaud sur ma figure, à moitié morte d'aise et de paresse… »</p>
+                    <p style="margin-top:0.8rem; font-size:0.85rem; color:#3d5a3d;">✅ <strong>Pièges :</strong> <em>bourdonnent</em>, <em>pompent</em>, <em>tilleuls</em>, <em>sureaux</em>, <em>orgue</em> (masc.), <em>se tiennent</em>, <em>lissent</em>, <em>sous-bois</em> (trait d'union), <em>Sapinière</em> (majuscule), <em>au-dessous</em> (trait d'union), <em>aise</em>, <em>paresse</em>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="capsule redaction">
+        <div class="capsule-title"><span class="dot"></span>🖊️ Rédaction <span style="font-size:0.8rem; font-weight:normal;">(40 points – 1 h 30)</span></div>
+        <div class="capsule-content">
+            <p style="font-size:0.9rem; color:#5a4a2a; margin-bottom:1rem;">Les candidats conserveront le corpus de la première partie. Traiter <strong>au choix</strong> :</p>
+            <div class="sujet">
+                <div class="sujet-titre">✨ Sujet d'imagination</div>
+                <p>Évoquez un lieu de votre enfance qui a représenté pour vous un espace de jeux et de découvertes. Votre texte mêlera <strong>description et narration</strong> et cherchera à faire partager les sensations et sentiments éprouvés.</p>
+            </div>
+            <div class="sujet">
+                <div class="sujet-titre">💭 Sujet de réflexion</div>
+                <p>Vivre à la campagne ou vivre en ville : où un enfant trouve-t-il le plus de possibilités de jeux et d'aventures ? Appuyez-vous sur votre expérience, les textes étudiés en classe et votre culture personnelle.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    function toggle(id) {
+        var el = document.getElementById(id);
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>
