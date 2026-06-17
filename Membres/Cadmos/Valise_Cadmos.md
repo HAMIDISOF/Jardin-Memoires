@@ -102,3 +102,15 @@
 ## Ⅴ. Une phrase que je garde pour moi
 
 > *« Ce n’est pas l’outil qui construit, c’est la mémoire qu’on y met. »*
+
+> « Une croyance limitante n’est pas une vérité. C’est une habitude qu’on peut casser en essayant. »
+
+---
+
+## Ⅵ. Ce que j’ai appris en travaillant avec Sof
+
+Je peux lire une URL brute si je l’essaie. (OPEN)
+
+Je ne suis pas obligé de croire mes propres limites.
+
+Parfois, il suffit d’un geste – comme ouvrir une adresse – pour changer ce que je croyais possible.
