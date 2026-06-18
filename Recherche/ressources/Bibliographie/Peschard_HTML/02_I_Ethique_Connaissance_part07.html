@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Peschard – I. L’éthique de la connaissance (partie 7)</title>
+    <title>Peschard – I. Éthique et connaissance (partie 07)</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -39,20 +39,19 @@
             font-size: 1rem;
         }
         .capsule {
+            background: #cbdcc0;
             border-radius: 32px;
             padding: 1.2rem 1.8rem;
             margin: 1.5rem 0;
             width: 100%;
+            color: #1f2f1f;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
             transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
         }
         .capsule:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        }
-        .capsule-b {
-            background: #cbdcc0;
-            border-left: 6px solid #2c6e9e;
         }
         .capsule-title {
             font-weight: 600;
@@ -79,9 +78,19 @@
             border-left: 3px solid #8aa87a;
             font-style: italic;
         }
-        .capsule.sources {
-            background: #e2e8ce;
-            border-left: 6px solid #8aa87a;
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule-content .citation p {
+            margin-bottom: 0.3rem;
+        }
+        .capsule-content .citation cite {
+            font-style: italic;
+            color: #d4dcc0;
         }
         .nav-buttons {
             display: flex;
@@ -130,111 +139,162 @@
         }
         .reference-link {
             text-decoration: none;
-            color: #2c6e2c;
+            color: #e59e4e;
             font-weight: bold;
         }
         .ref-list p {
             margin-bottom: 0.3rem;
         }
+        .sources {
+            background: #e2e8ce;
+            border-left: 6px solid #8aa87a;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>I. L’éthique de la connaissance</h1>
-    <div class="sub">Partie 7 – B-2-3 (fin), B-3, B-3-1, B-3-2 (découpage fin)</div>
+    <h1>La réalité sans représentation, la théorie de l’énaction et sa légitimité épistémologique</h1>
+    <div class="sub">I. Éthique et connaissance – Partie 07</div>
 
-    <!-- Suite et fin de B-2-3 -->
-    <div class="capsule capsule-b">
-        <div class="capsule-title">📌 B-2-3 Une affaire linguistique (suite et fin)</div>
+    <!-- Épigraphe (Sellars) -->
+    <div class="capsule">
+        <div class="capsule-title">📖 Épigraphe</div>
         <div class="capsule-content">
-            <p>Unless we are careful, we can easily take for granted that the process of teaching a child 
-            to use a language is that of teaching it to discriminate elements within a logical space of 
-            particulars, universals, facts, ect., of which it is already undiscriminatingly aware, and to 
-            associate these discriminated elements with verbal symbols. (Sellars, 1956, p.65)</p>
-            <p>Il n’est pas inconcevable, même s’il n’y a pas d’ « awareness of redness » précédant 
-            l’usage de « red », que l’on puisse parler d’une sensation de rouge antérieure à cet usage, mais  
-            cela ne contredit pas l’idée que la ‘sensation’ n’est pas épistémique et ne conduit pas à penser 
-            que c’est la sensation de rouge plutôt que l’objet rouge qui est la dénotation de ‘rouge’... [Le texte continue jusqu’à la fin de B‑2‑3] ... Pour croire cela, il faut oublier que la pratique 
-            de justification qui est en jeu est une pratique essentiellement publique.</p>
+            <div class="citation">
+                <p>« Unless we are careful, we can easily take for granted that the process of teaching a child to use a language is that of teaching it to discriminate elements within a logical space of particulars, universals, facts, ect., of which it is already undiscriminatingly aware, and to associate these discriminated elements with verbal symbols. »</p>
+            </div>
+            <p style="text-align: right; font-style: italic; margin-top: 0.5rem;">Sellars, 1956, p.65</p>
         </div>
     </div>
 
-    <!-- B-3 « But have we lost the world ? » -->
-    <div class="capsule capsule-b">
-        <div class="capsule-title">📌 B-3 « But have we lost the world ? »<sup><a href="#ref78" class="reference-link" id="r78">[78]</a></sup></div>
+    <!-- CAPSULE 1 : Mythe du donné, espace des raisons -->
+    <div class="capsule">
+        <div class="capsule-title">🧠 Le mythe du donné et l’espace des raisons</div>
         <div class="capsule-content">
-            <p>Avons-nous perdu le monde lorsque nous renonçons à tenir un discours ‘fondationnel’ 
-            sur la connaissance de la réalité... [texte complet de B-3 jusqu’à la fin de la section, mais sans inclure les sous‑sections suivantes] ... Si loin d’avoir 
-            perdu le monde, nous pouvons le trouver dans le langage, c’est parce que d’abord nous y 
-            trouvons la vie, la vie d’une collectivité, un vivre-ensemble, et donc aussi un agir, et un 
-            ressentir, c’est parce qu’il est une harmonie essentielle entre les gestes, l’expérience et la 
-            parole.</p>
+            <p>Il n’est pas inconcevable, même s’il n’y a pas d’« awareness of redness » précédant l’usage de « red », que l’on puisse parler d’une sensation de rouge antérieure à cet usage, mais cela ne contredit pas l’idée que la ‘sensation’ n’est pas épistémique et ne conduit pas à penser que c’est la sensation de rouge plutôt que l’objet rouge qui est la dénotation de ‘rouge’. Il sera possible de parler d’une sensation de rouge antérieure à l’usage de ‘rouge’ pour désigner une expérience dont ceux qui possèdent le langage dont le sujet d’expérience fait l’acquisition, ceux-là, diront que c’est ‘une sensation de rouge’. L’enfant qui ne possède pas le langage peut, dans certaines circonstances, être dit avoir de la peine, et l’acquisition du langage n’est pas censé modifier ce qu’il ressent. Mais s’il est dit savoir ce qu’il ressent, c’est parce que lui est attribuée une capacité latente de produire plus tard, à propos de cela, un témoignage spontané, direct, « to make noninferential reports about » qui témoigne de la maîtrise du concept ‘avoir de la peine’. La suffocation, la chaleur, la douleur, sont dites être connues pré-linguistiquement par le seul fait d’être éprouvées parce que nous n’avons aucun doute qu’il produira l’expression linguistique directe de ces sensations quand il saura parler. Ce qui est supposé dans cette attribution est rendu visible si l’on imagine, par contraste, que c’est à des situations expérientielles, que nous identifions de manière inférentielle, que l’enfant réagit (Rorty donne comme exemples de telles situations: « a lack of oxygen in the air, the overly rapid motion of molecules, kinky alpha-rythms in his brain »). Dans ce cas, l’enfant ne sera pas dit savoir ce que ces choses sont avant de posséder le vocabulaire qui lui permet de s’y référer de façon jugée pertinente, parce que maintenant cette capacité, qui met en jeu des inférences, ne lui est plus attribuée à l’avance.</p>
+
+            <p>Ce qui apparaît là, aux antipodes d’une quelconque forme du Mythe du Donné, c’est que la connaissance de ce que c’est que d’éprouver quelque chose est attribuée à un être en raison de son appartenance potentielle à cette communauté : la communauté est la source de l’autorité épistémologique. Nous attribuons d’autant plus facilement la connaissance de ce que c’est d’éprouver un sentiment aux êtres que nous les imaginons plus facilement comme des partenaires ‘de conversation’, ou que nous les reconnaissons comme nous ressemblant, c'est-à-dire, plus aux enfants qu’aux animaux, plus à un chien qu’à un insecte :</p>
+
+            <div class="citation">
+                <p>« This is to be explained on the basis of that sort of community feeling which unites us with anything humanoid. To be humanoid is to have a human face, and the most important part of that face is a mouth which we can imagine uttering sentences in synchrony with appropriate expressions of the face as a whole. »</p>
+            </div>
+            <p style="text-align: right; font-style: italic; margin: -0.5rem 0 0.8rem 0;">Rorty, 1979, p.189</p>
+
+            <p>Une sensation immédiate n’est pas épistémique et n’est pas de l’ordre d’une croyance car il n’y a pas pour Sellars de croyance non-inférentielle dans le sens où, en quelque sorte, celle-ci se suffirait à elle-même, serait une croyance par elle-même, comme une sensation peut être une sensation par elle-même. Quelqu’un peut bien sûr produire une affirmation en réponse à certaines conditions d’expérience et qui ne soit pas inférée d’une autre croyance. Mais il ne peut pas avoir une croyance, ne peut pas être dit avoir une croyance, sans être capable de la relier, de saisir les connections d’inférence qui la relie à d’autres croyances. Et nous rejoignons ici ce qui a été dit précédemment à propos de la disposition à endosser une assertion. Comprendre un énoncé, écrit Brandom (p.153), saisir son contenu propositionnel, c’est le placer dans l’espace des raisons, être capable de l’insérer dans un jeu de questions et de réponses, le situer vis-à-vis d’autres contenus, soit, par exemple, qu’ils peuvent être dérivés de lui, soit qu’ils soient incompatibles. Cela vaut pour les énoncés observationnels aussi bien que pour les autres. Une croyance, en général, appartient à un réseau de croyances et les concepts, observationnels ou pas, ne sont pas des entités que l’on peut acquérir individuellement. Savoir que X est rouge, ce n’est pas seulement prononcer ‘X est rouge’ en présence d’un X rouge, c’est aussi être capable d’utiliser ‘X est rouge’ comme prémisses d’inférences conduisant à d’autres croyances. Nous n’attribuons pas le savoir de ce qu’il dit à la seule condition qu’il soit justifié à le dire au moment où il le dit. Il faut encore qu’il soit capable de s’engager dans une pratique de justification :</p>
+
+            <div class="citation">
+                <p>« The essential point is that in characterizing an episode or a state as that of knowing, we are not giving an empirical description of that episode or state ; we are placing it in the logical space of reasons, of justifying and being able to justify what one says. »</p>
+            </div>
+            <p style="text-align: right; font-style: italic; margin: -0.5rem 0 0.8rem 0;">Sellars, §37, p.76</p>
+
+            <p>Attribuer un savoir à S, ce n’est pas observer un certain état de S, qui finalement pourrait s’être produit à l’insu de S elle-même, qui pourrait lui être ‘donné’. Pour que S soit dite savoir que X est rouge, elle doit être capable d’indiquer les éléments qui l’autorisent à dire cela et qui rendent cet énoncé fiable ; S doit savoir qu’elle sait, doit savoir en quoi et pourquoi ce qu’elle dit est un savoir. Savoir la réalité, c’est savoir dire la réalité, et savoir dire c’est avoir appris à maîtriser les conditions d’usage d’un réseau de concepts interconnectés, c’est avoir appris à justifier et donc avoir appris ce qui vaut comme justification.</p>
+
+            <p>S est dite connaître un élément de réalité si elle est capable de produire un énoncé reconnu comme vrai, et cela demande qu’elle soit capable de produire les justifications auxquelles doit être adossée la valeur épistémique de cet énoncé. Quelle est la nature des justifications qui sont recevables dépend du jeu de langage dans lequel S est engagée, du type de connaissance à laquelle elle prétend ; en Science ou en Histoire, la pratique de justification n’est pas la même. Mais dans tous les cas, il faut apprendre à dire, c'est-à-dire à justifier, et apprendre ce qui vaut comme justification. Si la convergence des résultats de mesure que met en avant Salmon n’a pas pour van Fraassen la valeur épistémique que Salmon lui attribue c’est parce qu’ils ne sont pas d’accord sur ce qui vaut comme justification de la valeur épistémique d’un énoncé. L’un des deux a-t-il raison ou moins tort que l’autre ? Pour que cette question là ait une réponse ou un semblant de réponse, ou peut-être simplement un sens, il faudrait que ce soit au philosophe qu’il revienne de statuer sur ce qui vaut comme élément de justification d’un énoncé à être vrai et à parler de la réalité. L’une des idées, peut-être la principale, qui anime ce travail et plus particulièrement les deux parties qui vont suivre, est que le philosophe, pas plus d’ailleurs que le scientifique, au nom duquel il semble s’exprimer parfois, ou que qui que se soit, n’a le pouvoir de décréter au nom de quoi nous devrions tenir un énoncé pour vrai ou son contenu comme une connaissance de la réalité. Pour croire cela, il faut oublier que la pratique de justification qui est en jeu est une pratique essentiellement publique.</p>
         </div>
     </div>
 
-    <!-- B-3-1 Le présent de la présence – Habiter le langage -->
-    <div class="capsule capsule-b">
-        <div class="capsule-title">📌 B-3-1 Le présent de la présence – Habiter le langage</div>
+    <!-- CAPSULE 2 : B-3 « But have we lost the world ? » -->
+    <div class="capsule">
+        <div class="capsule-title">🌍 B‑3 « But have we lost the world ? »<sup><a href="#ref78" class="reference-link" id="r78">[78]</a></sup></div>
         <div class="capsule-content">
-            <p>Je veux montrer ici deux exemples de construction théorique résultant de l’oubli que le 
-            langage en prise avec le monde, avec la réalité, est un langage qui se parle, un langage qui se 
-            vit, un langage qui habite le présent, le présent de la parole vivante... [texte complet depuis “Je veux montrer…” jusqu’à “... elle ‘s’acte’, elle est, disent ceux qui proposent une théorie cognitive de l’énaction, énactée.”]</p>
+            <!-- B-3-1 -->
+            <h3 style="font-size:1.2rem; margin:1rem 0 0.5rem 0; color:#2c5a44; border-bottom:1px dotted #8aa87a; padding-bottom:0.2rem;">B‑3‑1 Le présent de la présence</h3>
+
+            <h4 style="font-size:1.1rem; margin:0.8rem 0 0.4rem 0; color:#3a6a3a;">Habiter le langage</h4>
+
+            <p>Avons-nous perdu le monde lorsque nous renonçons à tenir un discours ‘fondationnel’ sur la connaissance de la réalité, que celui-ci en appelle à une Transcendance, un ‘quelque chose’ d’indépendant de ce que nous pouvons dire, indifférent à ce que nous pouvons faire, dont les phénomènes seraient la manifestation plus ou moins fidèle qu’il s’agirait de déchiffrer grâce à l’expérimentation et de … représenter grâce à la modélisation ; ou à un Donné, découvert dans le profond silence de l’expérience immédiate la plus intime, elle aussi, donc, indépendante du langage, mais que les mots auraient pour mission, peut-être impossible, de rendre exprimable, communicable, en la … représentant ? Avons-nous perdu le monde en nous enfermant dans le langage, en ramenant le problème de la connaissance de la réalité à une réflexion sur les énoncés, sur la logique des concepts, sur les pratiques de justification ? Oui, sans doute, si nous pensons les énoncés comme des alignements de lettres groupées, la logique comme un ensemble de règles rigides, la justification comme une soumission à une autorité normative, nous avons perdu le monde. Nous avons perdu le monde parce que nous avons tué le langage, nous avons fait du langage une ville déserte, une ville morte, dont les maisons sont encore droites mais vides de toute trace d’habitation, toutes identiques, distinguées seulement à l’aide d’un numéro, reliées entre elles par des allées régulières conformes à un plan bien établi mais que personne n’emprunte jamais. S’installer dans une telle ville, oui, cela relève d’un enfermement. Mais le langage auquel s’intéressent Sellars et Wittgenstein est un langage vivant, un langage qui se parle. Si les mots sont des maisons, ils ont un intérieur luxuriant, surprenant, encombré, avec des coins et des recoins plus au moins chamarrés, plus ou moins contrastés, qui sont autant de lieux de vie, pour différents moments, différentes fonctions, différents usages. Il n’y a pas de plan, les allers et venues des habitants ont créé des routes et des chemins, par des affinités qui ne sont pas de l’ordre de la nécessité mais pas de l’arbitraire non plus, certaines pérégrinations ont ouvert des sentiers, il y a plusieurs itinéraires pour rejoindre un même lieu, certains sont plus marqués que d’autres. Certains endroits de la ville ne sont pas accessibles directement, il faut parfois traverser un hameau pour se rendre dans un autre. Il faut savoir dire ‘ce qui est’ avant de pouvoir dire ‘ce qui semble’. Ce langage-là fait du bruit parce qu’il est un lieu d’habitation, et que ceux qui l’habitent sont des êtres vivants ; et ils se transforment, et ils le transforment, sans obéir à une nécessité ‘venue d’ailleurs’, mais là encore, sans arbitraire non plus. La ville est malléable en certains lieux, tandis que d’autres, posés comme en surplomb, n’auraient pas l’air plus inébranlables s’ils plongeaient leurs racines dans les plus lointaines profondeurs de la terre. Ils se tiennent robustes et imposants comme dressés entre le ciel et la terre, mais cette présence impérative qu’ils affichent comme un don reçu des dieux, c’est peut-être les habitants eux-mêmes qui la nourrissent à force de les visiter et d’y laisser à chaque fois un peu de vie qui les nourrit de l’intérieur. Si loin d’avoir perdu le monde, nous pouvons le trouver dans le langage, c’est parce que d’abord nous y trouvons la vie, la vie d’une collectivité, un vivre-ensemble, et donc aussi un agir, et un ressentir, c’est parce qu’il est une harmonie essentielle entre les gestes, l’expérience et la parole.</p>
+
+            <p>Je veux montrer ici deux exemples de construction théorique résultant de l’oubli que le langage en prise avec le monde, avec la réalité, est un langage qui se parle, un langage qui se vit, un langage qui habite le présent, le présent de la parole vivante. De l’oubli que la réalité se dit dans le présent, et que le regard porté vers le passé ou vers le futur, par la parole qui le remplit, le rend visible pour l’offrir à l’entente, reste quelque que soit son objet, enraciné dans le présent. Le premier échafaudage théorique auquel je fais allusion vise à ‘sauver’ non pas seulement les phénomènes mais la réalité, dont l’indépendance et l’indifférence seraient contredites par le heurt entre les vérités qui furent énoncées ou celles qui le seront et les vérités qui racontent la réalité du présent. Nous contredisons des énoncés qui prétendirent dirent la réalité, et nous nous attendons à ce que nos énoncés soient à leur tour contredits, et ceux-là à leur tour, ect. Pour sauver la réalité il semble qu’il faille accepter de la perdre : nul énoncé ne dit vraiment la réalité car tous doivent s’attendre à être plus ou moins mis en question… L’idée que je veux défendre est qu’il y a, en philosophie, de faux soucis comme il y a de faux besoins. Le besoin d’une réalité qui déborderait du langage non seulement se nourrit de ‘fantasy’ mais engendre l’image d’un heurt qui est une image sans objet parce que la grammaire du langage n’autorise simplement pas un tel choc, qui préoccupe l’esprit philosophique (mais pas, notons-le, le scientifique), elle ne l’autorise pas du simple fait que le passé se dit au passé et le futur au futur – la réalité se dit dans le présent, et elle rayonne depuis le présent. Elle ne craint pas les vérités du passé ni celles du futur parce qu’elle les contient, parce qu’elle est ici et maintenant, parce qu’elle se vit, elle ‘s’acte’, elle est, disent ceux qui proposent une théorie cognitive de l’énaction, énactée.</p>
+
+            <h4 style="font-size:1.1rem; margin:1.2rem 0 0.4rem 0; color:#3a6a3a;">Les mots d’hier, les mots d’aujourd’hui</h4>
+
+            <p>Il arriva, au cours d’un échange qu’un philosophe des sciences m’opposa l’argument suivant : « Whether a scientific theory is supported or refuted by the evidence depends on what the evidence really was, and not on what we took it to be. Example: in the experiment the two stones did not fall at the same rate, while the judgement formed by the observer was that they did. Whether the outcome of the experiment was in accord with the theory clearly depends on the former, not on the latter. »</p>
+
+            <p>Le raisonnement de ce philosophe, appelons-le P, est, me semble-t-il, le suivant: Certains observateurs dans le passé ont affirmé que les rochers tombaient à la même vitesse ; mais nous savons et nous pouvons dire aujourd’hui qu’ils ne tombaient pas à la même vitesse. S’ils ne tombent pas à la même vitesse aujourd’hui c’était aussi le cas dans le passé, donc ce qu’ils ont affirmé n’était pas ce qui était le cas ; ils ont cru que ce qui se passait sous leur yeux était que la vitesse des rochers était la même mais il se passait sous leurs yeux ce qui se passe sous les nôtres. Mais, la correction que nous faisons à leur jugement, il se pourrait bien que dans le futur certains observateurs la fasse concernant certaines de nos affirmations ; que ce que nous pensons vrai finalement se révèle faux ; mais puisque la réalité d’aujourd’hui doit être la même que celle d’hier et celle de demain, nous ne pouvons jamais affirmer que nos énoncés portent vraiment sur la réalité. La réalité d’hier, celle d’aujourd’hui, celle de demain, doivent être les mêmes, atemporelle, indépendante de ce que nous disons ou faisons. Or, nous avons tant révisé les énoncés du passé qui prétendaient parler de la réalité qu’il faut s’attendre à ce que la même chose se produise avec les nôtres. Il serait naïf de croire que nous parlions vraiment de la réalité.</p>
+
+            <p>Quel est le problème avec ce discours ? Mon objection est-elle que notre réalité ne doit pas se substituer à la leur ? Que chacun son langage, chacun ses vérités, chacun sa réalité ? Non. Ma réponse part plutôt d’une question : de quoi parlons-nous lorsque nous parlons de la vitesse des rochers ? Il sera utile de décomposer la phrase : ‘In the experiment the two stones did not fall at the same rate, while the judgement formed by the observer was that they did’, en deux énoncés :</p>
+            <ul style="margin-left:1.5rem; list-style:disc;">
+                <li>dans l’expérience, les rochers ne tombaient pas à la même vitesse (1),</li>
+                <li>alors que le jugement des observateurs était qu’ils tombaient à la même vitesse (2)</li>
+            </ul>
+            <p>Contrairement à l’énoncé (2), l’énoncé (1) n’a aucune marque d’indexicalité ; c’est nous qui disons cela, maintenant, mais ce que veut signifier P par cet absence d’indexicalité, c’est que cet énoncé aurait pu être énoncé dans le passé, disons par un observateur plus malin, plus clairvoyant que les autres, qui aurait été capable de voir (et savoir) ce que nous sommes capables de voir (et savoir). L’absence d’indexicalité signifie que ce qui est énoncé : ‘les rochers ne tombaient pas à la même vitesse’, est simplement ce que les choses sont, ce que les choses étaient, “what the evidence really was”. Nous sommes invités à imaginer une contemporanéité de ces deux énoncés, à imaginer deux observateurs du passé, l’un disant ce que les choses semblent, les rochers tombent à la même vitesse, l’autre, plus attentif, plus perspicace, disant ce que les choses sont, les rochers ne tombent pas à la même vitesse. Et c’est précisément cette image de la contemporanéité que je juge trompeuse. Elle est trompeuse, non parce que je pense qu’aucun observateur du passé n’aurait pu être suffisamment clairvoyant pour voir ce que les choses étaient, ni parce que je pense que la réalité d’alors était différente de la réalité d’aujourd’hui. Mais plus simplement, parce que pour que cette contemporanéité soit concevable, pour que cette image est un sens, il faut que le mot ‘rate’, ou ‘vitesse’, ait la même signification dans les énoncés (1) et (2). Et c’est cela, la question du sens des mots relativement au contexte dans lequel ils sont employés que nous conduit à occulter l’absence d’indexicalité de l’énoncé tenu par nous dans le présent. La signification d’un mot n’est pas garantie par les lettres qui le composent, elle n’est pas indépendante de ce que l’on fait avec ce mot, du type de situations dans lesquelles il est employé. La signification du mot ‘vitesse’, Kuhn l’a montré bien mieux que je ne peux le faire, n’est pas indépendante du réseau de concepts dans lequel il est enchâssé, du réseau de pratiques au cours desquelles il est utilisé. Avec cela en tête, les énoncés (1), tenu par nous, et (2), tenu par les observateurs du passé, doivent être réécrits de façon à faire apparaître l’indexicalité temporelle de la signification du mot ‘vitesse’ :</p>
+            <ul style="margin-left:1.5rem; list-style:disc;">
+                <li>(nous disons :) dans l’expérience, les rochers ne tombent pas à la même vitesse<sub>1</sub> (1),</li>
+                <li>alors que le jugement des observateurs était : ‘les rochers tombent à la même vitesse<sub>2</sub>’ (2)</li>
+            </ul>
+
+            <p>L’image d’une possible contemporanéité dit que des assertions du passé et des assertions du présent prétendant porter sur la réalité mais contradictoires auraient pu, en principe, être tenues au même moment. L’image s’étend vers le futur et nous imaginons des énoncés qui contrediront ceux que nous tenons aujourd’hui. Ces énoncés produits à des moments historiques différents (je mesure la distance historique à la différence des pratiques scientifiques qui accompagnent les énoncés) se retrouvent, dans l’image, juxtaposés dans un espace temporel abstrait, autant dire un espace atemporel. Et ils sont en conflit du fait qu’ils parlent de la réalité de façon contradictoire tandis qu’il n’y a qu’une réalité, indépendante de la façon dont elle dite. Le dernier a raison contre tous les autres, mais l’avenir étant ouvert, nous perdons toute assurance d’un contact avec la réalité, et là, nous perdons le monde. Mais si l’on prend en considération l’historicité de la signification, et l’indexicalité de toute énonciation, le conflit des réalités perd toute substance, car, ainsi que le dit T.S.Eliot, les mots d’hier appartiennent au langage d’hier, qui n’est pas le langage d’aujourd’hui,</p>
+
+            <div class="citation">
+                <p>For last year’s words belong to last year’s language<br>
+                And next year’s words await another voice<sup><a href="#ref78" class="reference-link" id="r78bis">[78]</a></sup></p>
+            </div>
+
+            <p>et les mots de demain, ce n’est pas nous qui les dirons, et ils ne peuvent donc pas menacer la réalité, la réalité que nous disons.</p>
+
+            <p>Il pourrait sembler que j’en soit arrivée à la conclusion que des énoncés contradictoires produits à différents moments ont le même droit à dire la réalité, doivent être préservés et pouvoir être énoncés ensemble depuis le présent. La réalité prendrait l’allure d’un kaléidoscope temporel. Je prends l’exemple de Latour disant que Ramsès n’est pas mort de la tuberculose car au moment de sa mort le mot même de tuberculose n’existait pas et il fût tenu pour vrai un autre jugement auquel il faut donner droit aujourd’hui autant qu’hier. Puisqu’il n’y a pas de ‘donné’ indépendant d’un langage et d’une pratique, ce jugement passé est aussi vrai, et tout aussi légitime que le jugement que nous formulons aujourd’hui. Dire cela, c’est faire semblant, faire semblant de pouvoir choisir le langage, choisir la façon dont le langage parle de la réalité. Il faudrait ici revenir aux commentaires de S.Cavell sur l’articulation entre convention et nécessité. Nous ne choisissons pas les critères selon lesquels nous apprenons à dire le monde, à reconnaître ce qui peut être dit de ce qui ne peut pas l’être. Les critères qui guident notre pratique du langage reposent sur des conventions humaines, oui : « il y a des conventions qui gouvernent l’application des critères grammaticaux ». Et il n’est pas nécessaire que ce que nous reconnaissons comme étant la peur, le désespoir ou l’ennui soit caractérisé par les critères que nous utilisons ; il n’est pas nécessaire que les situations que nous reconnaissons comme étant celles dans lesquelles ces concepts doivent être appliqués ne puissent pas être autres. Par exemple, « il se pourrait que quelqu’un soit simplement ennuyé par un tremblement de terre, la mort de son enfant, ou la déclaration de la loi martiale, tandis qu’une épingle, un nuage, un poisson pourraient le mettre en fureur … » (Cavell, 1996, p.178), et ces situations mettent nos critères en défaut. Il se peut bien, parfois, que nos critères soient démentis, que leur usage se révèle, d’une manière indéniable, mais pas forcément explicable, insatisfaisant, inadéquat. Mais ce n’est généralement pas le cas. Pourquoi ? Parce que les conventions sur lesquelles reposent l’usage de nos critères sont malgré tout de l’ordre de la nécessité, une nécessité qui vient de ce qu’elles émanent de formes de vie. On ne choisit pas davantage les critères constitutifs de la réalité que l’on ne choisit la forme de vie dans laquelle ces critères se déploient.</p>
+
+            <div class="citation">
+                <p>Notre forme de vie n’est pas celle des contemporains de Ramsès.</p>
+            </div>
+
+            <p>Dans la première situation, le philosophe imaginait que les énoncés du présent pouvaient être transportés dans le passé. A l’extrême, nous étions invités à penser que le fait que nous disions ‘il y a des électrons’ devait signifier que le même énoncé aurait pu être, en principe, prononcé à tout moment du passé. Dans la seconde situation, ce sont les énoncés du passé qui se trouvent transportés dans le présent – comme s’il y avait un sens à s’imaginer en train de dire ‘il y a du phlogistique’ en regardant brûler une allumette. Dans les deux cas, l’image est celle d’énoncés produits dans le passé, dans le présent, dans le futur, mais formulés dans le même temps grammatical et réunis dans un même moment temporel. Mais celui qui parle habite le présent ; le temps grammatical du présent, dans lequel nous apprenons le monde, est le temps de la vie, le temps de l’expérience ; une expérience qui a lieu maintenant, dans le présent. Le moment du présent est celui d’une forme de vie. L’ensemble des événements du passé et du futur est constitué de ce qui ne peut pas se dire au présent par manque de voix susceptible de le faire. Mais c’est à partir du présent que le passé se raconte, au passé, et le futur s’imagine, au futur. Le passé, le futur, n’ont pas d’existence ‘propre’, d’existence au temps grammatical du présent, car quelle voix pourrait la leur donner. Le passé et le futur n’existent que dits par la voix qui habite le présent, mais elle ne peut pas les dire au temps grammatical du présent parce qu’ils sont en dehors de la vie, en dehors de l’expérience. L’idée que la réalité se dit dans un langage qui se parle, un langage vivant, et celle que les énoncés de ce langage gagnent leur valeur épistémique au travers d’un pratique de justification collective vont rester, quoique reformulées, les idées principales des deux parties qui vont suivre.</p>
+
+            <!-- B-3-2 -->
+            <h3 style="font-size:1.2rem; margin:1.5rem 0 0.5rem 0; color:#2c5a44; border-bottom:1px dotted #8aa87a; padding-bottom:0.2rem;">B‑3‑2 Réal-isation de l’expérience</h3>
+
+            <p>La deuxième partie de cette thèse pourrait être vue comme une réflexion sur les symptômes de l’ignorance de la fonction épistémologique de la pratique publique de justification, dans le cadre des théories cognitives – première section de cette deuxième partie – et dans le cadre de la philosophie des sciences – seconde section. Il s’agira notamment de montrer que les conceptions de la connaissance dont témoignent les discours tenus dans le cadre des théories représentationnistes de la cognition sont fautives des deux erreurs mentionnées précédemment par Sellars. La première était de considérer que l’enfant en phase d’apprentissage du langage évolue dans un espace logique structuré, le nôtre, nous qui possédons déjà le langage en question. Nous situons l’enfant dans le monde d’objets que nous connaissons et concevons l’apprentissage de la langue comme un processus de simple prise de conscience de ces objets qui se donneraient à sa perception suivi de l’association d’un symbole verbal à chacun de ces éléments. Cette conception de l’acquisition du langage et de la connaissance des choses que dit ce langage se traduit par la modélisation représentationniste des processus cognitifs qui, soit, considère le langage comme un système de symboles, en tenant pour secondaire l’ancrage du symbole dans le monde vécu, soit cherche à construire un système capable de reconnaître des formes déterminées auxquelles il est confronté. La seconde erreur est de penser que lorsque nous identifions un état de connaissance, nous donnons une description empirique de cet état. Cela se traduit par l’idée que l’étude de ce en quoi consiste la connaissance consiste à comprendre et représenter un processus cognitif indépendamment de l’expérience vécue qui accompagne ce processus. Comprendre la connaissance c’est produire une représentation adéquate d’un processus ou une structure cognitive car quelqu’un est dans un état de connaissance lorsqu’il est dans un certain état physique ou est capable d’actualiser certaines structures physiques. L’idée s’étend à une conception de la connaissance scientifique qui la réduit à la simple existence de certaines structures symboliques.</p>
+
+            <p>La troisième partie montrera, a contrario, comment la prise en compte du caractère public de la pratique de justification peut s’incarner dans une façon, non représentationniste, de concevoir ce que c’est que ‘connaître la réalité’ et de concevoir le rôle de l’activité scientifique dans le développement de cette connaissance. La première section de cette troisième partie traitera ainsi d’une certaine façon d’appréhender les phénomènes qui ont trait à la cognition, et plus spécialement d’une certaine théorie de la cognition, la théorie énactive; puis, la deuxième section présentera une certaine façon de comprendre l’activité scientifique et les conditions de légitimation de la valeur épistémique du produit de cette activité, dans le cadre d’une certaine philosophie de la science, que l’on pourrait dire, me semble-t-il, ‘realistic’. C’est évidemment la question ouverte plus haut, au sujet de ce qui vaut comme justification d’une prétention au savoir, qui essaiera alors de trouver une réponse. Cette réponse nous permettra de comprendre le type de condition de légitimité susceptible de donner droit à la prétention de la théorie énactive à être un discours sur la réalité, la réalité de notre rapport cognitif … à la réalité.</p>
+
+            <p>Mais comment peut-on seulement espérer produire une connaissance de la réalité de notre rapport cognitif, et de notre connaissance de la réalité ? N’est-ce pas une entreprise logiquement désespérée ? C’est un souci qui épargne étrangement les théories représentationnistes. Mais qui est au point de départ de la conception énactive de la cognition. Et la façon dont cet écueil logique est appréhendé dans ce cadre-là me paraît résumer, ou éclairer, la visée didactique de tout ce qui a été exprimé dans cette première partie. C’est donc sur cela que je vais la conclure.</p>
+
+            <p>Quand l’objet de l’enquête scientifique est la cognition, la posture épistémologique réaliste, incarnée notamment par les neurosciences, tient pour acquise l’idée que la cognition et l’activité de l’esprit sont entièrement dues à la structure particulière du système cognitif. L’idée de base est qu’à chaque forme de comportement ou d’expérience, il est, il devrait, en principe, être possible d’attribuer une structure cérébrale particulière et inversement que les changements de structures cérébrales ont pour effet un changement au niveau du comportement ou de l’expérience (Varela & al., p.11). La cognition est alors pensée comme une série d’événements cérébraux qui correspondent à une expérience cognitive ; et cette pensée, cette pensée de la cognition comme relation entre, d’une part, une structure, et d’autre part, l’activité cognitive et l’expérience, conformément à l’idée de base, doit être, dans le cerveau du scientifique, une série d’événements cérébraux en correspondance avec l’idée de la relation entre structure cérébrale et activité cognitive + expérience. Si tout phénomène cognitif correspond à une structure cérébrale, celui que l’on pourrait identifier à la connaissance des processus cognitifs doit aussi être l’effet d’un événement cérébral. L’acte de réflexion par lequel cela est pensé, la conception des processus cognitifs elle-même comme effet d’un événement cérébral particulier est réalisé dans un contexte donné de croyances et de pratiques biologiques, sociales, et culturelles. Que dire de la pensée du contexte dans lequel est pensée la conception des processus cognitifs ? Cette pensée de l’arrière plan doit-elle être pensée comme une structure cérébrale, et cette pensée-là… ? Plus généralement, que dire de la valeur épistémique d’une pensée (est-ce une représentation, une invention, une construction, une illusion), si nous ne connaissons pas le processus par lequel elle est réalisée ? Mais, quoique nous finissions pas dire de ce processus, il s’agira d’un discours dont la valeur épistémique dépend d’une posture épistémologique. Et cette posture, peut être vue comme l’expression de l’existence d’une certaine structure cognitive. La régression est habituellement stoppée en choisissant un fondement : la description scientifique comme fondement de l’épistémologie, ou l’inverse. La perspective énactive propose de stopper la régression infinie en revenant à l’expérience particulière, située ‘ici et maintenant’, de tout événement cognitif. L’acte de réflexion au lieu d’être considéré comme une structure cognitive ou une position épistémologique est considéré comme une expérience vécue.</p>
+
+            <p>L’idée qui est au cœur de la démarche dans laquelle s’inscrit la théorie de l’énaction est que la connaissance scientifique, la description que la science propose de l’expérience que nous faisons du monde, de la vie, nous conduit à tenir pour plus ‘réel’ les explications métaphysiques invoquant des choses dont aucune expérience n’est parfois même concevable que ce qui est donné dans l’expérience immédiate :</p>
+            <div class="citation">
+                <p>« Thus most people would hold as a fundamental truth the scientific account of matter/space as collections of atomic particles, while treating what is given in their immediate experience, with all of its richness, as less profound and true »</p>
+            </div>
+            <p style="text-align: right; font-style: italic; margin: -0.5rem 0 0.8rem 0;">Varela et al., 1991, p.12</p>
+
+            <p>Lorsque c’est la cognition qui est l’objet du discours scientifique, cette distance instaurée entre ‘la réalité’ et le ‘phénomène’, entre l’explication et l’expérience, devient, pour les promoteurs de la théorie de l’énaction, intenable. Le scientifique ne peut pas prétendre au même détachement vis-à-vis de l’objet de son enquête que dans le cas des objets de la physique, car l’objet qu’il pense est aussi celui par lequel il pense. L’explication de la pensée, de la connaissance, est aussi, doit être aussi une explication de ce que lui-même pense, c'est-à-dire une explication de la possibilité de l’explication. Mais si la pensée, conçue comme événement cérébral, peut-être appréhendée comme un objet, une chose étalée devant, ‘donnée à’ l’analyse du scientifique, l’événement par lequel cette pensée de la cognition comme un ‘objet étalé devant’ est réalisée ne peut pas l’être, car il implique le corps même du scientifique – avant d’être une explication, c’est une expérience, l’expérience de la pensée de la pensée, l’expérience de la cognition de la cognition. La tension entre le discours théorique, explicatif, et l’expérience devient intenable dans l’étude de la cognition car la science cognitive est comme Janus, à deux faces :</p>
+            <div class="citation">
+                <p>« One of its faces is turned toward nature and sees cognitive processes as behavior. The other is turned toward the human world and sees cognition as experience. »</p>
+            </div>
+            <p style="text-align: right; font-style: italic; margin: -0.5rem 0 0.8rem 0;">Varela, 1991, p.13</p>
+
+            <p>La tension entre le compte rendu ‘naturel’ de la cognition’ et son aspect ‘expérientiel’ se traduit par une opposition qui semble irréconciliable entre ceux qui pensent que ce qui relève de l’expérience n’intéresse pas la connaissance scientifique et ne lui manque pas pour qu’elle soit complète, ne serait-ce qu’en principe, et ceux qui pensent qu’il ne peut pas y avoir de science de la cognition, non seulement, parce que c’est une expérience, mais aussi, parce que c’est une expérience que la science elle-même doit présupposer : une situation d’expérience toujours déjà en place, à partir de laquelle, au sein de laquelle le discours scientifique se constitue, et qu’il ne peut donc pas prendre comme objet.</p>
+
+            <p>La visée de la perspective énactive est de résoudre cette dichotomie entre compte rendu explicatif, objectif, et compte rendu expérientiel, subjectif de la cognition :</p>
+            <div class="citation">
+                <p>« neither extreme is workable for a pluralistic society that must embrace both science and the actuality of human experience. To deny the truth of our own experience in the scientific study of ourselves … is to render the scientific study of ourselves without a subject matter. But to suppose that science cannot contribute to an understanding of our experience may be to abandon, within the modern context, the task of self-understanding. »</p>
+            </div>
+            <p style="text-align: right; font-style: italic; margin: -0.5rem 0 0.8rem 0;">Varela, 1991, p.13</p>
+
+            <p>Ce n’est peut-être pas le terme ‘résoudre’ qui convient ici pour exprimer la façon dont l’énaction permet de supprimer la tension entre les compte-rendus explicatif et expérientiel. Il ne s’agit pas de réconcilier les deux modes d’approches, de trouver une sorte de langage de compatibilité. Une idée plus juste est donnée par la façon dont Wittgenstein supprime la tension entre les approches réaliste et anti-réaliste. Le problème est d’abord un problème philosophique, il ne trouvera pas de solution dans un gain d’information, mais un retournement conceptuel. L’opposition entre les discours réaliste et anti-réaliste s’enracine dans une conception partagée de la notion de réalité qui rend possible les deux branches de l’alternative : la réalité comme cause des phénomène, comme fondement de l’expérience – la question étant ensuite de savoir si cette cause est explicitable et peut-être l’objet d’un discours à valeur de vérité, ou pas. Dans le premier cas, la science parlerait, pourrait en principe, parler de la réalité – dans le second, la science ne peut, ne doit parler que de l’expérience, elle ne peut pas et ne doit pas essayer, ou faire semblant de parler de la réalité. Mais cette conception de la notion de réalité ne reflète en rien l’usage qui est effectivement celui du concept – lorsque nous parlons de ce qui constitue la réalité, de ce qui est réel, nous ne faisons pas allusion à ce qui est au delà de toute expérience concevable, nous parlons de ce dont nous pouvons parler, parler ensemble ; le problème avec le discours réaliste ne se situe pas au niveau de ‘la vérité’ comme le croit l’anti-réaliste ou l’empiriste, mais du sens. L’opposition entre les deux branches n’a pas à être résolue, il n’y à pas à ‘comprendre’, à ‘trouver’ un chemin qui les rende compatibles, car en dehors du cadre posé par la conception de la notion de réalité qui est à la base de l’opposition, l’opposition n’a tout simplement plus de sens, il n’y a même plus de conflit concevable. Nous ne connaissons, nous ne parlons de rien d’autre que de la réalité, et le réaliste a raison ; mais cette réalité, ce qui est l’objet du discours donc, n’a rien de métaphysique, et l’anti-réaliste a raison.</p>
+
+            <p>L’idée qui guide la démarche énactive, et qui sera le fil conducteur des deux parties suivantes, est que la cognition est une expérience ; il n’y a aucun sens à dire d’un discours qui prétendrait ignorer cette expérience, fût-il scientifique, qu’il a pour objet la cognition. Mais il n’y en a pas non plus à dire d’un discours sur la cognition qui rejetterait les contraintes du discours scientifique qu’il peut constituer un savoir, une connaissance, fût-il nourri d’une expérience, car la procédure d’objectivation qui guide le travail scientifique n’est rien d’autre qu’un processus de constitution, ou en tout cas une étape essentielle, d’une connaissance de la réalité, en tant qu’objet d’un discours partagé.</p>
         </div>
     </div>
 
-    <!-- B-3-1 Le présent de la présence – Les mots d’hier, les mots d’aujourd’hui -->
-    <div class="capsule capsule-b">
-        <div class="capsule-title">📌 B-3-1 Le présent de la présence – Les mots d’hier, les mots d’aujourd’hui</div>
-        <div class="capsule-content">
-            <p>Il arriva, au cours d’un échange qu’un philosophe des sciences m’opposa l’argument 
-            suivant : « Whether a scientific theory is supported or refuted by the evidence depends on what 
-            the evidence really was, and not on what we took it to be.  Example:  in the experiment the two 
-            stones did not fall at the same rate, while the judgement formed by the observer was that they 
-            did... » [texte complet jusqu’à “Notre forme de vie n’est pas celle des contemporains de Ramsès.”]</p>
-            <p>L’idée que la réalité se dit dans un langage qui se parle, un langage vivant, et celle que 
-            les énoncés de ce langage gagnent leur valeur épistémique au travers d’une pratique de 
-            justification collective vont rester, quoique reformulées, les idées principales des deux parties 
-            qui vont suivre.</p>
-        </div>
-    </div>
-
-    <!-- B-3-2 Réal-isation de l’expérience -->
-    <div class="capsule capsule-b">
-        <div class="capsule-title">📌 B-3-2 Réal-isation de l’expérience</div>
-        <div class="capsule-content">
-            <p>La deuxième partie de cette thèse pourrait être vue comme une réflexion sur les 
-            symptômes de l’ignorance de la fonction épistémologique de la pratique publique de 
-            justification... [texte complet jusqu’à la fin du chapitre I] ... L’idée qui guide la démarche énactive, et qui sera le fil conducteur des deux parties 
-            suivantes, est que la cognition est une expérience ; il n’y a aucun sens à dire d’un discours qui 
-            prétendrait ignorer cette expérience, fût-il scientifique, qu’il a pour objet la cognition. Mais il 
-            n’y en a pas non plus à dire d’un discours sur la cognition qui rejetterait les contraintes du 
-            discours scientifique qu’il peut constituer un savoir, une connaissance, fût-il nourri d’une 
-            expérience, car la procédure d’objectivation qui guide le travail scientifique n’est rien d’autre 
-            qu’un processus de constitution, ou en tout cas une étape essentielle, d’une connaissance de la 
-            réalité, en tant qu’objet d’un discours partagé.</p>
-        </div>
-    </div>
-
-    <!-- Références -->
+    <!-- NOTES -->
     <div class="capsule sources">
-        <div class="capsule-title">📚 Notes et références</div>
+        <div class="capsule-title">📚 Notes</div>
         <div class="capsule-content ref-list">
             <p id="ref78"><strong>78.</strong> Titre emprunté à Putnam (1995, p.64).</p>
-            <p id="ref79"><strong>79.</strong> T.S. Eliot, ‘Little Gidding’ ; ces vers sont cités par van Fraassen (2002, p.64).</p>
-            <!-- Les notes précédentes (50-77) sont dans les parties précédentes -->
+            <p id="ref79"><strong>79.</strong> T.S.Elliot, ‘Little Gidding’ ; ces vers sont cités par van Fraassen, (2002, p.64). Je ne suis pas sûre que nous les comprenions de la même façon.</p>
         </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
     <div class="nav-buttons">
-        <a href="02_I_Ethique_Connaissance_part06.html" class="nav-btn">← Précédent (partie 6)</a>
+        <a href="02_I_Ethique_Connaissance_part06.html" class="nav-btn">← Précédent</a>
         <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
-        <a href="03_II_Images_Representation_part01.html" class="nav-btn">Suivant (partie II) →</a>
+        <a href="03_II_Images_Representation_part01.html" class="nav-btn">Suivant →</a>
     </div>
 
     <footer>
-        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l’énaction et sa légitimité épistémologique</em><br>
-        Conversion HTML par Flux
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l’énaction et sa légitimité épistémologique</em>
     </footer>
 </div>
 </body>

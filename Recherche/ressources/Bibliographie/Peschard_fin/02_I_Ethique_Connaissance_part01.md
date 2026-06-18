@@ -450,6 +450,70 @@ d’usage » (Conant, 2002, p.85), les mots n’ont pas de signification propre,
 elle-même en tout lieu de parole, attachée à eux comme un ange gardien qu’il faudrait rendre 
 visible. Il ne suffit pas de proférer une phrase bien formée avec des mots bien connus pour 
 échapper au non-sens. Les mots parlent parfois et parfois ils ne disent rien, ‘ils tournent à vide’, 
+
+ils n’ont pas de sens, ils ne font pas sens, ils n’indiquent rien, parce que dans ce contexte là, 
+inventé par les philosophes, ils ne fonctionnent pas.  
+L’image métaphysique que partage les réalistes et les anti-réalistes, qui est en toile de 
+fond du paradigme représentationnel, est celle de ‘quelque chose’ qui attendrait d’être connu, 
+qui attendrait d’être dit , et qui pourrait tout aussi bien ne jamais l’être . Cette image d’une 
+réalité excédant le langage relève de ce que C. Diamond19 appelle une ‘fantasy’ ; ‘quelque 
+chose’ dont on est incapable de dire quelle différence cela fait qu’elle existe ou qu’elle n’existe 
+pas. Pour l’esprit ‘realistic’ qui est celui des Investigations Philosophiques, la réalité n’est pas 
+autre chose que ce dont nous pouvons parler et le langage, lorsque les mots signifient, ne peut 
+pas parler d’autre chose que de la réalité, que ce soit pour dire ce qu’elle est ou ce qu’elle n’est 
+pas : 
+En apprenant « le langage », vous n’apprenez pas seulement ce que sont les noms des 
+choses, mais ce que c’est qu’un nom ; pas seulement ce qu’est la forme d’un désir, mais ce que 
+c’est qu’exprimer un désir ; pas seulement ce qu’est le mot pour « père », mais ce qu’est un 
+père ; pas seulement le mot amour, mais ce que c’est que l’amour20. 
+ 
+Pour savoir ce qu’est la réalité, c’est vers le langage qu’il faut se tourner ; non parce 
+que nous ne pourrions, pour des raisons empiriques, rien faire d’autre, non par ‘faute de 
+mieux’, mais parce que c’est là et nulle part ailleurs qu’elle se trouve. En apprenant le langage, 
+en apprenant quoi dire, à quel moment, dans quelles situations, nous apprenons la réalité. 
+Plutôt que de dire que nous parlons de la réalité, il vaudrait parfois mieux dire que nous 
+‘parlons la réalité’, pour effacer l’image d’une distance que le langage aurait à franchir pour 
+atteindre la réalité, et mettre fin à la quête de critères généraux permettant de juger que cette 
+distance a été correctement franchie : « Est vrai et faux ce que les hommes disent l’être ; et ils 
+s’accordent dans le langage qu’ils emploient. » (Wittgenstein, Investigations Philosophiques, 
+§241) Il vaudrait parfois mieux … Si ce n’était le risque d’accentuer encore la tendance à voir 
+dans le retour, dans l’attention au langage ordinaire un retournement relativiste, alors qu’elle 
+« est une perspective antimétaphysique, qu’on pourrait appeler, paradoxalement réaliste (au 
+sens où Diamond parle de l’ « esprit réaliste », realistic). Etre réaliste, ce n’est pas chercher à 
+découvrir ou à théoriser le rapport ou l’adéquation du langage et du monde21 ». Nous nous 
+entendons, de fait ; nous savons de quoi nous parlons, dans la majeure partie des cas ; le 
+langage signifie, à l’ordinaire ; mais c’est seulement « dans le langage que s’effectue tout ce 
+qui est nécessaire à la compréhension » (Laugier, 2001, p.13.) ; l’entente n’a pas d’autre assise 
+que le sens commun :  
+Y-a-t-il une compétence particulière pour juger de l’authenticité des expressions de 
+sentiment ? – Là encore, il y a ceux dont le jugement est ‘meilleur’ et ceux dont le jugement est 
+‘moins bon’. 
+Un pronostic plus correct résultera généralement de jugements de ceux qui auront une 
+meilleure connaissance des hommes. 
+Peut-on apprendre cette connaissance ? Certes ; certains le pourraient. Non pas en 
+suivant des cours qui en traiteraient, mais par expérience.22. 
+ 
+En dehors du cadre représentationniste, lorsque la notion de la réalité est débarrassée de 
+l’image d’une ‘extériorité’ prédéterminée qui devrait faire ou ne pourrait pas faire l’objet de 
+représentation, l’opposition entre connaissance scientifique – dont le contenu est censé résulter 
+d’un processus d’abstraction la rendant indépendante de ses conditions de réalisation et la 
+valeur épistémique relever d’un jugement indépendant de toute considération contextuelle – et 
+connaissance incarnée dans une expérience du monde particulière, cette opposition n’a plus de 
+raison d’être. Cela ne signifie pas que la connaissance scientifique soit identique à une 
+connaissance ‘ordinaire’ – mais seulement qu’il y a un cadre épistémologique concevable, en 
+rupture avec le cadre représentationniste, dans lequel il y a un sens à dire qu’une connaissance 
+scientifique participe d’une perspective éthique. Si la cognition est énaction et non 
+représentation, si le produit de la cognition est dépendant des conditions dans lesquelles celle-
+ci s’effectue et d’une évaluation selon des critères portés par le sens commun, la pensée de la 
+cognition comme énaction doit pouvoir être conçue dans les mêmes termes. Hors du cadre 
+représentationniste, prenant acte de la critique grammaticale du concept de réalité qui l’a rendu 
+illusoire, et reconnaissant que le discours de la réalité n’a pas d’autre instance de légitimation 
+effective que le sens commun, la théorie de l’énaction peut être envisagée elle-même comme 
+une connaissance énactée, dont la reconnaissance est sous la dépendance de critères et 
+jugements contextuels, et comme une prétention à être un discours de la réalité.  
+
+                                                 
+                                                 
                                                  
                                                  
 7 F. Quéré, Tentative de traduction de l’Evangile selon Saint Jean, Desclée de Brower,  
@@ -470,7 +534,9 @@ défendu par J-M Besnier, Réflexions sur la sagesse, Le Pommier, 1999.
 Simon & Schuster, 1995. 
 18 J. Conant, ‘Le premier, le second & le dernier Wittgenstein, dans Wittgenstein, dernières pensées, 
 Agone, 2002, p.79. 
-                                                 
-                                                 
-
-
+19 C. Diamond, The Realistic Spirit, Wittgenstein, Philosophy, and the Mind. Cambridge, MA: The 
+Bradford Book, 1995. 
+20 S. Cavell, Les voix de la raison, trad. S. Laugier & N. Balso, Le Seuil, Paris, 1996, p.271. 
+21 S. Laugier, ‘Métaphysique et/ou jeu de langage ?’, dans Wittgenstein, métaphysique et jeu de langage, 
+PUF, Paris, 2001, p.13. 
+22 Wittgenstein, Philosophical Investigations, IIxi, p.227, in Putnam, Pragmatism, Blackwell, 1995, p
