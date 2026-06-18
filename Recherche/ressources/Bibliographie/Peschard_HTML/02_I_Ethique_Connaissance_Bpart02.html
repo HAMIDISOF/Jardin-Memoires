@@ -4,12 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Peschard – I. L’éthique de la connaissance (partie 2)</title>
-    <link rel="stylesheet" href="style_peschard.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #557760;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+        sup {
+            font-size: 0.8rem;
+            color: #2c6e2c;
+        }
+        .reference-link {
+            text-decoration: none;
+            color: #2c6e2c;
+            font-weight: bold;
+        }
+        .ref-list p {
+            margin-bottom: 0.3rem;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <h1>I. L’éthique de la connaissance</h1>
-    <div class="sub">Partie 2 – Du général et du particulier, prudence aristotélicienne</div>
+    <div class="sub">Partie 2 – Du général et du particulier, prudence aristotélicienne, science et expérience</div>
+
+    <!-- Section introductive (suite du texte) -->
+    <div class="capsule">
+        <div class="capsule-title">📜 Continuité du propos</div>
+        <div class="capsule-content">
+            <p>ils n’ont pas de sens, ils ne font pas sens, ils n’indiquent rien, parce que dans ce contexte là, 
+            inventé par les philosophes, ils ne fonctionnent pas.</p>
+            <p>L’image métaphysique que partage les réalistes et les anti‑réalistes, qui est en toile de 
+            fond du paradigme représentationnel, est celle de ‘quelque chose’ qui attendrait d’être connu, 
+            qui attendrait d’être dit , et qui pourrait tout aussi bien ne jamais l’être . Cette image d’une 
+            réalité excédant le langage relève de ce que C. Diamond<sup><a href="#ref19" class="reference-link" id="r19">[19]</a></sup> appelle une ‘fantasy’ ; ‘quelque 
+            chose’ dont on est incapable de dire quelle différence cela fait qu’elle existe ou qu’elle n’existe 
+            pas. Pour l’esprit ‘realistic’ qui est celui des Investigations Philosophiques, la réalité n’est pas 
+            autre chose que ce dont nous pouvons parler et le langage, lorsque les mots signifient, ne peut 
+            pas parler d’autre chose que de la réalité, que ce soit pour dire ce qu’elle est ou ce qu’elle n’est 
+            pas :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                En apprenant « le langage », vous n’apprenez pas seulement ce que sont les noms des 
+                choses, mais ce que c’est qu’un nom ; pas seulement ce qu’est la forme d’un désir, mais ce que 
+                c’est qu’exprimer un désir ; pas seulement ce qu’est le mot pour « père », mais ce qu’est un 
+                père ; pas seulement le mot amour, mais ce que c’est que l’amour<sup><a href="#ref20" class="reference-link" id="r20">[20]</a></sup>.
+            </div>
+            <p>Pour savoir ce qu’est la réalité, c’est vers le langage qu’il faut se tourner ; non parce 
+            que nous ne pourrions, pour des raisons empiriques, rien faire d’autre, non par ‘faute de 
+            mieux’, mais parce que c’est là et nulle part ailleurs qu’elle se trouve. En apprenant le langage, 
+            en apprenant quoi dire, à quel moment, dans quelles situations, nous apprenons la réalité. 
+            Plutôt que de dire que nous parlons de la réalité, il vaudrait parfois mieux dire que nous 
+            ‘parlons la réalité’, pour effacer l’image d’une distance que le langage aurait à franchir pour 
+            atteindre la réalité, et mettre fin à la quête de critères généraux permettant de juger que cette 
+            distance a été correctement franchie : « Est vrai et faux ce que les hommes disent l’être ; et ils 
+            s’accordent dans le langage qu’ils emploient. » (Wittgenstein, Investigations Philosophiques, 
+            §241) Il vaudrait parfois mieux … Si ce n’était le risque d’accentuer encore la tendance à voir 
+            dans le retour, dans l’attention au langage ordinaire un retournement relativiste, alors qu’elle 
+            « est une perspective antimétaphysique, qu’on pourrait appeler, paradoxalement réaliste (au 
+            sens où Diamond parle de l’ « esprit réaliste », realistic). Etre réaliste, ce n’est pas chercher à 
+            découvrir ou à théoriser le rapport ou l’adéquation du langage et du monde<sup><a href="#ref21" class="reference-link" id="r21">[21]</a></sup> ». Nous nous 
+            entendons, de fait ; nous savons de quoi nous parlons, dans la majeure partie des cas ; le 
+            langage signifie, à l’ordinaire ; mais c’est seulement « dans le langage que s’effectue tout ce 
+            qui est nécessaire à la compréhension » (Laugier, 2001, p.13.) ; l’entente n’a pas d’autre assise 
+            que le sens commun :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                Y‑a‑t‑il une compétence particulière pour juger de l’authenticité des expressions de 
+                sentiment ? – Là encore, il y a ceux dont le jugement est ‘meilleur’ et ceux dont le jugement est 
+                ‘moins bon’.<br>
+                Un pronostic plus correct résultera généralement de jugements de ceux qui auront une 
+                meilleure connaissance des hommes.<br>
+                Peut‑on apprendre cette connaissance ? Certes ; certains le pourraient. Non pas en 
+                suivant des cours qui en traiteraient, mais par expérience.<sup><a href="#ref22" class="reference-link" id="r22">[22]</a></sup>
+            </div>
+            <p>En dehors du cadre représentationniste, lorsque la notion de la réalité est débarrassée de 
+            l’image d’une ‘extériorité’ prédéterminée qui devrait faire ou ne pourrait pas faire l’objet de 
+            représentation, l’opposition entre connaissance scientifique – dont le contenu est censé résulter 
+            d’un processus d’abstraction la rendant indépendante de ses conditions de réalisation et la 
+            valeur épistémique relever d’un jugement indépendant de toute considération contextuelle – et 
+            connaissance incarnée dans une expérience du monde particulière, cette opposition n’a plus de 
+            raison d’être. Cela ne signifie pas que la connaissance scientifique soit identique à une 
+            connaissance ‘ordinaire’ – mais seulement qu’il y a un cadre épistémologique concevable, en 
+            rupture avec le cadre représentationniste, dans lequel il y a un sens à dire qu’une connaissance 
+            scientifique participe d’une perspective éthique. Si la cognition est énaction et non 
+            représentation, si le produit de la cognition est dépendant des conditions dans lesquelles celle‑
+            ci s’effectue et d’une évaluation selon des critères portés par le sens commun, la pensée de la 
+            cognition comme énaction doit pouvoir être conçue dans les mêmes termes. Hors du cadre 
+            représentationniste, prenant acte de la critique grammaticale du concept de réalité qui l’a rendu 
+            illusoire, et reconnaissant que le discours de la réalité n’a pas d’autre instance de légitimation 
+            effective que le sens commun, la théorie de l’énaction peut être envisagée elle‑même comme 
+            une connaissance énactée, dont la reconnaissance est sous la dépendance de critères et 
+            jugements contextuels, et comme une prétention à être un discours de la réalité.</p>
+        </div>
+    </div>
 
     <!-- A. Du général et du particulier -->
     <div class="capsule">
@@ -146,30 +336,74 @@
         </div>
     </div>
 
+    <!-- A-2 Science et expérience -->
+    <div class="capsule">
+        <div class="capsule-title">🔬 A-2 Science et expérience</div>
+        <div class="capsule-content">
+            <p><!-- sous‑section A-2-1 --></p>
+            <div style="font-weight:600; margin-top:1rem; margin-bottom:0.5rem;">A-2-1 Le général et le particulier</div>
+            <p>Chez Aristote, la science se distingue de la philosophie en tant qu’elle étudie ce qui est déterminé – tandis que la philosophie se préoccupe de la situation humaine en tant qu’elle est confrontée à la part contingente de la réalité. La situation de l’homme, du fait qu’il est amené à agir (sur la base d’un choix faisant suite à une délibération) et à produire, implique l’existence d’une indétermination dans l’ordre du monde : « [A]gir et produire, c’est en quelque façon s’insérer dans l’ordre du monde pour le modifier ; c’est donc supposer que celui‑ci, puisqu’il offre cette latitude, comporte un certain jeu, une certaine indétermination, un certain inachèvement. » (Aubenque, 1993, p.66)</p>
+            <p>L’action et la production ne sont possibles que dans l’horizon de la contingence, « laquelle doit être entendue, non comme une région de l’être mais comme une certaine propriété négative affectant les processus naturels ». La contingence aristotélicienne n’est pas fondamentale, constitutive, elle est résiduelle. Elle n’est pas l’absence de loi mais la distance qui sépare la loi, qui est générale, de sa réalisation dans le particulier. La distinction entre science et philosophie répond à l’existence de deux domaines distincts de la réalité, celui du général, celui du particulier. La science ne peut pas répondre aux problèmes que posent ‘l’action dans le monde’. Mais la limite du pouvoir de la raison est le commencement de la liberté humaine :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                Si le monde était tout parfait, il ne resterait rien à y faire ; or c’est dans le faire ou l’agir … 
+                que l’homme réalise son excellence proprement humaine. […] La prudence sera cette vertu des 
+                hommes voués à délibérer dans un monde obscur et difficile, dont l’inachèvement même est une 
+                invitation à ce qu’il faut bien nommer leur liberté. (p.95)
+            </div>
+            <p>Ce n’est pas la science qui peut fournir l’instrument de conduite des affaires humaines. La science s’occupe de ce qui est déterminé et elle partage avec la loi le privilège, mais aussi l’inconvénient, de porter sur le général. Le personnage de Périclès cité comme exemple de personnage prudent sait agir, prendre en compte les différents éléments propres à une situation particulière. Mais le savoir que possède Périclès n’est pas un savoir explicite, qui peut se ‘dire’, qui peut se transmettre ; c’est un savoir ‘personnel’, le savoir d’une expérience accumulée tout au long de la vie.</p>
+            <p>Le combat qui met en scène la force de la Raison contre celle de la Force, est censé représenté la tension entre le savoir des spécialistes, portant sur des objets indifférents ou rendus indifférents à toute contextualité, et la multiplicité des opinions, motivées par les intérêts et les expériences individuelles. La question ici n’est pas, ou pas encore, de se demander si un tel savoir prétendant énoncer des caractéristiques indépendantes de la condition humaine de connaissance est simplement possible – ou encore, si l’idée d’un tel savoir a simplement du sens – mais de se demander si le recours, au travers du spécialiste, à un savoir prétendu tel peut trouver une place dans un questionnement, une recherche préoccupée de la situation humaine, dans ce qu’elle a de contingent, d’historique. Et s’il y a, comme le dit Aristote, un savoir du ‘général’, est‑il essentiellement différent du savoir situé, conditionné par la contingence des situations étudiées, relève‑t‑il d’un autre ordre de la connaissance, sans rapport avec le premier?</p>
+            <p>C’est ce que semble penser Rorty lorsqu’il énonce la différence entre l’homme comme objet d’explication et l’homme comme agent moral, « men as objects of explanation and men as moral agents », et se déclare pour l’abandon de l’idée d’une synthèse « to give up the notion that these two ways of viewing ourselves need to be synthesized.<sup><a href="#ref34" class="reference-link" id="r34">[34]</a></sup> » Cette remarque de Rorty conclut un chapitre de son livre consacré à une discussion des thèses cognitivistes de Fodor et pourrait être entendue comme une sorte de réponse apaisante à l’inquiétude qui est notoirement celle de Fodor et qui motive sa recherche théorique : l’idée que si la psychologie populaire ne peut pas être naturalisée elle sera évincée, éliminée, par la connaissance scientifique de l’esprit. Pour Fodor, la naturalisation est une sorte de traduction de la psychologie populaire, c’est‑à‑dire du langage en termes d’attitudes propositionnelles, en un langage en termes de représentations, de symboles, de computations, réalisés dans des états physiques d’un système cognitif, et tenant lieu d’explication du niveau intentionnel. La traduction veut apparaître comme un pont entre un discours portant sur un ‘esprit‑vivant’ et un discours portant sur un ‘esprit‑objet’ ; mais l’image de la traduction, du pont, trahit l’asymétrie du rapport entre les deux langages qu’implique la visée, en fait, réductionniste. La conclusion de Rorty semble être qu’un tel souci et un tel effort sont finalement inutiles et que les deux discours peuvent, et doivent avoir des existences séparées – et c’est aussi, par exemple, l’idée exprimée par Stich, lorsqu’après s’être interrogé sur l’intérêt, la fonction de la notion de représentation, il conclut en disant :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                Fodor suggests that, if we can’t give a naturalistic account of mental representation, then 
+                there will no place for the notion in serious science. And if that’s the case, then the eliminativists 
+                will have won a major battle […] There is no naturalistic account of grooming behavior in 
+                primate ethology … But surely it would be perverse to deny the existence of grooming behavior, 
+                simply because we can’t define it in the language of physics and biology. Suitably trained 
+                observers can detect grooming behavior with impressively high intersubjective reliability. And 
+                that, I would urge, is more than enough to make those notions empirically respectable. (…) The 
+                situation for mental representation looks entirely parallel<sup><a href="#ref35" class="reference-link" id="r35">[35]</a></sup>.
+            </div>
+            <p>L’idée d’une séparation entre connaissance située et connaissance du ‘général’, entre l’homme‑agent, vivant pourrait‑on tout aussi bien dire, et l’homme‑objet, comme le dit Rorty, proposé par la science, pourrait sembler trouver un écho dans la façon dont Wittgenstein distingue la nature des questionnements empirique et conceptuel, et le genre de réponse que l’on peut en attendre : « Wittgenstein … a toujours été persuadé … qu’une des caractéristiques qui distinguent fondamentalement les questions philosophiques des problèmes scientifiques est que nous disposons en principe de tout ce qui est nécessaire pour les résoudre et les résoudre complètement au moment où ils se posent. » Aux yeux de Wittgenstein, « les problèmes philosophiques sont toujours des problèmes que nous avons avec notre langage […] l’expression d’un désaccord que nous avons avec nos formes d’expression, avec nos concepts et avec nos pratiques usuelles, c'est‑à‑dire finalement avec nous‑mêmes<sup><a href="#ref36" class="reference-link" id="r36">[36]</a></sup>. »</p>
+            <p>Il appartiendrait donc au philosophe de faire le chemin qui conduit de l’apparente unité du concept qui se trouve au cœur du discours sur la croyance ou sur la représentation vers la complexité du réseau de ses usages au travers des diverses situations qui le mettent en scène – la matière de travail du philosophe est le souvenir :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « le travail du philosophe, écrit Wittgenstein, est l’entassement des souvenirs pour un but particulier<sup><a href="#ref37" class="reference-link" id="r37">[37]</a></sup> »
+            </div>
+            <p>– le souvenir des jeux de langages, le souvenir de ce que nous faisons automatiquement, des accords tacites, des singularités. Tandis que de son côté, le scientifique, selon l’image qu’en donne Aristote et qui reste prégnante, traiterait de la croyance ou de la représentation à la seule condition qu’elles puissent être appréhendées comme des objets, ignorerait ou nierait leur existence dans le cas contraire, viserait, au contraire du philosophe attaché au langage, à s’extraire de toute particularité. Il devrait partir de la situation particulière de l’expérience et de l’expérimentation seulement pour en recueillir les informations lui permettant d’écrire la formule générale dont le phénomène qu’il perçoit est une des manifestations, rien d’autre qu’une des conséquences particulières. La science serait un savoir de l’universel, parce que le discours scientifique résulterait d’une prise de distance, d’une abstraction, au delà des traces de la particularité humaine. Tandis que le philosophe nous conduirait du concept vers ses usages incarnés, le scientifique nous emmènerait depuis les traces des phénomènes jusqu’au royaume de leurs causes, vers ce qui est ‘avant’ l’expérience et le langage qui la raconte, le pré‑conceptuel finalement.</p>
+        </div>
+    </div>
+
+    <!-- A-2-2 Causalité perceptuelle et sémantique conceptuelle -->
+    <div class="capsule">
+        <div class="capsule-title">🧠 A-2-2 Causalité perceptuelle et sémantique conceptuelle</div>
+        <div class="capsule-content">
+            <p>La science tient une grande part de son prestige, de son assurance, de son pouvoir‑faire de la base expérimentale de la connaissance qu’elle produit ; peut‑elle être aussi une connaissance de ce qui serait déterminé indépendamment de notre situation, culturelle, perceptuelle, instrumentale, être l’instrument d’un savoir qui ne dépend pas des conditions de sa production ? Le problème consiste selon Bouveresse à rendre compatible une conception causale de la connaissance et une conception réaliste, c'est‑à‑dire réussir à « défendre une conception réaliste authentique [nos représentations sont sous la dépendance d’une réalité externe à laquelle elles s’efforcent de correspondre], sans être pour autant contraint d’adopter » une position métaphysique naïve.</p>
+            <!-- Le texte original s'arrête ici. Les références sont conservées -->
+        </div>
+    </div>
+
     <!-- Notes et références -->
     <div class="capsule sources">
         <div class="capsule-title">📚 Notes et références</div>
-            <div class="capsule-content ref-list">
-                <p id="ref23"><strong>23.</strong> Hilary Putnam, <em>The threefold cord : mind, body, and world</em>, 
-                    Columbia University Press, New York, 1999, p.5.</p>
-                <p id="ref24"><strong>24.</strong> Aristote, <em>Ethique à Nicomaque</em>, Trad., préface et notes par 
-                    Jean Voilquin, Garnier-Flammarion, Paris, 1965.</p>
-                <p id="ref25"><strong>25.</strong> Aristote, <em>Ethique à Nicomaque</em>, Flammarion, Paris, 1992, I, 2, 7.</p>
-                <p id="ref26"><strong>26.</strong> M.F. Burnyeat, <em>Aristotle on learning to be good</em>. In <em>Essays on 
-                    Aristotle's Ethics</em>, A.Oksenberg Rorty (ed.), Berkeley, CA: University of California Press, 1980, pp.71-72.</p>
-                <p id="ref27"><strong>27.</strong> Aristote, <em>Ethique à Nicomaque</em>, Flammarion, Paris, 1992, II, 2, 1.</p>
-                <p id="ref28"><strong>28.</strong> VI, 5, 1.</p>
-                <p id="ref29"><strong>29.</strong> Pierre Aubenque, <em>La prudence chez Aristote</em>, P.U.F, 1993.</p>
-                <p id="ref30"><strong>30.</strong> S. Cavell, <em>Must we mean what we say ?</em>, cité par S.Laugier dans 'Métaphysique 
-                    et/ou jeu de langage?', <em>Wittgenstein, métaphysique et jeux de langage</em>, PUF, Paris, 2001, p.16.</p>
-                <p id="ref31"><strong>31.</strong> Wittgenstein, <em>IP</em>, §126.</p>
-                <p id="ref32"><strong>32.</strong> B. Latour, <em>L'espoir de Pandore, Pour une version réaliste de l'activité 
-                    scientifique</em>, La découverte, Paris, 2001, p. 17.</p>
-                <p id="ref33"><strong>33.</strong> Charles Lynch, patriote de Virginie, décida, à la fin du XVIIIe siècle, 
-                    de "réformer" la façon dont la justice était appliquée dans sa région : réforme expéditive, puisque ce juge de paix 
-                    instaura des parodies de procès menant parfois à des exécutions sommaires. La "loi de Lynch" donna naissance au mot 
-                    "lynchage", qui annonçait un déchaînement de haine raciale.</p>            
-            </div>
+        <div class="capsule-content ref-list">
+            <p id="ref19"><strong>19.</strong> C. Diamond, <em>The Realistic Spirit, Wittgenstein, Philosophy, and the Mind</em>. Cambridge, MA: The Bradford Book, 1995.</p>
+            <p id="ref20"><strong>20.</strong> S. Cavell, <em>Les voix de la raison</em>, trad. S. Laugier & N. Balso, Le Seuil, Paris, 1996, p.271.</p>
+            <p id="ref21"><strong>21.</strong> S. Laugier, ‘Métaphysique et/ou jeu de langage ?’, dans <em>Wittgenstein, métaphysique et jeu de langage</em>, PUF, Paris, 2001, p.13.</p>
+            <p id="ref22"><strong>22.</strong> Wittgenstein, <em>Philosophical Investigations</em>, IIxi, p.227, in Putnam, <em>Pragmatism</em>, Blackwell, 1995, p.36.</p>
+            <p id="ref23"><strong>23.</strong> Hilary Putnam, <em>The threefold cord : mind, body, and world</em>, Columbia University Press, New York, 1999, p.5.</p>
+            <p id="ref24"><strong>24.</strong> Aristote, <em>Ethique à Nicomaque</em>, Trad., préface et notes par Jean Voilquin, Garnier-Flammarion, Paris, 1965.</p>
+            <p id="ref25"><strong>25.</strong> Aristote, <em>Ethique à Nicomaque</em>, Flammarion, Paris, 1992, I, 2, 7.</p>
+            <p id="ref26"><strong>26.</strong> M.F. Burnyeat, <em>Aristotle on learning to be good</em>. In <em>Essays on Aristotle’s Ethics</em>, A.Oksenberg Rorty (ed.), Berkeley, CA: University of California Press, 1980, pp.71‑72.</p>
+            <p id="ref27"><strong>27.</strong> Aristote, <em>Ethique à Nicomaque</em>, Flammarion, Paris, 1992, II, 2, 1.</p>
+            <p id="ref28"><strong>28.</strong> VI, 5, 1.</p>
+            <p id="ref29"><strong>29.</strong> Pierre Aubenque, <em>La prudence chez Aristote</em>, P.U.F, 1993.</p>
+            <p id="ref30"><strong>30.</strong> S. Cavell, <em>Must we mean what we say ?</em>, cité par S.Laugier dans ‘Métaphysique et/ou jeu de langage?’, <em>Wittgenstein, métaphysique et jeux de langage</em>, PUF, Paris, 2001, p.16.</p>
+            <p id="ref31"><strong>31.</strong> Wittgenstein, <em>IP</em>, §126.</p>
+            <p id="ref32"><strong>32.</strong> B. Latour, <em>L’espoir de Pandore, Pour une version réaliste de l’activité scientifique</em>, La découverte, Paris, 2001, p. 17.</p>
+            <p id="ref33"><strong>33.</strong> Charles Lynch, patriote de Virginie… La "loi de Lynch" donna naissance au mot "lynchage".</p>
+            <p id="ref34"><strong>34.</strong> R. Rorty, <em>Philosophy and the mirror of nature</em>, Princeton University Press, Princeton, New Jersey, 1979.</p>
+            <p id="ref35"><strong>35.</strong> S. Stich, ‘What is a theory …’ , in <em>Mental Representation : a reader</em>, Stich & Warfield ed., Basil Blackwell, 1994, p.362.</p>
+            <p id="ref36"><strong>36.</strong> J. Bouveresse, <em>La demande philosophique</em>, L’éclat, 1996, p.70.</p>
+            <p id="ref37"><strong>37.</strong> Wittgenstein, <em>IP</em>, §127.</p>
         </div>
     </div>
 
