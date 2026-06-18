@@ -1,4 +1,73 @@
 
+B. La réalité présente 
+Le genre de la certitude est le genre du jeu de langage. 
+[…] 
+Quelque chose de nouveau (spontané, spécifique) est toujours un jeu de langage. 
+[…] 
+On mesure la longueur d’un bâton et on peut rechercher et trouver une méthode plus exacte ou 
+plus sure pour la mesurer. Ainsi, direz-vous, ce qui est mesuré ici est indépendant de la méthode de 
+jugement. Ce qu’est la longueur ne peut pas être expliqué par la méthode de détermination de la 
+longueur. Penser ainsi, c’est commettre une erreur. Quelle erreur ? Dire « La hauteur du Mont Blanc 
+dépend de la façon dont on l’escalade » serait étrange. Et de même on en vient à comparer « une 
+mensuration de plus en plus précise de la longueur » avec le fait d’approcher de plus en plus en près 
+d’un objet. Mais la signification de l’expression « approcher plus près de la longueur d’un objet » est 
+claire dans certains cas, et ne l’est pas dans certains autres. On n’apprend pas ce que signifie 
+« déterminer la longueur » par le fait d’apprendre ce que sont la longueur et l’acte de déterminer, mais 
+on apprend la signification du mot « longueur » entre autres choses par le fait que l’on apprend ce 
+qu’est la détermination de la longueur57.    
+ 
+ 
+ 
+ 
+B-1 Logique et ontologie de la réalité 
+ 
+B-1-1 La réalité lointaine 
+ 
+L’anti-réaliste, tout autant que le réaliste, semble avoir une idée particulière de ce qu’est 
+la réalité qui les autorise à penser que nous pouvons, ou pas, la connaître, ou que nous 
+pouvons, ou pas, avoir l’assurance que c’est de la réalité dont nos représentations sont des 
+représentations. Les deux branches de l’opposition épistémologique entre réalisme et anti-
+réalisme doivent être issues d’un même engagement ontologique, de l’idée commune d’une 
+réalité indépendante de ce que nous pouvons en dire, dans le sens, au moins, où elle peut (pour 
+l’anti-réaliste), ou aurait pu (pour le réaliste) ne jamais être dite, ou jamais entièrement. La 
+divergence tient ensuite à la réponse donnée à la question de savoir si, de fait, nos 
+connaissances sont des représentations de cette réalité, comme le disent les réalistes, quitte à 
+reconnaître que ces représentations pourraient toutefois devoir être ‘améliorées’, ou si une telle 
+assertion est excessive, voire illusoire, comme le disent les anti-réalistes, qui mettent en avant 
+nos ‘limitations’, sociales, culturelles ou empiriques, et la fragilité de nos connaissances.  
+ Mais au-delà de cette idée ou de cette image de la réalité comme quelque chose posé a 
+priori en vis-à-vis d’un système connaissant fabriquant des objets appelés représentations, dont 
+la question de savoir ce qu’ils représentent paraît devoir être la question principielle de tout 
+questionnement sur la connaissance, que peuvent dire les réalistes ou les anti-réalistes à propos 
+de cette ‘réalité’ qui conditionne a priori la vérité de nos connaissances ? Si ce n’est qu’elle est 
+ce que disent les connaissances que nous tenons pour vraies ? 
+L’anti-réaliste se refuse le droit de croire en la possibilité d’établir une relation de 
+représentation entre les représentations et la réalité ou une part de la réalité (celle qui excède 
+les phénomènes) – la matière de toute représentation ne peut être qu’empirique, et rien ne 
+permet d’affirmer la vérité des assertions visant à expliquer la forme de l’expérience. De cette 
+réalité non empirique, nous ne pouvons rien dire si ce n’est que nous ne pouvons rien en dire. 
+Mais le réaliste affirme, lui, que nous possédons de bonnes raisons, et toujours empiriques, 
+pour les bactéries, les électrons ou les planètes, d’affirmer que nos représentations peuvent être 
+des représentations de la réalité et que ce que nous connaissons alors est, ou tend à être, ce 
+qu’elle est, ce qu’elle est ‘en elle-même’. Il semblerait donc qu’ils n’aient pas toujours la 
+même conception de ce qui vaut comme ‘proposition empirique’. Salmon considère que 
+l’existence des micro-entités est fondée par des résultats expérimentaux, van Fraassen pense 
+qu’elle ne l’est pas. L’un pense que l’affirmation de cette existence est une proposition 
+empirique ; l’autre pense qu’elle est métaphysique en ce qu’elle n’autorise aucune forme 
+d’épreuve expérimentale. L’un est-il plus fondé que l’autre à juger de ce qu’est une proposition 
+empirique ? 
+« Une proposition empirique est susceptible de vérification » (disons-nous). Mais 
+comment ? Et par quoi ? 
+Qu’est-ce qui vaut comme vérification de la proposition empirique ? … Comme s’il n’y 
+avait pas un moment où la quête du fondement parvient à son terme. Mais ce terme, ce n’est pas 
+la présupposition non fondée, c’est la manière non fondée de procéder58. 
+ 
+L’anti-réaliste affirme que les micro-entités sont au-delà de toute attestation 
+expérimentale, étant donné ce que nous sommes, parce qu’elles sont en dehors de notre espace 
+d’expérience. Une micro-entité n’est pas observable, ne peut pas être observée. Alors, elle 
+échappe à la connaissance empirique ? Qu’elle ne puisse pas être observée, quelle sorte 
+d’impossibilité est-ce là ? Si l’anti-réaliste affirme qu’elle ne peut pas être observée, et qu’alors 
+nous n’avons pas de fondement épistémologique suffisant, c'est-à-dire ‘vraiment’ empirique, 
 c'est-à-dire ce qu’il appelle un fondement empirique, pour dire qu’elle existe, il faut qu’il ait 
 une idée de ce que cela serait d’observer une micro-entité. Ce n’est que par rapport à ce que 
 cela serait d’observer une micro-entité qu’il peut affirmer que nous ne pouvons pas observer 
@@ -139,6 +208,7 @@ qu’il n’y a qu’une seule réalité, parce que la réalité est indépendan
 différents systèmes de représentation, et nous sommes ‘pris’ dans l’un d’entre eux, que nous ne 
 pouvons pas affirmer, ou pas toujours, que nous connaissons la réalité. 
  
+
 B-1-2 …et la réalité ordinaire : Deux réalités ?  
  
 Lorsqu’on l’interroge au sujet du réalisme, Bouveresse61 distingue nettement les 
@@ -223,6 +293,7 @@ scientifique. Elles sont toutes les deux lointaines, mais chacune de leur côté
 des chemins qui semblent n’avoir aucune ressemblance, si dissemblables que l’on ne parvient 
 pas à imaginer comment ils pourraient conduire à un territoire unifié. 
  
+
 B-1-3 La tentation métaphysique 
  
 Dénoncer la conception duale, bipolaire de la signification selon laquelle celle-ci est 
@@ -397,69 +468,15 @@ de conditions dans lesquelles ils puissent faire sens, indiquer quelque chose, a
 signification. 
  
     
- 
-B-2 La réalité, telle qu’elle se dit 
- 
-Hylas : Qu’il en soit comme vous voudrez, je persiste à souligner que, de n’être point en état de 
-concevoir une chose, on ne peut faire argument contre l’existence de cette chose. 
- 
-Philonous : Qu’à partir d’une cause, d’un effet, d’une opération, d’un signe, ou de tout autre 
-moyen, on puisse inférer l’existence d’une chose qui n’est pas immédiatement perçue, et qu’il soit 
-absurde pour quiconque de tirer argument contre l’existence de cette chose de ce qu’il n’en a pas de 
-notion directe et positive, je le reconnais volontiers. Mais là où il n’y a rien de tout cela ; là où ni la 
-raison ni la révélation ne nous portent à croire à l’existence d’une chose, là où nous n’en avons pas 
-même une notion relative ; là où l’abstraction est faite du percevoir et de l’être perçu, de l’esprit et de 
-l’idée ; là enfin où l’on ne se réclame pas même de l’ombre d’une idée très inadéquate, je ne vous dirai 
-certes pas que c’en est assez pour refuser la réalité d’aucune notion ou l’existence d’aucune chose ; 
-mais tout ce que je conclurai c’est que vous n’avez aucune notion dans l’esprit, que vous employez les 
-mots sans y attacher aucun but, aucune espèce de dessein ou de signification. Et je vous laisse à 
-considérer quel cas on doit faire du pur jargon71.  
- 
-B-2-1 Ni au-delà 
- 
-Pour explorer plus en avant l’idée de réalité dans laquelle est enracinée le débat 
-réaliste/anti-réaliste, et ce en quoi elle peut être dite métaphysique, pour comprendre comment 
-l’éternel dilemme peut perdre toute substance par la grâce d’un retour ‘wittgensteinien’ à un 
-usage plus ordinaire du concept de réalité, je voudrais considérer la distinction faite par Cora 
-Diamond72 entre les notions ‘réalist’ et ‘realistic’. Celle-ci utilise, dans un premier temps, pour 
-faire apparaître la différence qu’elle veut thématiser, les deux personnages mis en scène par 
-Berkeley dans Three Dialogues : Hylas et Philonous. Afin de désigner la source du problème 
-que pose une certaine façon de penser ou peut-être simplement de parler de la réalité, Berkeley 
-et Wittgenstein ont recours, écrit-elle, à une même image, celle de lunettes, qui sans être 
-exploitée exactement de la même manière, veut signifier néanmoins, dans les deux cas, une 
-attitude semblable de celui qui est dit les porter : celui-ci pense que ce qui le préoccupe, ce 
-qu’il considère comme vraiment important, comme essentiel, « the real nature of something », 
-la réalité de ce qui est perçu ou l’ordre logique de la pensée, se situe au-delà de ce qui se trouve 
-devant lui, de ce qui est ‘visible’, derrière les apparences, « that real nature is not open to 
-view. » (Diamond, 2001, p.43).  
-Dans le dialogue, Berkeley veut nous montrer, au travers de l’esprit ‘realistic’ incarné 
-par Philonous, que la matière, au sens philosophique que Hylas s’évertue à expliciter, n’est rien 
-d’autre qu’une ‘fantaisie’ philosophique. Le réalisme philosophique de Hylas lui fait s’en tenir 
-à l’existence d’une matière quand bien même il en arrive à admettre qu’il « ne connait rien de 
-la matière », qu’à « examiner scrupuleusement les choses, [il] ne trouve point qu’[il] en ait 
-aucune notion ou signification positive » et « ne sais pas ce qu’on veut dire par son existence, 
-ni comment elle existe » (pp.157-162) ; il s’y tient parce qu’il reste néanmoins convaincu que 
-« la réalité des choses ne peut être maintenue que si l’on suppose l’existence de la matière. » 
-(p.165) Le contraste entre ce réalisme et l’esprit ‘realistic’ joue sur l’idée, prégnante dans les 
-Investigations Philosophiques, d’une confusion au sujet de ce dont nous avons réellement 
-besoin et de ce qui nous est vraiment utile. L’attitude envers la réalité de l’esprit ‘realistic’ est 
-inséparable de l’idée « that whatever more you might think you wanted would not make any 
-difference. » (Diamond, 2001, p.44) Ici ‘more’ désigne ce qui serait au-delà de ce qui se 
-montre, de ce qui se perçoit, de ce qui se trouve déjà sous nos yeux et que le porteur de lunettes 
-réaliste néglige ou ignore, au nom d’un quelque chose de plus, dont il ne peut pas dire, lui 
-reproche le ‘realistic’, la différence que peut faire son existence : « But whether or not there is 
-such a thing as this ‘matter’ that [Hylas] thinks is essential to the reality of what is perceived, 
-it would make no difference – or so Philonous believes. Matter, then, has exactly the character 
-of an ‘idle wheel’, to use Wittgenstein’s expression. » Hylas continue de se servir du concept 
-de matière comme si celui-ci possédait sa signification, comme s’il lui suffisait d’appartenir au 
-langage pour y avoir une fonction quelles que soient les circonstances. Mais, dans la bouche de 
-Hylas, dans les conditions créées par le déroulement du dialogue, ce concept, dans le langage, 
-est devenu comme une roue folle dans un engrenage, il tourne à vide, il n’accroche rien, ne fait 
-pas sens, ne fonctionne pas. Hylas pense qu’il a toujours besoin de ce concept pour faire tenir 
- 
                                                  
                                                  
                                                  
+                                                 
+                                                 
+                                                 
+                                                 
+57 Wittgenstein, Investigations Philosophiques, Paris : Gallimard, 1998, 2ième partie, XI, p.359  
+58 Wittgenstein, De la certitude, Paris : Gallimard, 2000, p.52. 
 59 L. Kolakowski, Husserl et la recherche de la certitude, trad. P. Secretan, Lausanne : L’Age d’Homme, 
 p.30. 
 60 Michel Bitbol, L’aveuglante proximité du réel, Flammarion, Paris, 1998, p.168. 
@@ -476,5 +493,4 @@ Paris : PUF, 2001, p.15.
 68 Hilary Putnam, Pragmatism, Blackwell, 1995, p.39. 
 69 Wittgenstein, De la certitude, Paris : Gallimard, 2000, p.131. 
 70 M. Merleau Ponty, Le visible et l’invisible, Paris: Gallimard, 1964, p.72. 
-71 G. Berkeley, Trois dialogues entre Hylas et Philonous, Paris: Flammarion, 1998. 
-72 Cora Diamond, The realistic spirit: Wittgenstein, Philosophy, and the Mind, Hardcover, (1995) 1991. 
+
