@@ -1,3 +1,199 @@
+
+A-3 Atteindre la réalité
+ 
+A-3-1 Réalisme ontologique et Réalisme épistémologique  
+ 
+La thèse que Bouveressse défend et selon laquelle la connaissance produite par la science 
+est une connaissance plus ou moins adéquate, plus ou moins achevée, de « choses telles 
+qu’elles sont », sous-entendu indépendamment de ce que nous sommes, ou de ce que nous 
+faisons pour les connaître, est, dit-il, une forme de réalisme scientifique : « En ce qui concerne 
+la philosophie des sciences, j’essaie donc de défendre une forme de réalisme scientifique, au 
+sens où l’entendait Schlick par exemple : pour autant que l’on puisse parler de quelque chose 
+comme une connaissance des choses en soi, la science essaie de connaître les choses en soi et 
+jusqu’à un certain point, elle réussit à le faire48 .» Bouveresse ajoute que cette position, 
+l’oppose à celle de Kant et à l’idée qu’il y aurait des ‘choses en soi’ inconnaissables parce que, 
+selon lui, « parler d’une ‘chose en soi inconnaissable’ n’a proprement aucun sens. » Il semble 
+donc que la manière de penser le contenu de la connaissance scientifique doive résulter d’un 
+choix entre : soit, nier que nous puissions connaître la réalité et tomber dans le non-sens de ‘la 
+chose en soi inconnaissable’ , soit, reconnaître que la connaissance scientifique est ou tend à 
+être une connaissance des ‘choses en soi’. Or, ce que je voudrais défendre dans la section B de 
+cette première partie, et sous un éclairage un peu différent dans les deux parties II et III qui 
+suivront, est que l’on peut admettre et même défendre l’idée que nous puissions connaître la 
+réalité tout en refusant de souscrire à l’image d’un progrès possible vers la connaissance des 
+‘choses en soi’.   
+ Pour parvenir à introduire cette forme de réalisme qui paraît exclue de l’alternative 
+posée par Bouveresse, il faut mettre en lumière l’un de ses présupposés. Et celui-ci s’exprime 
+de façon éclatante dans le caractère seulement possible de la connaissance de la réalité par la 
+science. Etre réaliste, c’est, en effet, selon lui, « soutenir que la réalité connue, la réalité telle 
+que nous la connaissons, peut très bien être la réalité vraie ou la réalité elle-même ; ou en tout 
+cas, que l’effort de connaissance peut nous permettre de nous en rapprocher sensiblement et 
+peut-être même indéfiniment… » (p.49) Je ne vois pas en quoi le non-sens qui minerait l’idée 
+d’une ‘chose en soi inconnaissable’ épargnerait celle d’une ‘réalité peut-être connue’. Le 
+problème que pose la nécessaire inconnaissabilité de la chose en soi se pose à l’identique 
+lorsque cette nécessité est transformée en possible car il est alors tout entier contenu dans la 
+simple notion de ‘chose en soi’ chargée d’une attribution ontologique qui la rend ‘connaissable 
+par accident’. Et il est, à vrai dire, aggravé lorsque la non connaissance de la ‘chose en soi’ est 
+transférée du domaine du nécessaire au domaine du possible, car la ‘chose en soi’ reçoit dans 
+ce passage une charge ontologique qui interdit dès lors de la penser comme idéal régulateur. 
+Une ‘chose en soi’ dite nécessairement inconnaissable peut être comprise comme idéal 
+régulateur de l’entreprise de connaissance. Une ‘chose en soi’ peut-être connaissable ne peut 
+plus être considérée comme un idéal régulateur, c’est un objectif dont la charge ontologique est 
+reflétée par l’image du développement de la connaissance comme un progrès, ‘un 
+rapprochement vers quelque chose’, quelque chose qui est suffisamment ‘indépendant’ vis-à-
+vis de l’entreprise de connaissance pour autoriser l’image du rapprochement, suffisamment 
+transcendant pour qu’il faille envisager la possibilité que celui-ci ne soit jamais abouti.  
+ 
+Je reviendrai dans la deuxième section sur la problème de la ‘chose en soi’, ou plutôt sur 
+le problème de l’éloignement auquel la condamne la charge ontologique qui lui est assignée. 
+Mais avant d’en arriver là et de présenter ce en quoi consiste le réalisme qui prétend éviter cet 
+écueil, je voudrais présenter plus en détail l’espace de pensée par opposition auquel il se situe.  
+Pour cela, il me faut introduire une distinction au niveau de l’usage de la notion de ‘réalisme’. 
+Je désignerai par réalisme ontologique ou réalisme métaphysique un type de discours qui 
+soutient ou est disposé à soutenir qu’il y a un sens à parler de ‘choses’, ou plus précisément de 
+l’existence de choses que nous pourrions, en principe, ne jamais connaître. Ces choses que 
+nous pourrions, en principe, ne jamais connaître, sont dites constituer la réalité. La question 
+n’est pas de savoir si nous connaissons certaines de ces choses ou pas, s’il est, en fait, possible 
+de les connaître ou pas. Et ce n’est même pas non plus de savoir si nous pouvons avoir ou pas 
+une quelconque forme d’assurance que nous sommes parvenus à les connaître ou pas. Ce que 
+j’appelle réalisme ontologique ou réalisme métaphysique, c’est l’idée qu’il y a un sens à dire 
+que la réalité des choses n’est pas ‘vraiment’ ce dont nous parlons ou à dire que la réalité des 
+choses n’est pas entièrement contenue dans ce que nous disons, dire en quelque sorte, que la 
+réalité des choses déborde le langage. Le seconde section essaiera de montrer que l’on peut 
+concevoir une forme de réalisme qui ne soit pas ontologique dans ce sens, c'est-à-dire qui ne 
+soit pas métaphysique dans le sens où il refuse d’admettre qu’il y a un sens à parler de 
+l’existence de choses que nous pourrions, en principe, ne jamais connaître, et donc, ne jamais 
+nommer.  
+Je désignerai par réalisme épistémologique la thèse selon laquelle ce que nous appelons 
+‘connaissance’, et disons, dans le cas présent, ‘connaissance scientifique’, c'est-à-dire 
+l’explication des phénomènes, est une connaissance de la réalité. Cette forme-là de réalisme 
+s’oppose à un anti-réalisme qui soutient que ces explications ne peuvent pas, ou ne peuvent pas 
+toutes, par principe, être considérées comme des connaissances de la réalité. Plutôt que de 
+tenter de formuler une description générale du réalisme épistémologique et de l’antiréalisme 
+épistémologique, description qui chercherait en vain à englober toutes les variantes de l’un et 
+de l’autre, je vais présenter dans les deux chapitres suivants un exemple particulier de chacun 
+qui me paraît pouvoir servir de Hérault paradigmatique. La visée de l’exercice est de montrer 
+que l’opposition entre réalisme et anti-réalisme épistémologique a pour cadre de pensée, 
+nécessairement, le réalisme ontologique, métaphysique. Cela permettra de comprendre 
+pourquoi la forme de réalisme présentée dans la seconde section, pour laquelle la réalité n’est 
+pas ailleurs que dans ce que nous pouvons dire, pour laquelle il n’y a pas d’autre usage du 
+concept de réalité que l’ensemble des choses dont nous pouvons parler, dans la mesure où elle 
+met en question ce cadre même, sur la base d’arguments conceptuels, ne peut pas se retrouver, 
+trouver sa place, dans les alternatives qu’il conduit à poser. C’est la séparation même entre 
+considérations ontologiques et épistémologiques qui n’aura plus de sens.  
+ 
+
+A-3-2 L’explication scientifique 
+ 
+Si le but de la science est de fournir, par delà la connaissance descriptive et prédictive, 
+des explications des phénomènes naturels, quelle sorte de connaissance est-ce que cela 
+implique ? Cette question est celle que pose W. Salmon pour introduire le thème de Scientific 
+Explanation and the Causal Structure of the World49 et peut recevoir, selon lui, trois grandes 
+formes de réponse correspondant à trois grands types de conception de cette connaissance : la 
+conception modale, la conception ontique et la conception épistémique. Tant que nous restons 
+dans le cadre d’une physique déterministe, écrit Salmon, la différence entre ces conceptions 
+peut passer inaperçue, mais elle se révèle cruciale lorsque nous en venons à l’interprétation de 
+la physique indéterministe. 
+ 
+La difficulté qu’il y a à distinguer ces trois conceptions tant que l’on reste dans un cadre 
+déterministe est illustrée notamment par le fait que l’expérience de pensée de Laplace, 
+évoquant une intelligence qui connaîtrait tous les événements du futur aussi bien que du passé 
+si elle pouvait appréhender la totalité des forces de la nature et des positions de chacun des 
+corps à un moment donné, peut être reprise à leur compte par chacune d’entre elles moyennant 
+une subtile inflexion interprétative. Pour la conception épistémique, la relation entre, d’une 
+part, les faits ou énoncés explicatifs (les explanans), certaines lois et certaines conditions 
+initiales, et d’autre part, le fait à expliquer (l’explanandum) est une relation de nécessité 
+logique. L’explication de l’occurrence d’un événement par les lois et les données initiales 
+consiste dans l’argumentation logique qui permet de déduire celle-là à partir de celles-ci : 
+« This explanantion could be described as an argument to the effect that the event-to-be-
+explpained was to be expected by virtue of the explanatory facts. » (p.16) Dans le cadre de la 
+conception modale, la même relation est cette fois comprise comme une relation de nécessité 
+nomologique. Tandis que la nécessité logique dérivait des lois de la déduction logique, la 
+nécessité nomologique dérive des lois de la nature. L’occurrence de l’événement-à-expliquer 
+est une nécessité physique étant donné certaines lois de la nature et certaines conditions 
+initiales. Enfin, d’après la conception ontique, les lois strictes qui gouvernent la nature 
+constituent des régularités naturelles, « constitute natural regularities. » Le but de la recherche 
+scientifique est de découvrir ce réseau de régularités et de s’en servir pour expliquer 
+l’occurrence d’événements particuliers. Expliquer un événement, c’est le situer au sein de ce 
+réseau de régularités que vise à décrire les énoncés-lois formulés la science: « to explain an 
+event – to relate the even-to-be-explained to some antecedent conditions by means of laws – is 
+to fit the explanandum-event into a discernible pattern. » (p.17) 
+La différence d’interprétation fournie depuis ces trois points de vue tient surtout dans 
+une différence de vocabulaire qui, dans un contexte déterministe, admet Salmon, peut sembler 
+superficielle. Mais, dans un contexte statistique, qui est celui de la physique moderne, ces 
+différences se révèlent cruciales relativement à la manière de comprendre la signification de la 
+connaissance scientifique. L’argument qui se révélera décisif est qu’un modèle de l’explication 
+scientifique ne peut pas, d’après lui, éviter de mettre en jeu la notion de relations causales, et ne 
+peut pas exclure de ce qui peut être considéré comme explication scientifique les connaissances 
+produites dans un cadre indéterministe.  
+ 
+
+La conception épistémique 
+ 
+Version inférentielle 
+La conception épistémique de l’explication scientifique se décline selon plusieurs 
+versions. La plus classique est la version inférentielle construite autour du modèle Déductif-
+Nomologique. Dans un contexte déterministe, le but de la connaissance scientifique est de 
+fournir une déduction logique certaine du fait-à-expliquer à partir de lois générales et de 
+conditions initiales. Par exemple, l’explication du fait qu’un penny conduit l’électricité tient 
+dans l’énoncé de ces deux prémisses, une particulière, une générale : ce penny est composé de 
+cuivre, le cuivre conduit l’électricité. Que devient ce modèle dans un cadre indéterministe où il 
+n’est plus possible d’obtenir une déduction certaine ? L’exigence de déduction certaine pourrait 
+se transformer en une demande de haute probabilité modélisée par une explication de type 
+inductive ou statistique (« I-S explanation »). Dans ce cas l’explanandum ne résulte pas d’une 
+déduction certaine à partir de lois universelles ; il reçoit une forte justification inductive à partir 
+de prémisses dont l’une au moins est statistique. Un des problèmes majeurs que pose ce type de 
+modèle, cependant, est qu’une haute probabilité ne peut pas toujours s’autoriser d’une valeur 
+explicative. Par exemple, une haute probabilité de guérison d’un rhume étant donné la prise de 
+vitamine C ne confère pas à la vitamine C une valeur explicative relativement à la guérison, car 
+sans vitamine C, la guérison se produit aussi. La pertinence du facteur explicatif (la vitamine 
+C) devrait être établie par une augmentation de la probabilité dans le cas où il est présent (prise 
+de vitamine). Un autre type de situation problématique que mentionne Salmon est celui, par 
+exemple, d’un empoisonnement faisant suite à la consommation d’un champignon. Même si 
+l’empoisonnement ne touche qu’un faible pourcentage des consommateurs, l’occurrence d’un 
+malaise suite à une consommation sera expliqué par celle-ci et le caractère vénéneux du 
+champignon. L’exigence de haute probabilité a aussi l’effet pervers de rendre inexplicables les 
+événements peu probables qui logiquement complètent les événements probables : « If some 
+events are probable, but not necessary, then other events are improbable. » (p.86). Par 
+exemple, si dans une population statistique de pois, ¾ sont lisses et ¼ sont ridés, l’occurrence 
+d’un pois lisse pourra être expliquée mais pas celle d’un pois ridé.   
+L’alternative que fournit Salmon aux problèmes du modèle précédent est un modèle de 
+l’explication basé sur la notion de pertinence statistique (Statistical-Relevant model). Dans ce 
+type de modèle, participant de ce qu’il appelle une conception ontique, l’explication doit faire 
+référence à deux sortes de probabilités qui permettent d’établir la différence que fait la présence 
+du facteur explicatif relativement à l’occurrence de l’événement-à-expliquer. Contrairement au 
+modèle I-S selon lequel une explication est une démonstration qui rend l’événement-à-
+expliquer hautement probable, Salmon soutient que l’explication est basée sur un ensemble de 
+faits statistiquement pertinents relativement à l’événement-à-expliquer, sans considération du 
+degré de probabilité qui en résulte. (p.45) Cette base, cependant, n’est pas suffisante, selon lui, 
+et doit être complétée par un second niveau fournissant une explication causale des relations 
+statistiques invoquées. Là encore, la divergence entre la version inférentielle de la conception 
+épistémique et la conception ontique s’exprime de la façon la plus aiguë dans l’opposition entre 
+‘causalité’ et ‘démonstration’. La conception épistémique commet l’erreur, selon Salmon, 
+d’identifier la possibilité de subsumer un événement (mortalité de Socrate) sous une classe plus 
+large, plus générale d’événements (mortalité des hommes) avec la possibilité de construire une 
+relation logique entre les énoncés décrivant les événements particuliers et les événements 
+généraux.  
+La possibilité de subsumer un événement sous une classe plus large d’événements doit 
+être rapportée à l’existence d’une relation entre des faits non linguistiques, des faits qui 
+pourraient n’être connus de personne : « While we may formulate statements to articulate these 
+facts, the objective relation of subsumption can be taken as holding between nonlinguistic 
+facts, quite apart from any linguistic expression of these facts and quite apart from anyone’s 
+knowledge of them. » (p.91) Plutôt que de se référer à l’existence d’une relation logique entre 
+des énoncés décrivant des faits particuliers et des faits généraux, il faut penser l’explanandum 
+en terme de régularité naturelle, un fait prenant place dans le réseau causal liant entre eux les 
+événements naturels. La possibilité de subsumer ne fait alors pas appel à la possibilité de 
+produire une démonstration de type déductif ou inductif . Il se peut que la façon dont un fait 
+particulier prend place dans le réseau de régularités permette de construire une telle 
+démonstration, mais cela est ‘hors sujet’, « beside the point », relativement à l’explication du 
+fait. Et la même chose peut être dite concernant la possibilité de subsumer une régularité 
+générale sous une autre plus large, les lois de Kepler du mouvement orbital sous celles de 
+Newton, la loi de gravitation universelle et les trois lois du mouvement. Les régularités 
+exhibées par les corps dont le mouvement est décrit par la loi de Kepler sont un sous-ensemble 
+des régularités décrites par les lois de Newton : « It is the physical subsumptive relation, not 
+the inferential relations of deductive or inductive logic, which is exhibited by our scientific 
+paradigms. » (p.92)  
+ 
+
  
 Version érotétique 
 Il y a une autre forme de conception épistémique de l’explication scientifique, proposée 
@@ -32,6 +228,7 @@ contraste. Ce pourrait être ici ‘la flamme … bleue’, ‘la flamme… roug
 classe de contraste permet de spécifier la cible de la question : c’est la couleur. 
 Si la classe de contraste avait aligné des substituts à ‘bec Bunsen’, la question 
 aurait du être comprise autrement. 
+
 - 
 R : la relation qui lie une réponse, A, aux deux éléments précédents. Il peut 
 s’agir d’une relation causale, fonctionnelle, déductive, en fonction de ce que le 
@@ -115,6 +312,7 @@ often concerned with the explanation of individual occurrences. […] If some of
 explanations employ statistical laws, that does not constitute an adequate reason for denying 
 that they are explanations after all. » (p.119) 
  
+
 A-3-3 Réalisme épistémologique 
  
 Conception ontique 
@@ -244,6 +442,7 @@ p.136). Ce qui fait la spécificité et le mérite de la connaissance scientifiq
 pragmatisme qui est, pour Salmon, inadmissible, et qui est, pour van Fraassen la forme aboutie 
 de l’empirisme.     
  
+
 A-3-4 Anti-réalisme épistémologique 
  
 Le scientifique incarne, pour van Fraassen, un modèle de l’activité de connaissance parce 
@@ -405,79 +604,13 @@ ce qu’est la réalité, et être prêt à tenir pour vrai ce que les théories
 observables ?    
 
 
-B. La réalité présente 
-Le genre de la certitude est le genre du jeu de langage. 
-[…] 
-Quelque chose de nouveau (spontané, spécifique) est toujours un jeu de langage. 
-[…] 
-On mesure la longueur d’un bâton et on peut rechercher et trouver une méthode plus exacte ou 
-plus sure pour la mesurer. Ainsi, direz-vous, ce qui est mesuré ici est indépendant de la méthode de 
-jugement. Ce qu’est la longueur ne peut pas être expliqué par la méthode de détermination de la 
-longueur. Penser ainsi, c’est commettre une erreur. Quelle erreur ? Dire « La hauteur du Mont Blanc 
-dépend de la façon dont on l’escalade » serait étrange. Et de même on en vient à comparer « une 
-mensuration de plus en plus précise de la longueur » avec le fait d’approcher de plus en plus en près 
-d’un objet. Mais la signification de l’expression « approcher plus près de la longueur d’un objet » est 
-claire dans certains cas, et ne l’est pas dans certains autres. On n’apprend pas ce que signifie 
-« déterminer la longueur » par le fait d’apprendre ce que sont la longueur et l’acte de déterminer, mais 
-on apprend la signification du mot « longueur » entre autres choses par le fait que l’on apprend ce 
-qu’est la détermination de la longueur57.    
- 
- 
- 
- 
-B-1 Logique et ontologie de la réalité 
- 
-B-1-1 La réalité lointaine 
- 
-L’anti-réaliste, tout autant que le réaliste, semble avoir une idée particulière de ce qu’est 
-la réalité qui les autorise à penser que nous pouvons, ou pas, la connaître, ou que nous 
-pouvons, ou pas, avoir l’assurance que c’est de la réalité dont nos représentations sont des 
-représentations. Les deux branches de l’opposition épistémologique entre réalisme et anti-
-réalisme doivent être issues d’un même engagement ontologique, de l’idée commune d’une 
-réalité indépendante de ce que nous pouvons en dire, dans le sens, au moins, où elle peut (pour 
-l’anti-réaliste), ou aurait pu (pour le réaliste) ne jamais être dite, ou jamais entièrement. La 
-divergence tient ensuite à la réponse donnée à la question de savoir si, de fait, nos 
-connaissances sont des représentations de cette réalité, comme le disent les réalistes, quitte à 
-reconnaître que ces représentations pourraient toutefois devoir être ‘améliorées’, ou si une telle 
-assertion est excessive, voire illusoire, comme le disent les anti-réalistes, qui mettent en avant 
-nos ‘limitations’, sociales, culturelles ou empiriques, et la fragilité de nos connaissances.  
-
- Mais au-delà de cette idée ou de cette image de la réalité comme quelque chose posé a 
-priori en vis-à-vis d’un système connaissant fabriquant des objets appelés représentations, dont 
-la question de savoir ce qu’ils représentent paraît devoir être la question principielle de tout 
-questionnement sur la connaissance, que peuvent dire les réalistes ou les anti-réalistes à propos 
-de cette ‘réalité’ qui conditionne a priori la vérité de nos connaissances ? Si ce n’est qu’elle est 
-ce que disent les connaissances que nous tenons pour vraies ? 
-L’anti-réaliste se refuse le droit de croire en la possibilité d’établir une relation de 
-représentation entre les représentations et la réalité ou une part de la réalité (celle qui excède 
-les phénomènes) – la matière de toute représentation ne peut être qu’empirique, et rien ne 
-permet d’affirmer la vérité des assertions visant à expliquer la forme de l’expérience. De cette 
-réalité non empirique, nous ne pouvons rien dire si ce n’est que nous ne pouvons rien en dire. 
-Mais le réaliste affirme, lui, que nous possédons de bonnes raisons, et toujours empiriques, 
-pour les bactéries, les électrons ou les planètes, d’affirmer que nos représentations peuvent être 
-des représentations de la réalité et que ce que nous connaissons alors est, ou tend à être, ce 
-qu’elle est, ce qu’elle est ‘en elle-même’. Il semblerait donc qu’ils n’aient pas toujours la 
-même conception de ce qui vaut comme ‘proposition empirique’. Salmon considère que 
-l’existence des micro-entités est fondée par des résultats expérimentaux, van Fraassen pense 
-qu’elle ne l’est pas. L’un pense que l’affirmation de cette existence est une proposition 
-empirique ; l’autre pense qu’elle est métaphysique en ce qu’elle n’autorise aucune forme 
-d’épreuve expérimentale. L’un est-il plus fondé que l’autre à juger de ce qu’est une proposition 
-empirique ? 
-« Une proposition empirique est susceptible de vérification » (disons-nous). Mais 
-comment ? Et par quoi ? 
-Qu’est-ce qui vaut comme vérification de la proposition empirique ? … Comme s’il n’y 
-avait pas un moment où la quête du fondement parvient à son terme. Mais ce terme, ce n’est pas 
-la présupposition non fondée, c’est la manière non fondée de procéder58. 
- 
-L’anti-réaliste affirme que les micro-entités sont au-delà de toute attestation 
-expérimentale, étant donné ce que nous sommes, parce qu’elles sont en dehors de notre espace 
-d’expérience. Une micro-entité n’est pas observable, ne peut pas être observée. Alors, elle 
-échappe à la connaissance empirique ? Qu’elle ne puisse pas être observée, quelle sorte 
-d’impossibilité est-ce là ? Si l’anti-réaliste affirme qu’elle ne peut pas être observée, et qu’alors 
-nous n’avons pas de fondement épistémologique suffisant, c'est-à-dire ‘vraiment’ empirique, 
                                                  
                                                  
                                                  
+                                                 
+48. J. Bouveresse, Le philosophe et le reel, Paris: Hachette, 1998, p.49.
+49 W. Salmon, Scientific Explanation and the Causal Structure of the World, Princeton, NJ: Princeton 
+University Press, 1984.  
 50 B. C. van Fraassen, The Scientific Image, Oxford: Clarendon Press, 1980.  
 51 H. Putnam, The threefold cord mind, body, and world, Columbia Univ. Press, 1999, p.144. 
 52 W. Salmon, Four decades of Scientific Explanation. Minneapolis, MN: University of Minnesota Press, 
@@ -486,9 +619,3 @@ nous n’avons pas de fondement épistémologique suffisant, c'est-à-dire ‘vr
 54 B. van Fraassen, Images of Science, p.281. 
 55 Personnage principal de La Nausée, Sartre, 1938. 
 56 J. Bouveresse, La force de la règle, Les éditions de minuit, 1987, p.59, p.65. 
-57 Wittgenstein, Investigations Philosophiques, Paris : Gallimard, 1998, 2ième partie, XI, p.359  
-58 Wittgenstein, De la certitude, Paris : Gallimard, 2000, p.52. 
-                                                 
-
-
-
