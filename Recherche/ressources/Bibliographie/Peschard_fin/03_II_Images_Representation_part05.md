@@ -1,517 +1,423 @@
 
-incompatible avec l’existence d’un plan déterminé. La notion d’émergence servira ici à 
-désigner le caractère tout à la fois orienté et imprévisible de l’action : « What is required is a 
-view of development that imposes no limits on the potential flexibility and context sensitivity of 
-behavior but also renders it susceptible to deliberate shaping » (Hendricks-Jansen, 1996, 
-p.306) C’est le double aspect d’effectivité et de flexibilité de l’action qui doit ressortir de la 
-conception émergente: les plans que nous réalisons en acte ne précèdent pas les séquences 
-d’actes, ils se déterminent, en général, au fur et à mesure de la séquence en cours, en fonction 
-de son déroulement. L’orientation que prend un enchaînement d’actes résulte, émerge, d’un 
-processus d’interaction entre notre action et le milieu sur ou dans lequel nous agissons. 
-L’apprenti de Dreyfus a commencé à agir en appliquant quelques règles simples, ces premières 
-actions ont instauré un processus d’interaction avec un certain milieu, et de ce processus 
-émerge un espace de mouvement évolutif dont les caractéristiques sont co-constituées, en 
-continu, par les actions effectuées et les résistances rencontrées, et selon lesquelles se poursuit 
-la dynamique interactive.    
-Ce qui apparaît ici comme essentiel est la distinction entre le point de vue de 
-l’observateur d’un comportement et celui de l’agent lui-même, ou plutôt celui du mouvement 
-en train de se faire : le découpage d’un comportement en éléments reliés logiquement les uns 
-aux autres ressortit au point de vue de l’observateur, « but this does not mean that the creature 
-itself performs acts or decides between alternatives acts. »  L’approche par l’extérieur, qui 
-découpe un comportement en parties distinctes et articulées entre elles, est associée par P. 
-Ricoeur à un type de théorie de l’action qui focalise la discussion sur la question de savoir ce 
-qui vaut comme action parmi les événements du monde. La démarche suivie consiste à 
-chercher les réponses au couple de question quoi ?pourquoi ?: « [A]fin de déterminer ce qui 
-vaut comme action, on a en effet cherché dans le mode d’explication de l’action le critère 
-même de ce qui mérite d’être décrit comme action.121 » Face à cette attitude, Ricoeur dénonce 
-l’occultation de la question concernant le qui ? de l’action et entreprend la recherche d’une 
-perspective sur l’action qui soit apte à prendre en charge les trois dimensions de l’interrogation. 
-La difficulté de la recherche est de cerner l’agent qui respecte « la nécessité de conjoindre le 
-qui ? au quoi ? et au pourquoi ? de l’action … [nécessité] issue de la structure 
-d’intersignification du réseau conceptuel de l’action. » (Ricoeur, 1990, p.133) 
+A-2 Le connexionnisme  
+ 
+A-2-1 Spécificités connexionnistes 
+ 
+Il y a deux points principaux sur lesquels le paradigme connexionniste entend se 
+distinguer du paradigme symbolique. Le premier est la prise en compte de la dimension 
+neuronale de la cognition, et il le fait en proposant une modélisation du système cognitif dont 
+l’allure générale est inspirée de la structure neuronale du cerveau. Le second point est de 
+prendre en considération la dimension empirique des processus cognitifs, et plus précisément 
+notre capacité à reconnaître ou à associer des formes, ou à manifester un savoir sans pouvoir 
+expliciter les règles auxquelles il semble se conformer. Ces deux aspects de l’expérience, qui se 
+concilient mal avec l’idée cognitiviste que la cognition consiste en une manipulation de 
+symboles gouvernée par des systèmes de règles logiques, peuvent être rapportés, dans le cadre 
+connexionniste, à une seule et même caractéristique des processus cognitifs, à savoir que ceux-
+ci reposent sur un mécanisme d’inférences statistiques qui se développe dans un système 
+complexe formé d’un très grand nombre d’éléments non interprétables sémantiquement. 
+L’approche connexionniste de la cognition mise beaucoup sur les phases 
+d’apprentissage. Elle conteste le découpage tranché entre sensation, perception, intellection, et 
+la modularité qui caractérise les différentes études réalisées dans le cadre cognitiviste. Elle 
+défend une application étendue du mécanisme de reconnaissance de formes. A l’idée qu’un 
+objet est constitué par la conjonction de diverses informations recueillies par des modules 
+spécialisés, le connexionnisme oppose la thèse d’une dynamique interactive impliquant les 
+unités élémentaires du réseau cognitif et donnant lieu à l’émergence de formes. La thèse de 
+l’émergence, et le mécanisme d’inférence statistique sur lequel elle repose, permettent 
+d’accorder au contexte de la perception une légitimité théorique qui répond à la variabilité que 
+révèle l’expérience. Pour rendre compte de cette variabilité, c’est ici encore la phase 
+d’apprentissage qui fournit l’alternative à l’hypothèse de règles déterminées. Mais si 
+l’apprentissage d’un réseau met en scène un instructeur, à quoi ou à qui revient ce rôle dans le 
+cas d’un système cognitif naturel ? Quand ce n’est plus par le projet du modélisateur que sont 
+définies les premières formes apprises, et établies les premières connexions, comment le sont-
+elles ?    
+ 
+Architecture Connexionniste 
+ 
+La publication en 1943, par Warren McCulloch et Walter Pitts104, de l’article ‘A logical 
+calculus of the ideas immanent in nervous activity’ témoigne déjà des deux préoccupations qui 
+seront au cœur de l’approche connexionniste : d’une part, la description des processus cognitifs 
+doit s’inspirer de notre connaissance du système nerveux, et d’autre part, il existe une capacité 
+à traiter globalement des informations qui rend possible la reconnaissance de formes 
+semblables.  Les auteurs démontrent, en effet, qu’un réseau d’unités de calcul, opérant en 
+parallèle, est capable de réaliser des opérations logiques :  
+A crucial aspect of their modelling was that the properties of the computing units were 
+based on those of the neuron […] Mc Culloch and Pitts showed that a network of neurons with 
+these simple properties could compute any logical function. […] First they showed that patterns 
+of inter-neuronal connections could compute the logical functions AND, OR and NOT. Then 
+they showed how a net of neurons computing these simple functions could be together to 
+compute an elementary set of mental events105. 
+ 
+Cette impulsion se retrouve dans la construction de réseaux d’unités élémentaires 
+connectées entre elles à la manière d’un réseau de neurones, et susceptibles de produire des 
+configurations globales d’activation. A la différence, cependant, des unités utilisées par Mc 
+Culloch and Pitts, fonctionnant selon une loi du tout-ou-rien, l’état des unités connexionnistes 
+peut varier continuement à l’intérieur d’un certain domaine. En outre, tandis que Mc Culloch 
+and Pitts utilisaient des connexions rigides, celles des réseaux connexionnistes peuvent être 
+modifiées de manière à rendre compte des processus d’apprentissage. Enfin, la logique 
+opérationnelle qui était à la base du réseau originel a laissé la place à des processus d’inférence 
+statistiques.  
+Un réseau connexionniste sera ainsi constitué d’unités, ou nœuds, dotées d’un certain 
+niveau d’activation, et les connexions qui les relient permettent que les unités activent ou 
+inhibent les autres unités. Le processus cognitif de base peut être vu comme la production 
+d’une certaine configuration d’activation, dite de sortie, par la propagation d’excitations et 
+d’inhibitions parmi les unités du réseau lorsqu’une configuration d’activation est fournie  au 
+réseau en tant que configuration d’entrée. Pour comprendre ce qui est caractéristique des 
+réseaux, le mieux est encore, selon Betchel106, de comprendre leur mode de fonctionnement. 
+Considérons alors un ensemble d’unités caractérisées par une certaine valeur d’activation et 
+connectées entre elles. La manière dont les unités sont connectées entre elles joue un rôle 
+déterminant dans le fonctionnement du réseau et le type de tâche qu’il peut réaliser. Un modèle 
+simple est, par exemple, un réseau à propagation unidirectionnelle où les unités appartenant à 
+la configuration d’activation d’entrée, les unités d’entrée, et les unités appartenant à la 
+configuration d’activation de sortie, les unités de sortie, sont organisées en couches distinctes. 
+L’activation se propage de la couche d’entrée à la couche de sortie, au travers éventuellement 
+de couches intermédiaires, par l’intermédiaire de connexions, affectées d’un poids, reliant les 
+unités de chaque couche. Le poids, ou la force, des connexions exprime l’intensité de la 
+corrélation entre deux unités. Une règle d’activation spécifie la fonction reliant le niveau 
+d’activation d’une unité (de sortie) et les différentes unités d’entrée associées à chaque 
+connexion. La configuration de sortie qui est alors produite dépend, d’une part, des 
+caractéristiques fonctionnelles des unités, comme leur mode d’activation, discret ou continu, 
+leur seuil ou intervalle d’activation, et d’autre part des règles d’activation. 
+Des variantes plus complexes d’architectures sont obtenues lorsque les connexions ne 
+sont pas unidirectionnelles ou que la propagation d’activation ne se fait pas simplement d’une 
+couche vers une autre. On peut concevoir (Betchel, 1991, p.46) un schéma de connexions 
+permettant aux unités d’une même couche d’envoyer des inhibitions ou des excitations les unes 
+aux autres aussi bien qu’aux unités de la couche suivante . Et on peut ajouter encore à la 
+complexité du processus en construisant des réseaux interactifs dans lesquels les connexions 
+peuvent être bidirectionnelles. Dans ce cas, la propagation des excitations et inhibitions se fait 
+de façon dynamique en mettant en œuvre un grand nombre de cycles constituant le processus 
+de traitement de l’information d’entrée. Le retour d’information qu’induit le caractère bi-
+directionnel des connexions conduit, en effet, à une série de révisions des valeurs d’activation 
+des unités dont le résultat dépend de leur seuil d’activation et de l’entrée qu’elles reçoivent. Le 
+système finit par se stabiliser, c'est-à-dire qu’une configuration de sortie est obtenue, lorsqu’un 
+état est atteint dans lequel aucune unité ne reçoit d’entrée produisant un changement de sa 
+valeur d’activation.  
+ 
+ 
+Ce qui fait l’un des intérêts majeurs des systèmes connexionnistes est qu’ils peuvent 
+être capable de modifier le poids des connexions, « d’apprendre de l’expérience en changeant 
+le poids des connexions » (Betchel, 1991, p.74). Etant donné un état arbitaire du système et une 
+règle d’apprentissage déterminant les conditions de modification des forces de connexions, le 
+système parvient de lui-même, à la suite de la présentation d’un ensemble de configurations, à 
+établir une répartition des forces de connexions, un état de connectivité, qui satisfait aux 
+exigences contenues dans la phase de présentation.  
+Un exemple classique de règle d’apprentissage de l’association de formes est celle que 
+Hebb formula en imaginant que la connexion entre deux neurones est renforcée lorsque ceux-ci 
+sont excités en même temps : le poids de la connexion entre deux unités est augmenté ou 
+diminué selon que les unités sont actives simultanément ou pas, c'est-à-dire en fonction de la 
+valeur prise par le produit de leur activation (McLeod et al., 1998, pp.54-58). Une procédure 
+d’apprentissage pour un modèle à deux couches peut consister à présenter une série de couples 
+de configurations, dont la seconde représente la configuration de sortie que le système doit 
+‘apprendre’ à associer à la première, dite d’entrée (par exemple, associer la vue du chocolat et 
+le goût du chocolat, et associer la vue de l’abricot et le goût de l’abricot). 
+On trouve aussi dans McLeod (1998) un  exemple détaillé de réseau autoassociatif 
+formé avec la règle dite Delta, ou encore un réseau multicouches entraîné avec un algorithme  
+de rétropropagation. Dans ce cas, les modifications des poids des connections se font de sorte à 
+minimiser la différence entre la réponse du réseau et ce qui était attendu de lui. Le réseau 
+apprend à copier en ayant le modèle qui agit comme un instructeur :  
+ [T]he current connectionist strategy depends either on restricting the space of possible 
+attractors by means of assumptions about the known properties of the world, which are 
+incorporated as additional constraints for regularization, or in more recent models, on using 
+back propagation methods where learning resembles the imitation of an external world. 
+(Varela et al., 1991, p. 148)  
+ 
+Analogie Neuronale 
+ 
+Nul ne doute que les systèmes connexionnistes aient plus d’affinité avec les systèmes 
+neuronaux que n’en ont les systèmes symboliques. D’un côté, les défenseurs du paradigme 
+symbolique, tels Fodor ou Pylyshyn107, ne cherchent pas à produire une description des 
+processus cognitifs en rapport avec les systèmes de neurones car la compréhension de ces 
+processus ressortit exclusivement, selon eux, à des théories abstraites computationnelles 
+capables de produire des modèles de syntaxe et de sémantique combinatoire : « [M]ental 
+representations characteristically exhibit a combinatorial constituent structure and a 
+combinatorial semantics. » La cognition humaine, disent-ils, exhibe des propriétés particulières 
+telles que la systématicité et la productivité, qui sont aussi celles des langages naturels. Pour 
+comprendre le processus cognitif, il faut donc le concevoir comme un système de manipulation 
+syntaxique de représentations et c’est l’analyse du niveau de traitement symbolique qui est 
+seule pertinente pour cette forme de théorisation ; or, ce niveau n’est pas connexionniste et en 
+outre, le type de représentation requis pour une conception linguistique de la pensée n’est pas 
+celui utilisé par les modèles connexionnistes.  De l’autre, le modèle connexionniste a été pensé, 
+dans son architecture et son fonctionnement, par analogie avec le système neuronal dans le but 
+d’établir des ponts entre les conditions de possibilité physiques de la cognition et ses 
+manifestations symboliques et empiriques. Car, l’une des lacunes immédiates des explications 
+qui fondent les capacités cognitives sur l’existence d’un système linguistique de manipulation 
+de représentations est qu’elles ignorent complètement la question de la réalisation, de 
+l’incarnation des processus cognitifs : « [I]t leaves unanswered the question of how such 
+representations might be embodied in the mind108. » La capacité des réseaux à modifier les 
+forces des connexions entre unités élémentaires lors de procédures d’apprentissage est censée 
+fournir un équivalent des transformations qui affectent un système neuronal lors de 
+l’acquisition de nouvelles connaissances. C’est d’ailleurs là, dans le rôle et la nature des 
+connexions, que se trouve le point fort de l’analogie. 
+L’état d’un système connexionniste, et donc son fonctionnement, dépend, outre ses 
+caractéristiques initiales, de l’histoire de son fonctionnement, des situations auxquelles il a été 
+confronté. Le fonctionnement computationnel d’un système symbolique, au contraire, fait 
+appel à des règles rigides, indifférentes à la diversité des cas traités et limitées en nombre. Dans 
+le cas des systèmes connexionnistes, les procédures de transformations sont sous la dépendance 
+d’informations locales, dans le sens où l’activation d’une unité dépend de ce qui se passe 
+autour d’elle, de la force des connexions qui la rejoignent et des états d’activation des unités 
+auxquelles elle se trouve reliée (même si elle peut, par la propagation de proche en proche, être 
+aussi influencée par des événements éloignés). Cela signifie que l’activité du réseau n’est pas 
+déterminée à l’avance, et de manière unique, déterminée par un quelconque agent extérieur, 
+mais dépend, ponctuellement, de l’état de connectivité atteint par le système à l’issue de ses 
+différentes situations d’apprentissage et du contexte particulier de la transformation. 
+
+   Une connexion, même déterminée, ne représente pas une contrainte catégorique 
+comme l’est une règle d’inférence logique opérant entre deux symboles. Une unité de sortie 
+est, en effet, connectée à plusieurs autres unités, possédant chacune leur propre valeur 
+d’activation ; la règle d’activation qui régit le calcul de la valeur d’activation de l’unité 
+considérée combine pour cela les entrées associées aux différentes connexions. Il s’ensuit  que 
+les connexions prises individuellement ne sont pas déterminantes et que c’est la situation 
+globale entourant une unité, avec ses diverses contraintes, qui peut produire l’activation ou 
+l’inhibition de cette unité. La contrainte que représente chaque connexion n’est pas mesurable 
+dans l’absolu mais dépend à chaque fois du contexte dans lequel elle intervient. La stabilisation 
+du système traduit, selon les termes de Varela, l’émergence d’un état de mutuelle satisfaction 
+entre les neurones : « [T]here is a global cooperation that spontaneously emerges when the 
+states of all participating ‘neurons’ reach a mutually satisfactory state. » (Varela et al., 1991, 
+p.88)  
+ 
+Toutefois, l’analogie neuronale, d’après Betchel (1991, p.66-67), ne va pas au delà de 
+ces aspects généraux de la structure neuronale : il faut considérer, dit-il, la métaphore 
+neuronale comme une source d’idée qui peut ou non être féconde, le soubassement biologique 
+constituant un élément favorable mais non déterminant de son succès. Il n’en reste pas moins 
+que l’attention à la structure neuronale est un élément distinctif majeur du connexionnisme par 
+rapport au cognitivisme puisque celui-ci la considère ‘hors sujet’ tandis que celui-là en a 
+abstrait sa formalisation. Le connexionnisme a mis en place, en s’inspirant des descriptions 
+neuronales, un niveau de formalisation que P. Smolensky109 qualifie de ‘subsymbolique’, 
+intermédiaire entre le niveau de description neuronal et le niveau de description symbolique, à 
+partir duquel les structures mentales n’interviennent que dans des descriptions approximatives. 
+Pour comprendre plus précisément ce statut accordé aux structures mentales, et à la description 
+symbolique, il faut aborder la question de l’interprétation sémantique de l’activité d’un réseau. 
+ 
+Interprétation Sémantique 
+ 
+ 
+Dans les systèmes symboliques, les règles sont employées dans la manipulation de 
+symboles qui peuvent recevoir une interprétation sémantique ; ils peuvent, par exemple, être 
+considérés comme les représentants de concepts. Les buts, les croyances, les connaissances, 
+sont formalisés sous la forme de structures symboliques dont la construction et la manipulation 
+sont régies par un ensemble de principes logiques déterminés. 
+ 
+Dans les systèmes connexionnistes, il n’y a pas de règle logique ni de symbole. Les 
+règles qui gouvernent la dynamique d’un réseau se manifestent dans la procédure de 
+transmission des activations et dans la procédure de modification des forces de connexions.  
+Or, les premières sont de nature non pas logique mais statistique : les contraintes que 
+constituent les connexions sont des contraintes souples dans la mesure où c’est un ensemble de 
+connexions qui est impliqué dans l’effet produit par l’activation de certaines unités sur une 
+autre. Et quant aux procédures de modification, les éléments déterminants sont la règle 
+d’apprentissage et les situations rencontrées par le système (par exemple les couples 
+particuliers de configuration). La logique est ici encore recouverte par la particularité des cas : 
+l’état de connectivité d’un réseau est indissociable de son architecture et de son histoire, et ces 
+deux éléments sont des contraintes pour chaque nouvelle transformation. 
+Le niveau de description de la nature et du fonctionnement des règles connexionnistes 
+est subsymbolique en ce sens que les entités concernées, le niveau d’activation des unités 
+élémentaires et les forces de connexions ne sont pas interprétables sémantiquement : « [D]ans 
+le paradigme symbolique la description du système formel se situe à un niveau inférieur à celui 
+de l’interprétation sémantique ; le niveau de la dénotation est plus élevé que le niveau de la 
+manipulation. » (Smolensky, 1991, p.86) Quel est le niveau de la dénotation ? C’est celui 
+auquel se forme les configurations d’activation. L’entité qui reçoit ici une interprétation 
+sémantique est un ensemble d’unités, associées chacune à un certain niveau d’activation et 
+reliées entre elles par des connexions, associées chacune à un certain poids. Pour qualifier cette 
+délocalisation de la valeur sémantique, on parle de ‘représentations distribuées’. C’est ce 
+niveau supérieur, où émergent les configurations, qui est mis en rapport avec les structures 
+mentales. Mais identifier ces entités complexes à des symboles manipulés par des règles 
+logiques correspond pour le connexionniste à une description grossière qui n’a de valeur 
+qu’approximative. 
+Il y une autre façon que par des inférences logiques de mettre en relation les 
+configurations, et qui reste fidèle aux particularités de fonctionnement des réseaux 
+connexionnistes : c’est d’assimiler les configurations à des unités. Il est possible alors de 
+considérer que la dynamique du niveau supérieur est gouvernée par des lois formelles du même 
+type que celles du niveau subsymbolique, et qui sont des inférences statistiques et non pas 
+logiques. Smolensky, qui défend ce point de vue, admet que dans des conditions idéales de 
+résolution d’un problème, le comportement qui émerge au niveau supérieur peut être décrit en 
+termes d’inférences logiques ; mais il souligne que « si l’on sort de ces conditions idéales, 
+l’illusion en vertu de laquelle le système contiendrait des contraintes dures s’évanouit 
+rapidement. » 
+ 
+Reconnaissance de Formes 
+ 
+Ce que l’on désigne par ‘forme’ pour un système cognitif est une structure complexe 
+possédant une unité distinctive, et éventuellement une valeur sémantique. Dans le contexte 
+connexionniste, une forme est associée à une configuration d’activation, et mettre en 
+correspondance deux formes signifie établir un état de connectivité tel que l’activation d’une 
+certaine configuration induise systématiquement l’activation d’une autre configuration 
+particulière. C’est ce qui se produit, par exemple, lorsque à la suite de la présentation d’une 
+série de couples de configurations, le système met en place une répartition des poids de 
+connexions telle que, par la suite, la présentation de l’une des configurations d’entrée est suivie 
+de la réalisation de la configuration qui lui était associée. La capacité de reconnaissance de 
+forme recouvre, en fait, nombre d’aptitudes cognitives caractérisées par différentes sortes de 
+mise en correspondance de formes. Betchel (1991, p.115) propose les distinctions suivantes :  
+- 
+« la mise en correspondance d’une forme spécifique avec une forme plus 
+générale », qui permet les actes de catégorisation, classification, généralisation, 
+identifiant un individu comme élément d’un ensemble défini par une forme 
+générale ;  
+- 
+la mise en correspondance « d’une forme incomplète avec une version complète 
+de la même forme », mise en œuvre dans les actes d’anticipation utilisant une 
+expérience antérieure ou les actes de remémoration à partir de certains éléments 
+servant d’‘indices’ ;  
+- 
+la mise en correspondance « d’une forme avec une forme différente qui lui est 
+liée », comme dans le cas de mots différents désignant les formes composées 
+d’un même verbe ;  
+- 
+et enfin, « la mise en correspondance arbitraire d’une forme avec une autre 
+sans lien avec elle », comme dans les actes de nomination associant une forme 
+résultant d’une perception visuelle (un objet) et d’un perception auditive (un 
+nom). 
+Le problème que résout la capacité à reconnaître des formes est que des événements 
+distincts doivent être apparentés sans pourtant n’être jamais identiques. Ce qui caractérise un 
+système connexionniste, c’est le caractère statistique des inférences, la souplesse des 
+contraintes. Du fait que les unités sont reliées par une pluralité de connexions et que les 
+configurations expriment la satisfaction optimale d’un ensemble de contraintes, les activations 
+ou inhibitions qui traduisent une incomplétude ou une déformation de la configuration d’entrée 
+par rapport à une configuration de référence sont compensées par les effets d’interaction ou de 
+rétro-propagation qui conduisent le système vers un état stabilisé. Le même type de processus 
+d’ajustement est mis en œuvre pour la complétion, l’association ou la transformation de formes 
+car la complétion d’une forme peut être vue comme la réalisation d’une configuration de sortie, 
+ou bien la réalisation d’une configuration de sortie peut être vue, à un niveau de description 
+supérieur, comme la complétion de la configuration d’entrée. 
+ 
+ 
+Il a pu sembler jusqu’à présent qu’une frontière assez nette séparait les conceptions 
+symboliques et connexionnistes du fait de la différence de nature bien marquée de leur modèles 
+de référence et de leurs instruments conceptuels, l’ordinateur, la logique, la computation, les 
+symboles, d’une part, les réseaux, l’inférence statistique, la dynamique, l’émergence de forme, 
+d’autre part. Et il est d’ailleurs tentant de voir dans l’interprétation des contraintes déterminant 
+la constitution des formes le lieu de cristallisation de la divergence entre les approches 
+computationnelle et dynamique du fonctionnement d’un réseau : l’approche computationnelle 
+doit faire référence à des contraintes extérieures au système, tandis que l’approche dynamique 
+reste dans l’immanence du réseau. La distinction pourtant se fait plus floue lorsque l’on se rend 
+compte que le schème ‘computo-représentationnel’ n’est pas la propriété exclusive du 
+paradigme symbolique. Un système connexionniste est même, selon Cummins & Schwarz110, 
+en règle générale, computationnel et représentationnel, dans le sens où « il passe de façon 
+réglée d’un état représentationnel à l’autre ». Cela signifie que les configurations d’activation 
+peuvent être considérées comme des représentations et que le système peut apprendre à 
+modifier les poids des connexions de manière à ce que les transformations de configurations 
+satisfassent certaines règles ou ensemble de règles assimilables à des fonctions cognitives.  De 
+ce point de vue, le développement et le fonctionnement du système cognitif sont 
+essentiellement déterminés par des contraintes qui lui sont extérieures, les contraintes 
+épistémologiques relatives à chaque domaine de la connaissance.  
+ 
+Selon Smolensky, ce qui marque de façon plus significative la divergence des 
+approches connexionnistes et cognitivistes est le type d’instrument mathématique qu’elles 
+utilisent111 : tandis que le paradigme symbolique utilise une mathématique discrète et 
+développe un traitement séquentiel des processus cognitifs, le paradigme connexionniste utilise 
+une mathématique continue pour calculer les variations qui se produisent en parallèle sur 
+l’ensemble du réseau. 
+ 
+Description Dynamique  
+ 
+ 
+L’utilisation par les connexionnistes d’une mathématique continue exprime l’abandon 
+de la ‘métaphore de l’esprit comme l’ordinateur’. La mathématique discrète du paradigme 
+symbolique représente les processus cognitifs comme des transformations séquentielles d’une 
+structure déterminée en une autre selon des règles universelles. Les opérations de traitement de 
+l’information relient des entités atemporelles et déterminées par des règles atemporelles et 
+déterminées. Lorsque le système cognitif est considéré comme un système dynamique, il est 
+caractérisé par un ensemble de variables continues (les valeurs d’activation, les forces de 
+connexions) et de contraintes (taille du réseau, seuils ou intervalles de variation des variables, 
+règles d’apprentissage ou d’activation) ; son évolution est gouvernée par un système 
+d’équations différentielles qui formalisent les variations interactives des différentes variables ; 
+et l’instauration d’une configuration d’activation traduit la convergence du système d’équations 
+vers une solution stable répondant aux conditions initiales posées. Vue de cette façon, 
+l’intelligence perd beaucoup de son caractère exceptionnel pour rejoindre une classe 
+extrêmement diversifiée de phénomènes naturels : celle des phénomènes dynamiques112. 
+ 
+Mais si cette dualité d’approche mathématique est difficilement contestable, le 
+rattachement du connexionnisme est, en revanche, controversé. Précisément, parce qu’ainsi que 
+le remarquait Cummins, il est resté, dans sa forme classique, attaché aux hypothèses 
+computationalistes du modèle symbolique, qui sont entièrement rejetées par l’approche 
+dynamique : « [M]any connectionists models have continued the static tradition of dealing 
+with time113. » Le connexionnisme, tout en prétendant prendre en considération la composante 
+physique et la composante empirique de la cogntion, néglige pourtant parfois un élément 
+essentiel à l’une et à l’autre de ces composantes, c’est la dimension temporelle :  
+Much standard connectionist work (e.g., modeling with layered backprop networks) is 
+just a variation on computationalism, substituting activation patterns for symbols. This kind of 
+connectionism took some steps in the right direction, but mostly failed to take the needed leap 
+out of the computational mindset and into time. The alternative must be an approach of 
+cognition which begins fromp the assumption that cognitive processes happen in time. Real 
+time. (R.Port & van Gelder, 1995, p.3) 
+ 
+L’instrument dynamique rend possible des modèles qui spécifient l’évolution du 
+système pendant deux instants arbitrairement proches et peuvent rendre compte également 
+d’une évolution discrète. Selon R.Port & van Gelder, seule une description continue de 
+l’évolution du système cognitif permet de rendre compte des aptitudes qui requièrent de la 
+flexibilité et du discernement dans le choix des comportements à adopter. Comme dans le cas 
+des situations de coordinations sensori-motrices dans un environnement infiniment diversifié : 
+« [A] system which can flexibly deal with such a world must be able to occupy states that are 
+equally rich and subtly distinct »; ou encore, lorsqu’un mot du langage ordinaire peut 
+apparaître dans différents contextes et y avoir des significations très légèrement différentes : 
+« [O]nly a system that can occupy a continuum of states with respect to word meanings stands 
+a real chance of success. » 
+ 
+C’est par contraste avec les approches dynamiques de la cognition, auxquelles il a 
+quand même ouvert la voie, et plus spécialement par contraste avec les conceptions non 
+représentationnistes que l’instrument dynamique autorise, que le connexionnisme se voit 
+accusé de conservatisme. La conception développée par F. Varela sous le nom d’énaction 
+s ‘appuie en effet sur l’idée « que ce que nous appelons communément une représentation 
+n’indique pas une correspondance entre ce qui se passe à l’intérieur du système et un certain 
+état du monde extérieur, mais plutôt une certaine cohérence du système dans la façon dont il 
+maintient continuellement son identité.114 » L’usage théorique du concept de représentation 
+encore à l’œuvre dans le connexionnisme traditionnel présente la connaissance comme la 
+réalisation d’une relation entre un système cognitif (structure mentale ou connexionniste) et un 
+objet autre que lui, doté de certaines propriétés. Cette relation de représentation est pensée 
+comme une sorte de réflexion de l’objet dans le système cognitif qui constituerait le produit de 
+l’activité cognitive : « [U]ne entité cognitive est pour l’essentiel parachutée dans un monde 
+préexistant. Cette entité n’y survivra qu’à la condition de posséder une carte et d’apprendre à 
+agir en fonction de celle-ci.115 » Pour une approche représentationniste, cognitiviste ou 
+connexionniste, le critère d’évaluation de la cognition est la représentation, la reproduction 
+adéquate d’un monde extérieur au système et prédéterminé. On parle alors d’informations 
+correspondant à des propriétés du monde (les formes, les couleurs…) et de résolutions de 
+problèmes bien définis posé par un monde indépendant du système.  
+Parler de représentations, dans ce sens, suppose que l’on considère les deux côtés d’une 
+frontière délimitant un système cognitif par rapport à son environnement et que l’on établisse 
+une relation entre un objet déterminé, à connaître, c'est-à-dire à représenter, et un autre objet, 
+produit par le système, considéré comme la connaissance du premier. Mais, « nous ne pouvons 
+nous exclure du monde pour comparer son contenu avec ses représentations : nous sommes 
+toujours immergés dans ce monde. » (F.Varela, 1996, p.98) En outre, le schéma 
+représentationniste ne permet pas de rendre compte du caractère autonome des êtres vivants, et 
+de leur système cognitif, et doit passer sous silence le rôle prépondérant du sens commun 
+constamment requis, et toujours de façon contextuelle, pour « configurer notre monde 
+d’objets » : « le contexte et le sens commun sont en fait l’essence même de la cognition 
+créatrice. » (F.Varela, 1996, p.98) Toutes les descriptions que nous pouvons énoncer le sont à 
+partir d’une situation qui est seulement la nôtre et dont la particularité doit être prise en 
+considération pour ce qu’elle est, avec son corps, sa biologie, son langage, ect.. Et notre 
+conception de la cognition elle-même est un acte cognitif, et en tant que telle, elle est 
+indissociable non seulement de la structure de notre système cognitif mais encore de la façon 
+dont cette structure est sollicitée, perturbée, et gère les perturbations qui menacent l’unité du 
+système, voire de l’être tout entier. Non seulement, un système qui n’est pas affecté dans son 
+mode d’être n’a aucune connaissance de son environnement, et aucune connaissance du tout, 
+mais encore, la connaissance n’est rien au-delà d’une certaine manière d’être affecté. 
+Je voudrais dans la suite étudier plus précisément la façon dont le connexionnisme a 
+contesté le paradigme symbolique en utilisant le concept d’émergence pour décrire certains 
+aspects fondamentaux de la connaissance, et essayer de mettre en lumière le moment de la 
+description où se trouve mise en œuvre l’hypothèse représentationiste. Mon intention est de 
+cerner au plus près la raison pour laquelle cette hypothèse a été rejetée par l’approche énactive 
+et la façon dont celle-ci a fait de l’émergence la notion clé d’une conception non 
+représentationiste.  
 
 
-Organisation de l’activité 
- 
-A la description séquentielle d’un comportement, H. Hendricks-Jansen oppose l’idée 
-d’une « organisation de l’activité émergeant d’une interaction » : pas de plan général, pas de 
-décision ni de représentation interne, mais des attitudes qui sont cohérentes entre elles et 
-adaptées au contexte parce que, précisément, le comportement général est, à chaque instant, 
-déterminé à la fois par l’histoire du comportement et les conditions présentes du contexte. La 
-dualité entre description séquentielle et interprétation émergentiste du comportement semble 
-faire écho à celle soulignée par Smolensky entre description symbolique et interprétation 
-émergentiste de l’activité d’un réseau connexionniste. N’avons-nous pas dit que les 
-configurations émergeaient au niveau conceptuel d’une dynamique sub-symbolique interactive 
-conditionnée aussi bien par l’histoire que par la situation contextuelle du système ? Et 
-d’ailleurs, I Stengers, dans son parcours interdisciplinaire des processus émergents reconnaît à 
-la modélisation néo-connexionniste une place quasi-paradigmatique122. 
-Il y a, selon F. Varela, deux formes d’usages du concept d’émergence qu’il est essentiel 
-de bien distinguer : « [E]n mettant en valeur l’acquisition par un réseau d’une faculté bien 
-spécifique dans un domaine défini, on retrouve le principe de la représentation habituelle », 
-tandis qu’«en insistant sur le fait qu’un processus historique fait émerger des régularités sans 
-contraintes de finalité arrêtée, on conserve la notion biologique d’un monde non circonscrit. » 
-Cette distinction a donc une conséquence épistémologique très importante. Du point de vue de 
-Smolensky, remarque Varela, la connaissance est pensée en référence à un monde possédant 
-des propriétés prédéfinies, « l’objectif est de trouver une activité endogène qui corresponde à 
-la caractérisation optimale du milieu » (Varela, 1996, p.117). Ou encore, comme le souligne 
-Stengers, l’activité d’un réseau connexionniste n’est pas envisageable indépendamment des 
-intentions de son fabricant et de ce que ce fabricant considère comme étant une connaissance 
-valable. Dans le cas d’une reconnaissance de forme, la forme à reconnaître, disons ‘B’, et les 
-formes jugées comme ressemblantes sont définies en fonction de ce que nous connaissons  : 
-« Il s’agit de faire coïncider de manière optimale le ‘bassin attracteur’ de toutes les 
-configurations initiales qui mènent à un même comportement et l’ensemble de toutes les 
-configurations initiales qui, pour nous, sont des ‘B’. » (Stengers, 1996, p.83) Il est attendu du 
-réseau qu’il reproduise notre connaissance. 
-Le rôle joué par l’émergence dans la pensée de Hendricks-Jansen participe du second 
-usage distingué par Varela, et son approche n’est pas sans affinité avec le privilège accordée à 
-la singularité plutôt qu’à l’optimalité qui caractérise ce que Stengers appelle la « modélisation 
-de terrain » :  
-[L]e comportement des fourmis est un exemple maître d’efficacité, et il semble appeler 
-l’attribution d’une valeur adaptative optimale. Si l’on suppose un optimum, on peut toujours le 
-construire, mais si on ne le suppose pas, d’autres questions se posent, qui impliquent de ‘suivre’ 
-l’émergence du comportement collectif à partir de la manière dont les interactions entre fourmis 
-‘modulent’ (et non déterminent) le comportement de chacune. La question est alors de 
-comprendre l’efficacité, non de l’identifier à un optimum dont le comportement individuel 
-serait déductible. […] Les ‘fourmis’ au sens générique, multispécifique, pourraient alors 
-célébrer l’invention d’un agencement entre individus et collectifs ‘créateur de variantes 
-significatives’ . (Stengers, 1996, p.119-120) 
- 
-Dans le second usage, le contenu de connaissance qu’exprime un comportement est une 
-création, il n’est pas la copie de quoi que soit de prédéfini ; sa détermination est indissociable 
-de la pratique par laquelle il est produit. L’idée qu’un comportement est l’expression d’une 
-connaissance et l’idée que ce comportement prend place dans une chaîne causale 
-d’événements appartiennent à la même perspective: c’est celle d’un observateur extérieur 
-faisant une lecture sémantique de ce qu’il observe. Mais ce mode de lecture du comportement 
-ne peut pas rendre compte de la flexibilité des comportements. Cette flexibilité vient justement 
-de ce que le comportement n’est pas déterminé par une connaissance du monde insensible à la 
-diversité des contextes et des contraintes spécifiques à un agent particulier. C’est parce que 
-l’organisation de l’activité s’invente dans l’émergence, en continu, que les comportements 
-apparaissent comme flexibles. Le mystère de l’adaptation à la diversité de l’environnement est 
-engendré par la perspective sémantique, le point de vue extérieur et désengagé sur l’agent, qui 
-regarde deux  entités déterminées, le monde, aux visages innombrables, et l’agent, et se 
-demande comment elles peuvent s’accorder. Lorsque l’émergence est une invention sans 
-‘contrainte de finalité arrêtée’, les visages du monde ne sont pas plus variés que l’interaction le 
-permet puisque c’est elle-même qui les constitue.   
-Hendricks-Jansen prend pour illustrer son propos l’exemple du robot de Mataric : le 
-déplacement du robot se différencie selon qu’il rencontre un mur ou un coin et semble ainsi 
-disposer de deux comportements distincts adaptés à deux situations distinctes et reconnues 
-comme telles. Mais le robot ne possède pas de représentations internes de chaque situation : 
-« It is true that its land-marks are identified in terms of correspondences between its own 
-movments and its sensory inputs in response of specific features. However, the occurrence of 
-such correspondences must be sought not in formal characteristics of behavioural components 
-but in the fact that the robot’s low-level reflexes have been calibrated to a particular 
-environment.» L’activité du robot s’invente dans la rencontre entre l’organisation que constitue 
-le robot et un environnement qu’il explore d’une manière qui lui est particulière, au sein 
-duquel, par là-même, il se fait un milieu – un environnement qui n’est pas ‘en soi’ une source 
-de problèmes déterminés, prédéfinis, pour lesquels existerait une réponse optimale. C’est cette 
-rencontre qu’il faut suivre, dans le temps où elle se déroule, le temps vrai pour reprendre 
-l’expression de van Gelder, le temps vrai de l’action, au lieu de chercher à modéliser une 
-représentation de l’environnement tel que peut le décrire l’observateur, tel qu’il fait sens pour 
-lui, bien après que la rencontre ait eu lieu.  
- 
-A-2-4 Temporalité de l’action 
- 
-Le défaut majeur des descriptions de l’action en terme de relation causale est, d’après 
-Hendricks-Jansen, non seulement de ne pas rendre compte de la flexibilité de l’organisation de 
-notre activité, mais surtout, si cette flexibilité suppose l’absence de représentation et de plan 
-d’action déterminés, contrairement à ce que requiert la structure causale d’une séquence 
-d’actes, de ne pas pouvoir en rendre compte. Du point de vue de P. Ricoeur, c’est son 
-incapacité à intégrer la dimension temporelle de l’action qui marque les limites de ce type de 
-description, et à deux titres. Le second, qui sera envisagé un peu plus tard, est relatif à l’ipséité 
-et à la continuité temporelle qui la sous-tend. Dans l’immédiat, disons que c’est la 
-subordination du caractère intentionnel de l’action à une conception causale de l’explication 
-qui entraîne l’occultation de la temporalité.  
-L’importance accordée à l’intentionalité par P. Ricoeur peut sembler situer sa recherche 
-aux antipodes de celle de Hendricks-Jansen qui s’autorisait l’exemple d’un robot pour illustrer 
-et appuyer son discours. Ce n’est pas le cas, car toute la finesse de l’argumentation de Ricoeur 
-consiste à souligner la distinction entre ‘intention dans laquelle’ et ‘intention de’, et ‘l’intention 
-de’ peut trouver place dans un schéma d’émergence tandis que ‘l’intention dans laquelle’ 
-caractérise une lecture causale. Il pourrait sembler aussi que la temporalité attachée à 
-l’intentionalité, en tant que ‘référence explicite au futur’, doive empêcher de penser la 
-flexibilité dans la mesure où celle-ci désigne l’inscription de l’agir dans le moment présent. 
-Mais là encore, la distinction soulignée par Ricoeur va libérer le futur des déterminations 
-imposées par la réduction de l’intentionalité à la seule ‘intention dans laquelle’. Et c’est cette 
-restauration de l’ouverture des possibles qui permet de redonner au moment présent toute la 
-puissance créatrice que suppose la flexibilité et que Port & van Gelder (1995) tiennent pour 
-indissociables de la continuité temporelle des processus cognitifs. 
- 
-Intentionalité de l’action 
- 
-La critique de l’analyse causale de l’action prend pour cible caractéristique la théorie de 
-Davidson123« où le couple des questions Quoi ? et Pourquoi ? se voit aspiré dans une 
-ontologie de l’événement impersonnel qui fait de l’action elle-même une sous-classe 
-d’événements. » (Ricoeur, 1990, p.93) C’est l’intention qui distingue l’action des autres 
-événements ; mais l’intentionalité est là une réponse au Pourquoi ? et s’insère dans un schéma 
-causaliste en s’exprimant de façon adverbiale124 : en « traitant l’intention comme un adverbe, il 
-est possible de la subordonner à la description de l’action en tant qu’elle est un événement 
-échu. » Les actions sont posées là-devant, en tant qu’éléments d’une classe d’événements 
-parmi les événements du monde, elles constituent en quelque sorte les nœuds d’un tissu de 
-relations logiques offert à la curiosité d’un observateur. L’explication ne fait à aucun moment 
-appel à un agent incarné, car la liaison du Quoi ? au Pourquoi ? signifie que les actions sont 
-identifiées seulement par leur relation à d’autres événements, des raisons (« raisons et actions 
-sont bien des événements par leur caractère d’incidence »), et les événements ont le statut 
-d’objets. 
-P. Ricoeur conteste que l’on soit justifié à négliger l’usage substantif de l’intention 
-(l’intention de). Il y a des traits originaux de l’intention, absents de l’usage adverbial, et qui 
-pourtant correspondent à certains aspects de notre expérience de l’agir, étant liés au fait que 
-l’intention n’est pas forcément séparable du déroulement de l’action. L’ ‘intention de’ introduit 
-un délai par lequel se découvre « non seulement le caractère d’anticipation, de visée à vide de 
-l’intention, […] mais le caractère projectif de la condition même de l’agent. » L’anticipation 
-ne signifie pas la représentation d’un événement mais, tout à la fois, l’orientation vers le futur 
-et la continuité de l’activité, qui sont dissimulées par une description distanciée et séquentielle. 
-Contrairement à l’idée de l’existence de représentations ou d’une ‘intention dans laquelle’, l’ 
-‘intention de’ accompagne l’activité de telle sorte que chacune se nourrit de l’autre ; l’intention 
-n’est pas figée, et le caractère anticipatif n’introduit pas la rupture, la séparation entre un acte et 
-son résultat qui est inhérente à la description séquentielle et causale. L’anticipation exprime la 
-dimension interactive de l’organisation de l’activité en restaurant la dynamique temporelle 
-déployée par l’action. De plus, l’ ‘intention de’ renvoie nécessairement à un agent, impliqué 
-par, impliqué dans l’action, et qui était complètement occulté par le primat du Pourquoi ? dans 
-la description objective. 
-Il est important de souligner que la focalisation sur le présent de l'action, sur son 
-déroulement, et sur un agent impliqué dans la réalisation et l'organisation de son activité, qui 
-caractérise les interprétations de H. Hendricks-Jansen et de P. Ricoeur, n'interdit pas 
-l'interprétation que ces auteurs critiquent mais la complète. En effet, tandis que P. Ricoeur va 
-imposer à son agent qu'il respecte « la structure d'intersignification du réseau conceptuel de 
-l'action », H. Hendricks-Jansen reconnaît que «an intentional description of our behavior 
-cannot provide clues to the underlying mechanisms of that behavior, but they are essential to 
-our ability to learn new skill » (l'intentionalité est ici celle désignée par les philosophies 
-analytiques, l’intention dans laquelle). La même remarque vaut au sujet de l'interprétation 
-énactive proposée par F.J.Varela, qu’il justifie par l'insatisfaction suscitée par « l'absence de 
-sens commun dans la définition de la cognition jusqu'à ce jour », mais en ajoutant que 
-« chacune de ces approches (représentationniste et énactive) est utile dans son propre 
-contexte ». Ce point vaut d’être remarqué car, si les approches participatives autorisent les 
-approches objectivistes, distanciées, l'inverse n'est pas vrai. Et c'est précisément, me semble-t-
-il, ce qui fait la faiblesse de ces dernières. L'approche objectiviste ne nie pas qu'il y ait un agent 
-de l'action, mais celui-ci peut être omis de la description dès lors que l'affirmation de 
-l'existence de représentations internes ou l'usage de la forme adverbiale de l'intentionnalité font 
-de cette description une explication causale. 
- 
-La démarche alternative que développent ceux qui ont le souci du "sens commun" 
-n'exclut pas les explications 'désengagées', parce qu'appréhender l'action en prenant en 
-considération, ou même, en tenant pour essentiel le rapport de l'action à son agent ce n'est 
-justement pas produire une explication alternative au sens d'exclusive, c’est plutôt ouvrir une 
-nouvelle perspective. L'agent introduit bien une dimension nouvelle au sein de l'analyse 
-causale car la dépendance de l'action vis-à-vis de l'agent n'est rien d'autre que l'expression d'un 
-pouvoir-faire primitif: « la puissance de l'agent doit être tenue en dernière instance pour 
-primitive ». Mais tout l'enjeu de la réflexion de P. Ricoeur est alors de concilier cet arrêt brutal 
-sur l'agent dont le pouvoir d'agir est un fait primitif qui répond à la question sur le Qui? de 
-l'action et l'ouverture de la chaîne des réponses au couple Quoi ?-Pourquoi? 
-
-
-Corporéité de l'action 
-
-Il faut pouvoir concilier le fait que, d'une part, le pouvoir d'agir fasse de l'action une 
-causa sui, introduise la réalité absolue d'un être-qui-agit, et d'autre part, que l'action en tant 
-qu'événement prenne place au sein d'un enchaînement causal qui décrit le cours du monde. 
-P.Ricoeur avance l'idée que la structure même de l'action implique la conjonction des 
-causalités si on la conçoit en tant qu' « intervention de l'agent de l'action dans le cours du 
-monde qui cause effectivement des changements ». Comment l'action peut-elle être une 
-« intervention », se trouver à la jonction de deux ordres de réalité? Le corps rend possible 
-l'articulation; le corps en tant qu'il est un corps propre, qu'il appartient à l’univers des choses et 
-à celui du soi. Le corps est à la fois ex-pression immédiate du pouvoir d'agir, et en tant que tel 
-est constitutif d'un soi, et aussi inscription de ce pouvoir d'agir, et du soi, dans une action 
-constituant un événement du monde. C'est en cela que la réflexion de P.Ricoeur peut être située 
-dans le prolongement de la pensée de H. Hendricks-Jansen. L'action est irréductible à un 
-événement et le pouvoir d'agir est une réalité absolue. En outre, l'agir est une interaction et une 
-émergence: l'être pensé comme être-qui-agit suppose un monde: « pas de soi sans un monde 
-praticable en quelque façon »; et le monde s'enracine dans l'agir: « pas de monde sans un soi 
-qui s'y trouve et qui agit ». C'est la double appartenance du corps qui doit permettre de 
-comprendre l'émergence an tant qu'elle traduit l'inscription de l'agir dans le monde et l'être-
-dans-le-monde du soi. 
-Cette charge que P. Ricoeur impose à sa recherche, de comprendre le pouvoir d'agir 
-comme signifiant être soi et être du monde, comprendre le corps comme réalisant l'articulation 
-entre l'être-soi et l'être-dans-le-monde, pèse aussi sur la théorie énactive proposée par Varela, 
-qui fera l’objet de la Troisième partie. Le vocabulaire certes, est d'un autre registre; mais il 
-n’est pas difficile de percevoir les correspondances entre les deux démarches. Je voudrais 
-conclure ce bref parcours du texte de P.Ricoeur en repérant certains thèmes profondément 
-partagés par ces deux formes d’étude apparemment si différentes  de la manière dont nous 
-habitons le monde. 
- 
-Identité de l'Agent 
- 
-La place essentielle reconnue au corps propre dirige l’interrogation sur ce « qui spécifie 
-le soi impliqué dans le pouvoir faire ». Il a déjà été noté que la dimension temporelle était un 
-élément essentiel de l'action dès lors que celle-ci était envisagée dans son rapport à un agent, 
-que ce soit en terme de flexibilité ou d'anticipation. Ici intervient l'autre aspect de la 
-temporalité, seulement mentionné précédemment, pour constituer un élément tout aussi 
-essentiel de la détermination de l'ipséité, mais en négatif de la forme sous laquelle nous l'avons 
-auparavant perçue. C'est maintenant la continuité attachée au soi qui doit être considérée et qui 
-se manifeste comme le revers de la flexibilité de l'agent, car il a bien fallu qu'on lui attribue 
-silencieusement une permanence dans le temps pour qualifier de flexibles les manifestations de 
-son pouvoir d'agir. La nécessité de penser une permanence qui traverse les changements 
-inhérents à la condition d'être-qui-agit, qui est celle du soi, une permanence comparable à « la 
-structure de l'outil dont on aura progressivement changé toutes les pièces », ou au bateau de 
-Neurath, P. Ricoeur la désigne comme « la quête d'un invariant relationnel ». Mais cette forme 
-de permanence ne suffit manifestement pas, l'exemple de l'outil le montre, à distinguer l'ipséité 
-de la mêmeté. 
- 
-Non qu'il faille en appeler à un dualisme des substances; la réponse faite par P.Ricoeur 
-à la thèse de D. Parfit en témoigne. Parfit soutient que 1'identité d'une personne consiste 
-simplement dans l'occurrence d'une série d'événements qui peuvent être décrits de manière 
-impersonnelle. Et il oppose cette thèse à la croyance que l'identité personnelle est constituée 
-par «un fait séparé supplémentaire». Mais affirmer l'irréductibilité du corps propre à un corps 
-quelconque, c'est contester la réduction de l'identité à un ensemble d'événements impersonnels 
-mais pas nécessairement invoquer un fait séparé; car il n'y a de fait séparé que par rapport à 
-ontologie de l'événement. Or justement, la perspective du soi s'est introduite comme une 
-tentative de pallier l'insuffisance de cette ontologie. 
-Le soi n'est pas quelque 'chose' qui se rajoute au tableau de la description 
-impersonnelle; c'est une autre perspective sur le corps rendue possible par le fait que le corps 
-n'est pas seulement un corps quelconque mais un corps propre. Mais sur quoi se fonde cette 
-affirmation que le corps n'est pas seulement un corps quelconque? Cela ne se fonde sur rien, ou 
-disons, pas sur quelque ‘chose’, mais rend compte d'une expérience, d'un vécu, sans pour 
-autant que ce vécu soit érigé en fondement. Parler d'une expérience du corps qui n'est pas celle 
-d'un corps quelconque n'implique pas que l'on élève le discours sur le corps propre au rang de 
-Vérité, au contraire même, car le corps propre est le « point d'ancrage» de la perspective, il est 
-« l'organe d'un sujet qui n'appartient pas aux objets dont il parle. » Affirmer l'irréductibilité du 
-corps propre, c'est affirmer aussi qu'il n'est jamais objet de discours parce qu'il est « la limite du 
-monde et non un de ses contenus », et aussi parce que « l'étrange constitution du corps propre 
-s'étend du sujet de l'énonciation à l'acte même d'énonciation: en tant que voix poussée au 
-dehors par le souffle et articulée par la phonation et toute la gestuelle, l'énonciation partage le 
-sort des corps matériels ». 
- 
-L'effort d'être soi 
-Si l'invariant relationnel ne suffit pas à distinguer ipséité et mêmeté, il va quand même 
-constituer un trait permettant d'intégrer ce qui a été dit du pouvoir d'agir à la caractérisation de 
-l'ipséité. En qualifiant le pouvoir d'agir de ‘fait primitif’, P. Ricoeur a désigné une tension entre 
-l'effectivité et la puissance qui lui paraît essentielle à l'agir humain. Cependant, il insiste pour 
-inscrire cette tension sur un fond de réalité plus profonde dont l'agir humain ne serait qu'une 
-forme de manifestation particulièrement « lisible». Le caractère primordial de cette tension est 
-appréhendé par référence à l'ontologie aristotélicienne et aux places qu'y occupent les concepts 
-d'«acte» et de «puissance», à la fois respectivement, et relativement l'un à l'autre: les 
-déterminations de l'acte et de la puissance s'appellent l'une l'autre, mais leurs champs 
-d'application occupent les positions extrêmes de la chaîne des êtres. Et en plus, une 
-réappropriation de l'ontologie aristotélicienne doit aussi prendre en charge le primat de l'acte 
-qui s'en dégage, non seulement sur la puissance mais sur la substance. 
-C'est dans la philosophie de Spinoza que P. Ricoeur trouve une pensée du soi 
-respectueuse de ces exigences, au travers de l'idée de conatus. Le conatus, « en tant qu'effort 
-pour persévérer dans l'être, qui fait l'unité de l'homme comme de tout individu », et la 
-puissance, qui "ne veut pas dire potentialité mais productivité", permettent de comprendre 
-l'invariant relationnel et le pouvoir d'agir primitif, en comprenant l'invariant relationnel comme 
-l'unité résultant d'une puissance toujours déjà actualisée à un certain degré. L'agir humain doit 
-être pensé comme une manifestation de l'effort pour persévérer dans l'être, pour maintenir 
-l'unité et en même temps comme l'expression de cette unité elle-même, et l'invariant relationnel 
-devient une relation que le conatus, la puissance d'agir primordiale, essentielle à l'être, 
-maintient invariante: « la puissance d'une chose quelconque, ou l'effort (...) par lequel une 
-chose s'efforce de persévérer dans son être n'est rien en dehors de l'essence donnée ou actuelle 
-de la chose ». 
-Il y a trois traits essentiels du «soi» mis en évidence par P. Ricoeur et qui me semblent 
-tenir dans la théorie énactive une place primordiale: le pouvoir d'agir est un fait primitif, il 
-existe un invariant relationnel définissant une unité, le corps propre est la limite du monde ; en 
-se souvenant que le pouvoir, la puissance d'agir est toujours déjà en acte, investie dans le 
-maintien de l'unité de l'être et constitutive de cette unité, et que le corps pâtit de ce qui s'oppose 
-à cet effort et menace son unité. 
- 
- 
-L'énaction 
- 
-Une conception de la connaissance plus attentive aux conditions de possibilité d'«un 
-monde» implique une réflexion épistémologique qui tente de concevoir la relation d'interaction 
-entre un système et le milieu dans lequel il évolue, et par laquelle émergent des comportements 
-et sont constitués des objets. Pour comprendre la relation d'interaction, il faut préciser la nature 
-du système qui la provoque, et le travail de P. Ricoeur est sous-tendu par la conviction que la 
-caractérisation du comportement ne peut pas se faire sans penser l'identité de l'agent de l'action. 
-L'identité de l'agent ne désigne pas la détermination d'un sujet qui découvre le monde; 
-un tel sujet, P. Ricoeur le souligne, est l'un des objets du monde 'à venir'. L'identité de agent 
-désigne ici le «soi», ce qui antérieur à toute détermination, une condition de possibilité de 
-l'ensemble des objets qui formeront pour l'agent, en tant qu'être situé quelque part, un monde, 
-une condition de possibilité de la connaissance. 
-La théorie cognitive développée par F.J. Varela se distingue des interprétations 
-connexionnistes par sa capacité à intégrer ces considérations sur le soi, en tant qu'être-qui agit 
-et être-qui-connaît. C'est parce que la perspective épistémologique adoptée « se préoccupe 
-spécialement de faire prédominer le concept de l'action sur celui de la représentation » qu'elle 
-a été désignée par le terme d'énaction. Un usage représentationniste des systèmes 
-connexionnistes essaie de décrire la façon dont sont reconnues des formes situées dans 
-l'environnement du système. La théorie énactive abandonne le présupposé d'un environnement 
-prédéfini; le point de vue adopté est celui d'un système formant une unité qui interagit avec un 
-environnement dont la détermination, la mise en forme, est le produit de processus essentiels 
-au maintien de l'organisation constitutive de cette unité. Ces processus seront qualifiés de 
-cognitifs par référence à l'émergence de formes incorporées résultant de l'interaction, et non par 
-référence à une capacité de reproduction d'un donné indépendant. Le concept d'organisation 
-prend ici la place de l’invariant relationnel pointé par P. Ricoeur pour désigner l'existence d'une 
-unité. Le fait primitif que constitue la puissance d'agir investie dans le maintien de cette 
-organisation, puissance entendue, précisait P. Ricoeur, comme productivité et non pas 
-seulement comme potentialité, sera désigné par le concept d'autonomie. 
- 
-Un système autonome est caractérisé par l'existence d'une dynamique constitutive d'une 
-relation d'interaction invariante entre différents éléments participant de la réalisation d'une 
-unité. Mais un système autonome n'est pas un système isolé, c'est au contraire un système qui 
-est nécessairement couplé au milieu dans lequel il se trouve et qui 's'efforce' de maintenir son 
-organisation malgré les perturbations occasionnées par la relation qu'il entretient avec son 
-environnement. 
-Tant que le connexionnisme présente les configurations exhibées par le réseau, c'est-à-
-dire les formes qui constitueront le contenu de la connaissance, comme des formes qui 
-émergent de la dynamique du réseau en tant que solutions satisfaisant une exigence de 
-cohérence interne, il n'est pas incompatible avec une théorie énactive. Par contre, c'est un 
-gouffre qui s'installe au sujet de l'interprétation de ces formes émergentes ou des perturbations 
-qui forcent le système à changer de mode d'organisation. On peut bien considérer que, de 
-même que l'on apprend à un réseau à reconnaître certaines formes particulière, I'évolution est 
-un apprentissage par lequel un système cognitif a appris à reconnaître des formes déterminées 
-en raison de l'avantage absolu que cela représente pour le maintien d'une espèce. Et considérer 
-que les perturbations sont porteuses d'informations déterminées sur l'environnement et que les 
-configurations de niveau supérieur représentent ces informations. Mais c'est un point de vue 
-aveugle aux conditions inhérentes au corps propre. 
-La position résolument non représentationniste qu'incarne la théorie énactive rejette 
-l'idée que l'environnement contient des informations et que l'évolution s'apparente à un procès 
-d'instruction. Que le corps propre, le soi, doivent être pensés comme des conditions de 
-possibilité de la connaissance, en tant qu'ils désignent un lieu d'«ancrage», position non 
-substituable à partir de laquelle le monde prend forme, cela veut dire que ce que l'on appelle 
-‘environnement’ du système cognitif doit être pensé seulement comme une source de 
-perturbations pour la cohérence interne du système : « [N]ous ne pouvons pas sortir du 
-domaine spécifié par notre corps et notre système nerveux […] nous ne pouvons pas remonter, 
-d’une manière unique les traces d’une expérience donnée jusqu’à son commencement. » 
-(Varela et al., 1991) 
- 
- 
-A-3 Sur le débat entre réductionnistes et éliminativistes 
- 
-A-3-1 Le cadre du débat 
- 
-En quels termes et faisant référence à quoi doit s’écrire une psychologie scientifique ? 
-Quelles sortes de descriptions doit-elle employer dans ses explications ? Le débat entre 
-réductionniste et éliminativisme qui surgit lorsqu’il s’agit de répondre à ce genre de questions 
-est résumé de manière claire et synthétique par C.MacDonald (1995, pp.293-310). Le 
-discussion se pose sur fond d’un schéma initialement proposé par D. Marr dans le cadre d’une 
-théorie de la perception visuelle. Appliquée à une théorie de la cognition, ce schéma consiste à 
-admettre trois différents niveaux de l’explication des processus cognitifs. Le niveau le plus 
-abstrait est le niveau intentionnel, celui de la description psychologique; le niveau le plus 
-concret est le niveau matériel, physique, celui de la description neuronale; le niveau 
-intermédiaire entre les deux précédents est le niveau algorithmique, celui de la description de 
-l’architecture fonctionnelle générant le niveau intentionnel et implémentée au niveau matériel. 
-La source du conflit concerne la compatibilité entre les niveaux intentionnel et 
-algorithmique125 : est-ce que les caractéristiques qui sont celles des états mentaux auxquels fait 
-référence la psychologie populaire sont compatibles avec les caractéristiques des états qui sont 
-impliqués par la description algorithmique ? La position réductionniste suppose que ces 
-caractéristiques sont compatibles, et que, pour prendre Fodor à titre d’exemple,  les états 
-intentionnels doivent être réduits à des états fonctionnels: « If aboutness is real, it must be 
-something else126 » et peuvent l’être : « [T]he full-blown Representational Theory of Mind 
-purports to explain how there could be states that the semantical and causal properties that 
-propositional attitudes are ccommonsensically supposed to have. » (Fodor, 1994, p.11) La 
-théorie de l’esprit que propose Fodor vise à expliquer comment il pourrait y avoir des états 
-possédant les caractéristiques qui sont celles attribuées aux attitudes propositionnelle, plus 
-généralement aux états mentaux, et donc à montrer la compatibilité entre la description 
-intentionnelle donnée par la psychologie populaire et la description cognitive du niveau 
-algorithmique. La position éliminativisme découle du dénie de cette compatibilité. Si la 
-description algorithmique, disons par exemple si un certain modèle connexionniste est 
-incompatible avec la description psychologique, et si ce modèle mérite d’être conservé, alors il 
-faut admettre que ce à quoi fait référence la description psychologique n’existe pas, que ce 
-genre de description est sans objet. L’idée que le connexionnisme, ou certaines formes de 
-systèmes connexionnistes, pourraient servir d’argument pour une position éliminativiste, est 
-défendue, par exemple, par W. Ramsey, S. Stich and J. Garon127 : « If these models 
-[connectionist models of a certain sort] turn out to offer the best accounts of human belief and 
-memory, we will be confronting an ontologically radical theory change – the sort of theory 
-change that will sustain the conclusion that propositional attitude, like caloric and phlogiston, 
-do not exist. » Il est intéressant de remarquer que, tandis que Fodor part du fait de la 
-description intentionnelle, pour se diriger vers une théorie du niveau algorithmique susceptible 
-d’en rendre compte, Stich & Garon partent des modèles connexionnistes pour évaluer la 
-plausibilité de la description intentionnelle.  
- 
-L’éliminativisme 
- 
-L’éliminativisme, en général, consiste à soutenir que certaines entités, propriétés ou 
-processus postulés par une certaine description de certains événements n’existent pas et que ces 
-descriptions qui y font référence doivent être remplacées par d’autres dans lesquelles les 
-entités, propriétés ou processus en question ne jouent plus aucun rôle. Autant dire que 
-l’éliminativisme ‘en général’ n’existe pas ; il n’y a de position éliminativiste que vis-à-vis 
-d’une théorie et d’une description particulière, relative à certains événements et faisant 
-certaines références. Mais ce qui est néanmoins vrai en général de toute position éliminativiste 
-est que la théorie ou la description qui doit être éliminée et la théorie ou la description qui doit 
-la remplacer doivent pouvoir être supposées  porter sur les mêmes événements. Ce qui a permis 
-que la théorie faisant référence au phlogistique ait été éliminée au profit d’une théorie faisant 
-référence à l’oxygène, c’est en premier lieu qu’elles avaient la même visée explicative, elles 
-s’adressaient au même phénomène : un objet en train de brûler. Ceci étant posé, il faut être en 
-mesure de fournir de bonnes raisons pour penser que la seconde théorie est meilleure que la 
-première. Enfin, si ces théories sont incompatibles, si l’existence de ce à quoi fait référence la 
-première théorie est incompatible avec l’existence de ce à quoi fait référence la seconde, il est 
-peut être justifié de militer en faveur de l’élimination de la première.  
-La deuxième étape est un pas difficile à franchir car juger de la valeur relative de deux 
-théories suppose que l’on dispose d’un ensemble de critères qui puissent être reconnus comme 
-pertinents et sur la base desquels il est possible de procéder à une évaluation comparée. Mais 
-quels sont les critères d’évaluation d’une théorie dépend, de façon essentielle de ce que l’on 
-attend d’une théorie ; ou pour le dire dans les termes de Feyerabend128, ‘l’objectivité n’est pas 
-objective’. La troisième condition permet de comprendre la différence entre les changements 
-de théorie qui sont ‘ontologiquement conservatifs’, moyennant une identification ou une 
-réduction, par exemple de la température à l’énergie cinétique moyenne, et ceux qui sont 
-‘radicaux’, c'est-à-dire qui ne sont pas ontologiquement conservatifs, comme lors de 
-l’élimination du phlogistique. 
-Lorsqu’il s’agit de défendre une position éliminativiste vis-à-vis de la psychologie 
-populaire, la première condition demande que l’on précise, en premier lieu, ce que l’on entend 
-par là. W. Ramsey, S. Stich and J. Garon, de même d’ailleurs que Fodor (1987), supposent que 
-la psychologie du sens commun peut être considérée comme une théorie et que les croyances, 
-les désirs, les attitudes propositionnelles, en général, sont les entités dont cette théorie postulent 
-l’existence. Nous avons donc une théorie, qui traite des phénomènes psychologiques, identifiés 
-notamment à des attitudes propositionnelles, en termes de concepts mentaux. Or les attitudes 
-propositionnelles sont dotées de trois caractéristiques que ne possèdent pas les états, les entités, 
-connexionnistes qui servent à expliquer les mêmes phénomènes. Ces caractéristiques sont : 
-d’avoir un contenu sémantique, c'est-à-dire d’avoir des conditions de satisfaction, d’être 
-fonctionnellement discrète, c'est-à-dire de pouvoir être acquise ou perdu individuellement, 
-d’avoir une efficacité causale c'est-à-dire qu’une attitude propositionnelle peut en causer une 
-autre ou causer un comportement.  
-Certains modèles connexionnistes ne peuvent pas exhiber ces propriétés : ce sont des 
-modèles qui représentent l’information de façon, non pas localisée, mais largement (et 
-vaguement) distribuée, et qui possédent, entre les couches d’entrée et de sortie, des unités 
-intermédiaires, des unités cachées, ne représentant rien. Dans de tels systèmes, il n’est pas 
-possible d’identifier un état particulier du système se prêtant à une interprétation sémantique. 
-Du fait que les représentations sont distribuées à l’ensemble du réseau, il n’est pas possible 
-d’isoler un état pour l’identifier comme une croyance particulière qui se serait ajoutée ou 
-retirée au système ; une altération du réseau peut avoir des conséquences en même temps sur 
-un ensemble de représentation ; ceci étant, puisqu’aucun état ou élément du réseau ne 
-représente une proposition particulière, il n’est pas possible d’attribuer un pouvoir causal à un 
-état particulier.  
-
-
- A-3-2 L’alternative ou la Récurrence d’une impasse  
- 
-Analogies entre trois alternatives 
- 
-Le tableau qui est donné de la psychologie populaire, autour de l’idée que les attitudes 
-propositionnelles sont fonctionnellement discrètes ou dotée d’une efficacité causale, semble 
-destiné à montrer que, ne pas être éliminativiste, c’est nécessairement admettre la véracité des 
-traits qui sont mis en évidence et devoir opter pour le réductionisme. Qu’une attitude 
-propositionnelle peut être acquise ou perdue indépendamment de ce qu’il advient au système 
-de croyances, désirs, ect. dont elle font partie est contestée par des conceptions holistes des 
-significations défendues par Davidson129 ou Sellars, qui ne sont pas éliminativistes, ni 
-réductionistes. Que les attitudes propositionnelles ont une efficacité causale sera discuté 
-ultérieurement dans un cadre non éliminativiste, ni réductioniste. Je ne veux pas m’étendre 
-davantage sur ces deux points, ni faire un exposé des arguments que s’opposent les 
-réductionnistes et les éliminativistes. Je voudrais plutôt essayer d’ouvrir une brêche en 
-montrant dans un premier temps que, et en quoi, ce débat est analogue à celui évoqué 
-précédemment entre les réalistes et les antiréalistes, et à celui qui sera analysé dans le prochain 
-chapitre entre les thèses nativistes et empiristes de l’origine des capacités  cognitives chez 
-l’enfant. Puis suggérer une échappée. 
-Le débat entre réaliste et antiréalistes oppose, en résumé, ceux qui pensent que les 
-théories scientifiques font, ou sont susceptibles de faire référence à la réalité, et ceux qui 
-pensent qu’elles ne font pas référence à la réalité et que, de toute façon, cette question n’a 
-aucune importance pour le développement de la science. Le débat entre les nativistes et les 
-empiristes opposera ceux qui pensent que les enfants possèdent, de façon innée, certains 
-concepts relatifs à certaines caractéristiques du monde, et ceux qui pensent que ces concepts 
-sont nécessairement acquis au cours de l’expérience de la réalité. Le débat entre réductionnistes 
-et éliminativistes opposent ceux qui pensent que la psychologie populaire fait référence à des 
-états qui existent et ceux qui pensent que de tels états n’existent pas. Notons que les 
-antiréalistes ne prétendent pas que les théories qui font référence à des entités qui n’existent 
-pas devraient être éliminées. La différence est que les descriptions de la psychologie populaire 
-sont incompatibles avec les descriptions d’une théorie, qui est, elle, scientifique. Mais de quelle 
-sorte d’incompatibilité s’agit-il ? Ne peut-on pas être un scientifique connexionniste et trouver 
-                                                 
                                                  
                                                  
                                                  
   
                                                  
-121 P. Ricoeur, Soi-même comme un autre, Paris: Ed. du Seuil, 1990, p.78. 
-122 I. Stengers, Cosmopolitiques. Tome 6. La vie et l’artifice : visages de l’émergence. Paris : La 
-découverte, 1997, p.80-86. 
-123 D. Davidson, Essays on actions and events, Oxford : Clarendon Press, 1980. 
-124 « ‘l’intention dans laquelle’ étant tenue pour une simple extension discursive de l’adverbe 
-‘intentionnellement’ » p.94. 
-125 La question de savoir à quels niveaux se situe un modèle connexionniste, relativement à un modèle 
-symboliste est en sujette à contreverse ; ici, le modèle connexionniste est tenu pour être une alternative au modèle 
-symboliste. Mais certains l’interprétent comme un modèle d’implémentation, de réalisation neuronale,  qui 
-pourrait servir aussi bien une interprétation symboliste que connexionniste du niveau psychologique. 
-126 J. Fodor, Psychosemantic, Cambridge, MA : MIT Press, 1987, p.97. 
-127 W. Ramsey, S. Stich and J. Garon, Connectionism, Eliminativism and the future of Folk Psychology. 
-In C.Mac Donald & G. MacDonald, 1995, pp.311-338. 
-128 P. Feyerabend, Adieu la Raison, Paris : Ed. du Seuil, 1989. 
-129 D. Davidson, Truth and Meaning 
- 
-
-
+104 W. McCulloch and W. Pitts, A logical calculus of the ideas immanent in nervous activity. Bulletin of 
+Mathematical Biophysics, 5, 1943, pp.115-133 [Repris dans Anderson and Rosenfeld, 1998] 
+105 P. McLeod, K. Plunket and E. Rolls (ed.), Introduction to connectionist Modelling of Cognitive 
+Processes, Oxford: Oxford University Press, 1998, pp.314-318.  
+106 W. Betchel and A. Abrahamsen, Connectionnism and the mind, Oxford : Blackwell, 1991. 
+107 J.A. Fodor and Z.W.Pylyshyn, Connectionism and cognitive architecture: A critical analysis. 
+Cognition, 28, 1988, 3-71.   
+108 W. Betchel, Representations : From Neural Systems to Cognitive Systems. In Betchel et al. (eds), 
+2001, pp. 332-348. 
+109 P. Smolensky, IA connexionniste, IA symbolique et cerveau. In Introduction aux sciences cognitives, 
+sous la dir. de D. Andler, Paris : Gallimard, 1992, p.83. 
+110 R. Cummins & G. Schwartz, 1992, p.386. 
+111 P. Smolensky, On the Proper Treatment of Consciousness, Behavioral and Brain Sciences, 11, 1988. 
+Repris dans C. McDonald & G.McDonald, (1995), pp.28-89. 
+112 J.A.S.Kelso, Dynamic Patterns: The Self-Organization of Brain and Behavior, MIT Press, 1995; 
+R.F.Port & T. van Gelder (eds), Mind as Motion:Exploration in the Dynamics of Cognition, MIT Press, 1995. 
+113 R. Port, F. Cummins & J. McAuley, Naive Time, Temporal Patterns, and Human Audition. In 
+R.F.Port & T. van Gelder (eds), 1995, p.349. 
+114 F.Varela, Autonomie et connaissance, Essai sur le vivant, Paris : Editions du Seuil, 1989, p.11. 

@@ -1,89 +1,4 @@
 
-Unless we are careful, we can easily take for granted that the process of teaching a child 
-to use a language is that of teaching it to discriminate elements within a logical space of 
-particulars, universals, facts, ect., of which it is already undiscriminatingly aware, and to 
-associate these discriminated elements with verbal symbols. (Sellars, 1956, p.65)  
- 
-  Il n’est pas inconcevable, même s’il n’y a pas d’ « awareness of redness » précédant 
-l’usage de « red », que l’on puisse parler d’une sensation de rouge antérieure à cet usage, mais  
-cela ne contredit pas l’idée que la ‘sensation’ n’est pas épistémique et ne conduit pas à penser 
-que c’est la sensation de rouge plutôt que l’objet rouge qui est la dénotation de ‘rouge’. Il sera 
-possible de parler d’une sensation de rouge antérieure à l’usage de ‘rouge’ pour désigner une 
-expérience dont ceux qui possèdent le langage dont le sujet d’expérience fait l’acquisition, 
-ceux-là, diront que c’est ‘une sensation de rouge’. L’enfant qui ne possède pas le langage peut, 
-dans certaines circonstances, être dit avoir de la peine, et l’acquisition du langage n’est pas 
-censé modifié pas ce qu’il ressent. Mais s’il est dit savoir ce qu’il ressent, c’est parce que lui 
-est attribuée une capacité latente de produire plus tard, à propos de cela, un témoignage 
-spontané, direct, « to make noninferential reports about » qui témoigne de la maîtrise du 
-concept ‘avoir de la peine’. La suffocation, la chaleur, la douleur, sont dites être connues pré-
-linguistiquement par le seul fait d’être éprouvées parce que nous n’avons aucun doute qu’il 
-produira l’expression linguistique directe de ces sensations quand il saura parler. Ce qui est 
-supposé dans cette attribution est rendu visible si l’on imagine, par contraste, que c’est à des 
-situations expérientielles, que nous identifions de manière inférentielle, que l’enfant réagit 
-(Rorty donne comme exemples de telles situations: « a lack of oxygen in the air, the overly 
-rapid motion of molecules, kinky alpha-rythms in his brain »). Dans ce cas, l’enfant ne sera pas 
-dit savoir ce que ces choses sont avant de posséder le vocabulaire qui lui permet de s’y référer 
-de façon jugée pertinente, parce que maintenant cette capacité, qui met en jeu des inférences, 
-ne lui est plus attribuée à l’avance.  
-Ce qui apparaît là, aux antipodes d’une quelconque forme du Mythe du Donné, c’est 
-que la connaissance de ce que c’est que d’éprouver quelque chose est attribuée à un être en 
-raison de son appartenance potentielle à cette communauté : la communauté est la source de 
-l’autorité épistémologique. Nous attribuons d’autant plus facilement la connaissance de ce que 
-c’est d’éprouver un sentiment aux êtres que nous les imaginons plus facilement comme des 
-partenaires ‘de conversation’, ou que nous les reconnaissons comme nous ressemblant, c'est-à-
-dire, plus aux enfants qu’aux animaux, plus à un chien qu’à un insecte : « This is to be 
-explained on the basis of that sort of community feeling which unites us with anything 
-humanoid. To be humanoid is to have a human face, and the most important part of that face is 
-a mouth which we can imagine uttering sentences in synchrony with appropriate expressions of 
-the face as a whole ». (Rorty, 1979, p.189) 
-Une sensation immédiate n’est pas épistémique et n’est pas de l’ordre d’une croyance 
-car il n’y a pas pour Sellars de croyance non-inférentielle dans le sens où, en quelque sorte, 
-celle-ci se suffirait à elle-même, serait une croyance par elle-même, comme une sensation peut 
-être une sensation par elle-même. Quelqu’un peut bien sûr produire une affirmation en réponse 
-à certaines conditions d’expérience et qui ne soit pas inférée d’une autre croyance. Mais il ne 
-peut pas avoir une croyance, ne peut pas être dit avoir une croyance, sans être capable de la 
-relier, de saisir les connections d’inférence qui la relie à d’autres croyances. Et nous rejoignons 
-ici ce qui a été dit précédemment à propos de la disposition à endosser une assertion. 
-Comprendre un énoncé, écrit Brandom (p.153), saisir son contenu propositionnel, c’est le 
-placer dans l’espace des raisons, être capable de l’insérer dans un jeu de questions et de 
-réponses, le situer vis-à-vis d’autres contenus, soit, par exemple, qu’ils peuvent être dérivés de 
-lui, soit qu’ils soient incompatibles. Cela vaut pour les énoncés observationnels aussi bien que 
-pour les autres. Une croyance, en général, appartient à un réseau de croyances et les concepts, 
-observationnels ou pas, ne sont pas des entités que l’on peut acquérir individuellement. Savoir 
-que X est rouge, ce n’est pas seulement prononcer ‘X est rouge’ en présence d’un X rouge, 
-c’est aussi être capable d’utiliser ‘X est rouge’ comme prémisses d’inférences conduisant à 
-d’autres croyances. Nous n’attribuons pas le savoir de ce qu’il dit à la seule condition qu’il soit 
-justifié à le dire au moment où il le dit. Il faut encore qu’il soit capable de s’engager dans une 
-pratique de justification : « The essential point is that in characterizing an episode or a state as 
-that of knowing, we are not giving an empirical description of that episode or state ; we are 
-placing it in the logical space of reasons, of justifying and being able to justify what one 
-says. » (Sellars, §37, p.76) Attribuer un savoir à S, ce n’est pas observer un certain état de S, 
-qui finalement pourrait s’être produit à l’insu de S elle-même, qui pourrait lui être ‘donné’. 
-Pour que S soit dite savoir que X est rouge, elle doit être capable d’indiquer les éléments qui 
-l’autorisent à dire cela et qui rendent cet énoncé fiable ; S doit savoir qu’elle sait, doit savoir en 
-quoi et pourquoi ce qu’elle dit est un savoir. Savoir la réalité, c’est savoir dire la réalité, et 
-savoir dire c’est avoir appris à maîtriser les conditions d’usage d’un réseau de concepts 
-interconnectés, c’est avoir appris à justifier et donc avoir appris ce qui vaut comme 
-justification.  
-S est dite connaître un élément de réalité si elle est capable de produire un énoncé 
-reconnu comme vrai, et cela demande qu’elle soit capable de produire les justifications 
-auxquelles doit être adossée la valeur épistémique de cet énoncé. Quelle est la nature des 
-justifications qui sont recevables dépend du jeu de langage dans lequel S est engagée, du type 
-de connaissance à laquelle elle prétend ; en Science ou en Histoire, la pratique de justification 
-n’est pas la même. Mais dans tous les cas, il faut apprendre à dire, c'est-à-dire à justifier, et 
-apprendre ce qui vaut comme justification. Si la convergence des résultats de mesure que met 
-en avant Salmon n’a pas pour van Fraassen la valeur épistémique que Salmon lui attribue c’est 
-parce qu’ils ne sont pas d’accord sur ce qui vaut comme justification de la valeur épistémique 
-d’un énoncé. L’un des deux a-t-il raison ou moins tort que l’autre ? Pour que cette question là 
-ait une réponse ou un semblant de réponse, ou peut-être simplement un sens, il faudrait que ce 
-soit au philosophe qu’il revienne de statuer sur ce qui vaut comme élément de justification d’un 
-énoncé à être vrai et à parler de la réalité. L’une des idées, peut-être la principale, qui anime ce 
-travail et plus particulièrement les deux parties qui vont suivre, est que le philosophe, pas plus 
-d’ailleurs que le scientifique, au nom duquel il semble s’exprimer parfois, ou qui que se soit, 
-n’a le pouvoir de décréter au nom de quoi nous devrions tenir un énoncé pour vrai ou son 
-contenu comme une connaissance de la réalité. Pour croire cela, il faut oublier que la pratique 
-de justification qui est en jeu est une pratique essentiellement publique.  
- 
 B-3 « But have we lost the world ?78 » 
  
 B-3-1 Le présent de la présence 
@@ -287,6 +202,7 @@ les énoncés de ce langage gagnent leur valeur épistémique au travers d’un 
 justification collective vont rester, quoique reformulées, les idées principales des deux parties 
 qui vont suivre.  
  
+
 B-3-2 Réal-isation de l’expérience 
  
 La deuxième partie de cette thèse pourrait être vue comme une réflexion sur les 
@@ -406,6 +322,7 @@ and the actuality of human experience. To deny the truth of our own experience i
 study of ourselves … is to render the scientific study of ourselves without a subject matter. But 
 to suppose that science cannot contribute to an understanding of our experience may be to 
 abandon, within the modern context, the task of self-understanding. (Varela, 1991, p.13).     
+ 
 Ce n’est peut-être pas le terme ‘résoudre’ qui convient ici pour exprimer la façon dont 
 l’énaction permet de supprimer la tension entre les compte-rendus explicatif et expérientiel. Il 
 ne s’agit pas de réconcilier les deux modes d’approches, de trouver une sorte de langage de 
@@ -438,8 +355,6 @@ discours scientifique qu’il peut constituer un savoir, une connaissance, fût-
 expérience, car la procédure d’objectivation qui guide le travail scientifique n’est rien d’autre 
 qu’un processus de constitution, ou en tout cas une étape essentielle, d’une connaissance de la 
 réalité, en tant qu’objet d’un discours partagé.     
- 
- 
                                                  
                                                  
 78 Titre emprunté à Putnam (1995, p.64) 

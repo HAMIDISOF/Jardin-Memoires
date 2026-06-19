@@ -1,4 +1,37 @@
 
+A-1-2 Les représentations mentales  
+ 
+ 
+ 
+ 
+ Réification fonctionaliste 
+ 
+ 
+ 
+Différentes théories représentationnistes proposent différentes explications de la 
+psychologie de la cognition. Il est exigé, dit-on, qu’elles répondent toutes, plus ou moins, à un 
+même ensemble de contraintes, dont notamment celui de devoir produire une explication dite 
+naturaliste : naturaliste, c'est-à-dire capable d’éviter toute allusion à la première personne dans 
+l’explication de la connaissance en tant que formation de représentations. La contrainte 
+naturaliste demande que les propriétés sémantiques soient traduites en termes non sémantiques. 
+Selon Jerry Fodor, si le mental ne peut pas être naturalisé, en ce sens-là, il sera éliminé des 
+compte-rendus scientifiques de la cognition. Il faut naturaliser le mental pour éviter qu’il soit 
+éliminé car ‘the deepest motivation’ pour l’éliminativisme, ‘the intentional irréalism’, est le 
+soupçon que ‘the intentional can’t be naturalized’ , selon le raisonnement suivant: 
+the argument would be :  
+to be exploited in a respectable theory a concept must be naturalizable (but then the 
+question is: what must be naturalization if it aims to make a concept exploitable in a theory?) 
+so if intentional notions can’t be naturalized, then they can’t be exploited in any 
+respectable scientific theory87. 
+ 
+ 
+La science de la nature ne fait pas place au langage intentionnel : « … sooner or later 
+the physicists will complete the catalogue they’ve been compiling of the ultimate and 
+irreducible properties of things. When they do, the likes of spin, charm, and charge will 
+perhaps appear on the list. But aboutness surely won’t; intentionality simply doesn’t go that 
+deep.» (J.Fodor, 1987, p.97) Ce qui n’est pas sémantique se confond avec ce qui est susceptible 
+de faire partie du catalogue scientifique des éléments fondamentaux de la réalité. Une théorie 
+cognitive est destinée à s’écrire dans un langage physicaliste – idéal d’un langage unique 
 commun à toutes les sciences. Le phénomène de la cognition doit pouvoir être traité de la 
 même façon que les phénomènes non vivants étudiés par les scientifiques ; naturaliser un 
 phénomène, dans cette perspective, consiste à le traiter comme un objet non vivant. La 
@@ -362,101 +395,11 @@ de tout ce qui ressemblerait à une expérience vécue. La question est de savoi
 parle lorsque la description se fait en termes physicalistes, lorsqu’elle ne fait aucune place à un 
 discours en première personne exprimant l’expérience de la connaissance. 
  
-A-1-3 Les représentations neurophysiologiques 
- 
- 
- 
-Naturalisation de l’Esprit 
- 
-Le problème logique qui mine le discours naturaliste apparaît avec encore plus 
-d’évidence dans les tentatives d’expliquer scientifiquement, par des arguments 
-neurophysiologiques, la capacité de représentation. Cette explication est censée tenir sa 
-légitimité, sa force de conviction du fait que les arguments sont scientifiques ; mais la force de 
-l’argument scientifique ne touche que ceux qui sont convaincus de la nature représentationnelle 
-de la connaissance scientifique. L’instrument de la justification de la théorie représentationniste 
-n’a de poids justificatif que pour ceux qui reconnaissent déjà que la connaissance scientifique 
-est une représentation.    
-Si Montaigne avait été plus convaincant, imagine J. Proust96 dans un essai consacré à la 
-naturalisation de la pensée, si au lieu de croire que l'espèce humaine est un cas à part dans le 
-monde des vivants, nous avions adopté la conception continuiste de la pensée, I'idée que l'on se 
-fait de l'homme dans la nature ne serait sans doute pas la même, et le développement de la 
-science aurait peut-être été différent. L'option n'est plus à prendre, mais le débat n'est pourtant 
-pas clos et la question lui semble devoir être reposée « à la lumière des connaissances 
-acquises ». Notons, à cette étape déjà, qu’elles furent acquises dans une perspective cartésienne 
-explicative, c'est-à-dire représentationniste… L’essai se propose d'établir « une nouvelle 
-définition de ce qu'on pourrait appeler l'esprit minimal », c'est-à-dire de formuler les 
-conditions premières, nécessaires et suffisantes, de l'existence d'une pensée, en terme de 
-capacité représentationnelle, et non plus en terme de capacité langagière comme ce fut le cas au 
-XVllè siècle. Il se situe dans un projet de naturalisation de l'intentionnalité, dont l'ambition est 
-de montrer que les phénomènes de l'esprit sont susceptibles de recevoir une explication causale 
-du même type que celle dont font l'objet les phénomènes physiques. 
-La progression de l'argumentation peut être articulée autour trois moments principaux. 
-D'abord, l'auteur présente et défend l'idée d'un « réalisme représentationnel »: la représentation 
-est un état mental qui caractérise l'existence d'une pensée et cet état mental est déterminable 
-objectivement. Ensuite, l'existence de représentations se trouve associée au comportement 
-orienté, caractérisé par une capacité 'évidente' à utiliser d'une manière particulière une 
-information présente dans l'environnement, et l'auteur attribue à cette capacité une origine 
-phylogénétique, plutôt qu'ontogénétique. Enfin, sont explicités, d'une part, les critères 
-d'existence d'une relation représentationnelle entre un système et son environnement en terme 
-d'appareil perceptif et neuronal, et d'autre part, les caractéristiques biologiques les plus simples 
-qui rendent possible l'émergence de ce type de relation. Si cette conception de « l'esprit » est 
-évidemment sujette à contestation, c’est que la notion de représentation pose problème à un 
-niveau antérieur à celui des conditions de possibilité de la formation de représentations : celui 
-des conditions de l'usage même de la notion. Cet usage relève d’un a priori, souvent tacite, qui 
-sera tout simplement rejetté par les approches qui se disent non représentationnistes.  
-L'exposé commence par rappeler la distinction soulignée par Fodor entre, d'une part, la 
-capacité calculatoire, permettant de stocker et combiner des informations, et d'autre part, la 
-capacité de former des représentations qui fassent référence au monde extérieur et ayant valeur 
-causale dans la vie de l'organisme. En rapportant d'emblée le 'penser' d'un organisme à 
-l'existence d'une chose extérieure, c'est-à-dire déterminée, l'auteur affirme son adhésion 
-immédiate à un réalisme représentationnel tout en relevant l'objection des ‘interprétativistes’, 
-héritiers de la conception de Quine, affirmant qu’un ensemble de comportements peut être 
-interprété par des « systèmes d'hypothèses analytiques » incompatibles entre eux. Mais, la 
-question de la capacité représentationnelle se pose ici, répond J. Proust, en préalable à celle de 
-l'attribution et de la spécification d'attitudes propositionnelles, et pris en général, le problème 
-de l'intentionnalité est de savoir « quels types de représentations jouent un rôle dans le 
-contrôle du comportement d'un organisme. » (p.79) 
-L'état mental est caractérisé au moyen d'une théorie fonctionnaliste considérant 
-seulement, d'une part, les observations de l'activation d'une configuration neuronale par des 
-entrées perceptives déterminées, d'autre part, les réactions motrices consécutives à cette 
-activation. Ce qui signifie notamment que l'on peut renoncer à classer un état mental comme 
-‘croyance’ ou comme ‘désir’, que la représentation est considérée en tant qu'état mental isolé, 
-et encore, que la psychologie expérimentale fonde son objectivité sur sa capacité à se passer du 
-recours à la psychologie ordinaire habituellement mise en oeuvre dans les interprétations. 
-L'étape suivante consiste alors à élucider les conditions nécessaires et suffisantes de la 
-constitution d'une fonction cognitive représentationnelle, assimilée à l'émergence de l'«esprit», 
-en discernant sur le chemin de l'évolution naturelle le passage entre le comportement 
-automatique, déterminé seulement par des circonstances subies par le système vivant, et le 
-comportement orienté, qui s'inscrit dans une démarche volontaire impliquant une 'conception 
-du monde'. Tout comportement orienté vers un but ne s'appuie pas sur la représentation de ce 
-but: ne seront finalement retenus par l’auteur que ceux dont le développement de l'action est 
-corrigé en fonction de l'évolution des caractéristiques de l'événement cible, et cela, sur la base 
-de l'information spatio-temporelle contenue dans les signaux sensoriels. 
-La capacité pour un organisme de former des représentations exigera donc, d'une part, 
-que des états internes puissent être dits porteurs d'une information objective, c'est-à-dire, 
-corrélée non seulement à l'état des récepteurs mais à l'état du monde, et d'autre part, que cette 
-information joue un rôle causal dans le comportement, qu'elle puisse être stockée et puisse 
-influencer divers types de comportements. Ce qui est résumé en disant « que la représentation 
-est une indication dont la fonction est d'indiquer ». La question de l'origine des représentations 
-est alors de savoir comment un indicateur quelconque acquiert un rôle fonctionnel dans la vie 
-comportementale d'un organisme. Selon les théories de l'apprentissage, en référence par 
-exemple à Dretske97, c'est au cours d'un apprentissage que des indicateurs reçoivent une 
-fonction et qu'ainsi sont formées des représentations. Mais il a été montré, objecte J. Proust, 
-que l'apprentissage met en jeu « une architecture cognitive permettant d'intégrer des 
-informations diverses et d'appliquer des principes de décision » (p.183) et ne peut expliquer 
-l'apparition d'une fonction représentationnelle puisqu'il repose lui-même sur des capacités 
-cognitives et représentationnelles. Il faut donc recourir à un schéma d'explication 
-phylogénétique: « la capacité représentationnelle est une fonction de l'esprit sélectionnée en 
-raison des conséquences qu'elle a eues pour les organismes capables de former des 
-représentations » (p.213).  
- 
-Dès lors, l'émergence de la capacité représentationnelle ne s'explique plus en terme 
-comportemental mais en terme de disposition physiologique. Un indicateur peut être qualifié 
-de représentationnel s'il n'est pas seulement l'expression d'un signal de nature proximale, mais 
-relié à quelque chose d'extérieur au système et défini indépendamment de lui, c'est-à-dire à un 
                                                  
  
                                                  
+87 S.Stich, ‘What is a theory of mental representation ?’, Mental Representation, a reader, Blackwell 
+Publishers, 1994, p.361. 
 88 V. Descombes, La Denrée Mentale, Paris : Les Ed. de Minuit, 1995, p.233. 
 89 Fodor, ‘Fodor’s guide…’, Mental Representation, a reader, Blackwell Publishers, 1994, p.20. 
 90 J. Fodor, Representations : Philosophical Essays on the Foundations of Cognitive Science, Cambridge, 
@@ -474,6 +417,4 @@ un peu plus loin
 1974. Reprinted in Chalmers (ed.), 2002, pp.126-135. 
 95 B. de Gelder, Granny, the naked Emperor and the Second Cognitive Revolution. In S. Fuller (ed.), 
 1989, pp.97-117.  
-96 Proust, Comment l'esprit vient aux bêtes. Essai sur la représentation, Gallimard, (1997), p.79. 
-97 F. Dretske, Explaining behaviour: Reasons in a world of causes. Cambridge, MA: MIT Press, 1988. 
 
