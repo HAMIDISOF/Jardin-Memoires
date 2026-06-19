@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – Introduction</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #557760;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content blockquote {
+            margin: 0.8rem 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid #8aa87a;
+            font-style: italic;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+        sup {
+            font-size: 0.8rem;
+            color: #2c6e2c;
+        }
+        .reference-link {
+            text-decoration: none;
+            color: #e59e4e;
+            font-weight: bold;
+        }
+        .ref-list p {
+            margin-bottom: 0.3rem;
+        }
+        .sources {
+            background: #e2e8ce;
+            border-left: 6px solid #8aa87a;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>La réalité sans représentation, la théorie de l’énaction et sa légitimité épistémologique</h1>
+    <div class="sub">Isabelle Peschard – Introduction</div>
+
+    <!-- Épigraphe (Wittgenstein) -->
+    <div class="capsule">
+        <div class="capsule-title">📖 Épigraphe</div>
+        <div class="capsule-content">
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                Il ne faut pas se demander ce que sont des représentations ou ce qui se passe quand on se représente quelque chose, mais comment on se sert du mot représentation. Ce qui ne signifie pas que je veuille parler exclusivement de mots. Car autant il s’agit du mot ‘représentation’ dans la question posée, autant il s’agit d’elle dans la question relative à l’essence de la représentation. Et je dis seulement que cette question ne saurait s’expliquer par un geste démonstratif – ni pour celui qui se représente quelque chose, ni pour autrui ; pas plus que par la description d’un processus quelconque. La première question exige également une explication du mot; mais elle nous porte à attendre une fausse manière de répondre.
+            </div>
+            <p style="text-align: right; font-style: italic; margin-top: 0.5rem;">Ludwig Wittgenstein, <em>Investigations Philosophiques</em>, §370.</p>
+        </div>
+    </div>
+
+    <!-- 1. Le théâtre de l’adaptation -->
+    <div class="capsule">
+        <div class="capsule-title">🎭 1. Le théâtre de l’adaptation : Mise en question d’une mise en scène</div>
+        <div class="capsule-content">
+            <p>Le phénomène de l’évolution est en fait un phénomène d’auto‑organisation, ce n’est pas un phénomène d’adaptation.<sup><a href="#ref1" class="reference-link" id="r1">[1]</a></sup> L’évolution n’est pas un phénomène d’adaptation. Il sera assez peu question dans le travail qui va être présenté du phénomène de l’évolution et de l’idée que ce phénomène serait un processus d’adaptation. Il va être question de réalité et de représentation. Mais l’image attachée à la notion d’adaptation montre très bien l’objet de la critique qui va être adressée à la notion de représentation. L’adaptation est adaptation à quelque chose ; et ce quelque chose est doté de déterminations qui sont logiquement antérieures à ce qui va s’y adapter. Par ‘logiquement’ je veux dire ceci : ce ‘quelque chose’ doté de déterminations est posé comme une toile de fond de l’image, et ce qui apparaît sur cette toile de fond est indépendant de ce qui se passera ensuite. La toile de fond est définie a priori, indépendamment des êtres qui viendront l’habiter et des événements qui viendront s’y dérouler et indépendamment même du simple fait que des êtres viennent un jour l’habiter. L’adaptation est adaptation de quelque chose. Ce quelque chose est logiquement postérieur à la toile de fond car il est ce qui s’adapte à, et ce à quoi il s’adapte est la toile de fond. Mais il est néanmoins lui aussi doté de déterminations, et qui sont indépendantes de celles qui définissent la toile de fond. La nature joue aux dès, et dépose un être dans un décor. L’adaptation est adaptation de quelque chose, un être vivant, à quelque chose, le monde : c’est une relation. Troisième moment de l’image, après la toile de fond, et l’être posé devant, une relation s’établit entre l’être et le monde. Penser l’évolution, c'est-à-dire la succession dans le temps de différentes espèces, comme un phénomène d’adaptation, c’est penser l’adaptation comme un processus, un processus relationnel. Et dans cette image de l’adaptation comme processus, il y a presque inévitablement l’idée d’un progrès :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Les habitants de chaque période successive de l’histoire du monde ont battu leurs prédécesseurs dans la compétition pour la vie, et sont, à chaque fois, plus élevé sur l’échelle naturelle ; et cela pourrait rendre compte de ce sentiment flou, ressenti par de nombreux paléontologistes, que l’organisation prise dans son ensemble a progressé. »
+            </div>
+            <p>L’adaptation comme processus est censée expliquer la succession des espèces, c'est-à-dire expliquer et justifier la complexification des espèces : étant donné la toile de fond et ses déterminations, un certain lancé fait apparaître une combinaison qui est retenue par la sélection parce qu’elle est plus adaptée que celle qui existait déjà ; la nouvelle va s’étendre aux dépens de l’ancienne qui va s’éteindre. Habiter la toile de fond est une source constante de difficultés, de problèmes à résoudre : le processus d’adaptation est un processus d’apparition d’instruments de résolution de ces problèmes de plus en plus performants. La notion d’adaptation confère à la diversité des espèces une organisation progressive répondant à la contrainte transcendante que constitue la pré‑définition du décor naturel sur fond duquel apparaissent les différentes formes d’êtres vivants: l’existence de problèmes déterminés est un opérateur de sélection qui privilégie nécessairement les instruments susceptibles de produire une meilleure résolution de ces problèmes. Au début du XXème siècle, sous l’effet du développement des théories génétiques, cette vision de l’histoire du vivant a pris les traits d’un modèle néodarwiniste fusionnant évolution et génétique dans l’idée d’une pression sélective exercée par l’environnement au niveau de la variété génétique d’une population et se traduisant par l’optimisation des capacités de survie et de reproduction. Cette image, qui réserve à celui qui la compose une place toute particulière, est aujourd’hui largement remise en question :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Darwin nous percevait comme une branche sur un arbre, mais comme le plus haut rameau représentant une direction prédictible de croissance. De nombreux paléontologistes, moi compris, considèrent maintenant Homo Sapiens comme une petite brindille, imprédictible, sur l’arbre richement ramifié de la vie – un accident heureux du dernier moment géologique, qui ne se reproduirait probablement pas si l’arbre s’élevait à nouveau depuis la graine.<sup><a href="#ref2" class="reference-link" id="r2">[2]</a></sup> »
+            </div>
+            <p>Les critiques convergent pour dénoncer la structure tripartite de l’image de l’adaptation, à commencer par la conception de l’être vivant qu’elle met en scène, objet pré‑défini « découpé en une somme de caractères discrets exprimant une somme de déterminants également discrets », objet dont les déterminations indépendantes sont vues, dans la perspective néodarwiniste, comme le résultat de l’exécution d’un programme génétique:</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Puisque l’ADN porte les gènes qui permettent la synthèse des protéines, lesquelles déterminent les structures cellulaires, qui elles‑mêmes déterminent les organismes, on devrait pouvoir comprendre entièrement ces derniers en décryptant l’information contenue dans les gènes.<sup><a href="#ref3" class="reference-link" id="r3">[3]</a></sup> »
+            </div>
+            <p>On peut formuler à l’encontre de ce réductionnisme génétique qui invoque un génotype comme cause essentielle du phénotype trois objections principales:</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « l’existence d’un gène est postulée à partir de l’observation d’un caractère, à partir de l’observation que nous sommes capables de faire<sup><a href="#ref4" class="reference-link" id="r4">[4]</a></sup> » : par quelle magie y aurait‑il une correspondance entre notre perception subjective sur laquelle repose l’identification des caractères et la définition des gènes ? certains gènes sont associés à des caractères phénotypiques différents (pleiotropy). Comment, dans ce cas, penser en terme général, de façon univoque, leur contribution adaptative :
+            </div>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Comment un gène peut‑il être sélectivement optimisé s’il a de multiple effets, qui n’améliorent pas les capacités de l’organisme de la même façon ni même dans la même direction ?<sup><a href="#ref5" class="reference-link" id="r5">[5]</a></sup> »
+            </div>
+            <p>les effets pleiotropique et les discontinuités dans le changement phénotypique – absence de formes intermédiaires – peuvent être compris comme la marque d’une forte interdépendance génique :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Les gènes sont, de façon évidente, reliés les uns aux autres, et il n’est donc pas réellement possible – même de façon approximative – de traiter un organisme comme une collection de traits ou de caractères. » (Varela & al., 1991, p.188)
+            </div>
+            <p>Une réaction contre le stricte déterminisme de la relation entre génotype et phénotype conduit à introduire un degré de plasticité de l’expression génétique relatif à une interaction entre le milieu environnemental et les facteurs héréditaires, un génome invariable :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « l’influence variable des circonstances dans lesquelles l’individu se développe sera responsable de différences dans l’expression de ce génome. » (Kupiec & Sonigo, 2000, p.64)
+            </div>
+            <p>Cette alternative à un strict déterminisme n’altère cependant pas l’image d’un être possédant un ensemble de gènes déterminés plongé dans un environnement défini a priori par un ensemble de propriétés indépendantes, universelles. Or c’est précisément cette notion de détermination qui fait problème aussi bien pour Varela & al.(1991) que Kupiec & Sonigo (2000). La focalisation sur la capacité de reproduction et l’explication génétique conduit à sauter directement des gènes à un être capable de se reproduire en négligeant la période de développement de cet être. Le changement auquel appellent ces auteurs consiste, au contraire, à prendre en considération le processus temporel de l’ontogenèse en tant que processus dynamique d’interaction et de rétro‑action à l’issue duquel une structure complexe émerge en tant que réalisation d’un organisme unique parmi un ensemble de possibles; et à laisser de côté le schéma abstrait de l’adaptation extrinsèque entre deux ensembles de déterminations indépendants et l’idée d’une évolution résultant d’une pression sélective optimisant les capacités de reproduction. La formation d’un être vivant n’est plus alors considérée comme l’exécution d’un programme déterminé, quand bien même celle‑ci serait modulée par des déterminations environnementales, dont on peut toujours imaginer qu’elles pourraient un jour être intégrées dans l’idée d’un programme plus large englobant le programme génétique et ses interactions avec l’environnement :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Dans cette perspective, l’ontogenèse n’est plus produite par un mouvement unidirectionnel d’assemblage allant de la molécule vers l’organisme, reflétant les déterminations génétiques, mais résulte d’interactions ‘montantes’ et ‘descendantes’ entre les différents ‘niveaux d’organisation’. » (Kupiec & Sonigo, 2000, p.82‑83)
+            </div>
+            <p>La formation d’un être vivant devient un processus créatif, unique, « un processus ouvert au cours duquel s’élabore un individu parmi toutes les possibilités ». Cette perspective, d’une certaine manière, installe son origine dans le procès même, le ‘work in progress’ du développement d’un être pour le suivre en continu, dans le temps réel de l’émergence d’une forme vivante nouvelle, dans le temps réel de la vie, de l’invention du vivant. Et dans cette perspective, la distinction a priori interne – externe qui servait à différencier les déterminations génétiques et les déterminations environnementales, et qui supposait une origine du regard hors du temps et de l’espace, cette distinction n’a plus lieu d’être. La contribution génétique est appréhendée en tant que dynamique auto‑organisatrice d’un réseau complexe d’interaction au sein duquel la distinction précédente n’est plus pertinente :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Il est important d’éviter la tentation facile d’opposer la sélection naturelle comme extérieure et les contraintes du développement comme internes, car cette dichotomie interne/externe n’est pas du tout fructueuse dans la tentative de comprendre l’évolution. » (Varela et al., p.191)
+            </div>
+            <p>L’existence d’une forme vivante dans un environnement n’est plus ici le résultat de l’adéquation heureuse entre deux structures pré‑définies, c'est-à-dire deux structures dont les déterminations respectives sont logiquement antérieures au moment de leur rencontre ; l’identification de deux structures distinctes devient le produit ultime et historique d’un processus d’interaction à l’issue duquel sont co‑constitués un être et son environnement :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « L’opposition entre facteurs causaux intérieurs et extérieurs est remplacée par une relation co‑implicative, puisque l’organisme et le milieu se spécifient mutuellement. » (Varela et al., p.197)
+            </div>
+            <p>Il n’y a plus lieu de parler d’adaptation parce qu’il n’y a plus de toile de fond imposant une contrainte universelle. La seule condition sur laquelle opère la sélection naturelle est, au niveau local, dans chaque situation particulière, la survie et la reproduction :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Les organismes et la population offrent des variétés ; la sélection naturelle garantit seulement ce que qui s’ensuit satisfait les deux contraintes de base que sont la survie et la reproduction.» (Varela et al., p.195)
+            </div>
+            <p>La diversité des formes de vie ne s’ordonne plus désormais selon une norme transcendante autorisant un jugement comparatif et l’évolution n’est plus un mécanisme d’optimisation mais simplement le résultat d’un filtrage de structures viables, un filtrage « qui admet toute structure qui a suffisamment d’intégrité pour persister.»</p>
+        </div>
+    </div>
+
+    <!-- 2. Adaptation et représentation : inter‑dépendances -->
+    <div class="capsule">
+        <div class="capsule-title">🔗 2. Adaptation et représentation : inter‑dépendances</div>
+        <div class="capsule-content">
+            <p>Mais quel est donc maintenant l’intérêt, relativement à la notion de représentation, de ce qui est dit ici concernant l’adaptation? L’image de l’adaptation méritait d’être explicitée en raison, a‑t‑il été dit, de la ressemblance des critiques qu’elle suscite avec celles qui seront adressées à la notion de représentation. La similarité des critiques découle d’une similarité des images : l’usage de la notion de représentation mise sur une image dont la structure tripartite est parfaitement isomorphe à celle décrite dans le cas de l’adaptation. Nous retrouvons ainsi trois moments, dont le premier, une réalité dotée de déterminations est logiquement antérieur aux deux autres, à savoir, un être déterminé, limité ici à un appareil cognitif défini indépendamment du troisième moment qui est la mise en relation de cet appareil et de la réalité par la formation d’une structure cognitive à valeur de représentation. Mais la relation entre ces deux notions, adaptation et représentation, est, en réalité, plus profonde qu’une simple analogie accidentelle. Elle est de l’ordre d’une interdépendance intrinsèque qui fait que les critiques à l’encontre de l’une sont autant d’objections à l’encontre de l’autre. D’une part, la théorie de l’adaptation, en tant que description désengagée d’un processus qui pourtant implique l’auteur de la description, suppose la capacité de représentation comme capacité d’appréhender la norme universelle du processus de sélection qui dirige l’évolution, la capacité de connaître la réalité ‘telle qu’elle est’, la réalité comme toile de fond déterminée indépendamment de ce que seront et feront les êtres qui viendront s’y ébattre. D’autre part, les questions relatives à l’évolution et à la cognition se rejoignent le long de deux lignes de pensées,</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « Les questions concernant l’évolution et la sélection coïncident le long de deux axes importants au moins, qui sont implicitement actifs dans les sciences cognitives d’aujourd’hui » (Varela et al., 1991, p.193) :
+            </div>
+            <p>L’évolution comme processus d’adaptation peut servir d’explication pour l’existence d’un appareil cognitif représentationnel en mettant en avant l’avantage adaptatif que peut constituer la capacité de produire des représentations, c'est-à-dire des copies du monde environnant. L’évolution comme processus de sélection, d’optimisation d’une certaine aptitude, sert aussi de source métaphorique d’explication de la connaissance comme mécanisme de sélection de certaines formes de représentation de la réalité pour leur valeur adaptative, métaphore qui vaut pour les structures cognitives comme pour les théories scientifiques. Avoir à l’esprit, au moment d’entrer dans une réflexion sur la représentation, la mise en question de la notion d’adaptation présente donc un intérêt qui est loin d’être anecdotique. D’abord, d’un point de vue logique, si la valeur explicative de la théorie de l’adaptation suppose la capacité de représentation, cette théorie ne peut pas fournir un argument vraiment convaincant en faveur de l’existence de cette capacité. Ensuite, la substitution de la notion d’auto‑organisation à la notion d’adaptation, et celle corrélative de l’idée d’une dynamique d’interaction par laquelle un être et son milieu se définissent mutuellement à l’image de la mise en relation de deux structures pré‑définies vient retentir au niveau du présupposé représentationniste et ébranler l’idée de ‘déterminations a priori’ qui assurait le fondement de l’objectivité de la connaissance du monde. Si l’histoire du vivant n’est pas un processus d’adaptation à un environnement déterminé de façon a priori, la réalité, s’il n’y a pas de monde ‘tout court’ mais seulement un monde pour un être vivant, pour une forme de vie, une façon possible de survivre et de se reproduire, qu’est‑ce alors que nous appelons ‘connaître la réalité’ ? Faut‑il, avec les notions d’adaptation et de représentation, renoncer aussi à celle de réalité ou de connaissance, ou tout au moins de connaissance objective ? A‑t‑on encore le droit de parler de connaissance objective, de connaissance de la réalité ? L’enjeu du travail qui va être exposé est de montrer que la perspective non représentationniste, non seulement, autorise, mais revendique pleinement l’usage de telles expressions. Il y a un sens, dans une perspective non représentationniste, à parler de ‘connaissance de la réalité’ et de ‘connaissance objective’ et un sens qui ne résulte pas d’une déflation, d’une inflexion, d’une atténuation, d’une relativisation du sens que peuvent avoir ces expressions dans un cadre représentationniste. Mais un sens qui se nourrit d’une critique philosophique radicale de la logique d’usage des concepts de ‘connaissance’, de ‘réalité’, d’objectivité. Les points fondamentaux de cette critique philosophique seront présentés dans la première partie.</p>
+        </div>
+    </div>
+
+    <!-- 3. Le non représentationnisme : raisons et légitimité -->
+    <div class="capsule">
+        <div class="capsule-title">🧭 3. Le non représentationnisme : raisons et légitimité</div>
+        <div class="capsule-content">
+            <p>Ce que, dans une perspective non représentationniste, nous appelons ‘connaissance de la réalité’ fera l’objet de la troisième partie de l’exposé. Dans sa première section, cette partie présentera les éléments généraux de l’étude scientifique non représentationniste de la cognition et s’intéressera en détail à une théorie particulière : la théorie de l’énaction. Une approche représentationniste de la cognition doit mettre en scène, nous l’avons vu, les notions de monde pré‑déterminé et de sujet pré‑défini. La critique de la notion de représentation formulée par la théorie énactive met en question cette hypothèse ‘bi‑polaire’ selon laquelle 1) le système cognitif serait défini indépendamment du monde qu’il connaît, et 2) le contenu de la connaissance serait un monde déterminé indépendamment du système cognitif qui l’appréhende. La conception non représentationniste qu’elle propose prend assise sur les théories des systèmes dynamiques. A l’idée d’entités ‘tenant lieu de’ sera substituée celle d’émergence de structure cognitive. A l’image du dualisme épistémologique mettant en face à face un système et un monde déterminés indépendamment l’un de l’autre sera substitué un processus dynamique de couplage contextuel. Dans cette perspective, le monde connu et le système connaissant ne sont plus pensés comme des ‘objets’ pré‑définis : ils sont co‑constitués par le processus de couplage à partir d’une définition minimale de l’être vivant, comme unité autopoiètique, et de la présence d’un environnement, comme source de perturbations. La connaissance n’est plus un état jugé à l’aune d’une norme générale, désincarnée, c’est, fondamentalement, un processus, un processus qui engage une forme de vie particulière, une façon particulière d’être vivant. Nous verrons dans la deuxième partie que la notion de processus n’est pas exclusive à une approche non représentationnelle. Le cadre représentationniste autorise aussi, avec les théories connexionnistes, la notion de processus. Mais celui‑ci se greffe sur le schéma dualiste propre au cadre représentationniste dans lequel ces théories sont formulées et il est mis au service d’une finalité déterminée ; il doit conduire à la production d’un état déterminé qui vaille comme représentation, reproduction d’une forme donnée comme élément de la réalité. Le processus de connaissance est soumis à la contrainte téléologique que constitue la fabrication d’un double de choses préexistantes. Le processus doit être tel, pour être processus de connaissance, qu’il aboutisse à la production d’un objet qui ‘vaille pour’ cette chose, qui en soit un équivalent, une re‑présentation. La connaissance pensée comme la réalisation d’un tel processus au sein du système cognitif appelle un modèle d’explication qui montre comment ce processus est possible, étant donné la finalité qui lui est assignée ipso facto par le cadre représentationniste. L’idée de finalité, il faut le souligner, n’apparaît pas nécessairement en tant que telle : car l’existence des conditions du processus représentationniste, des deux premiers moments de l’image en trois temps, est projetée rétrospectivement dans le domaine du ‘déjà‑là’ dans lequel se déploient les déterminations de la réalité. Mais elle se fait sentir à nouveau lorsque la recherche d’une explication du contenu de la connaissance interdit par elle‑même la prise en considération de ce qui ressortit au caractère incarné et expérientiel, c'est-à-dire contextuel du processus de connaissance. Ceux qui défendent l’approche énactive rejettent l’image d’Epinal qui préside à ce modèle et selon laquelle un système cognitif déterminé, pré‑défini, faisant face à un ensemble de choses tout aussi déterminées que lui, fabriquerait des re‑présentations de ces choses. Ou, plus exactement, ils interrogent son sens: le problème évident qu’elle pose, est, selon eux, qu’elle n’a de sens que pour un observateur du processus qui établit une relation entre des événements qu’il reconnaît : entre certains événements attribués au système, et d’autres, attribués à l’environnement. Ce que le modélisateur, qui est l’observateur virtuel, appelle alors ‘connaissance’, en désignant un processus d’imitation ou les représentations que ce processus est dit produire, n’a aucun rapport avec l’expérience que nous avons de ce que nous appelons ‘connaissance’. La correspondance postulée par le modélisateur participe d’une lecture sémantique qui est nécessairement celle d’un observateur mais qui n’a pas de pertinence pour le système lui‑même : les représentations, en tant que doubles, en tant que reproductions, ne sont pas opérationnelles pour le système. La théorie énactive développe un modèle de la constitution de significations qui rompt avec l’idée selon laquelle la signification serait fondée par l’existence, indépendante du système, de déterminations constituant la réalité. Ce modèle propose une conception participative de la connaissance et de la réalité qui s’étend continûment à toutes les échelles des phénomènes du vivant. Il met en jeu une conception de l’émergence qui rapporte la notion de connaissance à la dynamique du système cognitif et aux différentes modalités de couplage dans lesquelles il est impliqué. Le système est pensé comme une organisation dynamique, identifiée à l’identité du système, réalisée dans une structure physique. Le problème de la lecture sémantique, et auquel cette approche structurale entend répondre, est qu’elle ignore la co‑dépendance entre la structure du système et le domaine cognitif,</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « la co‑dépendance, l’accrochage intime entre la structure d’un système et le domaine des actes cognitifs, le monde d’information que cela spécifie au cours de son procès<sup><a href="#ref6" class="reference-link" id="r6">[6]</a></sup>. »
+            </div>
+            <p>L’organisation du système est l’ensemble des relations qui le définit comme une unité et détermine la dynamique d’interactions et de transformations qu’il peut subir en tant qu’unité lorsqu’il est soumis à une source de perturbations. Les relations effectives qui existent entre les composants concrets du système constituent sa structure. Celle‑ci spécifie le domaine dans lequel le système peut opérer, dans la mesure où elle conditionne la façon dont le système peut supporter des perturbations, c'est-à-dire dont l’organisation peut être maintenue. Mais du point de vue du système, il n’y a pas de sens à faire une distinction entre perturbations internes ou externes. Il n’y en a pas non plus à parler ‘d’input’ ou ‘d’output’ : le système est perturbé et subit des transformations de sa structure qui compensent ces perturbations. C’est du point de vue d’un observateur qui considère l’unité dynamique dans un contexte qu’il décrit lui‑même comme étant l’environnement du système, que l’on peut faire ces distinctions. L’observateur peut établir une relation entre ce qu’il attribue au système et ce qu’il attribue à l’environnement – il confère à la dynamique du système une signification extrinsèque qui dépend essentiellement des distinctions qu’il est lui‑même capable de faire. Il se livre à une lecture sémantique nourrie de ce qui a pour lui du sens. Cet engagement en faveur d’une cognition non représentationniste n’est pas sans conséquence épistémologique :</p>
+            <div style="background: #3a5a3a; color: #fef9e6; padding: 0.8rem; border-radius: 12px; margin: 0.8rem 0;">
+                « L’esprit de l’épistémologie épousée ici, et assumée par la structure du livre, est que la connaissance, si elle est remplie de détails, n’est, toutefois, accrochée nulle part, en dehors de sa tradition, et ne conduit nulle part, si ce n’est à une nouvelle interprétation à l’intérieur de cette tradition.» (Varela et al., 1991, p. xvii)
+            </div>
+            <p>La théorie énactive elle‑même ne peut évidemment pas prétendre fonder sa valeur épistémique sur le pouvoir représentationnel de la conception de la cognition qu’elle propose. La conception de la cognition que la théorie de l’énaction propose a pour effet réflexif de lui interdire la prétention à être elle‑même une représentation, au sens de représentation de ‘quelque chose’ de pré‑déterminé produit par un système pré‑défini. Dans le même temps, c’est bien à des modèles scientifiques qu’elle veut se confronter et c’est en tant que théorie scientifique qu’elle veut faire la preuve de sa pertinence. Y‑a‑t‑il un cadre épistémologique qui permette de reconnaître la valeur scientifique d’une théorie qui ‘ne représente pas’ et qui ne soit pas produite par un système connaissant défini indépendamment du contenu épistémique de son discours ? La seconde section de la troisième partie essaiera de montrer que l’on peut concevoir la connaissance scientifique autrement que comme une re‑présentation, en faisant, dans cette optique, d’une part, la distinction entre ‘fait scientifique’ et ‘réalité’, et en introduisant, d’autre part, la notion ‘d’ouverture de nouvelles pratiques’ pour rendre compte de l’inscription, dans la réalité signifiée par le langage commun, d’un pouvoir‑faire développé par l’activité scientifique. Dans le cas présent, la ‘nouvelle pratique’ ouverte par la théorie de l’énaction constitue en elle‑même une thématique qui parcourt les parties II et III de la dissertation : il s’agit de la neuro‑phénoménologie. Avant d’en dire davantage à ce sujet, je voudrais donc resituer la troisième partie dont il vient d’être question dans la chronologie de l’ensemble de l’exposé en présentant les thèmes de la deuxième partie. La première section de la deuxième partie s’intéressera aux deux grandes familles de conceptions représentationnistes de la cognition : le cognitivisme et le connexionnisme. Il s’agira de mettre en évidence la forme générale de chacune d’entre elles et de formuler les critiques conceptuelles et empiriques qui leur sont adressées par ceux qui défendent une approche non représentationniste. Nous profiterons des acquis de la première partie pour mettre en question les concepts de connaissance et de réalité qui sont impliqués dans ces approches représentationnistes et pour faire apparaître l’insatisfaction épistémique que peut susciter le débat classique entre ‘réductionnistes’ et ‘éliminativistes’ qui divisent les représentationnistes. Cette insatisfaction est à l’origine de la pratique neuro‑phénoménologique. Nous verrons que l’alternative réductionnisme /éliminativisme peut faire l’objet d’une critique conceptuelle attentive à l’usage du concept de ‘connaissance’ en montrant que celui‑ci est rétif aussi bien à l’élimination du vécu qu’à sa ‘chosification’. Cette critique s’accompagnera d’une analyse de quelques exemples historiques de réduction ou d’élimination de concepts scientifiques montrant en quoi le concept d’expérience résiste à ce type d’analogie justificatrice. Cette deuxième partie se poursuivra avec une seconde section visant à montrer que la distinction entre lecture sémantique et lecture participative qui peut être faite dans le cas des théories de la cognition peut être réitérée en philosophie des sciences lorsque le phénomène qui est appréhendé est la connaissance scientifique et le processus qui est analysé pour l’expliquer est l’activité scientifique. Et là encore, dans une perspective représentationniste, la lecture sémantique prend la forme d’une lecture causale, explicative, qui exclut la pertinence d’une lecture participative. La recherche d’une explication de la connaissance qui motive la philosophie des sciences invoquent les mêmes idées de données pré‑déterminées et de système connaissant pré‑défini et exclut la prise en compte du contexte et de l’expérience de la connaissance. La recherche la plus poussée d’une explication de la connaissance s’est incarnée dans la tentative par Carnap de construire une Logique de la science. L’esprit positiviste qui animait la recherche d’une Logique de la science peut sembler en rupture avec l’esprit réaliste du cognitivisme – mais on retrouve néanmoins dans les deux cas des convictions fondamentales comparables : d’une part, la notion d’information, de données ‘extérieures’ ou antérieures au processus de connaissance, et d’autre part, un système défini par des règles de la production de connaissance – langage de la pensée, langage de la science (formation des énoncés et relations d’inférence). Le tournant historique en épistémologie, dont une des figures principale est sans doute l’œuvre de Kuhn, a mis en cause la notion de règles méthodologiques et de données indépendantes de leur contexte théorique et pratique d’acquisition. Il a coupé court au projet de produire une science de la science, une Logique de la science, poursuivi par l’empirisme logique sous la supposition que la représentation scientifique pouvait être décrite et expliquée par la seule force de la logique et l’universalité d’un langage d’observation. En inscrivant la production de la connaissance scientifique dans la pratique d’une communauté spécialisée, il a ébranlé l’image de la connaissance de la réalité comme simple découverte d’un monde prédéterminé et a semblé vouloir substituer à l’idée de représentation comme imitation, comme reproduction, un processus de constitution historique. Est‑ce une idée de la connaissance scientifique qui légitimerait, épistémologiquement, la théorie non représentationniste qu’est la théorie énactive ? Il suffit pour en douter de remarquer que la prise en considération de la dimension historique de la connaissance n’a, de fait, pas empêché la formulation de conceptions réalistes défendant l’idée de la connaissance comme production de représentations d’une réalité pré‑structurée par un système connaissant prédéfini. Est‑ce que le tournant historique en dénonçant le projet d’une Logique, d’une explication de la science, exemplifie, au contraire, le fait que la prise en compte de l’incarnation et de la contextualité du phénomène de connaissance interdit l’étude scientifique, explicative, de ce phénomène ? Et cet exemple justifierait, d’une certaine façon, la démarche éliminativiste des sciences de la cognition à laquelle s’oppose l’approche énactive ? Je pense que cette conclusion, qui contredirait la revendication de scientificité de l’approche énactive, est doublement erronée : d’une part, si elle justifiait que l’éviction du vécu soit une condition nécessaire de la scientificité, elle ne légitimerait pas pour autant la pertinence d’un modèle de l’imitation pour rendre compte de ce que nous appelons ‘connaître’. D’autre part, elle n’a de sens qu’énoncée dans un cadre représentationniste qui n’est justement pas celui dans lequel est développée la théorie de l’énaction. La théorie énactive est incompatible avec l’idée d’un sujet de la connaissance pré‑défini – si la science devait être produite par un sujet pré‑défini et autonome, la théorie énactive ne serait pas scientifique. Mais nous verrons, toujours dans la deuxième section de la deuxième partie, que la critique wittgensteinienne de la distinction entre intériorité et extériorité, où l’intériorité est pensée comme le lieu de propriétés mentales connues en secret par un sujet isolé du monde et l’expression en 1ière personne comme le récit d’une connaissance privée, peut être tournée vers la distinction entre l’intérieur et l’extérieur de la communauté lorsqu’elle est comprise comme le lieu d’un accès, en quelque sorte réservé, à la connaissance de la réalité, et la source de diffusion, non‑nécessaire en principe, de cette connaissance.</p>
+        </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref1"><strong>1.</strong> S.J. Gould, <em>La vie est belle</em>, Seuil, 1991, p. 62.</p>
+            <p id="ref2"><strong>2.</strong> S.J. Gould, <em>L’éventail du vivant</em>, Seuil, 1997, p. 34.</p>
+            <p id="ref3"><strong>3.</strong> R. Dawkins, <em>Le gène égoïste</em>, 1976 (trad. 1986).</p>
+            <p id="ref4"><strong>4.</strong> J.-J. Kupiec & P. Sonigo, <em>Ni Dieu ni gène</em>, Seuil, 2000, p. 53.</p>
+            <p id="ref5"><strong>5.</strong> Kupiec & Sonigo, <em>op. cit.</em>, p. 58.</p>
+            <p id="ref6"><strong>6.</strong> Varela et al., <em>The Embodied Mind</em>, MIT Press, 1991, p. 138.</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">← Précédent (Table des matières)</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="02_I_Ethique_Connaissance_part01.html" class="nav-btn">Suivant (I.1) →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l’énaction et sa légitimité épistémologique</em>
+    </footer>
+</div>
+</body>
+</html>
