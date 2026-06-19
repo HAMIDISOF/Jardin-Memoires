@@ -460,39 +460,6 @@ the psychological taxonomy of neurological events » (Fodor, 1974, p.134) C’es
 modélisation qu’il faut se tourner en premier lieu pour comprendre à quoi les arguments 
 neurophysiologiques sont censés apporter une justification. 
  
-A-1-2 Les représentations mentales  
- 
- 
- 
- 
- Réification fonctionaliste 
- 
- 
- 
-Différentes théories représentationnistes proposent différentes explications de la 
-psychologie de la cognition. Il est exigé, dit-on, qu’elles répondent toutes, plus ou moins, à un 
-même ensemble de contraintes, dont notamment celui de devoir produire une explication dite 
-naturaliste : naturaliste, c'est-à-dire capable d’éviter toute allusion à la première personne dans 
-l’explication de la connaissance en tant que formation de représentations. La contrainte 
-naturaliste demande que les propriétés sémantiques soient traduites en termes non sémantiques. 
-Selon Jerry Fodor, si le mental ne peut pas être naturalisé, en ce sens-là, il sera éliminé des 
-compte-rendus scientifiques de la cognition. Il faut naturaliser le mental pour éviter qu’il soit 
-éliminé car ‘the deepest motivation’ pour l’éliminativisme, ‘the intentional irréalism’, est le 
-soupçon que ‘the intentional can’t be naturalized’ , selon le raisonnement suivant: 
-the argument would be :  
-to be exploited in a respectable theory a concept must be naturalizable (but then the 
-question is: what must be naturalization if it aims to make a concept exploitable in a theory?) 
-so if intentional notions can’t be naturalized, then they can’t be exploited in any 
-respectable scientific theory87. 
- 
- 
-La science de la nature ne fait pas place au langage intentionnel : « … sooner or later 
-the physicists will complete the catalogue they’ve been compiling of the ultimate and 
-irreducible properties of things. When they do, the likes of spin, charm, and charge will 
-perhaps appear on the list. But aboutness surely won’t; intentionality simply doesn’t go that 
-deep.» (J.Fodor, 1987, p.97) Ce qui n’est pas sémantique se confond avec ce qui est susceptible 
-de faire partie du catalogue scientifique des éléments fondamentaux de la réalité. Une théorie 
-cognitive est destinée à s’écrire dans un langage physicaliste – idéal d’un langage unique 
 
                                                  
                                                  
@@ -507,7 +474,5 @@ Press, 1998, p.16.
 84 E. Rigal, Préface à Notes sur l’expérience privée et les ‘sense data’, L.Wittgenstein, TER, 1989 , p.VII. 
 85 Locke, Essay, ‘Epistle to the reader’, in Rorty, Philosophy and the mirror…, p. 137. 
 86 J. Proust, Comment l’esprit vient aux bêtes, Essai sur la représentation, Paris : Gallimard, 1997. 
-87 S.Stich, ‘What is a theory of mental representation ?’, Mental Representation, a reader, Blackwell 
-Publishers, 1994, p.361. 
 
 

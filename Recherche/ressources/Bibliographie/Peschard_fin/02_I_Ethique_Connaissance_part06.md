@@ -1,4 +1,61 @@
-
+B-2 La réalité, telle qu’elle se dit 
+ 
+Hylas : Qu’il en soit comme vous voudrez, je persiste à souligner que, de n’être point en état de 
+concevoir une chose, on ne peut faire argument contre l’existence de cette chose. 
+ 
+Philonous : Qu’à partir d’une cause, d’un effet, d’une opération, d’un signe, ou de tout autre 
+moyen, on puisse inférer l’existence d’une chose qui n’est pas immédiatement perçue, et qu’il soit 
+absurde pour quiconque de tirer argument contre l’existence de cette chose de ce qu’il n’en a pas de 
+notion directe et positive, je le reconnais volontiers. Mais là où il n’y a rien de tout cela ; là où ni la 
+raison ni la révélation ne nous portent à croire à l’existence d’une chose, là où nous n’en avons pas 
+même une notion relative ; là où l’abstraction est faite du percevoir et de l’être perçu, de l’esprit et de 
+l’idée ; là enfin où l’on ne se réclame pas même de l’ombre d’une idée très inadéquate, je ne vous dirai 
+certes pas que c’en est assez pour refuser la réalité d’aucune notion ou l’existence d’aucune chose ; 
+mais tout ce que je conclurai c’est que vous n’avez aucune notion dans l’esprit, que vous employez les 
+mots sans y attacher aucun but, aucune espèce de dessein ou de signification. Et je vous laisse à 
+considérer quel cas on doit faire du pur jargon71.  
+ 
+B-2-1 Ni au-delà 
+ 
+Pour explorer plus en avant l’idée de réalité dans laquelle est enracinée le débat 
+réaliste/anti-réaliste, et ce en quoi elle peut être dite métaphysique, pour comprendre comment 
+l’éternel dilemme peut perdre toute substance par la grâce d’un retour ‘wittgensteinien’ à un 
+usage plus ordinaire du concept de réalité, je voudrais considérer la distinction faite par Cora 
+Diamond72 entre les notions ‘réalist’ et ‘realistic’. Celle-ci utilise, dans un premier temps, pour 
+faire apparaître la différence qu’elle veut thématiser, les deux personnages mis en scène par 
+Berkeley dans Three Dialogues : Hylas et Philonous. Afin de désigner la source du problème 
+que pose une certaine façon de penser ou peut-être simplement de parler de la réalité, Berkeley 
+et Wittgenstein ont recours, écrit-elle, à une même image, celle de lunettes, qui sans être 
+exploitée exactement de la même manière, veut signifier néanmoins, dans les deux cas, une 
+attitude semblable de celui qui est dit les porter : celui-ci pense que ce qui le préoccupe, ce 
+qu’il considère comme vraiment important, comme essentiel, « the real nature of something », 
+la réalité de ce qui est perçu ou l’ordre logique de la pensée, se situe au-delà de ce qui se trouve 
+devant lui, de ce qui est ‘visible’, derrière les apparences, « that real nature is not open to 
+view. » (Diamond, 2001, p.43).  
+Dans le dialogue, Berkeley veut nous montrer, au travers de l’esprit ‘realistic’ incarné 
+par Philonous, que la matière, au sens philosophique que Hylas s’évertue à expliciter, n’est rien 
+d’autre qu’une ‘fantaisie’ philosophique. Le réalisme philosophique de Hylas lui fait s’en tenir 
+à l’existence d’une matière quand bien même il en arrive à admettre qu’il « ne connait rien de 
+la matière », qu’à « examiner scrupuleusement les choses, [il] ne trouve point qu’[il] en ait 
+aucune notion ou signification positive » et « ne sais pas ce qu’on veut dire par son existence, 
+ni comment elle existe » (pp.157-162) ; il s’y tient parce qu’il reste néanmoins convaincu que 
+« la réalité des choses ne peut être maintenue que si l’on suppose l’existence de la matière. » 
+(p.165) Le contraste entre ce réalisme et l’esprit ‘realistic’ joue sur l’idée, prégnante dans les 
+Investigations Philosophiques, d’une confusion au sujet de ce dont nous avons réellement 
+besoin et de ce qui nous est vraiment utile. L’attitude envers la réalité de l’esprit ‘realistic’ est 
+inséparable de l’idée « that whatever more you might think you wanted would not make any 
+difference. » (Diamond, 2001, p.44) Ici ‘more’ désigne ce qui serait au-delà de ce qui se 
+montre, de ce qui se perçoit, de ce qui se trouve déjà sous nos yeux et que le porteur de lunettes 
+réaliste néglige ou ignore, au nom d’un quelque chose de plus, dont il ne peut pas dire, lui 
+reproche le ‘realistic’, la différence que peut faire son existence : « But whether or not there is 
+such a thing as this ‘matter’ that [Hylas] thinks is essential to the reality of what is perceived, 
+it would make no difference – or so Philonous believes. Matter, then, has exactly the character 
+of an ‘idle wheel’, to use Wittgenstein’s expression. » Hylas continue de se servir du concept 
+de matière comme si celui-ci possédait sa signification, comme s’il lui suffisait d’appartenir au 
+langage pour y avoir une fonction quelles que soient les circonstances. Mais, dans la bouche de 
+Hylas, dans les conditions créées par le déroulement du dialogue, ce concept, dans le langage, 
+est devenu comme une roue folle dans un engrenage, il tourne à vide, il n’accroche rien, ne fait 
+pas sens, ne fonctionne pas. Hylas pense qu’il a toujours besoin de ce concept pour faire tenir 
 tout le reste, mais ‘la matière’ ne peut faire aucune différence, ne peut fournir aucun travail 
 dans l’économie du langage de la réalité. Hylas pense qu’il en a besoin, mais quel peut être le 
 besoin de quelque chose qui ne fait rien, d’un mot qui n’est plus qu’une enveloppe sonore, 
@@ -122,10 +179,6 @@ parce que nous ne ferons pas ce qu’il faudrait faire pour cela. Il ne s’agit
 certains usages de ce concept dans notre langage et donc notre vie ordinaire. Comment ne 
 serions-nous pas prêts à dire que la plupart des choses que nous avons observées et dont nous 
 faisons un usage plus ou moins régulier pourraient l’être à nouveau si nous faisions ce que 
-                                                                                                                                                          
-et « objet physique » est un concept logique. C’est pourquoi on ne saurait former une proposition comme : « il y a 
-des objets physiques ». 
-Mais des essais malheureux comme celui-ci on en trouve à chaque pas’. 
 nous savons qu’il faut faire pour cela. Je suis évidemment disposée à dire qu’il y a peut-être 
 dans mon jardin une pâquerette qui ne sera jamais observée par personne. Nous pouvons dire 
 ce qu’il faudrait faire pour cela et quelle serait la différence entre le fait que des pâquerettes se 
@@ -466,11 +519,100 @@ d’objets physiques dotés des propriétés que nous, qui maîtrisons le langag
 l’erreur serait de le situer dans l’espace logique structuré dans lequel nous évoluons, et de 
 croire qu’apprendre le langage consiste à attacher aux éléments de cet espace des entités 
 linguistiques :  
+
+Unless we are careful, we can easily take for granted that the process of teaching a child 
+to use a language is that of teaching it to discriminate elements within a logical space of 
+particulars, universals, facts, ect., of which it is already undiscriminatingly aware, and to 
+associate these discriminated elements with verbal symbols. (Sellars, 1956, p.65)  
  
-                                                 
+  Il n’est pas inconcevable, même s’il n’y a pas d’ « awareness of redness » précédant 
+l’usage de « red », que l’on puisse parler d’une sensation de rouge antérieure à cet usage, mais  
+cela ne contredit pas l’idée que la ‘sensation’ n’est pas épistémique et ne conduit pas à penser 
+que c’est la sensation de rouge plutôt que l’objet rouge qui est la dénotation de ‘rouge’. Il sera 
+possible de parler d’une sensation de rouge antérieure à l’usage de ‘rouge’ pour désigner une 
+expérience dont ceux qui possèdent le langage dont le sujet d’expérience fait l’acquisition, 
+ceux-là, diront que c’est ‘une sensation de rouge’. L’enfant qui ne possède pas le langage peut, 
+dans certaines circonstances, être dit avoir de la peine, et l’acquisition du langage n’est pas 
+censé modifié pas ce qu’il ressent. Mais s’il est dit savoir ce qu’il ressent, c’est parce que lui 
+est attribuée une capacité latente de produire plus tard, à propos de cela, un témoignage 
+spontané, direct, « to make noninferential reports about » qui témoigne de la maîtrise du 
+concept ‘avoir de la peine’. La suffocation, la chaleur, la douleur, sont dites être connues pré-
+linguistiquement par le seul fait d’être éprouvées parce que nous n’avons aucun doute qu’il 
+produira l’expression linguistique directe de ces sensations quand il saura parler. Ce qui est 
+supposé dans cette attribution est rendu visible si l’on imagine, par contraste, que c’est à des 
+situations expérientielles, que nous identifions de manière inférentielle, que l’enfant réagit 
+(Rorty donne comme exemples de telles situations: « a lack of oxygen in the air, the overly 
+rapid motion of molecules, kinky alpha-rythms in his brain »). Dans ce cas, l’enfant ne sera pas 
+dit savoir ce que ces choses sont avant de posséder le vocabulaire qui lui permet de s’y référer 
+de façon jugée pertinente, parce que maintenant cette capacité, qui met en jeu des inférences, 
+ne lui est plus attribuée à l’avance.  
+Ce qui apparaît là, aux antipodes d’une quelconque forme du Mythe du Donné, c’est 
+que la connaissance de ce que c’est que d’éprouver quelque chose est attribuée à un être en 
+raison de son appartenance potentielle à cette communauté : la communauté est la source de 
+l’autorité épistémologique. Nous attribuons d’autant plus facilement la connaissance de ce que 
+c’est d’éprouver un sentiment aux êtres que nous les imaginons plus facilement comme des 
+partenaires ‘de conversation’, ou que nous les reconnaissons comme nous ressemblant, c'est-à-
+dire, plus aux enfants qu’aux animaux, plus à un chien qu’à un insecte : « This is to be 
+explained on the basis of that sort of community feeling which unites us with anything 
+humanoid. To be humanoid is to have a human face, and the most important part of that face is 
+a mouth which we can imagine uttering sentences in synchrony with appropriate expressions of 
+the face as a whole ». (Rorty, 1979, p.189) 
+Une sensation immédiate n’est pas épistémique et n’est pas de l’ordre d’une croyance 
+car il n’y a pas pour Sellars de croyance non-inférentielle dans le sens où, en quelque sorte, 
+celle-ci se suffirait à elle-même, serait une croyance par elle-même, comme une sensation peut 
+être une sensation par elle-même. Quelqu’un peut bien sûr produire une affirmation en réponse 
+à certaines conditions d’expérience et qui ne soit pas inférée d’une autre croyance. Mais il ne 
+peut pas avoir une croyance, ne peut pas être dit avoir une croyance, sans être capable de la 
+relier, de saisir les connections d’inférence qui la relie à d’autres croyances. Et nous rejoignons 
+ici ce qui a été dit précédemment à propos de la disposition à endosser une assertion. 
+Comprendre un énoncé, écrit Brandom (p.153), saisir son contenu propositionnel, c’est le 
+placer dans l’espace des raisons, être capable de l’insérer dans un jeu de questions et de 
+réponses, le situer vis-à-vis d’autres contenus, soit, par exemple, qu’ils peuvent être dérivés de 
+lui, soit qu’ils soient incompatibles. Cela vaut pour les énoncés observationnels aussi bien que 
+pour les autres. Une croyance, en général, appartient à un réseau de croyances et les concepts, 
+observationnels ou pas, ne sont pas des entités que l’on peut acquérir individuellement. Savoir 
+que X est rouge, ce n’est pas seulement prononcer ‘X est rouge’ en présence d’un X rouge, 
+c’est aussi être capable d’utiliser ‘X est rouge’ comme prémisses d’inférences conduisant à 
+d’autres croyances. Nous n’attribuons pas le savoir de ce qu’il dit à la seule condition qu’il soit 
+justifié à le dire au moment où il le dit. Il faut encore qu’il soit capable de s’engager dans une 
+pratique de justification : « The essential point is that in characterizing an episode or a state as 
+that of knowing, we are not giving an empirical description of that episode or state ; we are 
+placing it in the logical space of reasons, of justifying and being able to justify what one 
+says. » (Sellars, §37, p.76) Attribuer un savoir à S, ce n’est pas observer un certain état de S, 
+qui finalement pourrait s’être produit à l’insu de S elle-même, qui pourrait lui être ‘donné’. 
+Pour que S soit dite savoir que X est rouge, elle doit être capable d’indiquer les éléments qui 
+l’autorisent à dire cela et qui rendent cet énoncé fiable ; S doit savoir qu’elle sait, doit savoir en 
+quoi et pourquoi ce qu’elle dit est un savoir. Savoir la réalité, c’est savoir dire la réalité, et 
+savoir dire c’est avoir appris à maîtriser les conditions d’usage d’un réseau de concepts 
+interconnectés, c’est avoir appris à justifier et donc avoir appris ce qui vaut comme 
+justification.  
+S est dite connaître un élément de réalité si elle est capable de produire un énoncé 
+reconnu comme vrai, et cela demande qu’elle soit capable de produire les justifications 
+auxquelles doit être adossée la valeur épistémique de cet énoncé. Quelle est la nature des 
+justifications qui sont recevables dépend du jeu de langage dans lequel S est engagée, du type 
+de connaissance à laquelle elle prétend ; en Science ou en Histoire, la pratique de justification 
+n’est pas la même. Mais dans tous les cas, il faut apprendre à dire, c'est-à-dire à justifier, et 
+apprendre ce qui vaut comme justification. Si la convergence des résultats de mesure que met 
+en avant Salmon n’a pas pour van Fraassen la valeur épistémique que Salmon lui attribue c’est 
+parce qu’ils ne sont pas d’accord sur ce qui vaut comme justification de la valeur épistémique 
+d’un énoncé. L’un des deux a-t-il raison ou moins tort que l’autre ? Pour que cette question là 
+ait une réponse ou un semblant de réponse, ou peut-être simplement un sens, il faudrait que ce 
+soit au philosophe qu’il revienne de statuer sur ce qui vaut comme élément de justification d’un 
+énoncé à être vrai et à parler de la réalité. L’une des idées, peut-être la principale, qui anime ce 
+travail et plus particulièrement les deux parties qui vont suivre, est que le philosophe, pas plus 
+d’ailleurs que le scientifique, au nom duquel il semble s’exprimer parfois, ou qui que se soit, 
+n’a le pouvoir de décréter au nom de quoi nous devrions tenir un énoncé pour vrai ou son 
+contenu comme une connaissance de la réalité. Pour croire cela, il faut oublier que la pratique 
+de justification qui est en jeu est une pratique essentiellement publique.  
+ 
 
                                                  
                                                  
+                                                                                                                                                          
+                                                 
+                                                 
+71 G. Berkeley, Trois dialogues entre Hylas et Philonous, Paris: Flammarion, 1998. 
+72 Cora Diamond, The realistic spirit: Wittgenstein, Philosophy, and the Mind, Hardcover, (1995) 1991. 
 73 J. Conant, Le premier, le second &et le dernier Wittgenstein. In Wittgenstein, Dernières pensée. Paris : 
 Agone, 2002, p.87. 
 74 De la Certitude : 35 : Mais ne peut-on pas se représenter qu’il n’y ait pas d’objets physiques ? Je ne 
@@ -478,6 +620,9 @@ sais pas. Et cependant « Il y a des objets physiques » est un non sens. Serait
 Et ce qui suit est-il une proposition empirique : « Il semble qu’il y ait des objets physiques » ? 
 36 : ‘ Nous n’enseignons « A est un objet physique » qu’à ceux  qui ne comprennent pas encore ou ce 
 que signifie A ou ce que signifie « objet physique ». C’est donc un enseignement qui porte sur l’emploi des mots 
+et « objet physique » est un concept logique. C’est pourquoi on ne saurait former une proposition comme : « il y a 
+des objets physiques ». 
+Mais des essais malheureux comme celui-ci on en trouve à chaque pas’. 
 75 J. Conant, Dernières pensées, Agone, Marseille, 2002, pp 49-88. 
 76 L. Wittgenstein, Remarks on the foundations of Mathematics (ed. G.H.von Wright, R. Rhees, 
 G.E.M.Anscombe) (Oxford, 1978), p.325. 

@@ -1,343 +1,63 @@
-## Page 262
+A-3-3 Réformer le langage ?
 
-extra-professionnelle. (La dynamique scientifique rencontre parfois le monde extra-
-scientifique, mais c’est avant qu’une période normale soit installée, le contexte peut alors 
-influer sur les voies de recherche ; ou lorsque le monde scientifique communique ses résultats 
-de recherche, et il revient à l’histoire externe d’étudier notamment l’impact de ce type 
-d’événement. Mais entre temps,) le travail de connaissance et les découvertes, de la réalité, se 
-font en vase-clos. C’est pour cela qu’il y a nécessité d’une historiographie internaliste, pour 
-étudier ce qui se passe dans l’isolement, ce qui est caché. Et on retrouve bien l’image d’une 
-asymétrie épistémique, qu’avait écartée Wittgenstein, et qu’avait semblé vouloir écarter Kuhn 
-aussi. Car la connaissance de la réalité, que constitue une découverte, relève bien d’un accès 
-privé, exclusif au savoir de quelque chose de déterminé ; on pourrait imaginer que la 
-communauté fasse une découverte qu’elle déciderait de ne pas rendre publique.   
- 
-Pourtant, sans critère normatif et sans intégration collective, d’où vient la sanction de la 
-réalité ? Les praticiens, dit Kuhn, forment « une subculture spécifique dont les membres sont le 
-public exclusif et les seuls juges du travail de chacun des autres. »176 Mais d’où vient l’accord 
-sur le jugement ? Il peut être utile à ce point de reprendre l’image de la dualité intrinsèque de la 
-pensée de Kuhn mentionnée par A. Richardson177 : il y a un Kuhn qui dénonce l’existence des 
-règles et des critères postulés par l’épistémologie traditionelle, mais il y a en un autre qui veut à 
-tout prix éviter le relativisme et ‘sauver’ la rationalité scientifique. C’est celui-ci qui entre en 
-scène maintenant. L’adhésion partagée des scientifiques qui clôt la communauté sur elle-même 
-est médiatisée par l’existence d’un ensemble universel de valeurs traversant les 
-bouleversements révolutionnaires qui ponctuent l’histoire de la science :  
-Accuracy, precision, scope, simplicity, fruitfulness, consistency, and so on, simply are 
-the criteria which puzzle solvers must weigh in deciding whether or not a given puzzle about 
-the match between phenomena and belief has been solved… To select a law or theory which 
-exemplified them less fully than an existing competitor would be self-defeating, and self-
-defeating action is the surest index of irrationality …. As the developmental process continues, 
-the examples from which practitioners learn to recognize accuracy, scope, simplicity, and so on, 
-change both within and between fields. But the criteria that these examples illustrate are 
-                                                 
-176 “The history of science”, The essential tension, Univ.Chicago Press, p.119.  
-177 A.W.Richardson, Narrating the history of Reason itself… , Perspective on Science, vol.10, n°3, 2002, 
-pp.253-273. 
- 
-261
+Le langage ordinaire est-il erroné ?
 
+L'alternative entre éliminativisme et réductionnisme s'enracine dans l'idée que la subjectivité, l'intentionnalité ne peut qu'être pensée comme une chose – il y a alors ceux qui pensent qu'il n'y a pas de raison valable de penser qu'une telle chose existe – et ceux qui pensent qu'il serait dramatique de devoir faire comme si une telle chose n'existe pas. Les réductionnistes pensent que l'existence des états intentionnels doit pouvoir être intégrée dans le catalogue ontologique dressé par une science objective – c'est-à-dire que la subjectivité peut être réduite à un 'objet naturel', ou à un objet fonctionnel. La façon même dont est formulée le problème suppose que la seule façon de comprendre ce que nous voulons dire, ce que nous essayons de dire, lorsque nous parlons de croyances, de désirs, en général d'attitudes propositionnelles, la seule façon de comprendre la signification du vocabulaire psychologique, et de façon encore plus générale les concepts mentaux, est d'imaginer qu'ils font référence à des entités déterminées, localisées quelque part dans le monde, comme des champignons dissimulés sous quelques fourrés de la forêt mentale. A la différence que nous savons où et quand trouver des champignons, et comment les reconnaître. Si cette façon de penser les attitudes propositionnelles est compatible avec un certain discours scientifique, ici le connexionnisme, il est raisonnable de continuer à y faire référence, sinon cela n'a aucun sens, et il serait préférable de l'admettre et de leur substituer un autre vocabulaire.
 
-## Page 263
+L'idée du naturalisme est de tenir pour acquis le langage de la physique comme langage d'explication et de description des choses. Ce dont les théories cognitives sont censées rendre compte c'est de la connaissance. « [W]hile 'belief' and 'desire' are ordinary terms, 'mental representation' is not » disent Warfield & Sich ; de même 'connaissance' est un terme ordinaire, et c'est ce que nous nommons ainsi que nous voulons comprendre mieux. Ce que nous nommons ainsi n'arrive pas, en général, à des objets inertes. Est-ce que cela est sans importance ? Est-ce qu'un discours non intentionnel peut rendre compte de l'usage que nous faisons de ce terme ? Si l'usage du concept de connaissance est indissociable des notions d'expérience et de comportement, est-ce que cela peut être tout simplement ignoré ? Lorsque nous parlons de connaissance, nous ne désignons pas un mécanisme anonyme, comment admettre que l'explication d'un simple mécanisme, fût-il syntaxique, concerne ce que nous entendons par 'connaissance'.
 
-themselves necessarily permanent, for abandoning them would be abandoning science together 
-with the knowledge which scientific development brings…178
- 
-Ici intervient donc l’autre face du paradigme, celle que n’a pas retenue I. Stengers, celle 
-qui rend possible l’autonomie de la communauté : le paradigme est aussi adhésion. L’adhésion 
-au paradigme fait de la communauté un seul corps, animé d’un mouvement propre et rationnel, 
-et confère à la dynamique de la connaissance scientifique une nécessité que traduit la 
-métaphore darwinienne. C’est dans l’espace clos de la communauté autonome que les 
-scientifiques, unis par la reconnaissance transhistorique d’un ensemble de valeurs qui fonde la 
-rationalité de leur jugement, jouent au jeu de la recherche scientifique, éprouvent les limites 
-d’un paradigme, traversent une crise, adoptent un nouveau paradigme, ect. Sans cette adhésion, 
-par laquelle la communauté parle d’une seule voix, il y aurait certainement des divergences, 
-certaines irréductibles, et la nécessité de faire intervenir une instance extérieure : puisque ce ne 
-peut pas être une règle, ce pourrait être la société, le collectif, une source de décision 
-certainement non conforme à l’idéal de rationalité scientifique, certainement alimentée par des 
-motivations, des intérêts, des buts extrêmement contextuels.  
-Pourtant, n’est-ce pas précisément parce qu’il y a des divergences, dans l’appréciation 
-du ‘négligeable’, dans les techniques mises en oeuvre ou même le choix de la modélisation 179 
-qu’il faut des comités d’experts, et que se développent des forums hybrides, où s’articulent sur 
-le mode coopératif le savoir des spécialistes et celui des profanes, qu’il serait plus juste selon 
-Michel Callon et al.180 de rebaptiser respectivement recherche confinée, de laboratoire, et 
-recherche de plein air, sensible aux particularismes, aux spécificités locales ? 
- 
-The mangle of practice 
- 
-L’image d’un déroulement auto-alimenté, auto-structuré, auto-régulé, de la 
-connaissance scientifique ne correspond pas, d’après Pickering, à ce qu’il s’est passé dans 
-l’histoire de la physique des particules. La nouvelle physique n’a pas remplacé l’ancienne, et 
-cette dernière n’a pas succombé à une crise interne. La nouvelle physique s’est développée 
-                                                 
-178 T. Kuhn, Afterwords. In World Changes, P. Horwich (ed.), Cambridge, MA: MIT Press, 1993, p.338-
-339, cité par Friedman, 2002. 
-179 Fuller, p.71 : Kuhn failed to recognize that  the scientific community is subject to conflicting interests, 
-each of which potentially represents a different direction in which science may go.   
-180 M. Callon et al., Agir dans un monde incertain. Paris : Ed. du Seuil, 2001. 
- 
-262
+Mais se pourrait-il que l'on soit dans l'erreur pour ce qui est de la signification ordinaire que nous attribuons au concept de connaissance ? Que nous croyions à tort qu'il implique une subjectivité ? Se pourrait-il que le langage doive être réformé, mais non plus par des philosophes mais par des scientifiques – en sera-t-il pour la 'connaissance' de même que pour le phénomène que nous appelons aujourd'hui 'combustion', qui s'est révélé, disons-nous, ne pas être ce que certains avaient cru qu'il était ? Y-a-t-il une erreur au niveau de ce que nous entendons par 'connaissance' ? Stich[130] propose de concevoir la 'doctrine' éliminativiste comme la conjonction de deux assertions ontologiques, l'une forte, l'autre faible. La plus faible est que les états intentionnels ou attitudes propositionnelles que met en scène la psychologie populaire ne sont d'aucune utilité pour une théorie des causes du comportement humain. Ils n'ont donc aucune place dans l'ontologie de la science cognitive, entendue comme l'ensemble des disciplines investies dans l'explication du comportement humain. L'autre assertion, supposée être supportée par la première, est que ces états mentaux n'existent tout simplement pas : « There is no such things, just as there are no such things as phlogiston, or caloric fluid, or witches. » C'est aussi l'argument de P.S.Churchland[131], rappelle E. Pacherie[132], de tenir le cas de la psychologie ordinaire pour comparable à celui de l'alchimie ou de la théorie du phlogistique : toute deux étaient tellement erronées que la réduction à la chimie de Lavoisier était impossible et que l'élimination était la seule alternative.
+
+La conception que défendent les Churchland de la réduction interthéorique se démarque de la conception traditionnelle proposée par l'empirisme logique. Sa particularité tient à ce qu'elle comprend une étape consistant à construire un analogue de la théorie à réduire, et c'est celui-ci qui pourra être déduit logiquement de la théorie réductrice : « [T]heories invariably had to be corrected and modified to get something suitable that could be deduced from the basic theory. » (P.S.Churland, 1986, p. 281) L'analogue est construit de sorte à permettre d'exprimer l'ancienne théorie en termes de la nouvelle, et lorsque la réduction réussit, la nouvelle théorie explique l'ancienne, pourquoi elle a pu être satisfaisante, et pourquoi elle est devenue insuffisante. La réduction de la théorie de l'optique à la théorie électromagnétique n'a pas demandé d'importantes modifications de la théorie à réduire et a pu conduire à l'identification de la lumière et de la radiation électromagnétique. Dans le cas du phlogistique, comme de la possession démoniaque, les corrections nécessaires pour que la réduction soit possible étaient si importantes qu'il est préférable de parler d'une discontinuité ontologique : « [T]he correction required was so thorough that it seemed more appropriate to think of the old theoretical ontology as displaced entirely by the new theoretical ontology. » (P.S.Churland, 1986, p. 281) Cette nouvelle conception de la réduction est censée changer littéralement les termes du débat au sujet de la réduction des états mentaux à des états cérébaux en ouvrant la possibilité que les états mentaux ne soient pas identifiés à des états cérébraux. Il est en effet envisageable que la façon dont nous concevons les états mentaux doive subir de telles corrections que ce que nous entendons aujourd'hui par états mentaux soit tout simplement éliminé par la réduction. Il se pourrait que si le cadre conceptuel utilisé pour décrire ce qui est mental semble irréductible à un cadre neuroscientifique, ce soit parce que ce cadre, comme celui de la physique pré-newtonienne, est inadéquat et doit être drastiquement modifié : « My strategy is to draw attention to the range of fates that can befall a conceptual framework, no matter that it is an intuitive, 'observational' framework. If it is irreducible, that may be owed to its being so inadequate that it deserves displacement, or it may be that it will not be smoothly reduced, but instead revised, either in large or in small measure. » (P.S.Churland, 1986, p. 288) Cette idée de la modification de la théorie à réduire est importante concernant la réduction du mental car cela peut conduire à une reconfiguration de cela même qui doit être expliqué.
+
+Les théories tacites
+
+Un projet des théories du contenu mental, dit Stich, est de clarifier, d'expliciter le mécanisme mental qui sous-tend nos pratiques ordinaires d'attribution d'états mentaux dotés d'un contenu : « A prominent feature of our everyday discourse about ourselves and about other people is our practice of identifying mental states by adverting to their content.[133]» La facilité, l'aisance, l'agrément intersubjectif, de cette pratique laissent penser qu'elle est sous-tendue par un mécanisme impliquant une connaissance tacite partagée. L'idée de décrire la structure conceptuelle qui sous-tend le jugement a conduit la psychologie cognitive a rechercher les théories physiques tacites qui guident nos jugements et nos actions. Il est apparu que ces conceptions tacites sont plus proches de la physique aristotélicienne que de la physique de Newton. Ce type de résultat pourrait constituer un argument en faveur du projet éliminativiste dans le sens où ce qui est vrai pour la physique aurait de fortes chances de l'être aussi pour la psychologie : la psychologie ordinaire, comme le soutient P.S. Churchland, serait toute aussi erronée que la physique ordinaire.
+
+Cela montrerait surtout à quel point ce que nous savons et avons besoin de savoir dépend de ce que nous faisons et des visées qui guident nos pratiques. La physique d'Aristote s'est développée avec des instruments de perception, d'expérience du monde, qui étaient aussi ordinaires que ceux qui sont mis en jeu dans l'expérience ordinaire de toute époque. La même connaissance suffit à rendre compte du même type d'expérience. Et si les contemporains ne sont pas gourmands de mécanique relativiste, c'est que les connaissances aristotéliciennes sont pour eux, pour ce qu'ils ont à faire, plus intéressantes et qu'elles leur suffisent. L'idée que la psychologie populaire pourrait être aussi erronée que la physique populaire semble tenir pour évident que la physique aristotélicienne est 'tout simplement', dans l'absolu, erronée. Mais avec le tournant historique en philosophie des sciences, c'est justement cette notion de théorie erronée qui s'est trouve profondément remaniée. Il s'est trouvé des philosophes pour soutenir qu'une théorie n'est pas erronée 'dans l'absolu', pas plus qu'elle n'est juste ni même valable 'dans l'absolu'. Quelques phrases de Pickering, à propos de l'incommensurabilité des théories suffisent à souligner l'importance, trop négligée, par Kuhn lui-même, de la pratique et de l'instrumentation dans le développement des théories :
+
+This incommensurability seemed to me rather to have, once more, an important material dimension. The theories and models of the old physics hung together with specific forms of apparatus and the specific material phenomena they displayed, the same went for the new physics, and these domains of instrumentation and phenomena were largely disjoint. Materially, one did the old physics differently, eliciting quite different material performances, from the new physics, and vice versa. This was the sense, quite literal and obvious, in which the practionners of the old physics lived in a different world from that of the new physics[134].
+
+Ce que vaut une théorie dépend de ce que l'on attend d'elle qu'elle permette de faire et cela dépend évidemment des conditions matérielles dans lesquelles elle est développée et peut être utilisée. La conception aristotélicienne du mouvement est peut-être de peu d'utilité aux physiciens contemporains – parce qu'elle est adossée à une pratique qui est loin des pratiques des physiciens contemporains. Les objets que ces pratiques constituent n'ont aucun ou peu de rapport avec les objets constitués par des pratiques ordinaires.
+
+Mais peut-être la question n'est-elle pas de savoir si l'homme ordinaire doit ou pas continuer de se servir de ces théories tacites, mais de savoir si celles-ci doivent être prises en considération par la science ? Si la psychologie populaire est aussi erronée que la 'physique populaire', un jour viendra où il n'y aura pas plus de raison pour les sciences cognitives d'en tenir compte que ce que la physique moderne tient compte aujourd'hui de la physique aristotélicienne. Autrement dit, que l'homme ordinaire se servent de 'théories', quand bien même cet usage lui serait profitable, n'est pas une raison pour que la science les prenne au sérieux. Mais la question est quand même de savoir si les théories psychologiques du sens commun sont à ce point comparables aux théories physiques du sens commun et si le rapport entre les théories psychologiques du sens commun et les théories cognitives au profit desquelles on veut les éliminer est de même nature que le rapport entre les théories physiques du sens commun et les théories physiques modernes. La distance, en terme de pratique, d'usage, d'attente, est-elle comparable entre ce à quoi s'adresse la science cognitive et ce à quoi s'adresse la psychologie ordinaire ? Doit-elle être pensée, voulue comme aussi grande ? La science peut-elle, doit-elle, de la même manière qu'elle ignore la physique aristotélicienne, faire fi de l'expérience immédiate dont tentent de rendre compte les concepts ordinaires ? La physique s'est détachée dans une certaine mesure de l'expérience immédiate mais elle reste au service d'une demande semblable en ce qui concerne notre rapport 'pratique' à notre environnement ; c'est ce rapport qui a changé dans certaines circonstances. A quelle demande répond la science cognitive ? A quoi doit nous servir la connaissance, le pouvoir-faire qu'elle est susceptible de proposer ?
+
+Deux sortes d'explication : ordinaire, théorique
+
+Dans le langage ordinaire, au sein duquel s'énonce la psychologie du sens commun, il n'y a pas d'attribution de connaissance, comme il n'y a pas d'attribution de désir ou de douleur, sans une manifestation qui implique une subjectivité, ou disons, d'une façon moins polémique, une expérience vécue. Si l'on affirme que l'usage de ces mêmes concepts, que l'on dit mentaux, peut se faire sans référence à une expérience vécue, c'est que l'on ne parle pas de la même chose. Les théoristes réductionistes ou éliminativistes pourront objecter que c'est effectivement ce qu'il s'est passé vis-à-vis par exemple de certaines maladies. On ne parle plus exactement de la même chose aujourd'hui lorsque l'on utilise des critères d'analyse chimique et lorsque les critères relevaient uniquement de l'appréciation subjective, de l'expérience. Certains comportements qui auraient pu être jugés pathologiques ne le seront plus, ou l'inverse, par exemple, certains comportements distraits sont aujourd'hui reconnus comme étant des cas spécifiques de manifestations épileptiques. Les maladies ne sont plus ce qu'elles étaient lorsque la reconnaissance était fondée seulement sur les témoignages du patient ou du médecin, c'est-à-dire que le champ d'application du concept n'est plus exactement le même ; le 'jardin des espèces' n'a plus exactement la même allure, le même contour, les mêmes reliefs. Pourquoi la même chose ne se produirait-elle pas avec l'usage des concepts mentaux et notamment celui de 'connaissance'. Pourquoi n'en viendrions-nous pas à reconnaître que les 'états' que nous pensions semblables ne le sont pas tous, que d'autres que nous ne reconnaissions pas comme tels le sont, et que le bon critère de reconnaissance est un critère 'naturaliste' formulé par les sciences.
+
+On pourrait imaginer qu'à l'instar des appareils d'analyse des 'substances intérieures' telles l'urine ou le sang, qu'utilise la médecine pour fonder ses diagnostics, il existe des petites boîtes d'analyse de signaux cérébraux indiquant si les critères cérébraux élaborés par les scientifiques pour reconnaître un certain état cérébral que l'on devrait appeler 'connaissance' sont remplis. Mais dans quel but ferions nous usage de cette boîte ? Le seul intérêt qu'il y aurait à utiliser cette boîte serait de savoir si la personne sondée est susceptible de se comporter de la façon dont nous attendons que se comporte une personne à laquelle nous attribuons ordinairement une certaine connaissance. Autrement dit, il faudrait que l'élaboration des critères scientifiques soit étalonnée en référence à l'usage ordinaire. Imaginons que ce ne soit pas le cas, que la reconnaissance scientifique de la connaissance ne soit en rien une indication sur le comportement ; quel intérêt y aurait-il pour nous, qui ne vivons pas dans un laboratoire, à savoir qu'il y a là ce que les scientifiques appellent une connaissance ?
+
+L'éliminativisme ne vise finalement à rien de moins qu'une réforme du langage ; de la même façon que le terme de 'phlogistique' a été éliminé parce que la théorie qui en faisait usage a été remplacée par une autre théorie au sein de laquelle il n'avait aucun rôle à jouer. Mais il n'y a que peu de rapport entre l'usage de termes tels que 'phlogistique', 'or' ou 'impetus', et celui des concepts mentaux. La différence irréductible entre les usages des termes 'or' et 'connaissance', c'est que l'un s'adresse à des choses tandis que l'autre s'adresse à des personnes. Et, à vrai dire, c'est bien ce que la médecine ne cesse de redécouvrir à propos de ce qu'il convient de considérer comme une maladie : ce n'est finalement pas tant le résultat des analyses médicales qui doit déterminer l'attitude du médecin que le 'ressenti' du patient ; ou disons plus justement que les deux expériences, celle du patient, l'expérience vécue, exprimée en première personne, et celle du médecin, l'expérience objectivée du corps d'autrui, exprimée en troisième personne sur un mode désengagé, doivent être mises en circulation, doivent être intéressées l'une à l'autre, où ce qui intéresse est ici à la fois « ce qui importe » et « ce qui enrichi » :
+
+Il faut parvenir à admettre que le malade est plus et autre qu'un terrain singulier où la maladie s'enracine, qu'il est plus et autre qu'un sujet grammatical qualifié par un attribut emprunté à la nosologie du moment. Le malade est un Sujet, capable d'expression, qui se reconnaît comme Sujet dans tout ce qu'il ne sait désigner que par des possessifs : sa douleur et la représentation qu'il s'en fait, son angoisse, ses espoirs et ses rêves. Alors même qu'au regard de la rationalité on décèlerait dans toutes ces possessions autant d'illusions, il reste que le pouvoir d'illusion doit être reconnu dans son authenticité. Il est objectif de reconnaître que le pouvoir d'illusion n'est pas de la capacité d'un objet. […]
+En bref, il est impossible d'annuler dans l'objectivité du savoir médical la subjectivité de l'expérience vécue du malade. […]
+Charcot, selon Freud, disait : la théorie c'est bon, mais ça n'empêche pas d'exister. C'est au fond ce que pensent parfois les malades des diagnostics de leurs médecins. Cette protestation d'existence mérite d'être entendue, alors même qu'elle oppose à la rationalité d'un jugement bien fondé la limite d'une sorte de plafond impossible à crever[135].
+
+A propos de la conviction affichée par Fodor qu'il est nécessaire de conserver « la psychologie des intentions », V. Descombes écrit : « Il y a quelque chose de juste dans cette observation, mais la façon même dont s'exprime Fodor me semble trahir une confusion de sa part sur ce qu'il convient d'appeler 'psychologie du sens commun', une confusion entre les explications ordinaires et les explications de type théorique[136]. » La même remarque vaut évidemment pour les 'adversaires' éliminativistes, dans la mesure où, précisément, leur dispute même fait fond sur leur accord au sujet de « ce qu'il convient d'appeler 'psychologie du sens commun'. » Il est d'ailleurs étrange et paradoxal que le connexionnisme accepte aussi aisément de partager cette conception causale de la psychologie ordinaire et d'admettre la signification qu'elle attribue aux concepts mentaux, quitte à la juger, ensuite, dépasser. Car entre cette conception causale et le rejet pur et simple, il y a une manière de considérer le langage et la signification des concepts mentaux qui va, elle, plutôt dans le sens d'une approche connexionniste de la cognition.
+
+La confusion que Descombes attribue à Fodor est due au fait qu'il soutient d'une part, que l'on ne peut pas se passer des explications que formule la psychologie ordinaire, et d'autre part, que ces explications sont théoriques. Or, selon Descombes, si une explication est théorique, alors elle est susceptible d'être améliorée ou disqualifiée par la recherche scientifique ; si, au contraire, une forme d'explication est telle que l'on ne peut pas imaginer s'en passer, c'est qu'elle n'est pas théorique. Une explication n'est pas nécessairement théorique. Les énoncés du sens commun ne repose pas sur une « théorie intelligible » ; ils ne supposent pas l'existence d'une quelconque « 'interaction' entre des 'états' de désirer ou de croire » ; les notions d'interaction, d'état mental, « sont là pour prêter aux explications psychologiques ordinaires une fausse apparence de 'théorie' ».
+
+L'usage ordinaire des concepts mentaux
+
+L'usage ordinaire du concept de connaissance nous sert à organiser nos relations avec autrui, à nous situer par rapport à autrui, à savoir ce que nous pouvons ou ce que nous devons faire avec autrui, ou ce que nous pouvons attendre d'autrui ou ne pas attendre : « Lorsque je dis : 'je ne comprends rien à ce type-là', la similitude avec 'je ne comprends rien à ce mécanisme' est très vague. Je crois que cela veut dire à peu près : Je ne puis prévoir son comportement avec la même certitude que celui des gens 'auxquels je comprends quelque chose'[137]. » Les états d'un système symboliste fonctionnel ne sont pas la même chose que ce dont parle la psychologie ordinaire, et la description d'un système connexionniste ne peut pas remplacer les descriptions mentales. La psychologie ordinaire ne décrit pas les 'états' mentaux, comme si c'était des choses au même titre que l'or ou le phlogistique ; la confusion qui portait sur la signification du mot 'explication' et qui conduisait à présenter la psychologie ordinaire comme une explication, se double d'une confusion « que favorise le fait de parler de différents genres d'objets (kinds of objects), là où il faudrait introduire une différence plus radicale que la simple différence générique. Par exemple, lorsque le théoricien des données sensibles distingue entre des objets de genre différents, l'arbre physique et l'arbre phénoménal. » (Descombes, 1995, p.112)
+
+Le parallèle dressée entre 'folk psychology' et 'folk physic' conduit, dit E. Pacherie, à envisager l'erreur imputée à la psychologie populaire comme « une erreur ontologique », « une erreur sur le mobilier du monde. » Mais il n'est pas évident que « le rapport que la psychologie ordinaire entretient avec les neurosciences est de même nature que le rapport que l'alchimie entretient avec la chimie moderne. » (Pacherie, 1993, p.33)
+
+Le défaut majeur de cet argument éliminativiste est, selon E. Pacherie, qu'il repose sur l'identification de la psychologie ordinaire, en tant que cadre ordinaire de compréhension des états et des processus mentaux (« commonsense framework for understanding mental states and processes », P.S.Churland, 1986, p. 299), à une théorie : « In the sense of 'reduction'that is relevant here, reduction is first and foremost a relation between theories. […] Hence, when we raise the question of whether mental states are reducible to brain states, this question must be posed first in terms of whether some theory concerning the nature of mental states is reducible to a theory describing how neuronal ensembles work … » (P.S.Churland, 1986, p. 279) La psychologie ordinaire est considérée comme une théorie, une théorie proto-scientifique qui sera modifiée avec le développement de la psychologie, comme la physique populaire l'a été avec le développement de la science physique : la psychologie ordinaire comme la physique ordinaire ont un rôle prédictif et explicatif qui permet de dire qu'elles fonctionnent comme des théories : « In this respect, folk psychology and folk physics deserve to be called theories » (p. 303)
+
+Mais les concepts mentaux que met en scène la psychologie populaire n'ont aucunement l'ambition d'être des concepts théoriques et encore moins scientifiques, et le langage ordinaire n'est en rien troublé par le fait que l'usage de concepts mentaux se voit refusé le droit de prétendre signifier des 'choses naturelles', c'est-à-dire pouvant être des éléments d'une explication scientifique. Lorsque l'on dit que l'usage du concept de connaissance, c'est-à-dire l'attribution d'une connaissance implique une justification de la part de celui ou celle à qui est attribuée la connaissance, et que ce témoignage engage une expérience vécue, une subjectivité, le concept de connaissance dont il est question n'est pas un concept scientifique ni même théorique. Il ne désigne pas, comme 'phlogistique', un objet élaboré dans un laboratoire scientifique en vue de rendre compte de certaines expériences ordinaires. On serait plutôt tenté de penser que ce qui se trouve dans la situation du 'phlogistique' ici est plutôt le concept de 'représentation' comme mécanisme de reproduction ; mais ce serait prendre ce qui est un problème conceptuel pour un problème empirique. La question de savoir s'il y a ou pas des représentations 'à l'intérieur' n'est pas une question susceptible de recevoir une réponse empirique. Le problème vient de l'image inimaginable que le concept de réalité pourrait signifier autre chose que ce qu'il signifie, c'est-à-dire ce que nous connaissons ; il vient de l'idée que la signification du concept de réalité déborderait du champ de son usage possible, qu'il signifierait aussi ce pour quoi il n'a pas d'usage ; il vient de l'image que le champ complet d'application est en attente d'être reflété dans l'esprit, puis dans le langage.
+
+La psychologie ordinaire n'est pas en elle-même une théorie : il est plus juste de la considérer comme une « sorte de trame assez lâche tissée autour des concepts de croyances, désirs et intentions » et de la distinguer « des théories particulières qui, pour expliquer le comportement, retravaillent ces concepts, en redéfinissent les propriétés et les relations avec d'autres concepts explicatifs. » (Pacherie, 1993, p.34) D'une certaine façon, l'alchimie et la chimie de Lavoisier cherchaient à répondre au même type de questions qui concernait la nature des composants des différents corps. Au contraire, la psychologie ordinaire et la neuroscience ne sont pas « de même niveau » ; la psychologie ordinaire ne donne aucune réponse à la question concernant la composition biologique des croyances parce que la question, dans ce cadre-là, est absurde, de même qu'il est « absurde de demander à quel atome s'identifie le centre de gravité de la chaise sur laquelle je suis assise » bien qu'il soit « loin d'être absurde de parler du centre de gravité de cette chaise. » (p.36) Vouloir éliminer les concepts de la psychologie ordinaire parce qu'elle ne répond pas à la question à laquelle tente de répondre la neuroscience relève d' « une erreur de catégorie. »
+
+Dans le cas des théories cognitives et physiques 'savantes', le jugement repose sur une explication dans laquelle ce sur quoi porte le jugement est un objet, un élément passif d'un système de relations causales ; dans le cas des théories psychologiques de sens commun, le jugement repose sur une justification qui implique ce sur quoi, celui sur qui, en fait, porte le jugement ; et celui sur qui porte le jugement n'est pas un objet passif. La relation de celui qui juge avec ce sur quoi porte le jugement n'est pas comparable: la psychologie de sens commun 'sert' à gérer des relations humaines, pas des relations sujet/objet : « L'attribution d'attitudes intentionnelles dépend d'une pratique interprétative et le jeu de l'interprétation ne se joue pas selon les mêmes règles que la théorisation des phénomènes physiques. » (Pacherie, 1993, p.65) On peut décréter, encore une fois, que la science n'a pas à en tenir compte, que cela ne l'intéresse pas, et que le savoir qu'elle propose ne vise pas à contribuer à ce genre de pratiques inter-humaines. Elle ne résout pas les questions que cela pose et ces questions ne l'intéressent pas. Mais qui serait le 'on' qui affirmerait que ces questions n'intéressent pas la science ? Qui décide de ce à quoi doit s'intéresser la science ? De quelle idée de la science, portée par quelle type de justification, s'autoriserait ce type de décision ?
 
 
-## Page 264
+Notes de bas de page associées (138 à 140) :
 
-lentement, en marge de l’ancienne encore dominante, au travers de différentes spécialités 
-naissantes qui se sont installées progressivement : « Throughout  the 1960s the seeds of the 
-new physics were present as specific minority traditions of practice existing in the shadow of 
-the old physics – gauge theory, neutrino and colliding-beam experiments, ect. And during the 
-1970s those traditions simply grew enormously at the expense of the old physics. » (Pickering, 
-2002, p503) En fait, de façon générale, si l’on regarde en détail un moment quelconque de 
-l’histoire des sciences, ce n’est pas une communauté unie autour d’un paradigme que l’on 
-rencontre, mais une pluralité de modèles et de techniques expérimentales : « Why should one 
-imagine that behind the visible multiplicity there lurks a hidden unity ? » (p.505) Il se peut, 
-écrit Pickering, que ces différentes pratiques forment à certains moments des ‘constellations’, 
-mais celles-ci sont des événements contingents et non pas nécessaires de l’histoire d’une 
-science.  
-Il n’est pas non plus nécessaire, pour comprendre comment se produit la stabilisation de 
-l’activité de modélisation dans les limites d’un champs particulier, la fermeture du modèle, 
-d’en appeler à des méthodes ou critères qui serait transcendants par rapport à l’activité elle-
-même, à un moment donné : « The standard answer in philosophy and sociology of science 
-was that to understand closure it was necessary to invoke something fixed and unchanging to 
-cut down the space of openness. » (p.504) Au lieu de cela, il suffit de se rendre attentif à la 
-pratique ‘en temps réel’ qui structure l’activité scientifique, les résistances et les 
-accomodations qui la constituent : « [T]he vectors along which Hamilton eventually travelled 
-were singled out not by anything preexisting his pratice, but in terms of the specific resistances 
-that emerged in the real-time of his practice and of the specific accomodations that hamilton 
-made to them … practice has an important real-time structure that completely escapes 
-traditionnal accounts of closure – namely, the dialectic of resistance and accomodation that i 
-call the mangle of practice. » (p.505) 
-Nous avons vu précédemment que les notions d’adhésion, à un paradigme, de 
-communauté autonome, de limite entre ce qui est interne et ce qui est externe à la science sont 
-interdépendantes : « In the Structure… the idea that each scientific community has one big 
-paradigm serves to conjure up a boundary.around science – it makes it possible to think of 
-science as a self-sufficient and self-contained entity. » (p. 506) Si l’une est mise en cause, les 
-autres le sont en même temps, de la même façon. En mettant en cause l’idée de l’adhésion à un 
-seul paradigme faisant l’unanimité, Pickering met en cause l’idée d’une frontière déterminée 
-permettant de définir une entité ‘science’ indépendante : « The sense of automatic social, 
-material and conceptual closure that goes with the notion of a big paradigm is lost. » Le lieu 
- 
-263
+[138] M. Merleau-Ponty, Le visible et l'invisible, Paris : Gallimard.
 
+[139] Searle, The mystery of consciousness, Granta Books, 1997.
 
-## Page 265
-
-de la frontière entre ce qui ressortit à la science et ce qui lui est extérieur devient l’objet d’une 
-enquête historique et ne peut plus recevoir que des réponses contextuelles au lieu d’être un 
-donné, un élément du cadre de la réflexion épistémologique. L’histoire de la chimie organique 
-au 19ième siècle, ajoute Pickering, pourrait servir d’exemple typique : la science a été fortement 
-couplée à l’industrie et au capital Victorien de différentes manières, sociale, matérielle, 
-conceptuelle. Si une certaine autonomie peut être établie, loin d’être une nécessité, cela doit 
-être regardé comme un problème historique qui appelle une recherche particulière. 
- 
-‘Usage’ de la science 
-La question que pose Fuller à propos de la Structure … est celle concernant la 
-soumission à la science : « [C]’est, dit Pestre181, la fonction conservatrice du discours de Kuhn 
-que Fuller critique […] affirmer que la dynamique scientifique suit une logique essentiellement 
-interne … est un moyen … de maintenir l’idée qu’une bonne science est naturellement séparée 
-du politique et du social. » La manière dont est traitée par Kuhn la composante sociale de 
-l’activité scientifique tombe aussi sous la critique formulée par Pickering. Prendre pour sujet de 
-la science, une communauté au lieu d’un individu, ce n’est pas, contrairement à ce qui a pu être 
-dit, mettre au jour la sociologie de l’activité scientifique. Les notions de pluralité et 
-d’intrication qui servent à décrire l’organisation effective de la pratique scientifique, peuvent 
-servir aussi de fenêtre sur la sociologie de la science : « Just as scientific practice is a continual 
-process of aligning conceptual structures and material performances, so, too, is it a process of 
-aligning all sorts of social variables : goals, interests, social structures, ect. » (Pickering, 
-2002, p.505) 
-Kuhn prévoyait que les sociologues prendraient une place croissante dans la réflexion 
-sur le fonctionnement de l’entreprise scientifique – il attendait d’eux qu’ils portent un regard 
-plus précis que celui des philosophes sur la réalité de l’activité scientifique, et ses travaux ont 
-certainement grandement contribué à ce que ses vœux se réalisent. Pourtant, c’est justement du 
-travail de certains sociologues de la pratique scientifique que provient la critique peut-être la 
-plus sévère de sa conception ; sévère non parce qu’elle révèlerait de graves erreurs ou lacunes, 
-mais parce qu’elle met en cause des éléments principiels du dispositif de l’épistémologie de 
-Kuhn. Cette critique nous invite à un changement de regard qui s’apparente à une ‘conversion’, 
-dans un sens utilisé par Wittgenstein pour décrire notamment l’expérience qui doit 
-accompagner le renoncement à l’image d’une signification séparée de l’usage. La démarche est 
-                                                 
-181 Critique, 661-662, Juin-Juillet 2002. 
- 
-264
-
-
-## Page 266
-
-la même, la polémique frontale, thèse contre thèse est dissoute parce que la thèse en question, 
-sondée dans ses origines, est donnée à voir comme une image métaphysique.  La conversion ne 
-porte pas sur les détails, tout reste en place et pourtant plus rien n’est pareil. Dans le cas du 
-‘processus intérieur’, nous avons besoin, dit Wittgenstein, de critères extérieurs : sans critères il 
-n’y a tout simplement pas de processus intérieur. Tout reste en place : le processus intérieur est 
-toujours là, mais ce n’est plus un secret ; l’extériorité est toujours là, mais son ignorance n’est 
-plus une lacune, l’intérieur n’est pas une enclave dans l’extérieur et l’extérieur n’est plus face à 
-l’intérieur; intériorité et extériorité sont constituées en même temps et pareillement, dans le 
-langage, par la mise en oeuvre de critères partagés. C’est à une modification semblable du 
-regard que nous amène les remarques de Pickering: ce qui interne et ce qui est externe à la 
-science n’est pas posé a priori, n’est pas déterminé indépendamment d’une enquête historique 
-au cas par cas : « [J]ust where the boundary lies between the inside and the outside of any 
-given science becomes a matter for historical enquiry rather than a priori philosophical 
-resolution. » (Pickering, 2002, p.506)  
-L’idée d’une co-constitution de ce qui sera considéré comme interne, d’une part, et de 
-ce qui sera considéré comme externe, d’autre part, peut être retrouvée de façon plus précise 
-encore dans le cadre d’une épistémologie substituant au schéma dualiste d’une réalité 
-découverte en vase clos et d’une société soumise à une information partielle et voilée, le 
-concept proposé par Latour d’une nature–culture en mouvement perpétuel de différenciation. 
-Tout reste en place : la réalité est toujours là, mais elle est historique et collective ; l’incertitude 
-qui semblait devoir définir l’extériorité est toujours là, mais elle témoigne, non plus d’une 
-exclusion, mais d’une implication, elle est  marque d’inventivité et de diversité du collectif, 
-invention de nouvelles pratiques et de nouvelles situations d’épreuve, diversité des exigences et 
-de ce qui peut être tenu pour négligeable.   
- 
-B-3 Le temps vrai et l’émergence 
- 
-B-3-1 Une temporalité abstraite 
- 
-Il reste encore une chose à dire concernant l’épistémologie kuhnienne et le 
-conservatisme qui l’habite en dépit des critiques qu’elle a adressées à l’empirisme logique. 
-C’est une remarque au sujet du temps, de la temporalité de l’activité scientifique qui a été 
-introduite dans la réflexion épistémologique avec le tournant historique, comme elle l’a été 
-par le connexionnisme dans la modélisation des processus cognitifs. Nous avons remarqué 
- 
-265
-
-
-## Page 267
-
-que le temps mis en scène par l’approche connexionniste n’était pas le ‘temps-vrai’ de 
-l’action, la temporalité au sein de laquelle se déroule la rencontre effective d’un système et 
-de son environnement. Le système qui est modélisé par le connexionnisme reste 
-complètement abstrait relativement aux conditions effectives dans lesquelles se produit la 
-connaissance de la réalité, la connaissance comme processus interactif qui implique le 
-système neuronal, le système sensori-moteur et l’environnement sous forme de 
-perturbations auxquelles le système doit s’accommoder, que le système doit assimiler en se 
-transformant. La temporalité de la modélisation connexionniste ne permet pas de rendre 
-compte de la flexibilité du comportement ; elle reste prise dans un schéma 
-représentationniste où l’émergence est seulement l’expression d’une autre forme de 
-computation, plus souple que la computation cognitiviste mais subordonnée toujours à une 
-autorité qui la transcende et qui fournit le dessein et les normes de correction de sa 
-réalisation. L’émergence est seulement un processus d’imitation, de reproduction, de re-
-présentation de formes déjà données, déjà déterminées, constituant le monde du 
-modélisateur. L’émergence est obéissante – elle n’est pas inventive, elle n’est pas créative, 
-parce que, précisément, le système cognitif qui est considéré reste une abstraction. Ainsi que 
-le montreront les différentes études dynamiques de la cognition présentées dans la partie 
-suivante, c’est seulement dans le temps réel de l’interaction qu’il est possible de sortir du 
-cadre représentationniste, de penser la connaissance dont témoigne un comportement 
-comme un processus d’accommodation et d’assimilation, un processus de transformation du 
-système et de production, plutôt que re-production, de réalité, processus de co-constitution 
-du système qui se transforme et du monde qui émerge.  
- 
-Le parallèle esquissé entre les critiques formulées par le connexionnisme et par 
-l’épistémologie kuhnienne aux conceptions traditionnelles et la place qu’y tient la notion de 
-temps, se prolonge jusqu’au niveau de l’insatisfaction que peut finalement susciter cette 
-notion de temps, le conservatisme qu’elle draîne encore, le caractère abstrait de la 
-description proposée, l’absence des processus interactifs qui nourrissent le processus de 
-connaissance, et finalement l’ignorance de la nature proprement émergente des structures 
-épistémiques enracinées dans le procès en temps réel de la pratique. Pickering propose, au 
-lieu des explications traditionnelles qui s’appuient sur des éléments invariants, une 
-conception temporellement émergente des changements qui constituent l’histoire de la 
-connaissance. Le temps réel est celui de la multiplicité et de l’interaction, aussi bien au 
-niveau des pratiques, non pas un seul ‘big paradigm’ mais différentes traditions de recherche 
-avec des spécificités matérielles et conceptuelles, que des implications sociales :  
- 
-266
-
-
-## Page 268
-
-Just as scientific pratice is a continual process of aligning conceptual structures and 
-material performances, so, too, is it a process of aligning all sorts of social variables : goals, 
-interests, social structures, ect., […] In real time dialectic of resistance and accomodation 
-everything is at stake in relation to everything else ; everything becomes with nothing 
-necessarily occupying a still explanatory centre. (Pickering, 2002, p507)  
- 
-La nature encore abstraite de la conception de l’activité scientifique développée par 
-Kuhn, en dépit de l’historicité revendiquée par le mouvement critique auquel il appartient, est 
-thématisée par R.Giere182 au travers de la notion ‘d’unité de base’ de l’analyse 
-épistémologique. En ce qui concerne Carnap et les empiristes logiques, l’analyse de la science 
-consistait à analyser les théories scientifiques comprises comme un ensemble d’énoncés 
-organisés en système axiomatique. L’unité de base est l’énoncé individuel et les relations entre 
-ces unités de l’analyse sont des relations logiques. Le travail conduit par l’empirisme logique 
-ne s’intéresse pas à la science en train de se faire et à ceux qui la font réellement ; l’empirisme 
-logique fournit ‘un modèle du scientifique idéalement rationnel’ : « The logical empiricist 
-analysis provides a model of the ideally rational scientist. It says what real scientists would do 
-if they were perfectly rational. » (p.4) Dans le modèle de l’empirisme logique, il n’y a pas de 
-différence concevable entre ce qui concerne un individu ou un groupe : les individus sont 
-idéalement rationnels et il n’y a qu’une façon de l’être.  
-Le mouvement épistémologique initié dans les années 60 a certes, reconnaît Giere, 
-apporté certaines modifications dans la façon de considérer l’activité scientifique, mais pas si 
-profondes que l’on est tenté de le croire, « not so great as is often thought. » Chez Lakatos, 
-l’unité d’analyse n’est plus un énoncé ou un ensemble d’énoncés mais une tradition de 
-recherche, notion inspirée de l’idée kuhnienne de paradigme. Les scientifiques qui poursuivent 
-une tradition progressive, tout comme ceux, nous l’avons déjà remarqué, qui adhèrent à un 
-paradigme, sont qualifiés de ‘rationnels’, et participent, eux aussi, à une histoire interne de la 
-science, nettement séparée de l’histoire externe. Parler de traditions ou de paradigmes rivaux 
-laisse penser qu’il s’agit de groupes sociaux qui s’inscrivent dans la temporalité effective du 
-développement de la connaissance scientifique. Mais définie en termes de théorie et de cadre 
-méthodologique, une ‘tradition de recherche’ n’est pas moins abstraite que les énoncés ou 
-théories des empiristes logiques. Le principe de rationalité qui gouverne la modélisation de 
-l’activité scientifique rend impossible une approche réellement historique et ampute la 
-                                                 
-182 R. Giere, ‘The units of analysis in Sciences Studies’, in S. Fuller et al. (eds), The Cognitive Turn, 
-Kluwer Academic Publishers, 1989, pp.3-11. 
- 
-267
-
-
-## Page 269
-
-temporalité de la part de créativité qui est propre à son instanciation. Le reproche commun 
-qu’adresse Giere à ces approches est de rester abstraites dans le sens où elle ne se rapportent 
-pas au comportement d’agents réels mais idéaux. La stratégie délibérée de produire une théorie 
-‘objective’ de la rationalité scientifique, les conduisent à donner un compte rendu désincarné 
-du progrès rationnel. Alors qu’il faudrait selon Giere pouvoir prendre en considération le 
-scientifique en tant qu’individu : « [I]f one is to understand how a particular scientific 
-achievement came about, one must examine a group of scientists. There is, however, nothing 
-more to examine the group than examine the individuals who made up the group—together 
-with their interactions. » (p.7)     
- 
-B-3-2 De l’ ‘humanisme’ au ‘post-humanisme’ 
- 
-Selon Pickering, cependant, ce n’est pas sur les individus que doit se focaliser le regard 
-de l’épistémologue. C’est peut-être parce que justement l’épistémologie du tournant historique 
-ne parlait que des individus, des scientifiques, qu’elle ne pouvait le faire que de façon abstraite. 
-Au cours d’une révolution, tous les changements, toute l’Histoire est du côté des scientifiques, 
-« all of the interesting historical action in the Structure… is on the side of the human 
-scientists » ; ce sont leurs paradigmes qui changent, les façons de travailler des chercheurs, 
-leurs façons de voir le monde, les questions qu’ils peuvent poser, les réponses qu’ils peuvent 
-recevoir, mais rien n’est dit du versant matériel de la recherche, le monde des instruments, des 
-machines, des appareillages. Or, c’est précisément à l’intersection du monde des humains et du 
-monde des non humains que se déroule la pratique scientifique : « the action in scientific 
-practice is centered at the intersection of the human and the nonhuman, rather than in one 
-domain or the other. » C’est sans doute parce que l’activité scientifique a été dématérialisée 
-que la temporalité dans laquelle elle est située reste ‘non vraie’, abstraite ; pour cela aussi, en 
-occultant les multiples formes concrètes de la pratique scientifique réalisées en différents lieux, 
-qu’il est possible d’imaginer une grande unité-unanimité de la communauté autour d’un grand 
-paradigme ; et pour cela aussi qu’il était possible d’imaginer une autonomie de la communauté, 
-dégagée-désengagée de toute relation avec les nécessités, contraintes, opportunités matérielles, 
-éléments à part entière du moment historique général dans lequel s’inscrit et auquel participe 
-l’activité scientifique. Passer d’une conception ‘humaniste’, qui ne considére que la 
-composante humaine de l’activité scientifique, à la conception ‘post-humaniste’ qu’il propose, 
-permet, d’après Pickering, de sortir de l’affrontement traditionnel entre réalisme et anti-
-réalisme obligeant justement à situer le contenu de la connaissance du côté des humains, la 
- 
-268
-
-
-## Page 270
-
-réalité étant ailleurs, ou du côté du non-humain, la part humaine devenant étrangement 
-transparente. Au lieu de l’alternative, il y a une co-contribution conduisant à une co-définition 
-de ce que sont les deux composantes de la connaissance scientifique : « [P]osthumanism 
-thematises the constitutive struggles with the material world that go into the production of 
-scientific knowledge… the world makes us as much as we make it. » (Pickering, 2002, p.508) 
- 
- 
- 
-269
-
-
-## Page 271
-
- 
-270
-
-
-## Page 272
+[140] F.J.Varela, 'A science of consciousness as if experience mattered', in S. Hameroff, A.W.Kaszniak, and A.C.Scott (eds) Towards a science of consciousness II, The second tucson Discussion and debates. Cambridge, MA : MIT Press, 1998, p.37.
 
