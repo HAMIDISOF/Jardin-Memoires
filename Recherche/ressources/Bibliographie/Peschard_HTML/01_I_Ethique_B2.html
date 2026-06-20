@@ -3,47 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Peschard – I. Éthique de la connaissance – partie 6</title>
-    <link rel="stylesheet" href="style_peschard.css">
+    <title>Peschard – I. Éthique de la connaissance – partie 5 (B2)</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        /* Bande horizontale (sommaire local) */
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        /* Bouton flèche en haut à droite */
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        /* Capsules */
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule-epigraphe {
+            background: #e9f3e3;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
 </head>
 <body>
 <div class="container">
 
-    <h1>I. Éthique de la connaissance – partie 6</h1>
-    <div class="sub">B-2. La réalité, telle qu’elle se dit</div>
+    <h1>I. L’éthique de la connaissance</h1>
+    <div class="sub">I.B. La réalité présente – B2 (pages 97‑114)</div>
 
-    <!-- Épigraphe -->
-    <div class="capsule capsule-epigraphe">
-        <div class="capsule-title">📖 Épigraphe</div>
+    <!-- === BANDE HORIZONTALE (sommaire local) === -->
+    <div class="bande-sommaire">
+        <a href="#capsule-b2">💬 B-2 La réalité, telle qu’elle se dit</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-b2-1">🔹 B-2-1 Ni au-delà</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-b2-1-donnee">🔸 B-2-1 Ni donnée</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-b2-3">📝 B-2-3 Une affaire linguistique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-b3">🌍 B-3 « But have we lost the world ? »</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-b3-1">🔹 B-3-1 Le présent de la présence</a>
+    </div>
+
+    <!-- === BOUTON FLÈCHE HAUT DROITE === -->
+    <div class="nav-top">
+        <a href="01_I_Ethique_B3.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE B-2 : La réalité, telle qu’elle se dit === -->
+    <div class="capsule" id="capsule-b2">
+        <div class="capsule-title">💬 B-2 La réalité, telle qu’elle se dit</div>
         <div class="capsule-content">
             <div class="citation">
-                Hylas : Qu’il en soit comme vous voudrez, je persiste à souligner que, de n’être point en état de
-                concevoir une chose, on ne peut faire argument contre l’existence de cette chose.<br><br>
-                Philonous : Qu’à partir d’une cause, d’un effet, d’une opération, d’un signe, ou de tout autre
-                moyen, on puisse inférer l’existence d’une chose qui n’est pas immédiatement perçue, et qu’il soit
-                absurde pour quiconque de tirer argument contre l’existence de cette chose de ce qu’il n’en a pas de
-                notion directe et positive, je le reconnais volontiers. Mais là où il n’y a rien de tout cela ; là où ni la
-                raison ni la révélation ne nous portent à croire à l’existence d’une chose, là où nous n’en avons pas
-                même une notion relative ; là où l’abstraction est faite du percevoir et de l’être perçu, de l’esprit et de
-                l’idée ; là enfin où l’on ne se réclame pas même de l’ombre d’une idée très inadéquate, je ne vous dirai
-                certes pas que c’en est assez pour refuser la réalité d’aucune notion ou l’existence d’aucune chose ;
-                mais tout ce que je conclurai c’est que vous n’avez aucune notion dans l’esprit, que vous employez les
-                mots sans y attacher aucun but, aucune espèce de dessein ou de signification. Et je vous laisse à
-                considérer quel cas on doit faire du pur jargon<sup><a href="#ref71" class="reference-link" id="r71">[71]</a></sup>.
+                Hylas : Qu’il en soit comme vous voudrez, je persiste à souligner que, de n’être point en
+                état de concevoir une chose, on ne peut faire argument contre l’existence de cette chose.<br><br>
+                Philonous : Qu’à partir d’une cause, d’un effet, d’une opération, d’un signe, ou de tout
+                autre moyen, on puisse inférer l’existence d’une chose qui n’est pas immédiatement perçue, et
+                qu’il soit absurde pour quiconque de tirer argument contre l’existence de cette chose de ce qu’il
+                n’en a pas de notion directe et positive, je le reconnais volontiers. Mais là où il n’y a rien de tout
+                cela ; là où ni la raison ni la révélation ne nous portent à croire à l’existence d’une chose, là où
+                nous n’en avons pas même une notion relative ; là où l’abstraction est faite du percevoir et de
+                l’être perçu, de l’esprit et de l’idée ; là enfin où l’on ne se réclame pas même de l’ombre d’une
+                idée très inadéquate, je ne vous dirai certes pas que c’en est assez pour refuser la réalité d’aucune
+                notion ou l’existence d’aucune chose ; mais tout ce que je conclurai c’est que vous n’avez aucune
+                notion dans l’esprit, que vous employez les mots sans y attacher aucun but, aucune espèce de
+                dessein ou de signification. Et je vous laisse à considérer quel cas on doit faire du pur
+                jargon<sup><a href="#ref71" class="reference-link" id="r71">[71]</a></sup>.
             </div>
-            <p style="text-align: right; font-style: italic; margin-top: 0.5rem;">— G. Berkeley, <em>Trois dialogues entre Hylas et Philonous</em>, Paris: Flammarion, 1998.</p>
         </div>
     </div>
 
-    <!-- === CAPSULE 1 : B-2-1 Ni au-delà === -->
-    <div class="capsule">
-        <div class="capsule-title">🌀 B-2-1 Ni au-delà</div>
+    <!-- === CAPSULE B-2-1 : Ni au-delà === -->
+    <div class="capsule" id="capsule-b2-1">
+        <div class="capsule-title">🔹 B-2-1 Ni au-delà</div>
         <div class="capsule-content">
             <p>Pour explorer plus en avant l’idée de réalité dans laquelle est enracinée le débat
                 réaliste/anti-réaliste, et ce en quoi elle peut être dite métaphysique, pour comprendre comment
                 l’éternel dilemme peut perdre toute substance par la grâce d’un retour ‘wittgensteinien’ à un
                 usage plus ordinaire du concept de réalité, je voudrais considérer la distinction faite par Cora
-                Diamond<sup><a href="#ref72" class="reference-link" id="r72">[72]</a></sup> entre les notions ‘realist’ et ‘realistic’. Celle-ci utilise, dans un premier temps, pour
+                Diamond<sup><a href="#ref72" class="reference-link" id="r72">[72]</a></sup> entre les notions ‘réalist’ et ‘realistic’. Celle-ci utilise, dans un premier temps, pour
                 faire apparaître la différence qu’elle veut thématiser, les deux personnages mis en scène par
                 Berkeley dans <em>Three Dialogues</em> : Hylas et Philonous. Afin de désigner la source du problème
                 que pose une certaine façon de penser ou peut-être simplement de parler de la réalité, Berkeley
@@ -53,50 +269,60 @@
                 qu’il considère comme vraiment important, comme essentiel, « the real nature of something »,
                 la réalité de ce qui est perçu ou l’ordre logique de la pensée, se situe au-delà de ce qui se trouve
                 devant lui, de ce qui est ‘visible’, derrière les apparences,</p>
+
             <div class="citation">
-                « that real nature is not open to view. » (Diamond, 2001, p.43).
+                « that real nature is not open to view. » (Diamond, 2001, p.43)
             </div>
+
             <p>Dans le dialogue, Berkeley veut nous montrer, au travers de l’esprit ‘realistic’ incarné
                 par Philonous, que la matière, au sens philosophique que Hylas s’évertue à expliciter, n’est rien
                 d’autre qu’une ‘fantaisie’ philosophique. Le réalisme philosophique de Hylas lui fait s’en tenir
                 à l’existence d’une matière quand bien même il en arrive à admettre qu’il</p>
+
             <div class="citation">
                 « ne connait rien de la matière », qu’à « examiner scrupuleusement les choses, [il] ne trouve
-                point qu’[il] en ait aucune notion ou signification positive » et « ne sais pas ce qu’on veut dire par
-                son existence, ni comment elle existe » (pp.157-162) ;
+                point qu’[il] en ait aucune notion ou signification positive » et « ne sais pas ce qu’on veut dire
+                par son existence, ni comment elle existe » (pp.157-162) ;
             </div>
+
             <p>il s’y tient parce qu’il reste néanmoins convaincu que</p>
+
             <div class="citation">
                 « la réalité des choses ne peut être maintenue que si l’on suppose l’existence de la matière. »
                 (p.165)
             </div>
+
             <p>Le contraste entre ce réalisme et l’esprit ‘realistic’ joue sur l’idée, prégnante dans les
                 <em>Investigations Philosophiques</em>, d’une confusion au sujet de ce dont nous avons réellement
                 besoin et de ce qui nous est vraiment utile. L’attitude envers la réalité de l’esprit ‘realistic’ est
                 inséparable de l’idée</p>
+
             <div class="citation">
                 « that whatever more you might think you wanted would not make any difference. »
                 (Diamond, 2001, p.44)
             </div>
+
             <p>Ici ‘more’ désigne ce qui serait au-delà de ce qui se montre, de ce qui se perçoit, de ce
-                qui se trouve déjà sous nos yeux et que le porteur de lunettes réaliste néglige ou ignore, au
-                nom d’un quelque chose de plus, dont il ne peut pas dire, lui reproche le ‘realistic’, la
-                différence que peut faire son existence :</p>
+                qui se trouve déjà sous nos yeux et que le porteur de lunettes réaliste néglige ou ignore, au nom
+                d’un quelque chose de plus, dont il ne peut pas dire, lui reproche le ‘realistic’, la différence que
+                peut faire son existence :</p>
+
             <div class="citation">
                 « But whether or not there is such a thing as this ‘matter’ that [Hylas] thinks is essential to
                 the reality of what is perceived, it would make no difference – or so Philonous believes. Matter,
                 then, has exactly the character of an ‘idle wheel’, to use Wittgenstein’s expression. »
             </div>
+
             <p>Hylas continue de se servir du concept de matière comme si celui-ci possédait sa
-                signification, comme s’il lui suffisait d’appartenir au langage pour y avoir une fonction
-                quelles que soient les circonstances. Mais, dans la bouche de Hylas, dans les conditions créées
-                par le déroulement du dialogue, ce concept, dans le langage, est devenu comme une roue folle
-                dans un engrenage, il tourne à vide, il n’accroche rien, ne fait pas sens, ne fonctionne pas.
-                Hylas pense qu’il a toujours besoin de ce concept pour faire tenir tout le reste, mais ‘la matière’
-                ne peut faire aucune différence, ne peut fournir aucun travail dans l’économie du langage de la
-                réalité. Hylas pense qu’il en a besoin, mais quel peut être le besoin de quelque chose qui ne fait
-                rien, d’un mot qui n’est plus qu’une enveloppe sonore, vide ? La ‘matière’ ne sert pas davantage
-                à comprendre ce qu’est la ‘réalité’ pour Berkeley, que ‘l’image mentale’ ne sert à comprendre ce
+                signification, comme s’il lui suffisait d’appartenir au langage pour y avoir une fonction quelles
+                que soient les circonstances. Mais, dans la bouche de Hylas, dans les conditions créées par le
+                déroulement du dialogue, ce concept, dans le langage, est devenu comme une roue folle dans un
+                engrenage, il tourne à vide, il n’accroche rien, ne fait pas sens, ne fonctionne pas. Hylas pense
+                qu’il a toujours besoin de ce concept pour faire tenir tout le reste, mais ‘la matière’ ne peut faire
+                aucune différence, ne peut fournir aucun travail dans l’économie du langage de la réalité. Hylas
+                pense qu’il en a besoin, mais quel peut être le besoin de quelque chose qui ne fait rien, d’un
+                mot qui n’est plus qu’une enveloppe sonore, vide ? La ‘matière’ ne sert pas davantage à
+                comprendre ce qu’est la ‘réalité’ pour Berkeley, que ‘l’image mentale’ ne sert à comprendre ce
                 qu’est la ‘peine’ pour Wittgenstein, parce que nous n’avons besoin ni de l’un ni de l’autre pour
                 parler de la réalité ou de la peine.</p>
 
@@ -109,21 +335,26 @@
                 fin, c’est précisément parce qu’ils n’ont pas les moyens de faire une différence entre les thèses
                 qu’ils avancent et qu’ils s’opposent, ce dont ils parlent ne permet pas de faire une différence
                 entre la façon dont les uns ou les autres en parlent.</p>
+
             <p>Si l’esprit ‘realistic’ critique une certaine utilisation d’une image ou d’un concept, ce
                 n’est pas dans un souci d’économie ontologique, souligne Diamond ; ce n’est pas parce que,
                 selon lui, elles sont douteuses et qu’il serait plus sûr de faire sans puisqu’on le peut. C’est
                 plutôt qu’en parlant de quelque chose dont on ne peut dire la différence que fait sa présence ou
                 son absence, le locuteur fait preuve de ce que J. Conant appelle une</p>
+
             <div class="citation">
                 « relation confuse qu’il entretient avec ses propres mots<sup><a href="#ref73" class="reference-link" id="r73">[73]</a></sup>. »
             </div>
-            <p>Hylas affirme que la différence entre ce qui est réel et ce qui est imaginaire tient à ce qui
-                est ‘derrière les apparences’, ce qui est ‘en soi’, ce qui est indépendant de la façon dont les
+
+            <p>Hylas affirme que la différence entre ce qui est réel et ce qui est imaginaire tient à ce
+                qui est ‘derrière les apparences’, ce qui est ‘en soi’, ce qui est indépendant de la façon dont les
                 choses nous apparaissent :</p>
+
             <div class="citation">
                 « The judgment that the horse is real and not imaginary, not a hallucination, is thus a
                 hypothesis going beyond anything we might be aware of by our senses » (Diamond, 2001, p.47)
             </div>
+
             <p>Hylas s’accroche à la distinction entre la façon dont les choses nous apparaissent et ce
                 que les choses sont, alors même qu’il est devenu incapable de dire quelle différence cette
                 distinction peut signifier. Mais pour dire ce qui est réel, pour distinguer une chose réelle d’une
@@ -135,15 +366,17 @@
                 la perception, même si c’est là que nous la faisons. Il ne peut abandonner l’idée que même si
                 c’est là que nous faisons la différence, celle-ci doit se trouver, en réalité, ailleurs. La différence
                 que nous faisons ici doit être fondée ailleurs :</p>
+
             <div class="citation">
                 We think that our practice – whatever it is – is just a way of getting at something we have an
                 idea of : what really is, what really is out there and independently real; and it is that notion of
-                reality that we call in matter to explain. … To think, though, that we are on to something else here,
-                that we have an idea of what it is to be real which is what guides us in our practice – this is to
-                think that the term ‘real’ means something besides what we should see if we looked at how we tell
-                real things. (Diamond, 2001, p.49)
+                reality that we call in matter to explain. … To think, though, that we are on to something else
+                here, that we have an idea of what it is to be real which is what guides us in our practice – this is
+                to think that the term ‘real’ means something besides what we should see if we looked at how we
+                tell real things. (Diamond, 2001, p.49)
             </div>
-            <p>Le dialogue entre Hylas et Philonous a pour but, selon Diamond de mettre en évidence
+
+            <p>Le dialogue entre Hylas et Philonous a pour but, selon Diamond, de mettre en évidence
                 le contraste entre la façon dont nous jugeons de la réalité de quelque chose, qui est décrite par
                 Philonous, et l’idée de la réalité qui habite le réaliste, Hylas, et qui lui fait penser que la
                 différence que nous faisons entre la réalité et la chimère, n’a de valeur que par quelque chose
@@ -152,21 +385,22 @@
                 s’intéresse pas à la manière dont nous faisons usage du concept de réalité parce qu’il est
                 d’emblée persuadé que ce n’est pas cela qui peut nous permettre de comprendre la distinction
                 entre ce qui est réel et ce qui ne l’est pas. Il est persuadé que ce qui distingue ce qui est réel de
-                ce qui ne l’est pas est quelque chose dont l’existence est totalement indépendante de ce qui
-                nous apparaît. La façon dont nous jugeons de la réalité d’après ce qui nous apparaît serait sans
-                valeur si elle ne révélait pas, ou si nous ne pensions pas qu’elle révèle quelque chose d’autre
-                que ce que nous percevons. C’est, me semble-t-il, une conviction semblable qui doit conduire
-                van Fraassen à affirmer que tout ce que nous pouvons dire à propos des ‘inobservables’ sur la
-                base de ce que nous percevons ne suffit pas à dire qu’ils existent ou qu’ils n’existent pas. Il y a
-                autre chose qui permet d’affirmer la réalité de telles entités et qui se situe au delà de ce qui peut
-                être perçu. L’empiriste constructif sait, sans doute, que notre pratique de jugement de la réalité,
-                de discrimination des réalités et des chimères, repose sur l’expérience, sur la perception, aussi
+                ce qui ne l’est pas est quelque chose dont l’existence est totalement indépendante de ce qui nous
+                apparaît. La façon dont nous jugeons de la réalité d’après ce qui nous apparaît serait sans valeur
+                si elle ne révélait pas, ou si nous ne pensions pas qu’elle révèle quelque chose d’autre que ce
+                que nous percevons. C’est, me semble-t-il, une conviction semblable qui doit conduire van
+                Fraassen à affirmer que tout ce que nous pouvons dire à propos des ‘inobservables’ sur la base
+                de ce que nous percevons ne suffit pas à dire qu’ils existent ou qu’ils n’existent pas. Il y a autre
+                chose qui permet d’affirmer la réalité de telles entités et qui se situe au delà de ce qui peut être
+                perçu. L’empiriste constructif sait, sans doute, que notre pratique de jugement de la réalité, de
+                discrimination des réalités et des chimères, repose sur l’expérience, sur la perception, aussi
                 révocables soient-elles. Mais son agnosticisme manifeste l’idée que notre jugement de la réalité
                 doit néanmoins être fondé dans un au-delà de la perception qui donne sa valeur à l’expérience.
                 L’expérience que nous faisons des micro-entités est, elle, sans valeur de connaissance. Il y a
                 quelque chose d’autre, quelque part ailleurs que dans ce que nous percevons, ‘toute la réalité
                 n’est pas dans les phénomènes’, qui nous permettrait de trancher si nous pouvions le percevoir
                 – mais nous ne pouvons pas. D’où l’agnosticisme.</p>
+
             <p>La ‘fantasy’ dont relèvent les inobservables n’épargne pas les ‘observables’, car
                 ‘observables’ et ‘inobservables’ participent d’une seule et même ontologie. Les observables
                 aussi relèvent d’une ‘fantasy’ dans la mesure où il y a dans l’idée d’un observable l’idée qu’il
@@ -175,25 +409,29 @@
                 observable qui aurait pu n’être pas observé, la question qui se pose est de savoir quelle
                 différence cela fait que ce qui est observé soit un observable ou seulement un observé – et une
                 réponse à cette question n’est même pas envisageable.</p>
+
             <p>Le ‘realistic’ n’a pas besoin d’en appeler à une ‘nature’ ou une ‘essence’ d’observable
                 pour dire qu’un observé est réel.</p>
+
             <div class="citation">
                 « Ce n’est pas par induction, écrit Wittgenstein, que l’écureuil conclut qu’il aura également
                 besoin de provisions pour l’hiver suivant. Et nous n’avons pas davantage besoin d’une loi
-                d’induction pour légitimer nos actions et nos prédictions » (<em>De la certitude</em>, §287) ;
+                d’induction pour légitimer nos actions et nos prédictions » (De la certitude, §287) ;
             </div>
-            <p>postuler <em>a posteriori</em> l’existence de l’observable pour légitimer nos actions et nos
+
+            <p>postuler a posteriori l’existence de l’observable pour légitimer nos actions et nos
                 assertions actuelles portant sur un observé ressemble à de l’induction rétroactive : ‘c’est parce
                 que les choses étaient comme cela hier, même si c’était encore au delà des apparences, qu’elles
                 sont comme cela aujourd’hui’. Le ‘realistic’ n’éprouve pas le besoin de réécrire l’histoire – il
                 n’éprouve pas le besoin d’en appeler à un fondement qui transcende ce que nous faisons avec
                 le concept de réalité, de dire que les choses sont ‘en réalité’ autre chose que ce que nous
-                appelons la réalité. Il ne dédouble pas la réalité, il regarde ce que nous faisons, prend au
-                sérieux ce que nous disons, et notamment, constate que:</p>
+                appelons la réalité. Il ne dédouble pas la réalité, il regarde ce que nous faisons, prend au sérieux
+                ce que nous disons, et notamment, constate que:</p>
+
             <div class="citation">
-                « Prendre mon parti de maintes choses, voilà en quoi consiste ma vie » (<em>De la certitude</em>,
-                §344).
+                « Prendre mon parti de maintes choses, voilà en quoi consiste ma vie » (De la certitude, §344).
             </div>
+
             <p>La façon dont l’empirisme constructif met en scène sa notion d’observable n’a pas
                 d’intérêt pour le ‘realistic’ parce qu’elle ne fait pas le travail qu’elle est prétendue faire: elle
                 sert, soit à énoncer un truisme logique, ‘les observés sont observables’, du même genre que ‘il
@@ -206,16 +444,18 @@
                 prétend pouvoir en faire dans certaines situations<sup><a href="#ref75" class="reference-link" id="r75">[75]</a></sup>. Une phrase qui n’a pas de sens, qui ne dit
                 rien n’est pas une phrase ‘mal-formée’, et les mots ou les expressions qui y sont
                 problématiques ne sont pas des mots ou des expressions que l’on ne peut pas utiliser quelque
-                soit la situation. Le non-sens est lié au fait que cette phrase dans cette situation ne
+                que soit la situation. Le non-sens est lié au fait que cette phrase dans cette situation ne
                 ‘fonctionne’ pas, c’est un outil qui ne marche pas, qui ne fait rien, comme une roue qui tourne
                 à vide, sortie de l’engrenage que constitue le réseau des usages :</p>
+
             <div class="citation">
-                La question : « ces mots ont-ils un sens » n’est-il pas similaire à la question : « ceci est-ce un
-                outil » quand on la pose en exhibant, disons un marteau ? Je dis : « oui, c’est un marteau ». Mais
-                qu’en serait-il si ce que nous tous prendrions pour un marteau était en d’autres lieux un projectile
-                par exemple, ou une baguette de chef d’orchestre ? Dans ces conditions, fais l’application
-                toi-même ! (<em>De la certitude</em>, §351)
+                La question : « ces mots ont-ils un sens » n’est-il pas similaire à la question : « ceci est-il
+                un outil » quand on la pose en exhibant, disons un marteau ? Je dis : « oui, c’est un marteau ».
+                Mais qu’en serait-il si ce que nous tous pendrions pour un marteau était en d’autres lieux un
+                projectile par exemple, ou une baguette de chef d’orchestre ? Dans ces conditions, fais
+                l’application toi-même ! (De la certitude, §351)
             </div>
+
             <p>Ce n’est pas la même chose de dire que les observés sont observables et de dire qu’il
                 existe des observables qui n’ont jamais et pourraient n’être jamais observés par quiconque. Ce
                 n’est pas non plus la même chose de dire qu’il existe des observables qui n’ont jamais et
@@ -232,95 +472,99 @@
                 nous savons qu’il faut faire pour cela. Je suis évidemment disposée à dire qu’il y a peut-être
                 dans mon jardin une pâquerette qui ne sera jamais observée par personne. Nous pouvons dire
                 ce qu’il faudrait faire pour cela et quelle serait la différence entre le fait que des pâquerettes se
-                trouvent dans un certain coin du jardin et celui qu’il ne s’en trouve pas. À la différence du
+                trouvent dans un certain coin du jardin et celui qu’il ne s’en trouve pas. A la différence du
                 second, le premier usage réifie la notion d’observable en la prétendant indépendante de celle
                 d’observé – tandis que le second a maintes applications ordinaires.</p>
         </div>
     </div>
 
-    <!-- === CAPSULE 2 : B-2-1 Ni donnée === -->
-    <div class="capsule">
-        <div class="capsule-title">🔍 B-2-1 Ni donnée</div>
+    <!-- === CAPSULE B-2-1 (suite) : Ni donnée === -->
+    <div class="capsule" id="capsule-b2-1-donnee">
+        <div class="capsule-title">🔸 B-2-1 Ni donnée</div>
         <div class="capsule-content">
-            <p>Il pourrait sembler, remarque Diamond, que l’esprit ‘realistic’ nous propose
-                d’abandonner la ‘fantasy’ de la transcendance au profit de l’immédiateté du donné. Plutôt que
-                de continuer à soutenir que ce qui est réel l’est en vertu d’une ‘matière’ qui se trouverait en
-                dehors de ce dont nous pouvons faire l’expérience, tourne ton attention vers ce qui se passe en
-                toi, dit, en quelque sorte, Philonous à Hylas, tourne ton attention vers ta propre expérience de
-                perception, vers la façon dont ton esprit est affecté et tu pourras voir ce qui est vraiment en jeu
-                dans notre jugement de réalité. Nous n’avons pas besoin de la ‘matière’, elle ne joue aucun
-                rôle, parce que</p>
+            <p>Il pourrait sembler, remarque Diamond, que l’esprit ‘realistic’ nous propose d’abandonner
+                la ‘fantasy’ de la transcendance au profit de l’immédiateté du donné. Plutôt que de continuer à
+                soutenir que ce qui est réel l’est en vertu d’une ‘matière’ qui se trouverait en dehors de ce dont
+                nous pouvons faire l’expérience, tourne ton attention vers ce qui se passe en toi, dit, en quelque
+                sorte, Philonous à Hylas, tourne ton attention vers ta propre expérience de perception, vers la
+                façon dont ton esprit est affecté et tu pourras voir ce qui est vraiment en jeu dans notre jugement
+                de réalité. Nous n’avons pas besoin de la ‘matière’, elle ne joue aucun rôle, parce que</p>
+
             <div class="citation">
                 « nous sommes sûrs que nous voyons, entendons, touchons ; en un mot que nous sommes
                 affectés d’impressions sensibles. » Et nous n’avons besoin de rien d’autre : « Je vois cette cerise,
                 je la touche, je la goûte ; je suis sûr qu’un rien ne saurait être vu, ni touché, ni goûté ; la cerise est
                 donc réelle. » (Berkeley, p.212)
             </div>
+
             <p>Et c’est justement cette dérive ‘empiriste’ de la critique du réalisme philosophique que
                 Wittgenstein reproche à Ramsey et veut lui-même éviter lorsqu’il écrit :</p>
+
             <div class="citation">
                 « Not empiricism and yet realism in philosophy, that is the hardest thing<sup><a href="#ref76" class="reference-link" id="r76">[76]</a></sup>. »
             </div>
-            <p>L’esprit ‘realistic’ n’échange pas la transcendance illusoire du réalisme métaphysique
-                pour le donné mythique de l’empirisme.</p>
 
-            <p>Nous montrons à quelqu’un les premiers termes d’une série d’itérations et nous lui
-                demandons de continuer en faisant la même chose. Il ne fait pas ce à quoi nous nous attendions
-                mais soutient qu’il fait pourtant la même chose. Puisque ‘la même chose’ peut être compris
-                différemment à partir du même exemple, faut-il en conclure que ce que ‘nous voulions dire par
-                là’ n’est pas entièrement contenu dans l’exemple ? La réponse de Ramsey se construirait autour
-                de l’idée que nous ne pouvons donner à l’élève que des exemples mais que nous pouvons nous
-                expliquer à nous-mêmes ce que nous voulons qu’il fasse, nous le savons pour nous-même
-                d’une façon qui va au-delà de ce que nous pouvons expliquer à autrui :</p>
+            <p>L’esprit ‘realistic’ n’échange pas la transcendance illusoire du réalisme métaphysique
+                pour le donné mythique de l’empirisme. Le problème n’est pas, souligne-t-elle, une question
+                d’absence ou de manque de justifications, d’incapacité à savoir ou à expliquer ; ce qui est en
+                cause c’est la croyance que de telles justifications ou de tels faits ‘fondamentaux’ existent et
+                sont nécessaires :</p>
+
             <div class="citation">
-                « Ramsey takes us to understand, or to be capable of understanding, more than we could in the
-                ordinary sense explain : the unrealism lies there. » (Diamond, p.65)
+                « … the trouble is not that we cannot know or understand, or be capable of understanding,
+                more than we could in the ordinary sense explain : the unrealism lies there. » (Diamond, p.65)
             </div>
-            <p>Philonous veut attirer l’attention de Hylas sur ce qu’il se passe en lui, sur sa propre
-                expérience, car, selon lui, c’est là, dans l’intimité des idées qui animent sa vie mentale, que se
+
+            <p>Philonous veut attirer l'attention de Hylas sur ce qu'il se passe en lui, sur sa propre
+                expérience, car, selon lui, c'est là, dans l'intimité des idées qui animent sa vie mentale, que se
                 trouve ce que nous avons besoin de savoir au sujet de notre connaissance de la réalité. Ramsey
-                pense que notre expérience de l’usage du langage et de notre compréhension du monde repose
+                pense que notre expérience de l'usage du langage et de notre compréhension du monde repose
                 sur des faits se trouvant dans un royaume ouvert à notre propre observation :</p>
+
             <div class="citation">
                 « He construes our experience using language, our experience reasoning about the world, as
                 taking place for each of us in a realm open to our observation, containing the honest facts and
                 regularities we need. » (p.65)
             </div>
+
             <p>Ramsey et Berkeley critiquent le recours à un fondement de notre connaissance de la
                 réalité ou de notre usage du langage qui empêche le philosophe de regarder comment nous
                 faisons pour parler de la réalité, pour arriver à nous entendre, mais finalement ils ne regardent
-                pas très bien eux non plus. Ce n’est pas parce que j’ai une certaine expérience intime,
-                personnelle, du toucher, de la couleur, du goût de la cerise que je peux dire qu’il y a là une
-                cerise. Il suffit pour s’en convaincre d’imaginer que personne d’autre que moi ne dise qu’il y a
-                là une cerise et que tout le monde affirme que c’est une prune. Il se pourrait que je défende ma
-                conviction et que j’argumente, sur la taille, sur la couleur, que je fasse goûter. Mais
-                précisément, j’essaierai de convaincre, d’aligner des arguments. Ces arguments, je sais qu’ils
+                pas très bien eux non plus. Ce n'est pas parce que j'ai une certaine expérience intime,
+                personnelle, du toucher, de la couleur, du goût de la cerise que je peux dire qu'il y a là une
+                cerise. Il suffit pour s'en convaincre d'imaginer que personne d'autre que moi ne dise qu'il y a
+                là une cerise et que tout le monde affirme que c'est une prune. Il se pourrait que je défende ma
+                conviction et que j'argumente, sur la taille, sur la couleur, que je fasse goûter. Mais
+                précisément, j'essaierai de convaincre, d'aligner des arguments. Ces arguments, je sais qu'ils
                 doivent être de ceux qui peuvent valoir comme justification. Je ne sais pas la réalité de la cerise
                 en privé. Pour ce qui est de Ramsey, et de la continuation de la série, que ferons-nous pour
-                corriger l’élève ? Nous donnerons un autre exemple, nous chercherons un contre-exemple,
-                nous essaierons d’expliquer la différence entre ce qu’il a fait et ce que nous avons montré, et
-                ce que nous dirons dépendra de ce que l’élève a fait et de la façon dont il répond à ce que nous
-                disons. C’est comme cela que nous faisons ordinairement. Mais Ramsey écarte la réponse
-                ordinaire et cherche une réponse philosophique. Une réponse absolument générale, qui
-                s’applique à tous les cas, à toutes les situations auxquelles je devrai répondre, mais qui ne
-                dépende d’aucun :</p>
+                corriger l'élève ? Nous donnerons un autre exemple, nous chercherons un contre-exemple, nous
+                essaierons d'expliquer la différence entre ce qu'il a fait et ce que nous avons montré, et ce que
+                nous dirons dépendra de ce que l'élève a fait et de la façon dont il répond à ce que nous disons.
+                C'est comme cela que nous faisons ordinairement. Mais Ramsey écarte la réponse ordinaire et
+                cherche une réponse philosophique. Une réponse absolument générale, qui s'applique à tous les
+                cas, à toutes les situations auxquelles je devrai répondre, mais qui ne dépende d'aucun :</p>
+
             <div class="citation">
                 « But in philosophy I want to know what really justifies any claim i might make that he went
                 wrong. I want something different from anything I might actually give you to justify my remarks
                 in particular circumstances. I want to know what is going wrong really consisted in. » (p.69)
             </div>
-            <p>Il voit dans le fait que l’on puisse poursuivre de différentes façons la marque de ce que
-                plusieurs interprétations déterminées existent, co-existent dans l’espace des choses que j’aurais
+
+            <p>Il voit dans le fait que l'on puisse poursuivre de différentes façons la marque de ce que
+                plusieurs interprétations déterminées existent, co-existent dans l'espace des choses que j'aurais
                 pu vouloir dire, « the space of things-that-I-might-possibly-mean. » Les exemples que je vais
-                donner expriment mon interprétation, d’une certaine façon, selon certains aspects, à un certain
-                moment, mais ne peuvent pas la représenter intégralement car celle-ci doit contenir, en
-                principe, toutes les réponses à toutes les questions, doit rassembler toutes les distinctions qui
-                peuvent l’identifier, la différencier dans un ensemble de possibles :</p>
+                donner expriment mon interprétation, d'une certaine façon, selon certains aspects, à un certain
+                moment, mais ne peuvent pas la représenter intégralement car celle-ci doit contenir, en principe,
+                toutes les réponses à toutes les questions, doit rassembler toutes les distinctions qui peuvent
+                l’identifier, la différencier dans un ensemble de possibles :</p>
+
             <div class="citation">
-                « What I do with examples, what I do in explaining, may be essential in making manifest what I
-                mean, but the explanation of what I mean cannot be given by examples, because they cannot
-                adequately represent my relation to what is possible. » (p. 69)
+                « What I do with examples, what I do in explaining, may be essential in making manifest
+                what I mean, but the explanation of what I mean cannot be given by examples, because they
+                cannot adequately represent my relation to what is possible. » (p.69)
             </div>
+
             <p>Abandonner la transcendance, ce qui est caché à tous, pour se réfugier dans le donné
                 empirique, ce qui accessible en privé, et lui faire jouer le même rôle de fondement de notre
                 usage du langage et de notre connaissance, c’est passer à côté du changement d’attitude
@@ -363,19 +607,21 @@
                 C’est à ce titre qu’il me semble utile d’y revenir. Car ce que la permanence du débat entre
                 réalistes et anti-réalistes montre, c’est que cette ouverture a été ignorée – et si elle a pu l’être,
                 c’est que la critique du ‘donné’ n’a été que partiellement entendue.</p>
+
             <p>Qu’est-ce qui autorise, à un moment donné, le réaliste à parler ou à qualifier un acte ou
                 un événement de ‘connaissance de la réalité’, qu’est-ce qui l’autorise à juger qu’un énoncé est
                 vrai ? Au nom de quoi, l’anti-réaliste, constructiviste ou empiriste, refuse-t-il de parler de
-                connaissance de la réalité ou de juger vrais certains des énoncés jugés vrais par les réalistes ?</p>
-            <p>Pour l’anti-réaliste, il n’y a que par l’expérience que nous pouvons connaître la réalité.
+                connaissance de la réalité ou de juger vrais certains des énoncés jugés vrais par les réalistes ?
+                Pour l’anti-réaliste, il n’y a que par l’expérience que nous pouvons connaître la réalité.
                 Mais toute la réalité ne fait pas l’objet d’une expérience. Nous avons vu que si l’empiriste
                 constructif se distingue de l’empirisme extrême d’un Roquentin c’est parce que, pour lui, il y a
                 de la réalité au delà des phénomènes : la réalité est faite de choses observables et de choses
-                inobservables. Cela vaut aussi pour le réaliste – tous les deux seraient prêts à reconnaître qu’il y
-                a un sens à dire, par exemple, que ‘la réalité connue pourrait ne pas l’être’, en donnant de cela
+                inobservables. Cela vaut aussi pour le réaliste – tous les deux serait prêts à reconnaître qu’il y a
+                un sens à dire, par exemple, que ‘la réalité connue pourrait ne pas l’être’, en donnant de cela
                 des raisons empiriques, ou qu’il y a un sens à dire que certains constituants de la réalité ne sont
                 pas encore connus, parce qu’ils ne peuvent pas encore l’être, et ‘pouvoir’ a ici un sens
                 empirique.</p>
+
             <p>Pour l’un et l’autre aussi, il y a une façon de prendre acte de la critique du Mythe du
                 Donné qui consiste à reconnaître qu’aucun énoncé, aucun énoncé empirique, aucun énoncé
                 d’observation, n’est à l’abri d’une révision et n’est indépendant d’un contexte théorique. Van
@@ -384,10 +630,10 @@
                 ‘pur’ donné, il est imprégné par le contexte théorique dans lequel il se forme. Cela n’empêche
                 pas que nous puissions, en principe, former des jugements vrais, que nous puissions, en
                 principe, parler de la réalité, mais, en fait, nous ne pouvons jamais être sûrs que nos jugements
-                ne devront pas être révisés. Mais dire qu’il y a une part de la réalité qui n’est pas encore
+                ne devrons pas être révisés. Mais dire qu’il y a une part de la réalité qui n’est pas encore
                 connue, voire qui ne peut pas être connue, n’est-ce pas laisser un refuge au Mythe du Donné ?
                 N’est-ce pas dire que la connaissance de cette réalité nécessiterait certaines expériences que
-                nous ne pourrons pas avoir, nécessairement, pour les inobservables, accidentellement, pour les
+                nous ne pourront pas avoir, nécessairement, pour les inobservables, accidentellement, pour les
                 observables-qui-ne-seront-jamais-observées, et que ce sont les expériences qui auraient dû être
                 au fondement de la connaissance de cette réalité pour qu’elle soit possible. L’absence n’a de
                 sens que sur fond d’une existence. Il y a des expériences, qu’il ne nous sera pas donné d’avoir.
@@ -408,18 +654,18 @@
                 connaissance. Mais que ceux-là aient rompu ce faisant avec le Mythe du Donné dépend encore
                 du ‘pourquoi’ de leur rejet. Si la raison en est que l’apprentissage du langage est un processus
                 public qui met en scène des objets publics et est gouverné par des sanctions publiques, et que
-                par conséquent, l’ ‘épisode intérieur’ ne peut pas prendre la forme d’un discours rationnel,</p>
-            <div class="citation">
-                « must needs escape the net of rational discourse »,
-            </div>
-            <p>ils ont seulement rejeté le Mythe tel qu’il apparaît dans une théorie des ‘données des
-                sens’. Mais cela n’empêche pas une autre forme dans laquelle le donné est le fait qu’un certain
-                objet physique x semble rouge à une certaine personne S à un certain moment,</p>
+                par conséquent, l’ ‘épisode intérieur’ ne peut pas prendre la forme d’un discours rationnel,
+                « must needs escape the net of rational discourse », ils ont seulement rejeté le Mythe tel qu’il
+                apparaît dans une théorie des ‘données des sens’. Mais cela n’empêche pas une autre forme
+                dans laquelle le donné est le fait qu’un certain objet physique x semble rouge à une certaine
+                personne S à un certain moment,</p>
+
             <div class="citation">
                 « the form of the givenness of such facts that physical object x looks red to person S at time t
-                or that there looks to person S at time t to be a red physical object over there. » (Sellars, 1997, p.
-                34)
+                or that there looks to person S at time t to be a red physical object over there. » (Sellars, 1997,
+                p.34)
             </div>
+
             <p>Cette forme du Mythe ne fait pas appel aux ‘données de sens’ traditionnellement
                 invoquées comme éléments d’analyse ou d’explication du fait que l’objet x semble rouge à S ;
                 ce fait est maintenant considéré comme irréductible. L’erreur ici est que ‘sembler rouge’,
@@ -434,23 +680,21 @@
             <p>Mais cette priorité logique du concept ‘être rouge’ par rapport à ‘sembler rouge’ semble
                 susciter un dilemme :</p>
             <ul>
-                <li>d’une part, ‘être rouge’ est logiquement antérieur à ‘sembler rouge’,</li>
+                <li>d’une part, ‘être rouge’ est logiquement antérieur à ‘sembler rouge’, « being red is
+                    logically prior, is a logically simpler notion, than looking red » : le concept ‘sembler
+                    rouge’, c'est-à-dire la capacité de reconnaître que quelque chose semble rouge,
+                    présuppose le concept ‘être rouge’, c'est-à-dire la capacité de reconnaître que quelque
+                    chose est rouge, et par conséquent ‘x est rouge’ ne peut pas être analysé en termes de
+                    ‘x semble rouge’ ;</li>
+                <li>mais d’autre part, il y a une nécessité logique qui lie ‘être rouge’ et ‘sembler rouge’
+                    qui paraît contredire le premier point :</li>
             </ul>
+
             <div class="citation">
-                « being red is logically prior, is a logically simpler notion, than looking red » :
+                « it is, of course, a necessary truth that : x is red  • ≡ • x would look red to standard
+                observers in standard conditions. » (Sellars, 1956, §12)
             </div>
-            <p>le concept ‘sembler rouge’, c'est-à-dire la capacité de reconnaître que quelque chose
-                semble rouge, présuppose le concept ‘être rouge’, c'est-à-dire la capacité de reconnaître que
-                quelque chose est rouge, et par conséquent ‘x est rouge’ ne peut pas être analysé en termes de
-                ‘x semble rouge’ ;</p>
-            <ul>
-                <li>mais d’autre part, il y a une nécessité logique qui lie ‘être rouge’ et ‘sembler rouge’ qui
-                    paraît contredire le premier point :</li>
-            </ul>
-            <div class="citation">
-                « it is, of course, a necessary truth that : x is red • ≡ • x would look red to standard observers
-                in standard conditions. » (Sellars, 1956, § 12)
-            </div>
+
             <p>La contradiction vient de ce que la nécessité logique semble être due au fait que le
                 membre de droite est une définition du membre de gauche. Si ‘être rouge’ est défini en terme
                 de ‘sembler rouge’, la priorité logique affirmée dans le premier point ne peut pas être
@@ -465,7 +709,7 @@
                 premier temps, affirmé ‘X est rouge’, se ravise et dise ‘ah non, X semble rouge’ sans que les
                 conditions de l’expérience visuelle n’aient été modifiées mais parce qu’il aurait appris quelque
                 chose au sujet de la nature de l’éclairage. Ou on peut imaginer deux personnes A et B
-                observant S, au même moment, et tandis que A dirait ‘il semble à S que X est rouge’, B dirait
+                observant S, au même moment, et tandis que A dirait ‘il semble à S que X est rouge’ , B dirait
                 ‘S voit que X est rouge’; il suffit d’attribuer à A une connaissance sur les conditions de
                 l’éclairage que B ignorerait. La différence entre ces deux types d’assertion, que ce soit sur le
                 mode direct ou sur le mode indirect tient à ce que l’une implique un engagement épistémique
@@ -475,13 +719,16 @@
                 S attache un énoncé à une expérience qu’elle a lorsqu’elle dit ‘X semble rouge’. Mais lorsque
                 B dit ‘S voit que X est rouge’, elle fait plus que décrire une expérience de S, relative à certaines
                 conditions, elle produit une assertion, inconditionnée, une assertion qu’elle endosse :</p>
+
             <div class="citation">
                 « [W]hen we use the word ‘see’ as in ‘S sees that the tree is green’ we are not only ascribing a
-                claim to the experience, but endorsing it. » ( §15, p.40)
+                claim to the experience, but endorsing it. » (§15, p.40)
             </div>
+
             <p>Et de même, lorsque S elle-même dit ‘X est rouge’, l’énoncé dépasse le cadre de
                 l’expérience, il énonce une vérité ; S endosse alors une assertion tandis que celle-ci est mise en
                 suspens lorsqu’elle dit ‘X semble rouge’ :</p>
+
             <div class="citation">
                 « [T]he statement ‘X looks green to Jones’ differs from ‘Jones sees that X is green’ in that
                 whereas the latter both ascribes a propositional claim to Jones’s experience and endorses it, the
@@ -500,6 +747,7 @@
                 d’affirmer ‘X est rouge’. Cet engagement, nous y reviendrons, tient à la capacité du locuteur
                 qui est attendue de lui de pouvoir rendre raison de son affirmation, de pouvoir justifier son
                 énoncé et assumer les conséquences qu’il entraîne.</p>
+
             <p>On peut voir maintenant comment les deux points de l’apparent dilemme peuvent être
                 réconciliés. S a modifié son énoncé et dit ‘X semble rouge’ car elle a acquis des raisons pour
                 ne plus endosser l’assertion ‘X est rouge’. En accord avec le premier point du ‘dilemme’,
@@ -508,19 +756,21 @@
                 reconnaître les conditions dans lesquelles l’usage du concept ‘être rouge’ est légitime et celles
                 dans lesquelles il ne l’est pas. Pour dire que X semble, et sous-entendre par là qu’il ne l’est
                 peut-être pas, il faut savoir ce que c’est qu’être rouge, il faut être capable de reconnaître la
-                couleur d’un objet en le regardant, et pour cela, il faut connaître les conditions qui sont requises
-                pour que l’on puisse affirmer la couleur d’un objet en le regardant. C’est lorsque l’on regarde
-                un objet dans ces conditions, que l’on peut appeler ‘conditions standards’, que l’on est en
-                mesure d’affirmer sa couleur. Ce qu’a appris S et qui l’a conduit à refuser d’endosser
+                couleur d’un objet en le regardant, et pour cela, il faut connaître les conditions qui sont
+                requises pour que l’on puisse affirmer la couleur d’un objet en le regardant. C’est lorsque l’on
+                regarde un objet dans ces conditions, que l’on peut appeler ‘conditions standards’, que l’on est
+                en mesure d’affirmer sa couleur. Ce qu’a appris S et qui l’a conduit à refuser d’endosser
                 l’assertion ‘X est rouge’, et que savait A mais que ne savait pas B, c’est que les conditions de
-                l’éclairage ne sont pas les conditions standards. Ce ne sont pas les conditions qui permettent de
-                justifier, de façon correcte, l’assertion.</p>
+                l’éclairage ne sont pas les conditions standards. Ce ne sont pas les conditions qui permettent
+                de justifier, de façon correcte, l’assertion.</p>
+
             <p>Il apparaît alors que la nécessité logique ne tient pas à ce que ‘être rouge’ serait défini
                 en terme de ‘sembler rouge’ mais bien le contraire : nous apprenons à énoncer la couleur dans
                 les conditions standards, et par conséquent, les conditions standards sont les conditions dans
                 lesquelles la couleur semble ce qu’elle est :</p>
+
             <div class="citation">
-                « We thus see that ‘ x is red • ≡ • x would look red to standard observers in standard
+                « We thus see that ‘ x is red  • ≡ • x would look red to standard observers in standard
                 conditions’ is a necessary truth not because the right-hand side is the definition of ‘X is red’ but
                 because ‘standard conditions’ means conditions in which things look what they are. »
             </div>
@@ -528,9 +778,9 @@
             <p>On peut ici, me semble-t-il, tirer profit de ce qui a été dit pour jeter un nouveau regard
                 sur l’agnosticisme de l’empirisme constructif concernant les inobservables. L’analyse de
                 l’usage des concepts ‘sembler rouge’ et ‘être rouge’ situe l’usage du premier sous la
-                dépendance du second : il faut être capable de reconnaître ce qui est rouge, pour être mesure de
-                reconnaître les situations dans lesquelles ‘être rouge’ doit être mis en doute, reconnaissance qui
-                se traduit par le refus d’endosser une telle assertion, lequel refus s’exprime par l’usage de
+                dépendance du second : il faut être capable de reconnaître ce qui est rouge, pour être en mesure
+                de reconnaître les situations dans lesquelles ‘être rouge’ doit être mis en doute, reconnaissance
+                qui se traduit par le refus d’endosser une telle assertion, lequel refus s’exprime par l’usage de
                 ‘sembler rouge’. L’agnosticisme vis-à-vis des inobservables est typiquement l’expression de la
                 mise en doute d’un énoncé tel que ‘ceci est la trace d’un électron’ et le refus de l’endosser. Il
                 faut donc croire que les conditions dans lesquelles les traces sont observées ne sont pas, ou ne
@@ -538,28 +788,28 @@
                 ces conditions ? Quelles sont les conditions, sachant, c'est-à-dire admettant, que l’électron est
                 un inobservable, dans lesquelles nous serions autorisés à dire ‘ceci est la trace d’un électron’,
                 et par suite, lorsque ces conditions ne semblent pas satisfaites, énoncer seulement ‘ceci peut
-                être ou peut ne pas être la trace d’un électron’ ? Question sans réponse puisque pour l’empiriste
-                constructif, les conditions qui permettent d’asserter l’existence d’une entité sont celles dans
-                lesquelles l’entité peut être observée et qu’un inobservable, par définition, ne peut pas l’être.
-                Ne faudrait-il pas, alors, comme le réaliste, dénoncer ce doute et affirmer que, dans certaines
-                conditions, nous avons les raisons requises pour endosser cet énoncé ? Tout le problème, vient,
-                comme nous allons le voir, de ce que sont pour le réaliste ‘les raisons requises’. Le
-                raisonnement de Salmon, par exemple, sur les micro-entités, était que la convergence des
-                résultats de différentes expériences témoignait du fait que ces résultats exprimaient, reflétaient,
-                un état de fait indépendant de ce que nous faisons ou pouvons dire, et que cela nous autorise à
-                les tenir pour vrai. Mais n’est-ce pas dans l’ordre inverse que les choses se passent ? N’est-ce
-                pas lorsque nous avons reconnu la vérité d’un énoncé que nous sommes disposés à dire que
-                cet énoncé est à propos de la réalité ? Ce n’est pas parce qu’il est à propos de la réalité que
-                nous le tenons pour vrai car comment pourrions-nous savoir qu’il est à propos de la réalité avant
-                de savoir qu’il est vrai. Comment la convergence des résultats pourrait-elle être tenue pour
-                l’expression de la réalité si elle n’était d’abord un élément reconnu comme pertinent dans
-                l’évaluation épistémique de l’énoncé ?</p>
+                être ou peut ne pas être la trace d’un électron’ ? Question sans réponse puisque pour
+                l’empiriste constructif, les conditions qui permettent d’asserter l’existence d’une entité sont
+                celles dans lesquelles l’entité peut être observée et qu’un inobservable, par définition, ne peut
+                pas l’être. Ne faudrait-il pas, alors, comme le réaliste, dénoncer ce doute et affirmer que, dans
+                certaines conditions, nous avons les raisons requises pour endosser cet énoncé ? Tout le
+                problème, vient, comme nous allons le voir, de ce que sont pour le réaliste ‘les raisons
+                requises’. Le raisonnement de Salmon, par exemple, sur les micro-entités, était que la
+                convergence des résultats de différentes expériences témoignait du fait que ces résultats
+                exprimaient, reflétaient, un état de fait indépendant de ce que nous faisons ou pouvons dire, et
+                que cela nous autorise à les tenir pour vrai. Mais n’est-ce pas dans l’ordre inverse que les
+                choses se passent ? N’est-ce pas lorsque nous avons reconnus la vérité d’un énoncé que nous
+                sommes disposés à dire que cet énoncé est à propos de la réalité ? Ce n’est pas parce qu’il est à
+                propos de la réalité que nous le tenons pour vrai car comment pourrions nous savoir qu’il est à
+                propos de la réalité avant de savoir qu’il est vrai. Comment la convergence des résultats
+                pourrait-elle être tenue pour l’expression de la réalité si elle n’était d’abord un élément
+                reconnu comme pertinent dans l’évaluation épistémique de l’énoncé ?</p>
         </div>
     </div>
 
-    <!-- === CAPSULE 3 : B-2-3 Une affaire linguistique === -->
-    <div class="capsule">
-        <div class="capsule-title">🗣️ B-2-3 Une affaire linguistique</div>
+    <!-- === CAPSULE B-2-3 : Une affaire linguistique === -->
+    <div class="capsule" id="capsule-b2-3">
+        <div class="capsule-title">📝 B-2-3 Une affaire linguistique</div>
         <div class="capsule-content">
             <p>À en croire le compte rendu réaliste, il semble que nous ayons une connaissance
                 immédiate de, disons, la convergence des résultats d’un ensemble de mesures comme étant
@@ -569,27 +819,29 @@
                 rouge’, il faut être capable de reconnaître que quelque chose est rouge, maîtriser l’usage du
                 concept ‘est rouge’ pour être en mesure de reconnaître les conditions dans lesquelles c’est
                 ‘semble rouge’ qui est approprié. Et ni ‘être rouge’ ni ‘sembler rouge’ ne sont de simples
-                comptes rendus d’une expérience immédiate, privée. Être disposé à énoncer ‘X est rouge’ c’est
-                avoir appris à reconnaître les conditions particulières dans lesquelles peut être assertée la
-                couleur d’un objet, et endosser cet énoncé. Tandis que être disposé à énoncer ‘X semble rouge’
+                comptes rendus d’une expérience immédiate, privée. Être disposé à énoncer ‘X est rouge’
+                c’est avoir appris à reconnaître les conditions particulières dans lesquelles peut être assertée la
+                couleur d’un objet, et endosser cet énoncé. Tandis qu’être disposé à énoncer ‘X semble rouge’
                 c’est reconnaître que certaines conditions de l’expérience vont à l’encontre des conditions qui
-                sont requises pour être en mesure d’affirmer que X est rouge. Nous avons remarqué aussi qu’en
-                dépit de leur claire différence logique, les situations dans lesquelles nous sommes disposés à
-                énoncer ‘X est rouge’ et celles dans lesquelles nous sommes disposés à énoncer ‘X semble
-                rouge’ peuvent être tout à fait identiques pour ce qui est de l’expérience : S a changé son
-                énoncé sans que les conditions de l’expérience n’aient changé et les énoncés produits par A et
-                B portaient sur une seule et même situation d’expérience. Ce qu’il y a de commun à ces deux
+                sont requises pour être en mesure d’affirmer que X est rouge. Nous avons remarqué aussi
+                qu’en dépit de leur claire différence logique, les situations dans lesquelles nous sommes
+                disposés à énoncer ‘X est rouge’ et celles dans lesquelles nous sommes disposés à énoncer ‘X
+                semble rouge’ peuvent être tout à fait identiques pour ce qui est de l’expérience : S a changé
+                son énoncé sans que les conditions de l’expérience n’aient changé et les énoncés produits par A
+                et B portaient sur une seule et même situation d’expérience. Ce qu’il y a de commun à ces deux
                 expériences, celle qui suscite l’énoncé ‘X est rouge’ et celle qui suscite l’énoncé ‘X semble
                 rouge’, Sellars l’appelle ‘la sensation de rouge’ ; mais il insiste aussi fortement pour dégager
                 l’usage qu’il fait de ce terme de ‘sensation’ de l’usage que pouvaient en faire Descartes ou
                 Locke lorsque les ‘sensations’ étaient considérées comme des pensées ou des idées, c'est-à-dire
                 comme des connaissances immédiates de quelque chose :</p>
+
             <div class="citation">
                 « [H]istorically the contexts ‘…sensation of…’ and ‘… impression of…’ were assimilated to
                 such mentalistic contexts as ‘… believes…’, ‘… desires…’, ‘…chooses…’, in short to contexts
                 which are either themselves ‘propositional attitudes’ or involves propositional attitudes in their
-                analysis. » (Sellars, 1956, p.56).
+                analysis. » (Sellars, 1956, p.56)
             </div>
+
             <p>Pour Sellars, au contraire, les notions de sensation et d’image, à la différence de la
                 notion d’« awareness » sont exemptes de tout contenu épistémique. Cela signifie que la
                 relation entre les mots et le monde n’est pas médiatisée par une relation entre les mots et des
@@ -599,10 +851,12 @@
                 redness », ne précède pas l’apprentissage de l’usage du mot « red ». Ce qui vaut pour ‘rouge’
                 vaut pour toute reconnaissance de quelque chose ou de quelque entité que ce soit et amène
                 Sellars à écrire que</p>
+
             <div class="citation">
                 « all awareness of abstract entities – indeed, all awareness even of particulars – is a linguistic
-                affair » (Sellars, 1956, p.63).
+                affair » (Sellars, 1956, p.63)
             </div>
+
             <p>Et cela signifie que la relation entre les mots et le monde est une relation entre les mots
                 et des objets, entre, par exemple, ‘rouge’ et les objets physiques rouges, les objets dont on est
                 disposés à dire, dans certaines conditions, qu’ils sont rouges. Notons qu’il est important que
@@ -612,17 +866,19 @@
                 l’expérience immédiate des objets en tant que tels, et de l’autre, des mots que nous leur
                 attacherions. Mais la relation dont parle Sellars entre ‘rouge’ et les objets rouges est une
                 relation intrinsèque : nous connaissons les objets rouges en même temps que nous apprenons à
-                maîtriser l’usage du concept rouge. L’erreur, écrit-il, serait de concevoir l’enfant qui apprend à
-                parler comme une personne dans un monde d’objets physiques dotés des propriétés que nous,
-                qui maîtrisons le langage, leur connaissons ; l’erreur serait de le situer dans l’espace logique
-                structuré dans lequel nous évoluons, et de croire qu’apprendre le langage consiste à attacher
-                aux éléments de cet espace des entités linguistiques :</p>
+                maîtriser l’usage du concept rouge. L’erreur, écrit-il, serait de concevoir l’enfant qui apprend
+                à parler comme une personne dans un monde d’objets physiques dotés des propriétés que
+                nous, qui maîtrisons le langage, leur connaissons ; l’erreur serait de le situer dans l’espace
+                logique structuré dans lequel nous évoluons, et de croire qu’apprendre le langage consiste à
+                attacher aux éléments de cet espace des entités linguistiques :</p>
+
             <div class="citation">
                 Unless we are careful, we can easily take for granted that the process of teaching a child to
-                use a language is that of teaching it to discriminate elements within a logical space of particulars,
-                universals, facts, ect., of which it is already undiscriminatingly aware, and to associate these
-                discriminated elements with verbal symbols. (Sellars, 1956, p.65)
+                use a language is that of teaching it to discriminate elements within a logical space of
+                particulars, universals, facts, ect., of which it is already undiscriminatingly aware, and to
+                associate these discriminated elements with verbal symbols. (Sellars, 1956, p.65)
             </div>
+
             <p>Il n’est pas inconcevable, même s’il n’y a pas d’ « awareness of redness » précédant
                 l’usage de « red », que l’on puisse parler d’une sensation de rouge antérieure à cet usage, mais
                 cela ne contredit pas l’idée que la ‘sensation’ n’est pas épistémique et ne conduit pas à penser
@@ -631,7 +887,7 @@
                 expérience dont ceux qui possèdent le langage dont le sujet d’expérience fait l’acquisition,
                 ceux-là, diront que c’est ‘une sensation de rouge’. L’enfant qui ne possède pas le langage peut,
                 dans certaines circonstances, être dit avoir de la peine, et l’acquisition du langage n’est pas
-                censée modifier ce qu’il ressent. Mais s’il est dit savoir ce qu’il ressent, c’est parce que lui est
+                censé modifier ce qu’il ressent. Mais s’il est dit savoir ce qu’il ressent, c’est parce que lui est
                 attribuée une capacité latente de produire plus tard, à propos de cela, un témoignage
                 spontané, direct, « to make noninferential reports about » qui témoigne de la maîtrise du
                 concept ‘avoir de la peine’. La suffocation, la chaleur, la douleur, sont dites être connues pré-
@@ -644,6 +900,7 @@
                 dit savoir ce que ces choses sont avant de posséder le vocabulaire qui lui permet de s’y référer
                 de façon jugée pertinente, parce que maintenant cette capacité, qui met en jeu des inférences,
                 ne lui est plus attribuée à l’avance.</p>
+
             <p>Ce qui apparaît là, aux antipodes d’une quelconque forme du Mythe du Donné, c’est
                 que la connaissance de ce que c’est que d’éprouver quelque chose est attribuée à un être en
                 raison de son appartenance potentielle à cette communauté : la communauté est la source de
@@ -651,43 +908,14 @@
                 c’est d’éprouver un sentiment aux êtres que nous les imaginons plus facilement comme des
                 partenaires ‘de conversation’, ou que nous les reconnaissons comme nous ressemblant, c'est-à-
                 dire, plus aux enfants qu’aux animaux, plus à un chien qu’à un insecte :</p>
+
             <div class="citation">
-                « This is to be explained on the basis of that sort of community feeling which unites us with
+                This is to be explained on the basis of that sort of community feeling which unites us with
                 anything humanoid. To be humanoid is to have a human face, and the most important part of that
                 face is a mouth which we can imagine uttering sentences in synchrony with appropriate
-                expressions of the face as a whole ». (Rorty, 1979, p.189)
+                expressions of the face as a whole. (Rorty, 1979, p.189)
             </div>
-            <p>Une sensation immédiate n’est pas épistémique et n’est pas de l’ordre d’une croyance
-                car il n’y a pas pour Sellars de croyance non-inférentielle dans le sens où, en quelque sorte,
-                celle-ci se suffirait à elle-même, serait une croyance par elle-même, comme une sensation peut
-                être une sensation par elle-même. Quelqu’un peut bien sûr produire une affirmation en réponse
-                à certaines conditions d’expérience et qui ne soit pas inférée d’une autre croyance. Mais il ne
-                peut pas avoir une croyance, ne peut pas être dit avoir une croyance, sans être capable de la
-                relier, de saisir les connections d’inférence qui la relie à d’autres croyances. Et nous rejoignons
-                ici ce qui a été dit précédemment à propos de la disposition à endosser une assertion.
-                Comprendre un énoncé, écrit Brandom (p.153), saisir son contenu propositionnel, c’est le
-                placer dans l’espace des raisons, être capable de l’insérer dans un jeu de questions et de
-                réponses, le situer vis-à-vis d’autres contenus, soit, par exemple, qu’ils peuvent être dérivés de
-                lui, soit qu’ils soient incompatibles. Cela vaut pour les énoncés observationnels aussi bien que
-                pour les autres. Une croyance, en général, appartient à un réseau de croyances et les concepts,
-                observationnels ou pas, ne sont pas des entités que l’on peut acquérir individuellement. Savoir
-                que X est rouge, ce n’est pas seulement prononcer ‘X est rouge’ en présence d’un X rouge,
-                c’est aussi être capable d’utiliser ‘X est rouge’ comme prémisse d’inférences conduisant à
-                d’autres croyances. Nous n’attribuons pas le savoir de ce qu’il dit à la seule condition qu’il soit
-                justifié à le dire au moment où il le dit. Il faut encore qu’il soit capable de s’engager dans une
-                pratique de justification :</p>
-            <div class="citation">
-                « The essential point is that in characterizing an episode or a state as that of knowing, we are
-                not giving an empirical description of that episode or state ; we are placing it in the logical space
-                of reasons, of justifying and being able to justify what one says. » (Sellars, §37, p.76)
-            </div>
-            <p>Attribuer un savoir à S, ce n’est pas observer un certain état de S, qui finalement aurait
-                pu s’être produit à l’insu de S elle-même, qui pourrait lui être ‘donné’. Pour que S soit dite
-                savoir que X est rouge, elle doit être capable d’indiquer les éléments qui l’autorisent à dire cela
-                et qui rendent cet énoncé fiable ; S doit savoir qu’elle sait, doit savoir en quoi et pourquoi ce
-                qu’elle dit est un savoir. Savoir la réalité, c’est savoir dire la réalité, et savoir dire c’est avoir
-                appris à maîtriser les conditions d’usage d’un réseau de concepts interconnectés, c’est avoir
-                appris à justifier et donc avoir appris ce qui vaut comme justification.</p>
+
             <p>S est dite connaître un élément de réalité si elle est capable de produire un énoncé
                 reconnu comme vrai, et cela demande qu’elle soit capable de produire les justifications
                 auxquelles doit être adossée la valeur épistémique de cet énoncé. Quelle est la nature des
@@ -709,26 +937,55 @@
         </div>
     </div>
 
+    <!-- === CAPSULE B-3 : « But have we lost the world ? » === -->
+    <div class="capsule" id="capsule-b3">
+        <div class="capsule-title">🌍 B-3 « But have we lost the world ?<sup><a href="#ref78" class="reference-link" id="r78">[78]</a></sup> »</div>
+        <div class="capsule-content">
+            <p>B-3-1 Le présent de la présence</p>
+            <p><strong>Habiter le langage</strong><br>
+                Avons-nous perdu le monde lorsque nous renonçons à tenir un discours ‘fondationnel’
+                sur la connaissance de la réalité, que celui-ci en appelle à une Transcendance, un ‘quelque
+                chose’ d’indépendant de ce que nous pouvons dire, indifférent à ce que nous pouvons faire,
+                dont les phénomènes seraient la manifestation plus ou moins fidèle qu’il s’agirait de déchiffrer
+                grâce à l’expérimentation et de … représenter grâce à la modélisation ; ou à un Donné,
+                découvert dans le profond silence de l’expérience immédiate la plus intime, elle aussi, donc,
+                indépendante du langage, mais que les mots auraient pour mission, peut-être impossible, de
+                rendre exprimable, communicable, en la … représentant ? Avons-nous perdu le monde en nous
+                enfermant dans le langage, en ramenant le problème de la connaissance de la réalité à une
+                réflexion sur les énoncés, sur la logique des concepts, sur les pratiques de justification ? Oui,
+                sans doute, si nous pensons les énoncés comme des alignements de lettres groupées, la logique
+                comme un calcul réglé sur des formes vides, et la justification comme une procédure de
+                validation de ces formes. Mais il n’en est rien. Le langage est habité. Les mots ne sont pas des
+                étiquettes collées sur des choses, ils sont des manières de faire, des manières d’agir, des
+                manières de vivre. La logique n’est pas une procédure externe qui s’appliquerait à des
+                énoncés, elle est l’expression de notre façon de penser, de notre façon de raisonner, de notre
+                façon de nous accorder. La justification n’est pas une procédure de validation externe, elle est
+                notre manière de rendre compte, de répondre, de nous engager. Le langage, c’est notre monde.
+                Nous ne l’avons pas perdu, nous l’habitons.</p>
+        </div>
+    </div>
+
     <!-- === NOTES === -->
     <div class="capsule sources">
         <div class="capsule-title">📚 Notes</div>
         <div class="capsule-content ref-list">
             <p id="ref71"><strong>71.</strong> G. Berkeley, <em>Trois dialogues entre Hylas et Philonous</em>, Paris: Flammarion, 1998.</p>
             <p id="ref72"><strong>72.</strong> Cora Diamond, <em>The realistic spirit: Wittgenstein, Philosophy, and the Mind</em>, Hardcover, (1995) 1991.</p>
-            <p id="ref73"><strong>73.</strong> J. Conant, Le premier, le second & le dernier Wittgenstein. In <em>Wittgenstein, Dernières pensées</em>. Paris : Agone, 2002, p.87.</p>
-            <p id="ref74"><strong>74.</strong> <em>De la Certitude</em> : 35 : Mais ne peut-on pas se représenter qu’il n’y ait pas d’objets physiques ? Je ne sais pas. Et cependant « Il y a des objets physiques » est un non sens. Serait-ce une proposition empirique ? Et ce qui suit est-il une proposition empirique : « Il semble qu’il y ait des objets physiques » ?<br>
-            36 : « Nous n’enseignons « A est un objet physique » qu’à ceux qui ne comprennent pas encore ou ce que signifie A ou ce que signifie « objet physique ». C’est donc un enseignement qui porte sur l’emploi des mots et « objet physique » est un concept logique. C’est pourquoi on ne saurait former une proposition comme : « il y a des objets physiques ». Mais des essais malheureux comme celui-ci on en trouve à chaque pas.</p>
-            <p id="ref75"><strong>75.</strong> J. Conant, <em>Dernières pensées</em>, Agone, Marseille, 2002, pp 49-88.</p>
-            <p id="ref76"><strong>76.</strong> L. Wittgenstein, <em>Remarks on the foundations of Mathematics</em> (ed. G.H.von Wright, R. Rhees, G.E.M.Anscombe) (Oxford, 1978), p.325.</p>
+            <p id="ref73"><strong>73.</strong> J. Conant, <em>Le premier, le second &amp; le dernier Wittgenstein</em>. In <em>Wittgenstein, Dernières pensées</em>. Paris : Agone, 2002, p.87.</p>
+            <p id="ref74"><strong>74.</strong> <em>De la certitude</em> : 35 : « Mais ne peut-on pas se représenter qu’il n’y ait pas d’objets physiques ? Je ne sais pas. Et cependant « Il y a des objets physiques » est un non sens. Serait-ce une proposition empirique ? Et ce qui suit est-il une proposition empirique : « Il semble qu’il y ait des objets physiques » ?<br>
+            36 : « Nous n’enseignons « A est un objet physique » qu’à ceux qui ne comprennent pas encore ou ce que signifie A ou ce que signifie « objet physique ». C’est donc un enseignement qui porte sur l’emploi des mots et « objet physique » est un concept logique. C’est pourquoi on ne saurait former une proposition comme : « il y a des objets physiques ». Mais des essais malheureux comme celui-ci on en trouve à chaque pas ».</p>
+            <p id="ref75"><strong>75.</strong> J. Conant, <em>Dernières pensées</em>, Agone, Marseille, 2002, pp.49-88.</p>
+            <p id="ref76"><strong>76.</strong> Wittgenstein, cité par Diamond, p.65.</p>
             <p id="ref77"><strong>77.</strong> W. Sellars, <em>Empiricism and the philosophy of mind</em>, Harvard University Press, 1997.</p>
+            <p id="ref78"><strong>78.</strong> Titre emprunté à Putnam (1995, p.64).</p>
         </div>
     </div>
 
-    <!-- === NAVIGATION === -->
+    <!-- === NAVIGATION BAS === -->
     <div class="nav-buttons">
-        <a href="02_I_Ethique_Connaissance_part05.html" class="nav-btn">← Précédent</a>
+        <a href="01_I_Ethique_B1.html" class="nav-btn">← Précédent</a>
         <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
-        <a href="02_I_Ethique_Connaissance_part07.html" class="nav-btn">Suivant →</a>
+        <a href="01_I_Ethique_B3.html" class="nav-btn">Suivant →</a>
     </div>
 
     <footer>

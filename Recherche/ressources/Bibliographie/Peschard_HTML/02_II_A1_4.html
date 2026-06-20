@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – II. Deux images de la représentation – A1.4</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        /* Bande horizontale (sommaire local) */
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        /* Bouton flèche en haut à droite */
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        /* Capsules */
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule-epigraphe {
+            background: #e9f3e3;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>II. Deux images de la représentation</h1>
+    <div class="sub">A. La représentation cognitive – le modèle du double – A1.4</div>
+
+    <!-- === BANDE HORIZONTALE (sommaire local) === -->
+    <div class="bande-sommaire">
+        <a href="#capsule-reduction">⚖️ A-1-4 Réduction : arguments et contre-arguments</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-mauvais-exemples">📉 Mauvais exemples : l’or, la chaleur</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-articulation">🔗 Articulation plutôt que réduction</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-enfermement">🔒 Enfermement logique de la réduction naturaliste</a>
+    </div>
+
+    <!-- === BOUTON FLÈCHE HAUT DROITE === -->
+    <div class="nav-top">
+        <a href="02_II_A2.html" class="nav-btn-top" title="Section A2 - Connexionnisme">→</a>
+    </div>
+
+    <!-- === CAPSULE A-1-4 : Réduction : arguments et contre-arguments === -->
+    <div class="capsule" id="capsule-reduction">
+        <div class="capsule-title">⚖️ A-1-4 Réduction : arguments et contre-arguments</div>
+        <div class="capsule-content">
+            <p><strong>Mauvais exemples : l’or, la chaleur</strong></p>
+
+            <p>Il y a aussi, comme source d’arguments servant à défendre le projet de réduction de ‘l’esprit’ à la science naturelle, outre l’option neurophysiologique, le recours à l’histoire des sciences. L’histoire des sciences semble fournir des raisons de croire au bien-fondé de la conviction que les propriétés sémantiques de la psychologie ordinaire doivent être réduites à des propriétés non sémantiques. Prenons l’exemple d’un mot aussi ordinaire que le mot ‘or’. Il ne fait pas de doute que la science a mis de l’ordre dans le langage ordinaire, elle fournit les moyens de réguler un usage qui était plus ou moins chaotique, en fait ‘irrationnel’, puisque même du cuivre pouvait être pris pour de l’or. Aujourd’hui aucune justification, aussi rhétorique qu’elle puisse être, ne résistera à l’explication scientifique de ce qui fait que l’or est l’or … Ne faudrait-il envisager l’avenir du concept de connaissance sur un modèle semblable ? Aujourd’hui, il existe une autre base que l’expérience subjective, quel que puisse être son mode de justification, pour attester que tel objet est en or ; demain, ou un certain jour, nous n’aurons plus besoin de l’expérience subjective de la connaissance pour identifier la connaissance.</p>
+
+            <p>Mais, d’une part, si l’on accorde un sens à l’argument, il faut néanmoins remarquer qu’il occulte une différence majeure : il y a deux moments d’expérience subjective qui sont impliqués dans l’usage du concept de connaissance – celle par laquelle est attribuée une connaissance et celle par laquelle est donnée la justification de cette attribution. À la différence de l’attribution de la qualité ‘être en or’, l’attribution de ‘avoir une connaissance’ implique une réflexivité de la part de ce à quoi, à qui est attribuée ‘l’avoir une connaissance’. Nous attendons de celui à qui nous attribuons une connaissance qu’il soit capable de dire ou de faire quelque chose qui justifie, qui soit une ‘bonne’ raison de cette attribution.</p>
+
+            <p>Si nous pensons que ce que nous devons entendre par ‘connaissance’ doit être in fine comparable à ce que nous entendons par ‘or’, du point de vue des critères d’attribution, c’est que la connaissance est pensée comme une chose inerte ; c'est-à-dire comme une chose se trouvant à l’intérieur du système cognitif et caractérisable en termes désengagés impliquant certains critères de reconnaissance de ce qu’est une représentation mentale. Mais ce concept-là n’a de sens que pour un observateur expliquant un système d’imitation. Ce n’est pas ainsi que peut fonctionner l’usage du concept de connaissance.</p>
+
+            <p>Selon Cummins<sup><a href="#ref104" class="reference-link" id="r104">[104]</a></sup>, par exemple, les croyances et les désirs ne sont pas des états psychologiques au sens où la notion ‘états psychologique’ intéresse la théorie computationnelle de la cognition. C’est sa conclusion au double constat que, d’une part, selon la théorie, les systèmes cognitifs sont identifiés – et jugés identiques – par leurs seules propriétés computationnelles, indépendamment de leur histoire, de leur environnement, ou de leur structure, et d’autre part, les croyances et les désirs, tels qu’ils sont pensés par le sens commun, ne peuvent être spécifiés indépendamment de l’environnement ou de l’histoire<sup><a href="#ref105" class="reference-link" id="r105">[105]</a></sup>. Cummins semble conclure que l’ontologie du sens commun est différente de l’ontologie de la théorie computationnelle, que « the two theories are talking about different things ». Cette conclusion est intenable, cependant, aux yeux de Stich. Que la psychologie populaire et les théories computationnelles produisent des assertions différentes et incompatibles ne signifie qu’elles parlent de choses différentes, car sinon</p>
+            <div class="citation">
+                « it would be all but impossible for theorists to disagree » (Stich, 1994, p.358)
+            </div>
+            <p>Sinon aussi, l’existence d’un ensemble de critères pour l’usage d’un concept interdirait, exclurait, par principe, que d’autres critères puissent venir s’ajouter ; cela exclut aussi bien toute modification des usages que tout désaccord, toute discussion à propos de ce dont nous parlons. Mais qu’il puisse exister des ensembles de critères différents n’est pas, je pense, le tout de l’argument de Cummins. Pour que des ensembles différents de critères puissent parler d’une même chose, et, pour reprendre l’objection de Stich, pour qu’un désaccord soit possible, encore faut-il qu’il y ait un rapport possible entre ces critères.</p>
+
+            <p>D’autre part, si l’on regarde l’objection de plus près : quel que soit la procédure d’attestation, y compris celle qui est appelée ‘scientifique’, qui est mise en jeu, quel que soit son degré d’objectivité reconnu, ne repose-t-elle pas sur l’expérience ? Et sur le choix d’une forme particulière de justification ? La science n’est-elle pas une pratique mettant en œuvre une certaine forme d’expérience et reposant sur une certaine forme de justification de ses énoncés ? Il suffit de se demander comment il peut être établi que certains critères constituent une connaissance digne de fonder l’identification d’une représentation. Ne sera-t-il pas question de les justifier avec des arguments reconnus comme valables dans le jeu de langage de ceux qui auront à en juger ? Comment établir que ces critères sont remplis ? Ne sera-t-il pas là aussi question de justification ?</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Articulation plutôt que réduction === -->
+    <div class="capsule" id="capsule-articulation">
+        <div class="capsule-title">🔗 Articulation plutôt que réduction</div>
+        <div class="capsule-content">
+            <p>Prenons un autre exemple qui semble parfois être utilisé par le réductionnisme, et qui me permettra de montrer que la critique de la réduction n’appelle pas nécessairement une ontologie intentionnelle : la critique de la réduction du concept de connaissance pourrait se voir objecter qu’il arrivera au concept de connaissance ce qu’il est arrivé au concept de chaleur. Nous avons appris que le phénomène de la chaleur pouvait être décrit et expliqué en termes non intentionnels. Le langage scientifique apparaîtrait comme une sorte de double du langage ordinaire donnant l’explication de tout ce dont il y est question et qui implique une subjectivité. L’idée étant que si la subjectivité est impliquée dans le langage ordinaire et peut ne pas l’être dans le langage scientifique tout en y étant question des mêmes choses, des mêmes phénomènes, c’est que le locuteur du langage ordinaire parle d’un point de vue, il est situé, tandis que le scientifique non. Et d’ajouter que ce ne serait pas la première fois que la science nous amène à réviser le contenu en mot ou en signification du langage ordinaire.</p>
+
+            <p>Mais il n’y aurait aucun sens à dire qu’une description en terme d’agitation moléculaire double ou explique ce dont il est question lorsque nous parlons de chaleur en tant qu’expérience vécue. L’agitation moléculaire explique la température thermodynamique d’un corps – la mesure scientifique ou même la seule vue de l’indication d’un thermomètre ne dit rien de la sensation de chaleur qui serait éprouvée au toucher de ce corps. Si la température est ce qui est mesuré par un instrument quel qu’il soit, ce à quoi nous sommes sensibles lorsque nous touchons un corps, n’est pas la température mais la chaleur, dans un sens non théorique. Et ce concept non théorique a été non pas réduit mais articulé au concept théorique explicable en terme d’agitation moléculaire. Le double usage du concept de chaleur, ordinaire et théorique ne doit pas masquer la confusion de catégorie qu’il y aurait à utiliser la réduction de la température à l’énergie cinétique moléculaire moyenne comme exemple pour une possible réduction de la connaissance à une explication scientifique. De même, l’expérience vécue de la connaissance et la description, disons, neuronale n’appartiennent pas au même univers de phénomènes. Pour qu’une réduction puisse être un exemple, il faudrait que ce soit la réduction de la chaleur comme sensation à une énergie cinétique moléculaire – mais ce n’est évidemment pas cette réduction-là dont il peut être question.</p>
+
+            <p>Il est vrai cependant, que la chaleur vécue et la température mesurée ne sont pas sans rapport : nous savons comment nous habiller en fonction de la température annoncée par le météorologiste, nous savons quelle doit être la température du bain d’un enfant pour qu’il ne se mette pas à hurler ; ce savoir n’est pas sans raté, l’interprétation de la température en terme de sensation de chaleur n’est pas exactement la même pour tout un chacun, mais, là encore, c’est sur les bords que les usages portent à controverse. Comment savons-nous alors ce que signifie la température en ‘terme’ de chaleur ? Ce n’est pas que nous avons mis ces concepts ‘en correspondance’, comme si leur signification actuelle était complètement indépendante de la relation épistémique qui existe entre eux. C’est plutôt que nous avons appris à articuler les deux expériences – l’expérience du toucher du corps et celle de la lecture, intersubjective, du thermomètre. Il y a un apprentissage collectif, et qui est affiné par un apprentissage individuel à l’origine du ‘flou sur les bords’. C’est à ce moment-là que nous avons ‘naturalisé’, partiellement, le concept de chaleur – nous avons appris à établir une sorte de relation de cohérence entre une expérience et une objectivité. Il reste, toutefois, que si nous sommes prêts à affirmer que telle personne a certainement chaud ou froid à la seule vue du thermomètre, nous serions néanmoins prêts à réviser notre jugement à la vue de son comportement – parce que l’expérience de la chaleur n’a pas été réduite – elle a été, avec le temps, articulée à l’expérience de lecture d’un thermomètre.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Enfermement logique de la réduction naturaliste === -->
+    <div class="capsule" id="capsule-enfermement">
+        <div class="capsule-title">🔒 Enfermement logique de la réduction naturaliste</div>
+        <div class="capsule-content">
+            <p>Le discours de la science porte sur ‘les propriétés ultimes’, donc tout discours qui prétend être une connaissance d’un phénomène quelconque doit s’exprimer ou se donner les moyens de s’exprimer un jour dans les mêmes termes. Le phénomène de connaissance-cognitive doit être exprimé en termes de propriétés ultimes des choses. Donc la cognition est ‘une chose’, ou en tout cas doit être appréhendée comme une chose, et peut nécessairement être comprise entièrement, c'est-à-dire se réduire à un discours non intentionnel. Mais d’où vient l’idée que la science connaît les propriétés ultimes, que les termes du discours scientifique sont indépendants de la situation expérientielle, comprenant les conditions historiques de l’expérimentation, des scientifiques ? L’idée que le discours scientifique n’est pas intentionnel, que la justification ne tient aucune place dans le fait que le discours scientifique est reconnu comme connaissance de la réalité ? Si ce n’est l’idée qu’il est un reflet de quelque chose qui se trouve ‘au dehors’ et qui est déterminé indépendamment de toute expérience. C’est une recherche qui se réclame de la science mais qui contredit à la démarche scientifique puisque l’explication du phénomène (la cognition) est un présupposé nécessaire de la recherche elle-même telle qu’elle est conduite. Dans l’idée même qu’il faut soumettre le discours sur la cognition à la forme du discours scientifique, il y a l’adhésion à une conception représentationniste de la science – et cette adhésion va de pair avec une conception représentationniste de la cognition qui exclut la prise en compte de la dimension intentionnelle. La cognition est formation de représentations ; ce qu’il faut trouver c’est un processus capable de produire des représentations. La démarche scientifique consiste à postuler un processus comme explication d’un phénomène, c'est-à-dire supposer que le processus produit, sous certaines conditions, le dit phénomène. En principe, on le sait, il n’y a pas de réfutation à proprement parler – il est toujours possible de mettre l’échec de la démonstration expérimentale sur le compte de certaines hypothèses auxiliaires. Mais dans les faits, il suffit que deux ou trois <em>referees</em> jugent peu convaincante la description d’une expérience pour qu’un article doive faire l’objet d’une révision. C’est le jeu. Dans les faits, il n’y a pas de travail scientifique sans une idée partagée de ce qui peut être reconnu comme une réfutation ou un ‘encouragement’.</p>
+
+            <p>Mais dans le cas de la naturalisation réductionniste, quelle idée de réfutation peut-il y avoir ? Qu’est-ce qui pourrait être réfuté ? L’idée que la cognition est une représentation ? Non, car si les processus qui sont proposés ne sont pas capables de produire de représentations, c’est que ce ne sont pas les bons. C’est que le bon processus n’a pas encore été trouvé. Et puisque aucune limite de temps n’est imposée, la découverte du processus tant cherché peut toujours être renvoyée dans le futur. Et si enfin un processus produisant des représentations était modélisé ? Ce ne peut être qu’un processus d’imitation, mais le problème n’est pas un problème empirique. Ce n’est pas l’avenir de la recherche cognitiviste qui dira si la métaphore de l’ordinateur était finalement fructueuse pour la compréhension des processus cognitifs. C’est un problème conceptuel qui a trait à ce que l’on appelle cognition, et un problème épistémologique qui a trait à ce que l’on attend de la connaissance scientifique. Un modèle produisant des représentations ne peut satisfaire que ceux qui sont déjà convaincus de la pertinence de l’idée représentationniste.</p>
+
+            <p>La naturalisation représentationniste est un discours qui ne peut rien avoir d’une explication de la cognition car il n’a aucun phénomène à expliquer : la cognition n’existe pas autrement qu’en tant que processus de représentation défini ‘sur mesure’. La représentation comme résultat du processus cognitif n’est même pas une hypothèse. Car ce qui est posé en hypothèse est ce qui doit jouer le rôle d’une explication. Ici la représentation ne joue pas le rôle d’une explication possible du fait que la réalité que nous connaissons soit telle qu’elle est. Car le processus de représentation qui est modélisé ne peut qu’être un processus d’imitation de ce que nous connaissons – et si ce processus d’imitation de ce que nous connaissons est appelé processus de représentation, c’est seulement parce qu’il est déjà admis que la connaissance de la réalité que nous avons déjà est le résultat d’un processus de représentation. La représentation est présentée comme un résultat, le résultat du processus de représentation. Mais dans la forme que suit, effectivement, la recherche, elle n’est pas un résultat parce qu’elle n’est pas un phénomène. La représentation ne peut être un phénomène que pour celui qui peut observer les deux termes de la relation. Nous n’avons devant nous que le résultat de notre activité de connaissance. Nous n’avons aucune idée de ce qui pourrait nous permettre de reconnaître une chose comme une représentation d’une autre chose déterminée indépendamment de la connaissance que nous en avons.</p>
+
+            <p>Devrait-on considérer la capacité de représentation comme l’explication de ce que nous sommes mieux adaptés que les autres espèces ? Mise en position d’explication, elle n’en reste pas moins une idée inconcevable, mais qui serait rendue crédible, semble-t-il, si, d’une part, effectivement, ce dont elle doit être une explication est, non pas une idée, mais un phénomène ; et d’autre part, si elle est la ‘meilleure explication’ pour ce phénomène. Le problème est que l’idée de la supériorité de notre adaptation n’a de prise que dans un cadre de pensée déjà représentationniste. La notion de supériorité suppose une évaluation comparée, et une évaluation comparée suppose des critères de jugement appliqués à l’ensemble de ce qui est évalué. D’où vient l’idée qu’il y aurait simplement un sens à parler de critères communs, de critères indépendants du point de vue de celui qui les énonce et les utilise ? La représentation ne peut pas être ici un élément du tableau parce qu’elle en est le cadre.</p>
+
+            <p>Le problème n’est pas que le naturalisme tienne pour acquis un discours et un langage scientifique qui seront nécessairement révisés. Il répond avec raison que les théories de la cognition seront révisées aussi, soit. Le problème est que ce ‘taken for granted’ s’accompagne d’une conception de ce qu’est la connaissance scientifique qui implique une perspective explicative, un cadre descriptif, un mode d’appréhension particuliers de la ‘cognition’. Il y a une conception métaphysique du discours scientifique qui induit un schéma représentationniste bi-polaire de la cognition. Et ce schéma, non seulement n’a pas d’accroche dans l’expérience : c’est une idée que connaître est produire des représentations. Mais en outre, parce qu’il prend des allures d’explication, il exclut tout intérêt, toute valeur épistémique de la prise en considération de l’expérience.</p>
+
+            <p>Mais imaginons quelqu’un qui pense que le discours scientifique est reconnu comme discours de la réalité, non en vertu du fait qu’il est un reflet, mais à l’issue d’un processus de justification qui s’inscrit dans le langage. Celui-là ne perçoit pas l’ontologie de la physique comme une contrainte universelle pesant sur tout discours de la connaissance scientifique. Celui-là peut défendre l’idée que la procédure de justification dépend du phénomène qui est étudié. Celui-là ne pense pas que l’intentionnalité est un élément nécessairement étranger à la connaissance scientifique – et ne voit pas pourquoi elle devrait nécessairement être exclue du processus de connaissance de la réalité ordinaire que cherche à comprendre les sciences cognitives. Cette attitude-là sera l’objet d’un développement ultérieur où nous verrons qu’il y a une distinction à faire entre utilisation des outils et du langage scientifique, d’une part, et adhésion ou soumission ontologique, d’autre part.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref104"><strong>104.</strong> R. Cummins, <em>The Nature of Psychological Explanation</em>, MIT Press, 1983.</p>
+            <p id="ref105"><strong>105.</strong> S. Stich, ‘What is a theory of mental representation?’, <em>Mental Representation, a reader</em>, Blackwell Publishers, 1994, p.357.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="02_II_A1_3.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="02_II_A2.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l’énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>
