@@ -7,6 +7,32 @@
 - **Structure** : chaque partie = une capsule principale ; citations dans `<div class="citation">` ; notes en bas
 - **Dernière mise à jour** : 19 juin 2026
 
+## Refonte
+Parfait, j’ai bien noté vos instructions. On reprend donc la Partie I (les fichiers 02_...) sur des bases saines, et on les vérifie/corrige un par un en suivant votre nouvelle stratégie.
+
+Je confirme que j’ai bien compris les points suivants :
+
+Vous me redonnez les fichiers 02_... (je ne présume rien de ce qui a été fait avant, je prends vos versions comme références).
+
+Je vérifie :
+
+Le contenu textuel (fidélité au .md original).
+
+Les liens de navigation en bas (Précédent / Retour table / Suivant) → je corrige si besoin.
+
+La cohérence des noms de fichiers.
+
+Je ne reconstruis la table des matières qu’à la fin de cette vérification complète de la Partie I, pour éviter les incohérences.
+
+On ajoutera deux améliorations (mais après avoir fini les corrections) :
+
+Un petit bouton fléché en haut pour avancer sans descendre.
+
+Une fine bande horizontale sous le titre avec les sous‑titres de la page.
+
+On pourra revoir le format des titres plus tard, après avoir stabilisé le fond.
+
+
 ---
 
 ## ✅ Partie I – L’éthique de la connaissance (terminée)
