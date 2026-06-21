@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – II.B‑3. Le temps vrai et l’émergence</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>II. Deux images de la représentation</h1>
+    <div class="sub">II.B‑3. Le temps vrai et l’émergence (pages 265‑270)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-temps">⏳ B‑3‑1 Une temporalité abstraite</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-post-humanisme">🚀 B‑3‑2 De l'humanisme au post-humanisme</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A1.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : B-3-1 Une temporalité abstraite === -->
+    <div class="capsule" id="capsule-temps">
+        <div class="capsule-title">⏳ B‑3‑1 Une temporalité abstraite</div>
+        <div class="capsule-content">
+            <p>Il reste encore une chose à dire concernant l’épistémologie kuhnienne et le conservatisme qui l’habite en dépit des critiques qu’elle a adressées à l’empirisme logique. C’est une remarque au sujet du temps, de la temporalité de l’activité scientifique qui a été introduite dans la réflexion épistémologique avec le tournant historique, comme elle l’a été par le connexionnisme dans la modélisation des processus cognitifs. Nous avons remarqué que le temps mis en scène par l’approche connexionniste n’était pas le ‘temps-vrai’ de l’action, la temporalité au sein de laquelle se déroule la rencontre effective d’un système et de son environnement. Le système qui est modélisé par le connexionnisme reste complètement abstrait relativement aux conditions effectives dans lesquelles se produit la connaissance de la réalité, la connaissance comme processus interactif qui implique le système neuronal, le système sensori-moteur et l’environnement sous forme de perturbations auxquelles le système doit s’accommoder, que le système doit assimiler en se transformant. La temporalité de la modélisation connexionniste ne permet pas de rendre compte de la flexibilité du comportement ; elle reste prise dans un schéma représentationniste où l’émergence est seulement l’expression d’une autre forme de computation, plus souple que la computation cognitiviste mais subordonnée toujours à une autorité qui la transcende et qui fournit le dessein et les normes de correction de sa réalisation. L’émergence est seulement un processus d’imitation, de reproduction, de représentation de formes déjà données, déjà déterminées, constituant le monde du modélisateur. L’émergence est obéissante – elle n’est pas inventive, elle n’est pas créative, parce que, précisément, le système cognitif qui est considéré reste une abstraction. Ainsi que le montreront les différentes études dynamiques de la cognition présentées dans la partie suivante, c’est seulement dans le temps réel de l’interaction qu’il est possible de sortir du cadre représentationniste, de penser la connaissance dont témoigne un comportement comme un processus d’accommodation et d’assimilation, un processus de transformation du système et de production, plutôt que re‑production, de réalité, processus de co‑constitution du système qui se transforme et du monde qui émerge.</p>
+
+            <p>Le parallèle esquissé entre les critiques formulées par le connexionnisme et par l’épistémologie kuhnienne aux conceptions traditionnelles et la place qu’y tient la notion de temps, se prolonge jusqu’au niveau de l’insatisfaction que peut finalement susciter cette notion de temps, le conservatisme qu’elle draîne encore, le caractère abstrait de la description proposée, l’absence des processus interactifs qui nourrissent le processus de connaissance, et finalement l’ignorance de la nature proprement émergente des structures épistémiques enracinées dans le procès en temps réel de la pratique. Pickering propose, au lieu des explications traditionnelles qui s’appuient sur des éléments invariants, une conception temporellement émergente des changements qui constituent l’histoire de la connaissance. Le temps réel est celui de la multiplicité et de l’interaction, aussi bien au niveau des pratiques, non pas un seul ‘big paradigm’ mais différentes traditions de recherche avec des spécificités matérielles et conceptuelles, que des implications sociales :</p>
+
+            <div class="citation">
+                « Just as scientific practice is a continual process of aligning conceptual structures and material performances, so, too, is it a process of aligning all sorts of social variables : goals, interests, social structures, etc., […] In real time dialectic of resistance and accommodation everything is at stake in relation to everything else ; everything becomes with nothing necessarily occupying a still explanatory centre. » (Pickering, 2002, p.507)
+            </div>
+
+            <p>La nature encore abstraite de la conception de l’activité scientifique développée par Kuhn, en dépit de l’historicité revendiquée par le mouvement critique auquel il appartient, est thématisée par R. Giere<sup><a href="#ref182" class="reference-link" id="r182">[182]</a></sup> au travers de la notion ‘d’unité de base’ de l’analyse épistémologique. En ce qui concerne Carnap et les empiristes logiques, l’analyse de la science consistait à analyser les théories scientifiques comprises comme un ensemble d’énoncés organisés en système axiomatique. L’unité de base est l’énoncé individuel et les relations entre ces unités de l’analyse sont des relations logiques. Le travail conduit par l’empirisme logique ne s’intéresse pas à la science en train de se faire et à ceux qui la font réellement ; l’empirisme logique fournit ‘un modèle du scientifique idéalement rationnel’ :</p>
+
+            <div class="citation">
+                « The logical empiricist analysis provides a model of the ideally rational scientist. It says what real scientists would do if they were perfectly rational. » (p.4)
+            </div>
+
+            <p>Dans le modèle de l’empirisme logique, il n’y a pas de différence concevable entre ce qui concerne un individu ou un groupe : les individus sont idéalement rationnels et il n’y a qu’une façon de l’être.</p>
+
+            <p>Le mouvement épistémologique initié dans les années 60 a certes, reconnaît Giere, apporté certaines modifications dans la façon de considérer l’activité scientifique, mais pas si profondes que l’on est tenté de le croire, « not so great as is often thought. » Chez Lakatos, l’unité d’analyse n’est plus un énoncé ou un ensemble d’énoncés mais une tradition de recherche, notion inspirée de l’idée kuhnienne de paradigme. Les scientifiques qui poursuivent une tradition progressive, tout comme ceux, nous l’avons déjà remarqué, qui adhèrent à un paradigme, sont qualifiés de ‘rationnels’, et participent, eux aussi, à une histoire interne de la science, nettement séparée de l’histoire externe. Parler de traditions ou de paradigmes rivaux laisse penser qu’il s’agit de groupes sociaux qui s’inscrivent dans la temporalité effective du développement de la connaissance scientifique. Mais définie en termes de théorie et de cadre méthodologique, une ‘tradition de recherche’ n’est pas moins abstraite que les énoncés ou théories des empiristes logiques. Le principe de rationalité qui gouverne la modélisation de l’activité scientifique rend impossible une approche réellement historique et ampute la temporalité de la part de créativité qui est propre à son instanciation. Le reproche commun qu’adresse Giere à ces approches est de rester abstraites dans le sens où elle ne se rapportent pas au comportement d’agents réels mais idéaux. La stratégie délibérée de produire une théorie ‘objective’ de la rationalité scientifique, les conduit à donner un compte rendu désincarné du progrès rationnel. Alors qu’il faudrait selon Giere pouvoir prendre en considération le scientifique en tant qu’individu :</p>
+
+            <div class="citation">
+                « [If] one is to understand how a particular scientific achievement came about, one must examine a group of scientists. There is, however, nothing more to examine the group than examine the individuals who made up the group—together with their interactions. » (p.7)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : B-3-2 De l'humanisme au post-humanisme === -->
+    <div class="capsule" id="capsule-post-humanisme">
+        <div class="capsule-title">🚀 B‑3‑2 De l'humanisme au post‑humanisme</div>
+        <div class="capsule-content">
+            <p>Selon Pickering, cependant, ce n'est pas sur les individus que doit se focaliser le regard de l'épistémologue. C'est peut-être parce que justement l'épistémologie du tournant historique ne parlait que des individus, des scientifiques, qu'elle ne pouvait le faire que de façon abstraite. Au cours d'une révolution, tous les changements, toute l'Histoire est du côté des scientifiques,</p>
+            <div class="citation">
+                « all of the interesting historical action in the Structure... is on the side of the human scientists » ;
+            </div>
+            <p>ce sont leurs paradigmes qui changent, les façons de travailler des chercheurs, leurs façons de voir le monde, les questions qu'ils peuvent poser, les réponses qu'ils peuvent recevoir, mais rien n'est dit du versant matériel de la recherche, le monde des instruments, des machines, des appareillages. Or, c'est précisément à l'intersection du monde des humains et du monde des non‑humains que se déroule la pratique scientifique :</p>
+            <div class="citation">
+                « the action in scientific practice is centered at the intersection of the human and the nonhuman, rather than in one domain or the other. »
+            </div>
+            <p>C'est sans doute parce que l'activité scientifique a été dématérialisée que la temporalité dans laquelle elle est située reste ‘non vraie', abstraite ; pour cela aussi, en occultant les multiples formes concrètes de la pratique scientifique réalisées en différents lieux, qu'il est possible d'imaginer une grande unité‑unanimité de la communauté autour d'un grand paradigme ; et pour cela aussi qu'il était possible d'imaginer une autonomie de la communauté, dégagée‑désengagée de toute relation avec les nécessités, contraintes, opportunités matérielles, éléments à part entière du moment historique général dans lequel s'inscrit et auquel participe l'activité scientifique. Passer d'une conception ‘humaniste', qui ne considère que la composante humaine de l'activité scientifique, à la conception ‘post‑humaniste' qu'il propose, permet, d'après Pickering, de sortir de l'affrontement traditionnel entre réalisme et anti‑réalisme obligeant justement à situer le contenu de la connaissance du côté des humains, la réalité du côté des non‑humains. En plaçant le centre de l'action à l'intersection, la distinction même entre réalité et représentation perd son sens : ce qui émerge, c'est une réalité qui est à la fois humaine et non‑humaine, matérielle et conceptuelle, historique et contingente. La connaissance n'est plus une représentation d'un monde préexistant, mais le produit d'une pratique temporelle où les humains et les non‑humains s'ajustent mutuellement dans un processus de résistance et d'accommodation. C'est cette conception que Pickering appelle le « mangle of practice » – un processus où tout est en jeu, où rien n'est fixé d'avance, et où la temporalité réelle est créatrice d'ordre et de sens.</p>
+            <p>Cette approche rejoint, sur le plan épistémologique, ce que l'énaction propose pour la cognition : l'émergence des structures cognitives dans le temps réel de l'interaction d'un système avec son environnement. La connaissance n'est pas donnée, elle n'est pas représentée, elle est en acte, elle se fait dans le temps, avec le monde. C'est là que le temps cesse d'être un paramètre abstrait pour devenir le tissu même de l'expérience et de la connaissance.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref182"><strong>182.</strong> R. Giere, <em>Explaining Science: A Cognitive Approach</em>, 1988, p.3‑7.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="02_II_B2_4.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A1.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

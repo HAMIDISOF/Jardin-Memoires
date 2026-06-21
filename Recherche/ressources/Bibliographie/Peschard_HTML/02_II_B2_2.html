@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – II.B‑2.2. Constitution de l'objet scientifique</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule-epigraphe {
+            background: #e9f3e3;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>II. Deux images de la représentation</h1>
+    <div class="sub">II.B‑2.2. Constitution de l'objet scientifique : de la logique à la pratique (pages 239‑249)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-histoire">📜 Histoire contre unité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-pratique">🔧 Pratique contre abstraction</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-wittgenstein">🧩 Wittgenstein : signe simple</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-perception">👁️ Perception apprise</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-critique">⚡ Critique des données</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-apriorisme">📐 A priorisme constitutif</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="02_II_B2_3.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : L'histoire contre l'unité === -->
+    <div class="capsule" id="capsule-histoire">
+        <div class="capsule-title">📜 L'histoire contre l'unité</div>
+        <div class="capsule-content">
+            <p>Il y a deux idées qui sont absolument fondamentales à l'empirisme logique et qui sous-tendent tous les travaux qui lui sont rattachés : la science est un ensemble d'énoncés gouverné par des règles, et tous ces énoncés s'écrivent, peuvent être retranscrits dans un même langage logique où sont, en principe, parfaitement différenciables les énoncés théoriques et les énoncés empiriques. Kuhn-praticien a pu mettre en question l'idée que la connaissance scientifique pouvait être identifiée simplement à un système d'énoncés, logiquement déterminé ou pas d'ailleurs. Mais c'est l'historiographie qui lui a permis de mettre en question l'unité de la science et l'existence d'un ‘langage d'observation'.</p>
+            <p>Les logiciens abordent la science comme un objet à analyser, un objet qu'il faut démonter pour en comprendre le fonctionnement, les rouages. La perspective historique, elle, est participative. Tandis que le logicien cherche à exprimer la logique qui fait l'unité de la science, Kuhn-historien est confronté d'emblée à la distance historique, à la différence sous la ressemblance, à ce qu'il appellera « l'incommensurabilité » entre des conceptions scientifiques d'époques différentes. Pour Carnap et l'empirisme logique, le langage est le tabernacle du principe unitaire de la science ; pour Kuhn et les philosophes ‘historiens' on pourrait presque dire que l'unité des langages, l'unité propre à différents langages, oblige à la différence des sciences. Mais ici et là, ‘langage' ne désigne pas la même chose : pour l'empirisme logique, le seul langage qui compte, qui compte vraiment, c'est le langage logique.</p>
+            <p>Kuhn ne confond pas les questions de la distinction entre sens et non-sens et de la distinction entre science et non-science. Il ne s'intéresse pas au fait qu'un énoncé ait ou n'ait pas de signification, parce que ce ‘fait' n'est pas, pour lui, une ‘propriété' de l'énoncé. La question de la signification ne se pose pas pour lui en terme de caractérisation logique ou de conformité à des règles. Pour lui, à la différence de Carnap et dans l'esprit du second Wittgenstein, l'énoncé s'inscrit dans un usage langagier et opérationnel :</p>
+            <div class="citation">
+                « [Il] est intéressant de comparer la multiplicité des instruments du langage et de leur mode d'utilisation, la multiplicité des espèces de mots et de propositions avec ce que les logiciens ont dit au sujet de la structure du langage (y compris l'auteur du <em>Tractatus logico-philosophicus</em>) » (Wittgenstein, 1953, § 23)
+            </div>
+            <p>Dans un de ses derniers textes, Kuhn dira que la découverte de l'histoire lui a fourni l'assise et les arguments pour la formulation de désaccords vis-à-vis de l'épistémologie traditionnelle qu'il éprouvait déjà lorsqu'il était un scientifique en exercice. Ses débuts dans ‘l'histoire des sciences' l'ont confronté à des énoncés du corpus aristotélicien auxquels il était incapable de conférer une signification empirique alors même qu'ils semblaient vouloir décrire un phénomène naturel. Ces énoncés étaient absurdes lorsqu'il les lisait comme il aurait lu des énoncés contemporains, comme l'épistémologie traditionnelle conduisait à le faire en raison du principe de l'unité de la science voulant que tous les énoncés scientifiques, tous les énoncés doués de signification puissent être ramenés aux mêmes termes d'observation. La pratique herméneutique de l'histoire de la philosophie l'a conduit à une autre approche de ces énoncés étranges : les replacer dans un ensemble de textes et placer son regard au sein de cet ensemble. Oublier ce qu'il savait et découvrir, ou essayer de retrouver ce dont l'auteur voulait parler. Le tournant historique a d'abord tenu dans ce changement d'attitude envers les textes du passé : ne pas les lire à la lumière du présent et dans les termes du présent. Cette attitude refuse l'alternative posée par le principe de l'unité de la science entre énoncés traduisibles dans le langage contemporain de la science et énoncés absurdes.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : La pratique contre l'abstraction === -->
+    <div class="capsule" id="capsule-pratique">
+        <div class="capsule-title">🔧 La pratique contre l'abstraction</div>
+        <div class="capsule-content">
+            <p>Ce en quoi <em>La structure...</em> rompt avec la perspective logique qui veut saisir la science en tant qu'ensemble d'énoncés, c'est la mise en avant d'un savoir qui n'est pas propositionnel, un savoir-faire et un ‘savoir-voir' scientifiques qui ne sont pas saisissables au travers des seuls énoncés, qui ne peuvent être perçus que dans la manière dont les scientifiques font usage, en fait, de leurs énoncés. S. Laugier<sup><a href="#ref153" class="reference-link" id="r153">[153]</a></sup> rappelle le reproche que Putnam fait à Popper « de ne pas tenir compte du fait que la science est une pratique » ; les énoncés théoriques ne sont pas de simples conjectures, « les idées sont importantes en tant qu'elles guident la pratique ». L'activité scientifique s'inscrit dans un réseau de pratiques : les théories ne sont pas, ou pas seulement, des conjectures, elles sont un engagement dans la réalité.</p>
+            <div class="citation">
+                « La théorie, écrit S. Laugier, n'est pas une fin en soi »
+            </div>
+            <p>La science ne s'en tient pas là, à la simple formulation de théories, et donc la critique des théories ne peut pas s'en tenir là non plus. La philosophie des sciences doit donc prendre en considération le reste, ce dans quoi sont prises les théories, un ensemble d'actes, incarnés, actes de langage, actes de pratiques. Ce que Kuhn soutient, c'est justement que ce qui fait des énoncés scientifiques des énoncés de connaissance, ce qui fait de leur contenu une connaissance, n'est pas saisissable au regard du seul ensemble que ces énoncés pourraient former. Pour qu'il ‘fonctionne', il manquerait à cet ensemble, aussi complet serait-il, quelque chose qui n'est pas de l'ordre de la proposition ni de la règle mais du ‘faire', et notamment une aptitude à reconnaître des situations, des types de problèmes – la science n'est pas seulement un savoir propositionnel – c'est aussi un pouvoir-faire face à des situations réelles.</p>
+            <p>Pour Kuhn la science est d'abord une manière commune et même communautaire de faire usage des énoncés en rapport avec une pratique. Quelle que soit la signification du ‘paradigme' que l'on considère, il ne s'agit jamais d'un ensemble d'énoncés qu'il faudrait ou même que l'on pourrait considérer indépendamment de l'activité des praticiens. Pour prendre les deux acceptions principales, le paradigme comme modèle exemplaire, ou le paradigme comme matrice disciplinaire, le terme veut désigner l'articulation entre, d'une part, des énoncés ou des principes tacites, et d'autre part, des situations problématiques, ou une organisation communautaire du travail. Avec Kuhn les énoncés scientifiques sont d'abord des éléments de langage, langage partagé ; l'attention se porte sur les conditions de l'échange et de l'entente ; le changement de théorie apparaît comme une mésentente, comprendre devient aussi entendre, et pouvoir répondre, parler la même langue. Éléments de langage, les énoncés, les termes sont liés les uns aux autres, les significations sont inter-dépendantes. Mais aussi, l'échange de paroles s'inscrit dans une gestuelle, une pratique en synchronie avec le discours, une manière de faire, de se rapporter aux choses dont le discours fait état. La science n'est pas un ensemble d'énoncés qui peuvent être considérés comme une syntaxe de signes abstraits de leurs conditions d'usage ; ils sont les éléments d'un langage situé et attaché à une manière de concevoir et expérimenter la réalité.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Wittgenstein – signe simple et détermination de la signification === -->
+    <div class="capsule" id="capsule-wittgenstein">
+        <div class="capsule-title">🧩 Wittgenstein : signe simple et détermination de la signification</div>
+        <div class="capsule-content">
+            <p>La possibilité pour l'empirisme logique de montrer l'unité de la science tient à la possibilité d'établir un langage unique permettant d'exprimer tous les énoncés de connaissance, à quelque science qu'ils appartiennent. Un langage logique est défini par l'énoncé de règles (« les règles de formation qui déterminent la construction des énoncés du langage (…) et les règles de transformation qui déterminent quelles sont les inférences légitimes »), mais avant même la fixation des règles, il faut se donner un vocabulaire permettant d'exprimer tous les termes utilisés dans n'importe quelle science et de former les énoncés de base auxquels devront pouvoir être logiquement rapportés tous les énoncés de la science, c'est-à-dire tous les énoncés doués d'une signification cognitive, d'un contenu de connaissance.</p>
+            <p>Pour Wittgenstein dans le <em>Tractatus</em>, c'est le ‘signe simple' qui assure la détermination du sens :</p>
+            <div class="citation">
+                « le postulat du signe simple est le postulat de la détermination du sens ».
+            </div>
+            <p>Toute proposition doit pouvoir être analysée en propositions élémentaires composées de signes simples. Avec l'empirisme logique, ce sont des termes de base qui doivent être supposés pour la détermination du sens, termes ultimes de la réduction ou constituants élémentaires de la construction des énoncés doués de sens.</p>
+            <p>Dans les <em>Investigations philosophiques</em>, Wittgenstein interroge la notion de ‘signes simples'. Pour parler de ‘signes simples', encore faut-il savoir ce que l'on entend par ‘simple' et ‘complexe' :</p>
+            <div class="citation">
+                « [Mais] quelles sont les plus simples parties intégrantes dont se compose la réalité ? … Et voilà ce qui importe : dans quel sens ‘composé' ? (…) Le mot ‘composé' (et donc aussi le mot ‘simple') est employé par nous en d'innombrables modes différents, reliés entre eux de différentes manières.» (§46)
+            </div>
+            <p>Ce qui est reconnu comme simple ou complexe dépend des situations. Est-ce que le simple sera ce qui ne peut qu'être nommé ? Un objet, un élément ‘simple' ne pourrait être décrit, il ne pourrait être que nommé.</p>
+            <p>La dénomination est considérée comme le niveau zéro du fonctionnement du langage, sur lequel se greffe le niveau descriptif. Mais l'acte par lequel nous dénommons quelque chose que nous ne pouvons pas décrire n'est pas encore « un mouvement dans le jeu de langage » – nous ne sommes pas au ‘niveau zéro' de la représentation, nous en sommes à constituer un moyen de la représentation :</p>
+            <div class="citation">
+                « Le nom ne représente pas une chose, il l'institue en moyen de la représentation. »
+            </div>
+            <p>Le fait de ne pouvoir être que nommer n'est pas une propriété de la chose, cela témoigne de l'usage qui est fait du signe dans le langage : que la chose est un moyen de la représentation, que le signe n'est pas une représentation d'un objet.</p>
+            <div class="citation">
+                « je ne nommerai ‘nom' que ce qui ne peut se trouver dans la combinaison ‘X existe'. Et ainsi on ne peut pas dire ‘le rouge existe', parce que s'il n'y avait pas le rouge, on ne pourrait absolument pas parler de lui » … Il nous semble que nous disions là quelque chose au sujet de la nature du rouge : à savoir que les mots « le rouge existe » n'auraient pas de sens. Car le rouge existerait « en soi et pour soi ». (…) Mais en réalité, nous voulons considérer simplement le « rouge existe » en tant qu'énoncé : le mot rouge a une signification. (1953, §58)
+            </div>
+            <div class="citation">
+                « dire « si cette chose n'était pas, elle ne pourrait avoir de nom » revient à dire que : si cette chose n'existait pas, nous ne pourrions pas nous en servir dans notre jeu. – Ce qu'il faut apparemment qu'il y ait, appartient au langage. C'est dans notre jeu, un paradigme : quelque chose qui serve à la comparaison. » (1953, §50)
+            </div>
+            <p>Ne pas pouvoir dire de X qu'il existe ni qu'il n'existe pas n'est pas énoncer une propriété sur X, de même que ce n'est pas attribuer une propriété au mètre étalon que de dire que l'on ne peut dire à son sujet qu'il serait long d'un mètre ni qu'il ne serait pas long d'un mètre. La critique que Wittgenstein fait du <em>Tractatus</em> est grammaticale : l'objet qui ne peut être que nommé mais pas décrit n'est pas représenté, il est un moyen de la représentation.</p>
+            <p>La conception du vocabulaire de base que développe Carnap dans SLL ne s'oppose pas du tout à l'idée que ce soit un moyen de la représentation, bien au contraire : le vocabulaire de base, c'est-à-dire l'ensemble des termes qui ne peuvent pas être réduits, est un instrument dans le langage, ou plutôt constitutif du langage :</p>
+            <div class="citation">
+                « Ce qu'il faut apparemment qu'il y ait, appartient au langage »
+            </div>
+            <p>Et Carnap affirme même que ce qui constitue le vocabulaire de base résulte d'un choix et dépend de ce que l'on attend du langage qu'il participe à définir.</p>
+            <p><strong>Néanmoins.</strong></p>
+            <p>(1) d'une part, les termes de base ont une signification, au sens où ils représentent quelque chose. Ils sont des éléments de connaissance. Le vocabulaire de base choisi par Carnap, après une tentative phénoméniste, est physicaliste ; ce sont des termes exprimant des déterminations physiques,</p>
+            <div class="citation">
+                « des termes dont la signification puisse être donnée de manière suffisamment claire dans l'expérience<sup><a href="#ref154" class="reference-link" id="r154">[154]</a></sup> ».
+            </div>
+            <p>De façon générale, l'idée d'un vocabulaire de base qui puisse servir de fondement à tous les énoncés de connaissance suppose l'existence de ‘données', des données d'expérience simples, dans un langage phénoméniste, ou des données d'observation, dans un langage physicaliste. La notion de ‘donnée' veut ici marquer l'antériorité logique de la signification des termes de base par rapport à toute connaissance, de quelque domaine que ce soit.</p>
+            <p>(2) d'autre part, une fois qu'un vocabulaire de base est choisi, il est tel que tous les termes qui n'en font pas partie, les termes dits théoriques, doivent pouvoir y être ramenés pour que les énoncés dont ils font partie aient une signification cognitive. Ils sont les constituants de toute connaissance. Pour les empiristes logiques, le vocabulaire de base doit constituer un ensemble d'éléments primitifs permettant de redéfinir tous les termes utilisés en science ; Carnap ne pense pas que ce vocabulaire puisse permettre de redéfinir tous les termes de la science ; il substitue à l'exigence d'une définition celle d'une réduction et à l'exigence vérificationniste une exigence de confirmabilité. Mais il reste que :</p>
+            <div class="citation">
+                « tout prédicat descriptif du langage de la science est confirmable sur la base de prédicats d'objets observables ».
+            </div>
+            <p>La critique des ‘signes simples' que formule Wittgenstein s'accompagne de l'abandon du postulat de la détermination de la signification : Wittgenstein abandonne l'idée que l'on peut construire a priori et de manière complète l'ensemble des propositions que nous pouvons former à partir des propositions élémentaires en tant que fonction de vérité de ces dernières. Selon Schmitz<sup><a href="#ref155" class="reference-link" id="r155">[155]</a></sup>, cet abandon prend acte de deux erreurs du <em>Tractatus</em> :</p>
+            <ul>
+                <li><strong>Indépendance des propositions élémentaires :</strong> la vérité ou la fausseté d'une proposition élémentaire dépend de la vérité ou de la fausseté d'autres propositions élémentaires – il en est donc de même d'une proposition moléculaire – et il n'est plus possible d'exhiber dans un symbolisme correct les conditions de vérité de toutes les propositions non-élémentaires. [Dans le <em>Tractatus</em>, une proposition élémentaire a du sens si elle montre ses conditions de vérité ; un symbolisme correct fait coïncider les règles de construction grammaticale avec la mise en évidence des conditions de vérité. (Schmitz, 1999, p.101)]</li>
+                <li><strong>Principe de vérifonctionnalité</strong> (la vérité ou la fausseté des propositions, moléculaires ou générales, ne dépend que de la vérité ou de la fausseté des propositions élémentaires à partir desquelles elles sont construites) : une proposition générale n'est pas identique à une conjonction ou une disjonction de propositions élémentaires [abandon du caractère vérifonctionnel des quantificateurs (‘quelque soit' – ‘il existe')]. Le sens ne dépend pas seulement de ses conditions de vérité mais aussi du contexte et de l'usage. (Schmitz, 1999, p.132)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Perception apprise de la similarité et de la différence === -->
+    <div class="capsule" id="capsule-perception">
+        <div class="capsule-title">👁️ Perception apprise de la similarité et de la différence</div>
+        <div class="capsule-content">
+            <p>Ce qui doit être abandonné est l'idée qu'il y a une essence du langage indépendante de tout langage particulier, historiquement et géographiquement situé, une essence manifestée dans la logique du langage. La critique formulée par Kuhn à l'encontre du vocabulaire de base représentant une expérience directe et universelle et servant de base de décomposition de toute connaissance montre clairement l'influence du second Wittgenstein<sup><a href="#ref156" class="reference-link" id="r156">[156]</a></sup>. Dans <em>En repensant aux paradigmes</em><sup><a href="#ref157" class="reference-link" id="r157">[157]</a></sup>, Kuhn développe longuement l'apprentissage par ‘Jeannot' de la distinction entre les cygnes, les oies et les canards. Il affirme que ce n'est pas en vertu de critères déterminés que ces différents termes sont employés pour désigner différentes choses. La signification de ces termes ne se réduit pas à des termes d'observation simples :</p>
+            <div class="citation">
+                « Jeannot a appris à attacher des étiquettes symboliques à la nature, sans recourir à rien qui rappelle des définitions ou des règles de correspondance. En leur absence, il emploie une perception apprise, mais pourtant primitive, de la similarité et de la différence. » (p.411)
+            </div>
+            <p>Cet exemple concentre les éléments fondamentaux de l'opposition de Kuhn à l'empirisme logique :</p>
+            <ol>
+                <li>Pas de données d'observation</li>
+                <li>Pas de détermination de la signification par application de règles (pour les termes théoriques) ou de critères définis (pour les termes d'observation)</li>
+                <li>Rejet de la conception traditionnelle de la distinction entre termes théoriques et termes d'observation</li>
+            </ol>
+
+            <p><strong>Critique des données d'observation</strong></p>
+            <p>Kuhn commence par distinguer les stimuli et les perceptions, et soutient ensuite que les perceptions, et même les perceptions les plus simples, auxquelles référeraient les termes de base ne sont pas des ‘entités' déterminées dans l'absolu. Par ‘données', dit Kuhn, nous désignons</p>
+            <div class="citation">
+                « les éléments stables minimaux que nous fournissent nos sens (…) les plus petits éléments d'expérience auxquels nous avons accès ».
+            </div>
+            <p>Mais, ajoute-t-il, ce sont les stimuli qui affectent nos sens plutôt que les sensations qu'il faudrait appeler ainsi. Si nous privilégions l'idée de stabilité des ‘éléments minimaux', il faudrait donc parler des stimuli ; mais les stimuli ne sont pas donnés. Ce qui nous est donné, dans le sens où nous y avons accès, nous l'éprouvons, nous le connaissons, ce sont les sensations, ce qui nous est fourni par nos sens ; mais cela n'est pas stable, pas absolument stable :</p>
+            <div class="citation">
+                « on peut apprendre à distinguer des couleurs ou des formes qui étaient indiscernables avant l'apprentissage. La production de données, à partir de stimuli, est une procédure apprise, à un degré encore inconnu. [...] J'en conclus que, bien que les données soient les éléments minimaux de notre expérience individuelle, elles doivent être des réponses à un stimulus donné, partagées seulement par les membres d'une communauté relativement homogène ». (Kuhn, 1974, p.411)
+            </div>
+            <p>Le processus d'apprentissage auquel Kuhn fait allusion n'est rien de moins que ce que Hoyningen<sup><a href="#ref158" class="reference-link" id="r158">[158]</a></sup> appelle ‘processus de constitution du monde phénoménal'. C'est un processus au cours duquel, par le biais de l'ostension, un certain type de relation de similarité, maîtrisé par les membres d'une communauté sociale, est appris. Une relation de similarité est constitutive d'une classe de similarité, un ensemble dont les éléments sont liés entre eux par une ressemblance de famille, au sens de Wittgenstein. Selon Wittgenstein, l'usage approprié du mot ‘jeu', par exemple, n'est pas fondé sur l'identification d'un ensemble déterminé de critères communs à toutes les situations, tous les phénomènes désignés. Le champ d'application du concept de ‘jeu' n'a pas de limite parfaitement tracée, et qui serait donnée, comme le dit l'empirisme logique, par la redéfinition ou la réduction du terme à des termes à des termes de base observationnels :</p>
+            <div class="citation">
+                « [Il n'y a pas du tout une chose commune à tous ces phénomènes, en vertu de quoi nous employons le même mot pour tous… ils sont apparentés les uns avec les autres selon de nombreuses manières différentes ».
+            </div>
+            <p>Si nous essayons de caractériser les situations, les phénomènes que nous désignons du même concept, ‘jeu', ce que nous trouvons, dit Wittgenstein, c'est</p>
+            <div class="citation">
+                « un réseau compliqué de ressemblances qui se chevauchent et s'entrecroisent. Des ressemblances d'ensemble et de détails », des ressemblances de famille.
+            </div>
+            <p>Les relations de similarité qui intéressent Kuhn sont immédiates dans le sens où elles ne sont pas dérivées d'une comparaison entre les termes de la relation,</p>
+            <div class="citation">
+                « the similarity involved isn't derived from defining characteristics of the relata. »
+            </div>
+            <p>Cette caractérisation de l'immédiateté rejette toute thèse selon laquelle certaines ‘caractéristiques', ‘règles', ‘principe' et ‘critère' constituent un tiers défini de comparaison pour la similarité. (Hoyningen, 1993, p.17, 307, 312). Une relation de similarité est enseignée à un élève par un instructeur qui lui montre différents éléments d'une classe déjà établie ainsi que des éléments qui en sont exclus sans spécification de traits caractéristiques de la classe ; l'élève est invité à répéter la procédure de l'instructeur et reçoit confirmation ou correction. La perception d'un objet (au sens large : chose ou attribut de chose matérielle) dans une situation donnée n'est pas déterminée, fixée, par la seule situation :</p>
+            <div class="citation">
+                « [U]ntil we have acquired them [similarity relations] we do not see a world at all. » (Kuhn, SSR, p.192-196)
+            </div>
+            <p>C'est grâce aux relations de similarité qu'un acte de perception identifie un objet comme suffisamment similaire à un autre objet connu ou à un membre d'une famille connue.</p>
+            <p>L'apprentissage des similarités n'a pas de fondement absolu – il faut apprendre à distinguer ce qui pourra et devra être reconnu comme similarité, des « données partagées seulement par les membres d'une communauté relativement homogène ». Ce qui est ‘donné', c'est-à-dire ce qui constitue les ‘données', dépend d'un apprentissage, et l'apprentissage est situé dans une communauté qui partage un langage, des croyances, des théories, des manières de vivre ou des façons de faire, des pratiques. Cet apprentissage sera utile à Jeannot</p>
+            <div class="citation">
+                « tant qu'il restera membre de la communauté qui a découvert, à partir de l'expérience, l'utilité et la viabilité de ces discriminations particulières de la perception ».
+            </div>
+            <p>L'importance de la communauté et de la forme de vie dans laquelle se situe l'apprentissage est un aspect de l'acquisition qui a été fortement souligné par Wittgenstein ; J.-P. Narboux<sup><a href="#ref159" class="reference-link" id="r159">[159]</a></sup> écrit à ce propos :</p>
+            <div class="citation">
+                « l'assignation du statut de critère n'est pas tributaire de la structure abstraite, et pour ainsi dire brute, de la récurrence des caractères discernables, mais de la normativité inhérente à une forme de vie et aux réactions naturelles qui la composent, réactions dont l'apprentissage excède tout enseignement par abstraction de caractères. »
+            </div>
+            <p>Pour apprendre à percevoir une famille naturelle, pourtant, il faut savoir, avoir déjà appris à percevoir les objets susceptibles d'appartenir à cette classe ainsi que d'autres, perceptuellement proches, qui doivent en être exclus. Pour apprendre à distinguer les cygnes des canards, il faut avoir appris à reconnaître un certain type de volatile, les distinguer de ce qui n'est pas oiseau, mais aussi des oiseaux qui ne vont pas sur l'eau. Pour pouvoir reconnaître ces volatiles, il faut avoir appris à identifier certains objets qui les composent. Pour Kuhn, rappelle Hoyningen, ‘objets' est entendu au sens large, non seulement comme ‘chose matérielle' mais aussi comme ‘attribut de choses matérielles'. En fait, il n'y a rien ou presque rien<sup><a href="#ref160" class="reference-link" id="r160">[160]</a></sup>, qui ne soit le produit d'un acte de perception, entendu comme le résultat d'un processus de constitution d'une classe de similarité :</p>
+            <div class="citation">
+                « Until we have acquired them [similarity relations], we do not see a world at all » (Hoyningen, 1993, p.95)
+            </div>
+            <p>– c'est pourquoi l'apprentissage des relations de similarité est un processus de constitution du monde phénoménal de l'élève.</p>
+
+            <p><strong>Critique de la détermination de la signification</strong> (par application de règles, pour les termes théoriques, ou de critères définis, pour les termes d'observation)</p>
+            <p>Pour l'empirisme logique la distinction entre termes théoriques et termes d'observation traduisait une distinction entre deux modes de détermination de la signification des concepts empiriques. La signification des termes d'observation était déterminée, dans l'idéal, par la formulation de critères d'applicabilité, tandis que celle des termes théoriques l'était par l'établissement de règles de correspondance.</p>
+            <p>Il y a chez Kuhn deux sortes d'argument pour la non-définition des concepts. Le premier est descriptif : il prend acte du fait que l'apprentissage de l'usage d'un concept ne fait pas appel à des définitions, et que si un locuteur, ou plus spécialement, un scientifique, est interrogé, il ne peut pas énoncer spontanément des règles ou des définitions comme fondement de son usage. L'autre argument est davantage un argument de principe qui avait été formulé par Wittgenstein. Wittgenstein parlait du flou des contours d'un concept pour signifier que</p>
+            <div class="citation">
+                « l'usage du mot n'est pas réglé, le jeu que nous jouons avec lui n'est pas réglé » ou plus précisément, « il n'est pas circonscrit partout par des règles ».
+            </div>
+            <p>Pour Kuhn, il ne peut y avoir de définition explicite suffisante pour déterminer l'application d'un concept dans tous les cas concevables.<sup><a href="#ref161" class="reference-link" id="r161">[161]</a></sup></p>
+            <p>Mais le rejet de la thèse de la détermination de la signification ne signifie pas un vague de la signification elle-même – pas, en tout cas, au sens où cela serait un défaut, une incomplétude contingente :</p>
+            <div class="citation">
+                « [O]n doit rejeter des expressions comme ‘vague de la signification' ou ‘texture ouverte des concepts'. L'une comme l'autre sous-entendent une imperfection, quelque chose qui manque et qui pourrait être corrigé ou fourni ultérieurement. » (Kuhn, 1974, n.1, p.420)
+            </div>
+            <p>L'univocité de l'usage d'un concept dans la pratique scientifique est garantie par d'autres moyens que les définitions explicites. La non-détermination de la signification ne ‘nuit' pas davantage à la signification que l'absence de bord bien défini d'une classe de similarité ne ‘nuit' à la reconnaissance des objets appartenant à cette classe :</p>
+            <div class="citation">
+                « an immediate similarity relation doesn't determine membership in its similarity class for all conceivable cases, for all possible objects or situation. » (Hoyningen, p.74)
+            </div>
+            <p>L'absence de bords bien définis traduit simplement le fait que les relations de similarité ne reposent pas sur des caractéristiques explicites, définies en amont du processus d'apprentissage. Si certaines caractéristiques peuvent être formulées à l'examen des éléments d'une classe, elles sont comme les critères, dont J.-P. Narboux dit qu'ils sont</p>
+            <div class="citation">
+                « toujours élaborés, jamais recensés, par l'investigation grammaticale au fil de l'élaboration d'expressions linguistiques les exemplifiant » (Narboux, 2002).
+            </div>
+
+            <p><strong>Critique de la distinction entre termes théoriques et termes d'observation</strong></p>
+            <p>Outre la notion de détermination des termes empiriques, Kuhn critique et rejette la distinction entre termes théoriques et termes d'observation, telle qu'elle est traditionnellement justifiée. L'apprentissage de la signification d'un concept empirique, qu'il soit traditionnellement qualifié d'observationnel ou de théorique, passe par l'apprentissage de relations de similarité entre les objets appartenant à l'extension du concept, et en ce sens, tous se rattachent ‘directement' à la nature :</p>
+            <div class="citation">
+                « La distinction entre vocabulaire théorique et vocabulaire de base n'est pas recevable dans sa forme actuelle, parce qu'on peut montrer que nombre de termes théoriques se rattachent de la manière même des termes de base à la nature, quelle que soit celle-ci. »
+            </div>
+            <p>D'une part, cette ‘mêmeté' exclut la conception hiérarchique du système des énoncés scientifiques faisant dépendre la signification de certains termes, les termes théoriques, de la signification d'autres termes définie par une expérience directe, les termes de base ; d'autre part, la ‘manière' en question, en mettant en scène la notion de relation de similarité, exclut toute notion de détermination, directe ou indirecte, de la signification, c'est-à-dire par spécification de critères, de définitions ou de règles de réduction.</p>
+            <p>Carnap voulait faire pour la science, et sur le même modèle, ce que Russell et Whitehead avait entrepris pour les mathématiques. Sous l'influence de Hilbert, il a considéré la science comme un système formel dont les termes sont reliés à l'expérience par le biais des réductions des énoncés à des énoncés observationnels composés de termes dont la signification est donnée directement par l'expérience. Kuhn réfute dans un même mouvement l'approche formaliste du système des énoncés scientifiques et la conception réductionniste de la signification :</p>
+            <div class="citation">
+                « L'analogie entre théorie scientifique et système mathématique peut être trompeuse (...) Les philosophes qui présentent les théories scientifiques comme des systèmes formels non interprétés font souvent la remarque que le recours à l'empirisme entre dans ces théories par le bas. » (p.399)
+            </div>
+            <p>Mais d'une part, les énoncés ne peuvent à aucun moment être considérés comme des signes ou suites de signes non interprétés, et d'autre part, la signification des énoncés théoriques n'est pas déterminée par leur réduction à des énoncés d'observation. On ne peut pas comprendre la ‘logique' du discours scientifique abstraction faite de la situation empirique qu'il vise à expliquer ou modéliser :</p>
+            <div class="citation">
+                « [B]ien que les membres d'une communauté scientifique possèdent en commun des expressions symboliques non interprétées, et que ce soit elles qui donnent l'accès à la logique et aux mathématiques, ce n'est pas aux généralisations que ces outils sont appliqués, mais bien à telle ou telle version particulière ».
+            </div>
+            <p>Si les expressions symboliques utilisées en physique diffèrent de celles utilisées en mathématique, c'est parce que dès le départ, l'expression symbolique est porteuse d'un sens physique, d'une expérience de la réalité attachée à une situation expérimentale particulière. Le scientifique doit travailler avec une expression symbolique qui a une signification physique, qui est un cas particulier d'une expression générale ; dès le début se pose à lui la question de savoir quelle forme donner à l'expression générale pour qu'elle devienne appropriée à une situation particulière.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'a priorisme constitutif relativisé (Kuhn et Carnap selon Friedman) === -->
+    <div class="capsule" id="capsule-apriorisme">
+        <div class="capsule-title">📐 B‑2‑3 L'a priorisme de Kuhn et Carnap (selon M. Friedman)</div>
+        <div class="capsule-content">
+            <p><strong>A priori constitutif relativisé</strong></p>
+            <p>Le travail critique développé par Kuhn semble témoigner d'un rejet étendu de l'a priorisme prégnant dans l'épistémologie antérieure : affirmation répétée que l'instrument de production de la connaissance n'est pas défini indépendamment de l'expérience, n'est pas logiquement antérieur à la pratique de la science, qu'il n'y a pas de donnée universelle mais des perceptions acquises, qu'il n'y a pas de détermination a priori de la signification mais des procédures d'apprentissage de l'usage des concepts théoriques impliquant celui de concepts empiriques et l'acquisition de relations de similarités. Et ce rejet est traditionnellement rapproché du rejet par Quine du réductionnisme et de l'analycité :</p>
+            <div class="citation">
+                « [C]'est à la fois la dimension empirique et la dimension logique de la philosophie héritée du Cercle de Vienne qui vont être mises en question par des conceptions comme celles de Kuhn et Feyerabend. L'empirisme logique avait été, avant cela, attaqué par Quine dans « Deux dogmes de l'empirisme » (1950) où il contestait la séparation de l'analytique et du synthétique, et en conclusion la possibilité de séparer, dans la connaissance, la part d'expérience et la part de théorie. Kuhn et Feyerabend ... vont reproblématiser la dépendance de l'expérience par rapport à la théorie …. » (Laugier, 2002, p.983)
+            </div>
+            <p>Friedman, cependant, montre que Carnap lui-même, dans <em>La Syntaxe logique du langage</em>, avait déjà relativisé l'a priori en introduisant le principe de tolérance et la distinction entre langage-objet et métalangage. La conception carnapienne d'un « cadre constitutif » (linguistic framework) n'est pas un a priori absolu, mais un choix conventionnel qui peut être révisé. Friedman soutient que Kuhn va plus loin en historicisant ce cadre, mais que la structure de l'argument reste similaire : il y a toujours un niveau constitutif (les paradigmes) qui structure l'expérience et la signification, et qui n'est pas directement testable par l'expérience. La différence majeure est que pour Kuhn, ce cadre est historique et change avec les révolutions scientifiques, tandis que pour Carnap, il est relativement stable et conventionnel.</p>
+            <p>Cette lecture de Friedman permet de nuancer l'opposition radicale entre Kuhn et Carnap, et de voir que le tournant historique n'est pas un rejet pur et simple de l'idée d'un cadre constitutif, mais plutôt une <em>relativisation historique</em> de ce cadre. L'a priori devient historique, mais il reste constitutif : les paradigmes kuhniens fonctionnent comme des conditions de possibilité de la science, mais ces conditions sont elles-mêmes historiquement situées et sujettes à des changements révolutionnaires.</p>
+            <p>Cette perspective rejoint, sur un plan épistémologique, l'idée connexionniste selon laquelle les contraintes qui structurent la cognition ne sont pas fixées une fois pour toutes, mais sont le produit d'une histoire (phylogenèse, ontogenèse, apprentissage) et peuvent évoluer. La temporalité n'est pas seulement un paramètre empirique à ajouter à un système formel ; elle est constitutive de la manière dont les significations et les connaissances se forment et se transforment.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref153"><strong>153.</strong> S. Laugier, <em>Les philosophes et la science</em>, 2002, p.980.</p>
+            <p id="ref154"><strong>154.</strong> R. Carnap, <em>Logical Syntax of Language</em>, 1937, p.?</p>
+            <p id="ref155"><strong>155.</strong> F. Schmitz, <em>Wittgenstein</em>, 1999, pp.101-132.</p>
+            <p id="ref156"><strong>156.</strong> SSR (Kuhn, <em>La structure des révolutions scientifiques</em>) : p.44-45.</p>
+            <p id="ref157"><strong>157.</strong> T. Kuhn, (1974), « En repensant aux paradigmes ». In <em>La tension essentielle</em>. Paris : Gallimard, 1990, pp.391-423.</p>
+            <p id="ref158"><strong>158.</strong> P. Hoyningen, <em>Reconstructing Scientific Revolutions</em>, 1993, p.17, 307, 312.</p>
+            <p id="ref159"><strong>159.</strong> J.-P. Narboux, <em>L'usage et le sens</em>, 2002.</p>
+            <p id="ref160"><strong>160.</strong> Hoyningen, 1993, p.95 : « Until we have acquired them [similarity relations], we do not see a world at all. »</p>
+            <p id="ref161"><strong>161.</strong> Kuhn, 1974, p.411, n.1.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="02_II_B2_1.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="02_II_B2_3.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

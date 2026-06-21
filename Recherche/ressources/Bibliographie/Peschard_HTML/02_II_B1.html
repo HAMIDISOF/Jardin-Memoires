@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – II.B‑1. Empirisme logique</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule-epigraphe {
+            background: #e9f3e3;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>II. Deux images de la représentation</h1>
+    <div class="sub">II.B‑1. Empirisme logique (pages 216‑229)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-explication">🔷 B‑1‑1 Explication de la science</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-analyse">🔶 B‑1‑2 Rôle de l'analyse logique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-logique">📐 Logique de la science</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-signification">📖 Signification déterminée</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-cognitivisme">🧠 B‑1‑3 Empirisme logique et cognitivisme</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="02_II_B2_1.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : B-1-1 Explication de la science === -->
+    <div class="capsule" id="capsule-explication">
+        <div class="capsule-title">🔷 B‑1‑1 Explication de la science</div>
+        <div class="capsule-content">
+            <p><strong>La science comme ensemble d'énoncés</strong></p>
+            <p>Dans la perspective logique du Cercle de Vienne, le problème de la philosophie des sciences est un problème de philosophie générale qui a trait à la signification : quels énoncés ont réellement une signification et pas seulement l'apparence d'en avoir une, comment formuler une caractérisation absolue de la signification qui permette de distinguer tous les énoncés qui ont du sens, les énoncés scientifiques, de ceux qui n'en ont pas, les énoncés métaphysiques – et éviter ainsi de se poser des questions inutiles ou de prendre en considération des énoncés qui semblent contenir une connaissance mais qui ne portent sur rien. La connaissance est constituée par l'ensemble des énoncés qui ont une signification : la science est essentiellement un ensemble d'énoncés. Expliciter la nature de la connaissance scientifique, c'est expliciter l'écriture et l'organisation de ce système d'énoncés, faire l'analyse logique du discours scientifique.</p>
+
+            <p>Carnap vise avec l'<em>Aufbau</em> à étendre à la science toute entière le travail de clarification que Russell et Whitehead avaient accompli pour les mathématiques dans les <em>Principia Mathematica</em>. Pour Russell, les énoncés de la logique et des mathématiques expriment des vérités qui sont universelles au sens où elles portent sur ce qui est ou peut être pensé. Ce qui distingue ces énoncés des énoncés de la zoologie, c'est seulement leur domaine d'application ; les vérités logiques et mathématiques sont les plus générales qui soient. Il n'est même pas question de prendre la logique comme objet d'analyse ou d'une quelconque investigation. Dans <em>Syntaxe Logique du Langage</em> (SLL), Carnap soutient explicitement ce qui, selon P. Wagner, s'annonçait implicitement dans l'<em>Aufbau</em>, à savoir que les énoncés de la logique comme ceux des mathématiques n'expriment aucune connaissance proprement dite. En cela, il rejoint Wittgenstein : les énoncés de la logique sont des tautologies, ils ne disent rien. La logique n'est pas une science au même titre que la physique, elle ne s'occupe pas de la réalité, mais du langage, de sa structure.</p>
+
+            <p>Pour Carnap, un terme n'a pas de sens si sa définition ne renvoie à aucune donnée empirique, un énoncé n'a pas de sens s'il n'existe aucun moyen de le vérifier ou au moins de le tester par un recours à l'expérience. Un énoncé est doué de signification s'il peut être réduit à des énoncés de base, des énoncés d'observation, qui sont composés de termes empiriques, des termes renvoyant immédiatement à des données empiriques universelles, et qui peuvent de ce fait être confrontés à l'expérience. Il faut donc reconstruire l'ensemble des énoncés de la science sous la forme d'un système hiérarchique d'énoncés dont tous les termes peuvent être réduits logiquement à des termes de base dont la signification est simple et évidente parce que déterminée par des données empiriques immédiates. La clarification du sens de tous les termes sera obtenue au moyen d'une série de définitions explicites utilisant uniquement les moyens de la logique et une base empirique bien déterminée. La reconstruction logique au moyen des définitions explicites permet d'assurer que les termes et énoncés ne sont pas dépourvus de signification cognitive.</p>
+
+            <div class="citation">
+                « Si la science est un langage, il est possible de surmonter la diversité de ses langages en construisant un langage de la science unitaire. S'il n'y a qu'une science, la métaphysique ne pourra plus réapparaître. » (X. Verley, 2003, p.28)
+            </div>
+
+            <p><strong>Le rôle de l'analyse logique</strong></p>
+            <p>Pour Russell, les énoncés de la logique et des mathématiques expriment des vérités qui sont universelles au sens où elles portent sur ce qui est ou peut être pensé. Ce qui distingue ces énoncés des énoncés de la zoologie, c'est seulement leur domaine d'application ; les vérités logiques et mathématiques sont les plus générales qui soient. Il n'est même pas question de prendre la logique comme objet d'analyse ou d'une quelconque investigation. Dans <em>Syntaxe Logique du Langage</em> (SLL), Carnap soutient explicitement ce qui, selon P. Wagner, s'annonçait implicitement dans l'<em>Aufbau</em>, à savoir que les énoncés de la logique comme ceux des mathématiques n'expriment aucune connaissance proprement dite. En cela, il rejoint Wittgenstein<sup><a href="#ref142" class="reference-link" id="r142">[142]</a></sup> : les énoncés de la logique sont des tautologies, ils ne disent rien. La logique n'est pas une science au même titre que la physique, elle ne s'occupe pas de la réalité, mais du langage, de sa structure.</p>
+
+            <p>L'ambition de Carnap dans SLL est de prendre pour objet d'investigation et de discours le langage de la science pris comme un tout. La science est toujours un ensemble d'énoncés ; mais cet ensemble est maintenant appréhendé 'de l'extérieur'. Sa méthode est de distinguer, comme l'avait fait Hilbert pour les mathématiques, le niveau du langage-objet, le langage scientifique, et celui du métalangage dans lequel sont étudiées les propriétés de ce langage. Carnap introduit la distinction entre 'idiome matériel' et 'idiome formel', le premier nous servant à parler de choses : « 5 est un nombre premier », le second de noms de choses : « ‘Cinq' n'est pas un nom de chose, mais un nom de nombre. » La confusion de ces deux idiomes produit des phrases hybrides qui sont la source des faux problèmes philosophiques. Exemple : ‘le monde est la totalité des faits et non des choses’ a pour traduction en idiome formel : ‘la science est un système d'énoncés et non pas de noms’. Il ne s'agit plus seulement d'écrire le langage logique de la science mais d'analyser d'un point de vue métathéorique « les caractéristiques des langages logiques susceptibles de servir les fins d'une reconstruction rationnelle de la science. » (p.265). Les catégories syntaxiques qui apparaissent dans l'idiome formel sont fixées par son constructeur en fonction de l'usage qu'il désire en faire.</p>
+
+            <p>La logique n'est plus considérée en tant que science comme une autre, porteuse d'une connaissance générale de la réalité, dont les sciences empiriques font, chacune dans leur domaine, leur objet d'étude. La logique est un ensemble de règles, qui ne disent rien, rien de la réalité en tout cas, mais fixent la trame sur laquelle s'écrira la connaissance du monde. L'analyse de la logique du langage, c'est-à-dire la ‘Logique de la science’ que propose SLL n'énonce aucune vérité concernant la réalité mais porte sur l'instrument de la connaissance de la réalité qu'est l'armature logique du langage scientifique. Mais si seuls les énoncés scientifiques ont une signification, parce qu'ils ont un contenu empirique, comment ces énoncés sur le langage de la science peuvent-ils ne pas être dénués de sens ? Carnap répond en substituant à la bipartition des énoncés, entre logiquement correct et dénués de sens, la tripartition entre analytiques, synthétiques et dénués de sens. Les énoncés du métalangage de même que les énoncés de la logique ou des mathématiques n'expriment aucune connaissance sur le monde mais ne sont pas dénués de sens, ils sont dits ‘analytiques' au sens où leur validité ne dépend que de règles conventionnelles.</p>
+
+            <p>Avec SLL, Carnap abandonne l'idée d'une syntaxe logique universelle déterminant le langage idéal de la science. La logique de la science vise à étudier les propriétés qui doivent être celles du langage de la science mais sans plus être portée par l'idée d'un langage scientifique idéal, tenant sa perfection de sa forme logique pensée comme une exigence absolue, puisque la logique peut être considérée comme une affaire de convention. Il s'agit maintenant « de clarifier et examiner les conditions de possibilité d'un langage capable d'exprimer la totalité des énoncés scientifiques. » Plusieurs langages logiques sont possibles du fait que la vérité de la logique est comprise comme étant non pas scientifique, son universalité signifiant alors la portée absolument générale des énoncés, mais conventionnelle, l'universalité signifiant dans ce cas le fait que les énoncés ne portent sur rien, avant que l'interprétation des symboles ne fixe un domaine d'application.</p>
+
+            <p>En dépit de l'évolution de sa pensée, et de la distance qu'il prendra à l'égard de certaines des thèses du Cercle de Vienne, Carnap maintient, cependant, qu'il est possible de construire un langage unique pour toutes les sciences. Plusieurs langages sont possibles en fonction du choix qui est fait des règles du langage et du vocabulaire mais tous doivent permettre la reconstruction rationnelle de la science prise comme un tout comprenant tous les domaines de la connaissance. Il y a toujours, car convention ne signifie pas arbitraire, l'idée d'une forme ou peut-être plus justement d'une structure idéale de langage, commune aux « langages logiques susceptibles de servir les fins d'une reconstruction rationnelle de la science » et que doit analyser la logique de la science.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : B-1-2 Logique de la science === -->
+    <div class="capsule" id="capsule-logique">
+        <div class="capsule-title">📐 Logique de la science</div>
+        <div class="capsule-content">
+            <p>L'analyse que réalise la logique de la science est formelle dans le sens où elle traite « les concepts scientifiques et les théories d'un point de vue purement formel, comme des combinaisons de signes construites en accord avec certaines règles.<sup><a href="#ref143" class="reference-link" id="r143">[143]</a></sup> » Un langage est constitué par un ensemble de symboles, appelé ‘vocabulaire', et l'énoncé de deux types de règles formelles : règles de formation, qui déterminent la construction des énoncés, et règles de transformation, qui déterminent les inférences légitimes (les règles-L sont les lois logiques et mathématiques, les règles-P sont les lois physiques).</p>
+
+            <p>C'est le choix du vocabulaire qui est la première étape de la détermination d'un langage logique. Pour montrer l'unité de la science, il faut un vocabulaire qui permette l'expression de tous les énoncés des différentes branches de la science. Le choix du vocabulaire doit être tel aussi qu'il permette « la définition ou la reconstruction des autres termes de la science, sans contenir aucun terme dont la signification ne serait pas jugée assez claire selon les critères d'un philosophe empiriste. » Il faut que la signification du vocabulaire de base soit, aux yeux d'un empiriste, suffisamment claire et non ambiguë, il faut que la richesse du vocabulaire permette de reconstruire les énoncés de toutes les sciences, et il faut qu'il soit intersubjectif.</p>
+
+            <p>Pour respecter la condition d'universalité du langage de la science, la condition d'intersubjectivité et la conception empiriste de la signification des termes de base (qui doit être directement donnée dans l'expérience), Carnap fait le choix d'une base physicaliste.</p>
+
+            <p><strong>Signification déterminée</strong></p>
+            <p>La perspective logique présuppose que le fait d'avoir une signification est une caractéristique absolue d'un énoncé, une propriété, une qualité qui lui est propre, indépendante de toute considération contextuelle.</p>
+
+            <p>Pour Wittgenstein, dans le <em>Tractacus</em>, c'est le ‘signe simple' qui assure la détermination du sens :</p>
+            <div class="citation">
+                « le postulat du signe simple est le postulat de la détermination du sens. »
+            </div>
+            <p>Les signes simples représentent les objets, « la substance du monde », « le stable, l'existant », ce qui ne peut être décrit, pas davantage que le point dans l'espace :</p>
+            <div class="citation">
+                « Je ne puis que nommer les objets. » (3.221)
+            </div>
+            <p>Toute proposition doit pouvoir être analysée en propositions élémentaires composées de signes simples ; des propositions qui montrent un état de chose, et</p>
+            <div class="citation">
+                « dont la vérité ou la fausseté ne dépend que de choses effectivement réalisées dans le monde, c'est-à-dire des faits<sup><a href="#ref144" class="reference-link" id="r144">[144]</a></sup> » ;
+            </div>
+            <p>leur signification est ainsi déterminée. Les propositions élémentaires sont indépendantes :</p>
+            <div class="citation">
+                « [L]'examen des conditions qu'elles doivent remplir pour avoir du sens conduit Wittgenstein à établir a priori que les propositions élémentaires sont indépendantes les unes des autres et, corrélativement, que l'existence ou l'inexistence d'un état de choses ne dépend en rien de l'existence ou de l'inexistence d'un autre état de choses. » (Schmitz, 1999, p.99)
+            </div>
+            <p>Une proposition élémentaire a du sens si elle a des conditions de vérité (si elle montre un état de choses possibles) et elle est vraie si ces conditions sont remplies (si l'état de choses existe).</p>
+
+            <p>Il est tentant lorsque l'on considère ainsi des extraits de texte de rapprocher analyse des propositions et réduction des énoncés, d'une part, et signes simples et termes de base d'autre part. Avec le <em>Tractacus</em>, l'analyse des propositions conduit aux signes simples qui composent les propositions élémentaires. Avec l'empirisme logique, ce sont des termes de base qui doivent être supposés pour la détermination du sens, termes ultimes de la réduction ou constituants élémentaires de la construction des énoncés doués de sens.</p>
+
+            <p>Le choix des règles de transformation des énoncés doit être tel qu'elles ne soient, dans la mesure où l'on peut en juger, ni incohérentes, ni contraires aux données empiriques. Les règles logiques ou mathématiques sont appelées règles L, tandis que celles qui sont de nature physique sont appelées règles P. Les énoncés L-valides, dits aussi analytiques, ou L-contravalides (resp P-valides ou P-contravalides) sont les énoncés qui sont vrais ou faux en vertu des règles-L (resp. des règles-P). Les énoncés qui ne sont ni valides ni contravalides sont dits indéterminés, leur vérité dépend de l'expérience.</p>
+
+            <p>La partition des énoncés en fonction de la catégorie à laquelle ils appartiennent dépend de la donnée préalable des règles de formation et de transformation du langage. Des données empiriques ultérieures peuvent imposer de nouvelles déterminations et conduire par exemple à ne plus reconnaître comme vrai un énoncé analytique dans un énoncé d'un langage L. Cela ne se traduira pas simplement par un changement de la valeur de vérité ou de la catégorie de l'énoncé, c'est le langage lui-même qui sera modifié (relativité) par la modification de ses règles, les règles-P d'abord, mais aussi éventuellement les règles-L.</p>
+
+            <p>Pour la reconstruction de la science, il y a, à un moment donné, un grand nombre de langages possibles car « la forme du système n'est jamais entièrement déterminée par l'expérience et elle est toujours partiellement déterminée par des conventions », mais ces conventions doivent remplir un certain nombre de conditions relatives aux différents éléments du langage et qui traduisent l'idéalité du regard porté sur la connaissance scientifique.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : B-1-3 L'empirisme logique et le cognitivisme === -->
+    <div class="capsule" id="capsule-cognitivisme">
+        <div class="capsule-title">🧠 B‑1‑3 L'empirisme logique et le cognitivisme</div>
+        <div class="capsule-content">
+            <p>L'empirisme logique va subir, avec le ‘tournant historique' de l'épistémologie un ensemble de critiques qui peut être rapproché sur bien des points de celui qui a été adressé au cognitivisme avec le tournant connexionniste. Autant que les analogies positives, ce qu'il sera intéressant de retenir est le caractère en quelque sorte inachevé de ces deux mouvements critiques ; et la similitude entre ces deux formes d'inachèvement. Mais avant d'en arriver là, il faut regarder de quelle façon une comparaison entre le cognitivisme et l'empirisme logique peut mettre en évidence, sur le plan épistémologique, certains traits fondamentaux qu'ils ont en commun et qui seront pris pour cible par le connexionnisme dans un cas, par l'épistémologie historique dans l'autre. Schématiquement, la comparaison peut être construite autour des trois en-têtes suivants :</p>
+            <ul>
+                <li><strong>But :</strong> Expliquer le processus de la connaissance</li>
+                <li><strong>Présupposé :</strong> Distinction théorie et observation, perception et cognition</li>
+                <li><strong>L'instrument explicatif :</strong> le langage</li>
+            </ul>
+
+            <p><strong>L'explication</strong></p>
+            <p>La visée originelle (épistémologique) de l'empirisme logique est énoncée par Carnap (1928) : expliquer comment les théories scientifiques sont possibles ; justifier les notions de vérité et d'objectivité ; trouver le moyen d'établir le bien-fondé des énoncés scientifiques sur le monde. L'empirisme logique s'en tient aux perceptions instrumentales, comme pures données, équivalentes, remarque Rorty, aux intuitions sensibles kantiennes, et conçoit alors une fonction de mise en forme de ces données qui extériorise le rôle du système des concepts de l'entendement – la représentation scientifique sera constituée par des règles qui gouvernent cette fonction. Pas (plus que chez Kant) de subjectivité car il y a une nécessité qui préside à la constitution. Pas d'implication subjective : le logique et le psychologique sont maintenus séparés. Mais l'idée de constitution ne s'oppose pas à la recherche d'une explication : la science s'explique ; l'explication est syntaxique. La capacité du langage d'exprimer l'expérience dépend de la nature systématique et structurelle du langage de la science. La science est vue comme une collection d'énoncés, et la tâche du philosophe est de construire un langage logique qui sous-tend la systématicité des énoncés scientifiques et en rend compte.</p>
+
+            <p>Une perspective sur la connaissance commune à de nombreux cognitivistes est, selon De Gelder<sup><a href="#ref145" class="reference-link" id="r145">[145]</a></sup>, que la connaissance consiste en un ensemble structuré de propositions ou d'énoncés : « knowledge as theory in the sense of a structured set of propositions or sentences ». La théorie de Fodor consiste à expliquer les attributions d'attitudes propositionnelles et les relations causales entre les états mentaux ou entre états mentaux et comportements en invoquant l'existence de représentations mentales qui sont des structures syntaxiques constituant les éléments symboliques d'un langage fondamental appelé le langage de la pensée. Avoir une croyance, être dans une attitude propositionnelle, c'est être en relation avec (‘to stand a relation to’) une représentation qui représente la proposition p, exprimée dans le langage de la pensée, et qui est caractérisée par sa seule structure syntaxique. L'enchaînement des pensées s'explique, au niveau du langage de la pensée, par la transformation de symboles sur la base de leurs propriétés syntaxiques. Le rôle causal d'un symbole est donc entièrement déterminé par sa forme syntaxique.</p>
+
+            <p>La façon dont Carnap décrit le projet poursuivi par l'<em>Aufbau</em> rend le parallèle avec l'œuvre de Fodor encore plus saisissant. Il s'agit de produire une reconstruction rationnelle du processus de formation des concepts :</p>
+            <div class="citation">
+                « a rational reconstruction of the actual process of formation of concepts » (Carnap, 1963, p.18)
+            </div>
+            <p>à partir de certains concepts fondamentaux, de façon telle que soit démontrée la possibilité de caractériser tous les objets à partir de leurs seules propriétés structurelles :</p>
+            <div class="citation">
+                « It will be demonstrated that it is, in principle, possible to characterize all objects through merely structural properties ... and thus to transform all scientific statements into purely structural statements. » (Carnap, 1928/1967, §6)
+            </div>
+            <p>Pour Carnap, la réduction du langage dans lequel sont exprimées les connaissances à une expression purement syntaxique est une condition nécessaire d'objectivité. Il n'y a que la description structurelle qui nous fait vraiment sortir de l'expression subjective :</p>
+            <div class="citation">
+                « [C]ertain structural properties are analogous for all streams of experience. Now, if science is to be objective, then it must restrict itself to statements about structural properties ... » (Carnap, 1928/1967, §66)
+            </div>
+            <p>Sur ce point, <em>La Syntaxe Logique du Langage</em> suit l'<em>Aufbau</em> : la signification objective est entièrement déterminée par des règles formelles, syntaxiques.</p>
+
+            <p>Fodor écrit que l'intentionnalité ne pourra jamais faire partie du catalogue scientifique ; si elle existe, elle doit être autre chose : le langage symbolique de la pensée, dont les opérations sont sensibles à la seule forme structurelle, rend possible la naturalisation.</p>
+
+            <p>L'étude des représentations cognitives, science de la cognition, et l'étude des représentations scientifiques, philosophie des sciences, se conçoivent comme recherche d'une explication du processus de formation de représentations, indépendamment des conditions empiriques dans lesquelles celles-ci sont constituées. Le processus de connaissance scientifique comme le processus cognitif reposent sur une relation bipolaire dont les représentations, construites selon certaines règles déterminées, d'un côté, et le ‘donné', apporté via le système sensoriel, de l'autre, sont les extrémités. Dans l'empirisme logique, il est envisageable que les règles puissent être modifiées pour des meilleures, mieux adaptées aux derniers développements de la science ; Fodor n'est pas loin de dire que la syntaxe est celle qu'elle est parce qu'elle est la meilleure, la plus profitable :</p>
+            <div class="citation">
+                « The thoughts that effect the fixation of the belief that P provide, often enough, good grounds for believing that P… Were this not the case – were there not this general harmony between the semantical and the causal properties of thoughts – there wouldn't, after all, be much profit in thinking. [...] Argument is generally truth-preserving; that, surely, is the teleological basis of the similarity between trains of thoughts and arguments …. » (Fodor, 1994, p.25)
+            </div>
+
+            <p><strong>Le langage</strong></p>
+            <p><em>a) Le rôle du langage</em></p>
+            <div class="citation">
+                « [Carnap] defined epistemology as the study of the language of science. […] Fodor relates the study of individual cognitive capacity to the study of the language the individual possesses. » (De Gelder, 1989, p.108)
+            </div>
+            <p>Pour Carnap, l'épistémologie est l'étude du langage de la science. La connaissance scientifique est d'abord un ensemble d'énoncés que la logique doit permettre d'analyser et de reconstruire. Que la science puisse être considérée comme un langage est essentiel au projet carnapien d'unification de la science et de rejet de toute composante métaphysique :</p>
+            <div class="citation">
+                « Si la science est un langage, il est possible de surmonter la diversité de ses langages en construisant un langage de la science unitaire. S'il n'y a qu'une science, la métaphysique ne pourra plus réapparaître. » (X. Verley, 2003, p.28)
+            </div>
+            <p>Fodor rattache l'étude des capacités cognitives individuelles à l'étude du langage que l'individu possède : un exemple de formation et d'expression de la connaissance est l'ensemble d'énoncés que produit Holmes pour convaincre Watson :</p>
+            <div class="citation">
+                « Because this train of thoughts is tantamount to an argument, Holmes expects Watson to be convinced by the considerations that, when they occured to him, caused Holmes's own conviction. » (Fodor, 1994)
+            </div>
+            <p>Nous ne pouvons pas nous passer du langage de la psychologie de sens commun par lequel nous désignons les causes mentales des comportements et des croyances. Mais ce langage dans lequel nous nous exprimons en termes de concepts mentaux, et formulons les attitudes propositionnelles, doit pouvoir être réduit à un langage fonctionnel en termes de représentations mentales et de processus qui soit apte à satisfaire les exigences de scientificité du physicalisme.</p>
+
+            <p><em>b) Langage et métalangage</em></p>
+            <p>Carnap, dans <em>LSL</em>, et Fodor, avec la théorie du langage de la pensée, postulent l'existence d'un langage logique qui sous-tend le langage dans lequel s'expriment communément la science ou la pensée :</p>
+            <div class="citation">
+                « Like Carnap, Fodor forges a distinction between ordinary language spoken for everyday and scientific purposes alike, and a hypothetical underlying language, the language of thought, or mentalese » (De Gelder, 1989)
+            </div>
+            <p>Carnap, avec SLL, introduit une métadiscipline, la syntaxe logique, avec son langage, le métalangage, qui lui permet de parler du langage de la science (le langage-objet) en se tenant à un point de vue purement formel. Chez Fodor, c'est le langage de la pensée, le mentalais, qui est le langage fondamental sous-jacent aux descriptions ordinaires de la pensée. Pour Fodor, le postulat du mentalais est un instrument théorique permettant de justifier et d'expliquer les comptes rendus psychologiques de nos croyances. C'est une hypothèse nécessaire pour la psychologie cognitive ; c'est une manière efficace de rendre compte de la productivité de la pensée ; et c'est, selon lui, le meilleur moyen de rendre compatible le niveau neurophysiologique et le niveau intentionnel. Le mentalais combine des symboles sur la seule base de leur forme, leur structure syntaxique, et il est supposé que les relations sémantiques, qui apparaissent au niveau intentionnel de la description de la pensée, sont exprimées par les relations syntaxiques :</p>
+            <div class="citation">
+                « [T]he machine is so devised that it will transform one symbol into another if and only if the symbols so transformed stand in certain semantic relations ; » (Fodor, 1994, p.26)
+            </div>
+            <p>Comprendre en quoi consiste la cognition (ou la connaissance scientifique) doit passer par la construction d'un langage fondamental qui met au clair la logique du processus, et laisse à part la dimension intentionnelle (ou les tentations métaphysiques).</p>
+
+            <p><em>c) Notion formelle-syntaxique du métalangage</em></p>
+            <p>L'idée d'une caractérisation purement formelle-syntaxique des représentations mentales est essentielle à la théorie de Fodor, elle est à la base de la métaphore de l'ordinateur qui permet de faire un pont entre le niveau physicaliste et le niveau intentionnel. L'unité de base de la cognition sont les symboles que sont les représentations mentales. Les processus cognitifs sont assimilés à des opérations logiques sur des symboles – l'étude des processus cognitifs peut ignorer le contenu intentionnel des représentations mentales.</p>
+            <p>Chez Carnap, le point de vue syntaxique consiste à ne faire référence dans l'énoncé des règles et des définitions qu'à la forme des signes et suites de signes, à l'exclusion de leur signification. La syntaxe ne concerne que les propriétés du langage, tandis que les vérités factuelles dépendent de conditions extra-linguistiques. Le fait qu'un énoncé ait ou pas une signification dépend seulement de ce qu'il est conforme ou pas aux règles de formation. Les règles forment un calcul dont la fonction est d'effectuer des opérations sur les énoncés de la science empirique (Wagner, 2002, p.279). La science formelle n'a aucun objet. Les questions qu'elle pose ne sont pas résolues par un recours à l'expérience mais par une analyse qui repose seulement sur les règles logiques du langage.</p>
+
+            <p><em>d) Métalangage et épistémologie</em></p>
+            <p>Dans le projet de l'<em>Aufbau</em>, la construction d'un métalangage est aussi, écrit B. de Gelder, une construction du monde tel qu'il est connu par la science. De façon comparable, l'étude du langage de la pensée est, selon B. de Gelder, l'étude du monde psychologique, la découverte des réalités qui sont à la base des expériences phénoménales :</p>
+            <div class="citation">
+                « the study of the psychological world of the cognitive system or the psychological reality of the cognitive system. This is the world as known in cognitive psychology, underlying and lending consistence to phenomenal experience. »
+            </div>
+            <p>Et le métalangage définit également, bien que Fodor ne le dise pas explicitement, les limites de ce que l'individu peut connaître (ce qui fait écho à la thèse de ‘l'epistemic boundedness').</p>
+            <p>En fait, pour être plus précis et plus fidèle à la lettre de Carnap, l'<em>Aufbau</em> doit être compris comme une reconstruction de tous les concepts à partir de certains concepts fondamentaux. Contrairement à l'idée répandue, ce qui est important dans le projet de Carnap, d'après Friedman, ce n'est pas la base sur laquelle se fait cette reconstruction, ce n'est pas de réaliser une réduction phénoménaliste du monde extérieur. L'<em>Aufbau</em> est effectivement un système phénoménaliste qui est basé sur une expérience des sens privée et entreprend, partant de là, de construire tout le reste : les objets physiques et les autres individus. (Friedman, 1999, p.92) Mais Carnap insiste sur le fait qu'il aurait été tout aussi possible de choisir une autre base, de construire un système matérialiste où tout aurait été réduit à des objets physiques. Le choix phénoménaliste d'une base autopsychologique est relié à la visée épistémologique du projet :</p>
+            <div class="citation">
+                « an autopsychological basis is most appropriate from an epistemological view-point » (Friedman, 1999, p.93)
+            </div>
+            <p>qui est de refléter non pas seulement l'ordre logique des concepts, mais leur ordre épistémique. Il faut à nouveau souligner que la charge ontologique, affirmée par Fodor, dont sont dotés les éléments symboliques qui sont à la base du métalangage cognitif, à savoir les représentations mentales, est absente de la construction de Carnap.</p>
+            <p>Ce qui fait résonance cependant entre les fonctions épistémologiques des métalangages est la place qu'y trouve la notion d'objectivité. Dans les deux cas, le système logique qui est mis en place, outre qu'il assure un travail de clarification des significations, joue le rôle essentiel d'une garantie d'objectivité qui manquait au langage initial, le langage dans lequel s'exprime ordinairement la science ou la psychologie. Dans le cas de Fodor, la description purement syntaxique des événements mentaux, parce qu'elle est délestée de toute composante intentionnelle, rend possible leur naturalisation, leur réduction physicaliste. Dans le cas de Carnap, l'objectivité est assurée par le caractère purement syntaxique de la <em>Syntaxe Logique</em> :</p>
+            <div class="citation">
+                « Logical Syntax also follows the Aufbau in articulating a formalistic and holistic conception of meaning. Objective meaning is entirely determined by the purely formal – purely syntactical – rules of a given language or linguistic framework, and there is absolutely no question remaining concerning ‘content' or ‘interpretation'. » (Friedman, 1999, p.107)
+            </div>
+
+            <p><strong>Distinction observation et théorie</strong></p>
+            <p>Ce thème sera repris un peu plus loin ; je vais m'en tenir ici à une idée très générale.</p>
+            <p>Fodor défend l'idée d'une distinction psychologique entre la perception et la cognition permettant que certaines perceptions, les observations, soient indépendantes de ce qui est connu. Cette distinction s'incarne dans une conception modulaire de l'esprit qui permet de différencier plusieurs sortes de perceptions. Les modules sont des systèmes de traitement de l'information situés entre les processus sensoriel et la pensée. Ils sont très spécialisés et ‘encapsulés', c'est-à-dire qu'ils n'ont pas accès à ce qui se passe dans les autres modules ni aux connaissances qui relèvent du système général de la pensée. Leur seule fonction est de fournir au système général de la pensée la matière de la connaissance.</p>
+            <p>Dans la perspective de Carnap, le métalangage permet d'établir une claire distinction entre les termes empiriques et les termes logiques, les lois logiques et les lois physiques, les vérités analytiques et les vérités synthétiques. Ces distinctions sont possibles mais il n'y a aucun moyen de dire ce qui appartient à l'observation ou à la théorie avant la reconstruction logique de la science. La distinction n'est pas donnée, ne précède pas les interprétations et les constructions du théoricien. Le cas n'est pas différent dans le cas de la thèse de la modularité. Fodor défend une conception cognitive du concept de module : la description du processus modulaire requiert un vocabulaire cognitif et non celui de la réalité physique et des paramètres sensoriels. Les modules calculent une description de l'environnement qui est exprimée en vocabulaire non physique. C'est seulement, soutient B. de Gelder, lorsque les contours du langage de la pensée sont en vue que le théoricien peut assigner les propositions à l'un ou l'autre des niveaux modulaires.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref142"><strong>142.</strong> Laugier (<em>Les philosophes et la science</em>) insiste sur l'erreur qu'il y aurait à lire le <em>Tractatus</em> sans comprendre la distinction entre énoncés qui n'ont pas de sens et énoncés qui sont des non-sens.</p>
+            <p id="ref143"><strong>143.</strong> R. Carnap, <em>Logical Syntax of Language</em>, Routledge, 1937/2000, p.?</p>
+            <p id="ref144"><strong>144.</strong> F. Schmitz, <em>Wittgenstein</em>, 1999, p.99.</p>
+            <p id="ref145"><strong>145.</strong> B. de Gelder, « Carnap and Fodor », in <em>Epistemology and the Language of Science</em>, 1989, p.108.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="02_II_A3.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="02_II_B2_1.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>
