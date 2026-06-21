@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.B‑2. Pratique de la science – B2.1</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la science</h1>
+    <div class="sub">B‑2. Pratique de la science ; Connaissance de la réalité – B2.1 (pages 442‑453)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-intro">📖 B‑2‑1 Construction d'une relation de référence</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-montrer">🔍 Montrer plutôt que démontrer</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-synopsis">📐 Vue synoptique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-circulation">🔄 Pratique scientifique et circulation de la référence</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-realite">🌍 Réalité : ni construction, ni découverte</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-public">🏛️ Du fait scientifique à la réalité publique</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_B2_2.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Introduction === -->
+    <div class="capsule" id="capsule-intro">
+        <div class="capsule-title">📖 B‑2‑1 Construction d'une relation de référence</div>
+        <div class="capsule-content">
+            <div class="citation">
+                « [L’anthropologie des sciences] analyse la manière dont le langage devient petit à petit un véhicule susceptible de transporter les choses elles-mêmes<sup><a href="#ref286" class="reference-link" id="r286">[286]</a></sup>. »
+            </div>
+
+            <p><strong>Montrer plutôt que démontrer</strong></p>
+            <p>Wittgenstein a dénoncé la conception duale, bipolaire de la signification selon laquelle celle-ci est une propriété du signe et détermine son usage. La relation entre usage et signification n'est pas réductible à un schéma général d'association entre un son ou une marque et une signification déterminée :</p>
+            <div class="citation">
+                « En apprenant le langage, on n'apprend pas seulement la prononciation des sons et leur ordre grammatical, mais aussi les ‘formes de vie' qui font de ces sons les mots qu'ils sont, en état de faire ce qu'ils font.<sup><a href="#ref287" class="reference-link" id="r287">[287]</a></sup> »
+            </div>
+            <p>Pour comprendre pourquoi on peut employer un même terme dans certaines situations extrêmement diverses, comprendre comment la réalité prend forme sous nos mots, nos phrases, et dans nos têtes, la définition peut se révéler totalement insuffisante. Il faut porter attention à ce que nous disons dans ces situations, ce que nous pourrions dire ou ce qui ne se dit pas, aux attitudes qui s'y expriment, à de multiples choses qui relèvent d'une manière d'être, être ensemble, être dans le monde.</p>
+
+            <p>Exprimée sur un mode parallèle, l'idée maîtresse qui se dégage des études de Latour, et notamment du compte rendu suivi qu'il donne de la pratique de terrain d'un pédologue analysant un sol amazonien<sup><a href="#ref288" class="reference-link" id="r288">[288]</a></sup>, est que l'objet visé par un concept scientifique ne doit pas être conçu comme quelque chose de préexistant et indépendant de l'activité par laquelle il est identifié. Elle se dresse contre l'image présentant langage et réalité comme deux ensembles disjoints que la relation de représentation aurait pour mission de relier. L'activité scientifique n'est pas la construction d'un chemin qui conduit vers quelque chose en attente d'être découvert mais ceci n'empêche pas qu'il y ait bien un sens à parler de réalité extérieure. À aucun moment, Wittgenstein ni Latour n'entendent se priver du concept de réalité extérieure :</p>
+            <div class="citation">
+                « Que l'on ne se méprenne pas : loin de nous l'idée que les faits – ou la réalité – n'existent pas. La réalité est notre question, pas notre réponse.<sup><a href="#ref289" class="reference-link" id="r289">[289]</a></sup> »
+            </div>
+            <p>Pour Wittgenstein, l'indépendance de la réalité est ‘comprise' dans la pratique linguistique. Pour Latour,</p>
+            <div class="citation">
+                « il importe de s'abstenir d'invoquer la réalité extérieure ou le caractère opérationnel de ce que produit la science pour expliquer la stabilisation des faits, parce que cette réalité et cette opérationnalité sont la conséquence et non la cause de l'activité scientifique ».
+            </div>
+
+            <p>Pour saisir de quoi parle une théorie, il faudra se mettre à l'écoute du fonctionnement de la recherche scientifique. De même que Wittgenstein, par le souvenir, se plonge dans le langage, Latour se plonge dans la pratique scientifique, réellement. L'argument est semblable. Le philosophe étudiant le rapport entre les mots et ce qu'ils désignent ne peut pas sortir du langage pour assister ‘du dehors' à la rencontre entre les mots et les choses. L'épistémologue ne peut pas sortir de la science et assister à la (toute première) rencontre entre la science et le monde des objets, parce qu'« une science en cache toujours une autre » : c'est flagrant pour les laboratoires qui sont les lieux privilégiés de la « production de certitudes » mais qui ont</p>
+            <div class="citation">
+                « le grave inconvénient de reposer sur une sédimentation indéfinie d'autres disciplines, instruments, langages, et pratiques. (…) Au laboratoire, il y a toujours déjà sur place, un univers construit ». (Latour, 2001, p.39)
+            </div>
+            <p>Mais c'est vrai aussi, lorsqu'on sort du laboratoire pour un site pourtant peu éprouvé par la pratique scientifique : en forêt amazonienne, par exemple, lorsque le site étudié sera parcouru pour être jalonné de repères et de mesures, ce sont des savoirs, des techniques, des instruments, produits de pratiques antérieures, qui seront mis en œuvre sous le présupposé d'une relation entre les ensembles de signes qu'ils fournissent et des réalités indépendantes, relation garantie par des protocoles normalisés.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Vue synoptique de la pratique scientifique === -->
+    <div class="capsule" id="capsule-synopsis">
+        <div class="capsule-title">📐 Vue synoptique de la pratique scientifique</div>
+        <div class="capsule-content">
+            <p>Acquérir une vision synoptique du langage c'est, pour Wittgenstein, se souvenir des diverses occasions d'usage qui constituent ensemble la signification, regarder attentivement ce qui se passe, quelles sont les scènes jouées lors de l'emploi d'un mot. En science, les choses sont apparemment très différentes. D'une part, il n'y a pas de mémoire collective. D'autre part, il y a de nombreux signes qui viennent s'interposer entre un terme et l'objet qu'il désigne – des signes qui, eux aussi, ont prétention à représenter l'objet, à être une sorte d'ombre portée de l'objet. Le point de vue synoptique va consister dans ce cas à rendre visible la chaîne qui lie tous ces signes et qui en fait les signes d'un même objet.</p>
+
+            <p>Par un geste du doigt, le scientifique désigne le référent du discours et il montre toujours un diagramme, le terme d'une équation, une courbe, quand ce n'est pas un point particulier sur une courbe. Le scientifique parle du monde, d'objets dans le monde, mais il ne montre jamais que des inscriptions qu'il a produites lui-même et dont le plus souvent lui seul connaît le sens. Comment une inscription peut-elle valoir pour un objet du monde ? Il faut refaire le chemin par lequel un signe, une inscription fabriquée de toute pièce est devenue le représentant d'un objet, d'une chose dotée de propriétés. Un ensemble de procédures ont dû être déployées pour que s'établisse la corrélation entre un objet et une inscription. Ce sont ces procédures qu'il faut suivre pas à pas pour comprendre</p>
+            <div class="citation">
+                « comment charger en choses un énoncé » (Latour, 2001, p.47), « comment nous chargeons le monde dans les mots » ;
+            </div>
+            <p>par exemple, à partir d'un énoncé scientifique tel que « la forêt avance sur la savane » concernant la transformation d'une forêt amazonienne, aller à la recherche du fait désigné par cette proposition, le fait qui la rend vraie.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Pratique scientifique et circulation de la référence === -->
+    <div class="capsule" id="capsule-circulation">
+        <div class="capsule-title">🔄 Pratique scientifique et circulation de la référence</div>
+        <div class="capsule-content">
+            <p><strong>Série de transformations</strong></p>
+            <ul>
+                <li>l'observation qui a tout déclenché a été faite sur le terrain par une botaniste ; étonnée, elle a fait immédiatement appel à d'autres savoirs, d'autres techniques, elle a organisé le lieu d'une enquête : par la botaniste, ont été placées des petites étiquettes qui couvrent ainsi le site par un dallage de coordonnées cartésiennes. (Latour, 2001, p.40)</li>
+                <li>le pédologue entre en scène et procède à son propre arpentage : il utilise un pédofil pour mesurer les longueurs, une boussole pour mesurer les angles ; une succession de triangles forme ainsi un nouveau repérage qui doit pouvoir se superposer au dallage en carrés du botaniste : « pour que les données de la botanique et celles de la pédologie puissent se superposer plus tard sur un même diagramme, encore faut-il que leurs deux référentiels soient compatibles. » (p.49)</li>
+                <li>puis, ayant transformé le terrain en ‘protolaboratoire', « un monde euclidien où tout peut s'enregistrer par un ensemble de coordonnées » (p.51), le pédologue se livre à un relevé d'échantillons du sol, recueillis dans des sacs ensuite numérotés ; pour chaque sondage sont notés les coordonnées du lieu, le numéro du trou, le temps, la profondeur, certaines observations qualitatives. Cette grille de mesures garantit la « standardisation du protocole d'expérience » et la traçabilité des références. (p.53)</li>
+                <li>les échantillons sont rangés dans un pédocomparateur, valise de petits cubes de carton vides dont l'agencement forme un pavage carré : une motte de terre devient une tâche de couleur codée. La transition forêt-savane se traduit par une variation de couleurs, un phénomène de laboratoire presque aussi plan qu'un diagramme, aussi mobile qu'une valise.
+                <div class="citation">« Quadrillage de la parcelle, repérage des tranchées, numérotation des sondages, pédocomparateur : toutes ces formes vides se trouvent derrière les phénomènes avant qu'ils ne se manifestent, afin qu'ils se manifestent… » (p.59)</div></li>
+                <li>Un pattern émerge, une cohérence de couleurs apparaît dont la schématisation et l'interprétation donne lieu à un diagramme, qui servira de référence interne à un texte constituant le signe ultime de la chaîne de référence.</li>
+            </ul>
+
+            <p>Entre les choses et les signes, une série d'éléments emboîtés dont chacun joue le rôle de signe pour le précédent, de chose pour le suivant : le texte, le dessin qui l'accompagne, la figure formée par l'organisation des couleurs du pédocomparateur, que le dessin schématise, un ensemble d'échantillons de terre placés dans le pédocomparateur, que la figure réunit. Il y a en fin de course, le texte, le texte qui sert de signe pour le dessin, lequel ‘dessin' est la ‘chose' du texte, et est aussi le signe pour une forme : la figure déployée par l'organisation des couleurs du pédocomparateur. Et cette forme, qui est ‘chose' pour le dessin, est en même temps ‘signe' engendré par un ensemble d'échantillons de terre placés dans l'appareil, l'appareil qui extrait, classe et code le sol, un sol qui n'est pas ‘donné' mais obtenu au travers d'un réseau de coordonnées résultant d'un double repérage minutieux. À toutes les étapes, une forme sert de recueil à une matière par le truchement d'une pratique qui engage le corps des chercheurs.</p>
+
+            <p><strong>Référence circulante</strong></p>
+            <p>Le texte final se réfère à un schéma et le fait qui détermine la valeur de vérité de la proposition est donc sur le papier, pas à l'extérieur :</p>
+            <div class="citation">
+                « Différent de toutes les autres formes de récit, le texte scientifique, nous le savons, parle d'un référent présent dans le texte lui-même sous une autre forme que la prose : tableau, diagramme, équation, carte, schéma. Par la mobilisation de son référent interne, il porte en lui-même sa propre vérification. » (p.61)
+            </div>
+            <p>Mais si le dessin ne se référait lui-même à rien d'autre, le texte ne parlerait pas du monde. Au travers du dessin, le texte se réfère à toute une série de transformations qui chargent le dessin de sens :</p>
+            <div class="citation">
+                « la référence repose sur une série réglée de transformations, de transmutations, de traductions ».
+            </div>
+            <p>À travers tous les signes issus de toutes ces transformations, tous ces signes qui se succèdent, s'empilent, qui s'intercalent entre les mots du texte et les choses sur le terrain, quelque chose se maintient, demeure constant. Chaque signe marquant les étapes de cette « longue cascade » de transformations doit toujours pointer vers la même chose mais aucun ne peut le faire seulement par lui-même, chacun n'a de valeur de signification qu'en tant que pris dans la chaîne de transformations, et le texte ne peut se référer à la chose qu'en appartenant lui-même à cette chaîne dont tous les éléments à la fois transmettent et constituent ce à quoi le texte se réfère :</p>
+            <div class="citation">
+                « Il semble que la référence ne soit pas ce que l'on désigne du doigt ou ce qui, de l'extérieur, garantirait la vérité d'un énoncé, mais plutôt ce qui demeure constant à travers une série de transformées.» (p.63)
+            </div>
+
+            <p>Le diagramme rassemble de manière synoptique l'ensemble des actions dispersées, tout ce qui a été fait depuis que les scientifiques ont planté les repérages, et même le travail antérieur des botanistes sans lequel cette étude n'aurait pas eu lieu. Il y a bien continuité d'un bout à l'autre de la chaîne, il y a une interrogation identique sous-jacente qui donne sens à chaque transformation. Mais il n'y a pourtant pas une ressemblance générale telle qu'on pourrait superposer les éléments de la série. (Penser chez Wittgenstein à « l'air de famille » entre les situations désignées par le même mot : il y a une ressemblance entre ce que l'on appelle ‘jeu' d'un usage à l'autre et tous ces usages participent ensemble à la constitution d'une signification mais il n'y a cependant pas un noyau commun qui permettrait de les superposer.)</p>
+
+            <div class="citation">
+                « que je choisisse les extrêmes ou que je multiplie les intermédiaires, je retrouve toujours la même discontinuité »<sup><a href="#ref291" class="reference-link" id="r291">[291]</a></sup>
+            </div>
+
+            <p>Au lieu d'une ressemblance entre les éléments de la série, c'est plutôt une rupture complète qui est instaurée à chaque fois qu'un signe est associé à une chose, une rupture réitérée lorsque ce signe lui-même devient chose pour un autre signe : pas de ressemblance entre une motte de terre du pédocomparateur et le numéro qui lui est associé par l'intermédiaire d'une planche de couleur standardisée, entre un terrain en pleine forêt et l'ensemble de nombres qui est associé à différents endroits par l'intermédiaire d'un système de coordonnées, ni même entre un dessin et l'ensemble de mots qui en est le commentaire et l'interprétation. À chaque transformation, on perd la plupart des éléments d'une couche et on en gagne de nouveaux. Il n'y a pas correspondance ou <em>adequatio</em> entre les mots et les choses. Mais le doigt du chercheur qui pointe le diagramme se réfère bien au monde,</p>
+            <div class="citation">
+                « cette tension de l'index signale toujours l'accès à la réalité, bien qu'il vise un morceau de papier, lequel pourtant rassemble la totalité du site, laquelle pourtant a tout entière disparu, bien que nous soyons au milieu d'elle à suer... » (p.70)
+            </div>
+            <p>Le texte et le diagramme se réfèrent au monde, mais la relation de référence n'est pas une relation de correspondance entre deux ensembles indépendants l'un de l'autre ; c'est une relation de circulation au travers d'une série de transformations qui conduisent au diagramme, une série de transformations qui impliquent de la construction, de la découverte, de l'invention, de la convention.</p>
+
+            <p>La relation de référence n'est pas une liaison entre deux ensembles clos et disjoints, celui des choses et celui des signes. Elle n'a pas d'extrémité. Le dessin est la matière pour un texte qui peut, qui doit à son tour servir de ‘chose' de référence à d'autres textes, d'autres recherches, qui viendront confirmer, infirmer, pondérer ou préciser la proposition avancée. Le terrain qu'ont arpenté les chercheurs n'était lui-même ‘chose' que d'un côté ; de l'autre il était déjà porteur de significations se référant à des observations antérieures, appuyées sur des travaux de botanistes… Il n'y a pas de « séparation naturelle » entre les signes et les choses : ce qui est signe devient chose, ce qui est chose devient signe, d'une transformation à l'autre. Cette ouverture n'altère pas la relation de référence ; pour qu'il y ait référence, il faut qu'il y ait circulation, il faut et il suffit que la chaîne puisse être parcourue, sans rupture (p.78) :</p>
+            <div class="citation">
+                « Connaître ce n'est pas explorer mais pouvoir revenir sur ses pas en suivant le chemin que l'on vient de baliser. »
+            </div>
+            <p>La référence de la proposition n'est pas un élément de la chaîne mais</p>
+            <div class="citation">
+                « une qualité de la chaîne dans son ensemble. » (p.74)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : La réalité : ni construction, ni découverte === -->
+    <div class="capsule" id="capsule-realite">
+        <div class="capsule-title">🌍 La réalité : ni construction, ni découverte</div>
+        <div class="capsule-content">
+            <p><strong>Invention, convention, construction, découverte</strong></p>
+            <p>La description de la chaîne de référence montre ce qui comble l'abîme entre signe et matière, ce qui précisément doit être reproductible : la pratique qui engage le corps du chercheur. Étant donné la place de cette pratique, le signe qu'est, par exemple, le diagramme peut-il être tenu pour une découverte, ou n'est-il plus qu'une construction, une invention, ou une convention ? Le problème concerne aussi bien une seule des étapes de la série de transformations. Comment passe-t-on de la couleur d'une motte à un point sur un diagramme ? La couleur est remplacée par un nombre à l'issue d'une procédure de comparaison utilisant un nuancier qui présente un code ‘universel' constitué par un dégradé de différentes nuances. Celles-ci sont numérotées et surmontées d'un trou qui permet de juxtaposer la motte de terre à un échantillon de teinte. L'ensemble des mottes de terre finit par être associé, et même identifié à un ensemble de nombres tenant lieu des différentes teintes du nuancier. Ce procédé d'identification met en œuvre un système général de couleurs, puis un système plus spécifique de nuances caractéristiques ; pourquoi ces couleurs, pourquoi ces nuances ?</p>
+
+            <p>Le sentiment qu'il faut choisir entre ‘convention', ‘construction' ou ‘découverte' est lié à l'idée que la représentation doit mettre en relation les propositions avec des éléments factuels a priori indépendants de celles-ci. À l'issue du travail des chercheurs, quelque chose a été découvert grâce aux nombreuses procédures qui ont été déployées, quelque chose que l'on soupçonnait et qui a émergé, précisé, objectivé, discutable, critiquable, pouvant servir de ‘chose' pour une enquête future. L'idée de construction ne rend pas compte de cette spécificité du produit scientifique, de la fonction de tous les outils conventionnels qui sont mis en œuvre, de la particularité de la fonction du discours scientifique et du pouvoir-faire qu'il autorise. En outre, les concepts et les objets scientifiques infiltrent le langage et les pratiques ordinaires, donc si la science ne parle pas de réalité, c'est l'usage même du concept de réalité qui est erroné. Et si rien de ce qui est connu n'est la réalité, c'est un concept qui aurait un sens sans avoir d'usage, c'est une théorie de la réalité qui refuserait un sens à l'expression même de ‘théorie de la réalité'. Mais l'idée de découverte étouffe ce qui fait la dynamique humaine de l'activité scientifique, le travail de recherche, volontaire, intéressé, qui fait de cette production un véritable travail d'innovation requérant les capacités créatives des différents chercheurs et portant tout le processus de production de connaissance. Elle ne rend pas compte de toutes les procédures, de toutes les pratiques qui ont dû être inventées et engagées, qui sont impliquées du début jusqu'à la fin dans la connaissance obtenue : le travail du scientifique devient une sorte de ‘Sésame ouvre-toi'. La science apparaît comme un phénomène naturel : c'est la Nature qui explique que ce que nous connaissons soit la Nature. On évoque une théorie de la sélection naturelle : comment une théorie peut-elle fonder la notion de théorie ?</p>
+
+            <p><strong>Pratique scientifique et pratique ordinaire</strong></p>
+            <p>Le nuancier ne montre pas les couleurs d'une palette universelle. C'est bien une convention qui assure la réversibilité entre le nombre et la couleur. Mais la convention n'est pas réductible à une décision arbitraire. Pourquoi ces gestes-là, ces conventions-là, dans la pratique scientifique ? Devant la question « Pourquoi ces significations ? », Cavell pointe dans la pratique du langage ordinaire l'existence de critères, basés sur des conventions, quasi nécessaires, inscrites dans des formes de vie. Le système des nombres, celui des couleurs constituent des instruments de mesure accordés à ‘une forme de vie'… La façon dont Stengers<sup><a href="#ref292" class="reference-link" id="r292">[292]</a></sup> explicite le concept de paradigme fournit deux arguments importants à l'idée d'une analogie entre pratique scientifique et forme de vie qui permettrait de comprendre que l'opposition entre construction ou invention et découverte n'a pas plus de sens que les oppositions interne/externe ou nécessaire/conventionnel pour le réalisme de Wittgenstein.</p>
+
+            <p>D'une part, remarque Stengers, le paradigme ne peut pas être interprété comme une décision ‘purement humaine'. Un paradigme ne se choisit pas, ne s'invente pas, il s'impose</p>
+            <div class="citation">
+                « à la manière d'un événement, créant son avant et son après. »
+            </div>
+            <p>D'autre part,</p>
+            <div class="citation">
+                « le paradigme est d'abord et avant tout d'ordre pratique ».
+            </div>
+            <p>Ce n'est pas une simple manière de ‘voir' les choses, de poser des questions ou d'interpréter des résultats qui se transmet mais une manière de faire, une manière d'intervenir, et donc de se mettre en situation. Interpréter le paradigme de manière anti-réaliste comme une sorte de filtre théorique qui imprègne les faits, ce serait</p>
+            <div class="citation">
+                « conserver l'idéal d'un fait pur, cueilli tel quel, et désigner l'écart, le défaut, par rapport à cet idéal » (Stengers, 1993, p.61),
+            </div>
+            <p>autrement dit, ce serait en appeler à ce qui est au-delà de ce qui est accessible, de ce qui est connu, à ce qui est méta-physique. Restituer au paradigme sa dimension pratique, c'est substituer à la notion d'imprégnation, celle « d'invention des faits », qui n'est ni une découverte, ni une fabrication. Le paradigme « autorise » des faits expérimentaux ; en tant que manière de faire et de dire, il les rend pratiquement possibles, comme le fait une forme de vie, théoriquement légitimes, comme le fait un langage.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Du fait scientifique à la réalité publique === -->
+    <div class="capsule" id="capsule-public">
+        <div class="capsule-title">🏛️ Du fait scientifique à la réalité publique</div>
+        <div class="capsule-content">
+            <p><strong>Autonomie du fait scientifique</strong></p>
+            <p>Dans la façon non problématique dont Kuhn envisage la transmission, la publicisation de l'information scientifique, comme allant de soi, il semble que la communauté scientifique parle nécessairement d'une seule voix. Il tient pour caractéristique de la recherche normale de n'être pas critique, d'être une adhésion à ce que Pickering appelle un ‘big paradigm' ; même s'il peut, et s'il doit, exister des travaux hors paradigme, il semble que ces travaux ne soient pas en mesure d'avoir une portée publique, que seul le courant majoritaire ait le pouvoir de rendre public ses résultats, de parler au nom de la réalité. Contrairement à Bourdieu<sup><a href="#ref293" class="reference-link" id="r293">[293]</a></sup>, qui voit dans l'autonomisation d'un champ disciplinaire la condition de production de l'universel (reconnu comme tel) – autonomie dont il remarque quand même qu'elle n'est jamais totalement réalisée – selon Stengers, si l'invention de la science moderne, au XVII<sup>e</sup> siècle s'est effectivement marquée par la constitution d'une communauté, celle-ci ne se suffit pas à elle-même pour produire de la réalité (de l'universel). Dénoncer l'autonomie de la communauté scientifique vis-à-vis de la connaissance de la réalité ne signifie pas toutefois nier toute autonomie. Il y a une autonomie qui doit être sauvée : c'est celle qui signifie que le fait scientifique n'est pas un fait comme les autres, celle qui permet de distinguer le fait de l'artefact, celle qui doit pouvoir être revendiquée pour le fait lui-même, et seulement lui. Il est essentiel que le fait scientifique soit autonome dans le sens où sa manifestation ne dépend pas du scientifique qui l'a découvert/inventé ni du laboratoire où il a été découvert/inventé, c'est-à-dire dans le sens où sa production est contrôlable, maîtrisable – mieux il est contrôlé, et donc reproductible, plus il est autonome.</p>
+
+            <div class="citation">
+                Ironiquement, la question clé des constructivistes – les faits sont-ils construits de toutes pièces au laboratoire ? – est précisément la question que Boyle soulève et résout. Oui les faits sont bel et bien construits dans la nouvelle installation du laboratoire et par l'intermédiaire artificiel de la pompe à air. […] Mais, construits par l'homme sont-ils faux pour autant ? … Nous connaissons la nature des faits parce que nous les avons élaborés dans des conditions que nous contrôlons parfaitement. […] on ne modifiera jamais ces faits, quoi qu'il arrive par ailleurs en matière de théorie, de métaphysique, de religion, de politique ou de logique<sup><a href="#ref294" class="reference-link" id="r294">[294]</a></sup>.
+            </div>
+
+            <p>S'il y a une autonomie nécessaire, ce serait celle de l'énoncé ayant prétention à « faire exister » un nouvel objet ; mais pour que cette prétention soit satisfaite, pour que tel prétendant à l'existence accède effectivement à la réalité, et soit reconnu donc en dehors de la communauté spécialisée, il faut tisser des liens avec l'extérieur, trouver des alliés, ouvrir des pratiques à de nouveaux possibles, susciter des intérêts divers. L'autonomie du fait signifie que celui-ci ne dépend pas des multiples intérêts et alliances extra-communautaires que peut avoir un scientifique, elle n'exige pas que l'activité et la communauté scientifiques soient conçues comme des processus ou entités abstraits des conditions matérielles, interactives, complexes dans lesquelles elles existent.</p>
+
+            <p>Prenons l'exemple de la recherche sur l'activité cérébrale ; il y a sans doute un courant dominant, il est représenté par les théories moléculaires et la plupart des explications sont formulées en ces termes. Il existe pourtant aussi un travail fondé sur une approche dynamique, qui bien que minoritaire, parvient, sur certains sujets particuliers, à faire entendre sa voix : sur l'épilepsie notamment. L'approche dynamique de l'épilepsie suscite plus d'intérêt que l'approche dynamique des processus cognitifs ; celle-ci constitue encore un sujet de recherche dit fondamental, tandis que celle-là a pu trouver un champ d'application dans le domaine médical. Les chercheurs de ce domaine ont trouvé des alliés dans l'univers de la médecine : l'implantation d'une pile provoquant un forçage fréquentiel de l'activité neuronale du foyer épileptique semble permettre de prévenir le développement de certaines crises. Sans le développement de cette pratique médicale, la description de l'activité neuronale en terme de foyer dynamique caractérisé par certains paramètres et une carte de comportement montrant certains domaines de stabilité et d'instabilité peut constituer un énoncé ou un ensemble d'énoncés autonomes, qui représente un fait aussi objectif que celui auquel ont conclu les chercheurs étudiant le sol d'un terrain amazonien. Ce fait est l'objet de publications, de discussions, de critiques entre scientifiques. Il n'est pas encore, cependant, un élément de notre réalité. Pour le devenir, il doit être enrôlé dans la mise en œuvre de pratiques, ici médicales ; la dynamique du foyer et sa carte de stabilité deviennent réelles lorsqu'elles servent à comprendre comment fonctionne un appareil qui cristallise un ensemble complexe de contributions, d'intérêts qui regroupe la communauté scientifique, l'industrie de fabrication, des organes de médiatisation, des médecins, des patients, etc.</p>
+
+            <p><strong>Du fait à la réalité</strong></p>
+            <p>Stengers reconnaît la légitimité de la revendication d'autonomie par le scientifique : mais les faits inventés en laboratoire ne sont pas encore des réalités parce que du fait à la réalité, il y a passage de la communauté scientifique au collectif ; le fait concerne la communauté scientifique, la réalité concerne le collectif ; pour inscrire un fait dans la réalité, il faut mobiliser le collectif, ouvrir de nouvelles pratiques dont la diversité nourrit, remplit, la réalité du fait. Dans ce sens, la réalité est une affaire publique, nécessairement publique. L'inscription d'un fait dans la réalité n'est pas une simple formalité, une simple diffusion, c'est un véritable travail qui engage une pluralité d'acteurs. Le scientifique doit intéresser ; (com)pris sans connotations péjoratives le concept d'intérêt, ‘inter-esser', pointe vers ce qui fait lien. C'est parce que la production de réalité dépend de façon essentielle de cette part d'hétéronomie vis-à-vis de différentes communautés constituant le collectif et de la capacité à interagir avec elles, que l'autonomie de la science est un non-sens et qu'un champ spécialisé doit (dans son propre intérêt) être réceptif aux autres formes de savoir et aux contraintes et intérêts des possibles alliés (d'autres acteurs poursuivant d'autres projets qui impliquent une différenciation entre ce qui peut être négligé et ce qui doit être pris en compte).</p>
+
+            <p>Ces remarques ne touchent pas seulement à la question de l'autonomie de la communauté scientifique mais aussi à la passivité supposée de ceux qui n'en font pas partie quant à la détermination de la réalité. Si la science est ce par quoi est dite la réalité, l'activité scientifique ne peut pas être autonome dans cette entreprise ; celle-ci dépend aussi de ceux qui sont susceptibles de s'ouvrir à de nouvelles pratiques, et de ce qui va rendre possible leur mobilisation. Personne, à aucun moment, ne décide de ce dont est faite la réalité, la réalité ne se décrète pas, elle s'installe, elle s'immisce dans des formes de vie au travers du développement parfois hésitant de nouvelles façons de faire, de nouveaux modes d'action. La science, en tant qu'entreprise de production de réalité devient le nom d'un sujet abstrait subsumant a posteriori les divers éléments d'un réseau complexe d'échange impliquant de façon aussi essentielle, mais à des titres divers, des scientifiques et des non-scientifiques. La science, en tant que sujet de la connaissance de la réalité n'est pas identifiable à l'activité scientifique. Et l'activité scientifique, en tant qu'élément pris dans la production de ce qui est a posteriori attribué à ‘la science', n'est pas autonome. Il n'y a pas la communauté des scientifiques séparée du monde des industriels, du monde des politiques, du monde des médias, il y a des personnages-pont qui appartiennent à la fois au monde scientifique et au politique, au monde industriel et au scientifique, journalistes et scientifique. Aucune communauté professionnelle n'est autonome, et la communauté scientifique pas plus que les autres dans la mesure où elle participe, par le pouvoir-faire qu'elle propose, à la détermination de ce qui est publiquement reconnu comme existant. Mais tout cela, il faut encore le souligner, n'empêche pas de parler d'une autonomie du fait ou de l'énoncé scientifique. Cela n'empêche pas, l'étude du travail du pédologue le montrait, de prendre pour objet d'analyse l'activité scientifique en tant qu'ensemble de procédures de production de faits et d'énoncés spécifiques, et d'essayer de comprendre en quoi consiste cette spécificité.</p>
+
+            <p>Si l'on s'intéresse à la science en tant que processus de production de réalités, la participation de l'activité scientifique doit être située dans le réseau tissant entre eux les intérêts des différents acteurs impliqués dans ce processus. Si l'on s'intéresse à l'activité scientifique en tant que pratique de production de faits et énoncés spécifiques par leur autonomie et le pouvoir-faire qu'ils font exister, les alliances de divers ordres, qui nouent en permanence les scientifiques ne sont pas, à ce moment-là, pertinentes, quand bien même celles-ci sont impliquées dans la détermination des thèmes de recherche, dans le devenir des résultats de l'activité des scientifiques ou même dans la réalisation de certaines procédures.</p>
+
+            <p>Mais il faut être clair sur ce à quoi l'on s'intéresse, sur ce que l'on prend pour objet d'analyse ; et pour être clair sur ce qu'est l'objet de la réflexion, il faut être clair sur les termes que l'on emploie pour désigner cet objet. Le problème est, comme il apparaîtra dans la section suivante, que le terme ‘science' est utilisé sans distinction pour désigner aussi bien ce qui est l'activité des scientifiques que le processus de production de réalités. Or, pour la question qui concerne la légitimation de la scientificité d'une théorie de la connaissance mettant en scène un sujet de la connaissance historiquement constitué, et même co-constitué avec l'émergence du contenu de la connaissance, cette distinction s'avèrera décisive.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref286"><strong>286.</strong> B. Latour, <em>Pasteur : guerre et paix des microbes</em>, 2001, p. ?</p>
+            <p id="ref287"><strong>287.</strong> S. Cavell, <em>Les voix de la raison</em>, 1996, p.271.</p>
+            <p id="ref288"><strong>288.</strong> B. Latour, <em>Pasteur : guerre et paix des microbes</em>, 2001, ch. ?</p>
+            <p id="ref289"><strong>289.</strong> B. Latour, <em>Pasteur : guerre et paix des microbes</em>, 2001, p. ?</p>
+            <p id="ref291"><strong>291.</strong> B. Latour, <em>Pasteur : guerre et paix des microbes</em>, 2001, p. ?</p>
+            <p id="ref292"><strong>292.</strong> I. Stengers, <em>L'invention des sciences modernes</em>, 1993, p.61.</p>
+            <p id="ref293"><strong>293.</strong> P. Bourdieu, <em>Les usages sociaux de la science</em>, 2001.</p>
+            <p id="ref294"><strong>294.</strong> B. Latour, <em>Pasteur : guerre et paix des microbes</em>, 2001, p. ?</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_B1.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_B2_2.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

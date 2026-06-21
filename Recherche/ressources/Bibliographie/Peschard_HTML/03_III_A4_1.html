@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑4.1. Neurodynamique et énaction – Synchronisations</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑4. Neurodynamique et énaction – A4.1 (pages 382‑390)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-rappel">📌 Rappel</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-synchronisations">🧠 Synchronisations</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-mental">🔷 Le ‘mental’ : distinctions</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-structure-causale">⚡ Le mental comme structure causale</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-experience-vecue">💭 Le mental comme expérience vécue</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A4_2.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Rappel (fin d'A3.3) === -->
+    <div class="capsule" id="capsule-rappel">
+        <div class="capsule-title">📌 Rappel (fin de A‑3)</div>
+        <div class="capsule-content">
+            <p>… appel à une participation de la personne, de l'être, sur lequel porte l'attribution. Cela s'oublie parce que cette participation, et l'expérience dont elle témoigne, ne peuvent rien ajouter à notre connaissance de ce qu'est la connaissance : la seule chose qui est pertinente est de savoir comment sont représentées les propriétés indépendantes de la réalité, et cela ne peut pas dépendre d'une participation, forcément engagée dans une forme de vie, d'une expérience nécessairement située dans un contexte sensori-moteur et culturel. Dans la perspective énactive, une structure cognitive n'est pas une représentation de quelque chose, elle n'est pas déterminée par les propriétés de la réalité, car la réalité n'est pas antérieure au processus cognitif : l'ensemble des objets et des relations qui constituent la réalité que nous partageons est le résultat émergent d'un processus enraciné dans une dynamique sensori-motrice. La question est alors de savoir si le langage de la dynamique suffit à rendre compte de ce processus, processus de connaissance de la réalité, en tant qu'ensemble d'objets et de relations dont nous faisons une expérience intersubjective et qui constituent les significations du langage que nous partageons ; si la dynamique sensori-motrice par laquelle émergent des structures cognitives suffit à rendre compte de la connaissance de la réalité en tant qu'aptitude à participer à un jeu de langage intra-communautaire. Le simple fait de poser la question laisse déjà pressentir que la réponse ne sera pas positive. Et puisque j'ai commencé par une réserve concernant l'abolition intégrale du dualisme, il doit donc y avoir un rapport entre une certaine forme de dualisme et la distinction entre structure cognitive et connaissance. C'est effectivement l'idée que je veux exposer dans les paragraphes qui vont suivre, en montrant, en outre, que ce rapport est un aspect important de l'approche énactive et même un trait spécifique à cette approche. Je vais, dans cette optique, essayer de montrer assez concrètement où se situe le point de divergence entre l'usage épistémique qui est fait des outils de la dynamique par la plupart des dynamiciens et l'usage qui en est fait dans la perspective de l'énaction.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-4 Neurodynamique et énaction === -->
+    <div class="capsule" id="capsule-synchronisations">
+        <div class="capsule-title">🧠 A‑4 Neurodynamique et énaction – A‑4‑1 L'activité spatio‑temporelle du système neuronal</div>
+        <div class="capsule-content">
+            <p><strong>Synchronisations</strong></p>
+            <p>Ce qui est décrit grâce à la théorie des systèmes dynamiques est le phénomène résultant de l'interaction entre un système cognitif, en tant que système sensori-moteur, et un environnement, en tant que source de perturbations de l'évolution de ce système sensori-moteur. Cet instrument a permis à Varela d'engager une série de travaux extrêmement féconds sur l'étude de la synchronisation à grande échelle des oscillations neuronales. Les groupes neuronaux peuvent exhiber une large gamme de fréquences d'oscillation ; le phénomène de synchronisation correspond à un accrochage de phase des fréquences des oscillateurs. L'étude sur la synchronisation à grande échelle consiste à enregistrer, lors d'une expérience (vécue) de perception, l'électroencéphalogramme (EEG) d'un groupe de sujets grâce à des électrodes situées à la surface du crâne. Les sujets se voient présenter une même figure à l'endroit et à l'envers : à l'endroit, un visage est aisément reconnaissable, à l'envers ce sont généralement des formes en noir et blanc dénuées de signification qui sont perçues ; deux boutons leur permettent d'indiquer, par une pression sur l'un ou l'autre, s'ils perçoivent un visage ou pas. L'enregistrement du signal électrique montre une activité neuronale homogène dans la gamme des fréquences gamma et identique dans les deux situations d'expérience (endroit ou envers). Des accrochages de phase entre certaines électrodes, localisés dans le temps, viennent se superposer à l'activité homogène, mais de façon très différentes dans les deux situations perceptives. Dans les deux conditions, une synchronisation partielle est observée lors du mouvement de pression (environ 700 ms après la présentation de la cible) et pourrait être reliée, selon les auteurs, à la réponse motrice des sujets ; en revanche, dans une fenêtre temporelle antérieure, autour de 250 ms, un accrochage de phase spécifique aux situations de reconnaissance apparaît entre régions éloignées, région pariéto-occipitale gauche et région fronto-temporale. Selon les auteurs, ce type d'observation montrant des synchronisations entre régions éloignées témoigne de formes d'activité dynamiques à grande échelle du système neuronal, impliquant différentes bandes de fréquence, qui peuvent être interprétées comme des modes d'intégration des différentes dimensions d'un acte cognitif. Ces résultats conduisent les auteurs à proposer une manière d'appréhender le fameux dualisme mental-physique, entendu comme l'opposition entre la conscience, l'intentionnalité (le fait de reconnaître une figure par exemple, c'est-à-dire d'attribuer une signification) et les processus physiques, neuronaux, qui sont impliqués dans tout acte cognitif, complètement différente de celle qui cherche à l'abolir, que ce soit en développant un langage unique, ou en l'identifiant à une fonction cérébrale.</p>
+
+            <p>Il faut qu'il soit bien clair, avant de poursuivre, que la pensée qui va être développée ne s'oppose pas aux travaux, comme celui de Thelen, qui défendent l'idée de l'interaction entre les processus perceptifs et les processus moteurs et montrent que le comportement peut être décrit comme un processus émergent de cette interaction. À la question de savoir comment se produit la cognition</p>
+            <div class="citation">
+                « How does [cognition] work ? »
+            </div>
+            <p>la réponse de Varela et al. (1991, p.206) est sans ambiguïté et en parfaite consonance avec ces travaux :</p>
+            <div class="citation">
+                « Through a network consisting of multiple levels of interconnected, sensorimotor subnetworks. »
+            </div>
+            <p>Nous restons dans un cadre de pensée qui rejette absolument le schéma représentationniste d'une intériorité déterminée, un esprit, ou une structure mentale, centre de traitement de l'information provenant, via le système perceptif, d'une extériorité, un monde déterminé, et programmant une action adaptée exécutée par le système moteur. C'est une conception globale de l'activité qui est écartée par l'approche dynamique non représentationniste, une conception qui a deux principales composantes, la séparation de l'action et de la perception, et la séparation de la cognition et des aptitudes sensori-motrices :</p>
+            <div class="citation">
+                « The first is a view of perception and action as separate from each other and as peripheral. The second is a view of thought or cognition as the central core of the mind, at least for creatures with cognitive abilities. […] Perception and action are not just separate from each other, but also separate from the higher processes of cognition. The mind is a kind of sandwich, and cognition is filling.<sup><a href="#ref242" class="reference-link" id="r242">[242]</a></sup> »
+            </div>
+            <p>À côté des arguments philosophiques qui peuvent être produits à l'encontre de cette conception de la relation entre un être connaissant et le monde qu'il connaît, l'usage des instruments que la théorie des systèmes dynamiques fournit à l'étude scientifique de la cognition permet de montrer l'interdépendance entre la perception et l'action et d'écrire dans ‘une langue' unique un modèle de l'activité cognitive qui rend superfétatoire la notion de cause mentale. Concernant cette notion-là du mental, et son corrélat qu'est l'opposition intérieur-extérieur, la plupart de ceux qui ont recours à la dynamique s'accorderaient avec Hurley pour dire qu'elle peut être mise en cause et rendue obsolète par une démarche théorico-expérimentale :</p>
+            <div class="citation">
+                « The Input-Output can be made more precise and also challenged by reference to a collection of neuropsychological examples and related thought experiments, which illustrate the interdependence of perception and action. » (Hurley, 1998, p.340)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Le 'mental' : distinctions === -->
+    <div class="capsule" id="capsule-mental">
+        <div class="capsule-title">🔷 Le ‘mental' : distinctions</div>
+        <div class="capsule-content">
+            <p>Quel est alors le problème avec l'idée d'un rejet intégral du dualisme ? Une critique adressée par Freeman<sup><a href="#ref243" class="reference-link" id="r243">[243]</a></sup> à l'étude de l'erreur A-non-B permettra de percevoir la confusion qui est en question autour de la notion de mental et de nous introduire à ce qui fera toute la différence et l'originalité de l'horizon ouvert par l'approche énactive. Freeman commence par reconnaître la réussite de cette étude relativement au but annoncé comme étant de proposer de la cognition</p>
+            <div class="citation">
+                « an embodied view by casting the mental events involved in perception, planning, deciding, and remembering in the same analogic dynamic language as that used to describe bodily movements. »
+            </div>
+            <p>Mais il ne pense pas, contrairement aux auteurs, qu'ils aient, ce faisant, réussi à trouver</p>
+            <div class="citation">
+                « a common language for behavior, body, and brain. »
+            </div>
+            <p>Ils ont réussi à établir, dit-il, un lien entre</p>
+            <div class="citation">
+                « bodily behavior and mentation »,
+            </div>
+            <p>entre l'activité corporelle et le mental. Ce lien est établi lorsqu'ils parviennent à montrer que la perception et l'action relèvent de la même description dynamique et que l'objectivation n'engage rien de plus que le processus de couplage entre le système sensori-moteur et une mémorisation incarnée. Mais ce qu'ils n'ont pas établi, et qui reste à faire, est le lien entre</p>
+            <div class="citation">
+                « mentation and brain dynamics ».
+            </div>
+            <p>Tandis que le meilleur moyen d'appréhender le premier lien est l'étude de l'action, le second lien doit l'être, selon Freeman, par le biais de l'étude de la perception basée sur l'observation de l'activité neuronale. La distinction entre ces deux sortes de lien est cruciale et la question est maintenant de savoir en quoi peut consister le deuxième lien. Et à cette question, j'attache celle de savoir si c'est bien la même idée de « mentation » qui est en jeu dans chacun de ces deux liens.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Le mental comme structure causale === -->
+    <div class="capsule" id="capsule-structure-causale">
+        <div class="capsule-title">⚡ Le mental comme structure causale</div>
+        <div class="capsule-content">
+            <p>La notion de mental qui est visée et éliminée par la description dynamique du système sensori-moteur est celle qui pose les structures mentales comme centre de traitement d'informations perceptives et cause d'un comportement adapté à la situation perceptive. Cette structure mentale, comme le décrit Hurley, est située entre le système perceptif et le système moteur et doit, pour remplir la fonction qui lui est assignée, interagir avec chacun d'eux. En tant que cette structure est causale, elle doit appartenir au même plan phénoménal que les processus perceptifs et les processus moteurs. L'observateur, le scientifique, qui veut décrire l'activité cognitive doit intégrer dans sa description, outre les structures et activités perceptives et motrices, une structure et une activité mentales. Mais une telle intégration est évidemment impossible : parce que précisément la distinction entre ‘mental' et ‘physique' fait référence à une distinction phénoménale. Le scientifique est censé établir et décrire une relation directe, de cause à effet, entre un phénomène mental et des phénomènes physiques. Mais les événements que nous qualifions de mentaux n'appartiennent pas au même plan phénoménal que les événements que nous qualifions de physiques : ils ne sont pas observables ni mesurables, ils n'existent qu'en tant qu'expérience vécue.</p>
+            <p>On pourra objecter que la douleur est parfaitement observable ? Que l'usage du concept repose sur des critères d'observation intersubjectifs ? Mais ces critères ne s'appliquent qu'à des êtres vivants, et plus restrictivement des êtres humains ou apparentés – c'est-à-dire certains corps, certains comportements, certaines formes de vie. La douleur n'est pas une chose que l'on pourrait observer indépendamment d'une forme de vie. C'est ce que Wittgenstein montre dans ses analyses du concept de douleur :</p>
+            <div class="citation">
+                « Ce qui signifie ‘douleur', nous le savons (à savoir : ceci) ; en conséquence la difficulté tient seulement à ce que nous ne pouvons justement pas constater avec certitude ce ‘ceci' chez autrui. Qu'ici l'on commence seulement à rechercher le concept de douleur, nous ne nous en apercevons pas. » (Wittgenstein, IP, §246, p.60)<sup><a href="#ref244" class="reference-link" id="r244">[244]</a></sup>
+            </div>
+            <p>La douleur, comme la croyance ou l'intention, n'est pas un objet intérieur que l'on pourrait décrire indépendamment du langage et des formes de vie. C'est pourquoi il n'y a pas de lois psychophysiques, comme le rappelle Davidson<sup><a href="#ref245" class="reference-link" id="r245">[245]</a></sup> :</p>
+            <div class="citation">
+                « [W]hen we use the concepts of belief, desire and the rest, we must stand prepared, as the evidence accumulates, to adjust our theory in the light of considerations of overall cogency ». (p.123)
+            </div>
+            <p>C'est pourquoi, il ne peut y avoir selon lui de lois psychophysiques, des lois qui relient des événements mentaux et des événements physiques :</p>
+            <div class="citation">
+                There are no strict psychophysical laws because of the disparate commitments of the mental and physical schemes. It is a feature of physical reality that physical change can be explained by laws that connects it with other changes and conditions physically described. It is a feature of the mental that the attribution of mental phenomena must be responsible to the background of reasons, beliefs, and intentions of the individual. There cannot be tight connections between the realms if each is to retain allegiance to its proper source of evidence. […] [N]omological slack between the mental and the physical is essential as long as we conceive of man as a rational animal. (Davidson, 1970/2002, p.123)
+            </div>
+            <p>C'est donc la notion de mental comme structure causale située sur le même plan phénoménal que les processus physiques, qui est rendue obsolète et superfétatoire par la description dynamique et interactive du système sensori-moteur.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Le mental comme expérience vécue === -->
+    <div class="capsule" id="capsule-experience-vecue">
+        <div class="capsule-title">💭 Le mental comme expérience vécue</div>
+        <div class="capsule-content">
+            <p>Mais le problème n'est pas seulement qu'il n'y a aucun sens à postuler une relation causale entre une structure mentale et des processus physiques. Car si ce n'était que ça, il suffirait de se tourner vers une forme de réduction du mental au physique ou la thèse de l'identité des états mentaux et des états physiques. Car jusqu'ici, la critique adressée à la notion de mental par l'approche dynamique est analogue à celle formulée par les partisans du réductionnisme, tels les Churchland, au dualisme des substances ou au fonctionalisme. Or pour la même raison qu'il n'y a pas de sens à introduire sur le même plan phénoménal un processus mental comme cause d'un processus physique, il n'y a pas de sens à ce qu'une étude de la connaissance élimine toute référence à un événement mental ; mais en désignant par ‘mental' cette fois-ci, non pas une structure causale, mais une expérience vécue. Pourquoi pas ? Parce que, si la cognition est un concept scientifique, ce n'est pas le cas du concept de connaissance. Le concept de connaissance est un concept ordinaire dont l'usage participe d'un jeu de langage public et ce jeu de langage implique une expérience vécue par celui à qui est attribué une connaissance. Si l'enjeu d'une théorie de la cognition est de rendre compte de la façon dont nous connaissons, dont nous en arrivons à connaître le monde tel que nous le connaissons, elle doit faire une place à l'expérience vécue, à l'expérience vécue en tant que telle. Je rappelle à cet égard les impasses que constituent pour les philosophies réalistes le projet de réduction ou d'élimination de l'expérience vécue, l'expérience consciente<sup><a href="#ref246" class="reference-link" id="r246">[246]</a></sup>. L'impasse réductionniste est pointée par l'objection que Searle<sup><a href="#ref247" class="reference-link" id="r247">[247]</a></sup> adresse aux thèses explicatives selon lesquelles la conscience pourrait être expliquée par un processus neuronal. Quelles que soient les tentatives qui peuvent être faites, le sentiment qu'elles sont vouées à l'échec vient de ce que la conscience est non pas un phénomène ou un objet mais la condition de possibilité même de quoi que soit. Bitbol résume l'objection en montrant que si la thèse explicative est une impasse, c'est parce qu'elle recèle une incohérence logique, un défaut de logique grammaticale :</p>
+            <div class="citation">
+                « chercher une impossible réduction des formes indexicales et expressives aux formes descriptives du langage, c'est-à-dire une projection des expressions discursives d'un engagement situé sur leur restriction objectivante. » (Bitbol, 2000, p.168)
+            </div>
+            <p>La critique adressée à l'éliminativiste est traditionnellement reliée à la question de la complétude. Reformulée en termes ‘cognitifs' la question est de savoir si une science de la cognition qui ne prend pas en considération l'expérience subjective traiterait complètement de son sujet. La réponse éliminativiste est que dans la mesure où l'expérience subjective n'est ni un fait ni un objet l'absence de référence à l'expérience subjective, à ‘ce que c'est que' de sentir ou de percevoir ne peut pas être un défaut de la science. Cet argument, commente Bitbol, se développe en trois temps : d'abord, « on donne une définition assez restrictive du domaine propre de la science », ensuite « on constate que l'élément expérientiel qui échappe à la science ne satisfait pas à cette définition », et finalement « on en infère que la science est complète. » (Bitbol, 2000, p.170) Toute la question est donc de savoir sur quoi repose la définition du domaine propre de la science qui sert de prémisse. De quoi une science de la cognition a-t-elle l'ambition de produire une connaissance ? S'il s'agit de concevoir un système capable de produire des représentations, il n'est effectivement peut-être pas nécessaire de prendre en considération l'expérience subjective. S'il s'agit de comprendre en quoi consiste et comment se constitue la connaissance que nous avons du monde dans lequel nous vivons, la conviction des partisans de l'approche énactive est qu'il faut prendre en considération l'expérience subjective. Dira-t-on que c'est à la science de définir ce qu'est justement la connaissance et que si elle en donne une définition indépendante de l'expérience subjective, ceux qui prendraient en considération cette expérience n'étudierait plus la connaissance que nous avons ? Et le scientifique ou le philosophe qui produit cette définition niera-t-il qu'il ait l'expérience de ce qui lui arrive et que cette expérience soit impliquée dans la production de cette définition ? La question n'est pas du tout de savoir si les concepts mentaux réfèrent à des entités mentales. Ne pas être pour l'éliminativisme ou le réductionnisme des concepts mentaux à des concepts physiques n'implique pas que l'on se pose en défenseurs d'un dualisme des substances ou d'un réalisme des ‘qualia'. Ainsi que le rappelle Bitbol,</p>
+            <div class="citation">
+                « la fonction dénotative et assertorique » n'est que « l'une des fonctions possibles de la langue » ;
+            </div>
+            <p>de même que lorsque nous utilisons le concept de douleur, lorsque nous utilisons celui de connaissance nous mettons en œuvre l'une de ces autres fonctions possibles : lorsque nous utilisons les concepts mentaux, lorsque nous attribuons une douleur ou une connaissance, nous ne postulons pas l'existence d'une chose, d'une entité, déterminée, dont on pourrait attester la présence indépendamment du contexte dans lequel il y est fait référence. Nous ne pensons pas la connaissance ou la douleur comme un état, une forme particulière d'état qui serait susceptible d'une description absolument générale et qui se trouverait instancié ici ou là, dans un corps ou dans un autre, et serait ainsi reconnaissable par des critères abstraits des conditions particulières de son incarnation, des divers contextes de sa réalisation.</p>
+            <p>Nous n'attribuons pas une douleur ou la connaissance de quelque chose sur la seule base d'un certain comportement, déterminé dans l'abstrait, ou d'une certaine activité neuronale, mais sous la supposition d'une expérience vécue : la douleur, la connaissance ne sont pas pensées indépendamment de cette expérience, nous n'avons aucune idée de ce à quoi pourrait ressembler une douleur ou une connaissance indépendamment d'une expérience vécue. D'ailleurs, remarquent Varela &amp; Shear<sup><a href="#ref248" class="reference-link" id="r248">[248]</a></sup>, la plupart des cognitivistes font, comme le faisaient les behavioristes, une distinction de principe entre comportement et subjectivité et supposent, de façon plus ou moins explicite, que les comportements qu'ils étudient sont ceux d'un agent ou d'un sujet cognitif, sans plus de précision. Mais dès lors, même si leur pratique et leur discours s'inscrivent rigoureusement dans une perspective en troisième personne, ils ont déjà admis, à la différence d'une étude portant sur des cellules ou des cristaux, la position, le point de vue de l'autre :</p>
+            <div class="citation">
+                « [T]hey already insinuate the other's position and concerns, in a way that studying cells and crystals does not. » (p.7)
+            </div>
+            <p>Je vais maintenant retourner vers l'étude de la perception menée dans le cadre de la théorie de l'énaction et montrer comment s'y retrouve la distinction à propos du ‘mental' qui vient d'être explicitée.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref242"><strong>242.</strong> S. Hurley, <em>Consciousness in Action</em>, 1998, p.340.</p>
+            <p id="ref243"><strong>243.</strong> W. Freeman, « A neurobiological interpretation of the A-not-B error », 1995.</p>
+            <p id="ref244"><strong>244.</strong> L. Wittgenstein, <em>Investigations Philosophiques</em>, Gallimard, Tel, 1998, p.314.</p>
+            <p id="ref245"><strong>245.</strong> D. Davidson, « Mental Events », in <em>Philosophy of Mind</em>, D. Chalmers (ed.), Oxford University Press, 2002, p.116-123.</p>
+            <p id="ref246"><strong>246.</strong> M. Bitbol, 2000.</p>
+            <p id="ref247"><strong>247.</strong> J. Searle, <em>The mystery of consciousness</em>, 1997.</p>
+            <p id="ref248"><strong>248.</strong> F. Varela &amp; J. Shear, « First-person methodologies », 1999, p.7.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A3_3.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A4_2.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

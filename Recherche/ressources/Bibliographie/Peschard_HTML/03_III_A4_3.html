@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑4.3. Neurodynamique et énaction – Neurophénoménologie</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑4. Neurodynamique et énaction – A4.3 (pages 398‑420 + 321‑428) – Neurophénoménologie, Couplage et Langage</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-intro">📖 Introduction</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-experience">🧪 Étude expérimentale</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-autres">🔍 D'autres programmes</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-pratique">🔄 Une phénoménologie pratique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-epoché">🧘 L'époché et le cycle de base</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-description">📝 Description et validation</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-critiques">⚡ Les critiques</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-couplage-langage">🌐 Couplage et langage</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-pouvoir-savoir">🔧 Du pouvoir‑faire au savoir‑dire</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_B1.html" class="nav-btn-top" title="Page suivante (III.B)">→</a>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : Introduction        -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-intro">
+        <div class="capsule-title">📖 Neurophénoménologie : Connaissance et expérience</div>
+        <div class="capsule-content">
+            <p>Toute connaissance émerge de l'activité vitale d'un système autopoïétique, activité de maintien de l'organisation qui le définit par transformation de la structure qui le réalise. Toute connaissance, connaissance de soi, connaissance du monde est l'expression d'une expérience incorporée par le système vivant. Pour comprendre ce qui peut être considéré comme connaissance et comment cette connaissance se produit, il faut comprendre en quoi consiste ce système. Mais savoir cela, c'est évidemment constituer une connaissance de ce système. Une connaissance qui, toute scientifique qu'elle soit, doit admettre parmi ses conditions de possibilité et de réalisation son ancrage dans l'expérience, c'est-à-dire une situation sensori-motrice, qui prend la forme plus générale d'une pratique scientifique, d'une 'forme de vie' de laboratoire, laquelle implique un appareil biologique, auquel s'ajoute ici un appareillage technologique, et qui s'inscrit dans un univers culturel, un système symbolique complexe qui tisse ensemble des savoirs, des normes, des projets. Expérience et connaissance sont dans une relation continue de co-dépendance qui nous interdit de les appréhender comme des pôles indépendants, de considérer l'une d'entre elles comme un moment plus fondamental que l'autre. Nous sommes sans cesse renvoyés de l'une à l'autre, sans qu'il semble jamais possible de briser le cercle d'une dynamique d'influence mutuelle, nous ne pouvons penser l'une sans en appeler immédiatement à l'autre dans une circularité qui a l'inquiétante apparence de ce que l'on appelle un cercle vicieux. On comprend bien alors quel est le service rendu par la thèse objectiviste du caractère non situé de la connaissance scientifique : rendre invisible tout ancrage expérientiel et tout ce qu'il implique. Les conditions de la connaissance scientifique sont abstraites de toutes ces contingences physiques et culturelles, sont arrachées à ces dépendances historiques, matérielles ou symboliques, et le discours scientifique peut être pris comme instrument transparent de description, instrument qui, en tant qu'il ne dépend d'aucun lieu ni d'aucun temps, peut parler de ce qui est universel et atemporel. Mais le cercle qui enchaîne expérience et connaissance n'est vicieux que dans une perspective représentationniste qui cherche à fixer les déterminations des pôles pré-définis d'une relation de connaissance, établie entre eux a posteriori de façon extrinsèque et contingente. Il n'est pas vicieux dans un cadre de pensée dynamique et non représentationniste qui vise à rendre compte des conditions de notre connaissance en tant qu'elle est toujours une expérience vécue : le discours scientifique doit être complété par un témoignage de l'expérience en première personne ; et cherche à comprendre le discours de l'expérience vécue dans les termes de la description de la connaissance du monde : le discours en première personne doit être articulé à une description scientifique des conditions dans lesquelles il est produit. Comprendre scientifiquement les conditions de production de connaissances, c'est comprendre les conditions de réalisation de notre expérience, de toute expérience, l'expérience du monde et l'expérience de soi – mais sans qu'il ne soit plus nécessaire d'oublier que la connaissance scientifique qui est ainsi produite est, elle aussi, bien entendu, enracinée dans une expérience particulière. Particulière ici signifie non nécessaire plutôt que personnelle. Cela n'est plus nécessaire parce que la pensée non représentationniste n'a pas d'autre ambition que d'explorer les méandres de cette co-dépendance :</p>
+            <div class="citation">
+                « Properties of things (in fact the recognition of distinct things at all) exist only as operational distinctions in a domain of distinctions specified by an observer. When we talk about systems and their medium, components, and structural change, we speak as if there were external things and properties. This is an inescapable result of using language, but it is always a speaking 'as if', not an ontological claim. » (Winograd &amp; Florès, 1986, p.51)
+            </div>
+            <p>Ce à quoi conduit l'énaction est une idée à deux faces de la connaissance : la conscience est incarnée, le monde est un vécu. Un modèle qui, dans une perspective non représentationniste, décrit la dimension incarnée de la cognition au travers d'une modélisation des processus d'interaction entre le système sensori-moteur et l'environnement permet peut-être de faire émerger des structures cognitives, des comportements, mais ne peut pas donner de sens à ce qui émerge – sauf à tomber dans une lecture sémantique de ces structures ou de ces comportements en les dotant de significations qui relèvent de l'expérience de l'observateur et non du système lui-même. Dire que le monde est un vécu, cela signifie que le passage de l'expérience cognitive à la connaissance du monde implique l'expérience vécue du système cognitif lui-même, et cela signifie que l'observateur qui veut appréhender cette connaissance du monde à partir de l'expérience cognitive a besoin pour cela du témoignage, en première personne, de ce système. Et dire que la conscience est incarnée, cela signifie que pour comprendre comment la connaissance du monde qui s'exprime dans le langage a pu être constituée, l'exploration de la conscience du monde, quelle qu'en soit la façon, ne suffit pas. L'expression du vécu doit être articulée à une expérience corporelle, plus précisément à une rencontre du corps avec l'environnement qui est la source des affections, des transformations qui constituent l'expérience corporelle. Cette articulation qui est nécessaire pour comprendre comment se constitue la connaissance de la réalité est le programme de recherche d'une nouvelle discipline et d'une nouvelle pratique de connaissance : la neuro-phénoménologie.</p>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : Étude expérimentale -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-experience">
+        <div class="capsule-title">🧪 Étude expérimentale</div>
+        <div class="capsule-content">
+            <p>Un schéma classique des études expérimentales de l'activité neuronale consiste à effectuer une mesure de l'activité cérébrale pendant que le sujet réalise une tâche déterminée. Ces études imposent un protocole extrêmement strict qui vise à contraindre le déroulement de l'activité cognitive de façon à éviter, dans la plus grande mesure possible, les activités 'parasites', c'est-à-dire les activités qui introduisent dans la procédure expérimentale des éléments idiosyncrasiques, et à pouvoir relier l'activité neuronale avec la réalisation de la tâche. Pourtant, même lorsque les tâches sont précisément calibrées, les réponses cérébrales à des stimulations identiques sont extrêmement variables. La source de cette variabilité réside, selon Lutz et al.<sup><a href="#ref254" class="reference-link" id="r254">[254]</a></sup>, dans des modifications du contexte, de l'arrière-plan cognitif défini par l'état d'attention, les pensées spontanées, l'intérêt pour la tâche, etc. En effet, lorsque l'activité cognitive d'un sujet est sollicitée par une certaine tâche expérimentale, son système neuronal est toujours déjà engagé dans une certaine forme d'activité cognitive et la réponse observée lors de la tâche est le résultat d'une interaction entre une activité d'arrière-fond et la stimulation qui la perturbe :</p>
+            <div class="citation">
+                « [T]he neural response is shaped by the ongoing activity. » (Lutz et al., 2001, p.1586)
+            </div>
+            <p>Le problème que rencontrent les expériences de mesure de l'activité neuronale est d'une part, que cette activité d'arrière-plan est difficilement contrôlable, et d'autre part, que même lorsque certains facteurs qui influencent cette activité d'arrière-plan, comme la vigilance ou la motivation, sont dirigés, les effets de cet arrière-plan cognitif ne sont pas pris en compte de manière systématique. De façon générale, le problème de la variabilité des résultats est tout simplement ignoré, et la signification de cette variabilité est effacée, grâce à l'utilisation de méthodes de traitement des données procédant à des évaluations de grandeurs moyennes. Au contraire, c'est une méthode d'étude de l'activité neuronale intégrant une prise en compte systématique de l'arrière-plan cognitif de réalisation d'une tâche expérimentale que vise à mettre en place, entre autres, la pratique neurophénoménologique.</p>
+            <p>L'étude présentée par Lutz et al. (2001) constitue un exemple concret de protocole expérimental réalisant cette intégration. L'idée principale de ce travail est en deux temps : premièrement, enregistrer avant et pendant la tâche cognitive présentée à un ensemble de sujets, aussi bien l'activité cérébrale (mesure de l'EEG) que le récit par les sujets eux-mêmes de leur expérience. Deuxièmement, et c'est là que l'expérience, le contexte cognitif, est réellement pris en compte, il s'agit de regrouper, de classer, les enregistrements d'EEG en fonction des récits en première personne et de procéder ensuite aux analyses dynamiques de chacun des groupes.</p>
+            <p>Les sujets sont confrontés à une cible visuelle consistant dans l'apparition sur un écran plat d'une forme imitant une figure 'tridimensionnelle' ; ils ont pour instruction de presser un bouton lorsqu'ils perçoivent la figure et l'illusion de profondeur. Après l'exercice, les sujets sont interrogés sur les différents moments de leur expérience. La procédure est réitérée jusqu'à ce que, disent les auteurs, les sujets parviennent à stabiliser les catégories descriptives de leur situation expérientielle :</p>
+            <div class="citation">
+                « Subjects were reexposed to the stimuli until they found their own stable experiential categories to describe the main elements of the cognitive context in which they perceived the 3D shapes » (Lutz et al., 2002, p.1587)
+            </div>
+            <p>Les rapports d'expérience qui sont ainsi stabilisés permettent de définir des catégories de contexte cognitif selon lesquelles sont regroupés les différents essais expérimentaux. Quatre groupes phénoménologiques (« phenomenological clusters (PhCs) ») sont ainsi distingués :</p>
+            <ul>
+                <li><strong>« Steady readiness (SR) »</strong> : les sujets se disent bien préparés, l'esprit très présent et concentré sur la situation expérimentale ; ils répondent rapidement, et vivent le moment de la perception dans un sentiment de continuité.</li>
+                <li><strong>« Fragmented readiness (FR) »</strong> : les sujets rapportent qu'ils ont dû faire un effort particulier d'attention, et que néanmoins ils étaient un peu distraits ; ils témoignent d'un léger sentiment de surprise associé à la perception de la figure.</li>
+                <li><strong>« Between SR and FR (SR') »</strong> : un sujet témoigne d'un état qui est intermédiaire entre les deux précédents dans le sens où il rapporte un état de concentration, de présence sans préparation active de sa part.</li>
+                <li><strong>« Unreadiness (SU) »</strong> : les sujets rapportent qu'ils n'étaient pas bien préparés, qu'ils ont été surpris par l'apparition de la figure ; la perception est vécue comme une rupture d'un état de pensée indépendant de la tâche proprement dite.</li>
+            </ul>
+            <p>Par ailleurs, les expérimentateurs ont analysé la mesure des EEG de tous les sujets recueillis avant et pendant la tâche à partir d'électrodes réparties sur l'ensemble de la surface crânienne. Ils ont pu retrouver l'existence, déjà signalée<sup><a href="#ref255" class="reference-link" id="r255">[255]</a></sup>, de synchronisations de populations neuronales à l'échelle locale, au niveau d'une même électrode, et entre régions éloignées, entre différentes électrodes, et impliquant une très large gamme de fréquences (4 plages comprises entre 4 et 70 hertz) : cette forme de cohérence dynamique est appelée par les auteurs 'signature neurale dynamique' (DNS). Le résultat original qui est tiré de ce double enregistrement, verbal et numérique, est, d'une part, la mise en évidence d'une différentiation des comportements de réponses et des signatures neurales dynamiques relative aux catégories phénoménologiques :</p>
+            <div class="citation">
+                « We found that the behavioral responses of the subjects (reaction time) and the DNSs before and after the stimulus differed among PhCs » (Lutz et al., 2002, p.1586-87)
+            </div>
+            <p>et d'autre part, la mesure de formes stables de synchronisation de phase, au niveau des électrodes frontales, dépendantes elles aussi du degré de préparation rapporté par les sujets.</p>
+            <p>L'expérience montre, en conclusion, selon les auteurs, que le contexte cognitif dans lequel s'effectue la tâche expérimentale module les réponses synchrones qui sont suscitées par l'expérience perceptive :</p>
+            <div class="citation">
+                « we found that local and long-range synchrony occurred at different frequencies before the stimulus depending on the degree of readiness reported by the subjects » (Lutz et al., 2002, p.1588)
+            </div>
+            <p>Notamment, il a été remarqué, chez les sujets témoignant d'une forte concentration (SR), l'existence d'une synchronisation marquée et entretenue au niveau des électrodes frontales, ainsi qu'une évolution, pendant la phase de préparation, de l'énergie du signal vers la gamme des hautes fréquences. Cette observation fait dire aux auteurs que le déploiement de l'attention pendant la phase de préparation pourrait être caractérisé par une augmentation des rythmes rapides avec une atténuation des rythmes lents. L'étude montre ainsi que la catégorisation de ces contextes peut être utilisée comme contrainte sur l'analyse des dynamiques neurales et permettre de rendre compte de leur variabilité : la topographie, la fréquence, la forme temporelle des synchronisations varient largement en fonction des sujets mais ces différences ne doivent pas être traitées simplement comme du bruit car leur stabilité sur plusieurs jours semble indiquer qu'elles expriment des différences intrinsèques entre les sujets. Le regroupement par catégories phénoménologiques des enregistrements d'EEG permet, en les rapportant au contexte cognitif relaté par les sujets, de donner sens à des formes d'activité neuronales spécifiques, qui auparavant disparaissaient dans les calculs de moyennes, et d'appréhender ensuite l'activité associée à la perception de la cible de façon plus aiguë, plus différentielle, en discernant une interaction entre la réponse au stimulus et un arrière-fond cognitif.</p>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : D'autres programmes -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-autres">
+        <div class="capsule-title">🔍 D'autres programmes : ressemblance et différence</div>
+        <div class="capsule-content">
+            <p>Cette étude expérimentale est extrêmement intéressante et méritait d'être décrite en détails car elle illustre la façon dont peut être réalisée une étude scientifique des processus cognitifs qui intègre activement le compte rendu en première personne de l'expérience vécue qui leur est associée. L'idée qu'une science de la cognition doit se donner les moyens de prendre en considération l'expérience consciente en tant que telle n'est pas propre à l'approche énactive. Et la neurophénoménologie se reconnaît certaines affinités avec d'autres programmes de recherche, mais celles-ci ne suffisent pas à recouvrir certaines différences essentielles. Ainsi que le rappelle Bitbol (2000, p.155), les années 90 ont connu « une véritable explosion des réflexions sur la conscience phénoménale » et de la conviction que l'expérience ne pouvait pas être considérée, comme le prétendait le fonctionnalisme, comme un simple épiphénomène des processus de traitement de l'information ni même une fonction mentale parmi d'autres. De façon caractéristique, Chalmers<sup><a href="#ref256" class="reference-link" id="r256">[256]</a></sup> a souligné que l'expérience ne pouvait pas être le produit d'une explication et devait être considérée en elle-même :</p>
+            <div class="citation">
+                « you can't explain conscious experience on the cheap » (Chalmers, 1995, p.208),
+            </div>
+            <p>l'expérience n'est pas</p>
+            <div class="citation">
+                « an explanatory posit, but an explanandum in its own right, and so it is not a candidate for [reductive] elimination » (Chalmers, 1995, p.209).
+            </div>
+            <p>Selon Chalmers, la solution au « problème difficile » (« hard problem ») que pose l'étude de l'expérience consciente doit faire appel à de nouveaux principes théoriques : il faut procéder à un élargissement de l'ontologie des sciences naturelles visant à intégrer des propriétés expérientielles, et à permettre la formulation de « lois fondamentales psycho-physiques ».</p>
+            <p>Les promoteurs de la pratique neurophénoménologique sont évidemment convaincus que la dimension expérientielle de la cognition doit être prise en considération, en tant que telle, par les sciences cognitives ; ils reconnaissent leur affinité avec tous ceux qui s'intéressent à l'expérience en première personne,</p>
+            <div class="citation">
+                « first-hand experience as basic fact to incorporate in the future of the discipline<sup><a href="#ref257" class="reference-link" id="r257">[257]</a></sup> ».
+            </div>
+            <p>Mais, précisément, parce que c'est en tant que telle qu'elle doit être considérée, ils s'opposent aux projets qui aspirent à produire une quelconque forme de modélisation théorique telle que l'envisage Chalmers. Car toute modélisation implique une objectivation de ce qui doit être modélisé, c'est-à-dire une prise de distance du modélisateur vis-à-vis du phénomène à objectiver, qui n'est rien d'autre que l'occultation de l'expérience par laquelle ce phénomène est perçu, l'expérience phénoménale, dont il s'agit pourtant de rendre compte. L'ambition de la pratique neurophénoménologique est de mettre en place une pratique, de briser le cercle vicieux dans lequel la philosophie de l'esprit s'enferme,</p>
+            <div class="citation">
+                « de façon compulsive<sup><a href="#ref258" class="reference-link" id="r258">[258]</a></sup> »,
+            </div>
+            <p>à chaque fois qu'elle essaie de comprendre ou d'appréhender l'expérience par le biais d'une ré-flexion, d'une théorisation :</p>
+            <div class="citation">
+                « a method to break the vicious circle of the attempts to 'fix' [this compulsive behavior] with yet another abstract, theoretical model ». (Depraz et al., 2002, p.118)
+            </div>
+            <p>Le souci de prendre en considération la phénoménologie de l'expérience qui motive la neurophénoménologie se trouve exprimé aussi de façon très explicite dans la proposition faite par Velmans<sup><a href="#ref259" class="reference-link" id="r259">[259]</a></sup> d'un 'modèle réflexif de la perception', « reflexive model of perception ». Ce dernier défend, en effet, l'idée d'un modèle de la conscience qui soit satisfaisant aussi bien d'un point de vue scientifique que d'un point de vue expérientiel. Il est nécessaire de produire une description scientifique des processus perceptuels qui repose sur une étude du cerveau conduite selon le point de vue extérieur d'un observateur s'exprimant en troisième personne. Mais, d'un autre côté, le modèle suppose que la conscience ne peut pas être comprise sans une description phénoménologique précise, exprimée en première personne, de l'expérience de la conscience :</p>
+            <div class="citation">
+                « The investigation of consciousness can proceed quite happily without reductionism by finding out events perceived from the subject's first person perspective actually relate to the events perceived from the external observer's third-person perspective.<sup><a href="#ref260" class="reference-link" id="r260">[260]</a></sup> »
+            </div>
+            <p>Une autre forme d'intégration du compte rendu phénoménal dans une science de la conscience a été présentée par Flanagan<sup><a href="#ref261" class="reference-link" id="r261">[261]</a></sup> qui développe la notion d'équilibre réflexif (« reflective equilibrium »). Mais dans un cas, comme dans l'autre, la similarité de ces propositions avec la neurophénoménologie s'arrête, selon Varela, au niveau de l'intention :</p>
+            <div class="citation">
+                « Although there is a similarity in intention to what I am proposing here, they propose no explicit or new methodological grounds for carrying out these intentions<sup><a href="#ref262" class="reference-link" id="r262">[262]</a></sup>. »
+            </div>
+            <p>La neurophénoménologie ne veut pas proposer un nouveau modèle, une nouvelle théorie de 'ce que c'est que', ou de 'comment il est possible' de faire l'expérience consciente de quelque chose. Nous retrouvons ici la distinction entre les deux conceptions du 'mental' qui a été soulignée précédemment : le mental comme fonction cognitive, comme attitude propositionnelle, comme contenu de connaissance,</p>
+            <div class="citation">
+                « assimilated with that of cognitive behavior, propositional attitude, or functional role »
+            </div>
+            <p>et le mental comme conscience, comme expérience vécue. La neurophénoménologie part de l'expérience, de la nature irréductible de l'expérience : c'est sa dimension phénoménologique. Elle ne veut pas expliquer la conscience, l'expérience vécue qui est attachée au phénomène de la cognition. Mais elle ne veut pas que cet élément soit tenu à l'écart d'une connaissance scientifique des processus cognitifs, comme c'est le cas dans une perspective dualiste :</p>
+            <div class="citation">
+                « Needless to say we exclude here the extreme of phenomenology being explained away, (a variant of eliminativism), or declared incommensurable (a dualist stance). » (Depraz et al., 2002, p.128)
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : Une phénoménologie pratique -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-pratique">
+        <div class="capsule-title">🔄 Une phénoménologie pratique</div>
+        <div class="capsule-content">
+            <p>La neurophénoménologie veut construire, de façon pratique et surtout pas spéculative, une méthode qui permette d'établir une articulation, une circulation entre les comptes rendus en première personne, et en troisième personne, entre un discours phénoménologique et une description neuronale. Elle n'est pas une solution au 'problème difficile' de la conscience, car la conscience, l'expérience vécue, n'est pas considérée comme un problème mais comme un point de départ :</p>
+            <div class="citation">
+                « Lived experience is where we start from and where all must link back to, like a guiding thread<sup><a href="#ref263" class="reference-link" id="r263">[263]</a></sup>. »
+            </div>
+            <p>Le problème est que ce point de départ ne doit pas être un lieu fermé sur lui-même ; le problème est de construire une corrélation entre l'expérience vécue et la description neuronale :</p>
+            <div class="citation">
+                « What is needed is a strict method and that is where both the difficulty and the revolutionary potential of the topic lie. » (Depraz et al., 2002, p.121)
+            </div>
+            <p>En fait, la neurophénoménologie propose, non pas un instrument en vue de surmonter la 'difficulté' du problème de l'étude de la conscience, mais de reposer ce problème dans de nouveaux termes. La question n'est pas de savoir comment la conscience émerge à partir de processus physiques, mais de créer les ponts, des voies de circulation, entre deux domaines de phénomènes. Et en premier lieu, pour que l'expérience en première personne puisse être intégrée, par le biais d'une articulation des comptes rendus, à l'étude scientifique des processus cognitifs, il est nécessaire qu'elle fasse l'objet d'une discipline,</p>
+            <div class="citation">
+                « une discipline phénoménologique permettant d'atteindre, pour la stabilisation, la corroboration intersubjective, et la dénotation expressive, des expériences conscientes, le degré de sophistication que les sciences de la nature ont pu obtenir par le procédé de la caractérisation d'objets publics. » (Bitbol, 2000, p.159)
+            </div>
+            <p>Le premier pas en direction de la pratique neurophénoménologique, puisque celle-ci doit reposer sur une méthodologie d'examen de l'expérience, consiste à reconnaître ou être prêt à reconnaître à la notion de donnée phénoménale, « phenomenal data », fournie par le discours en première personne, une validité de principe et une valeur épistémique équivalentes à celles qui sont accordées aux données physiques, neurodynamiques, fournies par le discours objectif, le discours en troisième personne<sup><a href="#ref264" class="reference-link" id="r264">[264]</a></sup>. Il s'agit, autrement dit, de rompre avec le double 'taboo' dénoncé par Wallace :</p>
+            <div class="citation">
+                « In terms of scientific materialism, there is one taboo against scientific inquiry into subjective mental phenomena ; and there is another taboo against allowing one's own subjective perspective to taint any scientific research. Thus, first-person, introspective inquiry into the mind is doubly taboo.<sup><a href="#ref265" class="reference-link" id="r265">[265]</a></sup> »
+            </div>
+            <p>La notion de donnée phénoménale réfère directement à la notion de phénomène : à la façon dont le monde apparaît à un être doté d'un certain système perceptif, et occupant une position spatio-temporelle et historique particulière. Ce que perçoit une chauve-souris n'est pas ce que perçoit un être humain, et bien que dans une moindre mesure, cela est vrai aussi pour des individus appartenant à la même espèce. Dans le cas présent, il est possible de distinguer (à la lumière de ce qui a été dit dans le premier chapitre de cette troisième partie) les phénomènes internes et les phénomènes externes : les premiers concernent les sentiments, les jugements, des objets de pensée qui ne sont pas situés dans l'espace perceptuel, tandis que les seconds sont perçus comme localisés dans l'espace environnant. Dans ce sens, la notion de phénoménalité peut être confondue avec celle de subjectivité :</p>
+            <div class="citation">
+                « the way things are from a first-person point of view » (Depraz et al., 2002, p.126)
+            </div>
+            <p>Cependant, dans le cadre de la pratique neurophénoménologique, la notion de subjectivité qui est mise en jeu est seulement celle qui concerne la subjectivité consciente, ou la notion de phénomène qui est mise en jeu est seulement celle qui concerne la conscience phénoménale. Ce qui doit être articulé à la description objective neurodynamique des processus cognitifs est la conscience des phénomènes internes et externes,</p>
+            <div class="citation">
+                « the internal and external phenomenon we are aware of. And these phenomena are precisely what the notion itself of phenomenological data captures and will hereafter designate. » (Depraz et al., 2002, p.127)
+            </div>
+            <p>Mais, que les données phénoménales soient considérées en tant qu'alter ego des données objectives n'est possible que si l'expérience vécue est appréhendée dans le cadre d'un examen phénoménologique normalisé se prêtant à une validation intersubjective. L'exemple de l'étude réalisée par Lutz et al. montre bien que les comptes rendus en première personne doivent pouvoir être stabilisés et comparés entre eux de manière à pouvoir être classés, regroupés, et servir de repères catégoriels pour l'interprétation des enregistrements de la dynamique neuronale.</p>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : L'époché et le cycle de base -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-epoché">
+        <div class="capsule-title">🧘 L'époché et le cycle de base</div>
+        <div class="capsule-content">
+            <p>Les éléments essentiels de l'attitude et de la méthode qui doivent constituer le cadre d'élaboration de la composante phénoménologique de la pratique neurophénoménologique sont explicités, principalement, dans l'ouvrage <em>Becoming Aware</em> et dans l'article <em>The gesture of awareness, An account of its structural dynamics</em><sup><a href="#ref266" class="reference-link" id="r266">[266]</a></sup>, tous deux co-écrits par Natalie Depraz, Francisco Varela et Pierre Vermersch ainsi que <em>The Phenomenological Reduction as Praxis</em><sup><a href="#ref267" class="reference-link" id="r267">[267]</a></sup> écrit par Natalie Depraz.</p>
+            <p>La réduction, au sens d'époché n'est qu'une composante de la pratique, de la discipline phénoménologique qui doit servir de répondant à l'étude de la dynamique neuronale, car cette pratique vise, ultimement, à produire une connaissance qui puisse participer à une connaissance scientifique de la cognition, et qui, à ce titre doit être partageable, intersubjective. Au lieu de parler de composante, il vaudrait mieux parler de couche ou de dimension, pour ne pas suggérer une fausse image de juxtaposition, et susciter plutôt celle de superposition ou d'intrication. Cette pratique de la conscience phénoménologique, instanciée sous forme de 'séances' neurophénoménologiques, comprend, donc, trois dimensions principales :</p>
+            <ul>
+                <li>un cycle de base décomposable en deux éléments articulés entre eux dans un mode dynamique : l'acte de suspension de l'attitude 'naturelle' vis-à-vis du monde, l'époché, et l'évidence intuitive, une expérience réflexive intime de reconnaissance d'une forme émergente ;</li>
+                <li>une phase d'expression et de validation, qui sanctionne le caractère intersubjectif de la connaissance phénoménologique, rend possible l'objectivation du contenu des séances ;</li>
+                <li>le cadre temporel d'insertion de la séance, avec ses préliminaires et ses effets à plus ou moins long terme.</li>
+            </ul>
+            <p><strong>Le cycle de base – L'époché</strong></p>
+            <p>L'époché et l'évidence intuitive forment un cycle dans le sens où elles s'appellent l'une l'autre continûment : l'époché est toujours complétée par l'évidence intuitive, tandis que l'évidence intuitive requiert un processus de 'remplissement' qui lui-même participe d'un acte de suspension. Une place particulière est reconnue à l'époché dans la mise en œuvre de la discipline phénoménologique du 'becoming aware' car ce moment, ce geste, en tant que changement d'attitude, donne à cette pratique son impulsion initiale et porte l'ensemble du mouvement d'exploration de l'expérience dans la mesure où il est le moyen d'installer et de maintenir l'état de présence nécessaire tout au long de l'acte phénoménologique :</p>
+            <div class="citation">
+                « it maintains the required quality of presence for such an exploration of experience » (Depraz et al., 1999)
+            </div>
+            <p>C'est une erreur, soulignent les auteurs, de penser que la suspension du mode spontané de notre rapport perceptif et de nos croyances vis-à-vis des choses qui nous entourent doit être un arrêt du courant des pensées ou une négation des perceptions. La suspension qui est recherchée est une mise à distance des objets qui doit permettre de passer d'une adhésion irréfléchie à une contemplation dirigée. L'époché consiste à retirer à nos jugements immédiats la validité 'inquestionnée' avec laquelle ils se présentent. Cela doit permettre de modifier et de re-stabiliser la direction et le contenu du mouvement de la pensée, de l'orienter depuis les pensées déjà constituées, les perceptions stabilisées, les choses connues et reconnues, habituelles, sur lesquelles notre regard glisse sans attention, vers les moments originaires de la perception, les moments de l'émergence des choses, les moments d'abord fragiles et tremblants de la constitution des pensées. Il ne s'agit pas de réduire ou limiter en quoi que ce soit le domaine de la perception et le champ de la pensée, mais tout au contraire de les ouvrir à une expérience de re-découverte au travers d'une attention tournée depuis le contenu vers l'acte lui-même de la perception et de la pensée :</p>
+            <div class="citation">
+                « [The] point is to disengage and free up another quality, another modality of a subjective experience… Literally, I lead back my own experience, which gives itself immediately to me. This means explicating layers of the experience and freeing myself from the object in order to take note of the act of consciousness directed towards this object. In this way, I enlarge my field of experience by intensifying it, by allowing another dimension to emerge from it, a dimension which precisely frees me from the ordinary pre-givenness of the world. We have to do here with a specific mode of conscious apprehension, by means of which, quite simply, I learn to see the world and objects differently. (…) As such, this alteration of my way of seeing things which leads me to envisage each object not in itself but in accordance with the act of consciousness which bears it and is directed towards it, remains fragile, because momentary. » (Depraz, 1999, p.99)
+            </div>
+            <p>Suspension des pré-jugés, redirection de l'attention, acceptation simple de l'expérience perceptive, forment les trois phases principales de l'époché, 'organiquement reliées entre elles' :</p>
+            <ul>
+                <li>la phase de suspension apparaît comme le moment initial ; mais, en même temps, cet acte a toujours déjà été réalisé et ne constitue jamais, véritablement un 'point de départ'. Il a toujours déjà pris place et pourtant exige sans cesse d'être ré-actualisé. La circularité qui est décrite n'a pas de solution théorique mais se résout dans la pratique elle-même par l'usage de techniques permettant de maîtriser la ré-installation, à chaque moment, de la posture suspensive ;</li>
+                <li>la seconde phase consiste à rediriger l'attention de l'extérieur vers l'intérieur, depuis le contenu des perceptions, des pensées, le contenu du monde, donné dans l'attitude naturelle, spontanée, vers l'acte mental dans lequel ce contenu est donné ; substituer à un acte de perception un acte d'aperception ;</li>
+                <li>la redirection volontaire, active, de l'attention doit laisser la place à un état de simple réceptivité, une attitude d'écoute, de pure ouverture perceptive dans lequel s'estompe la distinction soulignée à l'étape précédente entre l'intériorité et l'extériorité. La passivité que semblent appeler des termes tels que 'simple réceptivité', 'écoute', 'ouverture' n'est qu'apparente car cette attitude ne s'installe pas par elle-même, comme un état de distraction, mais constitue une action. L'abandon qui est requis, la perte de contrôle sur la direction de l'attention exige d'être entretenu et ré-activé, pour laisser émerger librement le contenu de la pensée libérée de la prégnance des préjugés.</li>
+            </ul>
+            <p><strong>L'évidence intuitive</strong></p>
+            <p>Le second élément du cycle de base est l'évidence intuitive. L'acte intuitif est décrit comme possédant deux aspects (Depraz et al., 2002, p.48). Un aspect de nouveauté : en tant que vécu phénoménologique, l'acte intuitif est une expérience directe de l'émergence d'un contenu de pensée nouveau. Le contenu intuitif se donne sans intermédiaire conceptuel en rupture avec le connu de l'expérience habituelle du monde. Un aspect de réceptivité : les conditions de possibilité et de réalisation de l'acte intuitif sont préparées par la pratique de l'époché. Mais l'acte intuitif lui-même se vit comme remplissement involontaire (« involuntary fulfillment ») dont l'accomplissement et les résultats ne se contrôlent pas, se produisent au sein d'une passivité attentive. L'intuition doit être vue comme un mouvement, comme un processus enraciné dans une attention tournée vers la connaissance d'un objet mais un processus dont l'inachèvement est intrinsèque :</p>
+            <div class="citation">
+                « [A] dynamic tending toward a plenitude which is never totally given, never saturated, but which is instead rare and fleeting. » (p.50)
+            </div>
+            <p>Dans l'expérience cognitive l'évidence se donne comme la découverte d'une vérité, une révélation qui s'impose accompagnée d'un sentiment de plénitude – mais ce sentiment de satisfaction et de profonde conviction reste sujet à instabilité en raison de la nature essentiellement dynamique de l'acte intuitif. L'instabilité des premiers donnés intuitifs peuvent rendre nécessaire une réitération du mouvement qui permet d'évaluer la qualité du remplissement. Varela (1998, p.35) met l'accent sur l'intuition comme 'variations imaginaires' :</p>
+            <div class="citation">
+                « Intimacy or immediacy is the beginning of the process, and it continues by cultivation of imaginary variations, in the virtual space of mind considers multiple possibilities of the phenomenon as it appears. »
+            </div>
+            <p>Cette dimension de l'intuition a été décrite par Husserl, sous le nom de 'eidetic intuition', comme travail de discrimination des caractères invariants de l'objet et des caractères contingents basés sur la mémoire et l'imagination. (Depraz et al., 2002, p.56). La recherche consiste à dégager la structure invariante à force de modifier, par l'imagination, les traits qui se présentent comme donnés. Le travail de variation se produit dans une sorte d'indifférence vis-à-vis du donné phénoménal, mais sans pour autant, s'il doit rester de l'ordre de l'intuition, et non pas de la conception, pouvoir être complètement isolé de l'expérience située.</p>
+            <p>Il est important de souligner, dans le contexte précis d'un horizon neurophénoménologique, d'une part, que les notions de découverte ou de révélation ne sont pas à prendre au sens de découverte ou de révélation de quelque chose de déjà là ; le sentiment de conviction provient du travail de variations qui conduit le processus intuitif. D'autre part, l'évidence intuitive n'est pas pensée comme un état mental privé, purement intérieur. L'expérience se produit au sein d'une communauté à qui est soumise, pour validation, un compte rendu du processus intuitif :</p>
+            <div class="citation">
+                « [O]ur notion of intuitive evidence is strongly intersubjectively structured. » (Depraz et al., 2002, p.56)
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : Description et validation -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-description">
+        <div class="capsule-title">📝 Description et validation</div>
+        <div class="capsule-content">
+            <p><strong>Description</strong></p>
+            <p>La description de l'expérience intuitive n'est pas la simple expression, transparente d'une connaissance établie, mais participe, au contraire, activement à la constitution même de l'expérience :</p>
+            <div class="citation">
+                « [We] are not talking about an 'encoding' into a public record but of an 'embodiment' that incarnates and shapes what we experience. » (Varela, 1998, p.35)
+            </div>
+            <p>En outre, ainsi que l'a montré l'expérience réalisée par Lutz et al., la description est indispensable pour établir des comparaisons entre différents témoignages d'un même sujet, correspondant à différentes sessions expérimentales ou à différents moments de la même expérience, et entre les témoignages de différents sujets. Ce sont ces comparaisons qui ont permis d'établir des catégories phénoménales selon lesquelles organiser les différents relevés de mesure de la dynamique neuronale. L'enjeu de la phase descriptive n'est rien de moins que de produire des invariants phénoménologiques, « phenomenological invariants », sur lesquels appuyer la pratique d'articulation des comptes rendus en première et en troisième personne d'une séance expérimentale<sup><a href="#ref268" class="reference-link" id="r268">[268]</a></sup>.</p>
+            <p>Le travail de description n'est pas concomitant de l'expérience, il s'inscrit dans un moment a posteriori de remémoration du vécu. Aux critiques arguant du caractère douteux de l'authenticité du témoignage ainsi produit, relativement au risque de re-création de certains moments de l'expérience, les auteurs opposent leur propre confiance :</p>
+            <div class="citation">
+                « Our general phenomenological contention is that such a re-living, though including a recreation-component, is as such, a genuine act of recalling. » (Depraz et al., 2002, p.67)
+            </div>
+            <p>Le moment de la description reproduit un schéma analogue à celui du cycle de base : il requiert en effet une mise en suspension articulée à une forme de remplissement, une évidence intuitive qui cette fois est expressive. Le travail d'expression gagne, d'après l'expérience des auteurs, à être aidé par un médiateur sachant comment guider la description, faciliter la suspension, relancer la remémoration, approfondir certaines pistes, et cela sans se montrer intrusif.</p>
+            <p><strong>Validation</strong></p>
+            <p>L'insertion de la pratique phénoménologique au sein d'une entreprise scientifique de connaissance, et notamment en vue de la réalisation d'une science neurophénoménologique, exige la mise à disposition d'un langage phénoménologique normalisé qui puisse être, pour une communauté de recherche, un instrument de communication et de validation stabilisé.</p>
+            <p>Le rôle essentiel du médiateur qui a été esquissé précédemment fait apparaître la nécessité de compléter le schéma classique opposant de façon fondamentalement duale les positions en première et en troisième personne. La troisième personne est prétendue être le représentant désincarné d'une communauté, désengagé de toute situation particulière et démuni de tout jugement subjectif : l'absence de toute référence à une expérience individuelle est présentée comme la condition nécessaire de validité de la connaissance scientifique et de la possibilité de se référer à des entités indépendantes, c'est-à-dire de produire des connaissances dites objectives. La première personne est au contraire considérée comme le lieu d'une expérience absolument particulière et irrémédiablement personnelle. Ce schéma est remis en cause ici de deux façons.</p>
+            <p>D'abord, quant à la lecture des positions en troisième et première personne. Le compte-rendu scientifique en troisième personne, sans que soit déniée sa spécificité, est reconnu, à la suite de Latour<sup><a href="#ref269" class="reference-link" id="r269">[269]</a></sup> et de Stengers<sup><a href="#ref270" class="reference-link" id="r270">[270]</a></sup>, comme indissociable d'un processus social de médiation :</p>
+            <div class="citation">
+                « [W]e insist that this position or objective stance is a specific form of a socially distributed mediation. » (Depraz et al., 2002, p.80)
+            </div>
+            <p>La subjectivité assignée à la position en première personne est clairement distinguée de ce qui serait privé ou inaccessible à autrui et reconnue comme source possible d'un processus de validation intersubjective :</p>
+            <div class="citation">
+                « [T]here is no a priori reason why what we experience – what is closest to individual subjectivity – cannot also be examined, expressed, and opened up to intersubjective validation. » (p.80)
+            </div>
+            <p>Ensuite, quant à la simple dualité des positions en troisième et première personne. Il est proposé d'introduire une position en seconde personne, qui n'est ni une communauté abstraite, ni une expérience directe :</p>
+            <div class="citation">
+                « Rather, a second-person position is an exchange between situated individuals focusing on a specific experiential content developed from a first-person position. » (p.81)
+            </div>
+            <p>L'exemple paradigmatique est le médiateur qui guide le travail de la description. En outre, non seulement, les trois positions sont inter-échangeables, mais elles sont situées les unes vis-à-vis des autres selon un continuum de rôles sociaux.</p>
+            <p>Le statut de troisième personne peut être modulé par deux sortes d'arguments. D'une part, toute connaissance implique nécessairement un sujet connaissant et elle est, à ce titre, inévitablement en partie subjective puisqu'elle requiert observation, évaluation, expérience (Varela &amp; Shear, 1999, p.1). La position en troisième personne recèle ainsi une expérience en première personne. D'autre part, en science cognitive, même l'étude des comportements ou des activités neurales ou biochimiques se fait toujours sous la présupposition tacite d'une subjectivité qui n'est rien moins que la raison profonde de l'intérêt de l'étude. La position en troisième personne prend alors la forme d'une position en seconde personne.</p>
+            <p>La position en seconde personne peut elle aussi dériver, lorsqu'elle se charge d'empathie, vers une position en première personne :</p>
+            <div class="citation">
+                « [A]n empathic resonance with the experience of the source, based on our familiarity with this type of experience and on our ability to resonate with others having this type of experience. » (Depraz et al., 2002, p.84)
+            </div>
+            <p>Et la position en première personne, dans la mesure où elle demande la validation intersubjective de l'expression d'une expérience, doit s'ouvrir à la médiation d'une seconde personne – c'est-à-dire ne peut pas s'en tenir au seul processus de validation vécu en première personne dans la conviction de l'évidence intuitive. L'ouverture d'un processus intersubjectif par la médiation de la seconde personne est d'ailleurs, ainsi qu'il a été dit, bien plus qu'une simple validation, au sens habituel, puisque le savoir-faire du médiateur joue un rôle actif, productif, dans l'exploration et la réalisation de l'expérience. La simple expression de l'expérience vécue en première personne nécessite la connaissance pratique des instruments de la description de l'expérience : il n'y a de connaissance possible de l'intériorité que par la médiation de l'instrument public que constitue le langage de la description.</p>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : Les critiques -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-critiques">
+        <div class="capsule-title">⚡ Les critiques</div>
+        <div class="capsule-content">
+            <p><strong>'Impossible d'être sur le balcon et dans la rue en même temps'</strong></p>
+            <p>Vermersch (2002, p.132) nous rappelle que cet argument énoncé par Searle (1992) est une version rafraîchie de la critique déjà opposée par A. Comte<sup><a href="#ref275" class="reference-link" id="r275">[275]</a></sup> à la psychologie et selon laquelle lorsque l'organe d'observation et l'organe observé sont les mêmes, l'observation ne peut pas avoir lieu. L'objection fait surgir l'image fondatrice d'une dualité entre 'ce qui est observé' et 'celui qui observe', et s'appuie sur l'impossibilité de réaliser cette dualité. Mais nous avons vu que c'est précisément ce genre de reproche qui est adressé par Varela à la phénoménologie occidentale et c'est justement à l'effacement de cette distance que tend la pratique de méditation bouddhiste qui a été présentée. C'est d'ailleurs la même image qui conduit à une objection portant sur l'idée d'une déformation du contenu de l'expérience :</p>
+            <p><strong>Sur quelle base peut-on affirmer que l'expérience n'est pas déformée voire créée par les méthodes qui sont utilisées pour 'soi-disant' l'explorer ?</strong></p>
+            <p>Les auteurs de 'becoming aware' reconnaissent la validité de la critique : il n'y a pas d'argument a priori qui puisse suffire à l'écarter. Il est difficile d'imaginer, du reste, comment il pourrait être logiquement possible de développer, d'un côté, la théorie foncièrement non représentationniste qu'est la théorie de l'énaction, et de l'autre, ne pas admettre que les déterminations expérientielles qui viennent à être stabilisées, et ainsi objectivées, ne sont pas indépendantes du contexte dans lequel elles sont énoncées ; et dans ce contexte, il y a bien entendu, entre autres, la méthode particulière qui est mise en œuvre. Les méthodes d'investigation, ici comme ailleurs, sont constitutives de la connaissance qui est produite :</p>
+            <div class="citation">
+                « It seems inevitable that any method will be part and parcel of the kinds of entities and properties found in the domain of observation at hand... the experiential and social dimension in science is often hidden, but never entirely absent. This is quite visible in the most consecrated forms of natural science. » (Varela, 1999, p.14)
+            </div>
+            <p>L'objectivité des données phénoménoménales n'est, pas plus que celles des données neurophysiologiques, fondée sur l'indépendance du résultat par rapport à la manière dont il est obtenu, sur la transcendance de l'objet de la connaissance par rapport au sujet de la connaissance, ou pour le dire encore autrement sur la dualité absolue, a priori, des deux pôles de la connaissance. Dans un cas comme dans l'autre, l'objectivité est fondée sur un processus d'intersubjectivation de l'expérience vécue. Et cela nous amène directement au troisième type de critique selon lequel l'expérience vécue relève intrinsèquement de l'expérience privée et ne peut pas être soumise à une procédure intersubjective.</p>
+            <p><strong>Comment partager ce qui est une expérience phénoménale ?</strong></p>
+            <p>Lorsqu'il est dit que l'objectivité des données phénoménales repose sur un processus d'intersubjectivation de l'expérience vécue, cela signifie, comme il l'a déjà été souligné, que ces 'données' ne sont des entités pré-définies, révélées, dé-voilées, par le processus d'introspection. Il y a, au travers de la procédure d'articulation, une co-détermination des domaines de phénomènes phénoménologiques et neurodynamiques : ni l'un, ni l'autre n'est a priori composé d'éléments déterminés qu'il n'y aurait plus qu'à mettre en relation. L'exploration de l'expérience vécue n'est donc pas pensée comme la visite d'un territoire rempli de choses cachées mais déterminées, diverses et variées, formant un véritable 'petit monde intérieur', dotées de propriétés qui se donneraient à saisir au regard intérieur, et à celui-ci seulement :</p>
+            <div class="citation">
+                « We are not concerned with a private inspection but with a realm of phenomena where subjective and objective, as well as subject and others emerge from the method applied and its context. » (Varela, 1996)
+            </div>
+            <p>L'objection vient de ce que l'on pense la neurophénoménologie comme une méthode de réflexion sur quelque chose qu'il s'agirait de rendre transparent alors que ce quelque chose est justement conçu comme strictement privé. Mais la neurophénoménologie est une pratique qui prend place au sein même de l'expérience vécue, l'expérience en train de se vivre. La composante phénoménologique de cette pratique ne soulève pas des questions différentes de la composante scientifique relativement à la relation entre 'données' et 'représentation'. Et dans le cadre non représentationniste dans lequel se déploie la théorie énactive, l'idée d'une relation bipolaire de représentation d'une donnée ou d'un objet est remplacée par celle d'une procédure incarnée de constitution de l'objectivité.</p>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : Couplage et langage -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-couplage-langage">
+        <div class="capsule-title">🌐 Couplage et langage</div>
+        <div class="capsule-content">
+            <p><strong>Savoir-dire</strong></p>
+            <p>Nous avons vu dans les premiers chapitres de la seconde partie que la théorie de l'énaction, contrairement aux théories représentationnistes, pose clairement la distinction entre 'connaissance' et 'cognition'. Dans une théorie représentationniste, la connaissance s'explique, et elle s'explique par une théorie de la cognition. Dans le cadre de l'approche énactive, au contraire, ce que nous entendons par 'connaissance', la manière dont nous faisons usage de ce concept, est une contrainte que doit s'imposer la recherche scientifique : la théorie énactive de la cognition veut produire une description scientifique qui respecte cet usage et permette d'en rendre compte. Une conception non explicative de la signification du concept de connaissance a été défendue, dans le sillage de Sellars, en faisant appel à la notion de justification, opposée à celle d'explication, pour désigner un mode d'attribution de la connaissance se déployant dans l'espace logique des raisons.</p>
+            <p>Dans la perspective de Sellars<sup><a href="#ref276" class="reference-link" id="r276">[276]</a></sup>, 'justification' et 'espace logique des raisons' se rapportent à la connaissance de, la conscience de, quelque chose, par opposition à une simple capacité de discrimination. Il distingue ainsi, explique Rorty<sup><a href="#ref277" class="reference-link" id="r277">[277]</a></sup>, « awareness-as-discriminative-behavior » comme simple capacité de répondre à des stimuli, manifestée par les rats, les amibes et les ordinateurs, et</p>
+            <div class="citation">
+                « [awareness as] being in the logical space of reasons, of justifying and being able to justify what one says »,
+            </div>
+            <p>comme relevant de la justification manifestée par des êtres dont le comportement est conçu comme la production de phrases visant à justifier la production d'autres phrases. Il n'y a pas de croyance vraie qui soit non-propositionnelle et pas de justification qui ne soit pas en relation avec des propositions. Savoir ce que c'est que d'éprouver de la douleur ou la 'rougeur', insiste Sellars, est</p>
+            <div class="citation">
+                « an insufficient and unnecessary causal condition »
+            </div>
+            <p>pour la connaissance de ce que sont la peine et la rougeur. C'est insuffisant car savoir ce que c'est d'éprouver la rougeur n'est pas savoir que c'est une couleur, etc. ; et ce n'est pas nécessaire car on peut savoir cela et plus sans savoir ce que c'est que de l'éprouver.</p>
+            <p>Ce n'est pas que l'acquisition du langage changerait la nature de l'expérience ; la différence entre les deux formes 'savoir' n'est pas empirique mais logique :</p>
+            <div class="citation">
+                « [T]he essential point is that in characterizing an episode or state as that of knowing, we are not giving an empirical description of that episode or state; we are placing it in logical space of reasons, of justifying and being able to justify what one says. » (Sellars, 1956, sect. 36)
+            </div>
+            <p>Attribuer un 'savoir de' à quelqu'un, c'est lui attribuer une attitude propositionnelle : savoir que 'p' c'est penser que 'p', et dans le cadre du 'behaviorisme verbal' que défend Sellars, penser que 'p' c'est :</p>
+            <div class="citation">
+                « [in] its primary sense (an event of) saying 'p' ; and [in] a secondary sense in which it stands for a short term proximate propensity [dispositional] to say 'p'<sup><a href="#ref278" class="reference-link" id="r278">[278]</a></sup> ».
+            </div>
+            <p>On rattache couramment à Wittgenstein la pensée de Sellars selon laquelle avoir un concept est savoir faire usage d'un mot et nous ne pouvons avoir un concept sans en avoir plusieurs ni avoir un concept de quelque chose simplement parce que nous avons remarqué cette sorte de chose (Sellars, 1963, p.176) car la capacité de remarquer quelque chose suppose d'avoir le concept de cette chose, et la remarquer sous une certaine description. L'acquisition du langage ne change pas la nature de l'expérience mais nous initie à l'usage des concepts et à une pratique de la justification,</p>
+            <div class="citation">
+                « it lets us enter a community whose members exchange justifications of assertions and other actions with one another. »
+            </div>
+
+            <p><strong>Pouvoir-faire</strong></p>
+            <p>La dichotomie entre simple discrimination, qui pourrait être attribuée à un ordinateur, et 'savoir de', 'knowledge that something is such and so', pour l'attribution duquel est requise une justification propositionnelle, ne laisse aucune place à l'idée d'un savoir qui sans être propositionnel serait pourtant déjà porteur d'une créativité propre au vivant. Elle ne laisse aucun espace logique à l'attribution d'une connaissance non propositionnelle. Il y a pourtant des situations dans lesquelles nous sommes disposés à attribuer à un être vivant une connaissance sans exiger de lui une justification propositionnelle. Il y a des conditions d'usage du concept de connaissance, c'est-à-dire des conditions d'attribution d'une connaissance, qui ne mettent pas en scène une attitude propositionnelle. Nous parlons dans ce cas d'une connaissance pratique, d'un savoir-faire. Selon les promoteurs de la théorie énactive, et plus généralement de la notion de 'cognition incarnée', 'embodied cognition', ce type d'attribution tient, dans les jugements que nous portons sur autrui et les comportements que ces jugements suscitent, une place qui est fondamentale. C'est dans notre savoir-faire que s'enracine, selon eux, le 'sens commun' qui sert de socle à l'usage de notre concept de connaissance.</p>
+            <p>Les analyses grammaticales de Wittgenstein ne semblent d'ailleurs pas autoriser la 'réduction' de l'usage du concept de 'savoir' aux seules situations où l'attribution repose sur une pratique de justification propositionnelle :</p>
+            <div class="citation">
+                « Les critères que nous acceptons pour 'ajustage', 'possibilité de', 'compréhension' sont beaucoup plus complexes qu'il ne le semble à première vue » (§182)
+            </div>
+            <p>Si l'attribution d'un savoir, d'une connaissance, reposait toujours sur une justification propositionnelle, le contexte d'usage du concept serait sans doute plus facile à circonscrire. Wittgenstein donne très explicitement l'exemple d'une situation dans laquelle nous serions prêts à attribuer un savoir sans que celui à qui est attribué ce savoir ne soit en mesure de le justifier propositionnellement :</p>
+            <div class="citation">
+                « […] nous pouvons également imaginer le cas où rien du tout n'apparaissait dans l'esprit de B, sauf qu'il a dit soudain : 'Maintenant je sais comment poursuivre'… et qu'il a continué en fait à établir la suite sans employer la formule. Et dans ce cas également, nous pourrions dire – dans certaines conditions – qu'il a su comment poursuivre. » (§179)
+            </div>
+            <p>Ce n'est pas sur la base du 'je sais comment poursuivre' que nous attribuons à B un savoir, mais sur la base de ce qu'il se révèle capable de faire.</p>
+            <p>Wittgenstein développe un autre exemple qui montre la complexité des critères d'attribution d'un savoir : celui de la lecture. Quand sommes-nous disposés à juger que quelqu'un sait lire ? Suffit-il qu'il parcourt des yeux un texte, peut-être en remuant les lèvres, faut-il qu'il le prononce à haute voix, attendons-nous de lui qu'il nous explique le contenu de ce texte ? S'il fallait que quelqu'un soit capable d'énoncer les règles qui guident sa pratique et que celles-ci soient reconnues comme étant celles qui peuvent guider une telle pratique par ceux qui produisent le jugement d'attribution de la connaissance, les conditions pour la reconnaissance d'une pratique 'intelligente' ne seraient pas si difficiles à énumérer, elles ne seraient pas si contextuelles.</p>
+            <p>L'argument de la chambre chinoise inventé par Searle<sup><a href="#ref279" class="reference-link" id="r279">[279]</a></sup> paraît fait sur mesure pour nous montrer que l'observation d'un comportement n'est pas un critère valable pour l'attribution d'une connaissance. Searle sait qu'il ne sait pas le chinois alors que les autres, s'ils se fient à son comportement, seront portés à dire qu'il sait le chinois. Il faudrait donc complètement séparer ce qui ressortit à l'observation du comportement de ce qui ressortit à la compréhension, qui est essentiellement une expérience vécue. Mais l'attribution d'une connaissance sur la base d'un comportement, pas davantage que la croyance que l'on possède une connaissance, ne répondent à la loi du tout ou rien et sont des jugements inébranlables. L'un et l'autre peuvent toujours être mis en question par les observateurs, à la suite du comportement observé, ou par la personne concernée, à la suite des réactions des observateurs. Ensuite, ainsi que le remarque Descombes (1995, p.178-184), il est parfaitement contestable que les personnes situées à l'extérieur de la chambre puissent être tentées un seul instant d'attribuer au prisonnier la connaissance du chinois. Car</p>
+            <div class="citation">
+                « ni le dispositif d'ensemble ni Searle-dans-la-chambre n'ont eu un comportement linguistique proprement dit ».
+            </div>
+            <p>Faire passer des réponses sur des morceaux de papier est difficilement assimilable à un comportement linguistique qui suppose que l'on puisse, non seulement, répondre à des questions, mais en poser soi-même, être capables de se servir de la langue pour satisfaire des besoins ou des désirs, être capable d'entrer dans une relation d'échange, une relation à double sens :</p>
+            <div class="citation">
+                « Tant que l'échange des rôles n'a pas eu lieu entre le locuteur et son interlocuteur, on peut difficilement parler d'une communication linguistique […] quelqu'un sait le chinois dans la mesure où il sait se servir du chinois […] La chambre chinoise ne parle pas chinois pour la bonne raison qu'elle n'a rien à dire. »
+            </div>
+            <p>En fait, Sellars ne nie pas que nous attribuions parfois une connaissance à des êtres qui n'appartiennent pas à notre communauté de langage. Mais nous le faisons quand nous anticipons ou pouvons imaginer leur appartenance à notre communauté, comme dans le cas d'enfants ou de certains animaux. On pourrait penser que les situations décrites par Wittgenstein sont des illustrations de cette extrapolation de l'usage. Il y a deux raisons d'en douter :</p>
+            <ul>
+                <li>les situations d'extrapolation qu'évoque Sellars, ou Rorty, mettent en scène un être qui n'appartient pas, ou pas encore, à la communauté de langage – c'est-à-dire que d'une certaine façon son incapacité à parler laisse le champ libre à l'imagination de celui qui fait l'attribution. L'extrapolation à des enfants ou des animaux familiers repose sur la possibilité d'imaginer, de croire que l'absence de justification est en quelque sorte seulement accidentelle : s'ils pouvaient parler, ils fourniraient les raisons justifiant l'attribution. Dans le cas des exemples de Wittgenstein, l'incapacité n'est pas la même : l'incapacité de celui qui ne peut énoncer la règle selon laquelle il agit ne peut pas être mise sous le compte d'une simple 'carence technique' – car celui-là appartient déjà à la communauté de langage.</li>
+                <li>d'autre part, l'idée qu'il y aurait des cas d'attribution d'une connaissance à des êtres qui ne remplissent pas, en fait, les conditions d'attribution, semble indiquer qu'il y aurait de mauvais usages du concept de connaissance, ou en tout cas des usages moins 'normaux' que d'autres. Ce n'est pas ce que semble vouloir dire Wittgenstein lorsqu'il cherche à rappeler la diversité des usages d'un même concept. Il nous conduit plutôt à penser que s'il y a différents usages, c'est qu'il y a différents critères, et c'est en cela que</li>
+            </ul>
+            <div class="citation">
+                « les critères que nous acceptons pour 'ajustage', 'possibilité de', 'compréhension' sont beaucoup plus complexes qu'il ne le semble à première vue ».
+            </div>
+            <p>L'expérience corporelle qui est attachée à notre usage du concept de connaissance, dont ne rend pas compte la seule notion de justification propositionnelle, consiste dans la multitude de gestes, de conduites, plus ou moins élaborées, qui reposent sur l'acquisition d'aptitudes motrices et constituent la charpente silencieuse d'une forme de vie partagée :</p>
+            <div class="citation">
+                « … successfully directed movement such as driving depends upon acquired motor skills and the continuous use of commonsense or background know-how. Such commonsense knowledge is difficult, perhaps impossible, to package into explicit, propositional knowledge – 'knowledge that' in the philosopher's jargon – since it is largely a matter of readiness to hand or 'knowledge how' based on the accumulation of experience in a vast number of cases. » (Varela &amp; al., 1991, p.147-148)
+            </div>
+            <p>La perspective non représentationniste s'enracine dans un étonnement et une curiosité devant ces capacités pratiques extrêmement contextuelles qui incarnent les modes immédiats de notre façon d'être dans le monde, notre façon d'être vivant. Un étonnement et une curiosité devant un savoir négligé, ignoré, à force d'être trop évident, trop présent, omniprésent, qui se traduisent par une mise en question de ce qui est toujours en deçà des questionnements, et une interrogation sur les conditions de possibilité, les conditions de constitution, de ce savoir du corps sur lequel s'établit, sans qu'y soit prêtée la moindre considération, notre connaissance propositionnelle du monde :</p>
+            <div class="citation">
+                « if we want to recover sense common, then we must invert the representationist attitude by treating context-dependent know-how not as a residual artifact that can be progressively eliminated by the discovery of more sophisticated rules but as, in fact, the very essence of creative cognition. » (Varela &amp; al., 1991, p.148)
+            </div>
+            <p>Mais l'attention portée au savoir-faire, à la structure corporelle tacite de notre rapport au monde, ne rend pas aveugle ou indifférent à la fonction du langage et à la structure conceptuelle de notre connaissance. La discrimination entre la simple sensation et la connaissance comme connaissance de quelque chose appartient aussi à l'approche énactive :</p>
+            <div class="citation">
+                « discernment is not the simple registering of the distinction : it is an active (that is top-down) process of conceptualization that enables even simple distinctions of form to be discerned. » (Varela &amp; al., 1991, p.78)
+            </div>
+            <p>La reconnaissance d'un savoir-faire qui n'est pas un savoir-dire ne conduit pas à nier celui-ci ou à négliger sa spécificité et elle n'empêche pas de reconnaître que la 'connaissance de' soit effectivement une connaissance propositionnelle. Le savoir-faire n'est pas un 'savoir de' quelque chose, c'est un 'savoir comment' agir dans des situations particulières. Elle n'empêche pas non plus de reconnaître que l'attribution d'un savoir relève effectivement de la justification, que ce savoir soit d'ordre propositionnel ou pratique, qu'il soit un 'savoir de' ou un 'savoir comment' c'est-à-dire un pouvoir-faire :</p>
+            <div class="citation">
+                « Every reflection, including one on the foundation of human knowledge, invariably takes place in language, which is our distinctive way of being human and being humanly active. For this reason, language is also our starting point, our cognitive instrument, and our sticking point. » (Maturana &amp; Varela, 1988, p.26)
+            </div>
+            <p>Pour étendre le champ d'application du concept de connaissance, il suffira d'admettre que les critères qui sont mis en jeu dans la pratique de justification de l'attribution d'un savoir ne sont pas seulement liés à l'existence d'une aptitude propositionnelle, une aptitude à 'rendre raison' par l'énonciation de propositions, mais peuvent être aussi liés à la reconnaissance d'une aptitude pratique, une aptitude à 'faire' et non pas à 'dire'.</p>
+            <p>La distinction entre ces deux formes de savoir est une distinction qui est logique et non temporelle ou hiérarchique. C'est un instrument d'analyse de cet 'objet' complexe qu'est la connaissance humaine. 'Pouvoir-faire' et 'savoir-dire' ne peuvent pas être pensés indépendamment l'un de l'autre : notre pouvoir-faire se développe toujours déjà au sein d'une communauté marquée par son langage, ses croyances, ses valeurs, disons une culture, qui guident nos actions, et cette culture est vivante par les agissements, les comportements, les rites, les coutumes qui se transmettent par l'exemple plus que par le discours. C'est un instrument d'analyse qui reflète des pôles d'intérêt propre au regard qui en fait usage mais qui peut néanmoins être mis au service d'une certaine description scientifique de cet objet. Contrairement aux approches cognitivistes ou connexionnistes, il y a à l'origine de la perspective énactive la conviction que le savoir-dire doit se comprendre dans une articulation avec un pouvoir-faire, que le pouvoir-faire corporel est un élément essentiel de notre savoir-dire conceptuel, que notre savoir de la réalité est indissociable de notre pouvoir d'agir dans le monde ; en d'autres termes, la conviction que l'expérience vécue est une composante inaliénable de la connaissance, c'est-à-dire des conditions de l'usage de notre concept de connaissance ; le pouvoir-faire constitue l'ancrage expérientiel de la connaissance. C'est cette conviction qui oblige la distinction entre connaissance et cognition que veut incarner la pratique neurophénoménologique. La description scientifique en troisième personne peut tenter de rendre compte, au travers du concept de 'cognition' des conditions physiques de constitution d'un pouvoir-faire, l'expérience vécue qui est attachée au concept de 'connaissance' est nécessairement, logiquement, hors de sa portée.</p>
+            <p>Néanmoins, dans la mesure où le développement du pouvoir-faire dont la théorie énactive décrit la constitution sur la base d'une interaction continue des systèmes sensori-moteur et neuronal et de l'environnement est d'emblée situé au sein d'une pratique langagière avec laquelle il est en étroite dépendance, cette théorie se doit de rendre possible la conception de cette relation dans les termes mêmes qui sont ceux de la constitution du pouvoir-faire, c'est-à-dire dans le cadre d'une lecture participative, et non pas sémantique, du comportement. C'est vers la façon dont cette relation est pensée que je voudrais me tourner pour conclure cet ensemble de chapitres consacrés à la présentation de la théorie énactive.</p>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- CAPSULE : Du pouvoir-faire au savoir-dire -->
+    <!-- ============================== -->
+    <div class="capsule" id="capsule-pouvoir-savoir">
+        <div class="capsule-title">🔧 Du pouvoir‑faire au savoir‑dire</div>
+        <div class="capsule-content">
+            <p>La description de la connaissance en termes de justification dans l'espace logique des raisons participe de ce que Maturana &amp; Varela définissent dans <em>The Tree of Knowledge</em> comme une 'lecture sémantique'. Par exemple, il est possible de trouver des raisons d'attribuer une signification au comportement d'un chat qui, tous les matins, vient marcher sur le piano jusqu'à ce que son maître lui ouvre la porte du jardin :</p>
+            <div class="citation">
+                « [I]t seems quite natural to describe this behavior of the cat as 'signaling' to our friend its desire to go out to the garden. This is tantamount to a semantic description of the behaviors of our friend and his cat. » (Maturana &amp; Varela, 1988, p.206)
+            </div>
+            <p>Cette attribution de signification implique aussi une attribution de connaissance qui ressemble à celles décrites par Rorty comme attributions 'extrapolées' d'une capacité de justification à des êtres que nous trouvons assez ressemblant à nous-mêmes pour imaginer qu'ils s'expliquent. Ce type de description est faite par celui qui peut appréhender la situation comme celle d'une relation entre deux êtres et mettre en correspondance deux séries d'événements. Mais ce n'est pas une forme de description qui rend justice à la perspective des acteurs eux-mêmes dont veut rendre compte la lecture de type participatif qui est celle adoptée par l'approche énactive.</p>
+            <p>La lecture participative rapporte le comportement d'un être vivant à des modifications de sa structure physique provoquées par des perturbations de l'environnement menaçant l'intégrité de l'organisation qui le définit comme une unité vivante. C'est au cours de ce processus de transformation et d'assimilation de nouvelles structures neuronales qu'émerge de cet environnement perturbateur ce qui constitue le monde du système cognitif. Du point de vue du système, relativement à ce qui doit être pris en considération pour décrire le processus de constitution d'objectivités, l'environnement est seulement une source de perturbations. Mais nous avons vu qu'il est possible d'envisager le couplage entre deux ou plusieurs unités autopoïétiques ; à ce moment là, pour l'observateur, l'environnement de chaque unité contient toutes les autres et le couplage de chacune avec son environnement peut comprendre le couplage à une ou plusieurs autres unités autopoïétiques. Dès lors, ce qui est décrit par une lecture sémantique comme un comportement intentionnel dirigé vers un autre être vivant, comme dans le cas du chat et de son maître, apparaît comme un changement de structure provoqué par les perturbations occasionnées par le couplage entre les systèmes. Et ce qui apparaissait comme une séquence de comportements qui se répondent apparaît comme deux séquences mutuellement provoquées de transformations déterminées par les structures respectives des systèmes :</p>
+            <div class="citation">
+                « [T]he interaction between [the behaviors] occurred only as a mutual triggering of changes of states as determined by their respective structures. » (Maturana &amp; Varela, 1988, p.206)
+            </div>
+            <p>Lorsque ce type d'interaction entre plusieurs organismes prend une forme récurrente, impliquant une co-ontogenèse des organismes, c'est-à-dire l'interdépendance de leurs ontogenèses respectives via le couplage de l'histoire de leurs transformations structurelles, il est qualifié de 'couplage social' et la coordination des comportements est appelée 'communication'. (p.193) Un exemple remarquable d'un tel couplage social, mettant en scène un ensemble de 'comportements communicatifs', est donné par les insectes tels que les fourmis ou les abeilles dont les morphologies et les comportements individuels s'inscrivent dans une forme spécifique d'organisation de vie communautaire, une forme d'organisation que Maturana &amp; Varela appelle un 'système social'.</p>
+            <p>Les comportements communicatifs, comportements qui s'inscrivent dans un couplage social, peuvent être innés ou acquis, c'est-à-dire être indépendants ou dépendants des ontogénies particulières des organismes et de l'histoire particulière de leurs interactions. Les comportements communicatifs acquis, écrivent les auteurs de <em>The Tree of Knowledge</em>, forment un domaine qui peut être dit 'linguistique' dans le sens où ces interactions constituent la base pour le langage. (p.207) Les interactions linguistiques ne sont pas spécifiques à la communauté humaine. Une illustration de ce type de communication peut être trouvée dans le chant de certains oiseaux : lorsqu'il est possible de montrer que ce qui apparaît sur un spectrogramme comme simple coexistence de deux mélodies produites par les membres d'un couple, est en fait un duet particulier à chaque couple et qui évolue au cours de son histoire. Ce qui fait la spécificité humaine est que les interactions linguistiques engendrent un nouveau domaine phénoménal, le domaine du langage :</p>
+            <div class="citation">
+                « [I]n their linguistic coordination of actions, [human beings] give rise to a new phenomenal domain, viz., the domain of language. » (p.209)
+            </div>
+            <p>La notion de comportements communicatifs acquis, d''interactions linguistiques', se révèle alors être un élément fondamental dans la conception non représentationniste de la connaissance et du langage de la réalité basée sur la théorie autopoïétique du vivant, fondamental relativement à la façon de comprendre la fonction des mots qui expriment la réalité que nous connaissons et partageons. Les mots ne sont plus considérés, comme c'était le cas dans une lecture sémantique, comme les re-présentants, les 'tenants lieu' de choses indépendantes des locuteurs, mais deviennent les pièces d'un processus de coordination des actions de ceux qui en font usage :</p>
+            <div class="citation">
+                « [T]he word 'table' coordinates our actions with respect to the actions we perform when we manipulate a 'table'. » (p.210)
+            </div>
+            <p>Le 'langage' va désigner maintenant un ensemble évolutif de comportements articulés entre eux :</p>
+            <div class="citation">
+                « [W]hen we describe words as designators of objects or situations in the world, as observers we are making a description that does not reflect the condition of structural coupling in which words are ontogenically established coordinations of behavior. » (Maturana &amp; Varela, 1987, p.208)
+            </div>
+            <p>Le langage est compris comme ensemble d'actions qui coordonne les actions couplant les membres d'une communauté et qui est continuellement régénéré au travers des activités linguistiques des membres de cette communauté et des couplages structurels qui génèrent cette activité. L'usage d'un langage par une communauté n'est plus une collection de moments indépendants mettant en relation événements linguistiques et entités ou perturbations non linguistiques ; c'est un tissu de comportements qui s'orientent mutuellement et coordonnent des schèmes d'actions dont le couplage constitue un réseau d'interaction entre les membres d'une communauté, réseau que l'on peut finalement peut-être appeler 'forme de vie' de cette communauté.</p>
+            <p>La réalité que véhicule le langage dépend ainsi en dernier lieu de ce que les mots peuvent coordonner, des distinctions qui peuvent être établies au sein d'un domaine linguistique, un domaine de comportements communicatifs, et de ce que peuvent être ces comportements, gestes, attitudes, c'est-à-dire les actions et les interactions des membres de la communauté :</p>
+            <div class="citation">
+                « Properties of things (in fact the recognition of distinct things at all) exist only as operational distinctions in a domain of distinctions specified by an observer. When we talk about systems and their medium, components, and structural change, we speak as if there were external things and properties. This is an inescapable result of using language, but it is always a speaking 'as if', not an ontological claim. » (Winograd &amp; Florès, 1988, p.51)
+            </div>
+            <p>Mais rappelons encore une fois ici que la distinction entre le 'savoir-de-la-réalité' que constitue notre 'savoir-dire' et le 'pouvoir-faire' que constituent les comportements en général et les comportements communicatifs en particulier est une distinction logique. Lorsque nous tentons d'identifier ce en quoi consistent ces comportements, nous sommes toujours déjà dans le langage, nous évoluons dans l'espace logique des raisons, nous prenons part à une pratique de la justification. Gardons à l'esprit l'avertissement donné par ceux qui développent la théorie de l'énaction et celle de l'autopoïèse qui lui sert d'assise selon lequel 'toute réflexion prend place dans le langage', y compris celle sur les conditions de la connaissance et du langage que sont ces théories elles-mêmes. D'autant que c'est précisément cette immersion de la 'connaissance de' dans la pratique du langage qui permet de répondre à la menace solipsiste brandie par le représentationnisme devant l'abandon de la relation fondationnelle entre les mots et les choses :</p>
+            <div class="citation">
+                « This is precisely the way in which we avoid solipsism. Since we operate in language, the world that we describe is the world which we bring forth with others. Language in its strict sense entails the operation of recursion in the consensual coordination of consensual coordinations of actions. This entails, in turn, that if we talk about what we do, such talk takes place in language. Languaging is not an operation in a private world. Languaging is a manner of living together in a flow of coordinations of recursions that, when we distinguish them, we call consensual coordinations of actions. » (Maturana, 1974, p.464, cité par Winograd &amp; Florès, 1988, p.51-52)<sup><a href="#ref280" class="reference-link" id="r280">[280]</a></sup>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- NOTES                            -->
+    <!-- ============================== -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref254"><strong>254.</strong> Lutz et al., 2001.</p>
+            <p id="ref255"><strong>255.</strong> Varela et al., 1991.</p>
+            <p id="ref256"><strong>256.</strong> D. Chalmers, « Facing up to the problem of consciousness », 1995, p.208-209.</p>
+            <p id="ref257"><strong>257.</strong> Depraz et al., 2002, p.121.</p>
+            <p id="ref258"><strong>258.</strong> Depraz et al., 2002, p.118.</p>
+            <p id="ref259"><strong>259.</strong> M. Velmans, « Consciousness and the 'causal paradox' », 1996.</p>
+            <p id="ref260"><strong>260.</strong> Velmans, 1996.</p>
+            <p id="ref261"><strong>261.</strong> O. Flanagan, <em>Consciousness Reconsidered</em>, 1992.</p>
+            <p id="ref262"><strong>262.</strong> Varela, 1996.</p>
+            <p id="ref263"><strong>263.</strong> Varela, 1998, p.34.</p>
+            <p id="ref264"><strong>264.</strong> Depraz et al., 2002, p.126.</p>
+            <p id="ref265"><strong>265.</strong> Wallace, <em>Choosing Reality</em>, 1996, p.7.</p>
+            <p id="ref266"><strong>266.</strong> Depraz, Varela, Vermersch, 1999.</p>
+            <p id="ref267"><strong>267.</strong> N. Depraz, 1999.</p>
+            <p id="ref268"><strong>268.</strong> Depraz et al., 2002, p.62.</p>
+            <p id="ref269"><strong>269.</strong> B. Latour, <em>La science en action</em>, 1989.</p>
+            <p id="ref270"><strong>270.</strong> I. Stengers, <em>L'invention des sciences modernes</em>, 1995.</p>
+            <p id="ref275"><strong>275.</strong> A. Comte, <em>Philosophie première. Cours de philosophie positive</em>. Paris: Hermann, 1830/1975.</p>
+            <p id="ref276"><strong>276.</strong> W. Sellars, <em>Science, Perception and Reality</em>, London and New York, 1963, p.160.</p>
+            <p id="ref277"><strong>277.</strong> R. Rorty, <em>Philosophy and the mirror of nature</em>, Princeton University Press, 1979, p.184.</p>
+            <p id="ref278"><strong>278.</strong> W. Sellars, ‘Meaning as functional classification', <em>Synthese</em>, 27, 1974, p.419, cité par J.F. Rosenberg, Stanford Encyclopedia of Philosophy, 1997.</p>
+            <p id="ref279"><strong>279.</strong> J. Searle, « Minds, Brains and Programs », 1980.</p>
+            <p id="ref280"><strong>280.</strong> H.R. Maturana (1974), p.464, in Winograd and Florès, 1988, p.51-52.</p>
+        </div>
+    </div>
+
+    <!-- ============================== -->
+    <!-- NAVIGATION BAS                 -->
+    <!-- ============================== -->
+    <div class="nav-buttons">
+        <a href="03_III_A4_2.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_B1.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

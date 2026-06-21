@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑2. La cognition sans la représentation : l'énaction (partie 1)</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑2. La cognition sans la représentation : l'énaction (pages 289‑313, partie 1)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-intro">📖 Introduction</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-perspective">🔄 A‑2‑1 Changement de perspective</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-objectivisme">🔍 La nature abstraite du représentationnisme</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-sens-commun">🧠 Le sens commun</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-savoir-tacite">📖 Le savoir tacite</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-enaction">🌱 L'énaction : expérience corporelle et domaine culturel</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-cognition">🧩 A‑2‑2 Cognition et connaissance</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A2_2.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Introduction === -->
+    <div class="capsule" id="capsule-intro">
+        <div class="capsule-title">📖 Introduction</div>
+        <div class="capsule-content">
+            <div class="citation">
+                « The enactive approach takes seriously, then, the philosophical critique of the idea that the mind is a mirror of nature but goes further by addressing this issue from within the heartland of science<sup><a href="#ref193" class="reference-link" id="r193">[193]</a></sup>. »
+            </div>
+            <p>La notion de représentation qui est en jeu dans l'expression ‘cognition sans représentation' est celle qui participe d'un usage théorique, celle qui consiste à endosser une thèse sur ce qu'est une représentation, celle qui réifie la signification, et qui à ce titre peut être dite avoir une portée ontologique. Ce n'est pas le seul usage, loin s'en faut, qui est fait de cette notion. Il y a un usage plus courant, plus lâche, qui sert à désigner les choses qui ont une signification. L'ensemble des comportements des acteurs sur une scène de théâtre constitue une représentation, ce n'est pas le cas de celui des joueurs de football sur un terrain. Pour autant, le jeu des acteurs, pris globalement, n'est le double de rien ; que la pièce soit classique ou moderne, qu'elle soit jouée pour la millième fois ou pour la toute première fois, qu'elle soit une reprise ou qu'elle soit une création absolument originale, elle n'est le double de rien, elle est une invention, une création de signification qui vaut par elle-même et pour elle-même. Une théorie non représentationniste de la cognition n'a pas pour destin tragique de devoir se priver de tout usage de la notion de représentation. Le discours non représentationniste, et en particulier celui de F. Varela, doit être compris compte tenu de cette distinction qu'il énonce lui-même :</p>
+            <div class="citation">
+                « On the one hand, there is the relatively uncontroversial notion of representation as construal: cognition always consists in construing or representing the world a certain way. On the other hand, there is the much stronger notion that this feature of cognition is to be explained by the hypothesis that a system acts on the basis of internal representations » (Varela & al., 1991, p.134)
+            </div>
+            <p>Le premier usage de la notion de représentation qui est évoqué dans cette citation fait référence à tout ce qui peut être interprété comme étant à propos de quelque chose ; c'est un usage qui n'a pas d'implication épistémologique ou ontologique. C'est un usage ordinaire, par opposition à philosophique, dans le sens où Wittgenstein dit que le langage (ordinaire) n'est pas une théorie. Parler dans ce cas de représentation ce n'est pas sous-entendre ou supposer une sorte de théorie de la représentation. Nous pouvons dire que le mot ‘arbre' représente un arbre sans nous être interrogés sur la relation entre le langage et les choses, et sans envisager du tout que par exemple le mot est une sorte de double ou d'étiquette pour une chose déterminée indépendamment de l'usage de ce mot – nous nous servons simplement du mot.</p>
+            <p>On peut dire d'un tableau qu'il représente une notion abstraite, un concept, sans être tenté d'imaginer qu'il existe une chose ‘concept' dont la représentation prétend être une sorte de double, de laquelle elle prétendrait tenir lieu, avec laquelle elle prétendrait être en relation de correspondance. On dit du jeu des acteurs de théâtre qu'il est une représentation d'une pièce sans avoir le besoin ou l'idée de se demander si cette pièce ressemble à quelque chose existant indépendamment du jeu des acteurs. Dans ce sens, la représentation est ce qui rend présent, constitue le présent ou assure la mise en présence :</p>
+            <div class="citation">
+                « elle n'est dès lors ni une réplique plus ou moins exacte, ni une substitut, mais un processus, une activité.<sup><a href="#ref194" class="reference-link" id="r194">[194]</a></sup> »
+            </div>
+            <p>La valeur de représentation que possède quelque chose est ici constituée par l'instauration d'une relation de signification.</p>
+            <p>Il y a un second usage de la notion de représentation qui est, lui, porteur d'un engagement épistémologique et ontologique qui fait référence, en science cognitive, à un état déterminé, localisé ‘à l'intérieur' « qui tiendrait lieu d'un objet prétendument originaire. » (Havelange et al., 2002, p.118) C'est celui-ci qui est impliqué dans la modélisation représentationniste de la pensée et du comportement et c'est celui-ci qui est mis en question et rejeté par les approches non représentationnistes :</p>
+            <div class="citation">
+                « [S]cientific progress in understanding cognition will not be forthcoming unless we start from a different basis from the idea of a pregiven world that exists ‘out there' and is internally recovered in a representation. » (Varela & al., 1991, p.150)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-2-1 Changement de perspective === -->
+    <div class="capsule" id="capsule-perspective">
+        <div class="capsule-title">🔄 A‑2‑1 Changement de perspective (participative/sémantique)</div>
+        <div class="capsule-content">
+            <p>Une condition que doit absolument satisfaire une science de l'esprit, selon Varela, est de pouvoir être accordée avec l'expérience ordinaire que nous avons de la conscience. La notion d'expérience ‘ordinaire' ne doit pas être entendue ici au sens de ‘immédiate', ce que l'on appellerait dans un cadre phénoménologique expérience ‘naïve'.</p>
+
+            <p><strong>La nature abstraite du représentationnisme</strong></p>
+            <p><strong>Le cognitivisme</strong></p>
+            <p>L'un des écueils du cognitivisme est la dissociation de la conscience et de la cognition, de l'esprit et de la conscience. (Varela & al., 1991, p.48) Le cognitivisme postule des processus cognitifs ou mentaux dont nous ne sommes et ne pouvons être conscients. Il n'y a pas de relation essentielle entre l'esprit et la conscience : la cognition est le fait de systèmes qui ont des représentations, mais pas nécessairement une conscience ; celle-ci n'intervient pas dans le processus de cognition. Le cognitivisme met ainsi en question notre idée spontanée d'un sujet unifié, d'un soi. Mais nous avons vu précédemment que ce n'est pas cela qui fait problème. Le problème n'est pas la mise en question de l'idée d'un soi qui ‘contient' tous les événements cognitifs mais l'affirmation que le soi, la conscience de soi, n'est même pas nécessaire pour la cognition :</p>
+            <div class="citation">
+                « If cognition can proceed without the self, then why do we nonetheless have the experience of self ? We cannot simply dismiss this experience without explanation » (Varela & al., 1991, p.51)
+            </div>
+
+            <p><strong>Stratégie connexionniste</strong></p>
+            <p>L'idée de l'approche connexionniste est de prendre pour élément de base de la description des processus cognitifs des composants qui, comme les neurones, sont, en eux-mêmes, inintelligents. Les symboles, tels qu'ils apparaissaient dans le cognitivisme classique, ont disparu. L'évolution du système vers un état stabilisé est décrit par un système d'équations différentielles : les computations symboliques sont ainsi remplacées par des opérations numériques. Les composants, appelés neurones formels, peuvent être interconnectés de façon pondérée de sorte que l'ensemble puisse réaliser, à l'échelle globale, différentes figures d'activation identifiées à des ‘états' cognitifs. La réalisation des connexions ‘adéquates' entre les unités élémentaires se fait au travers de procédures d'apprentissage au cours desquelles le système est confronté à une série de formes données et ‘apprend' à les représenter, selon les critères du modélisateur.</p>
+            <p>Le fait de prendre pour élément de départ des unités qui ne sont rien par elles-mêmes permet d'éviter la question de l'ancrage des symboles auquel se heurtait le cognitivisme classique. Cette question venait du fait que les symboles, qui étaient les unités de base du cognitivisme, étaient censés posséder une signification que la computation devait respecter, bien qu'elle ne prenne en considération que leur forme physique. La question cruciale était alors de savoir d'où ces symboles tenaient leur signification qui donnait aux opérations syntaxiques une valeur sémantique. Dans le cadre du connexionnisme, le niveau de la signification n'est pas celui, élémentaire, des neurones formels ; il est celui des formes qui émergent de la dynamique du réseau. Si quelque chose doit être considéré en tant que symboles, ce sont les configurations globales. La signification dépend donc du contexte dans lequel une configuration, un certain état global du système, se met en place, émerge de l'interaction de l'ensemble des constituants. Une autre différence majeure est que le niveau symbolique sera fortement dépendant, via son enracinement sub-symbolique, de la nature et de l'histoire du système. L'apprentissage joue un rôle essentiel car c'est au cours de l'apprentissage que les connexions entre les unités d'un réseau acquièrent les pondérations par lesquelles les premières formes, qui constitueront les instruments élémentaires de la connaissance, sont définies. L'émergence de telle ou telle configuration dépend des relations locales entre les éléments du système et celles-ci dépendent des procédures d'apprentissage et des modifications ultérieures.</p>
+
+            <p><strong>La sélection naturelle</strong></p>
+            <p>Mais l'approche connexionniste n'est pas en rupture avec la démarche représentationniste du cognitivisme classique. Le problème cognitiviste de l'ancrage des symboles se retrouve dans le fait que les modélisations connexionnistes restent muettes sur l'origine de ces premières formes dans le cas de systèmes cognitifs vivants. Qu'est-ce qui dans ce cas remplit la fonction du concepteur ? La réponse naturaliste sera que c'est la sélection naturelle : la sélection naturelle est l'instructeur des systèmes vivants ; les mises en correspondance des formes subissent l'épreuve de leur adéquation par la valeur de leurs conséquences sur l'organisme lorsqu'on suppose qu'elles associent des formes perçues et des comportements moteurs. L'évolution sélectionne la vérité des représentations. Les êtres qui représentent le mieux, qui forment les représentations les plus justes en tirent un avantage qui favorise leur adaptation et donc leur sélection. Mais l'instructeur ne fait pas que spécifier des correspondances, il spécifie aussi des formes élémentaires. Dans une perspective représentationniste, il est évident que ces formes élémentaires sont des données de la modélisation, elles sont toujours déjà là, prêtes à être représentées :</p>
+            <div class="citation">
+                « Models in this framework typically postulate some initial set of a priori structures from which more complex structures are built. » (Varela et al., 1991, p.137)
+            </div>
+            <p>Pour Varela et al., la sélection naturelle ne peut pas remplir cette fonction sans tomber dans un cercle vicieux : pour que la sélection puisse opérer, il faut déjà qu'il y ait des formes à sélectionner, ce qui présuppose un monde déjà structuré, déjà donné, que le système n'aurait plus qu'à re-présenter. C'est ce cercle que l'approche énactive entend rompre, en proposant une conception de la cognition où les formes ne sont pas données à l'avance, mais émergent de l'interaction du système avec son environnement.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Absence de fondement === -->
+    <div class="capsule" id="capsule-objectivisme">
+        <div class="capsule-title">🔍 La nature abstraite du représentationnisme (suite) : Absence de fondement</div>
+        <div class="capsule-content">
+            <p>Cette conception de l'évolution naturelle comme processus de sélection par un environnement déterminé des êtres qui lui sont le mieux adaptés est complètement exclue de la perspective non représentationniste dans laquelle se situe la théorie énactive de la cognition. L'opposition entre sujet et objet, comme deux entités déterminées indépendamment l'une de l'autre, qui est à la base de la grande fresque de l'évolution sélective, n'est, pour les auteurs de <em>The Embodied Mind</em>, tout simplement pas un donné. Proche en cela de Rorty, ils affirment que c'est une idée, une image qui prend racine dans le 17<sup>ième</sup> siècle avec la volonté cartésienne de trouver un fondement de la connaissance et ‘l'invention de l'esprit comme miroir de la nature'. Et ils semblent là faire écho aux analyses grammaticales de Wittgenstein dans la mesure où la mise en question de la notion de fondement habite en filigrane toutes les réflexions et interrogations des <em>Investigations philosophiques</em> et de <em>La Certitude</em>. La réflexion bouddhiste sur le soi, sur la recherche d'un Soi a rendu Varela et al. aussi sceptique sur cette question que peuvent le faire les textes de Wittgenstein :</p>
+            <div class="citation">
+                « We have become increasingly skeptical about the possibility of discerning any ultimate ground. » (Varela et al., 1991, p.141)
+            </div>
+            <p>Ce scepticisme peut conduire à une forme de nihilisme consistant à rejeter l'idée d'une possible connaissance du monde tel qu'il est et à assimiler la connaissance à la seule formation de représentations qui sont déterminées par ce que nous sommes bien plus que par ce qu'est le monde. Cette réaction s'incarne dans des affirmations telles que :</p>
+            <div class="citation">
+                « Whatever you purport to say about a thing, you're only expressing your own beliefs. Yet even that gloomy thought suggests an insight. Even if our models of the world cannot yield good answers about the world as a whole, and even though their other answers are frequently wrong, they can tell us something about ourselves<sup><a href="#ref196" class="reference-link" id="r196">[196]</a></sup>. »
+            </div>
+            <p>Mais « this mood of gloominess » ne survient que sur fond d'idéal représentationniste. Ce n'est que par rapport à l'idée que la connaissance du monde doit être une connaissance de quelque chose de pré-déterminé, quelque chose d'indépendant du processus de connaissance, qu'il y a un sens à dire que notre connaissance ne parle que de nous-mêmes. Ce n'est que lorsque l'on imagine le monde et le sujet de la connaissance comme deux choses, deux pôles a priori indépendants l'un de l'autre, qu'il y a un sens à se demander si la connaissance parle du sujet qui la produit ou du monde dans lequel il habite. Pour Varela & al., la croyance en un monde pré-déterminé n'est qu'un avatar du besoin de fondement dénoncé par les réflexions bouddhistes axées sur la recherche d'un Soi déterminé ; et dans un cas comme dans l'autre, cette croyance que nous avons besoin d'un fondement est la source de frustration et d'anxiété :</p>
+            <div class="citation">
+                « Whether one tries to find an ultimate ground inside or outside the mind, the basic motivation and pattern of thinking is the same, namely, the tendency to grasp. » (Varela et al., 1991, p.143)
+            </div>
+            <p>C'est un thème récurrent des réflexions de Wittgenstein que de nous alerter sur la nature de nos besoins véritables,</p>
+            <div class="citation">
+                « d'essayer, comme dit Bouveresse, de convaincre son lecteur que l'aspect le plus important du travail philosophique pourrait consister à considérer de plus près et à modifier sérieusement notre idée de ce que nous cherchons en philosophie. […] Selon la métaphore que Wittgenstein a utilisée, nous devons faire effectuer à notre examen une rotation autour de l'axe que représente notre besoin véritable<sup><a href="#ref197" class="reference-link" id="r197">[197]</a></sup> »
+            </div>
+
+            <p><strong>Rotation du cadre de pensée</strong></p>
+            <p>L'absence de fondement est inhérente à notre expérience ordinaire – elle est l'autre face de la dépendance de cette expérience par rapport aux multiples dimensions des contextes dans lesquelles elle se produit ; elle est l'autre face de la richesse de cette expérience, et sans doute aussi, comme le disait Aristote, de notre sentiment de liberté. Ce n'est pas la science mais l'éthique disait Aristote qui peut s'occuper de l'expérience humaine, parce que la science ne peut étudier que des phénomènes soumis à des lois strictes. Dans le monde de l'expérience humaine, c'est le sens commun qui guide le déroulement des événements qui sont sous la dépendance de nos actions – et le sens commun n'a pas de loi, il se constitue dans l'histoire de nos expériences du monde, l'expérience de la vie par laquelle nous apprenons ce qu'est le monde. C'est ce sens commun que Wittgenstein entreprend de décrire lorsqu'il tourne l'axe de sa recherche de la pureté de cristal de la logique d'un langage idéal vers la rugosité de la pratique du langage ordinaire. Et c'est ce sens commun, essentiel à l'expérience, essentiel à la manière dont, en réalité, nous rencontrons le monde, que la théorie de l'énaction veut se donner les moyens de prendre en considération. L'absence de fondement n'est pas comprise comme une perte, un renoncement nécessaire par rapport à un certain idéal de connaissance. Une connaissance sans fondement qui transcende les conditions dans lesquelles elle s'élabore n'est pas une moindre connaissance :</p>
+            <div class="citation">
+                « By progressively learning to let go of these tendencies to grasp, one can begin to appreciate that all phenomena are free of any absolute ground and that such ‘groundlessness' is the very fabric of dependent coorigination . » (Varela et al., 1991, p.144)
+            </div>
+            <p>Cette conclusion à laquelle conduit la tradition bouddhiste invoquée par les auteurs de <em>The Embodied Mind</em> appelle à un renversement très comparable à la rotation wittgensteinienne. C'est l'idée même de connaissance qui est changée comme a été changée l'idée même de langage : nous pensions qu'il fallait, qu'il devait y avoir un fondement au langage, aux significations, que c'était cela le besoin véritable, et nous concevions, nous inventions, construisions, un langage, parfaitement logique, en fonction de cette exigence qui paraissait incontournable. La rotation : nous nous tournons vers la pratique ; nous prenons acte du flou des bords des concepts, de la dépendance par rapport au contexte de la signification, et non seulement des contours de la signification mais de l'existence même d'un sens pour une certaine expression ou un certain terme – nous réalisons que le langage fonctionne comme cela, que le langage, c'est cela et rien d'autre, des cas particuliers, des sous-entendus, des différences selon les situations, les arrière-plans, les intonations, les intentions, et que c'est ainsi que nous communiquons, que nous nous comprenons, que nous élaborons, partageons ou discutons nos connaissances. La rotation : plutôt que de rêver un langage idéal, nous nous tournons vers le langage tel qu'il existe et tel qu'il fonctionne et nous regardons comment il fonctionne. Ce n'est pas de cette pratique sans fondement qui la transcende que viennent les problèmes que nous avons avec le langage et les assertions ‘métaphysiques' ; c'est au contraire de l'ignorance de cette pratique, peut-être même une sorte de trahison. Il n'y a pas de fondement, c'est-à-dire le langage n'est pas une théorie : lorsque nous parlons de la ‘réalité' de quelque chose, le terme de ‘réalité' n'est pas chargé d'une théorie sur ce qu'est ‘la réalité'. De la plupart des choses que nous serions prêts à reconnaître comme réelles, si nous étions interrogés précisément à ce sujet, il serait ridicule de dire spontanément qu'elles appartiennent à la réalité, parce que justement nous ne le savons que trop, et que le fait de le dire serait entendu comme l'expression d'un doute anormal, suspect. Nous affirmons la réalité de choses nouvelles, inattendues, incertaines : la réalité d'une nouvelle planète, la réalité d'une opportunité inespérée… Mais nous ne savons pas ce qu'est ‘la réalité', et nous n'avons pas besoin de le savoir – c'est justement de là que naissent les problèmes : de la croyance que nous aurions besoin de savoir ce qu'est la réalité pour dire d'une chose qu'elle est réelle, et des tentatives subséquentes d'écrire des théories sur ce qu'est la réalité. Parce que ces théories sont ensuite tournées vers la pratique du terme pour révéler, pointer, accuser, ce qui seraient des usages non conformes, non rigoureux, non signifiants.</p>
+            <p>Nous pensions qu'il devait y avoir un fondement à la connaissance, quelque chose qui lui préexiste et par rapport à quoi elle devait être évaluée. Mais ce quelque chose nous n'y avons accès qu'en tant qu'il est devenu un contenu de connaissance. Tout contenu de connaissance dépend du processus par lequel il est produit. Inquiétude : connaissons-nous seulement l'intérieur, le processus, ou vraiment l'extérieur, la chose à laquelle s'applique le processus… Renversement : l'intérieur et l'extérieur sont le résultat du processus. Il n'y a rien avant la connaissance, tout est contenu de connaissance. De même que nous sommes retournés au langage ‘en train d'être parlé', nous retournons à la connaissance en train de se produire et en train de se vivre. La connaissance, pas plus que le langage, n'est une théorie. Connaître, c'est d'abord ‘faire-avec'. La question du fondement est extrêmement tardive par rapport au fait de la connaissance. Celui-ci se produit, il n'a pas besoin de fondement. La réponse à la question du fondement de la connaissance ne changera rien à la manière dont nous connaissons, de la même façon que la réponse que finalement nous donnions à la question de savoir si le langage possède un fondement qui le transcende ou pas ne pouvait rien changer à la manière dont le langage fonctionne. Nous avions l'idée d'un langage parfait, une logique cristalline, intransigeante, absolument déterminante ; nous avons encore l'idée de ce que pourrait être une connaissance parfaite : elle serait un reflet, un reflet absolument déterminé, dont la valeur épistémique, la valeur en tant que connaissance, serait absolument déterminée, indépendamment de toute notion vague d'intérêt ou de contexte.</p>
+            <p>Nous devons retourner à la connaissance telle qu'elle se vit, au moment où les choses apparaissent, au moment où les choses se mettent à exister. Quand est-ce que les choses apparaissent, quand est-ce qu'elles se mettent à exister ? C'est dans l'expérience de la connaissance que l'absence de fondement se manifeste – de la même façon que c'est dans l'attention à la pratique du langage, en considérant la multiplicité des jeux de langage, la diversité des effets relatifs aux contextes d'élocution, le flou des limites d'applicabilité des concepts, que l'enracinement des significations dans la seule pratique du langage s'est manifestée :</p>
+            <div class="citation">
+                « Groundlessness, then, is to be found not in some far off, philosophically abstruse analysis but in everyday experience. Indeed, groundlessness is revealed in cognition as ‘common sense', that is, in knowing how to negotiate our way through a world that is not fixed and pregiven but that is continually shaped by the types of actions in which we engage. » (Varela et al., 1991, p.144)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Le sens commun === -->
+    <div class="capsule" id="capsule-sens-commun">
+        <div class="capsule-title">🧠 Le sens commun</div>
+        <div class="capsule-content">
+            <p>Le monde prend forme au travers des actions dans lesquelles nous nous engageons. L'absence de fondement de ces formes signifie qu'elles ne sont pas strictement déterminées comme elles devraient l'être si la connaissance était une représentation d'une réalité déterminée indépendamment de ce que nous faisons, indépendamment de ce que nous la connaissions ou pas. L'absence de fondement est révélée par la présence et le rôle, dans la formation de connaissances, de ce que Varela & al. appellent un ‘sens commun'. Cette notion de sens commun n'est pas celle qu'utilisent les philosophes écossais du 18<sup>ième</sup> siècle : elle est plus proche de la notion d' « arrière-plan » de Searle ou de « précompréhension » de Heidegger, ou du « monde de la vie » de Husserl. Le sens commun désigne l'ensemble des présupposés tacites, des habitudes, des savoir-faire, des manières de faire, qui ne sont pas thématisés, qui ne sont pas consciemment présents à l'esprit, mais qui conditionnent toute activité de connaissance, toute action, toute perception. C'est ce que Varela et al. appellent le « common sense » :</p>
+            <div class="citation">
+                « Common sense is that background of shared, unspoken assumptions, skills, and practices that we bring to any situation. It is not a theory or a set of beliefs, but a practical know-how, a way of being in the world that is never fully explicit but that is always presupposed in our attempts to make sense of our experience. » (Varela et al., 1991, p.145)
+            </div>
+            <p>Le sens commun est donc ce qui permet de naviguer dans un monde qui n'est pas fixe et pré-donné, mais qui est continuellement façonné par les actions dans lesquelles nous nous engageons. Il est ce qui nous permet de faire face à des situations nouvelles, de les interpréter, de leur donner un sens, sans avoir besoin de recourir à des règles explicites ou à des représentations déterminées. C'est parce que nous partageons un sens commun que nous pouvons nous comprendre, que nous pouvons vivre dans un même monde, que certaines connaissances peuvent être reconnues comme erronées. Le sens commun est la norme, mais une norme qui n'est pas transcendantale, qui n'est pas fondée sur des principes a priori, mais qui est immanente à la pratique elle-même.</p>
+            <p>Cette notion de sens commun a été mise en évidence de manière particulièrement frappante par les difficultés rencontrées par l'Intelligence Artificielle. Les chercheurs en IA ont cru qu'il suffirait de formaliser les connaissances pour qu'un ordinateur puisse les utiliser. Mais ils se sont heurtés à un problème : les connaissances humaines ne sont pas des ensembles de propositions explicites ; elles sont en grande partie tacites, incorporées dans des pratiques, des habitudes, des manières de faire. Un ordinateur, qui ne fait que manipuler des symboles formels, ne peut pas avoir accès à ce sens commun. Il ne peut que simuler certaines tâches, dans des domaines bien délimités, où tout peut être formalisé. Mais dès qu'il s'agit d'agir dans un monde ouvert, imprévisible, le sens commun est indispensable, et il est par essence non formalisable.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Le savoir tacite === -->
+    <div class="capsule" id="capsule-savoir-tacite">
+        <div class="capsule-title">📖 Le savoir tacite</div>
+        <div class="capsule-content">
+            <p>Les problèmes qui se posent aux chercheurs en Intelligence Artificielle peuvent être considérés comme une sorte de révélateur de l'ampleur et de la prégnance du ‘sens commun'. Nous avons vu, dès l'Introduction, que l'idée de conventions tacites auxquelles sont adossées certaines connaissances partagées était déjà présente dans l'analyse que fait Aristote du savoir éthique : comment savons-nous ce qu'est le comportement correct qui doit être adopté dans telle ou telle situation ? Ce doit être un comportement guidé par la prudence. Soit. Mais en quoi consiste ce comportement ? Aucune théorie générale ne peut être formulée. Le comportement guidé par la prudence est celui qu'adoptent les gens prudents. Il faut donc, à chaque fois, prendre exemple sur ce que font dans ces situations-là les gens prudents. Soit. Mais qui sont ces gens-là. Qu'est-ce qui définit ces gens prudents ? Aucune théorie générale ne peut, là non plus, être formulée. Les gens prudents, nous les reconnaissons. Nous savons, à chaque fois, qui ils sont – même si nous sommes incapables de donner une définition générale de la ‘classe' des prudents ; cette connaissance appartient au ‘sens commun'. Mais Aristote avait une conception très restrictive des domaines de pertinence de la notion de ‘sens commun'. Étendue à tous les champs de la pensée, l'idée de l'existence de présupposés à toute activité de connaissance était au centre du programme de la phénoménologie husserlienne avec la notion de ‘world-life'. Et c'est cette même idée qui est thématisée par Heidegger avec la notion de ‘thrownness' :</p>
+            <div class="citation">
+                « We do at times engage in conscious reflection and systematic thought, but these are secondary to the pre-reflective experience of being thrown in a situation in which we are already acting. (...) Even what we call ‘disengagement' occurs within thrownness: we do not escape our thrownness but shift our domain of concern. » (Winograd &amp; Florès, 1986, p.71)
+            </div>
+            <p>Mais la recherche de programme en IA a permis de réaliser de manière plus concrète l'étendue, la profondeur, la diversité de tout le savoir tacite, de tous les présupposés qui sont investis dans l'activité de connaissance. L'aveuglement de la tradition rationaliste évoqué précédemment se manifeste à chaque fois qu'une situation est décrite en termes d'objets et de propriétés considérés comme donnés, comme pré-déterminés, comme toujours déjà là, en attente d'être pris comme objet de pensée, en attente d'être connus. Lorsqu'un programmeur écrit un programme de calcul, il caractérise le domaine de la tâche, les opérations à accomplir et les buts à atteindre en termes d'objets et de propriétés et le programme est contraint d'opérer à l'intérieur du domaine d'objets et de propriétés spécifié par le programmeur. L'aveuglement objectiviste devient une sorte de dimension constitutive du programme du calcul. Mais l'intelligence humaine se distingue de la capacité de calcul de l'ordinateur par une aptitude à agir dans des situations qui ne sont pas spécifiables en termes d'objets ou de propriétés pré-déterminés :</p>
+            <div class="citation">
+                « The essence of intelligence is to act appropriately when there is no simple pre-definition of the problem or the space of states in which to search for a solution. » (Winograd &amp; Florès, 1986, p.98)
+            </div>
+            <p>Les programmes qui incorporent l'aveuglement objectiviste peuvent bien entendu, soulignent les auteurs, accomplir des tâches qui semblent reproduire l'intelligence humaine : ce sont notamment ce que l'on appelle les ‘systèmes experts'. Mais ce sont des tâches qui doivent pouvoir être spécifiées et dont les solutions doivent pouvoir être formalisées. Les ressources qui sont mises en œuvre pour gérer, pour donner forme aux situations en décalage par rapport aux situations habituelles sont précisément ce qui appartient au sens commun ; un sens commun qui n'est pas constitué de représentations, de formes connues, déterminées, mais d'un champ d'action potentiel, de connaissances littéralement in- corporées, inscrites dans des gestes, des savoir-faires, inscrites aussi par exemple, dans une façon spontanée d'attribuer un sens à des énoncés qui en eux-mêmes, hors contexte, sont ambigus.</p>
+            <p>Les chercheurs en Intelligence Artificielle, disent Winograd &amp; Florès, cherchent à construire des outils qui permettent aux experts d'un domaine donné, comme celui du diagnostic médical, de transmettre leur savoir à un système de calcul. Le problème qu'ils pensent devoir résoudre est celui de rendre explicite un savoir tacite – l'idée étant que ‘les représentations sont quelque part dans l'esprit de l'expert', « the appropriate representation is somehow there in the expert's mind », mais ne sont pas accessibles à la verbalisation. Mais le savoir tacite que désigne la notion de sens-commun n'est pas constitué de représentations déterminées. Que le sens commun ne soit jamais entièrement verbalisé ne doit pas être compris comme la conséquence d'un défaut, d'une insuffisance de nos instruments de communication. Ce qu'entend signifier la notion de sens commun n'est pas un savoir non verbalisé, c'est un savoir non verbalisable :</p>
+            <div class="citation">
+                « As Gadamer points out, we can never have a full explicit awareness of our prejudices. This is an essential condition of human thought and language, not a failure of communication tools. » (Winograd &amp; Florès, 1986, p.99)
+            </div>
+            <p>L'introduction à la conception énactive de la cognition peut se faire à partir de la mise en exergue de cette notion de sens commun. La rotation, le renversement de perspective auxquels appellent aussi bien Wittgenstein que la réflexion bouddhiste et l'approche énactive de la cognition tient dans un changement de ce qui est l'objet de notre attention, la visée de l'enquête sur les conditions de la connaissance. Nous cherchions un fondement dans l'énoncé de conditions a priori des significations du langage, des déterminations du Soi, ou de la vérité de la connaissance : une structure logique de formation des énoncés, une structure de l'intériorité, une structure représentationnelle du contenu de la connaissance. Le regard se tourne vers les conditions effectives du fonctionnement du langage, de la parole subjective, de la formation de connaissances. Il n'est plus question alors de fondement, c'est-à-dire de quelque chose qui soit antérieur et indépendant du langage ou de la connaissance ‘en marche'. Le langage, le Soi, la connaissance, ne sont pas des choses qui peuvent être appréhendées sur un mode désengagé. Ce ne sont pas des objets, déterminés, susceptibles de recevoir une explication ni même une description générale, exhaustive ne serait-ce qu'en principe. Tout ce que nous trouvons comme instruments de validation de ce que nous disons, ce sont des accords tacites, des habitudes, des conventions non formulées, et jamais entièrement formulables, un ‘sens commun'.</p>
+            <p>Le sens commun : un savoir tacite, non entièrement verbalisable, qui, en tant que ressource, distingue l'intelligence humaine de l'intelligence technologique ; une capacité de donner forme à des situations nouvelles, capacité de spécifier non pas les solutions de certains problèmes déterminés, mais de spécifier la tâche elle-même qui doit être accomplie dans une situation inédite. Le sens commun en tant que source d'innovation comportementale n'est pas entièrement formalisable mais les situations qui sont appréhendées par un système cognitif, elles non plus, ne sont pas définies et définissables ‘en général' :</p>
+            <div class="citation">
+                « [W]hen we enlarge the task domain from artificial microworlds to the world at large, it is not clear that we can even specify what is to count as an object independent of the type of action that is being performed. The individuation of objects, properties and events appears to vary according to the task at hand. » (Varela et al., 1991, p.148)
+            </div>
+            <p>L'insatisfaction que suscitent les approches cognitivistes ou connexionnistes de la cognition, en tant qu'elles participent d'une perspective représentationniste, tient pour beaucoup dans l'ignorance du sens commun qui est constamment sollicité dans la production, et l'attribution, de connaissances. Et cette ignorance-là est corrélative de nombre d'autres, qui seront explicitées par la suite, et qui tiennent, de la même manière, au fait que le problème de la cognition est abordé à partir d'un idéal théorique, spéculatif, comparable à l'idéal qu'a constitué l'image d'un langage logique, plutôt que de la prise en considération des conditions dans lesquelles elle se produit et dont nous faisons l'expérience.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'expérience corporelle et le domaine culturel === -->
+    <div class="capsule" id="capsule-enaction">
+        <div class="capsule-title">🌱 L'expérience corporelle et le domaine culturel</div>
+        <div class="capsule-content">
+            <p>L'énaction se présente comme une alternative à la conception objectiviste de la cognition et au cadre représentationniste dans lequel elle s'exprime. Elle se réclame clairement d'une philosophie herméneutique par opposition à la philosophie analytique à laquelle est attachée selon Varela et al. la démarche représentationniste :</p>
+            <div class="citation">
+                « The central insight of this nonobjectivist orientation is the view that knowledge is the result of an ongoing interpretation that emerges from our capacities of understanding. These capacities are rooted in the structures of our biological embodiment but are lived and experienced within a domain of consensual action and cultural history. » (Varela et al., 1991, p. 149)
+            </div>
+            <p>La référence aux ‘structures de notre incarnation biologique' s'oppose à la conception objectiviste selon laquelle les déterminations de l'objet de la connaissance sont indépendantes des conditions et du fait même de la connaissance. Mais, la référence au ‘domaine d'action consensuelle et d'histoire culturelle' permet de répondre à la crainte qu'il n'y ait, hors de la conception objectiviste, que du relativisme individuel. L'objectivisme se présente comme la seule façon de rendre compte du fait qu'il y ait une connaissance partagée, que les déterminations du contenu de la connaissance puissent faire l'objet d'une reconnaissance partagée, et que cette reconnaissance puisse constituer une contrainte normative sur le contenu des connaissances individuelles. Si les déterminations du contenu de notre connaissance du monde ne sont pas antérieures et indépendantes de la façon dont chaque être cognitif élabore sa connaissance, comment se fait-il que nous parlions des mêmes choses, que nous vivions dans le même monde, que certaines connaissances puissent être reconnues comme erronées ? Où est la norme s'il n'y a pas de fondement qui transcende les conditions de formation de la connaissance ?</p>
+            <p>La question est la même que celle qui se posait concernant les significations avec l'abandon de la normativité logique. Dans la pratique commune du langage, les significations sont formées, au sens littéral où elles prennent forme, par un tissu compliqué de conventions tacites. Lorsque l'on s'interroge sur la possibilité de produire la connaissance d'un monde partagé, un monde qui autorise des jugements inter-subjectifs, un monde finalement constitué d'objets, tout en renonçant à l'idée de pré-déterminations, on rencontre la notion de sens commun ; le sens commun comme héritage silencieux de façons de faire, de manières d'être, de manières de se comporter, de ‘lire entre les lignes' des situations dans lesquelles nous plonge notre appartenance à un groupe culturel. Mais ces ‘habitus' sociaux eux-mêmes dépendent, dans ce qu'ils peuvent ou ne peuvent pas être, des organismes, des corps dont ils gèrent les expressions individuelles et collectives, ils dépendent de ce que ces corps peuvent et ne peuvent pas faire. La constitution de la réalité, l'émergence du monde que nous partageons, implique tout à la fois du biologique et du social qui sont toujours déjà entremêlés. S. Cavell insistait d'ailleurs lui aussi sur ce point dans sa lecture des <em>Investigations Philosophiques</em> et ses réflexions sur la notion de forme de vie : le langage est enraciné dans des formes de vie, et les formes de vie sont elles-mêmes des formes corporelles, des manières d'être incarnées.</p>
+            <p>Cette double dimension – biologique et culturelle – est essentielle pour comprendre l'approche énactive. Elle ne se réduit ni à un biologisme (qui réduirait la cognition à des processus neuronaux) ni à un culturalisme (qui réduirait la cognition à des constructions sociales). Elle les intègre dans une dynamique où le corps et la culture se co‑constituent. Le corps n'est pas un simple réceptacle passif de stimuli, ni une machine à traiter des informations ; il est un lieu d'expérience, un site d'action, un vecteur de sens. Et la culture n'est pas un simple décor, un ensemble de règles externes qui s'imposeraient à des individus ; elle est un tissu de pratiques, de significations, de manières d'être, qui sont elles-mêmes incarnées, qui s'apprennent et se transmettent par l'action et l'interaction.</p>
+            <p>Varela et al. insistent sur le fait que notre expérience corporelle est préconceptuelle : elle précède et fonde l'acquisition des concepts. Cette expérience n'est pas un chaos de sensations brutes ; elle est structurée par des schèmes corporels, des manières de se mouvoir, de percevoir, d'agir, qui sont communes à tous les êtres humains en raison de notre constitution biologique. Ces schèmes sont ce que M. Johnson appelle des « image schemas » :</p>
+            <div class="citation">
+                « Image schemas are recurring, dynamic patterns of our perceptual interactions and motor programs that give coherence and structure to our experience. » (Johnson, 1987, p.10)
+            </div>
+            <p>Ces schèmes, comme le schème du conteneur, du chemin, de la force, etc., sont des structures préconceptuelles qui organisent notre expérience et qui sont à la base de la formation des concepts. Ils ne sont pas des représentations, mais des patterns d'activité corporelle, des manières de faire, qui ont une signification immédiate, une intelligibilité pratique. C'est à partir de ces schèmes que nous construisons des concepts abstraits, par des processus de métaphore et de projection. Ainsi, la connaissance conceptuelle n'est pas une simple représentation d'un monde pré‑donné ; elle est une élaboration, une transformation, une extension de notre expérience corporelle.</p>
+            <p>Mais cette expérience corporelle n'est pas privée ; elle est partagée par tous les êtres humains, en raison de notre constitution biologique commune. Et elle est en même temps modelée par la culture, par les pratiques, par les interactions sociales. C'est pourquoi il y a un monde commun, une réalité partagée : non parce qu'elle pré‑existerait à toute expérience, mais parce que notre expérience est structurée par des schèmes corporels communs, et parce que ces schèmes sont élaborés, transformés, enrichis par une culture commune, par un langage partagé, par des pratiques collectives.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-2-2 Cognition et connaissance === -->
+    <div class="capsule" id="capsule-cognition">
+        <div class="capsule-title">🧩 A‑2‑2 Cognition et connaissance</div>
+        <div class="capsule-content">
+            <p><strong>Distinction logique</strong></p>
+            <p>Cette distinction va avoir une grande importance dans la présentation de l'approche énactive et de sa visée épistémique. Elle est un instrument d'analyse qui permettra de distinguer et expliciter les notions de cognition et de connaissance en tant que, dans le cadre de l'énaction, elles s'appliquent respectivement à l'un et à l'autre de ces moments. Mais la distinction entre ces deux moments ne doit pas être pensée comme l'expression d'un ordre temporel, voire hiérarchique tel que ces moments puissent être appréhendés indépendamment l'un de l'autre ; elle doit être comprise comme une distinction logique. L'expérience pré-conceptuelle doit être pensée en dépendance par rapport au milieu culturel et donc conceptuel dans lequel elle se déroule. Et ce en quoi consiste ce dernier, dépend des potentialités préconceptuelles qui le nourrissent. La façon dont un corps rencontre l'environnement dépend, dès les premiers instants, des habitus sociaux du groupe culturel auquel ce corps appartient, même si certains habitus apparaissent sous des formes plus ou moins identiques dans tous ces groupes culturels. Et les habitus dépendent de ce que ces corps peuvent faire, même s'ils ne sont pas strictement déterminés, puisque des corps humains, dotés des mêmes potentialités sensori-motrices, peuvent évoluer au sein d'habitus socio-culturels différents. La distinction que pointe cette citation :</p>
+            <div class="citation">
+                « These capacities are rooted in the structures of our biological embodiment but are lived and experienced within a domain of consensual action and cultural history » (Varela et al., 1991, p.149)
+            </div>
+            <p>n'est pas telle que l'incarnation biologique d'une part, et l'expérience à l'intérieur d'un domaine d'histoire culturelle, d'autre part, devraient faire l'objet de deux formes d'étude séparées. C'est une distinction logique, qui permet de penser l'articulation entre ces deux dimensions, mais qui ne correspond pas à une séparation réelle, temporelle ou ontologique. La cognition, en tant que processus biologique d'émergence de structures sensori‑motrices, et la connaissance, en tant que processus culturel d'élaboration de significations conceptuelles, sont deux faces d'un même processus, celui de l'énaction.</p>
+            <p>L'énaction, c'est précisément ce processus par lequel un système cognitif, en interagissant avec son environnement, constitue à la fois ses propres structures et le monde qui lui donne sens. La cognition n'est pas une représentation d'un monde pré‑donné, mais une action, une mise en forme du monde par l'action. Et la connaissance n'est pas une collection de propositions vraies sur ce monde, mais une capacité à agir de manière pertinente dans ce monde, une capacité qui est à la fois corporelle et culturelle, individuelle et collective.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref193"><strong>193.</strong> F. Varela et al., <em>The Embodied Mind</em>, 1991, p.150.</p>
+            <p id="ref194"><strong>194.</strong> V. Havelange et al., 2002, p.118.</p>
+            <p id="ref196"><strong>196.</strong> Varela et al., 1991, p.141.</p>
+            <p id="ref197"><strong>197.</strong> J. Bouveresse, <em>La demande philosophique</em>, 1996, p.70.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A1.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A2_2.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

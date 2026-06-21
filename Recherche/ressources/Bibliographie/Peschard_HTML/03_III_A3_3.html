@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑3. Après Piaget – A3.3</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑3. Après Piaget – A3.3 (pages 366‑381)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-causation">⚡ La causation mentale</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-category">🧩 Différence de catégorie</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-phenomenologisation">🌱 Phénoménologisation de l'objectivité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-erreur">🔍 L'erreur A‑non‑B</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-modelisation">🌀 Modélisation dynamique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-enaction">🌿 Et l'énaction ?</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-reserve">⚠️ Une réserve essentielle</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-neurodynamique">🧠 A‑4 Neurodynamique</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A4_1.html" class="nav-btn-top" title="Page suivante (A-4)">→</a>
+    </div>
+
+    <!-- === CAPSULE : Rappel de la fin d'A3.2 === -->
+    <div class="capsule" id="capsule-rappel-a3-2">
+        <div class="capsule-title">📌 Rappel (fin d'A3.2)</div>
+        <div class="capsule-content">
+            <p>… par une cause identique ; mais elle ne l'est pas si le comportement est le résultat émergent d'un processus de couplage qui implique les paramètres qui sont modifiés en fonction des situations.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : La causation mentale === -->
+    <div class="capsule" id="capsule-causation">
+        <div class="capsule-title">⚡ La causation mentale</div>
+        <div class="capsule-content">
+            <p><strong>A‑3‑3 L'approche dynamique</strong></p>
+            <p>Avant d'expliciter ce en quoi consiste, concrètement, l'approche dynamique défendue par Thelen, il me paraît nécessaire de commenter davantage la question de la nature causale des structures mentales. Cette question est, en effet, loin d'être triviale ou négligeable. La science peut-elle ou doit-elle se passer, purement et simplement, de toute référence au mental, que ce soit en termes d'événements mentaux, de phénomènes mentaux, ou de structures mentales ? Ainsi que le souligne Kim<sup><a href="#ref231" class="reference-link" id="r231">[231]</a></sup>, il y a, semble-t-il, de bonnes raisons de défendre l'idée d'une ‘causation mentale' : comment rendre compte, sinon, de la capacité que possède l'être humain d'agir sur la base d'une croyance, d'un désir, d'une intention ? Comment comprendre la possibilité de la connaissance humaine sans présupposer une relation causale entre les objets du monde d'une part, et les expériences perceptuelles et les croyances, d'autre part ? Comment comprendre que nous puissions raisonner sur la base de nos acquis sans en appeler à une relation causale entre les anciennes croyances et les nouvelles ? Ce sont des questions du même type que posent ceux qui dénoncent l'origine perceptuelle de la connaissance : comment un enfant peut-il réagir en fonction d'une situation particulière, si ce n'est sur la base d'une connaissance qui lui permette de donner sens à cette situation ? Comment adapter l'action aux informations disponibles s'il ne possède pas une structure mentale qui assure l'adéquation du comportement aux données de l'environnement ? Mais, si la science ne peut pas se passer de référence à ‘du mental', quelle place peut-elle lui reconnaître ? En quels termes peut-elle y faire référence ? Une science qui met en scène dans ses explications du comportement les phénomènes mentaux se doit, dit Kim, de leur reconnaître une efficacité causale (Kim, 1998, p.171) ; et de rappeler la sentence fodorienne :</p>
+            <div class="citation">
+                « … if it isn't literally true that my wanting is causally responsible for my reaching, and my itching is causally responsible for my scratching, and my believing is causally responsible for my saying … if none of that is literally true, then practically everything I believe about anything is false and it is the end of the world<sup><a href="#ref232" class="reference-link" id="r232">[232]</a></sup>. »
+            </div>
+            <p>Selon Kim, il y a un problème avec la ‘causation mentale' qui vient des difficultés que rencontrent les doctrines principales qui sont proposées pour traiter de cette question ; et il est indispensable, pour sauver la ‘causation mentale' de répondre à ces difficultés. On pourrait être tentés de croire qu'il va sans dire que pour être en mesure d'affirmer l'existence d'une relation causale entre deux événements, il faut être en mesure, avant même de penser à l'attester, de concevoir l'existence d'une relation en ces deux événements. Il faut être en mesure de décrire ces deux événements de façon à ce qu'il soit possible de concevoir une relation causale entre ces deux descriptions. Dans une perspective réaliste, on pourrait être tentés d'oublier ce truisme en affirmant que l'existence d'une relation de causalité ne dépend pas de la possibilité de l'établir ni même de la concevoir. Il se pourrait qu'il existe entre des événements mentaux et des événements physiques une relation de causalité que nous ne sommes pas encore en mesure de concevoir. Mais le réaliste affirme aussi que c'est la science qui peut connaître la réalité – et la connaissance scientifique repose sur la formalisation. Pour qu'une relation soit scientifique, il faut qu'elle soit formalisée. Avant de pouvoir dire que telle relation de causalité est indépendante de la façon dont elle a été établie, et même du simple fait qu'elle ait été établie, encore faut-il que cette relation ait été établie. Et pour qu'une relation de causalité puisse être établie entre deux événements, encore faut-il que ces deux événements puissent être décrits respectivement en des termes entre lesquels il est techniquement possible, logiquement sensé, d'écrire une relation formelle. Cela conduit à dire que deux événements ne peuvent entretenir une relation causale que s'ils appartiennent tous deux au même domaine de description, et par suite un événement physique ne peut être causé que par un événement physique :</p>
+            <div class="citation">
+                « [F]or any event to enter in a causal relation, it must be covered by a physical law and hence be part of the physical domain. » (Kim, 1998, p.172)
+            </div>
+            <p>C'est de là que découlent les difficultés qui préoccupent Kim, car comment penser la causalité mentale sans se rendre coupable de violation de la clôture causale du domaine physique ?</p>
+            <p>Kim considère de près le ‘cas' de Davidson. Selon le ‘monisme anomal' de Davidson, dit-il, les événements mentaux n'ont d'efficience causale qu'en tant qu'ils sont identiques à des événements physiques qui ont une efficience causale. Rappelons-nous les points principaux de la position de Davidson<sup><a href="#ref233" class="reference-link" id="r233">[233]</a></sup> vis-à-vis de la relation entre les événements mentaux et les événements physiques. Il faut, selon lui, rendre compatible l'absence de lois strictes entre le mental et le physique, essentielle à la liberté de l'action humaine, et l'interaction causale entre le mental et le physique qui est mise en jeu lors de l'action et de la perception. Au début de l'article ‘Mental Event', Davidson propose d'admettre une caractérisation de la distinction entre événements mentaux et événements physiques relative à la forme de description :</p>
+            <div class="citation">
+                « [A]n event is mental if and only if it has a mental description, or (the description operator not being primitive) if there is a mental open sentence true of that event alone. »
+            </div>
+            <p>Dès lors, la distinction entre événement mental et événement physique fait référence à une forme de description :</p>
+            <div class="citation">
+                « events are mental only as described. »
+            </div>
+            <p>Dans le cadre de la thèse du Monisme Anomal, certains événements peuvent recevoir une description physique et une description mentale, tandis que d'autres ne peuvent pas recevoir de description mentale ; tous les événements ne sont pas mentaux mais tous les événements sont physiques :</p>
+            <div class="citation">
+                « Anomalous monism … allows the possibility that not all events are mental, while insisting that all events are physical ».
+            </div>
+            <p>Il y a monisme parce que tout événement mental peut être identifié à un événement physique. Le mental n'est pas ‘autonome', les événements mentaux sont dépendants des événements physiques dans la mesure où toute différence mentale nécessite une différence physique :</p>
+            <div class="citation">
+                « [A]n object cannot alter in some mental respect without altering in some physical respect. »
+            </div>
+            <p>Les caractéristiques mentales ‘superviennent' sur les caractéristiques physiques. Il y a anomalie parce que si les relations de causalité entre événements sont indifférentes à la façon dont ils sont décrits, les lois sont, elles, des objets linguistiques, et les événements ne peuvent instancier une loi qu'en tant qu'ils sont décrits d'une certaine manière. Or la description mentale n'autorise pas l'écriture de lois mentales, de lois impliquant des concepts mentaux :</p>
+            <div class="citation">
+                « There is no strict laws at all on the basis of which we can predict and explain mental phenomena. »
+            </div>
+            <p>Il y a anomalie parce que les événements mentaux ne sont pas explicables par, ou réductibles à des événements physiques : ils sont supervenants, ils superviennent sur les événements physiques. La supervénience autorise l'identité mais interdit l'explication. Davidson concilie l'identité, c'est-à-dire le monisme, avec le non réductionnisme en disant qu'il est possible de savoir, d'avoir des raisons suffisantes pour soutenir qu'un événement mental est, en général, identique à un événement physique sans pouvoir produire une loi générale qui explique cette identité. Il est seulement possible, au cas par cas, parfois, de connaître l'identité d'un événement mental à un événement physique.</p>
+            <p>Le problème que pose la thèse de Davidson, selon Kim, provient de l'irréductibilité du mental au physique qu'elle contient, car cette irréductibilité empêche l'identification des propriétés mentales à des propriétés physiques qui permettrait de rendre le mental causalement efficace. La question de l'efficience causale est ultimement celle de l'efficience causale des propriétés. Kim propose de résoudre le problème par une réduction fonctionnelle des propriétés mentales</p>
+            <div class="citation">
+                « [P]hysical realizationism, via a functional reduction of mental properties, presents an opening for a possible accommodation of mentality within the causal structure of the physical world. » (Kim, 1998, p.174)
+            </div>
+            <p>Mais cette proposition ignore tout simplement l'argument de base de Davidson selon lequel les concepts mentaux et les concepts physiques appartiennent à des catégories différentes :</p>
+            <div class="citation">
+                « That there is a categorial difference between the mental and the physical is a commonplace. »
+            </div>
+            <p>Il se pourrait que le problème de la causation mentale tel que le pose Kim ne se pose que dans un cadre de pensée qui ne prend pas cette distinction conceptuelle au sérieux. Il n'y a aucun sens à parler de réduction entre des termes qui relèvent de catégories descriptives différentes, car une réduction est une explication et une explication est une mise en relation de termes au sein d'un certain univers de description. Mais c'est peut-être la manière dont Davidson lui-même expose le problème qui contribue à entretenir la confusion des catégories.</p>
+            <p>Car Davidson affirme qu'il faut sauver la relation de causalité entre mental et physique, que l'action et la perception en sont des illustrations. C'est de cette causalité supposée, jointe au Principe du Caractère Nomologique de la Causalité, selon lequel, lorsque des événements sont dans une relation de cause à effet, ils ont des descriptions qui instancient une loi, que découle la relation d'identité entre un événement mental et un événement physique :</p>
+            <div class="citation">
+                « Suppose m, a mental event, caused p, a physical event ; then under some description m and p instantiate a strict law. This law can only be physical... But if m falls under a physical law, it has a physical description ; which is to say it is a physical event. »
+            </div>
+            <p>Mais dans quel ‘jeu de langage' la perception, en tant qu'événement mental, qui a une description mentale, est-elle causée par un objet, ou l'intention est-elle cause d'une action ? Dans un jeu de langage où l'on peut parler de cause et d'effet sans être tenu d'écrire une relation formelle de causalité :</p>
+            <div class="citation">
+                « [T]here may be true general statements relating the mental and the physical, statements that have the logical form of a law ; but they are not lawlike (in a strong sense to be described). »
+            </div>
+            <p>Ce n'est pas dans un langage scientifique si à l'intérieur de celui-ci l'usage du concept de causalité est inséparable de l'écriture, au moins possible, d'une relation formelle. La causalité entre événement mental et événement physique peut être un fait ordinaire, attesté dans la pratique, sans pouvoir être justifié dans un langage scientifique. C'est ce que montre, me semble-t-il, la différence de catégorie entre descriptions mentale et physique. Si Kim et les autres réductionnistes ne voient pas cette différence de catégorie, c'est parce qu'ils confondent l'usage ordinaire du concept de causalité avec l'usage scientifique. Or c'est dans l'usage ordinaire que la causalité mentale est attestée, et c'est dans l'usage scientifique qu'elle est impossible à formaliser. Il n'y a pas de « problème de la causation mentale » ; il y a une confusion de langages.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Différence de catégorie === -->
+    <div class="capsule" id="capsule-category">
+        <div class="capsule-title">🧩 Différence de catégorie</div>
+        <div class="capsule-content">
+            <p>Il est important de souligner que la différence de catégorie entre descriptions mentale et physique n'est pas une différence de degré de précision ou de fiabilité. Ce n'est pas une différence empirique, mais une différence conceptuelle, logique. Comme le rappelle Wittgenstein, la douleur n'est pas un objet intérieur que l'on pourrait observer et décrire avec plus ou moins de précision ; elle est un comportement, une expression, une manière de vivre. De même, la croyance, l'intention, le désir ne sont pas des objets intérieurs que la science pourrait un jour décrire et expliquer. Ils sont des manières de se comporter, des façons de parler, des formes de vie. C'est cette différence de catégorie que les réductionnistes ignorent, et c'est cette ignorance qui rend leur projet impossible.</p>
+            <div class="citation">
+                « Ainsi voulons-nous toujours dire : Ce que signifie ‘douleur', nous le savons (à savoir : ceci) ; en conséquence la difficulté tient seulement à ce que nous ne pouvons justement pas constater avec certitude ce ‘ceci' chez autrui. Qu'ici l'on commence seulement à rechercher le concept de douleur, nous ne nous en apercevons pas. (p. 60) […] Même si nous pouvions souvent deviner les pensées d'un homme, et si nous disions que nous les connaissons, le seul critère qu'il pourrait y avoir à ce sujet, ce serait qu'il confirmât nos conjectures. Sauf à altérer entièrement le concept de ‘pensée'. (p.65) »
+            </div>
+            <p>La différence entre la description mentale et la description physique ne vient pas d'un défaut de la description, d'un manque d'information auquel il faudrait imputer la faillibilité de la description mentale. L'impossibilité de la loi est une impossibilité logique. L'impossibilité de réduire le mental au physique n'est pas une impossibilité empirique, c'est une impossibilité logique, conceptuelle ; et c'est bien, d'ailleurs, le message de Davidson :</p>
+            <div class="citation">
+                « [T]he possibility of such laws [linking the mental and the physical] would amount to changing the subject. By changing the subject I mean here : deciding not to accept the criterion of the mental in terms of the vocabulary of the propositional attitudes. »
+            </div>
+            <p>Ce qui apparaît de façon criante ici, et que le schème de la description physique nous incitait à oublier, est que toute description est faite par quelqu'un, renvoie à un domaine de description issu d'une situation. La différence de catégorie ne tient pas au fait que nous opérons dans le langage ordinaire et dans le langage scientifique, même si cela n'est pas sans rapport. Nous pouvons avoir des descriptions purement physiques dans le langage ordinaire, qu'il serait possible de mettre en relation causale avec une description physique énoncée dans le langage scientifique. Mais nous ne trouvons pas de description mentale dans le langage scientifique : la différence de catégorie et la différence de langage ne sont pas sans rapport. La différence de catégorie ne signifie pas qu'il existe deux descriptions différentes qui sont comme les deux pièces d'une même médaille, comme le suggère l'idée davidsonienne d'un événement tenant lieu de base ontologique, ‘substantielle', pouvant recevoir deux formes de descriptions. Les deux descriptions sont a priori sans commune mesure parce que la différence de catégorie est relative à l'indexicalité de la description mentale, elle renvoie à une différence phénoménale,</p>
+            <div class="citation">
+                « la classe des contenus subjectifs de l'expérience et la classe des formations objectivées qu'extrapolent les sciences de la nature. » (Bitbol, 2000, p.159)
+            </div>
+            <p>Et c'est cette indexicalité, apparemment inaliénable, qui fait que les descriptions mentales n'appartiennent pas à un langage scientifique.</p>
+            <p>Il y a donc un rapport entre, d'une part, la différence de catégorie des descriptions mentales et des descriptions physiques et, d'autre part, la différence de langage dans lequel elles sont produites, langage ordinaire et langage scientifique. Mais ce rapport, les promoteurs de la neurophénoménologie affirment qu'il n'est pas essentiel, que le contenu subjectif de l'expérience peut être objectivé. Les deux descriptions ne sont pas a priori les deux faces d'une même médaille ; pour qu'elles le soient, il faut trouver un moyen de les faire se rejoindre, il faut inventer une mesure commune. Et la neurophénoménologie propose une méthodologie d'intersubjectivation de l'expérience vécue qui permettrait de rendre commensurables les descriptions mentales et les descriptions physiques, de créer une circulation épistémique entre les deux. Cette méthodologie qui se présente elle-même comme un programme de naturalisation de la phénoménologie sera largement explicitée par la suite. Mais avant cela, pour comprendre la place qu'occupent les paragraphes qui vont suivre dans le cheminement nous conduisant vers la présentation de cette neurophénoménologie, je pense nécessaires certaines précisions sur le cadre de pensée dans lequel ce programme se conçoit.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Phénoménologisation de l'objectivité === -->
+    <div class="capsule" id="capsule-phenomenologisation">
+        <div class="capsule-title">🌱 Phénoménologisation de l'objectivité</div>
+        <div class="capsule-content">
+            <p>Il peut être commode pour saisir ce qui fait la profonde originalité de la neurophénoménologie par rapport aux multiples autres entreprises de naturalisation de l'esprit de la penser sous une forme dédoublée, une entreprise à deux branches, neuroscientifique et phénoménologique, qui doivent culminer dans l'instauration d'une circulation édifiante pour chacune d'elles et créatrice d'une cohérence pour les deux prises ensemble. Il s'agira alors de converger vers un échange articulé des formes descriptives permettant une naturalisation de l'esprit sans réduction, non pas seulement en proposant une procédure d'objectivation de la subjectivité, qui sera détaillée par la suite, mais aussi, c'est ce que nous allons voir, une phénoménologisation de l'objectivité. La convergence n'est pas recherchée, comme il est d'usage dans une visée réductive, dans une quelconque procédure visant à abstraire de leur conditions de réalisation les descriptions de l'expérience, les descriptions en première personne, mais en s'attachant à concrétiser les conditions de la connaissance en général, et la connaissance objective aussi. Rendre commensurables, articulables, les compte-rendus en première et en troisième personne ne demande pas seulement que le subjectif soit rendu objectif, mais que l'objectif soit rendu à ses conditions expérientielles de réalisation. C'est dans l'expérience, l'expérience de la connaissance que les deux descriptions, les deux faces, peuvent être mises en rapport.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'erreur A-non-B === -->
+    <div class="capsule" id="capsule-erreur">
+        <div class="capsule-title">🔍 L'erreur A‑non‑B</div>
+        <div class="capsule-content">
+            <p>Nous plongeons ici au cœur d'un exemple concret. Une expérience classique de la psychologie du développement est la tâche appelée ‘erreur A-non-B', qui avait été étudiée par Piaget lui-même, et au cours de laquelle l'enfant doit choisir entre deux cibles A et B. Les cibles A et B sont deux compartiments d'une boîte homogène recouverts chacun d'un couvercle identique. Devant l'enfant et hors de son atteinte, un jouet est caché sous le couvercle A, puis l'enfant est invité, par un signal de l'expérimentateur, à le récupérer. Après plusieurs essais identiques, devant l'enfant et hors de son atteinte, le jouet est caché sous le couvercle B. Lorsque la boîte est présentée à l'enfant, quatre-vingt pour cent des enfants de neuf mois retournent vers le couvercle A. L'interprétation de Piaget était que l'enfant de cet âge ne possède encore qu'une connaissance partielle de l'objet relative au degré de développement de son système moteur. L'enfant devant lequel l'objet a été placé en B, le cherche pourtant en A, là où il l'a trouvé les fois précédentes,</p>
+            <div class="citation">
+                « sans tenir compte de ses déplacements successifs comme si chaque objet était lié à une situation d'ensemble et ne constituait pas un mobile indépendant » (Piaget, 1964, p.25),
+            </div>
+            <p>« là où son action a réussi une première fois et sans s'occuper des déplacements successifs de l'objet qu'il a pourtant perçus en les suivant avec attention ... la permanence de l'objet est ainsi liée de près à sa localisation dans l'espace, et, comme on le voit, celle-ci dépend elle-même de la construction du ‘groupe des déplacements' » (Piaget, 1950/1974, p.25). Le développement des méthodes de mesure de l'attention par l'insistance du regard, ‘violation expectation', a servi d'assise à la thèse d'une inadéquation entre les ressources conceptuelles et les aptitudes motrices ; l'expérience réalisée avec ces méthodes-là sur des enfants plus jeunes étaient dites montrer que les enfants s'attendent à ce que l'objet se trouve où il a été effectivement placé, c'est-à-dire en B<sup><a href="#ref237" class="reference-link" id="r237">[237]</a></sup>.</p>
+            <p>Mais ce qui alimente la controverse et suscite des interprétations concurrentes, voire conflictuelles, est que si les résultats de l'expérience sont stables dans la version canonique de la procédure, de légères modifications de celle-ci peuvent suffire à les perturber :</p>
+            <div class="citation">
+                « Nearly every aspect of the event matters : the visual properties of the hiding locations, including the distinctiveness, distance, number, and transparency of the covers… the delay between hiding and search … whether search involves reaching or just looking … whether there are landmarks in the environment … » (Thelen et al., 2001, p.3)
+            </div>
+            <p>Comment rendre compte d'une telle sensibilité au contexte ? En dehors de l'explication par l'existence d'une connaissance, partiellement acquise ou innée, différentes propositions ont été séparément exploitées, notamment : une représentation égocentrique de l'espace ou un déficit de mémorisation ajouté à une incapacité à inhiber une récurrence motrice. La réponse fournie par Thelen est que ces différentes propositions ne rendent compte que partiellement de la pluralité des paramètres qui se sont montrés influents. La solution que constitue la modélisation dynamique est de prendre en considération en même temps, par un processus de couplage, la perception, le mouvement et la mémoire, sans les poser comme des mécanismes séparés :</p>
+            <div class="citation">
+                « Infants indeed sometimes act as though their responses are egocentric or as though they lack memory or inhibition. But they act that way because of the coupled interactions of the very same dynamic processes that make them appear to sometimes ‘know' where the object was hidden » (Thelen et al., 2001, p.4) ;
+            </div>
+            <p>et c'est aussi et surtout de ne plus ‘prendre au pied de la lettre', en cherchant à l'expliquer, l'interprétation que l'observateur donne du comportement en termes de réussite ou d'échec, de savoir ou de non savoir.</p>
+            <p>Le comportement qui est qualifié d'erroné et celui qui est vu comme un succès de résolution d'un problème ne relèvent pas de deux mécanismes différents, l'un causé par une structure mentale, l'autre non, ou l'un inscrit dans une représentation égocentrique, l'autre non, ou l'un utilisant des systèmes de mémorisation et d'inhibition, l'autre non. C'est un même processus dynamique de couplage qui est à l'œuvre et qui fait émerger un comportement différent parce qu'il implique des paramètres qui ont changé, et qu'en outre, une non-linéarité de l'interaction peut rendre la dynamique du processus extrêmement sensible aux petites variations des conditions de l'expérience :</p>
+            <div class="citation">
+                « A foundational assumption of our theory and model is that both the error and correct reaching emerge from the coupled dynamics of looking, planning, reaching, and remembering within the particular context of the task : repeating a novel and confusing reaching action » (Thelen et al., 2001, p.5)
+            </div>
+            <p>Il est intriguant que des enfants plus âgés agissent comme s'ils ne savaient pas ce que des enfants plus jeunes savent déjà lorsque les comportements ne sont pas vus en tant que tels, mais seulement comme une erreur ou une réussite. Lorsqu'ils sont vus comme des comportements et seulement des comportements, et non pas comme des modes de résolution d'un problème, force est de constater que ce sont des comportements différents, qui se produisent dans des conditions différentes, et qu'ils ne sont pas en eux-mêmes comparables :</p>
+            <div class="citation">
+                « Neither reaching nor looking is a better measure of the infant mind ; both are very revealing windows into the complex coupled dynamics that produce goal-directed behavior. » (Thelen et al., 2001, p.8)
+            </div>
+            <p>La question qui se pose alors est de comprendre pourquoi, dans telle situation, tel comportement se manifeste, et dans telle autre situation, tel autre comportement.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Modélisation dynamique === -->
+    <div class="capsule" id="capsule-modelisation">
+        <div class="capsule-title">🌀 Modélisation dynamique</div>
+        <div class="capsule-content">
+            <p>La modélisation s'adresse au cas des enfants dotés de capacités motrices. Mais cette spécificité ne réduit pas la portée du message épistémologique de l'approche théorico-expérimentale qui est explorée. Il n'y a pas de différence essentielle entre la réaction par le geste et celle par le regard :</p>
+            <div class="citation">
+                « [I]n a very real sense, looking at or away from an event display is a motor act integrating attention, vision, and memory processes just as much as reaching toward one place or another. The motor fields are different, but the activities are formally identical and should be captured by the same class of dynamic equations. »
+            </div>
+            <p>Le modèle utilisé pour représenter le mouvement est un modèle de champ dynamique dont les dimensions sont des paramètres de mouvement correspondant à un mouvement d'atteinte de la cible de droite ou de gauche (A ou B) avec une transition continue de l'une à l'autre. L'hypothèse de la modélisation est que le mouvement dépend de certains paramètres qui caractérisent le contexte, qui peuvent être tenus pour le caractériser du fait que des expériences ont montré que leur modification pouvait avoir un effet sur le comportement. Les paramètres qui influencent la direction de la saisie vers A ou vers B, appelés ‘paramètres d'input', sont : l'ambiguïté de la tâche, relative à la ressemblance et la proximité des sites A et B, la force du signal utilisé par l'expérimentateur pour capter l'attention de l'enfant, le délai entre le signal et la présentation de la cible, l'imprégnation du comportement précédent, qui tend à être répété. Cette hypothèse trouve son écriture théorique dans l'intégration en temps réel des paramètres d'input en paramètres de mouvement représentant le comportement. Le champ représentant le mouvement évolue ainsi continûment sous l'influence de trois grandeurs dynamiques couplées, les trois paramètres d'input mentionnés, qui représentent l'influence du contexte. Différentes fonctions sont définies pour gouverner l'évolution temporelle des différents composants du modèle et une fonction de couplage traduit l'influence réciproque des différents termes ainsi que l'influence en retour du champ sur ses composants.</p>
+            <p>Toute une série de simulations sont réalisées en variant les valeurs des paramètres de façon à modéliser différentes situations de réalisation de la tâche expérimentale. L'ordre de grandeur des paramètres, ceux codant pour les capacités motrices et ceux codant pour les conditions de la tâche, est établie de façon à ce que les résultats de l'expérience canonique soient retrouvés ; ensuite la valeur de certains paramètres seulement est modifiée, d'une part, pour simuler des modifications par rapport à la procédure expérimentale classique, d'autre part pour faire des prédictions. Le modèle permet de retrouver, selon les auteurs, de nombreux résultats et de rendre compte des variations des comportements en fonction du contexte, et ce sans qu'il faille invoquer des représentations de l'objet ou d'autres ‘structures mentales' avec la relation causale, toujours un peu mystérieuse, qui les accompagne. La représentation de la décision de se diriger vers une cible ou vers une autre n'est rien d'autre ici que la simulation de l'émergence d'un certain état d'activation stabilisé du champ. Le comportement quel qu'il soit, dirigé vers une cible ou vers une autre, est toujours le résultat émergent d'une dynamique de couplage :</p>
+            <div class="citation">
+                « [T]he infants' behavior of ‘knowing' or ‘not-knowing' to go to the ‘correct' target is emergent from the complex and interacting processes of looking, reaching, and remembering integrated within a motor decision field. » (Thelen et al., 2001, p.27)
+            </div>
+            <p>La disparité des résultats qui ont été obtenus lors des expériences devient tout à fait cohérente dès lors que le comportement n'est plus expliqué par l'existence d'une cause déterminée, dont on ne comprend pas pourquoi elle serait efficace dans certains cas et pas dans d'autres, mais décrit comme un processus émergent d'une dynamique de couplage impliquant des paramètres qui sont modifiés d'une situation à l'autre. Il apparaît aussi clairement que la description du comportement en termes de réussite ou d'erreur n'a de sens que pour l'observateur et de son point de vue mais n'a plus aucune pertinence lorsqu'il s'agit de comprendre ce qu'il arrive au système lui-même. L'approche participative incarnée par cette modélisation de la tâche ‘A-non-B' n'attribue pas de signification extrinsèque au comportement et décrit sa réalisation en temps réel : le temps réel d'une rencontre avec un environnement, caractérisé de manière contextuelle, et d'une modification continue du système dans l'expérience de cette rencontre.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Et l'énaction ? === -->
+    <div class="capsule" id="capsule-enaction">
+        <div class="capsule-title">🌿 Et l'énaction ?</div>
+        <div class="capsule-content">
+            <p>Il pourrait sembler qu'eu égard au problème général de la représentation, dans lequel s'inscrit la présentation de la théorie de l'énaction, la nature extrêmement spécialisée de la question à laquelle les travaux qui viennent d'être décrits sont consacrés rend déplacée la longueur de l'exposé que j'en ai donné. Je vais donc expliciter les deux raisons principales pour lesquelles, au contraire, cet exposé me paraît légitime.</p>
+            <p>La première raison est relative au travail de Piaget. La théorie de l'origine sensori-motrice qu'a proposée Piaget en se basant sur l'étude expérimentale du comportement des jeunes enfants joue un rôle de référence pour la théorie de l'énaction. Cette théorie a été reconnue par Varela comme une source d'inspiration et d'influence extrêmement féconde, et nous avons vu que, non seulement des idées essentielles à la théorie Piaget et à celle de l'énaction se répondent, mais plusieurs des concepts qui sont fondamentaux dans l'exposé piagétien se retrouvent tels quels dans la théorie de l'énaction. Quelques rappels. Dans les deux théories, la connaissance est le résultat d'un processus – et c'est un processus d'équilibration, de stabilisation de structures évolutives. L'acquisition de nouvelle connaissance correspond à une transformation durable de structure existante, sous l'effet d'une perturbation provoquée par une expérience sensori-motrice. C'est cette transformation qui permet l'équilibration, la stabilisation du système cognitif. Le procédé d'accommodation prend la forme dans l'énaction de la transformation de la structure physique comme procédé de réponse à des perturbations menaçant le maintien de l'identité de l'organisme. La connaissance d'objet, c'est-à-dire l'existence et l'identité d'objets, est le résultat d'un processus d'objectivation de l'environnement, posé a priori comme simple source de perturbation. La distinction objectivée entre un monde d'objets extérieur et un ‘soi-même' émerge de ce processus de stabilisation enraciné dans l'expérience sensori-motrice.</p>
+            <p>La théorie de Piaget reposait sur des expériences avec les enfants montrant, selon lui, que le développement de la connaissance est attaché au développement des aptitudes sensori-motrices. Mais ces expériences se sont vues retirer leur force significative par des études critiques menées avec des enfants sans capacités sensori-motrices et exprimant pourtant déjà une connaissance des objets. Si la conclusion doit être, comme l'affirment les critiques de Piaget, qu'il y a une connaissance des objets indépendante de et antérieure à toute expérience sensori-motrice, il semble que l'objection touche la théorie de l'énaction tout autant que celle de Piaget. C'est pourquoi la controverse autour de cette question de développement cognitif des enfants, et les répliques faites aux ‘nativistes' méritent que l'on s'y attarde. Il est apparu, avec le travail de Thelen, que si les expériences utilisant une mesure de l'attention visuelle des enfants qui ne sont pas encore doués de capacités motrices ont pu servir à la critique de la théorie piagétienne de l'origine sensori-motrice de la connaissance, c'est parce qu'elles sont interprétées dans un cadre conceptuel bien particulier, possiblement partagé par les empiristes, qui appréhende la connaissance en termes de représentation. La simple question de savoir si le concept d'objet ou tel aspect de ce concept est inné ou acquis ne se pose que dans un cadre de pensée représentationniste. Le problème est que dans ce cadre-là, de nombreux résultats d'expérience rentrent en contradiction les uns avec les autres sans qu'un argument décisif en faveur de l'une ou l'autre thèse ne soit capable de les unifier. Le débat sans fin n'est pas sans rappeler celui qui unit les réalistes et les anti-réalistes. La solution proposée par Thelen est de même nature que celle qui répond à ce débat réaliste-anti-réaliste : un changement de cadre conceptuel, qui met en évidence que la question faisant controverse n'a pas de sens per se.</p>
+            <p>Le cadre conceptuel dans lequel se développe le travail de Thelen se distingue en ceci que la question de savoir si telle connaissance (tel aspect du concept d'objet) est déjà ou pas possédée par les enfants de tel ou tel âge, ne peut tout simplement pas se poser. Il n'y a rien de tel qu'un concept d'objet défini a priori et qui pourrait être représenté par une tâche à accomplir, ou plus précisément, dont l'existence mentale serait révélée par un certain comportement, identifié par l'expérimentateur comme l'exécution réussie d'une certaine tâche. Rejeter l'idée d'un concept défini a priori, c'est rejeter l'interprétation du comportement en termes d'expression ou pas de la connaissance d'un concept, en termes de réussite ou d'erreur – ou tout au moins, mettre en évidence que cette interprétation est une attribution de sens qui relève du domaine cognitif de l'observateur, mais qui ne nous aide pas à comprendre pourquoi tel comportement est produit dans telle situation et tel autre comportement dans telle autre situation. Lorsque cette attribution de sens n'impose plus sa grille catégorielle, tous les comportements peuvent être vus comme relevant d'un seul et même processus, dont la sensibilité aux caractéristiques contextuelles qui différencient les situations peut rendre compte de la variations des comportements. Il devient donc essentiel de se rendre attentif à ce qui distingue les situations les unes des autres et d'avoir les moyens de rendre compte de l'influence de ces caractéristiques contextuelles sur les comportements. L'analyse détaillée des différentes expériences réalisées dans des conditions variées et l'usage de la théorie dynamique permet à Thelen de ‘réhabiliter' l'interprétation piagétienne de l'origine sensori-motrice de la connaissance, en la radicalisant.</p>
+            <p>Et c'est justement cette radicalisation qui constitue la seconde justification de la longueur de l'exposé. Car elle exprime une position critique vis-à-vis de la pensée de Piaget qui est aussi celle de la théorie de l'énaction. C'est dans les mêmes limites que Thelen et Varela reconnaissent l'héritage piagétien. Piaget a posé les bases d'une conception de la cognition incarnée : pour Thelen,</p>
+            <div class="citation">
+                « it was the seminal developmental theorist Jean Piaget who made developmentalists consider another approach : that thought grows from action and that activity is the engine of change<sup><a href="#ref238" class="reference-link" id="r238">[238]</a></sup> » ;
+            </div>
+            <p>pour Varela, à propos de l'idée selon laquelle « cognitive structures emerge from the kinds of recurrent sensorimotor patterns that enable action to be perceptually guided » il ajoute :</p>
+            <div class="citation">
+                « the pioneer and giant in this area is Jean Piaget » (Varela et al., 1991, p.176)
+            </div>
+            <p>Mais Piaget est resté pris, selon tous deux, dans un cadre de pensée dualiste où le système cognitif évolue dans un monde prédéterminé, et où la connaissance, bien qu'enracinée dans l'expérience sensori-motrice, doit en être une représentation. Selon Varela :</p>
+            <div class="citation">
+                « Piaget, however, as a theorist, never seems to have doubted the existence of a pregiven world and an independent knower with a pregiven logical endpoint for cognitive development. » (Varela et al., 1991, p.176) ;
+            </div>
+            <p>et selon Thelen :</p>
+            <div class="citation">
+                « Piaget made several assumptions that may be challenged by a dynamic cognition – first, that there are logical relations in the world to be discovered, and second, that people symbolically represent these relations in mind through a series of propositional structures. » (Thelen, 1995, p.73)
+            </div>
+            <p>La radicalisation de la théorie de l'origine sensori-motrice de la connaissance tient au cadre conceptuel résolument non-représentationniste à l'intérieur duquel se développe le travail de Thelen et à la nature absolument incarnée de la cognition que ce travail thématise. Non représentationnisme et cognition incarnée sont aussi les maîtres mots de la théorie de l'énaction. Au-delà de la réhabilitation de la thèse piagétienne de l'origine sensori-motrice de la connaissance, sur laquelle s'appuie la notion connaissance énactive, l'étude dynamique de la cognition développée par Thelen présente ainsi l'intérêt de fournir un exemple précis et performant de modélisation dans des termes qui sont ceux de l'énaction, et par l'usage des mêmes outils, à savoir ceux de la théorie des systèmes dynamiques.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Une réserve essentielle === -->
+    <div class="capsule" id="capsule-reserve">
+        <div class="capsule-title">⚠️ Une réserve essentielle : sur le dualisme</div>
+        <div class="capsule-content">
+            <p>Il y a toutefois une réserve essentielle qui me paraît devoir être faite quant à la concordance des perspectives respectives de la modélisation de Thelen et de la théorie de l'énaction proposée par Varela. Cette réserve concerne la façon dont est envisagée la question du dualisme dans chacune de ces perspectives. Pour ce qui est du rejet du dualisme relatif au schéma représentationniste, un système cognitif et un monde pré-définis indépendamment l'un de l'autre, et reliés, secondairement et de façon plus ou moins accidentelle, par une relation de représentation, l'harmonie est totale. Pour ce qui est du dualisme relatif à une distinction entre processus conceptuel et processus perceptuel, là encore les convictions sont les mêmes. Mais, il semble que pour Thelen, la solution qu'apporte la notion de cognition incarnée au dualisme entre processus conceptuel et processus perceptuel soit identifiée à une solution à la formulation plus générale du dualisme opposant le mental et le physique. La thèse de Thelen dénonce l'invocation de structures mentales comme cause des processus physiques qui génèrent le mouvement, ou comme centre de traitement des informations fournies par les processus physiques qui génèrent la sensation. Dans la mesure où la modélisation qui est mise en œuvre revendique une application qui va au-delà du cas de la cognition enfantine, tout ce que peut signifier la notion de mental pourra être pris en charge par le modèle dynamique et intégratif qui rend compte du comportement. L'ambition de cette modélisation est de trouver un langage unique qui permette de décrire les événements mentaux, cérébraux et corporels dans le but d'éliminer ‘enfin' tout dualisme invoquant le mental :</p>
+            <div class="citation">
+                « We cast the mental events involved in perception, planning, deciding, and remembering in the analogic language of dynamics. This situates cognition within the same continuous, time-based, and nonlinear processes as those involved in bodily movement, and in the large-scale processes in the nervous system. Finding a common language for behavior, body and brain is a first step for banishing the specter of dualism once and for all » (Thelen et al., 1995, p.2)
+            </div>
+            <p>Le langage de la dynamique comme langage unique de description des processus par lesquels nous en arrivons à connaître le monde tel que nous le connaissons n'est pas le point final vers lequel nous conduit l'approche énactive de la cognition. Nul ne niera que la connaissance de la réalité passe, dans une certaine mesure au moins, par l'expérience, implique nos capacités de perception et engage des outils de pensée dont l'histoire nous a fait les héritiers. Une conception représentationniste de la connaissance soutient que le sujet de la connaissance peut néanmoins s'abstraire de la particularité des conditions perceptives et historiques dans lesquelles il est situé, suffisamment pour que la connaissance qu'il produit puisse en être indépendante. Ce en quoi consiste une connaissance ne dépend pas des conditions dans lesquelles elle est élaborée. Une connaissance est une représentation ; elle est déterminée par ce dont elle est une représentation. La théorie de l'énaction est une théorie non représentationniste de la cognition. Elle affirme que l'objectivité, les objets et relations qui constituent la réalité dans laquelle nous vivons et que nous partageons, n'est pas découverte par des êtres capables d'échapper à l'idiosyncrasie de leurs conditions physique et historique d'existence, elle est déterminée par ces conditions. Elle affirme cela par le biais d'une conception dynamique du système nerveux qui identifie les structures cognitives avec des états émergents et stabilisés d'un système autonome, caractérisé par une organisation, incarnée dans une structure malléable soumise à des perturbations que des variations de structures durables permettent de compenser. Le phénomène qui est ainsi décrit est un phénomène physique, un phénomène observable, l'activité du système nerveux, un phénomène qui peut faire l'objet d'un jugement intersubjectif. Mais ces structures cognitives sont-elles des connaissances, connaissances de, connaissances à propos de quelque chose ?</p>
+            <p>Dans une perspective représentationniste, elles seraient tenues pour l'être du fait qu'elles n'existent qu'en tant que représentation de quelque chose. Dans cette perspective, il est facilement oublié que l'attribution de connaissance participe d'un jeu de langage qui fait appel à une participation de la personne, de l'être, sur lequel porte l'attribution. Cela s'oublie parce que cette participation, et l'expérience dont elle témoigne, ne peuvent rien ajouter à notre connaissance de ce qu'est la connaissance : la seule chose qui est pertinente est de savoir comment sont représentées les propriétés indépendantes de la réalité, et cela ne peut pas dépendre d'une participation, forcément engagée dans une forme de vie, d'une expérience nécessairement située dans un contexte sensori-moteur et culturel. Dans la perspective énactive, une structure cognitive n'est pas une représentation de quelque chose, elle n'est pas déterminée par les propriétés de la réalité, car la réalité n'est pas antérieure au processus cognitif : l'ensemble des objets et des relations qui constituent la réalité que nous partageons est le résultat émergent d'un processus enraciné dans une dynamique sensori-motrice. La question est alors de savoir si le langage de la dynamique suffit à rendre compte de ce processus, processus de connaissance de la réalité, en tant qu'ensemble d'objets et de relations dont nous faisons une expérience intersubjective et qui constituent les significations du langage que nous partageons ; si la dynamique sensori-motrice par laquelle émergent des structures cognitives suffit à rendre compte de la connaissance de la réalité en tant qu'aptitude à participer à un jeu de langage intra-communautaire. Le simple fait de poser la question laisse déjà pressentir que la réponse ne sera pas positive. Et puisque j'ai commencé par une réserve concernant l'abolition intégrale du dualisme, il doit donc y avoir un rapport entre une certaine forme de dualisme et la distinction entre structure cognitive et connaissance. C'est effectivement l'idée que je veux exposer dans les paragraphes qui vont suivre, en montrant, en outre, que ce rapport est un aspect important de l'approche énactive et même un trait spécifique à cette approche. Je vais, dans cette optique, essayer de montrer assez concrètement où se situe le point de divergence entre l'usage épistémique qui est fait des outils de la dynamique par la plupart des dynamiciens et l'usage qui en est fait dans la perspective de l'énaction.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-4 Neurodynamique et énaction === -->
+    <div class="capsule" id="capsule-neurodynamique">
+        <div class="capsule-title">🧠 A‑4 Neurodynamique et énaction</div>
+        <div class="capsule-content">
+            <p><strong>A‑4‑1 L'activité spatio-temporelle du système neuronal</strong></p>
+            <p><strong>Synchronisations</strong></p>
+            <p>Ce qui est décrit grâce à la théorie des systèmes dynamiques est le phénomène résultant de l'interaction entre un système cognitif, en tant que système sensori-moteur, et un environnement, en tant que source de perturbations de l'évolution de ce système sensori-moteur. Cet instrument a permis à Varela d'engager une série de travaux extrêmement féconds sur l'activité neuronale, en particulier sur les phénomènes de synchronisation à grande échelle qui accompagnent les processus cognitifs. Ces travaux, qui seront présentés en détail dans les sections suivantes (A‑4.1, A‑4.2, A‑4.3), montrent comment l'activité neuronale peut être décrite comme un système dynamique complexe, dont les états globaux émergent de l'interaction de millions de neurones couplés. Ils montrent aussi comment cette activité dynamique est corrélée à l'expérience phénoménale, et comment il est possible d'articuler la description en troisième personne de l'activité cérébrale avec la description en première personne de l'expérience vécue. C'est cette articulation qui constitue le cœur du programme de la neurophénoménologie, et qui fait de l'énaction une approche véritablement intégrative de la cognition.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref231"><strong>231.</strong> J. Kim, <em>Mind in a Physical World</em>, 1998.</p>
+            <p id="ref232"><strong>232.</strong> J. Fodor, « Making Mind Matter More », <em>A theory of content and other essays</em>, Cambridge: MIT Press, 1990, p.156.</p>
+            <p id="ref233"><strong>233.</strong> D. Davidson, « Mental Events », in <em>Essays on Actions and Events</em>, 1980.</p>
+            <p id="ref237"><strong>237.</strong> Thelen et al., 2001.</p>
+            <p id="ref238"><strong>238.</strong> Thelen, 1995, p.72.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A3_2.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A4_1.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

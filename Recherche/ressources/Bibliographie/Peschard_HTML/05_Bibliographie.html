@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – Bibliographie</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .ref-list {
+            list-style: none;
+            padding: 0;
+        }
+        .ref-list li {
+            margin-bottom: 0.6rem;
+            padding-left: 0.5rem;
+        }
+        .ref-list li strong {
+            font-weight: 700;
+            color: #2a523a;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+        .index-entry {
+            display: inline-block;
+            width: 12%;
+            font-weight: 600;
+            color: #2a523a;
+        }
+        .index-pages {
+            color: #2c3e2c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Bibliographie</h1>
+    <div class="sub">Pages 511‑522</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-biblio">📚 Bibliographie</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-index">📑 Index des noms</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="06_Index.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : BIBLIOGRAPHIE === -->
+    <div class="capsule" id="capsule-biblio">
+        <div class="capsule-title">📚 Bibliographie</div>
+        <div class="capsule-content">
+
+            <ul class="ref-list">
+                <li><strong>1.</strong> K. Akins, (2001), <em>Of Sensory Systems and the 'Aboutness' of Mental States</em>. In Betchel et al. (ed.), pp.369-394.</li>
+                <li><strong>2.</strong> J. Anderson and E. Rosenfeld, (1998), <em>Neurocomputing: foundations of research</em>. Cambridge, MA: MIT Press.</li>
+                <li><strong>3.</strong> D. Andler (dir), (1992), <em>Introduction aux sciences cognitives</em>, Paris : Gallimard.</li>
+                <li><strong>4.</strong> Aristote, (1965), <em>Éthique à Nicomaque</em>, Trad., préface et notes par Jean Voiquin, Paris : Garnier-Flammarion.</li>
+                <li><strong>5.</strong> Aristote, (1992), <em>Éthique à Nicomaque</em>, Paris : Flammarion.</li>
+                <li><strong>6.</strong> H. Atlan, (1986), <em>A tort et à raison, Intercritique du mythe et de la science</em>, Seuil, Paris.</li>
+                <li><strong>7.</strong> P. Aubenque, (1993), <em>La prudence chez Aristote</em>, Paris : P.U.F.</li>
+                <li><strong>8.</strong> R. Baillargeon &amp; M. Graber, (1988), Evidence of a location memory in a 8-month-old infants in a non-search A-non-B task. <em>Developmental Psychology</em>, 24, 502-511.</li>
+                <li><strong>9.</strong> R. Baillargeon, (1993), The object concept revisited: New directions in the investigation of infants physical knowledge, in C.E. Granrud (Ed.), <em>Visual perception and cognition in infancy</em>, Hillsdale, N.J.:Erlbaum, 265-316.</li>
+                <li><strong>10.</strong> R. Barbaras, (1994), <em>La perception : Essai sur le sensible</em>, Paris : Hatier.</li>
+                <li><strong>11.</strong> R.D. Beer, (1995a), A dynamical systems perspective on agent-environment interaction. <em>Artificial Intelligence</em> 72, pp. 173-215.</li>
+                <li><strong>12.</strong> R.D. Beer, (1995b), Computational and dynamical languages for autonomous agents. In <em>Mind as motion</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>13.</strong> R. D. Beer, (2001), Dynamical approaches to cognitive science. <em>Trends in cognitive science</em>, 4, pp.91-99.</li>
+                <li><strong>14.</strong> J-M. Besnier, (1999), <em>Réflexions sur la sagesse</em>, Le Pommier.</li>
+                <li><strong>15.</strong> N.E. Berthier, S. Poirer, M.A. Novak &amp; R.K. Clifton, (2000), Where's the ball? Two- and three-years-olds reason about unseen events. <em>Developmental Psychology</em>, 36, 394-401.</li>
+                <li><strong>16.</strong> W. Betchel and A. Abrahamsen, (1991), <em>Connectionism and the mind</em>, Oxford : Blackwell.</li>
+                <li><strong>17.</strong> W. Betchel, (2001), Representations : From Neural Systems to Cognitive Systems. In Betchel et al. (eds), pp. 332-348.</li>
+                <li><strong>18.</strong> W. Betchel, P. Mandik, J. Mundale and R.S. Stufflebeam, (2001), <em>Philosophy and the neurosciences. A Reader</em>. Malden, MA: Blackwell.</li>
+                <li><strong>19.</strong> M. Bitbol, (1998), <em>L'aveuglante proximité du réel</em>, Paris : Flammarion.</li>
+                <li><strong>20.</strong> M. Bitbol, (2000), <em>Physique et philosophie de l'esprit</em>, Paris : Flammarion.</li>
+                <li><strong>21.</strong> M. Bitbol, <em>L'unité organique des opérateurs de connaissance. La mécanique quantique, Kant, et le Madhyamaka</em>. À paraître dans M. Cazenave (ed.), <em>L'unité de la connaissance</em>, Dervy, 2005.</li>
+                <li><strong>22.</strong> N. Block, ed., (1980), <em>Readings in the Philosophy of Psychology</em>, Cambridge, MA: Harvard University Press.</li>
+                <li><strong>23.</strong> R. Boudon, (1990), <em>L'art de se persuader</em>, Fayard, coll. Essais.</li>
+                <li><strong>24.</strong> P. Bourdieu, (2001), <em>Science de la science et réflexivité</em>, Paris : Raisons d'Agir.</li>
+                <li><strong>25.</strong> J. Bouveresse, (1987), <em>La force de la règle</em>, Paris : Les éditions de minuit.</li>
+                <li><strong>26.</strong> J. Bouveresse, (1996), <em>La demande philosophique</em>, Paris : L'éclat.</li>
+                <li><strong>27.</strong> J. Bouveresse, (1998), <em>Le philosophe et le réel</em>, Paris : Hachette.</li>
+                <li><strong>28.</strong> J. Bouveresse, S. Laugier, J.J. Rosat (dir), (2002), <em>Wittgenstein, Dernières pensées</em>. Marseille : Agone.</li>
+                <li><strong>29.</strong> J.D. Brandsford, A.L. Brown &amp; R.R. Cocking (Eds), (1999), <em>How people learn: Brain, mind, experience and school</em>. Washington DC: National Academy Press, p.89.</li>
+                <li><strong>30.</strong> S.L. Bressler and J.A.S. Kelso, (2001), Cortical coordination dynamics and cognition, <em>Trends Cogn. Sci.</em>, 5, 26-36.</li>
+                <li><strong>31.</strong> M.F. Burnyeat, (1980), Aristotle on learning to be good. In <em>Essays on Aristotle's Ethics</em>, A. Oksenberg Rorty (ed.), Berkeley, CA: University of California Press.</li>
+                <li><strong>32.</strong> M. Callon, P. Lascoumes et Y. Barthe, (2001), <em>Agir dans un monde incertain</em>, Paris : Ed. du Seuil.</li>
+                <li><strong>33.</strong> G. Canguilhem, (1992), <em>La connaissance de la vie</em>, Paris: Vrin.</li>
+                <li><strong>34.</strong> Ch. Chauviré, S. Laugier, J.J. Rosat, (ed.), (2001), <em>Wittgenstein : les mots de l'esprit. Philosophie de la psychologie</em>. Paris : Vrin.</li>
+                <li><strong>35.</strong> R. Carnap, (1928), <em>The logical structure of the world</em>. Berkeley and Los Angeles: University of California Press, 1967.</li>
+                <li><strong>36.</strong> R. Carnap, (1963), Intellectual Biography. In Schilpp (1963), pp.3-84.</li>
+                <li><strong>37.</strong> R. Carnap, (1978), Psychology in physical language. In <em>Logical positivism</em>. A.J. Ayer (ed.), Westood, Conn.: Greenwood Press.</li>
+                <li><strong>38.</strong> S. Cavell, (1979), <em>Les voix de la raison</em>, Paris : Édition du Seuil.</li>
+                <li><strong>39.</strong> S. Cavell, (1969/1976), <em>Must we mean what we say ?</em>, Cambridge, MA: Cambridge University Press.</li>
+                <li><strong>40.</strong> A. Chalmers, (1987), <em>Qu'est-ce que la science</em>. Paris : La Découverte.</li>
+                <li><strong>41.</strong> D. Chalmers, (1995), Facing up to the problem of consciousness. <em>Journal of Consciousness Studies</em>, 2(3), 200-219.</li>
+                <li><strong>42.</strong> D. Chalmers (ed.), (2002), <em>Philosophy of Mind</em>, Oxford: Oxford University Press.</li>
+                <li><strong>43.</strong> P.S. Churchland, (1986), <em>Neurophenomenology: Towards a unified science of the mind-brain</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>44.</strong> P.M. Churchland &amp; C.A. Hooker, (1985), <em>Images of Science</em>, Chicago: The University of Chicago Press.</li>
+                <li><strong>45.</strong> A. Clark, (1997), Dynamical challenge, <em>Cognitive Science</em>, 21, (4), 461-481.</li>
+                <li><strong>46.</strong> A. Comte, (1830/1975), <em>Philosophie première. Cours de philosophie positive</em>. Paris: Hermann.</li>
+                <li><strong>47.</strong> J. Conant, (2002), 'Le premier, le second &amp; le dernier Wittgenstein', dans <em>Wittgenstein, dernières pensées</em>, Marseille: Agone.</li>
+                <li><strong>48.</strong> R. Cummins, (1989), <em>Meaning and Mental representation</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>49.</strong> D. Davidson, (1970), Mental Events. In L. Foster and J. Swanson (eds), <em>Experience and theory</em>, Humanities Press, 79-101. Repris dans Chalmers (ed), 2002, pp.116-125.</li>
+                <li><strong>50.</strong> D. Davidson, (1974), On the very idea of a conceptual scheme, repris dans Davidson, 1984, pp.183-198.</li>
+                <li><strong>51.</strong> D. Davidson, (1980), <em>Essays on actions and events</em>, Oxford: Clarendon Press.</li>
+                <li><strong>52.</strong> D. Davidson, (1984), <em>Essays into Truth and Interpretation</em>, Oxford, Oxford University Press.</li>
+                <li><strong>53.</strong> P. De Lara, (2001), Relativité de quoi? In <em>Chassez le naturel</em>, Revue du MAUSS, 17, pp.302-310.</li>
+                <li><strong>54.</strong> B. de Gelder, Granny, the naked Emperor and the Second Cognitive Revolution. In S. Fuller (ed.), 1989, pp.97-117.</li>
+                <li><strong>55.</strong> N. Depraz, F. Varela and P. Vermersch, (1999), The gesture of awareness, An account of its structural dynamics, in <em>Investigating Phenomenal Consciousness</em>, M. Velmans (ed), Amsterdam: Benjamins Publishers.</li>
+                <li><strong>56.</strong> N. Depraz, (1999), The Phenomenological Reduction as Praxis, in <em>The view from within: First person methodologies in the study of consciousness</em>. Journal of Consciousness Studies, "Special Issue", 6, pp.95-110.</li>
+                <li><strong>57.</strong> N. Depraz, F. Varela and P. Vermersch, (2002), <em>On becoming aware</em>, Advanced in Consciousness Studies, vol. 43, Amsterdam: John Benjamins Publishing Company.</li>
+                <li><strong>58.</strong> V. Descombes, (1995), <em>La Denrée Mentale</em>, Paris: Les Ed. de Minuit.</li>
+                <li><strong>59.</strong> C. Diamond, (1991), <em>The realistic spirit: Wittgenstein, Philosophy, and the Mind</em>, Hardcover.</li>
+                <li><strong>60.</strong> F. Dretske, (1986), 'Misrepresentation' in R.J. Bogdan (ed.), <em>Belief, Content and Function</em>. Oxford: Clarendon Press.</li>
+                <li><strong>61.</strong> F. Dretske, (1988), <em>Explaining behaviour: Reasons in a world of causes</em>. Cambridge, MA: MIT Press.</li>
+                <li><strong>62.</strong> H.L. Dreyfus, (1972), <em>What computers can't do; The limits of Artificial Intelligence</em>, Harper &amp; Row, New-York.</li>
+                <li><strong>63.</strong> H.L. Dreyfus, (1992), La portée philosophique du connexionnisme. In Andler (dir), 1992.</li>
+                <li><strong>64.</strong> P. Engel, (1996), <em>Philosophie et psychologie</em>, Paris : Gallimard, Folio.</li>
+                <li><strong>65.</strong> R.L. Fantz, (1961), The origin of form perception, <em>Scientific American</em>, 204, 66-72.</li>
+                <li><strong>66.</strong> O. Flanagan, (1994), <em>Consciousness Reconsidered</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>67.</strong> P. Feyerabend, (1981/1995), <em>Realism, Rationalism &amp; Scientific Method. Philosophical Papers</em>, Volume 1. Cambridge, MA: Cambridge University Press.</li>
+                <li><strong>68.</strong> P. Feyerabend, (1989), <em>Adieu la Raison</em>, Paris : Ed. du Seuil.</li>
+                <li><strong>69.</strong> J. Fodor, (1981), <em>Representations : Philosophical Essays on the Foundations of Cognitive Science</em>. Cambridge, MA : MIT Press.</li>
+                <li><strong>70.</strong> J. Fodor, (1987), <em>Psychosemantics: The Problem of meaning in the Philosophy of Mind</em>. Cambridge, MA : MIT Press.</li>
+                <li><strong>71.</strong> J. Fodor, (1990), Making Mind Matter More, <em>A theory of content and other essays</em>, Cambridge: MIT Press, p. 156.</li>
+                <li><strong>72.</strong> J. Fodor, (1994), Fodor's Guide to Mental Representation. In Stich &amp; Warfield (eds), 1994, pp.9-33.</li>
+                <li><strong>73.</strong> J. Fodor, Special Sciences (or: the disunity of science as a working hypothesis), <em>Synthese</em> 28:97-115, 1974. Reprinted in Chalmers (ed.), 2002, pp.126-135.</li>
+                <li><strong>74.</strong> J.A. Fodor and Z.W. Pylyshyn, (1988), Connectionism and cognitive architecture: A critical analysis. <em>Cognition</em>, 28.</li>
+                <li><strong>75.</strong> W.J. Freeman, (2001), The behavior-cognition link is well done; the cognition-brain link needs more work, <em>Behavioral and Brain Science</em>, 24:1, pp.42-43.</li>
+                <li><strong>76.</strong> S. Friedman, (1972), Habituation and recovery of visual response in the alert human newborn, <em>Journal of experimental child psychology</em>, 13, pp.339-349.</li>
+                <li><strong>77.</strong> M. Friedman, (2002), <em>Reconsidering positivism</em>, Cambridge, UK: University Press.</li>
+                <li><strong>78.</strong> S. Fuller, M. de Mey, T. Shinn and S. Woolgar (eds), (1989), <em>The Cognitive turn</em>, Dordrecht: Kluwer Academic Publishers.</li>
+                <li><strong>79.</strong> S. Fuller, (2001), <em>A philosophical history for our times</em>, Chicago: Univ. Chicago Press.</li>
+                <li><strong>80.</strong> P. Galison, (1987), <em>How Experiments End?</em>, Chicago: University of Chicago Press, 1988.</li>
+                <li><strong>81.</strong> R. Giere, (1989), 'The units of analysis in Sciences Studies', in S. Fuller et al. (eds), 1989, pp.3-11.</li>
+                <li><strong>82.</strong> K. Goldstein, (1951), <em>La structure de l'organisme</em>, trad. Burckhardt et Kuntz, Paris: Gallimard.</li>
+                <li><strong>83.</strong> S.J. Gould, (March 1993), Modified grandeur. <em>Natural History</em>, 14-20. Cit. in M.B. Shermer, The view of science: S.J. Gould as historian of science, scientific historian, popular scientist and scientific popularizer. <em>Social Studies of Science</em>, 32/4 (August 2002), pp.489-524, p.514.</li>
+                <li><strong>84.</strong> C.M. Gray, P. König, A.K. Engel &amp; W. Singer, (1989), Oscillatory responses in cat visual cortex exhibit intercolumnar synchronization which reflects global stimulus properties, <em>Nature</em>, 338.</li>
+                <li><strong>85.</strong> P.M.S. Hacker, (2001), Sur l'idée de schème conceptuel chez Davidson, In <em>Chassez le naturel</em>, Revue du MAUSS, 17, 311-331.</li>
+                <li><strong>86.</strong> M.M. Haith, (1998), Who put the cog in infant cognition, <em>Infant behavior and development</em>, 21 (2).</li>
+                <li><strong>87.</strong> S. Hameroff, A.W. Kaszniak, and A.C. Scott (eds), (1998), <em>Towards a science of consciousness II, The second Tucson Discussion and debates</em>. Cambridge, MA : MIT Press.</li>
+                <li><strong>88.</strong> V. Havelange, C. Lenay, &amp; J. Stewart, (2002), Les représentations: mémoire externe et objets techniques. <em>Intellectica</em>, 35, pp. 115-129.</li>
+                <li><strong>89.</strong> B. Hendricks-Jansen, (1996), <em>Catching Ourselves in the act : Situated Activity</em>, Cambridge, MA : MIT Press.</li>
+                <li><strong>90.</strong> C.A. Hooker, (1987), <em>A Realistic Theory of Science</em>, New York : State University of New York Press.</li>
+                <li><strong>91.</strong> P. Horwich (ed.), (1993), <em>World Changes</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>92.</strong> P. Hoyningen, (1993), <em>Reconstructing Scientific Revolutions: Thomas S. Kuhn's Philosophy of Science</em>. Chicago: University of Chicago Press.</li>
+                <li><strong>93.</strong> S.L. Hurley, (1998), <em>Consciousness in action</em>, Cambridge MA : Harvard University Press.</li>
+                <li><strong>94.</strong> R. Jackendoff, (1987), <em>Consciousness and the computational mind</em>, Cambridge, MA: The MIT Press, A Bradford Book.</li>
+                <li><strong>95.</strong> M. Johnson, (1987), <em>The body in the mind</em>. Chicago: The University of Chicago Press.</li>
+                <li><strong>96.</strong> V. Kastrup, (2002), 'A propos de l'apprentissage de la compétence éthique', <em>Intellectica</em>, 35, 2002/2, pp.299-322.</li>
+                <li><strong>97.</strong> J.A.S. Kelso, (1995), <em>Dynamic Patterns: The Self-Organization of Brain and Behavior</em>, MIT Press.</li>
+                <li><strong>98.</strong> J. Kim, (1998), The many problems of mental causation. Repris dans Chalmers (ed.), 2002, pp.170-179.</li>
+                <li><strong>99.</strong> L. Kolakowski, (1991), <em>Husserl et la recherche de la certitude</em>, trad. P. Secretan, Lausanne : L'Age d'Homme.</li>
+                <li><strong>100.</strong> T. Kuhn, (1977), <em>The essential tension</em>. Chicago: The University of Chicago Press.</li>
+                <li><strong>101.</strong> T. Kuhn, (2000), <em>The road since Structure</em>, in <em>The Road since Structure</em>, The University of Chicago Press.</li>
+                <li><strong>102.</strong> T. Kuhn, Afterwords. In <em>World Changes</em>, P. Horwich (ed.), Cambridge, MA: MIT Press, 1993, p.338-339, cité par Friedman, 2002.</li>
+                <li><strong>103.</strong> J. Kupiec et P. Sonigo, (2000), <em>Ni Dieu ni gène. Pour une autre théorie de l'hérédité</em>. Paris : Seuil.</li>
+                <li><strong>104.</strong> J.P. Lachaux &amp; al., (1999), Measuring phase synchrony in brain signals. <em>Hum. Brain Mapp.</em>, 8, 194-208.</li>
+                <li><strong>105.</strong> B. Latour, (1987), <em>Science in Action: How to Follow Scientists and Engineers through Society</em>. Cambridge: Harvard University Press.</li>
+                <li><strong>106.</strong> B. Latour et S. Woolgar, (1988), <em>La vie de laboratoire</em>, Paris, la Découverte, trad. de <em>Laboratory Life</em>, Londres : Sage, 1979.</li>
+                <li><strong>107.</strong> B. Latour, (1997), <em>Nous n'avons jamais été modernes</em>, Paris : La Découverte-Poche.</li>
+                <li><strong>108.</strong> B. Latour, (2001), <em>L'espoir de Pandore</em>, Paris : La Découverte.</li>
+                <li><strong>109.</strong> J. Lassègue &amp; Y.M. Visetti, (2002), 'Que reste-t-il de la représentation ?', <em>Intellectica</em>, 35, 2002/2.</li>
+                <li><strong>110.</strong> S. Laugier, (2001), « La psychologie, la subjectivité et la voix intérieure», in <em>Wittgenstein : les mots de l'esprit</em>, Ch. Chauviré, S. Laugier, J.J. Rosat (éd.), p.34-60.</li>
+                <li><strong>111.</strong> S. Laugier, (2001), Métaphysique et/ou jeu de langage. Dans <em>Wittgenstein : Métaphysique et jeux de langage</em>, Paris : PUF.</li>
+                <li><strong>112.</strong> S. Laugier, (2002), « Le sujet de la certitude », in <em>Wittgenstein, dernières pensées</em>, Agone, pp.237-262.</li>
+                <li><strong>113.</strong> S. Laugier, De la logique de la science aux révolutions scientifiques. in P. Wagner (dir.), <em>Les philosophes et la science</em>. Paris : Flammarion, pp.964-1015.</li>
+                <li><strong>114.</strong> M. Le van Quyen, J. Martinerie, C. Adam &amp; F.J. Varela, (1997), Unstable periodic orbits in human epileptic activity, <em>Phys. Rev. E</em>, 56, 3.</li>
+                <li><strong>115.</strong> M. Le van Quyen et al., (1997), Temporal patterns in human epileptic activity are modulated by perceptual discriminations, <em>NeuroReport</em>, 8.</li>
+                <li><strong>116.</strong> A. Lutz, J. P. Lachaux, J. Martinerie, and F. Varela, (2002), Guiding the study of brain dynamics by using first-person data : Synchrony patterns correlate with ongoing conscious states during a simple visual task. <em>PNAS</em>, vol.99, n°3, 1586-1591.</li>
+                <li><strong>117.</strong> F. Malherbe, (1979), <em>La philosophie de Karl Popper et le positivisme logique</em>, Presses Univ. de Namur.</li>
+                <li><strong>118.</strong> C. McDonald &amp; G. McDonald, (1995), <em>Connectionism, Debates on Psychological Explanation</em>, Cambridge, MA: Blackwell.</li>
+                <li><strong>119.</strong> W. McCulloch and W. Pitts, (1943), A logical calculus of the ideas immanent in nervous activity. <em>Bulletin of Mathematical Biophysics</em>, 5, pp.115-133 [Repris dans Anderson and Rosenfeld, 1998].</li>
+                <li><strong>120.</strong> J. MacDowell, (1994), <em>Mind and World</em>, Cambridge, MA: Harvard University Press.</li>
+                <li><strong>121.</strong> P. McLeod, K. Plunket and E. Rolls (ed.), (1998), <em>Introduction to connectionist Modelling of Cognitive Processes</em>, Oxford: Oxford University Press, pp.314-318.</li>
+                <li><strong>122.</strong> P. Maes, (ed.), (1990), <em>Designing Autonomous Agents</em>, MIT Press, Cambridge, MA.</li>
+                <li><strong>123.</strong> J. Martinerie, C. Adam, M. Le van Quyen, M. Baulac, S. Clemenceau, B. Renault &amp; F. Varela, (1998), Epileptic seizures can be anticipated by non linear analysis, <em>Nature Medecine</em>, vol.4, n°10.</li>
+                <li><strong>124.</strong> H.R. Maturana, Cognitive strategies, in von Foerster (1974), pp.457-469.</li>
+                <li><strong>125.</strong> H.R. Maturana &amp; F.J. Varela, (1980), <em>Autopoiesis and cognition, The realization of the living</em>, Boston Studies in the Philosophy of Science, D.Reidel.</li>
+                <li><strong>126.</strong> H.R. Maturana &amp; F. Varela, (1988), <em>The tree of knowledge</em>, New Science Library, Shambhala, Boston &amp; London.</li>
+                <li><strong>127.</strong> J-A. Mayer and S.W. Wilson, eds., (1991), <em>From Animals to Animats: Proceedings of the first International Conference on Simulation of Adaptative Behavior</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>128.</strong> M. Merleau-Ponty, (1953/1985), <em>Éloge de la philosophie</em>, Paris : Gallimard.</li>
+                <li><strong>129.</strong> M. Merleau-Ponty, (1964), <em>Le visible et l'invisible</em>, Paris : Gallimard.</li>
+                <li><strong>130.</strong> M. Merleau-Ponty, (1964), <em>L'Œil et l'Esprit</em>, Paris : Gallimard.</li>
+                <li><strong>131.</strong> M. Minsky, (1986), <em>The Society of Mind</em>. New York: Simon and Schuster.</li>
+                <li><strong>132.</strong> Y. Munakata, J.L. McClelland, M.H. Johnson &amp; R.S. Siegler, (1997), Rethinking infant knowledge: Towards an adaptive process account of successes and failures in object permanence tasks. <em>Psychological Review</em>, 104, 686-713.</li>
+                <li><strong>133.</strong> T. Nagel, (1970), What it is to be a bat?, <em>Philosophical Review</em>, 79: 394-403; reimp. N. Block (éd.), 1980.</li>
+                <li><strong>134.</strong> N. Newcombe, (2002), The nativist-empiricist controversy in the context of recent research on spatial and quantitative development, <em>Psychological Science</em>, 13, 395-401.</li>
+                <li><strong>135.</strong> J-P. Narboux, (2002), dans J. Bouveresse, &amp; al. (dir.) <em>Wittgenstein, dernières pensées</em>, pp.317-342.</li>
+                <li><strong>136.</strong> E. Pacherie, (1993), <em>Naturaliser l'intentionnalité, Essai de philosophie de la psychologie</em>, Paris, Presses Universitaires de France.</li>
+                <li><strong>137.</strong> J. Piaget, (1963), <em>The origin of intelligence in children</em>, New York: Norton.</li>
+                <li><strong>138.</strong> J. Piaget, (1964), <em>Six études de psychologie</em>, Paris : Denoël.</li>
+                <li><strong>139.</strong> J. Piaget, (1970), <em>Psychologie et Épistémologie</em>, Paris : Denoël.</li>
+                <li><strong>140.</strong> A. Pickering, (1995), Beyond Constraint : The temporality of practice and the historicity of knowledge, <em>Scientific Practice: Theories and stories of doing physics</em>, Chicago: University of Chicago Press.</li>
+                <li><strong>141.</strong> A. Pickering, (2001), Reading the Structure, <em>Perspectives on Science</em>, vol.9, n°4, pp.498-509.</li>
+                <li><strong>142.</strong> K.R. Popper, (1959/1968), <em>The Logic of Scientific Discovery</em>. New York: Harper Torchbook.</li>
+                <li><strong>143.</strong> R.F. Port &amp; T. van Gelder (eds), (1995), <em>Mind as Motion: Exploration in the Dynamics of Cognition</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>144.</strong> R.F. Port, F. Cummins &amp; J. McAuley, (1995), Naive Time, Temporal Patterns, and Human Audition. In R.F. Port &amp; T. van Gelder (eds), pp. 339-371.</li>
+                <li><strong>145.</strong> J. Proust, (1997), <em>Comment l'esprit vient aux bêtes, Essai sur la représentation</em>, Paris : Gallimard.</li>
+                <li><strong>146.</strong> H. Putnam, (1995), <em>Pragmatism</em>, Oxford: Blackwell.</li>
+                <li><strong>147.</strong> H. Putnam, (1999), <em>The threefold cord : mind, body, and world</em>, Columbia University Press, New York.</li>
+                <li><strong>148.</strong> W. Ramsey, S. Stich and J. Garon, Connectionism, Eliminativism and the future of Folk Psychology. In C. MacDonald &amp; G. MacDonald, 1995.</li>
+                <li><strong>149.</strong> P.E. Rapp, T.R. Bashore, J.M. Martinerie, A.M. Albano &amp; A.I. Meos, (1989), Dynamics of brain electrical activity, <em>Brain Topography</em>, 2, 99-118.</li>
+                <li><strong>150.</strong> A.W. Richardson, (2002), Narrating the history of Reason itself... , <em>Perspectives on Science</em>, vol.10, n°3, pp.253-273.</li>
+                <li><strong>151.</strong> P. Ricoeur, (1990), <em>Soi-même comme un autre</em>, Paris: Ed. du Seuil.</li>
+                <li><strong>152.</strong> E. Rigal, Préface à <em>Notes sur l'expérience privée et les 'sense data'</em>, L. Wittgenstein, TER, 1989.</li>
+                <li><strong>153.</strong> E. Rodriguez, N. George, J.P. Lachaux, J. Martinerie, B. Renault, F. Varela, (1999), Perception's shadow: long distance synchronization in the human brain. <em>Nature</em>, 397, 340-343.</li>
+                <li><strong>154.</strong> R. Rorty, (1979), <em>Philosophy and the mirror of nature</em>, Princeton University Press.</li>
+                <li><strong>155.</strong> J.J. Rosat, (2001), « L'indétermination des concepts psychologiques », in Ch. Chauviré, S. Laugier, J.J. Rosat (éd.), <em>Wittgenstein : les mots de l'esprit</em>, pp. 13-38.</li>
+                <li><strong>156.</strong> I. Rosenfield, (1989), <em>L'invention de la mémoire</em>, Paris : Flammarion.</li>
+                <li><strong>157.</strong> S. Spelke and E.L. Newport, Nativism, Empiricism and the development of knowledge, In R.M. Lerner (ed.) <em>Theoretical models of human development</em>. Vol. 1 of the <em>Handbook of Child Psychology</em> (5<sup>th</sup> Ed.), New York: Wiley, pp.275-340.</li>
+                <li><strong>158.</strong> M. Stopfer, S. Bhagavan, B. Smith, G. Laurent, (1997), Impaired odour discrimination on desinchronization of odour-encoding neural assemblies, <em>Nature</em>, 390.</li>
+                <li><strong>159.</strong> I. Stengers, (1993), <em>L'invention des sciences modernes</em>. Paris: La Découverte.</li>
+                <li><strong>160.</strong> I. Stengers, (1997), <em>Cosmopolitiques. Tome 6. La vie et l'artifice : visages de l'émergence</em>. Paris : La découverte.</li>
+                <li><strong>161.</strong> I. Stengers, (1997), <em>Sciences et Pouvoirs, La démocratie face à la technoscience</em>. Paris : La Découverte.</li>
+                <li><strong>162.</strong> S. Stich, (1994), 'What is a theory of mental representation ?', <em>Mental Representation, a reader</em>, Blackwell Publishers.</li>
+                <li><strong>163.</strong> E. Thelen &amp; L.B. Smith, (1994), <em>A dynamic systems approach to the development of cognition and action</em>. Cambridge, MA: MIT Press.</li>
+                <li><strong>164.</strong> E. Thelen, (1995), 'Time scale dynamics and the development of an embodied cognition', <em>Mind as Motion</em>, R. Port &amp; T. van Gelder (eds).</li>
+                <li><strong>165.</strong> E. Thelen, G. Schöner, C. Scheier and L.B. Smith, (2000), 'The dynamic of embodiment: A field theory of infant perseverative reaching', <em>Behavioral and Brain Science</em> 24 (1).</li>
+                <li><strong>166.</strong> E. Thelen &amp; V. Whitmyer, (2002), Using dynamic field theory to conceptualize the interface of perception, cognition and action, <em>Dynamic Field Theory</em>.</li>
+                <li><strong>167.</strong> E. Thompson and F. Varela, (2001), Radical embodiment, <em>Trends Cogn. Sc.</em>, 5 (10): 418-425.</li>
+                <li><strong>168.</strong> T. van Gelder &amp; R.F. Port, (1995), It's about time. In R.F. Port &amp; T. van Gelder (eds), <em>Mind as Motion</em>. A Bradford Book, MIT Press.</li>
+                <li><strong>169.</strong> B.C. van Fraassen, (1980), <em>The Scientific Image</em>, Oxford: Clarendon Press.</li>
+                <li><strong>170.</strong> B.C. van Fraassen, (2002), <em>The Empirical Stance</em>, Yale University Press.</li>
+                <li><strong>171.</strong> F.J. Varela, (1979), <em>Principles of Biological Autonomy</em>, New York: Elsevier North Holland.</li>
+                <li><strong>172.</strong> F.J. Varela, (1988/1996), <em>Invitation aux sciences cognitives</em>, Paris : Editions du Seuil.</li>
+                <li><strong>173.</strong> F.J. Varela, (1989), <em>Autonomie et connaissance, Essai sur le vivant</em>, Paris : Editions du Seuil.</li>
+                <li><strong>174.</strong> F.J. Varela, E. Thompson and E. Rosch, (1991), <em>The Embodied Mind</em>, Cambridge, MA: MIT Press.</li>
+                <li><strong>175.</strong> F. Varela, (1996), <em>Invitation aux sciences cognitives</em>, Paris : Editions du Seuil.</li>
+                <li><strong>176.</strong> F.J. Varela, (1995), <em>The Third Culture, Beyond the Scientific Revolution</em>, by J. Brockman, Simon &amp; Schuster, p.215.</li>
+                <li><strong>177.</strong> F.J. Varela, 'The emergent self'. In <em>The Third Culture, Beyond the Scientific Revolution</em>, (1995), by J. Brockman, Simon &amp; Schuster.</li>
+                <li><strong>178.</strong> F.J. Varela, (1995), Resonant cell assemblies: a new approach to cognitive functions and neuronal synchrony. <em>Biol. Research</em>, 28: 81-95.</li>
+                <li><strong>179.</strong> F.J. Varela, <em>Quel savoir pour l'éthique ? Action, sagesse et cognition</em>, (1996), Paris : La découverte.</li>
+                <li><strong>180.</strong> F.J. Varela, (1996), Neurophenomenology: A Methodological Remedy for the Hard Problem, <em>Journal of Consciousness Studies</em>, "Special Issue on the hard problem", 3: 330-350.</li>
+                <li><strong>181.</strong> F.J. Varela, (1997a), 'Patterns of Life: Intertwining Identity and Cognition', <em>Brain and Cognition</em>, 34, 72-87.</li>
+                <li><strong>182.</strong> F.J. Varela, (1997b), The naturalization of phenomenology as the transcendence of nature, <em>Alter: Revue de Phénoménologie</em>, 5, 355-381.</li>
+                <li><strong>183.</strong> F.J. Varela, (1998), 'A science of consciousness as if experience mattered', in S. Hameroff, A.W. Kaszniak, and A.C. Scott (eds).</li>
+                <li><strong>184.</strong> F.J. Varela, (1999), 'L'auto-organisation : vrai ou faux miracle ?', <em>Science et conscience</em>, Question de- Albin Michel.</li>
+                <li><strong>185.</strong> F.J. Varela and J. Shear, (1999), First-person Methodologies: What, Why, How? In F.J. Varela &amp; J. Searle (eds) <em>The view from within: First person methodologies in the study of consciousness</em>. <em>Journal of Consciousness Studies</em>, "Special Issue", 6 (2-3).</li>
+                <li><strong>186.</strong> F.J. Varela, J.P. Lachaux, E. Rodriguez, J. Martinerie, (2001), The brainweb : phase synchronization and large-scale integration. <em>Nature Rev. Neurosci.</em>, 2, (4), 229-39.</li>
+                <li><strong>187.</strong> F.J. Varela, (1999/2002), Le présent spéciux. In <em>Naturaliser la phénoménologie</em>, J. Petitot, F. Varela, B. Pachoud, J.M. Roy (eds), Paris : CNRS Édition, 341-406.</li>
+                <li><strong>188.</strong> M. Velmans, (1998), Goodbye to Reductionism. In S. Hameroff, A.W. Kaszniak, and A.C. Scott (eds), p.46.</li>
+                <li><strong>189.</strong> P. Vermersch, (2002), Psychology and subjective experience: Introspection. In <em>On becoming aware</em>, Advanced in Consciousness Studies, vol. 43, p. 129-154.</li>
+                <li><strong>190.</strong> H. von Foerster (1974), (organizer), <em>Cybernetics of cybernetics</em>, Urbana: Biological Computer Laboratory, University of Illinois.</li>
+                <li><strong>191.</strong> C. von Hofsten, E. Spelke, E. Feng &amp; P. Vishton, (1994), Infants' predictive head turning and reaching for fully visible and occluded objects (abstract). <em>Infant Behavior and Development</em>, 17, 1000.</li>
+                <li><strong>192.</strong> A. von Stein et al., (2000), Top-down processing mediated by interareal synchronization, <em>Proc. Nat. Acad. Sci. U.S.A.</em>, 97, 14748-14753.</li>
+                <li><strong>193.</strong> P. Wagner, (2002), Carnap et la logique de la science. In P. Wagner (dir.), <em>Les Philosophes et la Science</em>, Paris: Gallimard, 2002, pp.246-298.</li>
+                <li><strong>194.</strong> A. Wallace, (2000), <em>The taboo of subjectivity, Towards a New Science of Consciousness</em>, Oxford: Oxford University Press.</li>
+                <li><strong>195.</strong> T. Winograd and F. Flores, (1986), <em>Understanding Computers and Cognition</em>, Norwood, NJ: Ablex Publishing Corporation.</li>
+                <li><strong>196.</strong> L. Wittgenstein, (1961), <em>Investigations Philosophiques</em>, St Amand : Gallimard.</li>
+                <li><strong>197.</strong> L. Wittgenstein, (1976), <em>De la certitude</em>, Paris : Gallimard.</li>
+                <li><strong>198.</strong> L. Wittgenstein, (1985), <em>Études préparatoires à la seconde partie des Recherches philosophiques</em>, Paris : TER.</li>
+                <li><strong>199.</strong> L. Wittgenstein, (1989), <em>Notes sur l'expérience privée et les "sense data"</em>, trad. E. Rigal, TER.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : INDEX DES NOMS === -->
+    <div class="capsule" id="capsule-index">
+        <div class="capsule-title">📑 Index des noms</div>
+        <div class="capsule-content">
+
+            <!-- Il s'agit ici d'un index partiel (pages 14-15 du PDF). J'ai regroupé les entrées par ordre alphabétique approximatif.
+                 Les numéros de page sont ceux du PDF original. -->
+
+            <p><span class="index-entry">Akins</span> <span class="index-pages">317, 324, 325, 419, 525</span></p>
+            <p><span class="index-entry">Aristote</span> <span class="index-pages">67, 68, 69, 71, 72, 73, 74, 75, 76, 77, 79, 83, 85, 112, 116, 525</span></p>
+            <p><span class="index-entry">Atlan</span> <span class="index-pages">518, 525</span></p>
+            <p><span class="index-entry">Aubenque</span> <span class="index-pages">224, 225, 248, 525</span></p>
+            <p><span class="index-entry">Bitbol</span> <span class="index-pages">133, 135, 216, 217, 394, 410, 426, 430, 525, 528</span></p>
+            <p><span class="index-entry">Bouveresse</span> <span class="index-pages">62, 63, 64, 107, 108, 109, 110, 112, 113, 114, 115, 117, 123, 202, 367, 428, 431, 503, 525</span></p>
+            <p><span class="index-entry">Canguilhem</span> <span class="index-pages">259, 525</span></p>
+            <p><span class="index-entry">Carnap</span> <span class="index-pages">336, 526</span></p>
+            <p><span class="index-entry">Cavell</span> <span class="index-pages">176, 177, 179, 180, 184, 189, 526</span></p>
+            <p><span class="index-entry">Chalmers (A.)</span> <span class="index-pages">361, 362, 363, 364, 366, 526, 528</span></p>
+            <p><span class="index-entry">Churchland</span> <span class="index-pages">189, 190, 264, 266, 420, 455, 456, 458, 480, 484, 485, 486, 487, 492, 493, 501, 526</span></p>
+            <p><span class="index-entry">Clark</span> <span class="index-pages">526</span></p>
+            <p><span class="index-entry">Conant</span> <span class="index-pages">389, 526</span></p>
+            <p><span class="index-entry">Davidson</span> <span class="index-pages">336, 338, 346, 353, 354, 361, 362, 363, 365, 366, 367, 368, 369, 370, 371, 378, 379, 380, 382, 383, 384, 385, 390, 399, 526, 527</span></p>
+            <p><span class="index-entry">Depraz</span> <span class="index-pages">15, 388, 389, 397, 399, 400, 408, 424, 527</span></p>
+            <p><span class="index-entry">Descombes</span> <span class="index-pages">71, 72, 76, 77, 78, 79, 81, 82, 85, 89, 100, 101, 116, 121, 311, 438, 440, 460, 461, 465, 466, 470, 480, 527</span></p>
+            <p><span class="index-entry">Diamond</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Dretske</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Dreyfus</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Feyerabend</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Fodor</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Freeman</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Friedman</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Fuller</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Galison</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Giere</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Goldstein</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Gould</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Hacker</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Havelange</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Hooker</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Hoyningen</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Hurley</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Jackendoff</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Johnson</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Kelso</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Kim</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Kolakowski</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Kuhn</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Lachaux</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Latour</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Laugier</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">MacDowell</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Martinerie</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Maturana</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Merleau-Ponty</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Pacherie</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Piaget</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Pickering</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Popper</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Port</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Proust</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Putnam</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Ricoeur</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Rodriguez</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Rorty</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Rosat</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Rosenfield</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Rudrauf</span> <span class="index-pages">317, 324, 325, 419, 525</span></p>
+            <p><span class="index-entry">Salmon</span> <span class="index-pages">67, 68, 69, 71, 72, 73, 74, 75, 76, 77, 79, 83, 85, 112, 116, 525</span></p>
+            <p><span class="index-entry">Schilpp</span> <span class="index-pages">518, 525</span></p>
+            <p><span class="index-entry">Schmitz</span> <span class="index-pages">224, 225, 248, 525</span></p>
+            <p><span class="index-entry">Searle</span> <span class="index-pages">133, 135, 216, 217, 394, 410, 426, 430, 525, 528</span></p>
+            <p><span class="index-entry">Sellars</span> <span class="index-pages">62, 63, 64, 107, 108, 109, 110, 112, 113, 114, 115, 117, 123, 202, 367, 428, 431, 503, 525</span></p>
+            <p><span class="index-entry">Shapin</span> <span class="index-pages">259, 525</span></p>
+            <p><span class="index-entry">Skarda</span> <span class="index-pages">336, 526</span></p>
+            <p><span class="index-entry">Smolensky</span> <span class="index-pages">176, 177, 179, 180, 184, 189, 526</span></p>
+            <p><span class="index-entry">Spelke</span> <span class="index-pages">361, 362, 363, 364, 366, 526, 528</span></p>
+            <p><span class="index-entry">Stengers</span> <span class="index-pages">189, 190, 264, 266, 420, 455, 456, 458, 480, 484, 485, 486, 487, 492, 493, 501, 526</span></p>
+            <p><span class="index-entry">Stich</span> <span class="index-pages">526</span></p>
+            <p><span class="index-entry">Stopfer</span> <span class="index-pages">389, 526</span></p>
+            <p><span class="index-entry">Thelen</span> <span class="index-pages">336, 338, 346, 353, 354, 361, 362, 363, 365, 366, 367, 368, 369, 370, 371, 378, 379, 380, 382, 383, 384, 385, 390, 399, 526, 527</span></p>
+            <p><span class="index-entry">Thompson</span> <span class="index-pages">15, 388, 389, 397, 399, 400, 408, 424, 527</span></p>
+            <p><span class="index-entry">van Fraassen</span> <span class="index-pages">71, 72, 76, 77, 78, 79, 81, 82, 85, 89, 100, 101, 116, 121, 311, 438, 440, 460, 461, 465, 466, 470, 480, 527</span></p>
+            <p><span class="index-entry">van Gelder</span> <span class="index-pages">180, 181, 191, 192, 234, 238, 297, 318, 344, 346, 347, 348, 384, 397, 524, 526, 527</span></p>
+            <p><span class="index-entry">Varela</span> <span class="index-pages">13, 15, 17, 20, 21, 32, 34, 35, 36, 37, 40, 60, 62, 124, 125, 126, 133, 138, 141, 163, 174, 176, 181, 182, 189, 190, 193, 195, 197, 199, 217, 218, 275, 278, 279, 286, 287, 288, 289, 291, 292, 293, 294, 295, 297, 299, 300, 302, 303, 306, 307, 308, 310, 313, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 336, 338, 343, 348, 352, 353, 359, 366, 382, 384, 385, 388, 389, 390, 396, 397, 398, 400, 403, 406, 408, 410, 411, 412, 414, 415, 418, 419, 421, 422, 423, 424, 426, 427, 432, 433, 434, 435, 436, 490, 519, 522, 523, 524, 525, 527, 528</span></p>
+            <p><span class="index-entry">Velmans</span> <span class="index-pages">410, 411, 415, 519, 528</span></p>
+            <p><span class="index-entry">Vermersch</span> <span class="index-pages">410, 415, 425, 426, 519, 528</span></p>
+            <p><span class="index-entry">Visetti</span> <span class="index-pages">32, 128, 522</span></p>
+            <p><span class="index-entry">Wagner</span> <span class="index-pages">153, 219, 220, 221, 231, 247, 522, 528</span></p>
+            <p><span class="index-entry">Wallace</span> <span class="index-pages">412, 413, 528</span></p>
+            <p><span class="index-entry">Winograd</span> <span class="index-pages">32, 33, 303, 304, 305, 528</span></p>
+            <p><span class="index-entry">Wittgenstein</span> <span class="index-pages">40, 41, 42, 48, 50, 51, 52, 56, 61, 62, 82, 84, 85, 88, 90, 94, 95, 96, 97, 99, 100, 102, 104, 106, 117, 126, 131, 138, 183, 185, 187, 212, 221, 224, 225, 243, 245, 246, 247, 248, 250, 251, 252, 260, 262, 263, 265, 269, 274, 276, 277, 278, 279, 280, 282, 293, 299, 300, 305, 375, 392, 428, 429, 430, 431, 443, 448, 449, 450, 453, 456, 474, 517, 518, 519, 522, 523, 524, 525, 528, 529</span></p>
+
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="04_Conclusion.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="06_Index.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

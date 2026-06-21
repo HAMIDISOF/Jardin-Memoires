@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.B‑2. Pratique de la science – B2.3</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la science</h1>
+    <div class="sub">B‑2. Pratique de la science ; Connaissance de la réalité – B2.3 (pages 474‑498)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-temps">⏳ B‑2‑3 Une épistémologie non représentationniste – Le temps de la pratique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-inscrire">🌱 S'inscrire dans la réalité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-decouverte">🔍 La découverte</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-enonce">📝 L'énoncé : du contextuel à l'universel</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-interesser">🎯 Intéresser</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-circulation">🔄 Circulation de la référence (suite)</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-realisme">🌍 Réalisme et historicité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-enaction-final">🌱 L'énaction, pour finir</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="04_Conclusion.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : B-2-3 Une épistémologie non représentationniste – Le temps de la pratique === -->
+    <div class="capsule" id="capsule-temps">
+        <div class="capsule-title">⏳ B‑2‑3 Une épistémologie non représentationniste – Le temps de la pratique</div>
+        <div class="capsule-content">
+            <p>Le souci de dénoncer les conceptions constructives ou relativistes de la pratique scientifique se traduit assez couramment, écrit Pickering (1995), par la mise en avant de la notion de contrainte comme ce qui circonscrit, structure, le déroulement et les résultats de l'activité scientifique. Les praticiens ne sont pas libres de faire simplement ce que le moment historique qu'ils habitent les conduiraient à faire ; quelque chose d' ‘indépendant', d' ‘extérieur' agit pour contraindre le domaine des procédures, des actions efficaces, des résultats possibles, en bref ce que les scientifiques sont conduits à croire :</p>
+            <div class="citation">
+                « These substantive constraints are the reasons why scientists cannot believe just whatever they like. » (Pickering, 1995, p.46)
+            </div>
+            <p>Ces contraintes ne sont pas seulement physiques, mais aussi intellectuelles : ce peut être, d'après Galison<sup><a href="#ref299" class="reference-link" id="r299">[299]</a></sup>, l'adhésion à un principe tel que la conservation de l'énergie ou la confiance dans un dispositif expérimental.</p>
+
+            <p>Pickering pense que la notion de contrainte est trompeuse et n'aide en rien à comprendre ce en quoi consiste la pratique scientifique. La raison de cela est qu'elle laisse penser, voire suppose, que les obstacles ou les limites de l'activité scientifique sont là, déjà déterminés, avant même que la pratique ne commence et donc indépendamment de la forme qu'elle va prendre :</p>
+            <div class="citation">
+                « [W]hatever obstacles do indeed arise in practice are not ‘already there' to begin with ; instead they genuinely emerge in time. » (p.47)
+            </div>
+            <p>Cette conception de la contrainte, de l'obstacle, qui est un avatar de l'idée que l'activité scientifique est en prise avec les déterminations d'une réalité indépendante que doit représenter le produit de cette activité, vient de ce que la réelle temporalité de la pratique est ignorée parce que l'activité scientifique n'est pas considérée en tant que telle, telle qu'elle se déroule :</p>
+            <div class="citation">
+                « We have to take the temporality of practice seriously – meaning we have to try to come to grips with and find a framework for the analysis of practice as it happens. »
+            </div>
+            <p>Pour rendre compte de ce en quoi consiste l'activité scientifique, Pickering met en avant quatre notions qui représentent les dimensions de la pratique ‘en train de se faire' : l'orientation vers des buts, la modélisation, les ressources, les résistances.</p>
+
+            <p>Le but qui oriente la pratique est l'articulation entre la compréhension théorique d'un certain phénomène, la compréhension théorique de la façon dont un dispositif expérimental fonctionne et la mise en place d'un dispositif expérimental. Ces trois éléments ont été saisis concrètement par l'exemple de l'étude du sol amazonien. Bien qu'ils servent à constituer le cadre dans lequel la pratique prend place, ces éléments n'agissent pas, contrairement à ce que Galison prétend, comme des contraintes. Le dispositif expérimental, de même que la compréhension théorique d'un modèle, constituent un cadre de départ de la modélisation, un ‘exemplaire' auquel elle se réfère, mais elle n'est pas enfermée dans ce cadre. La modélisation est un processus infiniment ouvert,</p>
+            <div class="citation">
+                « it is an open‑ended process having no determinate destination » (p.48)
+            </div>
+            <p>Nous l'avions vu aussi dans l'exemple amazonien, l'activité des scientifiques fait fond sur un ensemble de savoirs accumulés. Mais plutôt que d'y voir une obligation, un impératif contraignant, Pickering présente tout ce ‘matériel' technique, théorique, procédural dont une pratique donnée est héritière comme une ressource pour la créativité de cette pratique.</p>
+
+            <p>Abandonner le langage de la contrainte permet aussi de percevoir de façon plus fidèle à la temporalité de l'activité la façon dont se manifeste la difficulté de la pratique. Celle‑ci non plus n'est pas adéquatement traduite par la notion de contrainte qui sous‑entend qu'elle est définie avant même que le travail de recherche ne soit mis en œuvre. La difficulté que rencontre cette mise en œuvre émerge, elle émerge dans la tentative de faire tenir ensemble les trois éléments que l'activité scientifique visent à articuler. Mais dans la mesure où ces éléments évoluent au cours de la recherche, l'émergence de la difficulté est indissociable du déroulement en temps réel de la pratique :</p>
+            <div class="citation">
+                « [T]his emergence is irredeemably tied to the real time of practice. » (p.50)
+            </div>
+            <p>Le travail de recherche qu'engendre le projet d'articuler modélisation et dispositif expérimental rencontre des résistances, mais la nature de celle‑ci dépend de la direction particulière que prend le développement historique de cette recherche. Les difficultés, les résistances qui constituent le moteur même de la pratique doivent être situées dans le déroulement temporel de la recherche particulière engendrée par un projet particulier :</p>
+            <div class="citation">
+                Resistances are situated with respect to particular projects, models and extensions of models. That they arise, and what they look like, has to be understood in relation to those projects, models, and extensions. Further, let me emphasize that unlike constraint – which seems somehow ‘already there' – resistance emerge in the real time of practice… (p.51)
+            </div>
+            <p>La définition des résistances participe d'un processus réellement temporel, un processus historique parce que la définition des éléments que la recherche vise à articuler se modifie au cours de la pratique et que l'ensemble des modifications possibles est indéfini. L'activité du scientifique peut être vue comme la recherche d'un point de stabilisation de l'interaction dynamique entre les différents éléments qu'elle met en scène, « the interactive stabilization of the three elements of his practice », stabilisation qui est atteinte lorsque</p>
+            <div class="citation">
+                « he found a material procedure that translated through an interpretive model into one of his phenomenal models. » (p.52)
+            </div>
+            <p>Ce processus interactif et historique qui se stabilise sur un mode particulier d'articulation des composantes matérielles et interprétatives de la description d'un phénomène, Pickering l'appelle accommodation. Le travail de production de faits scientifiques peut alors être décrit comme une dialectique historique entre résistance et accommodation :</p>
+            <div class="citation">
+                « [T]he production of facts, I claim, is the outcome of a goal‑oriented, temporally extended dialectic of resistance and accommodation …»
+            </div>
+            <p>Dans cette perspective qui place au centre de l'attention la pratique en tant que telle, une pratique ‘en train de se faire', le but de l'activité scientifique n'est pas conçu comme la recherche de la réponse au pourquoi d'un phénomène, mais comme la recherche d'une réponse à un comment d'une articulation entre différents éléments contextuels et évolutifs. Il n'est pas besoin de poser d'emblée une réalité indépendante pour motiver la recherche et justifier la valeur de ses résultats. C'est lorsque la science comme appareil de connaissance de la réalité est confondue avec l'activité des scientifiques que cette réalité indépendante devient une contrainte et un fondement nécessaires. Parce qu'alors la seule façon de ne pas mettre en doute le fait que nous puissions connaître la réalité est de défendre l'idée que le produit de l'activité des scientifiques est déterminé par quelque chose d'indépendant de cette activité, qu'il est une re‑présentation de quelque chose d'indépendant de cette activité et de sa situation historique particulière avec les valeurs, les intérêts, les éléments culturels, politiques, sociaux qui la compose. Sans cette puissance extérieure et indépendante de détermination qui fait des scientifiques de simples porte‑voix de la réalité, leur pouvoir de parler au nom de la réalité, impliqué par la confusion entretenue par l'usage négligent du concept de science, deviendrait tout simplement de l'autoritarisme. C'est sans doute ainsi qu'ont pu être ressenties par les chercheurs les critiques constructivistes ou relativistes qui ont été adressées aux épistémologies réalistes adossées à un cadre représentationniste.</p>
+
+            <p>La distinction entre, d'une part, la science comme appareil de connaissance de la réalité, et d'autre part, l'activité des scientifiques, a pour vertu de libérer les scientifiques de la fonction écrasante qui leur était imputée et du même coup des accusations d'imposture que cette attribution pouvait générer. Distinguer le ‘faire' de la pratique et le ‘dire' de la connaissance de la réalité, permet d'arracher le concept de réalité à l'espace transcendant, métaphysique, des causes et de le replacer dans l'espace logique de la justification. Cela fait disparaître instantanément le conflit entre les concepts de découverte (de la réalité) ou de construction (d'une réalité relative, c'est‑à‑dire une illusion de ‘vraie' réalité). Cela prive aussi de substance l'éternel débat autour de la capacité ou l'incapacité de ‘la science' à connaître la réalité nourri du heurt entre deux évidences (logiques) : nous connaissons la réalité, au plein sens que le veut l'usage du concept ; l'activité scientifique est une pratique dont les résultats sont dépendants des conditions de leur production.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : S'inscrire dans la réalité – La découverte === -->
+    <div class="capsule" id="capsule-inscrire">
+        <div class="capsule-title">🌱 S'inscrire dans la réalité</div>
+        <div class="capsule-content">
+            <p><strong>La découverte</strong></p>
+            <p>Nous devons dire, écrit Stengers, que</p>
+            <div class="citation">
+                « les atomes, les bactéries, les virus existent ‘objectivement', c'est-à-dire qu'ils existent indépendamment des questions que nous leur posons. » Mais, « devons-nous dire pour autant que nous les avons ‘découverts' comme Christophe Colomb a découvert l'Amérique (qui, nul n'en doute, préexistait à sa traversée de l'Océan) ?<sup><a href="#ref300" class="reference-link" id="r300">[300]</a></sup> »
+            </div>
+            <p>Ceux qui font confiance aux antibiotiques pour soigner la pneumonie, reconnaissent par leurs actes, indissociables du langage qui les décrit et leur donne sens, qu'ils l'admettent ou pas par leur discours théorique, l'existence des bactéries, la réalité du fait scientifique qui a été stabilisé dans la pratique du chercheur. Ce qui s'est passé dans le laboratoire est reconnu comme étant un moment de connaissance de la réalité. Mais que s'est‑il passé dans le laboratoire ? Comment est‑on passé d'un fait stabilisé à une existence, comment est‑on passé d'un pouvoir‑faire, qui a émergé dans le contexte d'une pratique et répond à un ‘comment', à un savoir‑dire, général, qui répond sur le ton de l'universel, à un ‘pourquoi' ?</p>
+
+            <p>Kuhn traite de la reconnaissance d'un fait scientifique dans un article discutant la notion de découverte et présentant</p>
+            <div class="citation">
+                « une petite partie de ce qu'[il] considère être une révolution historiographique continue dans l'étude de la science<sup><a href="#ref301" class="reference-link" id="r301">[301]</a></sup>. »
+            </div>
+            <p>Il remarque, en prenant ses distances vis‑à‑vis de l'historiographie traditionnelle, que la découverte ne relève pas généralement de la catégorie d'événements auxquels ont trait les questions ‘Où ?' et ‘Quand ?' :</p>
+            <div class="citation">
+                « [N]i la polémique ni l'étude détaillée ne permettent, la plupart du temps, de déterminer sans ambiguïté le moment et le lieu dont on peut dire d'une découverte que c'est alors et à ce moment qu'elle ‘a été faite'. » (p.232)
+            </div>
+            <p>L'impossibilité dont il s'agit ne doit pas être attribuée à une absence ou une imprécision du matériel historique :</p>
+            <div class="citation">
+                « Même si on possédait toutes les données imaginables, ces questions en général ne recevaient pas de réponse. »
+            </div>
+            <p>La raison de cela est illustrée au travers de certains exemples dont notamment celui de la découverte de l'oxygène. Trois savants, au moins, pourraient prétendre être l'auteur de la découverte de l'oxygène : Carl Scheele, Joseph Priestley et Antoine Lavoisier. Les travaux des deux derniers sont reliés entre eux ; celui du premier s'est effectué en parallèle et a été publié alors que ceux de Priestley et Lavoisier étaient déjà connus, mais l'avancement parallèle de sa recherche est attesté par une lettre adressée à Lavoisier. Différentes observations expérimentales réalisées par ces savants, échelonnées sur trois années, entre 1774 et 1777, peuvent être dites porter sur la substance finalement identifiée par Lavoisier. Le problème que pose la tentative d'arrêter la date de la découverte est relatif à l'existence de critères. Par exemple, l'échantillon isolé doit être ‘relativement' pur. Mais suffit‑il d'un critère expérimental ? Les interprétations données par les chercheurs étaient différentes ; mais même les dernières publications de Lavoisier, en 1776 et 1777, incluaient encore les notions de ‘principe d'acidité' et de ‘calorique'. Jusqu'où doit aller l'exigence de conscience réflexive sur la signification du travail réalisé ? Arrêter la date de la découverte à un point précis de cette période et l'attribuer à un individu est inévitablement entaché d'arbitraire car la notion de découverte doit comprendre non seulement une observation mais la conscience de sa signification, son interprétation, permettant de l'intégrer à une théorie. Et l'assimilation théorique de l'observation</p>
+            <div class="citation">
+                « est un processus qui a nécessairement une certaine durée et concerne plusieurs personnes. » (p.238)
+            </div>
+
+            <p>Kuhn met en question la ponctualité de l'événement au niveau temporel et au niveau humain. Mais il reste dans un cadre de pensée qui ne fait pas de distinction entre ‘stabilisation d'un schème d'activité' et ‘connaissance de la réalité'. La découverte de l'oxygène ressemble à la découverte de l'Amérique : la seule chose qui compte vraiment est de savoir comment il a été possible de mettre le pied sur la terre nouvelle. Le reste, c'est‑à‑dire la reconnaissance publique de cette nouvelle réalité, s'ensuivra. L'histoire se complique un peu parce qu'elle est décrite comme un travail collectif, et parce que l'événement perd un peu de sa ‘positivité' de par l'intrication entre les faits et les théories, entre les réponses qui sont trouvées et les questions qui ont été posées. Mais elle reste circonscrite dans l'univers de la pratique scientifique. La mise en question qu'introduit Stengers est beaucoup plus profonde. La connaissance de la réalité ne se confond pas avec l'activité de stabilisation, d'accommodation qui mobilise l'intelligence des chercheurs. L'existence d'un « être identifié au laboratoire » est indissociable de</p>
+            <div class="citation">
+                « la multiplication des pratiques qui, peu à peu, et chacune selon ses intérêts et ses problèmes propres, le prennent en compte, découvrent des possibilités nouvelles qui n'auraient pas de sens s'il n'existait pas. » (Stengers, 1997, p.52)
+            </div>
+            <p>Il n'y aurait aucun sens à se soigner avec un antibiotique si l'existence des bactéries était niée. Si un biologiste veut aujourd'hui mettre en doute l'existence des bactéries, il lui faudra parvenir à changer le sens de toutes les pratiques qui ne se comprennent aujourd'hui que par l'invocation de leur existence. Ce n'est plus simplement qu'il faut considérer la découverte comme un processus collectif, c'est qu'il faut sortir du laboratoire, il faut démocratiser la découverte de la réalité. La pratique scientifique telle que nous l'avons considérée précédemment, et qui était le seul objet de la description de Kuhn, ne suffit pas à faire exister les nouveaux êtres qui viennent enrichir notre réalité et rendre raison de nos nouvelles pratiques :</p>
+            <div class="citation">
+                Les êtres produits par la science ont donc bel et bien titre à participer à ce que nous appelons « réalité », et cela au sens le plus fort. Ce titre leur est dû non pas parce que leur existence aurait été prouvée par une science – ce qu'une démonstration expérimentale établit, une autre, avec des moyens techniques et des références renouvelées, peut toujours le détruire–, mais parce qu'ils ont pu devenir un véritable carrefour pour des pratiques hétérogènes, chacune dotée d'intérêts différents, chacune ayant donc exigé des êtres en question qu'ils soient capables de se lier à ses questions et à ses intérêts de manière fiable. Cette définition de la réalité n'est‑elle pas, en fait, la plus forte que nous puissions invoquer ? [Stengers, 1997, p.53. (it. aj.)]
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'énoncé : du contextuel à l'universel === -->
+    <div class="capsule" id="capsule-enonce">
+        <div class="capsule-title">📝 L'énoncé : du contextuel à l'universel</div>
+        <div class="capsule-content">
+            <p>Nous confondons l'activité scientifique et la découverte de la réalité parce que l'on considère que les énoncés qui sont vrais à un moment donné sont identiques à ceux qui ont été un jour produits dans le laboratoire ; et que, par conséquent, les énoncés qui sont produits dans le laboratoire sont identiques à ceux qui seront un jour jugés vrais ou faux. Ce qui nous autorise, pour finir, à penser qu'ils sont d'ores et déjà vrais ou faux, même si personne ne le sait encore – l'avenir de la science le révèlera. On oublie le travail de généralisation, de dé‑contextualisation, de dé(s)‑attribution qui s'est accompli entre les deux moments. Un énoncé vrai, un énoncé sur la réalité, tel qu'on peut en rencontrer dans une encyclopédie, ou que l'on avance à titre d'argument incontestable dans une démonstration, s'écrit sous la forme : « Chaque neutron libère 2,5 neutrons ». Les énoncés par lesquels un scientifique décrit à la communauté de collègues le fait qu'il est parvenu à stabiliser porte, lui, la marque de son auteur et des conditions particulières dans lesquelles la stabilisation a eu lieu. On dira, dans le meilleur des cas, que ces énoncés sont « vrais dans le cadre de l'expérience réalisée ». Mais cette vérité‑là n'est pas la vérité tout court. C'est une vérité conditionnée, contextuelle. La question de la vérité se pose au sujet d'énoncés prétendant dire la réalité ; ils sont vrais si effectivement ils disent la réalité ; ce sont des énoncés qui sont abstraits de toute situation particulière d'énonciation. En dehors du laboratoire, lorsque nous parlons du monde avec le langage ordinaire, qui contient nécessairement des termes provenant des laboratoires scientifiques, nous parlons de la réalité, et de ce qui est vrai ou faux : quand nous disons que la neige est blanche, nous parlons de la réalité, de quoi d'autre pourrions‑nous parler – et ‘pouvoir' ne désigne pas de l'empirique mais du logique, du grammatical. Nous sommes réalistes parce que nous ne doutons pas que nous parlions de la réalité – que nous parlions de ce que la réalité est, lorsque nous produisons des énoncés qui sont vrais, ou n'est pas lorsqu'ils sont faux. Il est vrai ou il est faux que ‘la neige est blanche' ; si cela est vrai, ‘la neige est blanche' désigne un fait réel, le fait que la neige est blanche. Ce fait réel nous savons en quoi il consiste lorsque nous sommes capables de justifier de l'usage que nous faisons de l'énoncé ‘la neige est blanche', quand nous connaissons le sens de l'énoncé. Nous savons à quoi mesurer la valeur de vérité de l'énoncé ‘la neige est blanche'. Il n'y a aucun sens à dire que le langage pourrait être à propos d'autre chose que la réalité, ou que la réalité pourrait être quelque chose dont nous ne pouvons rien dire si ce n'est que nous ne pouvons rien en dire.</p>
+
+            <p>À propos des énoncés produits en laboratoire, et au moment où ils sont produits, la question de la vérité ne se pose pas – c'est encore seulement la question de la signification qui est en jeu au travers de la stabilisation de pratiques auxquelles un énoncé prétend se référer. La notion de vérité ne peut concerner des concepts scientifiques que si ceux‑ci ont été projetés dans le langage ordinaire ; c'est en vertu de cette projection que nous parlons de vérité, et non de ce qu'il s'est passé dans le laboratoire. Ce n'est pas la vérité du discours scientifique produit dans le cercle des praticiens qui rend possible la projection – c'est la projection de termes scientifiques dans le discours ordinaire, la propagation de savoirs‑faire dans les pratiques ordinaires qui constituent la vérité des énoncés scientifiques : la vérité n'est pas la cause mais la conséquence de l'inscription de ces énoncés et de ces pratiques dans l'histoire de nos formes de vie. La connaissance produite dans le cercle de la communauté scientifique, en tant qu'énoncés et pratiques constituant la signification de ces énoncés, est une des sources de modification ou d'évolution de l'usage du concept de réalité et donc de vérité. Ce n'est pas une source unique, qui se suffit à elle‑même ; elle doit être couplée à d'autres modes d'énonciation, à d'autres pratiques, à d'autres intérêts : économiques, politiques, écologiques, idéologiques.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Intéresser === -->
+    <div class="capsule" id="capsule-interesser">
+        <div class="capsule-title">🎯 Intéresser</div>
+        <div class="capsule-content">
+            <p>Une façon de comprendre ce processus d'inscription d'un pouvoir‑faire, élaboré au laboratoire, dans le domaine public de nos intérêts et nos pratiques est illustrée par le récit que donne Latour de la reconnaissance du fait que la fission de l'uranium engendre une réaction en chaîne<sup><a href="#ref302" class="reference-link" id="r302">[302]</a></sup>. Ainsi que le disait Kuhn, la reconnaissance de ce fait n'a rien d'un événement ponctuel et ce n'est pas l'affaire d'un seul homme. Mais la similitude est trompeuse car, ici, l'étalement dans le temps n'est pas celui de la stabilisation expérimentale ou de l'assimilation théorique du fait expérimental. Et les différents acteurs ne sont pas des scientifiques concurrents – ou pas seulement. La durée que prend la reconnaissance d'un fait tient à l'obligation qu'à Joliot de produire un discours apte à convaincre de l'intérêt de ce qu'il prétend pouvoir se rendre capable de faire, de la pertinence de son savoir‑faire en dehors du laboratoire, dans l'espace public. Il lui faut montrer la pertinence d'un savoir‑faire développé dans le contexte d'un dispositif de laboratoire pour l'espace public des pratiques qui incarnent notre mode d'être‑dans‑le‑monde, notre connaissance de la réalité.</p>
+
+            <p>Imaginons un chercheur qui prétendrait avoir découvert un nouvel élément de réalité et dont la pratique expérimentale n'aurait absolument aucun intérêt, aucun rapport avec la moindre de nos pratiques publiques : son pouvoir‑faire, nous l'appellerions un divertissement, un acte gratuit, c'est‑à‑dire sans valeur, et certainement pas un savoir ; et lui, serait qualifié, avec condescendance, d'original, d'enfant attardé, habile peut‑être, mais certainement pas de scientifique. La publication de résultats scientifiques, même dans le cadre d'une recherche dite fondamentale, ne doit pas simplement montrer, avec modélisation et résultats expérimentaux à l'appui, qu'une certaine stabilisation a été obtenue. Elle doit prendre soin de mettre en évidence quel est l'intérêt de ce travail, dans quel champ de préoccupation plus générale il s'inscrit, en se référant aux travaux antérieurs, mais aussi, et surtout, en le projetant au dehors du monde de la recherche, dans le monde de la vie, celui où nous construisons des ponts, utilisons des voitures, où nous souffrons de maladies, racontons les histoires de nos origines et faisons des guerres, consommons de l'électricité, où nous voulons gagner du temps et de l'argent, économiser de l'énergie, repousser notre mort, espionner des ennemis, communiquer, voyager, plus vite, plus loin, produire des armes, plus efficaces, plus autonomes…</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Circulation de la référence (suite) – Opposition interne-externe === -->
+    <div class="capsule" id="capsule-circulation">
+        <div class="capsule-title">🔄 Circulation de la référence (suite) – L'opposition interne‑externe</div>
+        <div class="capsule-content">
+            <p>Même étalé dans le temps, il y a bien, pour Kuhn, un événement correspondant à une découverte. Et si l'identité de l'auteur reste discutable, aucun doute que cette découverte relève de la seule activité des praticiens. Car la découverte ressortit à ce que Kuhn appelle ‘l'histoire interne'. Elle se produit au cours d'une période de production de savoir pendant laquelle les praticiens forment</p>
+            <div class="citation">
+                « une subculture spécifique, dont les membres sont le public exclusif et les seuls juges du travail de chacun des autres »<sup><a href="#ref303" class="reference-link" id="r303">[303]</a></sup>
+            </div>
+            <p>tandis que le contexte est pertinent avant cet intervalle de temps<sup><a href="#ref304" class="reference-link" id="r304">[304]</a></sup>, et éventuellement après, pour comprendre l'impact de la production scientifique sur la pensée extra‑scientifique. Ceux qui n'appartiennent pas à la communauté apparaissent comme de simples récepteurs. L'histoire interne et l'histoire externe ne s'articulent pas vraiment, mais plutôt s'entrecroisent, se passent le relais dans un récit qui va du contexte culturel d'une découverte jusqu'à sa réception publique, simple formalité d'enregistrement, en passant par l'activité des praticiens.</p>
+
+            <p>Lorsque la connaissance de la réalité est attachée à la création de pratiques publiques, la nature des acteurs engagés dans le processus de reconnaissance d'une nouvelle réalité vient brouiller le clivage, sanctionné par Kuhn, entre ce qui est externe et ce qui est interne à l'activité scientifique. Les différents moments du processus sont plus structurels que temporels : ce sont les différentes relations nouées entre les différents acteurs. Et il y a ici un sens réel à parler d'articulation pour décrire l'intégration par laquelle ces échanges forment le système de production du savoir, savoir‑dire‑la‑réalité, le « système circulatoire des faits scientifiques ». Ce système englobe et prolonge le circuit de circulation de la référence mis en évidence par l'analyse de l'étude du sol amazonien. De nouveaux acteurs entrent en scène, les autres acteurs du processus de reconnaissance, ce sont tous ceux, scientifiques et autres, qui auront dû être convaincus pour que la référence circule et vienne trouver une place dans notre langage de la réalité. Cela ne signifie pas que l'anthropologie des sciences qui cherche à décrire ce système hétérogène soit « une simple analyse de la rhétorique de la science. » La place donnée aux mots, aux énoncés, n'exclut pas l'intervention des choses. Mais, s'il faut rester dans le langage si familier de la représentation, au lieu de dire qu'il n'y a pas de représentation sans réalité en attente d'être représentée, disons qu'il n'y a pas de réalité sans représentation. Il n'y a pas de réalité sans les mots pour la dire, il n'y a pas de réalité non dite :</p>
+            <div class="citation">
+                « We do not see what we do not see, and what we do not see does not exist. » (Maturana &amp; Varela, 1987, p.242)
+            </div>
+            <p>Et il n'y a pas de mot sans signification, il n'y a de représentation que reconnue en tant que telle. La question est donc de savoir comment, selon quelle procédure, un énoncé est reconnu comme une connaissance de la réalité.</p>
+
+            <p>Pour Fuller, <em>La Structure des Révolutions Scientifiques</em>, en mettant l'accent sur l'autonomie de la communauté scientifique dans la production de connaissance, a contribué de manière décisive à ce que soit évitée l'interrogation sur les moyens et les fins de l'entreprise scientifique :</p>
+            <div class="citation">
+                « [A]lthough Kuhn is normally seen as having subverted this distinction [between the contexts of discovery and justification], a closer look reveals that his real interest was in showing that all the key processes of science could be explained in terms of science's self organizing principles. » (Fuller, 2000, p.34)
+            </div>
+            <p>La découverte de l'indépendance du développement de la connaissance semble fort heureusement coïncider, note Fuller, avec un mouvement de revendication démocratique qui agitait la société américaine concernant la responsabilité des scientifiques. (p.70) La communautarisation des scientifiques apparaît davantage comme un réflexe d'union face à un ennemi commun que comme une socialisation de l'entreprise scientifique. La communauté scientifique est tout autant le sujet de la connaissance que l'était l'individu dans l'historiographie traditionnelle :</p>
+            <div class="citation">
+                « Though the units which exchange those statements are individual scientists, understanding the advance of knowledge, the outcome of their practice, depends upon seeing them as atoms constitutive of a larger whole, the community of practitioners of some scientific specialty<sup><a href="#ref305" class="reference-link" id="r305">[305]</a></sup>. »
+            </div>
+            <p>Le développement de la connaissance est le résultat de la seule activité scientifique d'une communauté de praticiens. Le caractère communautaire du sujet de la connaissance élimine la portée épistémologique des questions relatives à la vie sociale de la profession scientifique et aux intérêts individuels. L'autonomie élimine la portée épistémologique des questions relatives aux relations entre l'univers des scientifiques et le reste de la société.</p>
+
+            <p>L'histoire interne du développement de la connaissance ressemble alors à un objet construit pour donner corps à une idée de la science en tant qu'entreprise de connaissance telle qu'elle doit l'être dans le cadre d'une opposition platonicienne entre savoir et opinion, entre ceux qui produisent le savoir, et ceux qui, dans le meilleur des cas, peuvent le recevoir<sup><a href="#ref306" class="reference-link" id="r306">[306]</a></sup> ; l'idée d'une science, comprise comme savoir qui résulte de l'activité des scientifiques, pure d'influences extra‑scientifiques.</p>
+
+            <p>Admettre l'utilisation, ‘impure', de la recherche scientifique par le monde extra‑scientifique n'empêche évidemment pas de revendiquer la pureté de la recherche scientifique. Et les scientifiques ont raison, souligne Stengers, de défendre la distinction entre une recherche et son application. Mais ils ont tort, aussi. S'ils ont raison, tout ce qui a été dit précédemment quant à la distinction entre pratique et connaissance interdit de croire que ça peut être sur la base d'une distinction entre une connaissance et son application. Il n'y a pas, d'un côté, la connaissance, produite par la pure activité scientifique, et de l'autre, son application, impliquant des intérêts du monde extra‑scientifique. Il n'y a pas, d'un côté, la connaissance, et de l'autre, ce que l'on en fait : car c'est justement ce que l'on fait du pouvoir‑faire élaboré par les scientifiques qui le constitue en connaissance du monde dans lequel nous vivons. Compte tenu de la distinction entre pratique scientifique et connaissance de la réalité, ont‑ils raison alors, précisément du fait que la recherche scientifique se limiterait à la pure constitution d'un pouvoir‑faire ? C'est‑à‑dire à la constitution d'un pouvoir‑faire ‘pur' ? Est‑ce alors que les scientifiques ne joueraient finalement aucun rôle dans la constitution de la connaissance, qui ressortirait seulement à l'appropriation d'un pouvoir‑faire par le corps social ?</p>
+
+            <p>La recherche scientifique, même si elle est considérée, non pas comme le processus de production de la connaissance de la réalité, mais comme une activité de stabilisation de pouvoir‑faire, n'est pas indépendante des intérêts et des valeurs qui traversent la société dans son ensemble. Hooker souligne constamment cette intrication entre développement de la recherche scientifique et préoccupations sociales,</p>
+            <div class="citation">
+                « the increasingly intimate relationship between the development of science and the development of the supporting society in which the scientific institution operate and which they help to transform. Many of these latter issues are of course central to the debates about the societal and ethical value of science and technology.» (Hooker, 1987, p.208‑209)
+            </div>
+            <p>La prise de conscience de la façon dont les résultats de la recherche scientifique sont susceptibles de transformer le monde doit conduire selon lui à la création d'institutions assurant la médiation entre la recherche scientifique et l'organisation de la vie sociale, notamment en régulant les politiques de recherches :</p>
+            <div class="citation">
+                « [W]e need institutions that are capable of mediating between science and society. [...] Some of the many roles such an institution is now call upon to fill are the following : the assessment of technological impacts and response accordingly ... international communication and coordination of research and development; designs of political processes of approval for science policy ; research support, technological development, approval and aid ... » (p.234)
+            </div>
+            <p>De ce qui constitue à un moment donné les pôles d'intérêts et les valeurs de la société dépend l'évolution des politiques de recherche et la possibilité de poursuivre un programme de recherche ou la nécessité à plus ou moins long terme de l'abandonner. Un programme de recherche pour vivre et se développer doit se montrer intéressant au‑delà de l'enceinte du laboratoire.</p>
+
+            <p>Les scientifiques ont à la fois raison et tort de défendre la distinction entre une recherche et son application, écrit Stengers, car</p>
+            <div class="citation">
+                « le scientifique n'est pas maître des intérêts qui vont permettre à sa création de ‘sortir du laboratoire' mais il est assez rare que ces intérêts se coalisent d'eux‑mêmes sans qu'il ait activement cherché à les promouvoir. » (Stengers, 1997, p.60)
+            </div>
+            <p>Si l'on comprend la science comme une entreprise de connaissance du monde dans lequel nous vivons, il est vain d'opposer le pur et l'impur. À la différence de la recherche sur le génome humain qui est inséparable des applications qu'elle promet, la physique des particules peut être qualifiée de recherche pure. Mais cette ‘pureté' traduit le fait que</p>
+            <div class="citation">
+                « l'existence d'une nouvelle particule se produisant de manière ultra‑fugace dans un supercollider ne fait de différence pour nul autre que les physiciens spécialistes. » (p.65)
+            </div>
+            <p>S'ils avaient pu faire valoir la possibilité d'impliquer les particules élémentaires dans des domaines pratiques, les physiciens ne se seraient certainement pas privés de le faire, comme ce fut fait avec les noyaux atomiques et la radioactivité. Le travail d'auto‑valorisation s'est focalisé, faute de mieux sur des arguments idéologiques,</p>
+            <div class="citation">
+                « depuis la compétition avec l'Est jusqu'aux démonstrations pseudo‑historiques prouvant le lien entre la puissance économique d'une nation et l'intérêt qu'elle consacre aux grandes questions qui préoccupent l'humanité. » (p.66)
+            </div>
+
+            <p><strong>Circulation de la référence (suite)</strong></p>
+            <p>Faire la distinction entre l'activité scientifique et la connaissance de la réalité ne permet pas seulement de mettre en évidence des spécificités, par exemple la temporalité de la pratique scientifique, la logique de justification de la connaissance. Cela permet aussi de mettre en lumière le rôle de la publication, des alliances, de l'organisation de la communauté, de la mobilisation du monde – autant de dimensions qui ne sont pas des ajouts extérieurs à l'activité scientifique, mais des moments constitutifs du processus de connaissance de la réalité. La distinction entre l'activité scientifique et la connaissance de la réalité permet de voir que la science n'est pas une activité qui se suffit à elle‑même, mais qu'elle est un processus complexe qui implique des acteurs multiples, des intérêts divers, des pratiques variées. La science n'est pas une entité autonome, un sujet abstrait qui produirait la connaissance de la réalité ; elle est un réseau d'activités, de relations, de transformations, qui font émerger la réalité.</p>
+
+            <div class="citation">
+                La qualité d'une référence scientifique ne dépend pas de quelque salto mortale qui la projeterait hors du discours et de la société et la ferait accéder aux choses, mais plutôt de l'étendue de ses transformations, de la sûreté de ses connections, de l'accumulation graduelle de ses médiations, du nombre d'interlocuteurs qu'elle fixe, de son habileté à ouvrir les non‑humains aux mots, de sa capacité à intéresser et à convaincre les autres et de son mode d'institutionalisation de ces flux. (Latour, 2001, p.101)
+            </div>
+
+            <p><strong>Le contenu conceptuel</strong></p>
+            <p>Les quatre moments qui ont été décrits précédemment sont indispensables pour que le projet de Joliot puisse voir le jour, être développé, et faire émerger une nouvelle connaissance de la réalité. Mais ces quatre moments ne sont eux‑mêmes possibles et nécessaires que parce que Joliot a un projet, et un projet capable de les nourrir, de les faire tenir ensemble, d'alimenter la circulation. Ce cinquième moment du processus de connaissance tient une place aussi essentielle que les quatre autres, mais il n'existe pas isolément, il ne se suffit pas à lui‑même. Sans lui,</p>
+            <div class="citation">
+                « les quatre autres dépériraient instantanément. Le monde cesserait d'être mobilisable ; déçus, les collègues s'égailleraient dans toutes les directions ; les alliés cesseraient d'être intéressés, de même que le grand public, après s'être scandalisé ou avoir marqué son indifférence. Mais une mort tout aussi rapide suivrait la suppression de n'importe laquelle des quatre autres boucles. » (p.111)
+            </div>
+            <p>La capacité qu'a Joliot de se trouver au cœur des quatre activités précédentes est liée à sa compréhension de la réaction en chaîne, à sa compétence de scientifique, à la fiabilité dont témoignera son projet. Mais cette compréhension et cette compétence à elles seules ne feront rien exister de nouveau. Et cette fiabilité n'est pas le point de départ du processus de connaissance, elle est son aboutissement. Au point de départ, il n'y a que l'espoir, la conviction, la prétention du scientifique à pouvoir conduire un projet fructueux. La fiabilité doit être constituée, le projet doit s'inscrire dans le temps réel du processus de connaissance, avec ses différents moments, et les contingences qui leur sont attachées, différents moments qu'il doit faire tenir ensemble :</p>
+            <div class="citation">
+                « Malgré son nom, le contenu d'une science n'est pas un ‘contenu' mais un contenant. » (p.112)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Réalisme et historicité === -->
+    <div class="capsule" id="capsule-realisme">
+        <div class="capsule-title">🌍 Réalisme et historicité</div>
+        <div class="capsule-content">
+            <p>La description du processus de connaissance de la réalité qui vient d'être présentée n'est pas moins ‘réaliste' que celle qui présente la pratique scientifique comme une activité de découverte dont les résultats sont indépendants de tout ce qui n'est pas ‘intérieur' à la communauté scientifique. Mais en revanche, elle vide complètement de sens l'idée d'une opposition entre ce qui serait intérieur et ce qui serait extérieur au processus de connaissance et l'idée que le développement de la connaissance est contraint par une nécessité qui détermine a priori la nature des vérités qu'il mettra à jour.</p>
+
+            <p><strong>Réalisme</strong></p>
+            <p>Elle n'est pas moins réaliste parce qu'elle ne porte aucune atteinte au concept de réalité. Elle ne dit pas que le monde que nous pensions connaître n'est pas vraiment la réalité mais qu'il est construit de toutes pièces par des êtres aveuglés par leurs intérêts, ou que le langage, la rhétorique, ‘l'espace logique de la justification', constituent une caverne dans laquelle nous serions tous, au même titre, irrémédiablement enfermés. Elle dit que la réalité n'est pas autre chose que le monde que nous connaissons et dans lequel nous vivons, que l'intérêt ne nous aveugle pas mais qu'il est le moteur de notre action, de notre relation avec le monde. Et les mots, qui donnent sens à nos actions et guident nos relations, loin de ne faire qu'illusion, ou d'être une barrière, sont complètement chargés de réalité, manifestée dans sa complexité par la diversité de leur usage ; une réalité tout aussi indépendante de chacun d'entre nous que l'est justement la toile de vérité qui sous‑tend le jeu subtil de nos assertions ordinaires.</p>
+
+            <p>Être réaliste, c'est reconnaître la pleine présence de la réalité. La réalité n'est pas cette terre immaculée toujours dissimulée derrière un voile dont quelques rares esprits, particulièrement éclairés, auraient le privilège d'apercevoir les frémissements. Elle n'est pas l'essence éthérée de faits torturés par une expérience capricieuse :</p>
+            <div class="citation">
+                « Et si l'on demandait quel est ce milieu où nous nous trouvons, une fois rejetée la distinction du fait et de l'essence, il faut répondre que c'est le milieu même de notre vie, et de notre vie de connaissance<sup><a href="#ref308" class="reference-link" id="r308">[308]</a></sup>. »
+            </div>
+            <p>L'essence de la réalité n'est pas ailleurs que dans les mots que nous utilisons pour décrire ou expliquer le monde dans lequel nous vivons, et ces mots‑là ne signifient pas autre chose que le réseau de pratiques assimilées, incorporées, qui structurent l'ensemble des comportements partagés, qui constituent une forme de vie collective.</p>
+
+            <p><strong>Interne‑externe</strong></p>
+            <p>L'opposition interne‑externe n'a plus de sens parce que le scientifique aussi bien que la communauté ne sont plus des entités abstraites. La connaissance scientifique se produit quelque part, elle est située, elle est le résultat d'une pratique collective, d'une histoire, d'un réseau de relations. Il n'y a pas d'un côté l'intérieur de la science, pur et autonome, et de l'autre l'extérieur, le social, le politique, l'économique. Il y a un seul et même processus, qui est à la fois cognitif, social, politique, économique, technique. La réalité n'est pas donnée avant ce processus ; elle émerge de ce processus. C'est pourquoi l'opposition entre découverte et construction est une fausse opposition : la réalité est à la fois découverte et construite, elle est le produit d'une histoire, d'une pratique, d'une activité humaine. Et c'est pourquoi la science n'est pas un sujet abstrait qui produirait la connaissance de la réalité ; elle est une activité humaine, située, contingente, ouverte, qui fait émerger la réalité dans laquelle nous vivons.</p>
+
+            <p>Cette conception de la science comme processus historique et social n'est pas un relativisme. Elle ne dit pas que tout est équivalent, que n'importe quelle théorie est aussi bonne qu'une autre. Elle dit que la valeur des théories ne se mesure pas à un aune transcendant, mais à leur capacité à s'inscrire dans des pratiques, à faire une différence, à intéresser des acteurs, à ouvrir des possibles. La vérité n'est pas un rapport de correspondance entre une théorie et une réalité pré‑donnée ; elle est un rapport de circulation, de transformation, d'inscription dans un réseau de pratiques. La réalité est ce qui résiste, ce qui fait différence, ce qui oblige à transformer nos pratiques, ce qui nous intéresse.</p>
+
+            <p>La description orwellienne n'a pas pour seul effet de déréaliser le passé, de le rendre lisse et glissant, débarrassé des aspérités de la vie‑ensemble‑dans‑le‑monde, elle a aussi pour effet de rendre le présent insaisissable, ou de le présenter comme tel. Que le pouvoir qui s'impose soit celui d'une nécessité naturelle (comprendre inhumaine) ou humaine, incarnée par la puissance incontrôlable de quelques intérêts individuels, la logique du récit montre que cela devait arriver. Et il arrivera ce qu'il doit arriver. Le réalisme sans historicité nous convainc que la réalité s'explique, dans un laboratoire, et que cette explication s'impose d'elle‑même. Mais la réalité dont nous parlons n'est pas enfermée dans les courbes et les modèles qui s'empilent dans le laboratoire. Elle se vit autant qu'elle s'explique, et elle se fait par et dans ce qui contribue à la transformation de nos pratiques collectives. Les alliés qui se sont unis pour que cette réalité advienne se sont impliqués parce que le pouvoir‑faire expérimental qui a été proposé faisait une différence intéressante, avantageuse, pertinente, pour eux, pour la réalisation de leur propre projet. Il se pourrait que ce qui est avantageux pour certains recouvre comme négligeable ce qui pour d'autres pourrait être un inconvénient ; ce recouvrement est possible tant que ces autres sont convaincus par la toute puissante 'autonomie' de la connaissance scientifique, la nécessité de la réalité :</p>
+            <div class="citation">
+                Le relief des pouvoirs qui, dans notre société, marquent les limites de ce que nous appelons démocratie traduit assez précisément la différence entre ceux qui ont les moyens de mettre à l'épreuve ce qu'on leur propose, de poser la question « en quoi est‑ce pertinent en ce qui me concerne ? » et ceux à qui l'on s'adresse comme à des ignorants, qui doivent apprendre à comprendre et à respecter l'objectivité de savoirs produits par d'autres. (Stengers, 1997, p.96)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'énaction, pour finir === -->
+    <div class="capsule" id="capsule-enaction-final">
+        <div class="capsule-title">🌱 L'énaction, pour finir</div>
+        <div class="capsule-content">
+            <p><strong>Les deux moments de la connaissance</strong></p>
+            <p>La distinction épistémologique qui a été faite entre pratique scientifique comme réalisation d'un pouvoir‑faire et connaissance de la réalité est comparable à celle que permet la théorie de l'énaction entre cognition et connaissance. Ces deux moments s'identifient à deux ‘points de vue' :</p>
+
+            <p>Du point de vue du système cognitif, l'acquisition d'un savoir est une transformation qui résulte d'une perturbation de sa structure – cette transformation préserve l'organisation du système, son unité. Ce en quoi consiste cette connaissance dépend de ce que le système peut faire et des perturbations qu'occasionnent ses actions. Le savoir, à ce moment, est l'acquisition d'une aptitude qui est une sorte d'assimilation de la perturbation. On peut comparer le système cognitif à l'ensemble formé par un scientifique entouré de ses instruments de mesures et de description ; au lieu de perturbations, nous parlerons avec Pickering de résistances, la structure correspond à tout ce qui a été décrit comme le cadre de la pratique. Le cadre, a montré Pickering, comme la structure du système, doivent être transformés dans le temps réel, le temps éprouvé de l'interaction, de façon à faire émerger un point de stabilisation que l'on appellera un pouvoir‑faire. Dans les deux cas, cette stabilisation a été traduite par la notion d'accommodation.</p>
+
+            <p>Il n'y a aucun sens, lorsque l'on adopte le point de vue du système cognitif, qui s'affaire à inventer une nouvelle structure, à parler de vérité – pour le système, la seule question est de savoir si la nouvelle structure convient relativement aux exigences et aux contraintes que constitue le maintien de son organisation. Et il n'y en a pas non plus, lorsqu'on se situe dans le laboratoire où les scientifiques s'affairent à stabiliser un phénomène, constitué par les ‘déviations' des instruments de mesures.</p>
+
+            <p>Il y a un autre point de vue : sur le système cognitif, celui de l'observateur ‘extérieur' qui peut être le regard d'autrui aussi bien qu'un regard réflexif sur ‘soi‑même comme un autre'. Pour ce regard‑là, soutenu par le langage, le système est un élément parmi d'autres, regroupés sous le terme ‘environnement' du système, et qui sont déterminés, indépendamment les uns des autres. L'environnement est la Réalité dont les mots sont chargés. Lorsque l'observateur met en relation ce qui se passe au niveau du système cognitif avec des événements qui se produisent dans l'environnement, ce qui se passe, de son point de vue, dans le système cognitif, n'est pas une apparition, une émergence, c'est une imitation, ou ça doit être une imitation. Et c'est parce qu'il compare ce qui se passe d'un côté, dans le système, avec ce qui est de l'autre côté, dans l'environnement (c'est‑à‑dire dans la réalité), qu'il s'interroge sur la vérité de ce qu'il se passe dans le système. Le contenu d'une représentation cognitive est vrai si ce contenu est en accord avec la réalité ; ce qui suppose que l'on puisse disposer d'un ‘ce qui est la réalité' qui serve de référence. Il faut pouvoir ‘mesurer' la valeur de vérité de ce que l'on appelle ‘représentation' à ce que l'on sait être vrai.</p>
+
+            <p>De la même façon que l'on se pose la question de la vérité d'un énoncé dans le langage ordinaire sous la forme : « c'est ainsi » est vrai si il en est ainsi. On ne peut le faire que parce que l'on sait ce que cela signifie qu'il en est ainsi, que parce que cet énoncé a un sens établi, mis hors de question. Mais pour cela il faut que l'on ait ‘une réalité' ou un discours de la réalité par rapport auquel on puisse mesurer, sur lequel on puisse projeter, le contenu de l'énoncé dont on veut juger la valeur de vérité. Cela n'est pas le cas dans le laboratoire : il n'y a rien à quoi mesurer les énoncés, il n'y a que le phénomène, qui n'a de sens que par les conditions, la situation, le contexte, de sa manifestation. C'est pourquoi on ne peut pas faire semblant de replacer un énoncé, jugé vrai ou faux, dans son contexte d'apparition, ‘de découverte' ; la différence entre le moment où un énoncé est produit dans le laboratoire et celui où un énoncé peut être interrogé quant à sa valeur de vérité n'est pas seulement temporelle, elle est logique.</p>
+
+            <p><strong>Scientificité de l'énaction</strong></p>
+            <p>Les problèmes épistémologiques qui ont été posés à la théorie énactive concernaient, d'une part, le fait qu'elle ne puisse fonder sa scientificité sur l'existence d'une relation de représentation la liant à une réalité déterminée indépendamment du processus de connaissance ; d'autre part, son affirmation de l'historicité du sujet de la connaissance, qui doit s'étendre à la théorie elle‑même. La solution que propose l'approche énactive est de renoncer à ce point de vue de surplomb et d'assumer pleinement sa propre historicité et sa propre contingence. La théorie n'est pas une description définitive et universelle de la cognition ; elle est une proposition, une interprétation, un outil pour penser la cognition, qui est elle‑même le produit d'une certaine pratique, d'une certaine culture, d'une certaine histoire. Sa légitimité ne vient pas d'un fondement transcendantal, mais de sa capacité à être articulée à une expérience vécue, à faire sens pour des sujets cognitifs concrets. C'est cette articulation entre la théorie et l'expérience qui est au cœur de la pratique neurophénoménologique : il ne s'agit pas d'observer la cognition de l'extérieur, mais de la vivre, de l'explorer de l'intérieur, et de faire circuler entre ces deux pôles une compréhension qui ne soit ni purement objective ni purement subjective.</p>
+
+            <p>Cette exigence d'articulation entre la troisième personne (le discours scientifique) et la première personne (l'expérience vécue) est ce qui distingue l'approche énactive des autres approches scientifiques de la cognition. Mais elle soulève aussi une question délicate : lorsque le discours en troisième personne est la théorie elle‑même, non pas un discours produit dans le cadre de la théorie, mais un discours énonçant la théorie elle‑même, quel est le discours en première personne auquel il doit être articulé ? À quelle expérience vécue renvoie ou peut renvoyer le phénomène, la cognition comme énaction, que décrit celui qui formule la théorie de l'énaction ? La réponse à cette question est épistémologiquement cruciale si, selon les auteurs de la théorie énactive eux‑mêmes, un discours scientifique n'a de valeur épistémique, ne peut porter sur une réalité, qu'à la condition d'avoir une signification expérientielle, c'est‑à‑dire d'avoir été articulé à une expérience vécue.</p>
+
+            <p>La théorie de l'énaction, en tant que théorie de la cognition, doit donc être capable de s'articuler à une expérience vécue. Cette expérience, c'est celle du scientifique lui‑même, qui, en pratiquant la neurophénoménologie, explore sa propre cognition, sa propre expérience, et la met en relation avec les descriptions scientifiques de l'activité cérébrale. C'est dans cette circulation entre la première et la troisième personne que la théorie énactive trouve sa légitimité scientifique : non pas dans une correspondance avec une réalité pré‑donnée, mais dans sa capacité à rendre compte de l'expérience vécue, à la décrire, à la comprendre, à la transformer. C'est en ce sens que l'énaction est une approche non représentationniste : elle ne cherche pas à représenter une réalité indépendante, mais à comprendre comment la réalité émerge de l'interaction entre un système cognitif et son environnement, comment elle est vécue et constituée dans et par l'action.</p>
+
+            <div class="citation">
+                W. Sellars, <em>Science, perception and reality</em>, p. 40<sup><a href="#ref310" class="reference-link" id="r310">[310]</a></sup>
+            </div>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref299"><strong>299.</strong> P. Galison, <em>Image and Logic</em>, 1997.</p>
+            <p id="ref300"><strong>300.</strong> I. Stengers, <em>L'invention des sciences modernes</em>, 1997, p.52.</p>
+            <p id="ref301"><strong>301.</strong> T. Kuhn, <em>La structure des révolutions scientifiques</em>, 1970, p.232.</p>
+            <p id="ref302"><strong>302.</strong> B. Latour, <em>L'espoir de Pandore</em>, 2001.</p>
+            <p id="ref303"><strong>303.</strong> T. Kuhn, <em>La tension essentielle</em>, p.165.</p>
+            <p id="ref304"><strong>304.</strong> Ibid.</p>
+            <p id="ref305"><strong>305.</strong> S. Fuller, <em>Philosophy, Rhetoric and the End of Knowledge</em>, 2000, p.34.</p>
+            <p id="ref306"><strong>306.</strong> S. Fuller, 2000, p.42‑43.</p>
+            <p id="ref308"><strong>308.</strong> C. Rosset, <em>Le réel et son double</em>, 1976/1984, p.23.</p>
+            <p id="ref310"><strong>310.</strong> W. Sellars, <em>Science, Perception and Reality</em>, 1963, p.40.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_B2_2.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="04_Conclusion.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

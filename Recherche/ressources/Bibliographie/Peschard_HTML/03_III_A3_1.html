@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑3. Après Piaget – A3.1</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑3. Après Piaget – A3.1 (pages 347‑355)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-rappel">📌 Rappel</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-heritage">🧬 A‑3‑1 Héritage de Piaget</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-theorie-origine">🔬 Théorie de l'origine sensori‑motrice</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-differenciation">🌍 Différenciation de la réalité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-schemes">⚡ Schème des actions</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-equilibre">⚖️ L'équilibre</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-operations">🧩 Les opérations</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-realite">🌐 La réalité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-apres-piaget">🔮 A‑3‑2 L'après Piaget</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A3_2.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Rappel (fin de A-2) === -->
+    <div class="capsule" id="capsule-rappel">
+        <div class="capsule-title">📌 Rappel (fin de A‑2)</div>
+        <div class="capsule-content">
+            <p>… admettre aussi que « le mouvement et le sentir n'en sont que des modalités, dont l'unité précède et fonde la différence. »</p>
+            <p>La pensée qui se dessine ici et qui sera explorée dans le chapitre suivant (A‑3) est que dans l'intrication dynamique entre l'activité sensorielle et l'activité motrice, s'entre-définissent des gestes et des perceptions, et se constituent des formes, des formes dont l'existence semble être liée à la possibilité d'être anticipées par le corps. Pour le dire dans un langage qui nous ramène à la théorie de l'énaction, l'interaction entre le système perceptif et le système moteur apparaît comme un processus de co‑dépendance et de co‑définition qui fait émerger des structures cognitives. Ces structures pourraient être vues comme des formes d'activité stabilisées du système originaire, sensori‑moteur, sollicité en permanence par la relation de couplage qui le lie à l'environnement du système vivant.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-3-1 Héritage de Piaget === -->
+    <div class="capsule" id="capsule-heritage">
+        <div class="capsule-title">🧬 A‑3‑1 Héritage de Piaget</div>
+        <div class="capsule-content">
+            <p><strong>L'énaction et la psychologie génétique</strong></p>
+            <p>L'idée qui est au cœur de la théorie de l'énaction est que les structures cognitives émergent des schèmes sensori-moteurs qui permettent à l'action d'être perceptuellement guidée. (Varela &amp; al., 1991, p.176) Cette idée, reconnaît Varela, était déjà présente dans les travaux de psychologie cognitive de J. Piaget. Elle est exprimée au travers d'une épistémologie génétique visant à retracer le processus de constitution de la pensée abstraite, des fonctions cognitives de haut niveau, en suivant le développement des aptitudes sensori-motrices dès le plus jeune âge. Ce que montre Piaget, selon Varela, est la façon dont des structures cognitives émergent de schèmes récurrents de l'activité sensori-motrice. L'enfant est d'abord considéré comme un simple système sensori-moteur, et c'est à partir du développement de l'activité sensori-motrice qu'est expliquée la connaissance d'un monde extérieur et des objets localisés dans l'espace et dans le temps. Les études conduites par Piaget fourniraient ainsi une sorte de complément ‘psycho-comportemental' à la théorie de l'énaction. Il y a chez Piaget, rappelle Varela, trois concepts fondamentaux qui sont mis en œuvre pour expliciter la notion d'intelligence : structure, assimilation, accommodation, et il est possible d'apercevoir une correspondance conceptuelle entre certaines notions fondamentales de la théorie énactive de la cognition et l'épistémologie piagétienne :</p>
+            <div class="citation">
+                « [T]he Piagetian perspective of biological assimilation can be rephrased very naturally in the context presented here of autonomous systems and structural plasticity. » (Varela, 1979, p.256-257)
+            </div>
+            <p>L'adaptation est vue, chez Piaget, comme un équilibre entre l'assimilation et l'accommodation que la structure accomplit ; l'adaptation présuppose une cohérence sous-jacente, qui n'est rien d'autre que l'organisation, laquelle est, chez Varela, l'aspect invariant des changements structurels :</p>
+            <div class="citation">
+                « [L]'organisation est inséparable de l'adaptation : ce sont deux processus complémentaires d'un seul mécanisme, le premier étant l'aspect interne du cycle dont l'adaptation constitue l'aspect externe » (Piaget, 1963, p.256)
+            </div>
+            <p>Il est intéressant de revenir sur certaines des idées essentielles de la conception piagétienne de la constitution des capacités cognitives et de la construction de la réalité pour comprendre en quoi consiste la correspondance entre cette psychologie ‘expérimentale' et la théorie énactive.</p>
+            <p>L'intérêt de la psychologie génétique pour la théorie de l'énaction tient à la généralité à laquelle elle prétend, généralité en quelque sorte verticale et horizontale. La généralité verticale tient au fait que Piaget ne fait pas de distinction essentielle entre le processus de développement de la connaissance de l'enfant et celui d'acquisition de connaissance par l'adulte et le scientifique :</p>
+            <div class="citation">
+                « [L]es questions les plus générales de formation des notions ou d'analyse des opérations intellectuelles peuvent souvent recevoir une solution pour ainsi dire à portée de main, sur le terrain de l'expérience psychogénétique » (Piaget, 1970, p.34)
+            </div>
+            <p>La généralité horizontale tient au fait qu'elle englobe la constitution de la connaissance mathématique aussi bien que physique, en faisant bien, néanmoins, la différence entre les deux. Le problème, toutefois, est que les travaux de Piaget ont fait l'objet d'une critique portant sur la priorité relative du concept et du percept et que cette critique vise là et semble mettre en cause précisément ce qui en fait une lecture énactive du développement des capacités cognitives.</p>
+            <p>Il est vrai que la reconnaissance ‘filiale' exprimée par Varela n'empêche pas une prise de distance : Piaget présente l'assimilation et l'accommodation sur fond d'un monde pré-déterminé. Il occupe, en quelque sorte, simultanément deux points de vue : celui du système cognitif, pour qui un ensemble de déterminations objectives viennent à émerger, et celui de l'observateur, pour qui le système cognitif étudié est un élément de son propre monde, et qui est donc déjà objectivé :</p>
+            <div class="citation">
+                « The laws of cognitive development, even at the sensori-motor stage, are an assimilation of and an accommodation to that pregiven world. » (Varela &amp; al., 1991, p.176)
+            </div>
+            <p>Cette critique est aussi adressée à Piaget par E. Thelen (1995), qui développe une approche dynamique du développement des aptitudes cognitives. Selon Thelen, en effet, Piaget considérait la cognition humaine comme un instrument résultant d'un processus d'adaptation biologique et doté d'une structure logique lui permettant de découvrir la réalité objective, indépendante, de la structure du monde.</p>
+            <p>Mais cette distance critique n'empêche pas E. Thelen de se reconnaître héritière de la pensée de Piaget, pas plus qu'elle ne met en cause la pertinence de l'analyse génétique pour l'énaction, car l'enfant dont Piaget étudie le développement des aptitudes cognitives est bien un agent énactif :</p>
+            <div class="citation">
+                « [W]e thus have an interesting tension in Piaget's work : an objectivist theorist who postulates his subject matter, the child, as an enactive agent, but an enactive agent who evolves inexorably into an objectivist theorist ». (Varela &amp; al., 1991, p.176)
+            </div>
+            <p>La critique portant sur le caractère acquis des concepts, en revanche, pourrait être cruciale. Il sera donc important de savoir en quoi elle consiste et quelle réponse a pu lui être apportée.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Théorie de l'origine sensori-motrice de la connaissance === -->
+    <div class="capsule" id="capsule-theorie-origine">
+        <div class="capsule-title">🔬 Théorie de l'origine sensori‑motrice de la connaissance</div>
+        <div class="capsule-content">
+            <p>Il était d'usage dans les années 30 et 40 de considérer, rappelle E. Thelen (Thelen, 1995, p.72), que le développement de l'enfant était un déroulement progressif et ordonné de capacités universelles suivant et reflétant la maturation du cerveau. La mise en place de coordinations motrices apparaissaient comme le simple produit du développement autonome du cerveau. Ces aptitudes étaient tenues pour être essentiellement d'origine biologique et de nature ‘corporelle' – c'est-à-dire sans rapport avec le développement de l'esprit et des capacités cognitives. Le travail de J. Piaget a ouvert la voie à une autre manière d'envisager le développement des aptitudes motrices et la relation entre ces aptitudes et les capacités intellectuelles.</p>
+            <p>Les expériences psycho-cognitives que met en place Piaget montrent selon lui que l'enfant doit être considéré à l'origine comme seulement un système sensori-moteur en développement. La période sensori-motrice de l'enfance forme le fondement de la cognition en présidant à la construction de structures mentales de base sur lesquelles s'élaboreront les aptitudes de plus haut niveau : les actions constituent</p>
+            <div class="citation">
+                « le point de départ des futures opérations de l'intelligence, l'opération étant une action intériorisée qui devient réversible et qui se coordonne avec d'autres en structures opératoires d'ensemble<sup><a href="#ref216" class="reference-link" id="r216">[216]</a></sup>. »
+            </div>
+            <p>L'enfance, en tant que stade sensori-moteur du développement de l'intelligence, est le moment où se constituent les fondements de la connaissance au travers de la mise en place des structures mentales simples dans lesquelles s'enracineront les pensées conceptuelles. Les études de différents stades du développement sensori-moteur doivent permettre de comprendre comment l'évolution des capacités sensori-motrices engendre une conception du monde extérieur avec des objets permanents localisés dans l'espace et dans le temps et une conception de soi-même, comme un objet parmi d'autres objets et comme un être doté d'une intériorité.</p>
+            <p>La relation entre le sujet connaissant, ou plus exactement ‘ce qui sera un sujet connaissant' et le milieu dans lequel il évolue, est appréhendée par Piaget en tant qu'activité opératoire. Il rejette aussi bien le rationalisme de son temps que ce qu'il appelle ‘le mythe de l'origine sensorielle'. Concernant une prétendue origine sensorielle de la connaissance, il affirme, dans le sillage gestaltiste, que la perception n'est pas un composé de sensations mais une composition immédiate de celles-ci. Il dénonce ainsi l'idée que les sensations se donneraient comme éléments préalables de la perception et que la perception en serait une synthèse secondaire. Les sensations ne sont pas indépendantes ; elles sont toujours déjà réunies en perceptions. Mais en outre, la perception, elle non plus, n'est pas une réalité autonome, elle dépend de la motricité. Il rappelle<sup><a href="#ref217" class="reference-link" id="r217">[217]</a></sup> l'expérience d'Ivo Kohler montrant que des sujets portant des lunettes à miroirs qui renversent les objets de 180° redressent leur vision au bout de quelques jours. Rien ne montre mieux, dit-il, comment la perception visuelle peut être influencée par l'action entière, avec effet rétroactif de la motricité sur la perception. Le propre de l'intelligence n'est donc</p>
+            <div class="citation">
+                « pas de contempler mais de ‘transformer' et son mécanisme est essentiellement opératoire . »
+            </div>
+            <p>On ne connaît un objet qu'en agissant sur lui et en le transformant, et c'est donc de l'action et non de la perception qu'il faut partir pour comprendre en quoi consiste le développement de la connaissance. Et cette connaissance inclut la pensée abstraite car les opérations logico-mathématiques dérivent elles aussi des actions :</p>
+            <div class="citation">
+                « elles sont le produit d'une abstraction qui procède à partir de la coordination des actions et non pas à partir des objets. » (Piaget, 1964, p.111)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Différenciation de la réalité === -->
+    <div class="capsule" id="capsule-differenciation">
+        <div class="capsule-title">🌍 Différenciation de la réalité</div>
+        <div class="capsule-content">
+            <p>Dire que le point de départ de la connaissance est constitué par les actions du sujet sur le réel, cela signifie qu'avant qu'il y ait une certaine forme d'organisation d'actions élémentaires, la réalité est entièrement indifférenciée en ce qui concerne les pôles interne et externe ; l'opposition entre, d'un côté, les objets, et de l'autre, le sujet connaissant conscient de sa qualité de sujet, n'a aucune assise expérientielle. On retrouve ici la distinction si importante pour la théorie de l'énaction, entre le point de vue de l'observateur, procédant à une lecture sémantique de l'activité d'un être vivant, et pour qui cet être est toujours déjà une chose parmi les choses, et le point de vue de cet être même, pour qui le monde doit être constitué, et dont veut rendre compte une lecture participative. La conscience, selon Piaget, débute par un égocentrisme intégral sans différenciation entre le moi et le monde extérieur ; les impressions ne sont rattachées ni à une conscience personnelle ni à un monde extérieur :</p>
+            <div class="citation">
+                « elles sont simplement données en un bloc indissocié, ou comme étalées sur un même plan, qui n'est ni interne, ni externe » (Piaget, 1964, p.23)
+            </div>
+            <p>et ce n'est que par et avec les progrès de l'intelligence sensori-motrice que pourra se construire simultanément un univers objectif et une vie intérieure :</p>
+            <div class="citation">
+                « le monde extérieur s'objectivera dans la mesure où le moi se construira en tant qu'activité subjective ou intérieure. »
+            </div>
+            <p>La réalité sera constituée en objets permanents lorsque se développera la capacité de coordonner des actions sensori-motrices selon des lois de retour et de détour : la permanence d'un objet sera alors constituée en tant qu'invariant pratique de l'action, en connexion avec l'organisation de l'espace pratique dans son ensemble. (Piaget, 1950/1974, p.326).</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Schème des actions === -->
+    <div class="capsule" id="capsule-schemes">
+        <div class="capsule-title">⚡ Schème des actions</div>
+        <div class="capsule-content">
+            <p>Ce qui est important pour la connaissance, ce ne sont pas les actions considérées isolément : c'est le « schème » de ces actions,</p>
+            <div class="citation">
+                « c'est-à-dire ce qui, en elles, est général et peut se transposer d'une situation à une autre » (1970, p.86)
+            </div>
+            <p>Une action qui peut être répétée et généralisée à des situations nouvelles est comparable à une sorte de concept sensori-moteur. Piaget distingue quatre grandes étapes du développement de l'intelligence :</p>
+            <ul>
+                <li><strong>Jusqu'à deux ans :</strong> c'est le stade de l'intelligence sensori-motrice. Les mouvements réflexes deviennent progressivement des gestes répétables et modifiables, ils forment des schèmes d'actions qui peuvent être généralisés à des situations nouvelles et deviennent susceptibles d'être coordonnés entre eux par assimilation réciproque. Ce sont les progrès de l'intelligence sensori-motrice qui aboutissent à l'émergence d'un univers objectif et plus précisément à la construction des catégories de l'objet, de l'espace, de la cause et du temps. La structuration sensori-motrice qui se met en place ici avec la construction de l'espace, de groupes de déplacement, d'objets permanents, est selon Piaget le point de départ de toute la logique ultérieure.</li>
+                <li><strong>Entre deux et sept ans :</strong> c'est le stade de l'intelligence pratique. Celle-ci prolonge l'intelligence sensori-motrice dans le sens d'une intériorisation des perceptions et des mouvements, mais reste pré-logique. La pensée intuitive constituée par la représentation de l'expérience et de la coordination sensori-motrice, se superpose progressivement à l'intelligence purement sensori-motrice. Mais ces intuitions restent primaires au sens où elles sont encore rigides et irréversibles.</li>
+                <li><strong>Les deux stades suivants</strong> sont ceux de l'intuition articulée et des opérations, concrètes puis formelles. L'intuition articulée est plus mobile que la précédente et s'oriente vers la réversibilité. Les actions intériorisées qui deviennent réversibles et se coordonnent entre elles en structures d'ensemble constituent des opérations.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'équilibre === -->
+    <div class="capsule" id="capsule-equilibre">
+        <div class="capsule-title">⚖️ L'équilibre</div>
+        <div class="capsule-content">
+            <p>Le développement de l'intelligence au travers de ces différents stades relève d'un processus d'équilibration qui conduit vers des structures de pensée de plus en plus stables et élaborées, des structures pré-logiques vers les structures logico-mathématiques. Le ressort de ce processus d'équilibration est l'action. L'action est toujours mue par un mobile qui prend la forme d'un besoin ; c'est toujours une réponse à une modification qui vise à rétablir un équilibre</p>
+            <div class="citation">
+                « entre le fait nouveau, qui a déclenché le besoin, et notre organisation mentale telle qu'elle se présentait antérieurement à lui. » (Piaget, 1964, p.16)
+            </div>
+            <p>L'environnement est une source de perturbations qui induit la modification du système des schèmes existants ; celui-ci s'accommode en assimilant les contraintes nouvelles :</p>
+            <div class="citation">
+                « l'accommodation au réel suppose une assimilation de celui-ci aux schèmes du sujet . »
+            </div>
+            <p>De manière plus générale, toute conduite peut être comprise comme une assimilation du donné à des schèmes antérieurs et toute conduite est en même temps accommodation de ces schèmes à la situation actuelle. C'est l'articulation dynamique entre assimilation et accommodation qui se manifeste dans la succession des schèmes opératoires et assure l'</p>
+            <div class="citation">
+                « équilibre entre les actions de l'organisme sur le milieu et les actions inverses ».
+            </div>
+            <p>L'action humaine consiste en un mécanisme incessant de réajustement et d'équilibration :</p>
+            <div class="citation">
+                « la perturbation extérieure ne saurait être compensée que par des activités : au maximum d'équilibre correspondra donc, non pas un état de repos mais un maximum d'activité du sujet qui compenseront, d'une part, les perturbations actuelles, mais aussi, d'autre part, les perturbations virtuelles. » (1964, p.135)
+            </div>
+            <p>L'équilibre psychologique stable et final des structures cognitives correspond à la réversibilité complète des opérations.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Les opérations === -->
+    <div class="capsule" id="capsule-operations">
+        <div class="capsule-title">🧩 Les opérations</div>
+        <div class="capsule-content">
+            <p>Les actions constituent donc l'origine de toute pensée et des opérations les plus abstraites de l'intelligence : les opérations sont des actions intériorisées et réversibles qui se coordonnent en structures d'ensemble. Piaget distingue deux formes d'actions relatives à deux formes de connaissance.</p>
+            <p>D'une part, les actions qui ne modifient pas les objets mais se bornent à les réunir ou à les sérier sous forme de classes de relations ou de nombres. Ces actions peuvent se coordonner entre elles d'une manière qui n'emprunte rien à l'objet<sup><a href="#ref218" class="reference-link" id="r218">[218]</a></sup> : la coordination de ces actions revient à les grouper entre elles sous forme d'opérations logico-arithmétiques, et les déductions qui résultent de cette organisation des opérations caractérisent</p>
+            <div class="citation">
+                « la fonction implicatrice de la pensée. » (Piaget, 1950/1974, p.327)
+            </div>
+            <p>Les opérations logico-mathématiques dérivent des actions elles-mêmes car elles sont le produit d'une abstraction qui procède à partir de la coordination des actions et non à partir des objets (Piaget, 1964, p.111) :</p>
+            <div class="citation">
+                « la mathématique consiste, en son essence, à coordonner les actions ou les opérations entre elles : ce qu'elle exprime, c'est donc moins le réel que les actions opératoires exercées par le sujet sur lui. » (Piaget, 1950/1974, p.255)
+            </div>
+            <p>La pensée mathématique assimile le réel aux opérations du sujet.</p>
+            <p>D'autre part, les actions exercées par le sujet sur l'objet, qui le modifient sous forme de décompositions et de recompositions, et qui peuvent lui emprunter certains caractères. Lorsqu'elles en extraient certaines qualités, la connaissance qui en résulte est dite physique. Ici, en plus de la coordination des actions, intervient l'aspect qualitatif particulier des divers types d'action. Les opérations engendrées par leur organisation constituent les opérations spatio-temporelles ou physiques, qui déterminent quatre sortes de notions interdépendantes : l'espace et l'objet comme tel (matière), le temps et la causalité. Ce sont là encore des coordinations, donc des compositions logicisables et mathématisables, mais il s'ajoute à la coordination un élément d'expérience qui porte sur le résultat des actions (effet musculaire, résistance). Cet ensemble opératoire peut être appelé</p>
+            <div class="citation">
+                « fonction explicatrice de la pensée. » « La pensée physique, comme la pensée mathématique, repose sur les actions du sujet, mais sur des actions particulières indissociables de leur résultat extérieur et non pas sur les coordinations générales, faciles à abstraire de ces actions particulières. » (1950/1974, p.257)
+            </div>
+            <p>Le stade opératoire constitue l'étape ultime de développement de l'intelligence vers lequel pointent chacune à leur façon toutes les étapes antérieures. Cette structure finale de la pensée est le résultat, la conséquence même du processus d'équilibration. L'équilibration, en tant que mécanisme de compensation au travers d'activités produites en réponses à des perturbations est l'explication de chacune de ces étapes et de leur orientation :</p>
+            <div class="citation">
+                « le développement des fonctions cognitives… consiste avant tout en un processus d'équilibration… Il n'est donc nullement exagéré de parler du rôle explicatif central de la notion d'équilibre dans les questions de développement des fonctions cognitives » (1964, 143-144)
+            </div>
+            <p>La succession de structures mentales qui ponctue le développement de l'intelligence engendre des formes d'équilibre de plus en plus stables constituant</p>
+            <div class="citation">
+                « une adaptation toujours plus précise à la réalité. »
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : La réalité === -->
+    <div class="capsule" id="capsule-realite">
+        <div class="capsule-title">🌐 La réalité</div>
+        <div class="capsule-content">
+            <p>Cette notion de réalité semble bien être le point de divergence entre la psychologie génétique et la théorie de l'énaction. Nous avons retrouvé chez Piaget l'idée d'une constitution progressive des objets, du développement de la connaissance par transformation du système cognitif, où l'accommodation joue le rôle de la modification structurelle chez Varela. Nous avons retrouvé l'idée d'une activité de compensation du système cognitif en réponse à des perturbations extérieures, où la notion première d'équilibration répond à la nécessité posée par Varela de maintenir une organisation. Mais dans la perspective énactive, il n'y a aucun sens à parler de la transformation du système cognitif en termes d'adaptation à la réalité comme si la réalité pouvait être pensée indépendamment de l'activité du système, pouvait être posée antérieurement à la transformation elle-même. Dire que le processus de transformation incessant est un processus d'objectivation, un processus d'émergence des objets, nourri des perturbations extérieures que le système doit compenser pour maintenir son organisation, pour perpétuer son équilibre, c'est dire que la source de perturbations n'est rien d'autre, ne peut pas être pensée autrement que comme une source de perturbations. Concevoir cette source de perturbation comme une réalité pré-déterminée, c'est parler au même moment et sans faire la différence depuis ces deux points de vue que Varela s'efforce tant de distinguer.</p>
+            <p>Mais dans la mesure où l'usage que fait Piaget du concept de réalité ne remet pas en cause la nature énactive du processus de formation des structures cognitives, pensé indépendamment de toute finalité, je ne vais pas m'attarder sur cette question. Je voudrais quand même suggérer que l'interprétation de cet usage n'est pas, en fait, si aisément réductible à l'idée d'une prédétermination.</p>
+            <p>Concernant d'abord l'idée d'un état logique final prédéterminé du développement cognitif. Il ne fait aucun doute que Piaget conçoit la succession des structures cognitives comme un progrès :</p>
+            <div class="citation">
+                « [C]haque conduite nouvelle consiste non seulement à rétablir l'équilibre, mais encore à tendre vers un équilibre plus stable que celui de l'état antérieur à cette perturbation. » Ou encore : « [O]n peut considérer les structures mentales successives qu'engendre le développement comme autant de formes d'équilibre dont chacune est en progrès sur les précédentes. » (Piaget, 1964, p.16)
+            </div>
+            <p>Mais cette idée de progrès n'implique pas nécessairement l'idée d'une finalité. Tout autant que la notion de progrès, c'est la notion de processus permanent qui est mise en valeur :</p>
+            <div class="citation">
+                « [L]es fonctions supérieures de l'intelligence tendant vers un ‘équilibre mobile' » (Piaget, 1964, p.12)
+            </div>
+            <p>Plutôt que de penser le progrès dans un sens absolu, comme la mesure d'une distance par rapport à un état final, il faut, me semble-t-il, le penser de manière relative à chaque stade du développement. Une nouvelle forme d'équilibre constitue un progrès par rapport à la précédente dans le sens où elle est construite sur la précédente, avec l'incorporation d'une nouvelle aptitude motrice. Chaque stade est caractérisé par l'apparition de nouvelles structures</p>
+            <div class="citation">
+                « dont la construction le distingue des stades antérieurs ».
+            </div>
+            <p>Mais chaque construction subsiste pour l'essentiel lors du passage d'un stade à l'autre et constitue la base sur laquelle s'édifient les conduites nouvelles. Il n'y a pas d'état de développement cognitif abouti qui serait déterminé par sa capacité à connaître une réalité prédéterminée. Le sujet cognitif et l'objet de la réalité ne peuvent pas être pensés indépendamment l'un de l'autre :</p>
+            <div class="citation">
+                « le cercle inéluctable du sujet et de l'objet nous empêche de les séparer et nous oblige à nous en tenir à leurs seuls rapports par l'intermédiaire du développement historique ou psychologique de cette interaction elle-même ».
+            </div>
+            <p>Et quant au développement cognitif, il est vrai que la psychologie génétique se définit comme la recherche d'une explication, voire d'une loi de la construction des structures cognitives :</p>
+            <div class="citation">
+                « [E]xiste-t-il des lois d'évolution, une ‘orthogenèse' ou des vections caractérisant l'élaboration graduelle de certaines notions ou de certains ensembles limités de notions ? »
+            </div>
+            <p>mais cette loi ne sort pas du cadre fixé de l'interaction :</p>
+            <div class="citation">
+                « Nous ne parlons naturellement pas d'une direction fixée d'avance ou du dehors, ce qui impliquerait un a priori ou une finalité, mais d'une direction pouvant être caractérisée simplement par la marche vers une certaine forme d'équilibre ... forme d'équilibre caractérisée par la composition opératoire des variations en fonction d'invariants permettant le calcul des transformations. » (Piaget, 1950/1974, p.315-316)
+            </div>
+            <p>Concernant la notion de réalité, en tant qu'elle serait posée d'une façon logiquement antérieure au processus cognitif, Piaget lui-même en fournit une analyse critique. Lorsque, par exemple, il se fait commentateur du réalisme mathématique de G. Juvet, et qu'en réponse à l'idée que la structure de groupe serait ‘réalisée' dans le monde physique, il se demande</p>
+            <div class="citation">
+                « si le réalisme n'est pas plus intéressant à titre de fait psychologique, c'est-à-dire de projection des structures opératoires dans la réalité, qu'à titre de philosophie physique » (Piaget, 1950/1974, p.325).
+            </div>
+            <p>Ou lorsqu'il se demande quel est le type de réalité que postule la pensée physique. Il remarque d'abord que la réponse à cette question posée aux physiciens varie selon l'échelle des phénomènes qu'ils étudient, c'est-à-dire</p>
+            <div class="citation">
+                « l'échelle des actions expérimentales qu'il est possible d'exercer sur cette réalité ».
+            </div>
+            <p>Et il cherche ensuite à formuler un processus d'évolution de l'idée de réalité et note le paradoxe suivant : plus le réel est objectivé, plus il s'affirme indépendamment du sujet, plus il est détaché du moi sensible, et plus il est solidaire des opérations du sujet, plus il est reconstruit par composition opératoire, et plus il dépend du sujet en tant qu'opérateur. Et de conclure que</p>
+            <div class="citation">
+                ce paradoxe est un simple truisme sitôt admis que ces opérations ont pour propriété essentielle d'atteindre tout le possible en partant du réel : le réel « vrai » est alors celui qui situe le donné dans l'ensemble des possibilités réalisables, mais non réalisées simultanément, tandis que l' « apparent » se réduit à la seule réalité actuelle, par opposition au possible. […] Un tel réel élargi jusqu'à baigner dans le possible est-il alors extérieur ou intérieur au sujet ? Tous les deux, assurément, puisque le sujet ne crée pas les possibles, mais que, s'il ne les engendre pas, il n'atteint la nécessité qui caractérise leurs liens que par sa seule activité opératoire (Piaget, 1950/1974, p.335)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-3-2 L'après Piaget === -->
+    <div class="capsule" id="capsule-apres-piaget">
+        <div class="capsule-title">🔮 A‑3‑2 L'après Piaget</div>
+        <div class="capsule-content">
+            <p><strong>Les termes du débat</strong></p>
+            <p>La théorie de Piaget sur l'origine sensori-motrice de la connaissance a fait l'objet bien sûr de différentes critiques. Mais parmi elles, il en est une susceptible de mettre en cause complètement cette théorie. L'accusation porte sur une sous-estimation des capacités conceptuelles des jeunes enfants<sup><a href="#ref219" class="reference-link" id="r219">[219]</a></sup>. Contrairement à ce qu'affirme l'école piagétienne de l'acquisition de la connaissance, le fait que les enfants échouent dans la réalisation de certaines tâches ne signifierait pas que toute connaissance doive être acquise par la voie sensori-motrice. Certaines connaissances, non acquises, peuvent être présentes sans pouvoir être manifestées en raison d'un déficit des aptitudes motrices ou perceptuelles requises pour leur expression par exécution de la tâche<sup><a href="#ref220" class="reference-link" id="r220">[220]</a></sup>. Il s'agit donc, selon cette ligne d'argumentation, d'une part, ainsi que de l'importance de la motricité dans le développement cognitif. Cependant, comme nous le verrons dans les sections suivantes (A‑3.2 et A‑3.3), cette critique a été en partie réévaluée à la lumière des travaux récents en psychologie développementale et en neurosciences, qui montrent que les capacités conceptuelles précoces ne sont pas nécessairement antagonistes à l'approche génétique, mais peuvent être intégrées dans un cadre dynamique et incarné de la cognition.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref216"><strong>216.</strong> Piaget, 1964, p.64.</p>
+            <p id="ref217"><strong>217.</strong> Piaget, 1964, p.87.</p>
+            <p id="ref218"><strong>218.</strong> Piaget, 1950/1974, p.255.</p>
+            <p id="ref219"><strong>219.</strong> Voir, par exemple, les travaux de E. Spelke, 1990, ou de R. Baillargeon, 1995.</p>
+            <p id="ref220"><strong>220.</strong> Cette critique est souvent associée au débat entre la théorie de l'esprit et l'approche piagétienne.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A2_4.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A3_2.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>
