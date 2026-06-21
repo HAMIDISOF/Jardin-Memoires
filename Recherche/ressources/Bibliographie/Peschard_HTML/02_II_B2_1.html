@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – II.B‑2. Tournant historique – B2.1</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule-epigraphe {
+            background: #e9f3e3;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>II. Deux images de la représentation</h1>
+    <div class="sub">II.B‑2. Tournant historique en épistémologie – B2.1 (pages 230‑238)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-intro">📖 Introduction</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-inscription">🔹 Inscription matérielle</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-apprentissage">🔸 Apprentissage</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-structure">🔺 Structure et contexte</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-pratique">🛠️ Pratique et observation</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="02_II_B2_2.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Introduction générale === -->
+    <div class="capsule" id="capsule-intro">
+        <div class="capsule-title">📖 B‑2‑1 Le temps oublié : parallèle entre le tournant historique et le tournant connexionniste</div>
+        <div class="capsule-content">
+            <p>Nous avons vu que la façon la plus claire de distinguer les approches cognitiviste et connexionniste était de se référer à l'instrument mathématique utilisé pour les modélisations : c'est la temporalité introduite dans la conception connexionniste de la cognition qui marque le plus sûrement et le plus profondément le changement de perspective. La notion de temps peut être prise comme foyer de quelques lignes principales de critiques qui ont été adressées à la pensée cognitiviste et le long desquelles peuvent être situés quelques traits distinctifs des systèmes connexionnistes en contraste avec les systèmes cognitivistes. Je voudrais montrer, dans un premier temps, qu'un schéma similaire de mutation du cadre de la représentation, de la pensée, peut être dessiné lorsque l'on réfléchit sur le rapport entre la conception kuhnienne de la connaissance scientifique et la conception de l'empirisme logique, et plus particulièrement celle de Carnap. Un même schéma, cela ne veut pas dire simplement que l'on peut repérer un foyer et quelques lignes directrices mais que d'une part, le foyer est le même, la notion de temps, la dimension temporelle de la connaissance scientifique, et que d'autre part, les lignes qui s'en échappent seront analogues ‘deux à deux' avec celles tracées dans le cas du connexionnisme. L'introduction de la temporalité est un élément clé du changement qu'a connu l'épistémologie :</p>
+            <div class="citation">
+                « Before the Structure, and to a considerable extent then, philosophy of science has ignored the temporality of scientific practice. […] And one of Kuhn's great achievements in the Structure was to get time into the picture<sup><a href="#ref146" class="reference-link" id="r146">[146]</a></sup>… »
+            </div>
+            <p>Établir cette forme de rapport critique entre Kuhn et Carnap paraît, cependant, être une entreprise exposée à une contre-argumentation extrêmement convaincante fournie par l'analyse de Friedman de ce même rapport et démontrant l'existence, au contraire, d'une profonde similitude qui va justement à l'encontre des interprétations purement anhistoriques de la conception de Carnap. Friedman montre, en effet, que Carnap est beaucoup plus proche de Kuhn qu'on ne le pense habituellement dans sa façon de concevoir un cadre constitutif de la science. Mais il n'en reste pas moins que, comme le souligne K. R. Westphal<sup><a href="#ref147" class="reference-link" id="r147">[147]</a></sup>, l'idée d'un cadre constitutif chez Carnap reste une idée d'un cadre logique, tandis que chez Kuhn le cadre est historique et sociologique. L'analogie que je veux défendre entre ce schéma de modification de la façon de concevoir la cognition et les changements introduits par Kuhn et quelques autres tient dans la possibilité d'identifier trois lignes d'arguments qui répondent aux trois précédentes et qui peuvent être rapportées de la même façon à la prise en compte de la dimension temporelle de l'activité scientifique :</p>
+            <ul>
+                <li>l'inscription de la communauté scientifique dans un contexte historique ;</li>
+                <li>l'introduction d'une pratique d'apprentissage et d'échanges inter-subjectifs avec critique de l'idée de critères déterminés ;</li>
+                <li>la mise en question de la distinction formelle et fonctionnelle entre les éléments théoriques et empiriques de la production de connaissances.</li>
+            </ul>
+            <p>Dans les deux cas, les deux premiers points touchent directement la question de la fonction accordée au langage aussi bien, comme la section précédente l'a montré, par le cognitivisme que par l'empirisme logique. Ni la science ni la cognition ne peuvent plus être considérées comme un langage, un système logique, qui pourrait être étudié indépendamment de ses conditions d'usage.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'inscription matérielle === -->
+    <div class="capsule" id="capsule-inscription">
+        <div class="capsule-title">🔹 L'inscription matérielle</div>
+        <div class="capsule-content">
+            <p>D'une part, l'activité scientifique comme l'activité cognitive se produit quelque part, se produit d'une certaine façon, se réalise concrètement d'une manière particulière et cette ‘manière' ne peut plus être négligée. Le temps qui s'exprime dans la conception connexionniste est celui de l'activité du réseau, le temps de la propagation des signaux au travers des connexions, le temps de la stabilisation d'un réseau. L'inscription matérielle du processus devient non seulement importante mais constitutive de ce qui se produit et du contenu de connaissance que pourra être celui véhiculé par le langage. Si le processus cognitif est ce qu'il est, c'est parce qu'il se produit dans les conditions physiques dans lesquelles il se produit ; et, de même, l'activité scientifique est tout autant un ensemble de pratiques que d'énoncés et ces pratiques sont constitutives du contenu des énoncés. Le temps de la connaissance scientifique est, en premier lieu, celui de la réalisation concrète de l'activité scientifique ; le temps de l'expérimentation, de la réflexion, de la communication, de la contradiction. La manière dont l'activité cognitive ou scientifique se réalisent va à l'encontre de la conception selon laquelle le processus de la connaissance serait organisé de façon déterminée en un système logiquement structuré, une machine à manipuler des formes symboliques indifférente à ses conditions concrètes d'exercice. Il devient impossible de penser séparément l'instrument de la connaissance ou de la cognition, que serait le métalangage, et son application empirique, que serait l'activité cognitive ou scientifique proprement dite. Il n'y a pas, ni pour la cognition ni pour la science, de règles déterminées, énonçables dans l'absolu, hors de tout contexte, qui gouverneraient le processus de représentation cognitif ou scientifique.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'apprentissage === -->
+    <div class="capsule" id="capsule-apprentissage">
+        <div class="capsule-title">🔸 L'apprentissage</div>
+        <div class="capsule-content">
+            <p>D'autre part, le processus de la connaissance, tout comme le processus de la cognition, contient une phase d'apprentissage qui en est une part intégrante, qui est essentielle à la façon dont les représentations seront produites et aux types de représentations qui pourront être produites. L'apprentissage est un moment de formation au sens plein du terme, un moment au cours duquel la capacité de représentation prend forme. C'est le caractère constitutif de l'apprentissage qui pallie l'absence de règles déterminées, et en même temps les rend inconcevables. L'apprentissage d'un réseau est le moment au cours duquel celui-ci apprend non pas tant à reconnaître que, d'abord, ce que c'est que reconnaître. L'état de connectivité qui se met en place reflète l'intégration concrète, ‘l'incorporation' de certains critères de ressemblance, le fait que telles et telles formes doivent être considérées comme ressemblantes, selon la volonté du modélisateur et les procédures d'ajustement qu'il impose. Après avoir ‘incorporé' les premières relations de ressemblance, le réseau doit être capable de reconnaître des formes nouvelles, de les identifier comme des exemplaires connus. Le temps qui s'exprime ici est donc celui de la phase d'apprentissage comme moment d'incorporation d'une expérience par lequel le système acquiert en quelque sorte une identité cognitive qui contient son histoire. La phase d'apprentissage est constitutive de ce que le réseau pourra reconnaître, elle est l'histoire ‘expérientielle' au cours de laquelle le réseau intègre les contraintes de satisfaction qui conditionneront sa dynamique de stabilisation.</p>
+            <p>Dans le cas de l'activité scientifique, Kuhn introduit les notions de problèmes ‘exemplaires', de ‘relations de similarité' : les scientifiques traversent une période d'apprentissage au cours de laquelle ils apprennent à identifier certains problèmes typiques et à reconnaître dans de nouvelles situations le type de problématiques qu'ils ont appris à résoudre. Il n'y a pas de règles, pas de définitions, mais une phase d'incorporation d'une capacité de reconnaissance, d'acquisition d'une sensibilité à un ensemble de relations de similarité qui structure la perception des problèmes et la manière d'y répondre.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Structure et contexte (Dennet, Rosenfield) === -->
+    <div class="capsule" id="capsule-structure">
+        <div class="capsule-title">🔺 Structure et contexte</div>
+        <div class="capsule-content">
+            <p>Il n'y a aucun sens, selon Dennet, à postuler une distinction entre un objet simplement perçu et le même objet devenu signifiant. L'image d'un niveau supérieur dépositaire et organisateur des fruits du travail imperturbable, c'est-à-dire indifférent à ce qui se passe ‘plus haut', des modules de bas étage pourrait être remplacée par celle d'une « incessante ‘révision éditoriale' » au cours de laquelle l'information provenant des organes des sens fait l'objet d'un constant processus de réécriture et donne lieu à diverses « versions de fragments narratifs » sans qu'il soit besoin d'en appeler à l'existence d'un quelconque éditeur en chef ni d'un lieu de stockage. Dans le cadre d'une description connexionniste dynamique, même la formation d'une configuration relativement stable ne peut pas être considérée indépendamment de l'activité globale qui la fait émerger et de l'histoire qui l'a rendue possible. Il n'y a pas de différence de ‘nature' entre les éléments mis en œuvre dans la perception et ceux mis en œuvre dans la pensée de ‘haut niveau', ni de cloisonnement entre différents moments de la cognition ; c'est le même réseau qui est sollicité, de façon globale et continue, dans tout le processus de formation de représentations.</p>
+            <p>Et là aussi, des expériences neuropsychologiques viennent servir d'appui à la modélisation. D'après Rosenfield notamment, le rôle joué par le contexte dans la perception est incompatible avec l'idée que des centres spécialisés du cerveau ‘trieraient' des informations invariables :</p>
+            <div class="citation">
+                « [Il] est certain que ce que nous percevons dépend de l'interaction entre les différents indices sensoriels (stimuli) et tout au plus sommes-nous en droit d'attribuer à un schéma d'ensemble de l'activité cérébrale la responsabilité de ces différentes perceptions […] Notre perception des stimuli ne dépend pas de leur structure en tant que telle (la fréquence absolue d'un son par exemple), mais des catégories que nous leur attribuons et de leur organisation en fonction des autres stimuli.<sup><a href="#ref148" class="reference-link" id="r148">[148]</a></sup> »
+            </div>
+            <p>La perception de la structure des sons du langage, par exemple, ne peut être comprise qu'en étant rapportée à notre environnement linguistique étalé dans le temps et à celui dans lequel, à un moment donné, se produit la perception. Nous retrouvons ici les deux dimensions temporelles relatives respectivement à l'activité ‘en train de se faire' et à la période d'apprentissage. L' « environnement linguistique étalé dans le temps » fait référence aux conditions à moyen terme de formation des capacités linguistiques. Le « moment donné » fait référence à un contexte contemporain de l'activité : la présence d'un intervalle de silence entre deux mots et une modification de sa durée, peuvent modifier la perception de certains mots, et la perception de différents phonèmes à l'intérieur d'un mot dépend de la co-articulation des segments phonétiques. De façon plus générale, c'est au sein d'une combinaison qu'un stimulus est reconnu et non de façon isolée et ‘encapsulée' ; et s'il n'est pas reconnu, il n'est pas perçu non plus :</p>
+            <div class="citation">
+                « Perception, reconnaissance et mémoire ne sont donc pas des processus dissociés, mais un processus opératoire intégral. » (Rosenfield, 1989, p.143)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Pratique et observation (critique du donné) === -->
+    <div class="capsule" id="capsule-pratique">
+        <div class="capsule-title">🛠️ Pratique et observation</div>
+        <div class="capsule-content">
+            <p>Dans le cas de l'activité scientifique, l'empirisme supposait la possibilité de considérer séparément, comme deux sortes d'éléments indépendants du système de la connaissance, les énoncés empiriques et les énoncés théoriques. La mise à l'épreuve d'une théorie devait consister à confronter des énoncés déduits du système théorique à des énoncés d'observation, énoncés protocolaires, indépendants de celui-ci. Popper résume ainsi cet aspect de la position de Carnap :</p>
+            <div class="citation">
+                « He says that the sentences of science are tested ‘with the help of protocol sentences' ; but since these are explained as statements or sentences ‘which are not in need of confirmation but serve as a basis for all the other sentences of science', this amounts to saying – in the ordinary ‘material' mode speech – that the protocol sentences refer to the ‘given': to the ‘sense data.'<sup><a href="#ref149" class="reference-link" id="r149">[149]</a></sup> »
+            </div>
+            <p>On retrouve l'idée explicitée au paragraphe précédent de deux moments bien distincts du processus de la connaissance : celui de l'expérience, cristallisé dans les énoncés d'observation, celui de la théorie, caractérisé par les transformations réglées d'un énoncé symbolique en un autre. On retrouve aussi l'image d'un système hiérarchique et d'un flux unidirectionnel. Les énoncés protocolaires sont la base du système, et ils sont la base parce qu'ils ne dépendent pas de ce qui peut se passer ailleurs, alors que les autres énoncés seront eux ‘testés', confrontés à l'information qui est donnée par la base :</p>
+            <div class="citation">
+                « In Carnap's earlier view, the system of protocol sentences was the touchstone by which every assertion of an empirical science had to be judged. This is why they had to be ‘irrefutable.' » (Popper, 1968, p.97)
+            </div>
+            <p>Il est bien évident, remarque Feyerabend, que même les énoncés d'observation nécessitent un langage pour leur formulation ; mais il est supposé néanmoins que leur contenu est couvert par un principe d'autonomie, c'est-à-dire qu'il ne dépend pas de ce langage :</p>
+            <div class="citation">
+                « It is not asserted by this principle that the discovery and description of facts is independent of all theorizing and language-building. But it is asserted that the facts which belong to the empirical content of some theory and which are described with the corresponding language are available whether or not one considers alternatives to this theory<sup><a href="#ref150" class="reference-link" id="r150">[150]</a></sup>. »
+            </div>
+            <p>Cette image dichotomique du rapport entre théorie et observation subira de nombreuses révisions qui mettront en question la nature ‘fondationnelle' des énoncés empiriques. Popper notamment prendra ses distances avec l'idée de fondement en attachant à la notion d'énoncés de base celle de convention :</p>
+            <div class="citation">
+                « Basic statements are accepted as the result of a decision or agreement ; and to that extent they are conventions. » (Popper, 1968, p.106)
+            </div>
+            <p>Mais il reste que les énoncés de base, même s'ils sont en partie conventionnels, même s'ils deviennent par là faillibles, sont toujours pensés comme un instrument permettant de tester les énoncés théoriques par le biais de leurs conséquences déductives, et le travail du philosophe des sciences est toujours de construire une représentation formelle adéquate du système logique de production de connaissances scientifiques :</p>
+            <div class="citation">
+                « Ce qui préoccupe Popper, autant que Carnap, ce sont les relations logiques entre les énoncés de base et les conclusions théoriques » (Laugier, 2002, p.980)
+            </div>
+            <p>Et toutes les modifications qui seront faites quant à la façon de penser les énoncés d'observations et la mise à l'épreuve des théories se feront à l'intérieur d'un même modèle épistémologique, héritier d'une perspective logique, et qui va être lui-même profondément remis en question.</p>
+            <p>Ce changement peut être appréhendé, comme cela a été fait pour le modèle cognitiviste, à travers deux entrées qui sont fournies par les deux précédentes lignes de critiques issues de la prise en considération de la dimension temporelle de l'activité scientifique. Premièrement, l'instrument de production de connaissance scientifique, pensé jusqu'alors comme un système logique, sera pensé comme une activité, une activité humaine, concrète. En pratique, l'usage des théories, le rapport avec l'expérience, l'élaboration de la connaissance et son acceptation en tant que telle, suivent de toutes autres voies que celles conçues dans une optique logiciste. Le tournant historique que prend l'épistémologie conduit à prendre conscience par exemple, que selon les ‘principes' d'une logique de la science</p>
+            <div class="citation">
+                « les théories que l'on considère généralement comme les plus beaux exemples de théories scientifiques n'auraient jamais pu être développées, car elles auraient été rejetées dès leurs premiers balbutiements.<sup><a href="#ref151" class="reference-link" id="r151">[151]</a></sup> »
+            </div>
+            <p>En pratique, les procédures expérimentales reposent sur des appareillages plus ou moins complexes, impliquent des techniques de mesure et de traitement des résultats, des méthodes de représentation, qui contribuent de façon plus ou moins maîtrisable à l'obtention de résultats de ce qui n'a plus que le nom de ‘données' empiriques : on ne peut faire que les expériences que l'on a les compétences pratiques et les moyens matériels, techniques de faire, et on ne les ‘comprend' que dans la mesure de la compréhension que l'on a des différents éléments qu'elles mettent à contribution. Par ailleurs, les prédictions qui sont mises à l'épreuve découlent d'un enchevêtrement de prémisses qui rend impossible, en cas de contradiction avec l'expérience, l'identification incontestable de la source du problème :</p>
+            <div class="citation">
+                « on ne peut éliminer la possibilité que l'échec de la prédiction provienne de n'importe quelle partie de la situation complexe soumise à test ». (Chalmers, 1987, p.113)
+            </div>
+            <p>La science est aussi une pratique linguistique et un tissu complexe d'aptitudes qui relèvent d'un apprentissage. Les concepts qui sont utilisés pour la formulation des énoncés tirent leur signification de la fonction qui est la leur au sein de cette structure et qui est assimilée au cours de l'apprentissage : il y a une</p>
+            <div class="citation">
+                « dépendance de la signification des concepts par rapport à la structure de la théorie dans laquelle ils apparaissent … les concepts tirent au moins en partie leur sens du rôle qu'ils jouent dans une théorie… » (Chalmers, 1987, p.132-133)
+            </div>
+            <p>Il n'y a pas de signification simplement reçue comme une entité déterminée de façon abstraite et antihistorique, et il n'y a pas d'observation donnée indépendamment d'un apprentissage inscrit dans une situation historique, historique de par son langage théorique et de par ses pratiques. La critique de la logique s'accompagne de la conviction unanime qu'il n'y a pas d'énoncé d'observation indépendant du contexte théorique dans lequel ils sont formulés ; l'observation est une capacité acquise, et acquise au sein d'un corpus théorique toujours déjà présent à un certain degré :</p>
+            <div class="citation">
+                « [L]es énoncés d'observation seront toujours formulés dans le langage d'une théorie et seront aussi précis que le cadre théorique ou conceptuel qu'ils utilisent. » (Chalmers, 1987, p.60-61)
+            </div>
+            <p>Il devient ainsi impossible de considérer l'expérience, la composante empirique de la connaissance, et la composante théorique comme des strates distinctes disposées selon un circuit informatif unidirectionnel. Mais il faut bien voir que cette critique de l'indépendance des énoncés ne s'arrête pas au niveau du langage. La conception pratique de la science et du langage, c'est-à-dire de la constitution de significations au sein de laquelle cette critique trouve à s'exprimer, lui offrira un point d'impact plus profond que celui simplement d'un instrument de formulation : il deviendra impossible de distinguer ce qui est de ce qui est dit, comme il est devenu impossible avec le connexionnisme de distinguer l'objet de la perception de celui de la cognition.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref146"><strong>146.</strong> K. R. Westphal, « Prolegomenon to a future epistemology », in <em>Epistemology and the Language of Science</em>, 1989, p.50.</p>
+            <p id="ref147"><strong>147.</strong> K. R. Westphal, ibid., p.52.</p>
+            <p id="ref148"><strong>148.</strong> I. Rosenfield, <em>L'invention de la mémoire</em>, 1989, p.138-139.</p>
+            <p id="ref149"><strong>149.</strong> K. Popper, <em>The Logic of Scientific Discovery</em>, 1968, p.97.</p>
+            <p id="ref150"><strong>150.</strong> P. Feyerabend, « Explanation, Reduction and Empiricism », in <em>Scientific Explanation, Space and Time</em>, 1962, p.35.</p>
+            <p id="ref151"><strong>151.</strong> A.F. Chalmers, <em>Qu'est-ce que la science ?</em>, 1987, p.110.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="02_II_B1.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="02_II_B2_2.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

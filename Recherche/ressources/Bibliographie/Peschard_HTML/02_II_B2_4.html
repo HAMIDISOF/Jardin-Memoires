@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – II.B‑2.4. Historicité et internalité (suite) ; B‑3. Le temps vrai</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>II. Deux images de la représentation</h1>
+    <div class="sub">II.B‑2.4. Historicité et internalité (suite) – B‑3. Le temps vrai (pages 255‑264)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-savoir">🧠 Savoir‑faire et science normale</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-prive">🔒 Pas de savoir privé</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-autonomie">⚖️ Autonomie : sauver la rationalité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-mangle">🌀 The mangle of practice</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-usage">📌 Usage de la science</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-temps">⏳ B‑3 Le temps vrai et l’émergence</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="02_II_B3.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Savoir-faire et science normale === -->
+    <div class="capsule" id="capsule-savoir">
+        <div class="capsule-title">🧠 Savoir‑faire et science normale</div>
+        <div class="capsule-content">
+            <p><strong>Deux regards sur la science</strong></p>
+            <p>Kuhn, dans un essai du recueil <em>La Tension Essentielle</em> se reconnaît des affinités ‘certaines' avec Popper, mais en affirmant aussitôt une sorte d'incommensurabilité de leur point de vue, un voir-comme différent, dû au fait que Popper rate quelque chose d'essentiel dans le fonctionnement de la science :</p>
+            <div class="citation">
+                « J'ai idée, dit-il, que sir Karl étend à toute l'entreprise scientifique une description qui ne correspond qu'à de rares situations révolutionnaires. (…) Or on ne peut réussir à comprendre ni la science ni le développement de la connaissance, si l'on ne voit la recherche qu'à travers les révolutions qu'elle produit à l'occasion. »
+            </div>
+            <p>Popper ne se rend pas compte que ce qu'il regarde si attentivement n'est que l'écume de ce qui constitue en fait l'activité scientifique, une sorte de super novæ qui conclut dans le bruit et la fureur la longue besogne accomplie dans l'ombre et dans la patience. Ce que Popper ne voit pas, c'est la recherche normale, la recherche normale qui fournira la pièce manquante d'une lecture focalisée sur l'avers de la science, et qui, du même coup, doit marquer la fin des pérégrinations de la philosophie des sciences ; mais pas tout à fait celle qu'elle espérait. Ceux qui n'ont vu que les épisodes révolutionnaires, c'est-à-dire les moments de polémiques et de bouleversement, ou ceux qui n'ont retenu que les résultats enregistrés, sont tous passés à côté de l'essentiel de l'activité scientifique mais qui demande pour être perçu que l'on quitte l'espace des apparences pour plonger dans le local des machines, que l'on se frotte à la dimension technique de la science, et que l'on soit attentif aux activités concrètes. Ce trait essentiel de la science tient en un mot, c'est le paradigme : le paradigme comme mode d'apprentissage, par l'exemple, comme formation du regard, comme cadre de la pensée, et aussi et surtout comme schème des actions, comme formation du geste, des façons de faire.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Pas de savoir privé === -->
+    <div class="capsule" id="capsule-prive">
+        <div class="capsule-title">🔒 Pas de savoir privé</div>
+        <div class="capsule-content">
+            <p>En quoi le mystère de la science, de la pratique scientifique plus précisément, est-il par là résolu et la quête épistémologique achevée ? C'est l'idée même qu'il y aurait du mystère qui est balayée. Certes, on peut toujours parler, concernant l'usage du concept de ‘pratique scientifique', d'un contraste ineffaçable entre la certitude du praticien et le doute du philosophe, qui peut être vu comme un analogue de cette asymétrie, dont J.-J. Rosat<sup><a href="#ref170" class="reference-link" id="r170">[170]</a></sup> souligne qu'elle est caractéristique de la grammaire des concepts mentaux, l'asymétrie des critères à la 1<sup>ère</sup> et à la 3<sup>ième</sup> personne. Ce n'est, en effet, jamais le praticien qui s'interroge sur la scientificité de sa pratique, et le philosophe, de son côté, n'exprime jamais une certitude. Mais ce que soutient Kuhn, c'est que contrairement à ce que suppose la quête des philosophes des sciences, l'absence de doute du praticien n'est pas fondée sur l'existence de règles ou de critères déterminés, ne repose pas sur un ‘savoir' qui pourrait être explicité ; le scientifique ne doute pas qu'il fasse de la science, comme quiconque ne doute pas qu'il ait mal ou qu'il ait peur, mais sans que ni l'un ni l'autre aient besoin de fondement et ni même ne s'interrogent. Et l'incertitude du philosophe des sciences, quant à elle, ne s'oppose donc pas davantage à un savoir du praticien, ni même à un savoir idéal, que le doute d'autrui, son incertitude sur les critères (d'identification d'un état mental), ne s'oppose à un savoir en première personne de l'état mental.<sup><a href="#ref171" class="reference-link" id="r171">[171]</a></sup> Il n'y a pas plus pour Kuhn de principe déterminé explicatif de la science qu'il n'y a pour Wittgenstein de processus ou d'état mental déterminé expliquant le comportement.</p>
+            <p>Kuhn pourrait dire, sur le mode wittgensteinien, que le rapport du praticien à sa pratique, au paradigme, n'est tout simplement pas de l'ordre du connaître. Le paradigme s'apprend mais il ne s'enseigne pas, il s'assimile, comme un langage ; il n'est pas un savoir, mais plutôt une manière de faire, ou disons un savoir-faire. Il ne se prête pas à la détermination que visent les critères normatifs des philosophes. On pourrait parler d'une disposition ou même d'une attitude – ces termes, justement, en lesquels Wittgenstein nous conduit, selon S. Laugier<sup><a href="#ref172" class="reference-link" id="r172">[172]</a></sup>, à penser le mental plutôt qu'en terme d'une relation de connaissance. L'incertitude du philosophe, pas plus que celle de l'observateur, ne doit pas être comprise comme une lacune parce que la position du praticien pas plus que celle du sujet de l'état mental ne sont caractérisées par un savoir, ou disons un savoir propositionnel. La recherche d'un critère de reconnaissance certain de la méthode scientifique est aussi vaine pour Kuhn qu'est métaphysique l'image d'un « visage intérieur » de la douleur pour Wittgenstein. Il faut pour le comprendre, comme le fait Wittgenstein, changer de regard, cesser de penser que les critères d'identification doivent être quelque chose que le sujet possède « à l'intérieur » et que l'observateur chercherait à atteindre. La certitude du praticien est comme la douleur : elle s'exprime, elle se manifeste dans des comportements, dans des pratiques, dans un langage partagé. Elle n'est pas un état caché qui expliquerait ces comportements.</p>
+            <p>Le philosophe qui cherche le fondement ultime de la science est comme celui qui, pour comprendre la douleur, chercherait une sensation intérieure secrète. Il ne voit pas que la douleur est déjà dans le cri, dans la plainte, dans les gestes – et que la science est déjà dans les pratiques, dans les instruments, dans les échanges entre chercheurs. La tâche du philosophe n'est pas de dévoiler un secret, mais de décrire ce qui est déjà visible, mais que notre regard philosophique, habitué à chercher des principes cachés, ne voit pas.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Autonomie – Sauver la rationalité === -->
+    <div class="capsule" id="capsule-autonomie">
+        <div class="capsule-title">⚖️ Autonomie : Sauver la rationalité</div>
+        <div class="capsule-content">
+            <p>Le paradigme comme manière de faire ne suffit pas à expliquer l'autonomie de la science. Bien sûr en tant qu'il évacue l'idée même de principe normatif, a priori, il libère la pratique d'une contrainte normative. Mais cela n'implique pas l'autonomie de la science en tant qu'activité de découverte de la réalité. Stengers, par exemple, reconnaît la pertinence du paradigme mais se démarque de l'épistémologie de Kuhn au moment où celle-ci s'autorise à définir une autonomie de la communauté scientifique qui pose comme donnée et non problématique la définition de ce qui est interne et externe au processus de détermination de la réalité. Pour elle, le concept de paradigme comme manière de faire signifie au contraire l'ouverture de la science, l'implication de tous ceux qui sont concernés par la réalité qu'elle détermine, leur implication dans la production de ce savoir :</p>
+            <div class="citation">
+                La ‘matière', l'‘électron', le ‘vide', ne reçoivent pas de définition opératoire, comme s'il suffisait de les soumettre à une opération, ils sont ce sur quoi, désormais nous pouvons opérer, et c'est le nous qui est décisif, la création d'un collectif avec qui matière, électron ou vide feront désormais histoire. C'est à partir de la définition politique de ce collectif que prennent sens des termes épistémologiques tels qu'objectivité ou théorie.<sup><a href="#ref175" class="reference-link" id="r175">[175]</a></sup>
+            </div>
+            <p>Stengers reconnaît la légitimité de la revendication d'autonomie par le scientifique, mais, pour elle, la seule autonomie qui compte vraiment est celle par laquelle le fait scientifique n'est pas un fait comme les autres, celle qui permet de distinguer le fait de l'artefact, celle qui doit pouvoir être revendiquée pour le fait lui-même, et seulement lui. Le scientifique peut bien et doit avoir de multiples intérêts et alliances extra-communautaires – l'essentiel est que le fait n'en dépende pas, que le fait, lui, soit autonome, même si, ensuite, son inscription dans la réalité est une affaire publique, par l'ouverture de nouvelles pratiques, et qui l'inscrivent avec d'autant plus de force qu'elles seront plurielles et surtout diverses.</p>
+            <p>L'autonomie affirmée par Kuhn, et qui peut fonder une historiographie internaliste, est bien différente – c'est celle de la communauté elle-même. La production de savoir, affirme Kuhn, constitue un moment de totale indépendance de la communauté scientifique : les praticiens d'une science mûre sont isolés par rapport au milieu culturel où se déroule leur vie extra-professionnelle. (La dynamique scientifique rencontre parfois le monde extra-scientifique, mais c'est avant qu'une période normale soit installée, le contexte peut alors influer sur les voies de recherche ; ou lorsque le monde scientifique communique ses résultats de recherche, et il revient à l'histoire externe d'étudier notamment l'impact de ce type d'événement. Mais entre temps,) le travail de connaissance et les découvertes, de la réalité, se font en vase-clos. C'est pour cela qu'il y a nécessité d'une historiographie internaliste, pour étudier ce qui se passe dans l'isolement, ce qui est caché. Et on retrouve bien l'image d'une asymétrie épistémique, qu'avait écartée Wittgenstein, et qu'avait semblé vouloir écarter Kuhn aussi. Car la connaissance de la réalité, que constitue une découverte, relève bien d'un accès privé, exclusif au savoir de quelque chose de déterminé ; on pourrait imaginer que la communauté fasse une découverte qu'elle déciderait de ne pas rendre publique.</p>
+            <p>Pourtant, sans critère normatif et sans intégration collective, d'où vient la sanction de la réalité ? Les praticiens, dit Kuhn, forment « une subculture spécifique dont les membres sont le public exclusif et les seuls juges du travail de chacun des autres. »<sup><a href="#ref176" class="reference-link" id="r176">[176]</a></sup> Mais d'où vient l'accord sur le jugement ? Il peut être utile à ce point de reprendre l'image de la dualité intrinsèque de la pensée de Kuhn mentionnée par A. Richardson<sup><a href="#ref177" class="reference-link" id="r177">[177]</a></sup> : il y a un Kuhn qui dénonce l'existence des règles et des critères postulés par l'épistémologie traditionnelle, mais il y en a un autre qui veut à tout prix éviter le relativisme et ‘sauver' la rationalité scientifique. C'est celui-ci qui entre en scène maintenant. L'adhésion partagée des scientifiques qui clôt la communauté sur elle-même est médiatisée par l'existence d'un ensemble universel de valeurs traversant les bouleversements révolutionnaires qui ponctuent l'histoire de la science :</p>
+            <div class="citation">
+                Accuracy, precision, scope, simplicity, fruitfulness, consistency, and so on, simply are the criteria which puzzle solvers must weigh in deciding whether or not a given puzzle about the match between phenomena and belief has been solved… To select a law or theory which exemplified them less fully than an existing competitor would be self-defeating, and self-defeating action is the surest index of irrationality …. As the developmental process continues, the examples from which practitioners learn to recognize accuracy, scope, simplicity, and so on, change both within and between fields. But the criteria that these examples illustrate are themselves necessarily permanent, for abandoning them would be abandoning science together with the knowledge which scientific development brings…<sup><a href="#ref178" class="reference-link" id="r178">[178]</a></sup>
+            </div>
+            <p>Ici intervient donc l'autre face du paradigme, celle que n'a pas retenue I. Stengers, celle qui rend possible l'autonomie de la communauté : le paradigme est aussi adhésion. L'adhésion au paradigme fait de la communauté un seul corps, animé d'un mouvement propre et rationnel, et confère à la dynamique de la connaissance scientifique une nécessité que traduit la métaphore darwinienne. C'est dans l'espace clos de la communauté autonome que les scientifiques, unis par la reconnaissance transhistorique d'un ensemble de valeurs qui fonde la rationalité de leur jugement, jouent au jeu de la recherche scientifique, éprouvent les limites d'un paradigme, traversent une crise, adoptent un nouveau paradigme, etc. Sans cette adhésion, par laquelle la communauté parle d'une seule voix, il y aurait certainement des divergences, certaines irréductibles, et la nécessité de faire intervenir une instance extérieure : puisque ce ne peut pas être une règle, ce pourrait être la société, le collectif, une source de décision certainement non conforme à l'idéal de rationalité scientifique, certainement alimentée par des motivations, des intérêts, des buts extrêmement contextuels.</p>
+            <p>Pourtant, n'est-ce pas précisément parce qu'il y a des divergences, dans l'appréciation du ‘négligeable', dans les techniques mises en œuvre ou même le choix de la modélisation<sup><a href="#ref179" class="reference-link" id="r179">[179]</a></sup> qu'il faut des comités d'experts, et que se développent des forums hybrides, où s'articulent sur le mode coopératif le savoir des spécialistes et celui des profanes, qu'il serait plus juste selon Michel Callon et al.<sup><a href="#ref180" class="reference-link" id="r180">[180]</a></sup> de rebaptiser respectivement recherche confinée, de laboratoire, et recherche de plein air, sensible aux particularismes, aux spécificités locales ?</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : The mangle of practice === -->
+    <div class="capsule" id="capsule-mangle">
+        <div class="capsule-title">🌀 The mangle of practice</div>
+        <div class="capsule-content">
+            <p>L'image d'un déroulement auto-alimenté, auto-structuré, auto-régulé, de la connaissance scientifique ne correspond pas, d'après Pickering, à ce qu'il s'est passé dans l'histoire de la physique des particules. La nouvelle physique n'a pas remplacé l'ancienne, et cette dernière n'a pas succombé à une crise interne. La nouvelle physique s'est développée lentement, en marge de l'ancienne encore dominante, au travers de différentes spécialités naissantes qui se sont installées progressivement :</p>
+            <div class="citation">
+                « Throughout the 1960s the seeds of the new physics were present as specific minority traditions of practice existing in the shadow of the old physics – gauge theory, neutrino and colliding-beam experiments, etc. And during the 1970s those traditions simply grew enormously at the expense of the old physics. » (Pickering, 2002, p.503)
+            </div>
+            <p>En fait, de façon générale, si l'on regarde en détail un moment quelconque de l'histoire des sciences, ce n'est pas une communauté unie autour d'un paradigme que l'on rencontre, mais une pluralité de modèles et de techniques expérimentales :</p>
+            <div class="citation">
+                « Why should one imagine that behind the visible multiplicity there lurks a hidden unity ? » (p.505)
+            </div>
+            <p>Il se peut, écrit Pickering, que ces différentes pratiques forment à certains moments des ‘constellations', mais celles-ci sont des événements contingents et non pas nécessaires de l'histoire d'une science.</p>
+            <p>Il n'est pas non plus nécessaire, pour comprendre comment se produit la stabilisation de l'activité de modélisation dans les limites d'un champ particulier, la fermeture du modèle, d'en appeler à des méthodes ou critères qui seraient transcendants par rapport à l'activité elle-même, à un moment donné :</p>
+            <div class="citation">
+                « The standard answer in philosophy and sociology of science was that to understand closure it was necessary to invoke something fixed and unchanging to cut down the space of openness. » (p.504)
+            </div>
+            <p>Au lieu de cela, il suffit de se rendre attentif à la pratique ‘en temps réel' qui structure l'activité scientifique, les résistances et les accommodations qui la constituent :</p>
+            <div class="citation">
+                « [T]he vectors along which Hamilton eventually travelled were singled out not by anything preexisting his practice, but in terms of the specific resistances that emerged in the real-time of his practice and of the specific accommodations that Hamilton made to them … practice has an important real-time structure that completely escapes traditional accounts of closure – namely, the dialectic of resistance and accommodation that I call the mangle of practice. » (p.505)
+            </div>
+            <p>Nous avons vu précédemment que les notions d'adhésion, à un paradigme, de communauté autonome, de limite entre ce qui est interne et ce qui est externe à la science sont interdépendantes :</p>
+            <div class="citation">
+                « In the Structure… the idea that each scientific community has one big paradigm serves to conjure up a boundary around science – it makes it possible to think of science as a self-sufficient and self-contained entity. » (p. 506)
+            </div>
+            <p>Si l'une est mise en cause, les autres le sont en même temps, de la même façon. En mettant en cause l'idée de l'adhésion à un seul paradigme faisant l'unanimité, Pickering met en cause l'idée d'une frontière déterminée permettant de définir une entité ‘science' indépendante :</p>
+            <div class="citation">
+                « The sense of automatic social, material and conceptual closure that goes with the notion of a big paradigm is lost. »
+            </div>
+            <p>Le lieu de la frontière entre ce qui ressortit à la science et ce qui lui est extérieur devient l'objet d'une enquête historique et ne peut plus recevoir que des réponses contextuelles au lieu d'être un donné, un élément du cadre de la réflexion épistémologique. L'histoire de la chimie organique au 19<sup>ème</sup> siècle, ajoute Pickering, pourrait servir d'exemple typique : la science a été fortement couplée à l'industrie et au capital victorien de différentes manières, sociale, matérielle, conceptuelle. Si une certaine autonomie peut être établie, loin d'être une nécessité, cela doit être regardé comme un problème historique qui appelle une recherche particulière.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : 'Usage' de la science === -->
+    <div class="capsule" id="capsule-usage">
+        <div class="capsule-title">📌 ‘Usage' de la science</div>
+        <div class="capsule-content">
+            <p>La question que pose Fuller à propos de la <em>Structure…</em> est celle concernant la soumission à la science :</p>
+            <div class="citation">
+                « [C]'est, dit Pestre<sup><a href="#ref181" class="reference-link" id="r181">[181]</a></sup>, la fonction conservatrice du discours de Kuhn que Fuller critique [...] affirmer que la dynamique scientifique suit une logique essentiellement interne … est un moyen … de maintenir l'idée qu'une bonne science est naturellement séparée du politique et du social. »
+            </div>
+            <p>La manière dont est traitée par Kuhn la composante sociale de l'activité scientifique tombe aussi sous la critique formulée par Pickering. Prendre pour sujet de la science, une communauté au lieu d'un individu, ce n'est pas, contrairement à ce qui a pu être dit, mettre au jour la sociologie de l'activité scientifique. Les notions de pluralité et d'intrication qui servent à décrire l'organisation effective de la pratique scientifique, peuvent servir aussi de fenêtre sur la sociologie de la science :</p>
+            <div class="citation">
+                « Just as scientific practice is a continual process of aligning conceptual structures and material performances, so, too, is it a process of aligning all sorts of social variables : goals, interests, social structures, etc. » (Pickering, 2002, p.505)
+            </div>
+            <p>Kuhn prévoyait que les sociologues prendraient une place croissante dans la réflexion sur le fonctionnement de l'entreprise scientifique – il attendait d'eux qu'ils portent un regard plus précis que celui des philosophes sur la réalité de l'activité scientifique, et ses travaux ont certainement grandement contribué à ce que ses vœux se réalisent. Pourtant, c'est justement du travail de certains sociologues de la pratique scientifique que provient la critique peut-être la plus sévère de sa conception ; sévère non parce qu'elle révélerait de graves erreurs ou lacunes, mais parce qu'elle met en cause des éléments principiels du dispositif de l'épistémologie de Kuhn. Cette critique nous invite à un changement de regard qui s'apparente à une ‘conversion', dans un sens utilisé par Wittgenstein pour décrire notamment l'expérience qui doit accompagner le renoncement à l'image d'une signification séparée de l'usage. La démarche est la même, la polémique frontale, thèse contre thèse est dissoute parce que la thèse en question, sondée dans ses origines, est donnée à voir comme une image métaphysique. La conversion ne porte pas sur les détails, tout reste en place et pourtant plus rien n'est pareil. Dans le cas du ‘processus intérieur', nous avons besoin, dit Wittgenstein, de critères extérieurs : sans critères il n'y a tout simplement pas de processus intérieur. Tout reste en place : le processus intérieur est toujours là, mais ce n'est plus un secret ; l'extériorité est toujours là, mais son ignorance n'est plus une lacune, l'intérieur n'est pas une enclave dans l'extérieur et l'extérieur n'est plus face à l'intérieur ; intériorité et extériorité sont constituées en même temps et pareillement, dans le langage, par la mise en œuvre de critères partagés. C'est à une modification semblable du regard que nous amène les remarques de Pickering : ce qui est interne et ce qui est externe à la science n'est pas posé a priori, n'est pas déterminé indépendamment d'une enquête historique au cas par cas :</p>
+            <div class="citation">
+                « [J]ust where the boundary lies between the inside and the outside of any given science becomes a matter for historical enquiry rather than a priori philosophical resolution. » (Pickering, 2002, p.506)
+            </div>
+            <p>L'idée d'une co-constitution de ce qui sera considéré comme interne, d'une part, et de ce qui sera considéré comme externe, d'autre part, peut être retrouvée de façon plus précise encore dans le cadre d'une épistémologie substituant au schéma dualiste d'une réalité découverte en vase clos et d'une société soumise à une information partielle et voilée, le concept proposé par Latour d'une nature-culture en mouvement perpétuel de différenciation. Tout reste en place : la réalité est toujours là, mais elle est historique et collective ; l'incertitude qui semblait devoir définir l'extériorité est toujours là, mais elle témoigne, non plus d'une exclusion, mais d'une implication, elle est marque d'inventivité et de diversité du collectif, invention de nouvelles pratiques et de nouvelles situations d'épreuve, diversité des exigences et de ce qui peut être tenu pour négligeable.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : B-3 Le temps vrai et l'émergence === -->
+    <div class="capsule" id="capsule-temps">
+        <div class="capsule-title">⏳ B‑3 Le temps vrai et l'émergence</div>
+        <div class="capsule-content">
+            <p><strong>B‑3‑1 Une temporalité abstraite</strong></p>
+            <p>Il reste encore une chose à dire concernant l'épistémologie kuhnienne et le conservatisme qui l'habite en dépit des critiques qu'elle a adressées à l'empirisme logique. C'est une remarque au sujet du temps, de la temporalité de l'activité scientifique qui a été introduite dans la réflexion épistémologique avec le tournant historique, comme elle l'a été par le connexionnisme dans la modélisation des processus cognitifs. Nous avons remarqué que l'introduction de la temporalité dans la conception connexionniste de la cognition marque un changement profond : le temps n'est plus un paramètre extérieur, mais une dimension constitutive de ce qui est perçu, de ce qui est appris, de ce qui est reconnu. De même, dans l'épistémologie historique, le temps n'est pas un simple décor dans lequel se dérouleraient des événements scientifiques : il est ce qui donne son sens à la notion même de découverte, de progrès, de révolution.</p>
+            <p>Cependant, la temporalité que Kuhn introduit reste en partie une temporalité abstraite, scandée par des révolutions et des périodes de science normale, mais qui n'affecte pas la structure même de la connaissance. Les paradigmes se succèdent, mais la rationalité scientifique, les critères de jugement, les valeurs épistémiques restent, eux, permanents. C'est ce que Friedman a souligné : Kuhn, comme Carnap, conserve un noyau a priori, même s'il est relativisé historiquement. La temporalité kuhnienne est donc une temporalité de surface, qui laisse intacte la structure profonde de la connaissance scientifique.</p>
+            <p>On pourrait dire que Kuhn a « mis le temps dans l'épistémologie », mais qu'il l'y a mis comme un élément du récit, non comme un élément constitutif de la connaissance elle-même. La connaissance, pour Kuhn, reste une structure logique (le paradigme, le lexicon) qui change, mais dont la nature n'est pas affectée par le temps. C'est peut-être là que le tournant historique, malgré ses apparences, reste tributaire de la pensée logiciste qu'il prétendait dépasser.</p>
+            <p>En revanche, des approches plus radicales, comme celle de Pickering (le « mangle of practice ») ou de Latour (la nature-culture en mouvement), font du temps une dimension véritablement constitutive : la connaissance n'est pas une structure qui change dans le temps, mais elle est temporelle par essence, elle émerge dans le temps, elle est le produit d'une histoire contingente et ouverte. C'est ce que Pickering appelle le « real-time » de la pratique : le temps réel de l'activité scientifique, où les résistances et les accommodations se jouent en temps réel, sans qu'aucune structure préexistante ne vienne les déterminer. La connaissance n'est pas un système formel qui s'applique à une réalité donnée ; elle est une pratique temporelle qui constitue à la fois la réalité et les moyens de la connaître.</p>
+            <p>Cette temporalité réelle est aussi celle que le connexionnisme introduit dans la cognition : le temps de l'apprentissage, le temps de la propagation des signaux, le temps de la stabilisation du réseau ne sont pas des paramètres externes, mais des dimensions constitutives de ce que le système connaît. La connaissance n'est pas un état, mais un processus, une émergence continue. C'est cette même idée que l'on retrouve dans les épistémologies post-kuhniennes qui insistent sur la pratique, sur l'incarnation, sur l'historicité radicale de la connaissance.</p>
+            <p>Ainsi, le tournant historique, dans sa version la plus radicale, rejoint le tournant connexionniste : tous deux nous invitent à penser la connaissance non comme une représentation d'un monde préexistant, mais comme une activité temporelle, située, incarnée, qui émerge dans le temps et qui transforme à la fois le connaissant et le connu.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref170"><strong>170.</strong> J.-J. Rosat, in <em>Wittgenstein, l'usage et le sens</em>, 2002.</p>
+            <p id="ref171"><strong>171.</strong> Cf. Wittgenstein, <em>Investigations philosophiques</em>, §246‑249.</p>
+            <p id="ref172"><strong>172.</strong> S. Laugier, <em>L'usage et le sens</em>, 2002, p.?</p>
+            <p id="ref175"><strong>175.</strong> I. Stengers, <em>L'invention des sciences modernes</em>, 1995, p.?</p>
+            <p id="ref176"><strong>176.</strong> T. Kuhn, <em>La structure des révolutions scientifiques</em>, 1970, p.?</p>
+            <p id="ref177"><strong>177.</strong> A. Richardson, <em>Epistemology and the Language of Science</em>, 1989, p.?</p>
+            <p id="ref178"><strong>178.</strong> T. Kuhn, « Objectivity, Value Judgment, and Theory Choice », in <em>The Essential Tension</em>, 1977, p.331‑332.</p>
+            <p id="ref179"><strong>179.</strong> M. Callon, P. Lascoumes, Y. Barthe, <em>Agir dans un monde incertain</em>, Seuil, 2001.</p>
+            <p id="ref180"><strong>180.</strong> Ibid.</p>
+            <p id="ref181"><strong>181.</strong> D. Pestre, in <em>La revue du M.A.U.S.S.</em>, 2001.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="02_II_B2_3.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="02_II_B3.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>
