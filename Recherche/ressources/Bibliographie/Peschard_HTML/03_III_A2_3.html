@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑2. La cognition sans la représentation : l'énaction (partie 3) – Autopoïèse</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑2. La cognition sans la représentation : l'énaction (partie 3) – Autopoïèse (pages 289‑313)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-autopoiese">🌱 L'autopoïèse</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-organisation-structure">🔧 Organisation‑structure</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-systeme">🧩 Système autopoïétique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-unite">🎯 L'unité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-perturbations">⚡ Perturbations</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-couplage">🔗 Couplage‑environnement</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-ontogenie">🌿 Ontogenie</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-cognition">🧠 Autopoïèse et cognition</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-systeme-nerveux">⚡ Système nerveux</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A2_4.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- RAPPEL : fin de la section précédente (action-perception) -->
+    <div class="capsule" id="capsule-rappel-action">
+        <div class="capsule-title">🔄 Rappel : Action‑perception</div>
+        <div class="capsule-content">
+            <p>… la perspective représentationiste schématise le processus cognitif comme un processus en trois temps où perception et action sont des moments distincts du processus et sont rapportés, lecture sémantique oblige, à des événements ou des objets indépendants du processus. À l'opposé, selon l'approche énactive, les processus moteurs et sensoriels, la perception et l'action, ne constituent pas des moments qui peuvent être compris indépendamment l'un de l'autre : ils sont essentiellement dépendants l'un de l'autre dans le sens où ce en quoi consiste le processus sensoriel dépend de ce en quoi consiste le processus moteur, et inversement. Cette circularité, cette dépendance réciproque, est au cœur de l'approche énactive : c'est ce que Varela et al. appellent la « boucle sensorimotrice ».</p>
+            <p>Cette conception de l'action‑perception est directement inspirée par les travaux de Gibson sur l'écologie de la perception, par la phénoménologie de Merleau‑Ponty, et par la théorie des systèmes autopoïétiques de Maturana et Varela. C'est à cette théorie que nous allons maintenant nous consacrer.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'autopoïèse === -->
+    <div class="capsule" id="capsule-autopoiese">
+        <div class="capsule-title">🌱 L'autopoïèse</div>
+        <div class="capsule-content">
+            <p><strong>Organisation‑structure</strong></p>
+            <div class="citation">
+                « La clé pour comprendre le phénomène biologique est de comprendre l'organisation de l'individu<sup><a href="#ref203" class="reference-link" id="r203">[203]</a></sup>. »
+            </div>
+            <p>La notion d'organisation désigne l'ensemble des relations entre les éléments d'un système qui définissent ce système comme une unité et déterminent les dynamiques des interactions et des transformations qui peuvent avoir lieu au sein de ce système. L'organisation ne spécifie pas les propriétés des éléments qui peuvent réaliser le système concrètement, dans l'espace ; un système défini par une organisation peut être réalisé de différentes manières par différents types d'éléments, dans la mesure où ces éléments possèdent les propriétés leur permettant de générer les relations qui font d'eux des composants d'une unité définie par cette organisation :</p>
+            <div class="citation">
+                « The organization of a machine (or system) does not specify the properties of the components that realize the machine as a concrete system ; it only specifies the relations that these must generate to constitute the machine (or system) as a unity. » (Varela, 1979, p.9)
+            </div>
+            <p>Les relations concrètes qui existent entre les composants qui réalisent le système constituent la structure du système. Les seules propriétés des composants qui sont pertinentes pour ou par rapport au système sont celles qui sont engagées dans la réalisation du réseau de relations, réseau d'interactions et de transformations, qui constitue l'organisation. L'organisation d'un système spécifie seulement les relations entre ses composants et les règles pour leurs interactions et leurs transformations. Une certaine organisation peut être instanciée par différentes structures dans la mesure où les composants de cette structure possèdent les propriétés qui sont pertinentes pour l'organisation.</p>
+
+            <p><strong>Système autopoïétique</strong></p>
+            <div class="citation">
+                « L'autopoïèse dans l'espace physique est nécessaire et suffisante pour caractériser un système en tant que système vivant. » (Varela, 1979, p.41)
+            </div>
+            <p>Un système autopoïétique est un système qui produit en continu les éléments qui le réalisent et qui le spécifient comme une unité concrète, dans le temps et dans l'espace, qui elle-même rend possible le réseau de production des composants :</p>
+            <div class="citation">
+                « An autopoietic system is organized (defined as a unity) as a network of processes of production (synthesis and destruction) of components such that these components: (i) continuously regenerate and realize the network that produces them, and (ii) constitute the system as distinguishable unity in the domain in which they exist<sup><a href="#ref204" class="reference-link" id="r204">[204]</a></sup>. »
+            </div>
+            <p>Un système autopoïétique est un système homéostatique (car son organisation est maintenue constante, elle est un invariant du système) dont l'organisation est définie par le réseau de processus de production des composants. Il produit les composants qui le réalisent comme unité distincte et concrète. Les éléments qui constituent le système comme une unité dans l'espace physique sont produits par le système de relations de productions définissant l'identité organisationnelle du système et génèrent à leur tour le système de relations qui les produit. Le système autopoïétique produit ses constituants, à la différence d'un système allopoïétique dont les produits sont différents du système ou dont les constituants ne sont pas produits par le système. Un système autopoïétique est caractérisé par un complexe invariant de processus d'autoproduction qui spécifie ce qui appartient au système et le définit comme une unité :</p>
+            <div class="citation">
+                « Autopoietic machines are unities because, and only because, of their specific autopoietic organization : their operations specify their own boundaries in the process of self-production. » (Maturana &amp; Varela, 1980, p.81)
+            </div>
+
+            <p><strong>L'unité</strong></p>
+            <div class="citation">
+                « L'unité ( distinguishability from a background, and hence from other unities ) est la seule condition nécessaire pour l'existence dans un quelconque domaine donné. » (Varela, 1979, p.30)
+            </div>
+            <p>Un système autopoïétique est défini comme une unité par et au travers de son organisation autopoïétique. Aussi longtemps qu'il existe, un système autopoïétique maintient invariante son organisation ; les systèmes autopoïétiques sont dits autonomes parce que tout changement qui affecte le système autopoïétique est subordonné au maintien de l'organisation :</p>
+            <div class="citation">
+                « Autopoietic machines are autonomous ; that is, they subordinate all changes to the maintenance of their own organization, independently of how profoundly they may otherwise be transformed in the process. » (Maturana &amp; Varela, 1980, p.80)
+            </div>
+            <p>L'organisation autopoïétique définit l'espace dans lequel elle peut être réalisée comme un système concret et dont les dimensions sont les relations de production des composants qui la réalisent : c'est l'espace autopoïétique. Un système autopoïétique est défini comme une unité topologique par son instanciation par un système concret qui maintient constant le réseau de relations de production entre les composants, une unité topologique dans l'espace dans lequel les composants existent et interagissent.</p>
+            <p>La réalisation de l'unité autopoïétique dans un espace physique requiert des composants qui sont définis par leur rôle dans l'autopoïèse et qui peuvent seulement être décrits par rapport à ce rôle. Ces composants doivent posséder les propriétés matérielles nécessaires à la réalisation de l'autopoïèse et doivent être produits par le système concret qu'ils constituent comme instanciation de l'organisation. L'unité topologique est maintenue tant que les compensations structurelles des déformations subies par le système maintiennent celui-ci dans l'espace autopoïétique dans lequel l'organisation peut être réalisée. Cette unité topologique est réalisée, pour les systèmes vivants, dans l'espace physique ; les systèmes vivants sont des systèmes autopoïétiques dans l'espace physique.</p>
+
+            <p><strong>Perturbations</strong></p>
+            <p>Un système autopoïétique se maintient comme une unité distincte aussi longtemps que le réseau de processus de production de ses composants perdure en dépit des perturbations et des transformations qu'il peut subir :</p>
+            <div class="citation">
+                « [Autopoietic machines] can be perturbed by independent events and undergo internal structural changes which compensate these perturbations » (Varela, 1979, p.15)
+            </div>
+            <p>Les perturbations ne déterminent pas la nature des modifications par lesquelles le système produit les compensations qui maintiennent invariante son organisation ; elles les provoquent. C'est le mode concret particulier par lequel est réalisée l'organisation qui détermine le type de perturbations qui peuvent affecter le système, la plage de déformations possibles, le domaine d'interaction dans lequel il peut être observé, et comment celles-ci sont compensées. Et dans la mesure où ces compensations sont des modifications de la structure du système, ce qui est appelé ‘mode concret particulier' de réalisation de l'organisation n'est pas, même pour un système particulier, défini en général, mais dépend du moment où l'on considère le système. L'interaction continue du système, dont la structure peut être modifiée, avec un environnement constituant une source de perturbations, induit un processus continu de sélection de structure du système : ce processus est appelé le couplage structurel.</p>
+            <p>Nous avons vu que toute transformation structurelle est subordonnée au maintien de l'organisation qui définit l'unité du système :</p>
+            <div class="citation">
+                « Autopoietic machines … subordinate all changes to the maintenance of their own organization, independently of how profoundly they may otherwise be transformed in the process. » (Maturana &amp; Varela, 1980, p.80)
+            </div>
+            <p>Cela signifie que l'organisation du système autopoïétique définit le domaine de sa phénoménologie ; tandis que le type de phénoménologie est défini par la façon dont l'organisation est réalisée, la structure de l'unité autopoïétique. Cela signifie aussi que cette organisation pose les conditions aux limites qui définissent ce qui appartient au système : ne peut appartenir au système que ce qui n'entrave pas la réalisation de l'organisation ; que ce qui est contenu dans le domaine d'interaction du système. Mais la définition de ce domaine dépend de la structure, et celle-ci est modifiée par les compensations provoquées par les perturbations :</p>
+            <div class="citation">
+                « ... all change must occur ... in a history of structural change in which the autopoietic organization remains invariant. » (Maturana &amp; Varela, 1980, p.87)
+            </div>
+            <p>La distinction entre ce qui est intérieur et extérieur n'est donc pas concevable a priori. L'espace autopoïétique défini par l'organisation autopoïétique, c'est-à-dire l'espace dans lequel le système, en tant que réseau de relations de production de l'unité autopoïétique, peut être réalisé concrètement est auto-contenu. Aucune relation du processus de constitution de l'organisation n'engage quoi que ce soit qui n'appartienne à l'unité autopoïétique. Par rapport à l'organisation du système, ce qui ne participe pas du réseau de relations de production est simplement une perturbation.</p>
+            <p>Un observateur qui considère le système autopoïétique comme une unité placée dans un contexte qu'il décrit comme son environnement peut distinguer deux sources de perturbations : l'une est l'environnement,</p>
+            <div class="citation">
+                « a source of independent events in the sense that these are not determined by the organization of the system »,
+            </div>
+            <p>l'autre est le système lui-même,</p>
+            <div class="citation">
+                « as a source of states that arise from compensations of deformations, but that themselves can constitute deformations that generate further compensatory changes. »
+            </div>
+            <p>Mais dans la phénoménologie de l'organisation autopoïétique, cette distinction n'existe pas. La correspondance continue entre la conduite du système, c'est-à-dire la séquence de ses transformations, et l'environnement est le résultat de la seule nature invariante de l'organisation autopoïétique,</p>
+            <div class="citation">
+                « the result of the invariant nature of the autopoietic organisation, and not of the existence of any representation of the environment in it. » (Varela, 1979, p.33)
+            </div>
+            <p>En conséquence, voir la séquence des transformations de la structure du système comme un processus de représentation de l'environnement est une confusion entre perspectives d'observations. Lorsque les systèmes autopoïétiques sont vus comme des éléments d'un système plus large qui définit les événements indépendants susceptibles de perturber l'unité autopoïétique, et que ces perturbations sont considérées comme des inputs et que les compensations du système sont considérées comme des outputs, le système observé est décrit en tant que système allopoïétique.</p>
+
+            <p><strong>Domaine de l'observation – domaine de l'autopoïèse</strong></p>
+            <p>Il est essentiel, dans le cadre de la théorie de l'autopoïèse, et de l'énaction, de bien faire la distinction entre les notions de perturbation et de modification de la structure, d'une part, et les notions de ‘input' et ‘output', d'autre part. La distinction entre deux sources de déformation du système autopoïétique, entre ce qui est extérieur et ce qui est intérieur au système, relève de la description du système ; cette distinction appartient au domaine de l'observation du système, pas au domaine de son organisation. L'observateur peut situer l'origine des perturbations dans l'environnement du système, ou dans le système lui-même, mais dans la phénoménologie de l'organisation, ces deux sources de perturbations sont indistinguables. Considérer les perturbations comme des ‘inputs' et les changements de la structure comme des ‘output' correspondant à ces ‘inputs', c'est considérer le processus de transformation de la structure comme la réalisation d'une fonction, d'un but qui serait de produire une réponse aux ‘inputs' – et considérer que la pertinence des transformations peut être évaluée, en général, par référence à une relation entre les ‘outputs' et les ‘inputs'. Mais les systèmes autopoïétiques sont des systèmes qui n'ont pas de but ni de fonction. Les notions de but et de fonction, comme celles de ‘input' et ‘output', appartiennent au domaine de description du système autopoïétique par un observateur qui considère le système au sein d'un milieu dont il fournit les déterminations. Le domaine de l'observation définit le contexte dans lequel le système évolue et la relation causale entre certains états du contexte et certains états du système appartient seulement au domaine de la description. Toute relation entre les modifications de la structure et la nature des perturbations qui les provoquent en tant que compensations appartient au domaine dans lequel le système est observé. Les relations causales établies par l'observateur du système n'ont aucune valeur explicative – même si cela n'empêche pas qu'elles puissent avoir un intérêt pour l'observateur, pour la visée que poursuit sa description du système :</p>
+            <div class="citation">
+                « [N]otions such as those of ‘goals' and ‘purpose' come from a realm of discourse proper to observers describing and somehow summarizing the behavior of a system. Since they overlook the effective subjacent processes, for Francisco [Varela] they are ‘purely pedagogical'. » (Rudrauf et al., 2003, p.35)
+            </div>
+            <p>L'activité du système décrite par l'observateur reflète la succession des changements que le système subit dans le processus de maintien de son organisation au travers de la modification de sa structure, c'est-à-dire de la spécification de la valeur de ses variables déplacées par des perturbations. Toute corrélation entre des événements répétitifs indépendants de l'organisation du système, et perturbant celui-ci, et les transitions d'un état à l'autre provoquées par ces perturbations, appartiennent à l'histoire du système dans le domaine de l'observation mais pas au domaine de l'organisation autopoïétique.</p>
+
+            <p><strong>Tout‑partie</strong></p>
+            <p>Une question cruciale que pose l'étude des systèmes auto-organisés, dont font partie les systèmes autopoïétiques, est la relation entre les composants et les propriétés globales du système. L'approche théorique qui est présentée ici défend l'idée d'une causalité réciproque entre les lois d'interactions locales et les propriétés globales. Le niveau global du ‘tout', et le niveau local des composants sont reliés par le processus continu d'auto-différentiation de l'unité par rapport au milieu dans lequel elle se trouve. Ce en quoi consiste l'organisation définit le processus de production des parties, et ce en quoi consistent les parties régénère et réalise le réseau de relations de production qui définit l'unité du système. Le processus de production de l'unité, l'individualité, du système autopoïétique est un processus opérationnellement clos, c'est-à-dire un mécanisme circulaire de relations entre le tout et les parties de l'unité par lequel la production des parties et la constitution de l'identité du tout sont des processus qui sont inter-définis. L'espace autopoïétique est clos dans le sens où il est entièrement spécifié par lui-même.</p>
+            <p>Le concept de clôture organisationnelle est un concept très important pour la compréhension de la condition d'un système vivant. Il permet de caractériser de façon formelle le mécanisme d'autonomie en tant que comportement auto-organisé et de spécifier l'organisation circulaire en tant qu'elle constitue une identité spécifique. (Rudrauf &amp; al., 2003, p.33-34) C'est, en fait, à titre de thèse, d'hypothèse théorique de travail, de guide heuristique, dans l'étude des systèmes autonomes, qu'est introduite la notion de clôture organisationnelle :</p>
+            <div class="citation">
+                « Closure Thesis : Every autonomous system is organizationally closed. […] The task is, then, to use the idea of organizational closure and its consequences to explore the phenomena of autonomy. » (Varela, 1979, p.58)
+            </div>
+            <p>Les systèmes autonomes sont dits organisationnellement clos dans le sens où les processus qui caractérisent l'organisation, d'une part, sont dépendants les uns des autres dans leur génération et leur réalisation, « they recursively depend on each other », et d'autre part, constituent le système comme une unité topologique dans l'espace dans lequel ils se produisent,</p>
+            <div class="citation">
+                « a unity recognizable in the space in which the processes exist. » (Varela, 1979, p.55)
+            </div>
+            <p>Lorsque les processus qui caractérisent l'organisation sont des processus de production de composants, la clôture organisationnelle est identique à l'autopoïèse.</p>
+            <p>Il ne suffit donc pas pour définir un système autopoïétique de considérer un système de relations par lequel les éléments qui sont produits sont intégrés à ce processus de production. Il faut que ce processus constitue une unité autonome ; un système autopoïétique est un processus continu opérationnellement clos de maintien d'une identité, de régénération d'une unité auto-constituée :</p>
+            <div class="citation">
+                « It is this operational closure which gives rise to an emergent or global coherence. » (Varela, 1997a, p.73)
+            </div>
+
+            <p><strong>Couplage‑environnement</strong></p>
+            <p>Il est essentiel de comprendre, souligne Rudrauf et al., que clôture ne signifie pas fermeture :</p>
+            <div class="citation">
+                « … the idea of closure does not contradict that of openness. Closure doesn't mean a closed system. We are looking at far from equilibrium systems, with an exchange of matter and energy with their surroundings. The core of circular causality is coupled with the system's trophic and adaptive dependence on its environment. » (Rudrauf &amp; al., 2003, p.34)
+            </div>
+            <p>Tout en étant un système opérationnellement clos – ses composants réalisent le réseau de relations de production qui les produit – le système autopoïétique ne peut pas être pensé indépendamment de ce par rapport à quoi, en tant qu'unité concrète, il est réalisé :</p>
+            <div class="citation">
+                « It is ex-hypothesis evident that an autopoietic system depends on its physico-chemical milieu for its conservation as a separate entity, otherwise it would dissolve back into it. » (Varela, 1997a, p.78)
+            </div>
+            <p>L'environnement du système est le fond sur lequel l'unité du système est supposée se détacher,</p>
+            <div class="citation">
+                « … the background in which it is supposed to lie... »;
+            </div>
+            <p>c'est l'espace dans lequel le système est réalisé concrètement, l'espace physique pour les systèmes vivants :</p>
+            <div class="citation">
+                « Without unity in the physical space a living system would lack the dynamics of production relations which constitute it as a concrete entity in that space. » (Maturana &amp; Varela, 1980, p.94)
+            </div>
+            <p>Mais l'environnement n'est pas seulement un fond ; c'est une source de perturbations. Pour que l'on puisse parler de perturbations, il faut qu'il existe entre le système et le milieu dans lequel il existe une relation d'interaction : un système autopoïétique est couplé à l'environnement sur fond duquel il constitue son identité. Maintenir son organisation, c'est pour un système autopoïétique maintenir la relation de couplage qu'il entretient avec son environnement, et dans le même temps, répondre en continu, par des transformations structurelles successives, aux perturbations dont cet environnement est identifié comme étant la source :</p>
+            <div class="citation">
+                « Whence the intriguing paradox proper to an autonomous identity: the living system must distinguish itself from its environment, while at the same time maintaining its coupling; this linkage cannot be detached since it is against this very environment from which the organism arises, comes forth. » (Varela, 1997a, p.78)
+            </div>
+            <p>Le processus dynamique de stabilisation structurelle qui est réalisé au travers du système circulaire de relations de productions, alimenté par un flux de matière et d'énergie provenant de l'environnement, est essentiel au maintien de l'unité et de l'autonomie du système autopoïétique. Car l'idée de processus continu d'auto-production d'une unité, qui définit le système vivant comme système autopoïétique, implique l'idée d'une relation de couplage du système avec le milieu dans lequel il existe, et donc aussi celles de perturbation et de transformation. Le système autopoïétique génère et spécifie son organisation par un renouvellement continu de ses composants qui participe nécessairement d'un processus continu de compensations répondant à des perturbations.</p>
+
+            <p><strong>Ontogenie</strong></p>
+            <p>Ce qui n'est pas le système, ce qui est autre que le système, c'est-à-dire ce qui n'est pas le système mais peut néanmoins perturber le système, est essentiel à la notion d'unité autonome : le système vivant doit se distinguer en permanence d'un environnement et pour cela entretenir une relation avec cet autre tout autant que maintenir son organisation. Il appartient ainsi à la ‘vie', à l'ontogenie d'un système autopoïétique, processus continu de réalisation de l'individualité du système autopoïétique,</p>
+            <div class="citation">
+                « [O]ntogeny is both an expression of the individuality of living systems and the way through which this individuality is realized » (Maturana &amp; Varela, 1980, p.87),
+            </div>
+            <p>d'être perturbé et de compenser en permanence ces perturbations.</p>
+            <p>L'ontogenie du système vivant, en tant qu'expression de son individualité au travers de l'histoire des modifications de sa structure, se réalise par rapport à quelque chose, que l'on appelle l'environnement du système et la notion de couplage est constitutive de ce ‘par rapport à' essentiel à la distinction d'une unité. Pour le dire autrement, la théorie du système vivant en tant que système autopoïétique doit partir du fait qu'il y a de la vie, du fait qu'un système vivant est une unité topologique dans l'espace physique, et que cette unité existe dans un milieu qui sera identifié comme une source de perturbation de l'organisation vivante :</p>
+            <div class="citation">
+                « For epistemological reasons, in order to say all that we have said about living systems, we had to assume a space (the physical space) within which the phenomenology of autopoiesis of living systems take place. » (Maturana &amp; Varela, 1980)
+            </div>
+
+            <p><strong>Couplage entre unités autopoïétiques</strong></p>
+            <p>Des unités autopoïétiques peuvent être dites couplées (Maturana &amp; Varela, 1980, p.107) : il y a couplage entre deux unités, ou plus, dans un certain domaine, lorsque, dans ce domaine, le comportement de chacune des unités est une fonction du comportement des autres. Le couplage est le résultat de modifications mutuelles que subissent des unités autopoïétiques en interaction ; il n'est possible que dans la mesure où les activités des unités, au travers de leurs changements structurels, constituent des sources réciproques de perturbations qui peuvent être compensées. Il peut y avoir couplage aussi entre unités autopoïétiques et unités non autopoïétiques. Là encore, il faut que les perturbations subies par les unités autopoïétiques soient comprises à l'intérieur de leur domaine d'interaction, qu'elles ne débordent pas l'intervalle de tolérance à l'intérieur duquel la variation des variables structurelles se fait sans perte de l'autopoïèse. Le couplage peut conduire à la constitution d'une nouvelle unité. La façon dont cela se produit, et le domaine dans lequel la nouvelle unité est réalisée, dépend des propriétés des unités composantes. Le système généré par le couplage des unités autopoïétiques constitue une unité autopoïétique s'il est défini par des relations de production de composants qui génèrent ces relations et le définissent comme une unité dans un certain espace, l'espace autopoïétique, et non l'espace dans lequel il est observé. Si le système ainsi généré est un système dans l'espace physique, c'est un système vivant.</p>
+
+            <p><strong>Ontogenie – autopoïèse</strong></p>
+            <p>Si, comme nous l'avons vu, la conception autopoïétique du vivant implique une relation d'interaction avec un environnement, si l'environnement participe ainsi au maintien de l'organisation, comment sont spécifiées les limites du système ? Nous avons vu que les limites du système sont générées par le réseau de processus de réalisation de l'organisation, mais si le maintien de l'organisation nécessite l'action de l'environnement, pourquoi cette action est-elle appelée perturbation plutôt que processus de l'autopoïèse ?</p>
+            <p>La reconnaissance du caractère autopoïétique d'un système (Maturana &amp; Varela, 1980, p.109) est liée à la capacité de l'observateur de reconnaître les relations qui définissent le système comme une unité organisationnelle et de distinguer les limites qui définissent cette unité dans l'espace dans lequel elle est réalisée. Dans la mesure où le système spécifie ses propres limites, la reconnaissance d'un système comme une unité autopoïétique demande à l'observateur qu'il définisse les limites du système dans le même domaine que celui où le système les spécifie au travers de son autopoïèse. Pour appréhender un système comme une unité autopoïétique, c'est-à-dire pour appréhender le système dans l'espace dans lequel est réalisée l'autopoïèse, l'observateur doit reconnaître les relations topologiques qui spécifient l'unité dans l'espace de l'autopoïèse et pour cela il doit reconnaître les relations de production des composants qui constituent le système.</p>
+            <p>Dans le cas des systèmes vivants, les relations de productions de composants nécessitent un flux d'énergie et de matière qui est porté par le couplage avec l'environnement. Ce couplage est condition de vie, de transformation, et d'extinction. Néanmoins, l'énergie ou la matière qui participe au processus autopoïétique n'appartient pas au système lui-même dans le sens où elles ne sont pas le produit du système de relations de production qui engendre l'unité topologique réalisant l'organisation autopoïétique. S'il est possible de définir un système plus large qui comprend le premier, d'ordre 1, et tel que les relations de production de ce système d'ordre supérieur produisent la source d'énergie qui est impliquée dans la production du système entier, cette source d'énergie devient un élément de ce système : ce qui était extérieur au système d'ordre 1 est devenu un élément d'un système d'ordre supérieur comprenant le premier – mais il y aura une autre source d'énergie nécessaire à la dynamique de production de ce système d'ordre supérieur, qui, elle, n'est pas produite par le système et qui, dès lors, n'en fait pas partie.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Autopoïèse et cognition === -->
+    <div class="capsule" id="capsule-cognition">
+        <div class="capsule-title">🧠 Autopoïèse et cognition</div>
+        <div class="capsule-content">
+            <p><strong>Domaine cognitif</strong></p>
+            <p>Le domaine cognitif d'une unité autopoïétique est le domaine des interactions dans lequel elle peut s'engager sans perte de son organisation autopoïétique. Ce domaine est déterminé, pour chaque unité autopoïétique, par sa structure, c'est-à-dire la façon particulière dont est réalisée concrètement l'organisation autopoïétique. En déterminant le domaine cognitif du système, la structure qui réalise l'organisation autopoïétique détermine la diversité de ses comportements. Des unités autopoïétiques réalisées par différentes structures ont des domaines d'interaction différents et donc des domaines cognitifs différents et si la structure d'un système au cours de son histoire ontogénique est modifiée, le domaine cognitif de ce système est modifié en même temps.</p>
+
+            <p><strong>Lecture sémantique/participative</strong></p>
+            <p>La dualité des lectures sémantique et participative se traduit ici par le fait qu'un observateur du système autopoïétique peut considérer la façon dont le système compense les déformations comme</p>
+            <div class="citation">
+                « une description de l'agent déformant qu'il voit agir sur lui et la déformation subie par le système comme une représentation de l'agent déformant . » (Maturana &amp; Varela, 1980, p.119)
+            </div>
+            <p>Le domaine de toutes les déformations qu'un système autopoïétique peut subir tandis qu'est maintenue l'organisation devient ainsi le domaine de toutes les descriptions qu'il peut éventuellement faire. Lorsqu'il produit ce genre d'énoncés sur l'activité du système, l'observateur se livre à une lecture sémantique de cette activité. Mais, par ailleurs, il appartient à l'unité autopoïétique, c'est-à-dire à la notion d'autopoïèse de générer une perspective selon laquelle l'extériorité de l'unité autopoïétique et l'identité même de l'unité sont co-constituées :</p>
+            <div class="citation">
+                « In defining what it is as unity, in the very same movement, it defines what remains exterior to it, that is to say, its surrounding environment. » (Varela, 1997a, p.78)
+            </div>
+            <p>Cette extériorité ne doit pas être confondue avec ce que l'observateur appelle l'environnement physique de l'unité et qui est défini comme l'ensemble des choses qui existent, qui font sens, pour l'observateur lui-même, indépendamment de la nature et de l'activité de l'unité autopoïétique. L'environnement du système, tel qu'il apparaît à l'observateur, n'est pas l'environnement pour le système, qui est défini dans le même mouvement que celui définissant l'identité du système, et qui est donc dépendant de la nature et de l'activité du système. À la différence de l'environnement qui apparaît à l'observateur, l'environnement pour le système est le monde dans lequel vit le système, ce qui fait sens pour le système :</p>
+            <div class="citation">
+                « The difference between environment and world is the surplus of signification which haunts the understanding of the living and of cognition, and which is at the root of how a self becomes one. » (Varela, 1997a, p.79)
+            </div>
+            <p>La description de l'environnement relève d'une lecture sémantique tandis que celle du monde du système relève d'une lecture participative, une lecture depuis le point de vue du système. Cependant, la distinction entre le monde et l'environnement est négligée à chaque fois que n'est pas pris en considération en tant que tel le surplus ajouté par la perspective du système : en oubliant, par exemple, que le sucrose n'a pas de signification alimentaire indépendante de l'usage qu'en fait le métabolisme de la bactérie dans le maintien de son organisation. Ce qui est susceptible de faire sens pour le système est ce qui appartient à son domaine cognitif, c'est-à-dire son domaine d'interaction. Il est possible de considérer que la connaissance que l'on peut attribuer à un système dépend de ses comportements, et ceux-ci dépendent de son domaine d'interaction, et donc du mode particulier par lequel il réalise son autopoïèse. La description de l'organisation autopoïétique d'un organisme peut constituer une explication du domaine de connaissance du système cognitif. Mais, ce que la théorie de l'énaction ne cesse d'affirmer, et de rappeler au scientifique lui-même, est que toute connaissance dépend du système connaissant :</p>
+            <div class="citation">
+                « [I]f knowledge is descriptive conduct, it is relative to the cognitive domain of the knower. » (Maturana &amp; Varela, 1980, p.119)
+            </div>
+            <p>La dépendance par rapport au domaine cognitif est une dépendance par rapport à l'organisation qui définit le système et la structure qui réalise cette organisation. En tant que processus de maintien de l'organisation et de la structure qui la réalise, l'activité cognitive est un processus de co-construction du système et de son monde. L'activité cognitive n'est pas une représentation d'un monde pré‑donné, mais une action qui fait émerger un monde.</p>
+            <p>Lorsqu'il s'agit, cependant, de décrire la dynamique interne de l'organisation autopoïétique, il n'y a pas lieu de considérer, a priori, les changements structurels comme autre chose que des compensations suscitées par des perturbations de l'organisation. Les significations ne sont pas antérieures aux transformations que subit le système ; ce en quoi consiste le monde de l'unité autopoïétique est un résultat de ces transformations et non pas une cause. C'est au travers de ces transformations incessantes, constituant son activité cognitive, au travers de ce processus continu de compensations enraciné dans l'interaction entre le système et son environnement, que le monde émerge pour le système. Ce qui perturbe l'autopoïèse est la source de la formation du monde du système autopoïétique. L'activité cognitive peut alors sembler paradoxale dans la mesure où elle est ce par quoi le système maintient son identité et donc son couplage avec l'environnement, alors que cet environnement est à l'origine des perturbations qui menacent cette identité et entraînent les transformations qui constituent l'activité cognitive :</p>
+            <div class="citation">
+                « [T]he action that brings forth a world is an attempt to reestablish a coupling with an environment which defies the internal coherence through encounters and perturbations.» (F.J. Varela, 1997a, Patterns of life, p.80)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Système nerveux === -->
+    <div class="capsule" id="capsule-systeme-nerveux">
+        <div class="capsule-title">⚡ Système nerveux</div>
+        <div class="capsule-content">
+            <p>Le système nerveux peut être considéré comme un système autopoïétique d'ordre supérieur : un système autopoïétique formé par des systèmes autopoïétiques couplés, les neurones. Ce système autopoïétique est, en outre, en interaction avec l'organisme dont il est lui-même un composant ; il est un lieu de couplage circulaire entre mouvements corporels et modulations sensorielles :</p>
+            <div class="citation">
+                « The fundamental logic of the nervous system is that of coupling movements with a stream of sensory modulations in a circular fashion. » (F.J. Varela, 1997a, p.81)
+            </div>
+            <p>En tant que composants d'un réseau d'unités couplées, les neurones apparaissent à un observateur comme des systèmes allopoïétiques. Ils sont alors vus comme possédant une surface collectrice, « collector surface », qui reçoit les influences afférentes des autres neurones, et une surface effectrice, « effector surface », qui affecte la surface collectrice des autres neurones. Ces deux surfaces sont séparées par un élément conducteur qui communique l'état de la surface collectrice à la surface effectrice. L'interaction entre la surface collectrice d'un neurone et les surfaces effectrices d'autres neurones peut être excitatrice ou inhibitrice selon le type des neurones qui sont impliqués. Les influences afférentes excitatrices provoquent un changement de l'état d'activité de la surface collectrice qui est susceptible d'entraîner un changement de l'état de la surface effectrice ; les influences inhibitrices, au contraire, annulent ou diminuent les effets des influences afférentes.</p>
+            <p>L'état d'activité d'un neurone est déterminé d'une part, par sa structure, d'autre part, par les influences afférentes reçues par sa surface collectrice. L'effet d'une afférence sur l'état d'un neurone dépend d'une part, de la structure de celui-ci, d'autre part des autres afférences reçues par la surface réceptrice de celui-ci. Tout au long de l'ontogenèse d'un organisme, la structure d'un neurone se modifie sous les effets combinés de ses propres déterminations génétiques et de ses interactions avec les autres cellules ; ce changement entraîne une modification de son domaine d'activité, c'est-à-dire de la façon dont les influences afférentes sont transmises à la surface effectrice, et une modification de son rôle au sein du réseau neuronal.</p>
+
+            <p><strong>Clôture opérationnelle</strong></p>
+            <p>Le système nerveux, en tant que réseau d'interaction de neurones, constitue un système opérationnellement clos. La notion de clôture fait référence à la nature auto-référentielle de l'activité du système de neurones. En tant que système opérationnellement clos, le système nerveux est constitué d'un réseau d'éléments dynamiques réciproquement reliés qui génère des modes d'activité globale. Ces formes d'activité cohérente à grande échelle, d'une part, correspondent à des formes invariantes de corrélation sensori-motrice, et d'autre part, donnent lieu à un comportement spatial de l'organisme en tant qu'unité mobile. Elles constituent une identité cognitive :</p>
+            <div class="citation">
+                « This coherence is a cognitive identity: a unit of perception/motion in space, sensory-motor invariances mediated through the interneuron network. […] In other words the cognitive self is the manner in which the organism, through its own self-produced activity, becomes a distinct entity in space, but always coupled to its corresponding environment from which it remains nevertheless distinct. » (F.J. Varela, 1997a, p.83)
+            </div>
+            <p>Dans ce cas, le fait qu'un observateur puisse spécifier un élément de l'environnement comme élément d'une relation entre les surfaces sensorielles et les surfaces effectrices de l'organisme est sans pertinence car le système nerveux est défini par les interactions entre les neurones qui le composent. Le réseau de neurones peut être perturbé par des agents dont l'activité est indépendante de celle du système nerveux, mais qui se couplent au système par l'intermédiaire des surfaces réceptrices de quelconques neurones. Mais les changements que le système nerveux peut endurer sans qu'il se désintègre sont déterminés par sa connectivité, c'est-à-dire par l'ensemble des relations fonctionnelles qui existent entre les neurones qui le composent. L'activité du système nerveux est auto-générée, auto-organisée, et c'est cette activité qui donne lieu à la cognition, à la perception et à l'action. La cognition n'est pas une représentation d'un monde extérieur, mais une activité d'un système qui, en interagissant avec son environnement, co‑construit à la fois son identité et son monde.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref203"><strong>203.</strong> H. Maturana &amp; F. Varela, <em>Autopoiesis and Cognition</em>, 1980, p.80.</p>
+            <p id="ref204"><strong>204.</strong> H. Maturana &amp; F. Varela, <em>Autopoiesis and Cognition</em>, 1980, p.78.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A2_2.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A2_4.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

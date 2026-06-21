@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.B‑2. Pratique de la science – B2.2</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la science</h1>
+    <div class="sub">B‑2. Pratique de la science ; Connaissance de la réalité – B2.2 (pages 454‑473)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-science">🔍 B‑2‑2 Autour de la notion de 'science'</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-interieur">🏛️ L'intérieur et le social</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-empirisme">⚖️ Empirisme versus réalisme</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-observation">👁️ Observation et théorie</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-rationalite">🧠 Rationalité philosophique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-audace">🚀 Audace scientifique et empirisme</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-risque">⚠️ L'empirisme risqué</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-continuite">🔗 Continuité de la connaissance</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-independance">🌍 Indépendance et historicité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-naturaliste">🌿 Réalisme naturaliste</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-pratique">🔬 Pratique scientifique et connaissance</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-temps">⏳ B‑2‑3 Une épistémologie non représentationniste – Le temps de la pratique</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_B2_3.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : B-2-2 Autour de la notion de 'science' === -->
+    <div class="capsule" id="capsule-science">
+        <div class="capsule-title">🔍 B‑2‑2 Autour de la notion de 'science'</div>
+        <div class="capsule-content">
+            <p>Je vais présenter et commenter, dans cette section, une critique formulée par Hooker<sup><a href="#ref295" class="reference-link" id="r295">[295]</a></sup> à l'adresse de la position anti‑réaliste de van Fraassen. La position de Hooker a ceci de particulièrement intéressant dans le cadre présent qu'elle introduit dès le début la prise en considération de l'histoire et du contexte social de la connaissance scientifique comme marque importante de distinction du réalisme qu'il défend :</p>
+            <div class="citation">
+                « Traditional philosophy of science regards science as an abstract structure, specified in abstract linguistic terms. [...] As against this abstractive approach the new revolution proposes placing (or re‑placing) the scientist at the centre of the social‑intellectual‑ethical complex known as science<sup><a href="#ref296" class="reference-link" id="r296">[296]</a></sup> »,
+            </div>
+            <p>tandis que toute son argumentation à l'encontre de l'empirisme constructif est dédiée à la 'théorie' philosophique réaliste selon laquelle les théories scientifiques font référence, par delà même leur adéquation empirique, à une réalité indépendante que la science vise à révéler :</p>
+            <div class="citation">
+                « [T]here is a reality independent of our intellect and sentience with which we interact and represent to ourselves in theories .... it is the overall value of a theory ... which should determine our commitment to it and that our most valuable theories are our most acceptable guides to the nature of that reality.» (p.184)
+            </div>
+            <p>Le contenu de la connaissance scientifique semble devoir tout à la fois dépendre (en tant qu'il est situé historiquement et socialement) et ne pas dépendre (en tant qu'il réfère à une réalité indépendante) des conditions par lesquelles il est obtenu. Comment concilier l'inconciliable ? Apparemment, en épousant une perspective naturaliste évolutionniste :</p>
+            <div class="citation">
+                « The fact is, science has confirmed the evolutionary, naturalist picture of humankind as mammals with complex nervous systems slowly building up their individual and collective cognitive representations of the world using all of the complex and idiosyncratic array of devices to hand : sensory perception, behavior, language, technology, institutions, culture, ect. So realism in philosophy is confirmed by realism within science. »
+            </div>
+            <p>Cette réponse me semble étrange sur bien des points. D'abord, utiliser une théorie scientifique, celle de l'évolution comme instrument de confirmation est déjà, en soi, adopter une certaine position philosophique ; on ne voit pas très bien comment cette théorie pourrait alors confirmer cette position si celle-ci est un présupposé. Ensuite, l'idée même de fonder une position philosophique sur une théorie scientifique rend cette position aussi fragile et sujette à révision que le sont, du dire même de Hooker, les théories scientifiques. En outre, l'argumentation de Hooker doit faire fond tacitement, à certains moments de l'exposé, sur certains présupposés touchant à la signification du concept de science, tandis qu'à d'autres moments ces présupposés sont manifestement contredits. Que signifie‑t‑on par ‘science' ? Il y a tout au long du texte au moins deux significations qui semblent mises en jeu sans que la distinction ne soit signalée : la science comme activité spécifique de recherche, la science comme sujet abstrait de la connaissance de la réalité (la science nous dit que…, la science montre que… la science vise à…).</p>
+
+            <p>La majeure partie de l'argumentation de Hooker tourne autour des définitions données par van Fraassen des positions respectives de l'empiriste constructif et du réaliste :</p>
+            <ul>
+                <li>‘la science vise l'adéquation empirique' (Science aims to give us theories which are empirically adequate ; and acceptance of a theory involves as belief only that it is empirically adequate)</li>
+                <li>‘la science vise à la connaissance de la réalité indépendante' (Science aims to give us, in its theories, a literally true story of what the world is like ; and acceptance of a scientific theory involves the belief that it is true)</li>
+            </ul>
+            <p>Lorsque Hooker défend le réalisme contre l'empirisme constructif, il fait référence à la façon dont les scientifiques travaillent :</p>
+            <div class="citation">
+                « Indeed, it is typical of scientists to prefer to explore what is judged to be theoretically deeper theory, even if it has some empirical difficulties, over less theoretically insightful, if more empirically adequate, alternatives »,
+            </div>
+            <p>et à la façon la plus rationnelle de rendre compte de cette activité :</p>
+            <div class="citation">
+                « The CE scientist is forced continually to play a schizoid game of pretend, to pretend that the theories in which he is immersed are informative and, ... to treat science as, after all, only a game... The question is, is it rational? I suggest that it is not rational...»
+            </div>
+            <p>La science est ici à la fois pour lui, il me semble, activité des scientifiques et processus de connaissance de la réalité.</p>
+
+            <p>Mais les deux dernières sections du texte sont consacrées à décrire une transformation qu'a subie la science au cours des trois derniers siècles et qui oblige à la penser maintenant comme un système complexe de transformation du monde et de sa propre image. Le reproche adressé alors à l'empirisme constructif est de retenir de l'empirisme traditionnel l'idée que la science est indépendante des valeurs et des processus sociaux (« science is at bottom value‑neutral and separate from social processes » [p.190]). La transformation de la science se traduit par la transformation de l'objet de son activité :</p>
+            <div class="citation">
+                « [T]he objects of scientific inquiry... are being increasingly transformed into human artefacts…»
+            </div>
+            <p>La science est devenue une entreprise de fabrication d'artefacts incarnant des valeurs humaines et reflétant des choix humains :</p>
+            <div class="citation">
+                « [A]rtifacts ... exhibit human designs which embed human values, reflecting human choices from among what is possible » ;
+            </div>
+            <p>et dans le même temps, l'objet de l'activité scientifique s'est modifié :</p>
+            <div class="citation">
+                « Correlatively, the focus of theory shifts from a description of what is, to a theory of what is possible ».
+            </div>
+            <p>En quoi l'épistémologie réaliste, la thèse selon laquelle la connaissance scientifique est connaissance de la réalité indépendante, permet‑elle de mieux comprendre, mieux décrire, la science comme instrument de transformation du monde ? En quoi permet‑elle de thématiser les valeurs en jeu dans cette transformation et les relations qu'elle implique avec certains processus sociaux ? S'agirait‑il de pouvoir établir un contraste entre la science comme connaissance de la réalité et la science comme fabrication d'artefacts ?</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'intérieur et le social === -->
+    <div class="capsule" id="capsule-interieur">
+        <div class="capsule-title">🏛️ L'intérieur et le social</div>
+        <div class="capsule-content">
+            <p>Il me semble en effet que Hooker dessine une distinction, non pas entre, d'une part, la science comme activité de recherche, comme pratique de constitution d'objectivité, et d'autre part, la science comme sujet abstrait, comme instance de fondement de ce qu'est la réalité, ces deux usages sont confondus, mais entre deux systèmes d'organisation de l'activité scientifique qui en font, soit, une activité indépendante, soit, une activité prise dans le tissu social. Ces deux systèmes sont associés à deux façons de comprendre ce qu'est ou plutôt ce que fait la science : soit, la science comme description et explication de la réalité, soit, la science comme système d'organisation de l'environnement, « environment‑organizing system » :</p>
+            <div class="citation">
+                « science‑based and –organized technological development has been transforming the biophysical world in quite dramatic ways into a human artifact in new patterns. » (p.188)
+            </div>
+            <p>La science du 17<sup>ième</sup> siècle, dit Hooker, pouvait être comprise comme un outil intellectuel produit par des individus et destiné à la description objective du monde naturel :</p>
+            <div class="citation">
+                « an intellectual tool of individuals for the objective (because non‑interfering) description of the autonomous workings of a given natural object, the world. » (p.189)
+            </div>
+            <p>La notion d'individu marque l'indépendance du travail du scientifique vis‑à‑vis du tissu social. Ce n'est que dans un second temps, et de façon non nécessaire, que la relation entre les deux est établie :</p>
+            <div class="citation">
+                « Beyond that, if science could be applied in humankind's service, it could be understood as a tool like any other, subject to the prior interests of policy, economy, community, and individuals ».
+            </div>
+            <p>En revanche, dans la science d'aujourd'hui :</p>
+            <div class="citation">
+                « [T]he noninterfering description has been replaced by redesign on a massive scale, the individual by something rapidly approaching a species‑wide organization, the autonomous object by human artifacts, and the various prior interests are now increasingly molded by the available images and designs. » (p.189‑190)
+            </div>
+            <p>Une manière autre qu'historique qu'utilise Hooker pour tracer les lieux respectifs des deux formes de l'activité scientifique est l'opposition entre l'intérieur de la science et l'appareil social dont elle fait partie. Toute l'argumentation opposée à l'empirisme constructif et visant à défendre l'idée que la science vise à connaître la réalité indépendante ne fait pas la moindre allusion à une interférence entre la science et un quelconque processus social. Pour annoncer la transition entre la partie du texte consacrée à la confrontation des conceptions de ‘la science' de l'empirisme constructif et du réalisme et la partie concernant le rôle de ‘la science' dans l'univers du politique du social, du culturel, Hooker écrit :</p>
+            <div class="citation">
+                « … expanding the context beyond the ‘interior' of science to include the scientific process in its wider social setting. » (p.187)
+            </div>
+            <p>Dès lors que les influences sociales seront considérées, la science sera présentée comme un processus de production d'artefacts impliquant des enjeux sociaux, politiques, culturels, etc.</p>
+
+            <p>Que la science soit une simple connaissance de la réalité semble suspendu à la possibilité pour les scientifiques de produire une connaissance indépendante de son inscription dans l'univers plus large du contexte social, la possibilité de travailler dans un espace en quelque sorte protégé des intérêts, des enjeux de l'application éventuelle de cette connaissance à de nouvelles formes d'action, à de nouvelles pratiques, à de nouveaux pouvoirs d'intervention dans ou sur l'environnement. Cette conception épistémologique repose, d'une part, sur l'idée d'une possible distinction entre connaissance d'objets ou de processus naturels et fabrication d'artefacts, et d'autre part, sur l'idée d'une possible autonomie de la science en tant qu'entreprise de connaissance de la réalité. Nous verrons seulement dans le prochain chapitre de quelle façon peut‑être mise en question la distinction ‘naturelle' entre objets naturels et artefacts. Mais nous avons déjà mentionné la critique formulée à l'encontre de l'idée de l'autonomie du processus de connaissance de la réalité. Elle repose sur la distinction entre autonomie de la communauté ou de l'activité scientifique, et celle du fait ou de l'énoncé scientifique. De cette critique découle la distinction entre le fait scientifique, objectif parce que autonome, et l'objet comme élément de réalité, parce qu'inscrit dans des pratiques étendues hors de la communauté des scientifiques. L'activité scientifique produit des faits scientifiques, constitue des objectivités, mais ne produit pas à elle seule des objets de réalité. Il est possible d'étudier l'activité scientifique, mais ce n'est pas le processus de connaissance de la réalité qui est étudié alors, c'est la constitution d'objectivités et de savoirs‑faire au travers de la production interactive de théories et de dispositifs expérimentaux. La réalité n'est pas découverte antérieurement à et indépendamment de l'inscription du produit de cette activité dans le système complexe de l'organisation sociale. Dans cette perspective, la science d'aujourd'hui ne se distingue pas par le fait, comme le souligne Hooker, qu'elle participe à une transformation du monde ; ce qui a changé est l'ampleur avec laquelle l'activité scientifique se manifeste comme entreprise de production de savoirs‑faire et de propositions de nouvelles pratiques. Ce qui a changé aussi, sans doute, depuis le 17<sup>ième</sup> siècle, est que les propositions scientifiques de transformation ont semblé être porteuses d'une auto‑légitimité, la ‘science' est devenue, en plus d'une activité, aussi une autorité, l'origine scientifique d'un savoir est devenu une raison suffisante de son application. Et ce qui est en train de changer depuis la fin du 20<sup>ième</sup> siècle, c'est que le développement des études philosophiques et sociales sur les relations entre la science, la technologie, les politiques de recherche et de développement et les contextes et enjeux politiques, économiques, sociaux a présenté une autre image de ce qui semblait être une auto‑légitimité fondée sur une nécessité transcendante, la Nature.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Empirisme versus réalisme === -->
+    <div class="capsule" id="capsule-empirisme">
+        <div class="capsule-title">⚖️ Empirisme versus réalisme</div>
+        <div class="capsule-content">
+            <p><strong>Observation et théorie</strong></p>
+            <p>Hooker affirme que le rejet d'une dichotomie formelle observation‑théorie, caractéristique du positivisme, et de la tradition empiriste passant par Carnap, est un pilier de la philosophie des sciences réalistes. Cette distinction a été essentielle au projet empiriste de définir un fondement empirique de la connaissance, mais le réaliste ne croit pas à la possibilité d'un tel fondement :</p>
+            <div class="citation">
+                « Realists, in contrast, have argued for the imperfectness, limitedness, and radical idiosyncrasy of human observation. » (p.159)
+            </div>
+            <p>C'est une concession au réalisme que fait van Fraassen, souligne encore Hooker, lorsqu'il reconnaît que tout le langage de l'observation, est imprégné de présupposés attachés aux diverses dimensions du contexte théorique dans lequel est réalisée l'observation :</p>
+            <div class="citation">
+                « All our language is thoroughly theory‑infected… The way we talk, and scientists talk, is guided by the pictures provided by previously accepted theories. » (<em>Scientific Image</em>, p.14)
+            </div>
+            <p>Mais la mise en question de cette distinction entre théorie et observation a été aussi, cependant, l'un des points forts des travaux épistémologiques qui se sont développés dans le tournant historique et qui ont conduit à la dénonciation des positions réalistes, dans le sens tout au moins où l'activité scientifique découvrirait une réalité déterminée indépendamment du contexte historique et épistémique de l'activité. Car il ne suffit pas de dire que l'observation est imprégnée de théorie. La dépendance n'est pas à sens unique. Ce n'est pas seulement le langage de l'observation qui est chargé de théorie. Si la distinction entre théorie et observation est un leurre, et si l'observation dépend du contexte théorique, mais aussi biologique et instrumental, comment la théorie pourrait‑elle échapper, elle, à cette dépendance vis‑à‑vis des conditions historiques de sa production et constituer une connaissance de ce qui est indépendant des conditions de la production de connaissance ? Ce qu'a bien montré Kuhn, dans le même temps, c'est que le langage théorique est lui aussi dépendant du contexte empirique dans lequel il est utilisé. Le formalisme théorique de la science physique se distingue précisément en ceci d'un formalisme mathématique : la signification de concepts aussi théoriques que ceux de ‘force' ou de ‘masse' dépend des situations expérimentales typiques dans lesquels ces termes sont utilisés.</p>
+
+            <p>Plutôt qu'à deux formes de connaissance, la distinction entre les termes ‘théorie' et ‘observation' est relative à deux formes d'activité entrelacées constitutives de la recherche scientifique. Ces deux formes d'activité sont interdépendantes, s'appuient l'une sur l'autre, de façon circulaire, et les connaissances qu'elles produisent tirent leur signification de cette circulation permanente. Et c'est d'ailleurs un trait de l'activité scientifique que Hooker reconnaît aussi :</p>
+            <div class="citation">
+                « [T]here are extremely complex two‑way interactions and trade‑offs between theory and experiment in the risky business of pushing science along. » (p.160)
+            </div>
+            <p>Et il va jusqu'à dénoncer, en rappelant les critiques de Laudan et de van Fraassen, les formes de réalisme qu'il qualifie de naïves parce qu'elles affirment une possible connaissance du monde à l'abri de la révision, par le biais de la science ou de notre système perceptif :</p>
+            <div class="citation">
+                « Both naïve realism have had to give way before our historical experience. We have today strong inductive grounds for believing that all of our extant theories of any given time will eventually be overthrown, possibly in favor of theories with substantially different structures which are more than mere refinements of them.» (p.180)
+            </div>
+            <p>Pourquoi et comment, dans ce cas, être réaliste, au sens où l'entend Hooker ? Comment le réaliste parvient‑il à réconcilier l'idiosyncrasie des instruments de la connaissance et l'indépendance du contenu de la connaissance ?</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Rationalité philosophique === -->
+    <div class="capsule" id="capsule-rationalite">
+        <div class="capsule-title">🧠 Rationalité philosophique</div>
+        <div class="capsule-content">
+            <p>Selon Hooker, l'un des thèmes centraux du débat entre le réalisme qu'il défend et l'antiréalisme empiriste de van Fraassen est la question de la rationalité de l'attitude épistémique vis‑à‑vis des théories scientifiques. Est‑il plus ou moins rationnel de considérer que les théories scientifiques réfèrent à la réalité ou qu'elles permettent seulement de ‘sauver les phénomènes' comme le dit l'empiriste constructif. Serait‑il plus rationnel de reconnaître l'adéquation empirique d'une théorie sans pour autant lui attribuer une valeur de vérité ? Est‑ce que ce serait moins risqué ? :</p>
+            <div class="citation">
+                « … every actual theory is likely only to be an approximation to the truth, hence strictly speaking false. Faced with this ‘realistic' assessment of the human epistemic situation, one withdraws to a less risky affirmation, for, even if the theory is overthrown, surely its empirical adequacy at the time remains. » (Hooker, p.166)
+            </div>
+            <p>La manière dont Hooker pose la question de la rationalité et du risque laisse penser que le philosophe des sciences serait libre de choisir sa position sur la base d'une évaluation comparée de l'antiréalisme et du réalisme. Il ne serait pas rationnel, pour un scientifique, d'après Hooker, de toujours préférer, comme l'empirisme le requiert, la théorie la plus adéquate empiriquement et de ne prendre aucun risque théorique. Le raisonnement de Hooker me paraît être le suivant : selon la philosophie empiriste, le scientifique ne prend aucun risque théorique ; or, il ne serait pas rationnel pour un scientifique de ne prendre aucun risque théorique ; et de fait il est typique des scientifiques de préférer la richesse théorique à l'adéquation empirique (« Indeed, it is typical of scientists to prefer to explore what is judged to be the theoretically insightful, if more empirically adequate, alternatives. »); donc l'empirisme est une philosophie inadéquate. Ce qui est un trait caractéristique du réalisme qu'il défend, écrit Hooker, est de considérer la philosophie des sciences comme une théorie de la science. Une épistémologie serait une théorie, « théorie de la science », détachable de l'ensemble de notre système de croyance pour être évaluée à la lumière d'une épreuve objective. Une philosophie des sciences devrait décrire et expliquer ‘les faits' de la science. Le fait considéré ici comme ‘test' de validité de la ‘théorie' philosophique semble être la rationalité et le comportement du scientifique. La philosophie réaliste et la philosophie antiréaliste seraient offertes au jugement comme des théories placées là devant, et qu'il s'agirait de confronter à un fait ou processus déterminé, à savoir l'activité scientifique, pour décider en ‘toute objectivité' laquelle des deux correspond le mieux aux déterminations de l'objet en question. L'adhésion à une certaine forme de pensée et de jugement philosophique, réaliste, anti‑réaliste ou autre, est‑elle comparable à l'usage d'une théorie scientifique ? Est‑ce que la rationalité et le comportement du scientifique sont des phénomènes qui peuvent être ou qui ont été constitués en faits autonomes ? N'est‑ce pas là précisément ce qui fait la différence entre science physique et philosophie ?</p>
+
+            <p>C'est par référence à l'histoire des sciences écrite et par anticipation de l'histoire des sciences à venir qu'est évalué le risque lié à chacune des ‘théories' de la science. Mais, d'un autre côté, Hooker reproche à l'antiréaliste d'appuyer son argument d'adéquation empirique sur une indépendance entre termes théoriques et termes d'observation que les réalistes rejettent. Si l'indépendance entre les termes et donc les énoncés théoriques et d'observation est mise en cause en science, elle doit l'être dans le cas de la philosophie aussi et il devient impossible de se référer à ‘une' histoire des sciences à laquelle pourraient être confrontées les différentes théories de philosophie des sciences. Il est vrai que nous partageons une connaissance de l'histoire des sciences. Nous reconnaissons de la même façon que certaines théories ont été reconnues comme fausses, ou comme vraies à l'intérieur seulement d'un certain domaine d'expérience. Mais ces lectures de l'histoire des sciences qui sont communément admises sont remplies de présupposés épistémologiques. L'histoire ne s'écrit pas de la même façon selon que l'on adopte une position objectiviste et progressiste ou une position historiciste et internaliste.</p>
+
+            <p>Si la rationalité et le comportement des scientifiques constituaient un fait objectif, ils seraient l'objet d'étude d'une science naturelle, et non d'une science humaine. Il ne suffit pas de proclamer que la philosophie doit être une théorie ; encore faut‑il que son objet d'étude se prête à l'objectivation que requiert la mise à l'épreuve d'une théorie. Évidemment, si l'on affirme d'emblée qu'il ne serait pas rationnel de ne pas être réaliste, et que le scientifique est rationnel, la question semble réglée. Ici l'idée de rationalité est appuyée sur le compte rendu de Popper de l'activité scientifique : Popper a dit que le scientifique prenait et devait prendre des risques théoriques. Mais Popper est lui‑même l'avocat d'une certaine philosophie. Il n'y a pas de conception de la rationalité ou du comportement qui puisse être admise indépendamment de la perspective philosophique qui est adoptée. Pour l'empiriste constructif, il n'est pas nécessaire, pour la rationalité de l'activité scientifique, de supposer qu'elle est conditionnée par un autre impératif cognitif que l'adéquation empirique. Il est important là de distinguer l'activité du scientifique et celle du philosophe, et malheureusement le langage de Hooker entretient parfois une sorte de confusion entre les deux. Lorsqu'il écrit, par exemple : « Ultimate caution for an empiricist would require sticking just to the evidence as it comes in… » ; ou encore : « Would one, then, always rationally wish to prefer the more empirically adequate scientific theory…? », il semble que ce soit le scientifique qui soit ‘empiriste'. Or, le philosophe et le scientifique sont deux personnes distinctes ; c'est le philosophe qui est empiriste ; l'empirisme est une conception philosophique. Et c'est le philosophe, depuis sa position philosophique, qui juge de ce qu'est la rationalité du scientifique. La distinction est d'autant plus importante que le discours de l'empirisme constructif consiste justement à soutenir que la question de ‘la réalité' de ce à quoi fait référence une théorie scientifique ne joue aucun rôle cognitif dans le développement de l'activité scientifique, et que c'est seulement pour le philosophe réaliste que cette question semble cruciale.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Audace scientifique et empirisme === -->
+    <div class="capsule" id="capsule-audace">
+        <div class="capsule-title">🚀 Audace scientifique et empirisme</div>
+        <div class="capsule-content">
+            <p>Pourquoi la question de la rationalité de la position philosophique a‑t‑elle pu se confondre avec une question sur la rationalité de l'attitude scientifique ? Hooker se réfère d'ailleurs à Popper pour objecter qu'il n'est pas nécessairement plus rationnel de choisir les théories les plus en accord avec les données expérimentales car ce n'est pas une attitude qui est propice à la production de nouvelles connaissances. Il est préférable d'explorer les théories qui semblent les plus intéressantes, en termes épistémiques, même si cela pose des difficultés expérimentales. La rationalité d'une attitude épistémique est liée à sa capacité d'augmenter nos connaissances : de plus grand progrès épistémiques peuvent être réalisés en choisissant une théorie moins satisfaisante sur le plan empirique mais plus riche sur le plan théorique. La confusion entre rationalité du philosophe et rationalité du scientifique semble alors provenir de l'idée qu'il ne serait pas rationnel pour une position philosophique de proposer une attitude scientifique non rationnelle. Il est clair que ce raisonnement suppose un accord sur ce qu'est la rationalité de l'attitude épistémique. Mais même si cet accord existait entre le réaliste et l'empiriste constructif, l'argument rencontrerait d'autres difficultés. D'une part, le réaliste cohérent qui soutient que les philosophies sont des théories serait invité à préférer la philosophie la moins en accord avec ses propres observations de ce qu'est l'activité scientifique ! Ensuite, l'idée selon laquelle il ne serait pas rationnel pour une position philosophique de proposer une attitude scientifique non rationnelle n'aurait de sens que si la position philosophique en question consiste à proposer une norme pour l'attitude scientifique et que cette norme soit jugée non adéquate, non rationnelle, parce qu'en contradiction avec les conditions effectives de production de connaissance que l'histoire des sciences donne à concevoir. Ce n'est pas le cas de l'antiréalisme : Hooker lui‑même rappelle, en se référant à <em>The Scientific Image</em> (p.93) que</p>
+            <div class="citation">
+                « van Fraassen remarks that interpretation of science and methodology of science are two independent doctrines » (p.177).
+            </div>
+            <p>L'empirisme constructif ne propose pas une norme méthodologique pour la conduite de l'activité scientifique ; il propose une interprétation de la science, de la connaissance scientifique, de l'activité scientifique : comment faut‑il interpréter les croyances qui sont en jeu, les références qui sont mises en œuvre, la façon dont s'enchaînent ces croyances, dont se succèdent ces références. L'argument ne semble donc pas vraiment pertinent dans le débat entre le réaliste et l'empiriste constructif : Hooker reconnaît d'ailleurs que van Fraassen ne nie pas que les scientifiques puissent être intéressés par différents aspects théoriques et qu'il ne dit pas non plus qu'ils utilisent seulement les théories les plus adéquates empiriquement au moment précis du choix.</p>
+
+            <p>L'empirisme constructif ne dit pas que les scientifiques ne doivent pas croire à la vérité des théories, ne doivent pas accorder d'importance à tout ce qui n'est pas l'adéquation empirique. Il soutient, en revanche, que la valeur épistémique, cognitive, est seulement donnée par l'adéquation empirique et que les autres aspects n'ont qu'une valeur pragmatique, même si celle‑ci n'est pas pour autant négligeable :</p>
+            <div class="citation">
+                « Even if two theories are empirically equivalent, and acceptance of a theory involves as belief only that it is empirically adequate, it may still make a great difference which one is accepted. » (<em>Scientific Image</em>, p.4)
+            </div>
+            <p>Il ne dit pas ce que les scientifiques doivent croire ou ne pas croire, doivent faire ou ne pas faire. Il dit que la question de la vérité des énoncés impliquant des inobservables est sans importance pour ce qui est de l'activité scientifique, que même si certaines considérations autres que l'adéquation empirique peuvent jouer un rôle dans la conduite de l'activité scientifique, dans le choix des théories, le contenu cognitif des théories est seulement dans leur adéquation empirique. En résumé, le discours de l'empirisme constructif est surtout un discours qui se veut anti‑métaphysique et dirige toute son attention sur l'interprétation de ce qui se fait et l'analyse de la façon dont cela se fait. Il interprète l'activité scientifique en terme d'adéquation empirique et s'intéresse au ‘comment' de cette adéquation en laissant ouverte, par agnosticisme, la question du ‘pourquoi' en affirmant que la réponse à cette question n'est pas nécessaire pour donner sens à l'activité et à la connaissance scientifique.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : L'empirisme risqué === -->
+    <div class="capsule" id="capsule-risque">
+        <div class="capsule-title">⚠️ L'empirisme risqué</div>
+        <div class="capsule-content">
+            <p>Dans un second temps, la question de la rationalité est associée à la notion de risque. Hooker affirme que la position de van Fraassen, contrairement à ce que celui‑ci prétend, n'est pas moins risquée que la position réaliste. Il est plus risqué de ne se fier qu'à nos capacités perceptives au lieu de miser, dans une perspective réaliste, sur nos capacités perceptives et intellectuelles. Mais là encore, pour qui est le risque ? Pour le scientifique ? Pour le philosophe ? Et par rapport à quoi y‑a‑t‑il un risque ? Par rapport à la production de connaissance et à la pertinence de cette connaissance ? La connaissance scientifique ou la connaissance philosophique ? L'empirisme constructif serait plus risqué parce qu'il ferait moins confiance à nos capacités intellectuelles, théoriques, que le réalisme ; en ne se fiant qu'à nos capacités perceptives, il se priverait d'un instrument, nos capacités théoriques, qui est selon Hooker, plus puissant même que les capacités perceptives. Être empiriste constructif, selon Hooker, c'est mettre en doute de manière injustifiable les capacités théoriques et ne se fier qu'aux capacités perceptives :</p>
+            <div class="citation">
+                « without all of these abilities, and without their intimate interaction with each other, our cognitive capacity would be much less. »
+            </div>
+            <p>La ‘bonne' raison que fournit le cadre naturaliste au philosophe réaliste de ne pas toujours préférer les théories les plus empiriquement adéquates serait la confiance dans les capacités théoriques humaines.</p>
+
+            <p>Mais si la connaissance qui est en jeu est la connaissance scientifique, l'argument ne vaut pas car, à nouveau, l'empiriste constructif n'a pas pour ambition de proposer des normes pour l'activité scientifique. Naturaliste ou pas, le philosophe qui n'est pas réaliste ne défend pas l'idée d'une forme d'activité scientifique qui devrait se priver d'exercer les capacités intellectuelles du scientifique. Il ne dit pas que le scientifique doit mettre en doute le produit de l'activité théorique de la science. Le scientifique peut continuer à travailler comme il travaille en profitant de toutes les ressources, perceptives, motrices, intellectuelles, dont il dispose. L'antiréalisme n'est pas une invitation à faire la science différemment, d'une façon qui serait plus empirique et moins intellectuelle, qui utiliserait nos capacités perceptives de préférence à nos capacités théoriques.</p>
+
+            <p>Et si on sort de l'interprétation normative, la critique de Hooker doit signifier que l'attitude que décrit l'empirisme ne correspond pas à la ‘rationalité observable' des scientifiques ; mais le problème est qu'il n'y a pas de ‘rationalité observable' : chacune des perspectives philosophiques propose un mode de compréhension de la rationalité scientifique.</p>
+
+            <p>Hooker semble dire que nous devons croire que les termes théoriques, qui n'ont pas de contre‑partie expérimentale, ont un contenu cognitif, sont porteurs d'informations. Ce que dit l'empirisme constructif est que cette croyance n'est tout simplement pas en jeu dans l'activité scientifique et tout ce que nous disons au sujet de ce qui n'est pas observable, ce qui n'a pas de référent expérimental, n'a pas de valeur cognitive en soi. L'empirisme constructif ne dit pas que le scientifique devrait se priver de tous les termes qui n'ont pas de contre‑partie expérimentale ou ne prendre en considération que l'adéquation expérimentale des théories. Mais seule l'adéquation empirique concerne la relation entre la théorie et le monde ; c'est donc dans l'adéquation empirique que réside la valeur cognitive de la théorie. Les autres aspects d'une théorie, son pouvoir explicatif, sa simplicité, etc., sont liés à des préoccupations humaines, leur valeur est contingente, elle est pragmatique.</p>
+
+            <p>Si c'est la connaissance philosophique qui est en jeu, il est pour le moins déplacé d'accuser un philosophe, fût‑il non réaliste, de ne pas faire confiance à nos capacités théoriques et de s'en remettre seulement ou principalement à nos capacités perceptives, car le travail philosophique, qu'il produise un discours empiriste ou réaliste, est essentiellement un travail théorique. Hooker semble vouloir appliquer les préceptes de Popper à la production de connaissance philosophique : être audacieux, postuler, aller au delà des données disponibles. Le réaliste ne se contente pas de constater l'adéquation empirique des théories, il postule une correspondance, un isomorphisme, une relation de référence avec ce qui n'est pas perceptible immédiatement. Mais, d'après le philosophe anti‑réaliste, lorsqu'il fait cela, le philosophe réaliste n'augmente pas la valeur cognitive, informative, de la connaissance philosophique ; il raconte une histoire, et cette histoire n'a qu'une valeur pragmatique.</p>
+
+            <p>Toujours dans une réflexion sur le risque, Hooker aborde la question de la sous‑détermination des théories par l'expérience. Dans un premier temps, il a semblé que l'affirmation de l'adéquation empirique d'une théorie était moins risquée que l'affirmation de sa vérité :</p>
+            <div class="citation">
+                « … one withdraws to a less risky affirmation, for, even if the theory is overthrown, surely its empirical adequacy at the time remains » (p.167)
+            </div>
+            <p>Si nous disons d'une théorie qu'elle est vraie, il est probable qu'un jour ou l'autre cette affirmation sera démentie. La notion de risque se réfère ici à la possibilité que l'option choisie soit ultérieurement démentie, démentie par l'expérience : le risque pris par l'empirisme constructif serait moins grand car l'affirmation qui est faite à un moment donné selon laquelle une théorie est empiriquement adéquate, n'est pas contredite par ce qui peut se passer ultérieurement. Même si la théorie se révèle fausse et même si elle est remplacée par une autre, l'adéquation empirique qui a été reconnue à un moment ne peut pas être reniée, alors que l'affirmation selon laquelle une théorie est vraie peut être contredite par les expériences ultérieures, et cette affirmation est alors jugée comme ayant toujours été fausse. Lorsque le réaliste dit que les théories scientifiques sont vraies, le risque d'être contredit par l'expérience, par la reconnaissance effective qu'une théorie est fausse, est plus grand que pour celui qui affirme que les théories à un moment donné sont adéquatement empiriques.</p>
+
+            <p>Mais ici encore la confusion entre la position du philosophe et celle du scientifique obscurcit la réflexion. Le philosophe n'affirme pas l'adéquation empirique ou la vérité d'une théorie en particulier. La place du philosophe n'est pas celle du scientifique ; ce n'est pas la théorie que le philosophe met en doute. Il rend compte, en général, de la production de théories. Le scientifique anticipe sur le pouvoir d'une théorie, il mise sur sa capacité à prédire certains résultats expérimentaux. Mais le philosophe ne fait pas de prédiction. Le philosophe réfléchit à la signification du discours scientifique ; c'est l'interprétation que propose le philosophe réaliste, que l'empiriste, et d'autres, mettent en doute. Ce qu'il met en doute, c'est la signification que le philosophe réaliste attribue aux théories scientifiques. Il cherche à donner sens à ce que nous faisons. Il cherche à produire un discours qui rende compte de la façon dont est conduite l'activité scientifique. Peut‑être Hooker imagine‑t‑il qu'un scientifique doive choisir entre la philosophie de l'empiriste constructif et celle du réaliste. Mais le fait d'être philosophiquement réaliste ou antiréaliste ne changerait rien à la façon dont il réalise son activité scientifique. La question de savoir si les termes théoriques doivent être considérés comme référant à une réalité indépendante ou pas n'est pas une question dont la réponse peut avoir un effet sur l'activité scientifique – et ce n'est d'ailleurs pas une question que le scientifique, en général, se pose.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Continuité de la connaissance === -->
+    <div class="capsule" id="capsule-continuite">
+        <div class="capsule-title">🔗 Continuité de la connaissance : lecture pragmatico‑transcendantale</div>
+        <div class="capsule-content">
+            <p><strong>Confirmation par la science : circularité</strong></p>
+            <p>Un autre argument qui irait à l'encontre de la position empiriste, et sans doute aussi des autres positions non réalistes, serait que le réalisme philosophique est confirmé par le réalisme scientifique. Comment cela est‑ce possible !!? Et comment cela peut‑il être un argument que peuvent ‘entendre' les non réalistes ?</p>
+
+            <p>La confirmation s'énonce ainsi :</p>
+            <div class="citation">
+                « The fact is, science has confirmed the evolutionary, naturalist picture of humankind as mammals with complex nervous systems slowly building up their individual and collective cognitive representations of the world using all of the complex idiosyncratic array of devices to hand: sensory perception, behavior, language, technology, institutions, culture, ect. So realism in philosophy is confirmed by realism within science.» (p.173)
+            </div>
+            <p>Comment la science peut‑elle avoir confirmé cette fresque de l'humanité ? Quelle est la théorie qui synthétise toutes ces dimensions de la vie humaine, y‑a‑t‑il des expériences qui permettent de l'éprouver, ou bien y‑a‑t‑il des traces unanimement reconnues de l'existence de telles représentations du monde ? Où ce savoir est‑il consigné ? Les chercheurs en sciences cognitives, eux‑mêmes, reconnaissent qu'il n'y a pas même d'unanimité sur des notions aussi basiques que celles de ‘cognition' et de ‘représentations'. Comment la science pourrait‑elle montrer l'existence de représentations du monde ?</p>
+
+            <p>Quand bien même il y aurait une théorie scientifique affirmant ce que Hooker prétend, comment cela pourrait‑il être une confirmation d'une position philosophique ? Il faudrait qu'une position philosophique soit ‘confirmable'. Selon Wittgenstein, et pour résumer ce qui a été dit précédemment au sujet de la distinction entre connaissance philosophique et connaissance scientifique, la connaissance philosophique est justement distincte de la connaissance scientifique en ce qu'elle n'a rien à attendre de l'expérience – ce qui ne veut pas dire qu'elle doive être indifférente au discours scientifique.</p>
+
+            <p>Il faudrait ensuite qu'une théorie scientifique ait le pouvoir de confirmer la position philosophique. À quelle condition, sinon qu'on tienne d'abord cette théorie pour vraie, qu'on la considère d'abord comme une connaissance de la réalité, une représentation du monde ? Mais pour qu'une théorie se voie reconnaître un tel statut fondationnel, ne faut‑il pas être d'emblée situé dans le cadre d'une épistémologie réaliste ? Et quel sens y‑a‑t‑il à dire alors qu'elle confirme le réalisme philosophique. Puisque la science décrit une réalité absolue, le naturalisme, qui s'appuie sur les descriptions scientifiques, est vrai. Mais si la science n'est pas appréhendée par une grille de lecture réaliste ? Ce n'est pas le réalisme scientifique qui confirme le réalisme philosophique, c'est le réalisme philosophique qui se confirme tout seul. Qu'est‑ce que le réalisme ‘within science' ? Le discours scientifique, en lui‑même, n'est pas réaliste dans un sens qui puisse en faire une confirmation de la philosophie réaliste ; si c'était le cas, il n'y aurait pas même de sens à parler de philosophie réaliste car il n'y aurait pas d'autres philosophies à quoi l'opposer. La pratique scientifique n'est pas adossée à une thèse philosophique ; le scientifique fait de la science, pas de la philosophie ; contrairement à l'usage qu'en fait le philosophe, si le scientifique utilise le concept de réalité, c'est d'une manière ordinaire, et dans le langage ordinaire les mots ne sont pas chargés de thèse philosophique.</p>
+
+            <p><strong>La continuité : Réponse transcendantale</strong></p>
+            <p>L'autre argument en faveur du réalisme que produit Hooker est celui de la continuité :</p>
+            <div class="citation">
+                « Theoretical ideas and theoretical structures crop up in various context throughout the history of science, successively refined, modified, or conditionalized in the light of further experience. […] Hence, the history of science demands that theoretical structures be treated seriously as gasping, albeit imperfectly, the unobserved structure of reality. » (p.174)
+            </div>
+            <p>L'argument des invariants comme représentants de propriétés d'une réalité indépendante est classique et je rappellerai l'objection formulée à son encontre par Bitbol dans <em>L'aveuglante proximité du réel</em> : l'argument selon lequel</p>
+            <div class="citation">
+                « si nous sommes parvenus à identifier un invariant, alors il représente forcément un trait de la réalité indépendante » (Bitbol, 1998, p.134),
+            </div>
+            <p>ne vaut pas. Cet argument ne vaut pas parce qu'il n'y a aucun sens, ici, à parler d'un invariant sans préciser par rapport à quoi il y a invariance. Et dès lors que la précision est faite, on s'aperçoit que la connaissance qu'il constitue dépend, comme toute connaissance, des moyens par lesquels nous produisons nos connaissances : un invariant témoigne d'une stabilité par rapport à « une large classe de contextes perceptifs ou expérimentaux relativement auxquels les déterminations sont définies et non pas de son affranchissement vis‑à‑vis de tout arrière‑plan contextuel » (Bitbol, 1998, p.134‑135). Ce que nous appelons ‘un invariant' n'est pas une grandeur dont la valeur est indépendante de tout point de vue, il est un invariant relativement à un ensemble de points de vue.</p>
+
+            <p>Cette autre façon de comprendre la possibilité de déterminer des grandeurs physiques qui restent invariantes au cours de l'histoire de la science échappe à l'alternative réaliste / anti‑réaliste en proposant</p>
+            <div class="citation">
+                « d'offrir aux théories physiques une justification plus forte que le constat a posteriori de leur aptitude à ‘sauver les phénomènes', sans pour autant identifier cette justification à un degré quelconque d'isomorphisme entre elles et la réalité indépendante ». (p.149)
+            </div>
+            <p>Il s'agit de proposer une lecture transcendantale de la constitution d'objectivité qui prenne acte des critiques essuyées par la philosophie kantienne avec l'émergence de la mécanique relativiste et de la mécanique quantique. Il est devenu impensable aujourd'hui avec, d'une part, la critique relativiste d'une détermination absolue des concepts de temps et d'espace, et d'autre part, la mise en question quantique du déterminisme classique et des concepts de causalité et de substance, d'envisager des formes a priori figées dans nos structures mentales comme l'étaient, avec Kant, les formes de l'intuition sensible et les concepts de l'entendement. Mais il reste possible de rapporter le contenu objectif de la connaissance aux conditions dans lesquelles est constituée cette connaissance plutôt que d'en appeler à une réalité pré‑structurée dotée de propriétés déterminant la nature des objets de la connaissance. Dans cette forme actualisée de la perspective transcendantale, l'approche pragmatico‑transcendantale, les conditions de possibilité de la constitution d'objectivité sont désignées par la notion d'a priori fonctionnel, c'est‑à‑dire</p>
+            <div class="citation">
+                « un ensemble de présuppositions fondamentales associées au mode d'activité pratiqué » (p.149).
+            </div>
+            <p>Contrairement aux a priori kantiens inscrits dans la structure, supposée immuable, de la pensée, ces présuppositions peuvent changer au cours de l'histoire des sciences lorsque l'activité scientifique elle‑même est modifiée. Mais pour chaque moment de l'histoire de la science, il est possible de lire la structure d'une théorie et la définition des objets auxquels cette théorie fait référence comme l'expression des</p>
+            <div class="citation">
+                « normes que présupposent l'activité expérimentale dont elle rend compte » (p.150)
+            </div>
+
+            <p>La continuité que brandit Hooker comme un argument incontournable en faveur du réalisme peut maintenant recevoir une toute autre interprétation. Car si l'histoire des sciences n'est plus regardée comme le reflet d'une découverte progressive d'une réalité indépendante, elle ne devient pas pour autant simple enregistrement de tentatives arbitraires heureuses. Il y a un sens et une unité du processus de la connaissance ; mais ils ne sont pas imposés par une réalité prédéterminée en attente d'être représentée. Le cadre pragmatico‑transcendantal offre</p>
+            <div class="citation">
+                « la possibilité de comprendre l'histoire des sciences physiques […] comme généralisation progressive des normes présupposées par la dynamique des activités de recherche et comme mise à jour de ces normes par des formalisations théoriques adaptées à chaque étape de leur extension. » (p.151)
+            </div>
+            <p>Lorsque les théories sont modifiées, ce ne sont pas toutes les présuppositions pragmatiques associées aux activités expérimentales qui sont abandonnées. Il y a une continuité de la connaissance qu'il n'est pas nécessaire de rapporter à la prédétermination du contenu de la connaissance, car il suffit de rappeler que la science est pratiquée par des êtres qui peuvent toujours, en dépit des mutations, des révolutions, des bouleversements, avec lesquels nous scandons l'histoire, se reconnaître comme semblables. Il y a une continuité, une continuité pragmatique qui s'énonce au travers du fameux principe anthropique faible : il y a des conditions qui président à la simple possibilité de notre existence, à la forme de vie que nous incarnons, à l'espace de déploiement des formes d'activité que nous explorons.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Indépendance et historicité === -->
+    <div class="capsule" id="capsule-independance">
+        <div class="capsule-title">🌍 Indépendance et historicité : de quoi ?</div>
+        <div class="capsule-content">
+            <p>Les critiques qui ont été formulées jusqu'ici à l'encontre de l'empirisme constructif, portaient, comme nous l'avons vu, sur la façon de concevoir l'activité scientifique. Elles constituent ce que Hooker appelle les ‘divergences de base' entre ces deux philosophies de la science :</p>
+            <div class="citation">
+                « The basic divergences between realism and CE have been delineated ».
+            </div>
+            <p>Rien dans cette critique ne montre en quoi le réalisme permettrait de mieux comprendre ce en quoi consiste l'activité scientifique. Que ce soit au sujet de l'intrication entre théorie et observation, de la rationalité, du risque, de la continuité de la connaissance, aucun argument ne s'est révélé réellement capable de montrer la nécessité de faire intervenir le concept de réalité car, à chaque fois, l'argumentation devait reposer dès le début, tacitement, sur des présupposés réalistes. Mais Hooker ajoute alors qu'il reste un dernier point de désaccord :</p>
+            <div class="citation">
+                « A last area of disputes remains, the relations between philosophy of science and the larger role of science in the human evolutionary process of the planet, i.e., disputes concerning the social, political, and cultural place and significance of science. » (p.187)
+            </div>
+            <p>La question qui est en jeu maintenant est donc de savoir si le réalisme permettrait, contrairement à l'empirisme constructif, de prendre en considération les enjeux et implications sociales liés à la connaissance scientifique.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Réalisme naturaliste === -->
+    <div class="capsule" id="capsule-naturaliste">
+        <div class="capsule-title">🌿 Réalisme naturaliste</div>
+        <div class="capsule-content">
+            <p>Ce qui, dans l'épistémologie empiriste, fait la cible principale de la critique de Hooker relativement à l'implication de la connaissance scientifique dans l'économie socio‑culturelle est l'idée de pureté factuelle et logique de la production de connaissance. Mais nous avons vu que l'on peut défendre une forme d'empirisme qui rejette l'interprétation réaliste de l'activité scientifique sans pour autant nier une inter‑dépendance entre théorie et observation. Hooker reproche à l'empirisme constructif de refuser une valeur cognitive à toute autre considération que l'adéquation empirique des théories. Mais ainsi que Hooker le reconnaît lui‑même, cela n'empêche pas l'empiriste constructif d'admettre que d'autres considérations, qui doivent selon lui être qualifiées de pragmatiques, interviennent dans la conduite de l'activité scientifique. En dépit de toutes les transformations qui le distingue de l'empirisme logique, l'empirisme constructif maintient une distinction entre connaissance scientifique et connaissance philosophique que dénonce complètement le réalisme naturaliste que revendique Hooker. Être naturaliste est affirmer qu'il n'y a pas de philosophie première, « no First Philosophy », et qu'il doit y avoir entre science et philosophie une relation d'interdépendance qui peut seule assurer la cohérence de notre conception générale de l'humanité :</p>
+            <div class="citation">
+                « According to naturalistic realism there are no philosophical doctrines which are either epistemologically prior to, or independent of, all other statements in the admissible structure of human knowledge. […] Indeed, philosophical doctrines are held explicitly to evolve in dynamic interplay with the evolving scientific world itself.» (Hooker, 1987, p.88)
+            </div>
+            <p>Le double sens de la relation entre science et philosophie doit permettre, d'une part, que le discours épistémologique intègre la connaissance scientifique portant notamment sur l'évolution de l'appareil de notre connaissance et de notre relation à l'environnement,</p>
+            <div class="citation">
+                « any interesting epistemology and theory of rationality for science will have to take the feedback from science into account » (Hooker, 1987, p.13),
+            </div>
+            <p>et d'autre part, que la connaissance scientifique, son but et ses méthodes, soit soumise à la critique normative de la philosophie.</p>
+
+            <p>Mais là encore, on ne voit pas en quoi la position réaliste selon laquelle l'activité scientifique produirait la connaissance d'une réalité indépendante serait la plus à même de promouvoir ou de garantir cette double circulation. Pas plus l'empirisme constructif que l'épistémologie pragmatico‑transcendantale ne peuvent être accusés d'aveuglement vis‑à‑vis du développement de la connaissance scientifique dans la mesure où ces philosophies ont été, tout au contraire, élaborées dans le souci constant de comprendre au plus près le développement de la mécanique quantique ou de la relativité. Prendre acte des développements scientifiques n'implique cependant pas de fonder le discours épistémologique sur une théorie scientifique comme semblent le faire certaines philosophies naturalistes. En ce qui concerne la seconde voie de circulation, il y a un choix ‘doctrinal' à faire devant lequel la position de Hooker est rendue illisible ou du moins ambiguë par l'usage tendancieux qu'il fait du concept de ‘science'.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Pratique scientifique et connaissance de la réalité === -->
+    <div class="capsule" id="capsule-pratique">
+        <div class="capsule-title">🔬 Pratique scientifique et connaissance de la réalité</div>
+        <div class="capsule-content">
+            <p>J'admets avec Hooker que la connaissance de la réalité physique nous est donnée par la science. C'est une vérité logique, comme était logique la nécessité de reconnaître l'existence de l'intérieur (cf. Partie III, chap. A‑1‑1). Et j'admets que ce que nous désignons par science ne doit pas être conçu comme quelque chose d'indépendant de la culture, de la société, du politique, de la technologie, ou encore de la biologie humaine. Et là aussi c'est une vérité logique. Le langage dans lequel nous exprimons la réalité est quelque chose qui est fondamentalement partagé ; il se déploie, se déforme, se transforme, dans l'espace public et il est sensible à la matière et à l'arrangement de tous les fils qui se tissent ensemble pour le constituer. Mais on ne peut pas admettre cela et à la fois affirmer que l'activité scientifique est une activité de connaissance de la réalité indépendante.</p>
+
+            <p>Dire que la science découvre une réalité indépendante, c'est dire que le contenu de la connaissance ne dépend pas de ce que nous sommes, de ce que nous faisons, de ce que nous valorisons ; c'est que la science, en tant qu'entreprise de connaissance est essentiellement une activité qui a les moyens de s'abstraire de toutes conditions historiques, contingentes, une activité préservée de ces contextualités, comme la rationalité du jugement scientifique est préservée, selon Kuhn, par la trans‑historicité des critères qui président à la conduite de l'activité scientifique. L'empirisme est inadéquat, selon Hooker, car il n'est pas rationnel de ne pas concevoir l'activité du scientifique comme une recherche de la réalité indépendante. La science doit être pensée comme une activité en prise avec une nécessité naturelle. Dans ces conditions, on ne voit pas très bien quel peut être l'effet profond du jugement philosophique sur le développement de la science ; discuter le but et les méthodes de la science semble être une tâche assez vaine si le contenu de la connaissance scientifique est une réalité indépendante, indépendante donc des buts et des méthodes qui sont mis en œuvre.</p>
+
+            <p>Si, par ailleurs, on affirme que la science, en tant qu'entreprise de connaissance de la réalité, ne peut pas être pensée indépendamment des conditions historiques dans lesquelles elle se développe, que des éléments sociaux, politiques, axiologiques, sont impliqués dans le chemin que trace dans l'histoire ce développement, alors on ne voit pas très bien ce que vient signifier la notion d'indépendance de la réalité. Reconnaître que la science nous permet de connaître la réalité ne nous contraint pas à qualifier cette réalité d'indépendante ; et reconnaître en sus que la science implique des activités et intérêts contextuels rend cette qualification incomprehensible. Refuser à la réalité l'indépendance vis‑à‑vis de la situation historique dans laquelle elle est connue, ce n'est pas diminuer le concept de réalité du moindre de ses attributs, ce n'est pas dire que la réalité n'est pas ce que nous pensions, voire que ce que nous prenions pour la réalité n'est qu'une simple construction. Ce que nous connaissons comme étant la réalité est bien la réalité et la réalité ne se décrète pas.</p>
+
+            <p>Le problème que semble vouloir, devoir résoudre le concept d'indépendance de la réalité est de rendre compte de la spécificité de la connaissance scientifique. La connaissance scientifique nous fournit un pouvoir d'action dans le monde qui, en tant que tel, est indépendant de l'histoire, de la culture, des valeurs ou des intérêts de ceux qui le mettent en œuvre, des conditions dans lesquelles il est produit, contrairement à l'usage des autres formes de connaissance. Mais on voudrait soutenir en même temps que la connaissance de la réalité n'est pas davantage que les autres formes de connaissance un processus indépendant des conditions historiques dans lesquels il s'enracine. Il y a de l'indépendance et il y a de l'historicité, mais il est difficile de concevoir que la même chose puisse être les deux à la fois. Si le produit de la connaissance scientifique est à la fois indépendant et dépendant des conditions dans lesquels il est produit, c'est qu'il y a dans la notion de ‘science' qui sous‑tend celle de ‘connaissance scientifique' deux usages qui sont confondus. Le problème que semble vouloir, devoir résoudre le concept d'indépendance de la réalité s'évanouit si l'on fait clairement la distinction entre d'une part, l'activité scientifique, et d'autre part, la connaissance de la réalité – distinction qui n'implique pas que ces deux choses sont indépendantes l'une de l'autre :</p>
+            <div class="citation">
+                « It is clear that to make sense of science one has to think about both scientific knowledge and practice with which it engages. […] Though the two are connected, it is useful, I think, to distinguish between studies of practice and the sociology of scientific knowledge tradition, which, at its inception at least, lay largely within the science‑as‑knowledge orbit<sup><a href="#ref298" class="reference-link" id="r298">[298]</a></sup>. »
+            </div>
+            <p>Il est possible d'étudier ce en quoi consiste l'activité scientifique, telle qu'elle se produit, sans devoir prendre en compte des considérations d'ordre sociales. C'est ce que fait van Fraassen lorsqu'il interprète la science comme la recherche de l'adéquation empirique, ou Stengers lorsqu'elle parle de l'invention de faits autonomes. Concentrer son regard sur la pratique scientifique ne signifie pas que la communauté scientifique est pensée comme une entité autonome qui incarnerait la rationalité nécessaire à la connaissance de la réalité, mais simplement que le moment de la pratique est considéré pour lui‑même. Lorsque Hooker ou Fuller soulignent la nécessité d'inscrire la science dans son contexte historique social et politique, ce qui, en revanche, est interrogé, c'est le processus de connaissance de la réalité, de la réalité partagée par tous ceux qui partagent le langage dans lequel elle se dit. Ce dont est constituée la réalité n'est pas décidé dans l'enceinte des laboratoires où se déroulent les activités scientifiques. La réalité ne se choisit pas comme l'on choisit une théorie, sur la base de critères reconnus comme pertinents par un groupe d'individus, fussent‑ils des scientifiques, et quand bien même ces critères ne seraient pas trans‑historiques.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : B-2-3 Une épistémologie non représentationniste – Le temps de la pratique === -->
+    <div class="capsule" id="capsule-temps">
+        <div class="capsule-title">⏳ B‑2‑3 Une épistémologie non représentationniste – Le temps de la pratique</div>
+        <div class="capsule-content">
+            <p>Le souci de dénoncer les conceptions constructives ou relativistes de la pratique scientifique se traduit assez couramment, écrit Pickering (1995), par la mise en avant de la notion de contrainte comme ce qui circonscrit, structure, le déroulement et les résultats de l'activité scientifique. Les praticiens ne sont pas libres de faire simplement ce que le moment historique qu'ils habitent les conduiraient à faire ; quelque chose d' ‘indépendant', d' ‘extérieur' agit pour contraindre le domaine des procédures, des actions efficaces, des résultats possibles, en bref ce que les scientifiques sont conduits à croire :</p>
+            <div class="citation">
+                « These substantive constraints are the reasons why scientists cannot believe just whatever they like. » (Pickering, 1995, p.46)
+            </div>
+            <p>Ces contraintes ne sont pas seulement physiques, mais aussi intellectuelles : ce peut être, d'après Galison<sup><a href="#ref299" class="reference-link" id="r299">[299]</a></sup>, l'adhésion à un principe tel que la conservation de l'énergie ou la confiance dans un dispositif expérimental.</p>
+
+            <p>Pickering pense que la notion de contrainte est trompeuse et n'aide en rien à comprendre ce en quoi consiste la pratique scientifique. La raison de cela est qu'elle laisse penser, voire suppose, que les obstacles ou les limites de l'activité scientifique sont là, déjà déterminés, avant même que la pratique ne commence et donc indépendamment de la forme qu'elle va prendre :</p>
+            <div class="citation">
+                « [W]hatever obstacles do indeed arise in practice are not ‘already there' to begin with ; instead they genuinely emerge in time. » (p.47)
+            </div>
+            <p>Cette conception de la contrainte, de l'obstacle, qui est un avatar de l'idée que l'activité scientifique est en prise avec les déterminations d'une réalité indépendante que doit représenter le produit de cette activité, vient de ce que la réelle temporalité de la pratique est ignorée parce que l'activité scientifique n'est pas considérée en tant que telle, telle qu'elle se déroule :</p>
+            <div class="citation">
+                « We have to take the temporality of practice seriously – meaning we have to try to come to grips with and find a framework for the analysis of practice as it happens. »
+            </div>
+            <p>Pour rendre compte de ce en quoi consiste l'activité scientifique, Pickering met en avant quatre notions qui représentent les dimensions de la pratique ‘en train de se faire' : l'orientation vers des buts, la modélisation, les ressources, les résistances.</p>
+
+            <p>Le but qui oriente la pratique est l'articulation entre la compréhension théorique d'un certain phénomène, la compréhension théorique de la façon dont un dispositif expérimental fonctionne et la mise en place d'un dispositif expérimental. Ces trois éléments ont été saisis concrètement par l'exemple de l'étude du sol amazonien. Bien qu'ils servent à constituer le cadre dans lequel la pratique prend place, ces éléments n'agissent pas, contrairement à ce que Galison prétend, comme des contraintes. Le dispositif expérimental, de même que la compréhension théorique d'un modèle, constituent un cadre de départ de la modélisation, un ‘exemplaire' auquel elle se réfère, mais elle n'est pas enfermée dans ce cadre. La modélisation est un processus infiniment ouvert,</p>
+            <div class="citation">
+                « it is an open‑ended process having no determinate destination » (p.48)
+            </div>
+            <p>Nous l'avions vu aussi dans l'exemple amazonien, l'activité des scientifiques fait fond sur un ensemble de savoirs accumulés. Mais plutôt que d'y voir une obligation, un impératif contraignant, Pickering présente tout ce ‘matériel' technique, théorique, procédural dont une pratique donnée est héritière comme une ressource pour la créativité de cette pratique.</p>
+
+            <p>Abandonner le langage de la contrainte permet aussi de percevoir de façon plus fidèle à la temporalité de l'activité la façon dont se manifeste la difficulté de la pratique. Celle‑ci non plus n'est pas adéquatement traduite par la notion de contrainte qui sous‑entend qu'elle est définie avant même que le travail de recherche ne soit mis en œuvre. La difficulté que rencontre cette mise en œuvre émerge, elle émerge dans la tentative de faire tenir ensemble les trois éléments que l'activité scientifique visent à articuler. Mais dans la mesure où ces éléments évoluent au cours de la recherche, l'émergence de la difficulté est indissociable du déroulement en temps réel de la pratique :</p>
+            <div class="citation">
+                « [T]his emergence is irredeemably tied to the real time of practice. » (p.50)
+            </div>
+            <p>Le travail de recherche qu'engendre le projet d'articuler modélisation et dispositif expérimental rencontre des résistances, mais la nature de celle‑ci dépend de la direction particulière que prend le développement historique de cette recherche. Les difficultés, les résistances qui constituent le moteur même de la pratique doivent être situées dans le déroulement temporel de la recherche particulière engendrée par un projet particulier :</p>
+            <div class="citation">
+                Resistances are situated with respect to particular projects, models and extensions of models. That they arise, and what they look like, has to be understood in relation to those projects, models, and extensions. Further, let me emphasize that unlike constraint – which seems somehow ‘already there' – resistance emerge in the real time of practice… (p.51)
+            </div>
+            <p>La définition des résistances participe d'un processus réellement temporel, un processus historique parce que la définition des éléments que la recherche vise à articuler se modifie au cours de la pratique et que l'ensemble des modifications possibles est indéfini. L'activité du scientifique peut être vue comme la recherche d'un point de stabilisation de l'interaction dynamique entre les différents éléments qu'elle met en scène, « the interactive stabilization of the three elements of his practice », stabilisation qui est atteinte lorsque</p>
+            <div class="citation">
+                « he found a material procedure that translated through an interpretive model into one of his phenomenal models. » (p.52)
+            </div>
+            <p>Ce processus interactif et historique qui se stabilise sur un mode particulier d'articulation des composantes matérielles et interprétatives de la description d'un phénomène, Pickering l'appelle accommodation. Le travail de production de faits scientifiques peut alors être décrit comme une dialectique historique entre résistance et accommodation :</p>
+            <div class="citation">
+                « [T]he production of facts, I claim, is the outcome of a goal‑oriented, temporally extended dialectic of resistance and accommodation …»
+            </div>
+            <p>Dans cette perspective qui place au centre de l'attention la pratique en tant que telle, une pratique ‘en train de se faire', le but de l'activité scientifique n'est pas conçu comme la recherche de la réponse au pourquoi d'un phénomène, mais comme la recherche d'une réponse à un comment d'une articulation entre différents éléments contextuels et évolutifs. Il n'est pas besoin de poser d'emblée une réalité indépendante pour motiver la recherche et justifier la valeur de ses résultats. C'est lorsque la science comme appareil de connaissance de la réalité est confondue avec l'activité des scientifiques que cette réalité indépendante devient une contrainte et un fondement nécessaires. Parce qu'alors la seule façon de ne pas mettre en doute le fait que nous puissions connaître la réalité est de défendre l'idée que le produit de l'activité des scientifiques est déterminé par quelque chose d'indépendant de cette activité, qu'il est une re‑présentation de quelque chose d'indépendant de cette activité et de sa situation historique particulière avec les valeurs, les intérêts, les éléments culturels, politiques, sociaux qui la compose. Sans cette puissance extérieure et indépendante de détermination qui fait des scientifiques de simples porte‑voix de la réalité, leur pouvoir de parler au nom de la réalité, impliqué par la confusion entretenue par l'usage négligent du concept de science, deviendrait tout simplement de l'autoritarisme. C'est sans doute ainsi qu'ont pu être ressenties par les chercheurs les critiques constructivistes ou relativistes qui ont été adressées aux épistémologies réalistes adossées à un cadre représentationniste.</p>
+
+            <p>La distinction entre, d'une part, la science comme appareil de connaissance de la réalité, et d'autre part, l'activité des scientifiques, a pour vertu de libérer les scientifiques de la fonction écrasante qui leur était imputée et du même coup des accusations d'imposture que cette attribution pouvait générer. Distinguer le ‘faire' de la pratique et le ‘dire' de la connaissance de la réalité, permet d'arracher le concept de réalité à l'espace transcendant, métaphysique, des causes et de le replacer dans l'espace logique de la justification. Cela fait disparaître instantanément le conflit entre les concepts de découverte (de la réalité) ou de construction (d'une réalité relative, c'est‑à‑dire une illusion de ‘vraie' réalité). Cela prive aussi de substance l'éternel débat autour de la capacité ou l'incapacité de ‘la science' à connaître la réalité nourri du heurt entre deux évidences (logiques) : nous connaissons la réalité, au plein sens que le veut l'usage du concept ; l'activité scientifique est une pratique dont les résultats sont dépendants des conditions de leur production.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref295"><strong>295.</strong> C. A. Hooker, « Naturalism, Realism and the Problem of Scientific Change », 1987.</p>
+            <p id="ref296"><strong>296.</strong> C. A. Hooker, 1987, p. ?</p>
+            <p id="ref298"><strong>298.</strong> A. Pickering, <em>The Mangle of Practice</em>, 1995, p. ?</p>
+            <p id="ref299"><strong>299.</strong> P. Galison, <em>Image and Logic</em>, 1997.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_B2_1.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_B2_3.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

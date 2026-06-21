@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑3. Après Piaget – A3.2</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑3. Après Piaget – A3.2 (pages 356‑365)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-rappel">📌 Rappel</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-apres-piaget">🔮 A‑3‑2 L'après Piaget</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-critique">⚡ Critique : connaissance conceptuelle innée</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-nativiste">🧬 Thèse nativiste</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-problemes">🔍 Problèmes du nativisme</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-quel-concept">❓ Quel concept ?</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-savoir-faire">🧠 Savoir et faire</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-approche-dynamique">🌀 Approche dynamique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-causation-mentale">⚡ La causation mentale</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A3_3.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Rappel (fin de A3.1) === -->
+    <div class="capsule" id="capsule-rappel">
+        <div class="capsule-title">📌 Rappel (fin de A3.1)</div>
+        <div class="capsule-content">
+            <p>… structures opératoires dans la réalité, qu'à titre de philosophie physique » (Piaget, 1950/1974, p.325). Ou lorsqu'il se demande quel est le type de réalité que postule la pensée physique. Il remarque d'abord que la réponse à cette question posée aux physiciens varie selon l'échelle des phénomènes qu'ils étudient, c'est-à-dire</p>
+            <div class="citation">
+                « l'échelle des actions expérimentales qu'il est possible d'exercer sur cette réalité ».
+            </div>
+            <p>Et il cherche ensuite à formuler un processus d'évolution de l'idée de réalité et note le paradoxe suivant : plus le réel est objectivé, plus il s'affirme indépendamment du sujet, plus il est détaché du moi sensible, et plus il est solidaire des opérations du sujet, plus il est reconstruit par composition opératoire, et plus il dépend du sujet en tant qu'opérateur. Et de conclure que</p>
+            <div class="citation">
+                ce paradoxe est un simple truisme sitôt admis que ces opérations ont pour propriété essentielle d'atteindre tout le possible en partant du réel : le réel « vrai » est alors celui qui situe le donné dans l'ensemble des possibilités réalisables, mais non réalisées simultanément, tandis que l' « apparent » se réduit à la seule réalité actuelle, par opposition au possible. […] Un tel réel élargi jusqu'à baigner dans le possible est-il alors extérieur ou intérieur au sujet ? Tous les deux, assurément, puisque le sujet ne crée pas les possibles, mais que, s'il ne les engendre pas, il n'atteint la nécessité qui caractérise leurs liens que par sa seule activité opératoire (Piaget, 1950/1974, p.335)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-3-2 L'après Piaget – Les termes du débat === -->
+    <div class="capsule" id="capsule-apres-piaget">
+        <div class="capsule-title">🔮 A‑3‑2 L'après Piaget – Les termes du débat</div>
+        <div class="capsule-content">
+            <p>La théorie de Piaget sur l'origine sensori-motrice de la connaissance a fait l'objet bien sûr de différentes critiques. Mais parmi elles, il en est une susceptible de mettre en cause complètement cette théorie. L'accusation porte sur une sous-estimation des capacités conceptuelles des jeunes enfants<sup><a href="#ref219" class="reference-link" id="r219">[219]</a></sup>. Contrairement à ce qu'affirme l'école piagétienne de l'acquisition de la connaissance, le fait que les enfants échouent dans la réalisation de certaines tâches ne signifierait pas que toute connaissance doive être acquise par la voie sensori-motrice. Certaines connaissances, non acquises, peuvent être présentes sans pouvoir être manifestées en raison d'un déficit des aptitudes motrices ou perceptuelles requises pour leur expression par exécution de la tâche<sup><a href="#ref220" class="reference-link" id="r220">[220]</a></sup>. Il s'agit donc, selon cette ligne d'argumentation, d'une part, ainsi que l'ont montré Thelen et Smith (1994) d'établir une distinction entre la connaissance que les enfants ont, leur compétence cognitive, et celle qu'ils peuvent physiquement exprimer, leur performance, et d'autre part, de rendre manifeste la connaissance déjà présente au plus jeune âge en réduisant au maximum les aptitudes perceptuelles et motrices requises pour son expression<sup><a href="#ref221" class="reference-link" id="r221">[221]</a></sup>. Les approches dynamiques de la cognition, et en particulier le travail mené par E. Thelen<sup><a href="#ref222" class="reference-link" id="r222">[222]</a></sup> sur les capacités des jeunes enfants, sur lequel je vais m'appuyer principalement, pensent pouvoir montrer, au contraire, qu'il n'y a pas de connaissance conceptuelle indépendante de l'expérience sensori-motrice et que la distinction même entre compétence et performance est intenable.</p>
+            <p>Piaget s'est particulièrement intéressé à la question de la connaissance par les jeunes enfants de la conservation des objets, ensembles, ou quantités, et notamment celle de la permanence des objets, c'est-à-dire du fait qu'un objet continue à exister lorsqu'il disparaît du champ de vision ou d'action de l'enfant. Sa conclusion est que</p>
+            <div class="citation">
+                « la permanence d'un objet individuel sortant du champ perceptif (caché sous un écran) ne s'acquiert que progressivement au niveau sensori-moteur (8 à 12 mois) »,
+            </div>
+            <p>lorsque l'enfant devient capable de produire des schèmes d'actions réversibles qui se coordonnent en structure d'ensemble dont l'objet constitue un invariant. L'identité et la permanence de l'objet sont donc les produits de l'action :</p>
+            <div class="citation">
+                « c'est le groupe comme tel des transformations (ou tout autre système réversible analogue à un groupe) qui est donc la source des principes de conservation, et l'identité (ou plus précisément l'opération identique) n'est que l'un des aspects de ce système d'ensemble, aspect inséparable des transformations elles-mêmes. » (Piaget, 1970, p. 49)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Critique – une connaissance conceptuelle innée === -->
+    <div class="capsule" id="capsule-critique">
+        <div class="capsule-title">⚡ Critique : une connaissance conceptuelle innée</div>
+        <div class="capsule-content">
+            <p>Les critiques adressées au travail de Piaget contestent que les expériences qu'il a réalisées autorisent les conclusions qu'il en a tirées. Les tâches étaient trop difficiles pour les enfants concernés dans le sens où elles demandaient une manifestation motrice trop avancée et cette difficulté ‘pratique' les empêchait d'exprimer la connaissance qu'ils pouvaient posséder. De nouvelles formes d'expérimentation des capacités des très jeunes enfants se sont depuis développées et notamment celle appelée ‘violation of expectancy' qui ne fait appel qu'au regard du sujet confronté à une série d'événements. L'idée qui est à la base de ce dispositif est que les enfants, tout comme les adultes, doivent être surpris lorsque les choses qu'ils observent ne sont pas celles qu'ils attendaient, et cette surprise, dans le cas des enfants, doit se manifester par une durée plus longue du regard<sup><a href="#ref223" class="reference-link" id="r223">[223]</a></sup>. Un schéma expérimental classique, explique E. Thelen, est de familiariser les enfants avec le déroulement d'un événement physique ordinaire en leur montrant une certaine scène jusqu'à ce qu'ils en soient lassés. Puis cette scène est modifiée de deux façons qui leur sont présentées successivement : l'une est physiquement possible tandis que l'autre est ‘truquée' de manière à suggérer un événement impossible, un objet en traverse un autre ou un objet ne se trouve pas derrière le cache où il a été ostensiblement placé. Par exemple, la permanence peut être testée en montrant un objet qui tombe et disparaît derrière un écran. L'écran est ensuite écarté pour faire apparaître l'objet. C'est la phase de familiarisation. Dans la deuxième phase, une surface horizontale est placée au-dessus du sol. La scène ‘normale' est celle où l'objet qui tombe se trouve reposer sur la surface ajoutée. La scène ‘étrange' montre l'objet se trouvant sous cette surface. Si les enfants regardent plus longtemps la scène truquée, cela est censé signifier qu'ils remarquent son étrangeté et doivent donc avoir une connaissance des propriétés réelles qui sont contredites.</p>
+            <p>Les positions théoriques quant à l'origine de la connaissance couvrent un large spectre de possibilités (Spelke, 1998, p.182) : à un extrême, les ‘empiristes' défendent l'idée que la connaissance des objets est complètement formée par l'exercice des capacités sensori-motrices<sup><a href="#ref224" class="reference-link" id="r224">[224]</a></sup> ; à l'autre extrême, les ‘nativistes' soutiennent que cette connaissance résulte entièrement de processus intrinsèques de croissance. Entre les deux, il y a ceux qui pensent que certains aspects de la connaissance des objets proviennent de l'expérience tandis que d'autres aspects sont issus de propriétés intrinsèques du système cognitif. Des études développées ces dernières années, entre autres sur des enfants ayant entre trois et six mois, semblent donner crédit, selon Spelke, aux positions nativistes intermédiaires :</p>
+            <div class="citation">
+                « There is evidence that infants are capable of forming certain object representations before they can act on objects effectively, and also evidence that object representations undergo changes over the time period when reaching and manipulation develop. » (Spelke, 1998, p.183)
+            </div>
+            <p>Par exemple, dans l'étude de la représentation de la permanence d'objets qui se trouvent à un moment entièrement dissimulés, le dispositif expérimental basé sur le regard teste la réaction à des scènes dans lesquelles certaines caractéristiques physiques imposées par l'existence et la localisation des objets cachés sont violées. Ces expériences montreraient que les enfants entre trois et six mois représentent la permanence des objets qui sont d'abord visibles et ensuite sont cachés<sup><a href="#ref225" class="reference-link" id="r225">[225]</a></sup>. Dans la mesure où ces enfants n'ont pas les capacités physiques d'interagir avec les objets, ces premières connaissances doivent provenir soit de leurs expériences visuelles, soit d'un processus de croissance intrinsèque :</p>
+            <div class="citation">
+                « early-developing objects representations likely emerge either through prior visual experience with objects or through intrinsic growth processes. » (Spelke, 1998, 184)
+            </div>
+            <p>D'après Spelke, de récentes études<sup><a href="#ref226" class="reference-link" id="r226">[226]</a></sup>, utilisant notamment un dispositif d'objet partiellement cachés, et testant la représentation de l'unité de l'objet et de la continuité de l'existence de la partie cachée, ont obtenu des résultats convergeant vers la conclusion de l'existence d'une connaissance indépendante du développement sensori-moteur. Il y a des limites à cette connaissance et le développement des capacités motrices entraîne une modification de la représentation des objets. Mais ces changements se produisent sur fond de représentations qui sont invariantes :</p>
+            <div class="citation">
+                « At all ages, including early infancy, humans may be capable of representing occluded objects. At all ages, moreover, representations of visible objects may be stronger than representations of hidden objects [...] there is both constancy and change in object representations over early cognitive development, explaining both infants' early developing capacities and some of the limits on those capacities. » (Spelke, 1998, 189)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Thèse nativiste === -->
+    <div class="capsule" id="capsule-nativiste">
+        <div class="capsule-title">🧬 Thèse nativiste</div>
+        <div class="capsule-content">
+            <p>La thèse nativiste, selon laquelle les expériences de ‘violation expectation' montrent qu'une certaine connaissance serait disponible chez les enfants très jeunes mais privée d'expression en raison d'un déficit d'aptitudes motrices, postule une dualité des processus de développement de la connaissance et de la motricité :</p>
+            <div class="citation">
+                « An ever-increasing body of evidence shows that the human mind is endowed with an implicit mental ability<sup><a href="#ref227" class="reference-link" id="r227">[227]</a></sup> … »
+            </div>
+            <p>Cette thèse repose, d'après Thelen, sur les deux hypothèses suivantes :</p>
+            <ul>
+                <li>il y a une séparation entre les événements mentaux qui précéderaient la décision d'agir et l'action elle-même ; un concept d'objet, abstrait, désincarné, atemporel et modulaire se développerait indépendamment du fait qu'il soit exprimé dans le comportement ;</li>
+                <li>du fait que ‘regarder' est, sur le plan moteur, moins complexe que ‘saisir', ce serait un accès privilégié au module de connaissance de l'objet, une meilleure mesure du concept réel que les enfants ont de l'objet ; certains soutiennent même que agir et savoir sont deux systèmes dissociables, avec des bases anatomiques distinctes.</li>
+            </ul>
+            <p>Ces deux hypothèses font appel à la distinction entre la ‘compétence' et la ‘performance'. La compétence réside dans des structures mentales, modulaires, abstraites, c'est-à-dire indépendantes de l'expérience, dont le développement ne peut que résulter de l'exécution d'un programme génétique. La performance consiste dans les processus moteurs ou perceptuels (voire émotionnels) qui sont effectivement engagés dans le comportement en temps réel. Les scènes auxquelles sont d'abord confrontés les enfants avant le test proprement dit sont censées incarner certains aspects d'un concept. La scène-test qui lui fait suite est censée, elle, présenter une violation de ce concept. Si le regard des enfants témoigne d'une attention pour cette scène, cela est interprété comme un étonnement relatif à ce qu'ils remarquent que les choses ne sont pas ‘ce qu'elles devraient être' en accord avec le concept en question – et donc comme la marque de la disponibilité mentale du concept.</p>
+            <p>Or, une série d'étude du développement de la connaissance réalisée par Thelen dans le cadre d'une interprétation dynamique du comportement des jeunes enfants remet complètement en cause le genre d'assertions qui est à la base de l'interprétation nativiste. Ce n'est pas seulement qu'elle contredit certaines hypothèses ou certaines conclusions, c'est qu'elle dénonce les termes mêmes dans lesquels elles sont formulées. Elle permet de rendre compte des comportements des enfants, non seulement sans en appeler à une distinction entre compétence et performance, mais en dénonçant la signification même qui est attribuée aux procédures expérimentales – et en cela, elle nous fait sortir du débat empiriste-nativiste si celui-ci suppose un accord dans la façon de poser le problème, à savoir ‘est-ce que tel concept, ou tel aspect de tel concept est une connaissance innée ou acquise ?' Ainsi que nous allons le voir, la critique formulée par Thelen met en évidence la confusion, thématisée par Varela dans la perspective de la théorie de l'énaction, entre ce que nous avons appelé lecture sémantique et lecture participative du comportement.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Problèmes du nativisme === -->
+    <div class="capsule" id="capsule-problemes">
+        <div class="capsule-title">🔍 Problèmes du nativisme</div>
+        <div class="capsule-content">
+            <p>Les problèmes principaux que rencontre l'interprétation nativiste selon laquelle il existe des structures mentales, indépendantes de l'expérience et du comportement, correspondant à ‘l'avoir d'un concept' (ou d'un aspect d'un concept) sont de trois ordres.</p>
+            <p><strong>Premièrement</strong>, en focalisant l'explication sur le contenu de la connaissance, et même le ‘contenu de l'esprit', véhiculé par un ensemble de structures innées, elle est incapable de rendre compte des complexités des comportements en temps réel et des processus de changement du comportement dans le long terme. La façon dont les enfants réagissent à une situation expérimentale se révèle en fait extrêmement variable et idiosyncrasique. Des modifications, dans le dispositif, les instructions ou l'environnement, qui paraissent minimes par rapport à ce que l'expérience est supposée tester, peuvent conduire à des différences notables dans les résultats :</p>
+            <div class="citation">
+                « Efforts to uncover core principles run up against the overwhelming context-sensitivity of tasks that seem quite simple, like watching a display or uncovering a hidden object<sup><a href="#ref228" class="reference-link" id="r228">[228]</a></sup>. »
+            </div>
+            <p><strong>Deuxièmement</strong>, certaines expériences semblent montrer que la connaissance disponible chez des enfants de quelques mois ne serait plus disponible pendant une certaine période chez les enfants plus âgés, puis réapparaîtrait. Par exemple, Spelke et al.<sup><a href="#ref229" class="reference-link" id="r229">[229]</a></sup> soutiennent qu'un enfant de quatre mois sait qu'un objet qui tombe ne peut pas traverser une surface, tandis que la même expérience<sup><a href="#ref230" class="reference-link" id="r230">[230]</a></sup> réalisée avec des enfants de deux et trois ans conduit à la conclusion que seuls ceux de trois ans recherchent l'objet en accord avec la notion de solidité. Mais si les plus jeunes enfants possèdent une connaissance inscrite sous forme de structures mentales innées, et qui est constamment confirmée par le monde qu'ils observent, cette connaissance devrait être renforcée avec l'âge :</p>
+            <div class="citation">
+                « if core principles, like the permanence and solidity of objects are so fundamental to be encoded in the genes, and manifest in young infants, then they should be powerful enough to guide behavior in older, more skilled children. » (Thelen &amp; Whitmyer, 2002, p.3)
+            </div>
+            <p><strong>Troisièmement</strong>, enfin, la théorie selon laquelle une structure mentale est la cause du comportement doit répondre, d'une part, à la question générale, classique, de savoir comment un contenu conceptuel produit une action contextuelle, comment une croyance provoque un comportement particulier, et d'autre part, à la question spécifique de savoir au cas par cas, en fonction des tests et de leurs résultats, pourquoi certains contenus conceptuels sont présents et pas d'autres.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Quel concept ? – Une mauvaise question === -->
+    <div class="capsule" id="capsule-quel-concept">
+        <div class="capsule-title">❓ Quel concept ? – Une mauvaise question</div>
+        <div class="capsule-content">
+            <div class="citation">
+                « [A] source of the Myth of the Given … is the fact that when we picture a child – or a carrier of slabs – learning his first language, we, of course, locate the language learner in a structured logical space in which we are at home. Thus we conceive of him as a person (or, at least, a potential person) in a world of physical objects, colored, producing sounds, existing in Space and Time. But though it is we who are familiar with this logical space, we run the danger, if we are not careful, of picturing the language learner as having ab initio some degree of awareness – ‘pre-analytic', limited and fragmentary though it may be – of this same logical space. […] And this mistake is in principle the same whether the logical space of which the child is supposed to have this undiscriminated awareness is conceived by us to be that of physical objects or of private sense contents. » (Sellars, 1956, p. 65)
+            </div>
+            <p>Concernant les points un et deux, Thelen affirme que les chercheurs, qu'ils soient nativistes ou pas, ont obtenu des résultats conflictuels en raison même de la question qu'ils ont posée. Un dispositif expérimental est destiné à révéler ce que les enfants de tel ou tel âge savent ou ne savent pas à propos d'un certain concept ; les enfants sont censés faire la démonstration, par leur comportement, de la connaissance qu'ils ont et de celle qu'ils n'ont pas et les expériences répétées pour différents âges permettraient de déterminer quels sont les contenus conceptuels qui sont innés et ceux qui doivent être acquis. À chaque fois, les tâches auxquelles sont soumis les enfants sont choisies en fonction de leur contenu conceptuel. En acceptant de répondre à la même question, les empiristes comme les nativistes admettent qu'il y a un sens à définir un concept antérieurement aux conditions particulières de l'action dans lesquelles il est censé pouvoir s'incarner ; les uns et les autres considèrent le contenu d'un concept comme quelque chose de déterminé, qui est soit inné, instancié par une structure mentale, soit acquis, par le biais d'expériences particulières. Or, ce que conteste Thelen, c'est l'idée même de représentation d'un contenu conceptuel abstrait, qui pourrait être ensuite exhibé par une tâche à accomplir. La connaissance des objets, ainsi que le disait Piaget, est créée par les caractéristiques particulières, dans le temps et dans l'espace, de la tâche elle-même. Un concept n'existe pas indépendamment de cette tâche et de ses caractéristiques, relatives à l'objet, au dispositif, au déroulement de la procédure, aux instructions qui sont données :</p>
+            <div class="citation">
+                « [T]here is no way to abstractly represent a concept in a task that is not completely tied to the events in the task itself. » (Thelen &amp; Whitmyer, 2002, p.4)
+            </div>
+            <p>La question de savoir si l'enfant possède ou pas la connaissance de tel ou tel contenu conceptuel est biaisée dès le départ ; elle fait fond sur la connaissance de l'expérimentateur ; elle attribue à un comportement une signification puisée dans le système de connaissance de l'observateur. Elle participe d'une lecture sémantique du comportement. Si cette lecture s'autorise de la projection de signification (ce sont les significations de l'expérimentateur qui sont attribuées telles quelles à l'enfant en dépit de la différence de leur histoire expérientielle), c'est qu'elle suppose que l'expérience n'intervient pas dans la détermination de ces significations ; elle s'inscrit dans un cadre représentationnel de l'étude de la connaissance ; le contenu de la connaissance est déterminé par les propriétés de ce qu'il y a à représenter. Dans la mesure où la connaissance est pensée en termes de contenu et non de processus, ces travaux négligent la considération d'une multitude de paramètres qui sont, aux yeux de ceux qui développent une approche dynamique, essentiels à la compréhension de l'acquisition des connaissances. Pour ceux-là, la connaissance est constituée par l'expérience, et non pas utilisée ou acquise – ce sont les conditions de l'expérience qui déterminent les contenus conceptuels. Il n'y a donc pas lieu de se demander si l'enfant possède ou pas tel contenu conceptuel, mais en revanche, il faut prêter attention aux conditions particulières dans lesquelles sont réalisées les tâches expérimentales. L'interprétation dynamique que propose Thelen, et qui tient compte, à titre de paramètres, de ces conditions, permet de rendre compte de façon non représentationnelle de la diversité des résultats et de rendre cohérent ce qui paraît contradictoire.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Savoir et faire – savoir c'est faire === -->
+    <div class="capsule" id="capsule-savoir-faire">
+        <div class="capsule-title">🧠 Savoir et faire – savoir c'est faire</div>
+        <div class="capsule-content">
+            <p>Concernant le troisième point, l'approche dynamique rejette dès le départ la thèse d'une distinction entre ‘savoir' et ‘faire', ‘knowing' et ‘acting'. Elle s'oppose à l'idée que la connaissance et le comportement doivent être rapportés à des processus distincts, pouvant être considérés indépendamment l'un de l'autre, et que l'on ne sait plus ensuite comment mettre en relation. La connaissance n'est pas une cause du comportement. Elle n'est pas réductible à un contenu abstrait, déterminé indépendamment de toute expérience, à la définition d'un concept. Que l'enfant accomplisse une tâche de telle manière ou de telle autre n'est pas la conséquence de ce qu'il possèderait ou pas une certaine structure mentale, cela dépend des conditions particulières dans lesquelles la tâche doit être réalisée et engage de façon dynamique et interactive la perception, le mouvement, la mémoire :</p>
+            <div class="citation">
+                « Indeed the cornerstone of our dynamic model is that ‘knowing' is perceiving, moving, remembering as they evolve over time, and that the error can be understood simply and completely in terms of these coupled processes. » (Thelen et al., 2001, p.4)
+            </div>
+            <p>La conception dynamique que développe Thelen présente la connaissance comme le produit émergent d'un processus de couplage qui implique différentes caractéristiques du contexte de réalisation de la tâche. La connaissance est engendrée par les propriétés spatiales et temporelles particulières d'effectuation de la tâche elle-même.</p>
+            <p>Mais cette attention aiguë au contexte du comportement ne doit pas être confondue avec l'explication au cas par cas des approches représentationnistes. La modélisation dynamique, au contraire, évite le problème qui se pose lorsque le comportement doit être causé par un contenu conceptuel à chaque fois différent sans que l'on puisse justifier la présence ou l'absence a priori de tel contenu conceptuel ou de tel autre. Les modèles dynamiques qui sont proposés par Thelen pour rendre compte des comportements lors de différentes tâches sont dits ‘content-neutral' dans le sens où il n'y a pas entre eux de différence structurelle significative :</p>
+            <div class="citation">
+                « [T]hey are not ‘special purpose machines', each designed with the goal of explaining one task, but rather they are precisely and univocally characterized type of system that accounts for the structure of behavior in many different domains. » (Thelen &amp; Whitmyer, 2002, p.4)
+            </div>
+            <p>Cette approche peut être dite participative parce qu'elle évite d'attribuer des significations, pertinentes pour la vie de l'observateur :</p>
+            <div class="citation">
+                « we describe the error task in the most simple behavioral terms »,
+            </div>
+            <p>parce qu'elle évite de postuler des contenus mentaux déterminés, des désirs, des croyances, puisés nécessairement dans le registre d'une communauté de langage partageant une forme de vie élaborée :</p>
+            <div class="citation">
+                « The models are also content-neutral because they make no appeal to the contents of their states in generating behavior. »
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Approche dynamique === -->
+    <div class="capsule" id="capsule-approche-dynamique">
+        <div class="capsule-title">🌀 Approche dynamique</div>
+        <div class="capsule-content">
+            <p>La réponse au troisième point est la synthèse des objections aux points précédents. La relation entre connaissance et comportement n'est pas une relation extrinsèque entre les éléments de deux systèmes de nature distincte. La question n'est pas de savoir si un comportement est révélateur de la présence ou de l'absence d'un certain contenu conceptuel ; il n'y a rien dans le modèle dynamique qui tienne lieu d'une connaissance en tant qu'elle serait définie indépendamment, c'est-à-dire antérieurement au comportement de façon à pouvoir en être la cause. L'approche qui est menée veut rendre compte du comportement en tenant compte, contrairement aux approches représentationnistes, des caractéristiques contextuelles de la situation dans laquelle est plongé l'enfant, le système cognitif. Perception, mouvement, mémorisation, connaissance, sont vus comme des parties intégrantes d'un seul et même processus dynamique généré du fait de leur propre variation et de leurs influences réciproques. Le comportement n'est pas le point d'aboutissement d'une décision résultant elle-même d'un calcul faisant appel à des contenus conceptuels ‘tout prêts' à être utilisés pour analyser la situation, pour résoudre un problème. La question n'est pas de savoir ce que l'enfant sait ou ne sait pas, quels problèmes il est capable de résoudre ou pas, car c'est pour l'observateur que telle situation représente un problème et que tel comportement constitue une solution tandis que tel autre constitue une erreur. La lecture dynamique qui est développée par le travail de Thelen s'intéresse au comportement lui-même, au comportement en tant que tel, et non en tant que signe d'autre chose, parce que la connaissance n'est pas ailleurs que là, et dépend de tous les éléments qui contribuent à l'expérience réelle, l'expérience vécue, incarnée, que constitue pour le système cognitif la procédure expérimentale dans laquelle il est plongé.</p>
+            <p>La modélisation dynamique veut montrer comment un comportement émerge de la situation de rencontre dans laquelle est plongé le système cognitif ; ce sont donc seulement les éléments de cette rencontre qui doivent intervenir dans la dynamique du système. Le modèle est constitué d'un champ d'automates cellulaires couplés qui correspondent aux différents paramètres qui se sont révélés, au cours des différentes procédures expérimentales, influencer le comportement de l'enfant. L'idée est de montrer que la prise en compte de ces paramètres suffit à rendre compte du comportement, sans qu'il faille invoquer une structure mentale à titre de cause, et permet en outre de comprendre l'irrégularité apparente des résultats. Cette irrégularité est incohérente lorsque le comportement doit être expliqué dans toutes les situations par une cause identique ; mais elle ne l'est pas si le comportement est le résultat émergent d'un processus de couplage qui implique les paramètres qui sont modifiés en fonction des situations.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : La causation mentale === -->
+    <div class="capsule" id="capsule-causation-mentale">
+        <div class="capsule-title">⚡ La causation mentale</div>
+        <div class="capsule-content">
+            <p><strong>A‑3‑3 L'approche dynamique</strong></p>
+            <p>Avant d'expliciter ce en quoi consiste, concrètement, l'approche dynamique défendue par Thelen, il me paraît nécessaire de commenter davantage la question de la nature causale des structures mentales. Cette question est, en effet, loin d'être triviale ou négligeable. La science peut-elle ou doit-elle se passer, purement et simplement, de toute référence au mental, que ce soit en termes d'événements mentaux, de phénomènes mentaux, ou de structures mentales ? Ainsi que le souligne Kim<sup><a href="#ref231" class="reference-link" id="r231">[231]</a></sup>, il y a, semble-t-il, de bonnes raisons de défendre l'idée d'une ‘causation mentale' : comment rendre compte, sinon, de la capacité que possède l'être humain d'agir sur la base d'une croyance, d'un désir, d'une intention ? Comment comprendre la possibilité de la connaissance humaine sans présupposer une relation causale entre les objets du monde d'une part, et les expériences perceptuelles et les croyances, d'autre part ? Comment comprendre que nous puissions raisonner sur la base de nos acquis sans en appeler à une relation causale entre les anciennes croyances et les nouvelles ? Ce sont des questions du même type que posent ceux qui dénoncent l'origine perceptuelle de la connaissance : comment un enfant peut-il réagir en fonction d'une situation particulière, si ce n'est sur la base d'une connaissance qui lui permette de donner sens à cette situation ? Comment adapter l'action aux informations disponibles s'il ne possède pas une structure mentale qui assure l'adéquation du comportement aux données de l'environnement ? Mais, si la science ne peut pas se passer de référence à ‘du mental', quelle place peut-elle lui reconnaître ? En quels termes peut-elle y faire référence ? Une science qui met en scène dans ses explications du comportement les phénomènes mentaux se doit, dit Kim, de leur reconnaître une efficacité causale (Kim, 1998, p.171) ; et de rappeler la sentence fodorienne :</p>
+            <div class="citation">
+                « … if it isn't literally true that my wanting is causally responsible for my reaching, and my itching is causally responsible for my scratching, and my believing is causally responsible … »
+            </div>
+            <p>La question de la causation mentale est donc centrale, et elle ne peut pas être simplement évacuée au nom d'un refus du représentationnisme. L'approche dynamique, telle que la défend Thelen, ne nie pas qu'il y ait des phénomènes mentaux ; elle propose de les comprendre non pas comme des causes indépendantes du comportement, mais comme des aspects du comportement lui-même, comme des propriétés émergentes de l'interaction dynamique entre le système et son environnement. La connaissance n'est pas une cause du comportement ; elle est le comportement lui-même, dans sa dimension temporelle et contextuelle. C'est cette conception qui sera explorée plus en détail dans la section suivante (A‑3.3).</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref219"><strong>219.</strong> Voir, par exemple, les travaux de E. Spelke, 1990, ou de R. Baillargeon, 1995.</p>
+            <p id="ref220"><strong>220.</strong> Cette critique est souvent associée au débat entre la théorie de l'esprit et l'approche piagétienne.</p>
+            <p id="ref221"><strong>221.</strong> E. Thelen &amp; L.B. Smith, <em>A dynamic systems approach to the development of cognition and action</em>. Cambridge, MA: MIT, 1994.</p>
+            <p id="ref222"><strong>222.</strong> E. Thelen, « Time-scale dynamics and the development of an embodied cognition », in <em>Mind as Motion</em>, 1995.</p>
+            <p id="ref223"><strong>223.</strong> R. Baillargeon, « The object concept revisited: New directions in the investigation of infants physical knowledge », in C.E. Granrud (Ed.), <em>Visual perception and cognition in infancy</em>, Hillsdale, N.J.: Erlbaum, 1993, 265-316.</p>
+            <p id="ref224"><strong>224.</strong> J. Piaget, <em>La construction du réel chez l'enfant</em>, 1937.</p>
+            <p id="ref225"><strong>225.</strong> R. Baillargeon, 1993.</p>
+            <p id="ref226"><strong>226.</strong> E. Spelke, 1998.</p>
+            <p id="ref227"><strong>227.</strong> Thelen &amp; Whitmyer, 2002, p.2.</p>
+            <p id="ref228"><strong>228.</strong> Thelen &amp; Whitmyer, 2002, p.3.</p>
+            <p id="ref229"><strong>229.</strong> E. Spelke et al., 1992.</p>
+            <p id="ref230"><strong>230.</strong> Thelen &amp; Whitmyer, 2002, p.3.</p>
+            <p id="ref231"><strong>231.</strong> J. Kim, <em>Mind in a Physical World</em>, 1998.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A3_1.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A3_3.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

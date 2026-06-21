@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.A‑2. La cognition sans la représentation : l'énaction (partie 2)</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la cognition</h1>
+    <div class="sub">A‑2. La cognition sans la représentation : l'énaction (pages 289‑313, partie 2)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-cognition">🧩 A‑2‑2 Cognition et connaissance</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-langage">🗣️ Langage et réalité</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-semantique">📖 Approche sémantique et justification</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-concept">📌 Concept ordinaire, concept scientifique</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-semantique-vs-participative">🔍 Lecture sémantique vs lecture participative</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-enaction-participative">🌱 Enaction et lecture participative</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-action-perception">🔄 Action‑perception</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_A2_3.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === RAPPEL : fin de la section précédente (expérience corporelle préconceptuelle) === -->
+    <div class="capsule" id="capsule-rappel">
+        <div class="capsule-title">📌 Rappel (fin de A‑2‑1)</div>
+        <div class="capsule-content">
+            <p>… pushed around by external forces and driven by internal forces over which I have no control. » (Johnson, 1987, pp.13-15)</p>
+            <p>Ces expériences corporelles préconceptuelles alimentent le contenu des concepts par lesquels nous apprendrons à dire le monde, à connaître la structure de la réalité. Ce ne sera pas un monde privé, la réalité ne sera pas relative aux expériences individuelles, parce que cette expérience se déroule au sein d'une communauté qui inscrit cette expérience dans une connaissance commune, une connaissance conceptuelle, propositionnelle du monde qui transcende les individualités. Il y a deux moments dans la connaissance du monde : un moment préconceptuel, concerné par une expérience corporelle, la rencontre d'un corps et d'un environnement ; un moment conceptuel, propositionnel, concerné par la mise en discours de cette expérience, l'inscription de cette expérience dans un langage partagé.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : A-2-2 Cognition et connaissance – Distinction logique === -->
+    <div class="capsule" id="capsule-cognition">
+        <div class="capsule-title">🧩 A‑2‑2 Cognition et connaissance – Distinction logique</div>
+        <div class="capsule-content">
+            <p>Cette distinction va avoir une grande importance dans la présentation de l'approche énactive et de sa visée épistémique. Elle est un instrument d'analyse qui permettra de distinguer et expliciter les notions de cognition et de connaissance en tant que, dans le cadre de l'énaction, elles s'appliquent respectivement à l'un et à l'autre de ces moments. Mais la distinction entre ces deux moments ne doit pas être pensée comme l'expression d'un ordre temporel, voire hiérarchique tel que ces moments puissent être appréhendés indépendamment l'un de l'autre ; elle doit être comprise comme une distinction logique. L'expérience pré-conceptuelle doit être pensée en dépendance par rapport au milieu culturel et donc conceptuel dans lequel elle se déroule. Et ce en quoi consiste ce dernier, dépend des potentialités préconceptuelles qui le nourrissent. La façon dont un corps rencontre l'environnement dépend, dès les premiers instants, des habitus sociaux du groupe culturel auquel ce corps appartient, même si certains habitus apparaissent sous des formes plus ou moins identiques dans tous ces groupes culturels. Et les habitus dépendent de ce que ces corps peuvent faire, même s'ils ne sont pas strictement déterminés, puisque des corps humains, dotés des mêmes potentialités sensori-motrices, peuvent évoluer au sein d'habitus socio-culturels différents. La distinction que pointe cette citation :</p>
+            <div class="citation">
+                « These capacities are rooted in the structures of our biological embodiment but are lived and experienced within a domain of consensual action and cultural history »
+            </div>
+            <p>n'est pas telle que l'incarnation biologique d'une part, et l'expérience à l'intérieur d'un domaine d'histoire culturelle, d'autre part, devraient faire l'objet de deux formes d'investigation indépendantes. Il s'agit, au contraire, de soutenir que ces deux moments doivent être articulés pour comprendre comment se produit la constitution de la connaissance du monde. Et il en est de même de la distinction entre cognition et connaissance qui va répondre à la distinction entre ces deux moments du processus de connaissance. La distinction entre cognition et connaissance n'a rien en elle-même de révolutionnaire. Mais ce qui est, en revanche, tout à fait inhabituel, est justement l'idée qu'il faut considérer la façon dont ces moments, dans leur spécificité, s'articulent ; et non pas trouver un langage commun qui permettrait d'opérer une réduction de l'un à l'autre ou de décrire un processus d'interaction. Ce que nous disons à propos de la cognition et ce que nous disons à propos de la connaissance ne forment pas des discours indépendants :</p>
+            <div class="citation">
+                « Through technology, the scientific exploration of mind provides society at large with an unprecedented mirror of itself, well beyond the circle of the philosopher, the psychologist, the therapist, or any individual seeking insight into his own experience. […] For millenia human beings have had a spontaneous understanding of their own experience – one embedded in and nourished by the larger context of their time and culture. Now, however, this spontaneous folk understanding has become inextricably linked to science and can be transformed by scientific construction. » (Varela & al., 1991, p.6)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Langage et réalité === -->
+    <div class="capsule" id="capsule-langage">
+        <div class="capsule-title">🗣️ Langage et réalité</div>
+        <div class="capsule-content">
+            <p>L'approche énactive se fixe dès le départ de rendre compte de l'expérience que nous faisons de notre ‘être-au-monde', que ce soit l'expérience des choses qui constituent le monde ou l'expérience de nous-même. Le discours de l'expérience doit être conservé parce qu'il est le discours par lequel est dit le monde dans lequel nous vivons et la façon dont nous le vivons :</p>
+            <div class="citation">
+                « To deny the truth of our own experience in the scientific study of ourselves is not only unsatisfactory ; it is to render the scientific study of ourselves without a subject matter » (Varela & al., 1991, p.13)
+            </div>
+            <p>Nous ne pouvons pas éliminer, occulter d'une façon ou d'une autre, le discours de l'expérience car c'est le discours de ce que nous vivons et de ce dont nous faisons l'expérience. L'approche énactive partage l'idée exprimée par Winograd et Florès que c'est dans le langage que le monde existe : « Nothing exists except through language ». Mais cela ne signifie pas que le langage est le seul maître de la réalité des choses. Ils affirment que lorsque l'on dit d'une chose qu'elle existe, qu'elle possède certaines propriétés, cette chose entre dans le domaine des objets et des qualités qui existent dans le langage et à travers la structure du langage ; mais cela n'empêche pas de soutenir que le langage est conditionné par notre expérience corporelle et par l'histoire de la communauté qui le parle. C'est dans ce sens qu'ils parlent d'une « co‑détermination » du langage et de l'expérience. La réalité n'est pas un donné extérieur que le langage viendrait refléter ; elle est constituée dans et par le langage, mais ce langage est lui-même le produit d'une histoire, d'une culture, d'une expérience incarnée.</p>
+            <p>Cette position s'oppose au dualisme du schème conceptuel et du contenu empirique que Davidson a critiqué sous le nom de « troisième dogme de l'empirisme »<sup><a href="#ref200" class="reference-link" id="r200">[200]</a></sup>. L'idée que le langage serait un cadre qui viendrait s'appliquer à un contenu donné, une réalité pré‑existante, est une illusion. Le langage et la réalité se co‑constituent. Cela ne signifie pas que tout est langage, que la réalité se réduit à ce que nous en disons ; mais cela signifie que la réalité que nous connaissons, celle dont nous parlons, est toujours déjà une réalité interprétée, une réalité qui a pris forme dans et par le langage. Et ce langage est lui-même le produit de notre engagement corporel dans le monde, de notre histoire, de notre culture.</p>
+            <p>La critique de l'anhistoricité des significations, de même que celle de la distinction entre schème conceptuel et contenu non interprété n'est pas un renoncement à la notion de réalité ou de vérité objective :</p>
+            <div class="citation">
+                « En abandonnant la dépendance vis-à-vis du concept d'une réalité non interprétée, de quelque chose qui soit hors de tout schème et de toute science, nous ne renonçons pas à la notion de vérité objective. […] En renonçant au dualisme du schème et du monde, nous ne renonçons pas au monde, mais nous rétablissons un contact immédiat avec les objets familiers dont les fantaisies rendent nos phrases et opinions vraies ou fausses » (Davidson, 1974, p.98)
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Approche sémantique et justification === -->
+    <div class="capsule" id="capsule-semantique">
+        <div class="capsule-title">📖 Approche sémantique et justification</div>
+        <div class="capsule-content">
+            <p><strong>Concept ordinaire, concept scientifique</strong></p>
+            <p>Lorsque nous nous intéressons à la ‘connaissance', nous essayons de comprendre ce que désigne l'usage d'un concept ordinaire. Si nous voulons comprendre scientifiquement comment nous en arrivons à la connaissance du monde qui est la nôtre, il faut que la réflexion sur le langage et les significations s'ouvre à la description de l'engagement du corps dans le monde, l'action, la perception – et il faut aussi que les études scientifiques sur les modalités corporelles de la connaissance prennent en considération, ou se rendent capables de prendre en considération, la dimension expérientielle du phénomène qu'elles étudient, dans le langage qui est le sien, pour que le discours scientifique sur la connaissance reste connecté à ce que nous signifions par connaissance, et ne soit pas seulement une construction scientifique en rupture avec les significations ordinaires.</p>
+            <p>Ce que montre Rorty dans <em>The Mirror of Nature</em> est que l'usage du concept de connaissance ne repose pas sur une explication mais sur une justification. Une justification, cela signifie que l'attribution de connaissance implique le sujet de l'attribution dans le sens où il est attendu de celui-ci qu'il rende raison de la légitimité de l'attribution ou que l'on puisse imaginer qu'il pourrait le faire. L'attribution de connaissance participe d'un jeu de langage qui se déroule dans un système de significations partagées. L'expérience individuelle prend forme commune par ce jeu de langage, au sein de ce système de significations : le jeu de langage montre ce qui compte comme raison, comme justification d'une connaissance ; le système de significations structure l'espace des connaissances possibles, les formes communes de l'expression des expériences. Lorsque c'est la cognition qui est étudiée, c'est le contenu d'un concept scientifique qui est en cours de détermination. En science cognitive, il n'y a pas, peut-être pas encore, d'usage unifié du concept de cognition. Dans le cas de l'étude de la cognition, l'unification est rendue plus difficile encore du fait que des disciplines très différentes, linguistique, neuroscience, psychologie, philosophie de l'esprit, font usage du même concept avec des méthodes, des arrière-plans et des visées très différentes. Ce qui pouvait être dit en 1991 peut sans doute l'être encore :</p>
+            <div class="citation">
+                « Each discipline would give a somewhat different answer to the question of what is mind or cognition, an answer that would reflect its own specific concerns. » (Varela & al., 1991, p.5)
+            </div>
+            <p>La théorie de l'énaction propose une détermination de ce concept qui s'appuie sur une compréhension biologique de l'être cognitif et des conditions corporelles de la rencontre de cet être avec un environnement. L'assise biologique de la théorie de l'énaction est la théorie autopoïétique des systèmes vivants proposée par Maturana et Varela sur la base de leurs travaux respectifs. Le phénomène qui est étudié à titre d'activité cognitive joue, en quelque sorte, le rôle d'une ‘matrice expérientielle' du langage, et en tant que tel, il peut être dit préconceptuel. Pour comprendre en quoi la distinction entre ces deux moments de la connaissance, préconceptuel et propositionnel, et les deux notions qui leur répondent, cognition et connaissance, ne doit pas être pensée comme une distinction temporelle ou épistémique, mais logique, il faut la rapporter à la distinction établie dans <em>The Tree of Knowledge</em> entre lecture participative et lecture sémantique d'un phénomène.</p>
+
+            <p><strong>Lecture sémantique</strong></p>
+            <p>La procédure de justification qui préside à l'attribution de connaissance participe d'une lecture sémantique et elle utilise la notion de représentation ; mais seulement dans le sens dit faible de la notion. L'usage du terme 'représentation' n'implique aucune théorie sur la relation de représentation. Attribuer une connaissance, c'est identifier un acte, linguistique ou comportemental, comme doté d'une certaine signification. C'est celui qui attribue la connaissance qui reconnaît la signification. Pour qu'il puisse reconnaître cette signification, il faut que celle-ci soit disponible, il faut que ce qui est signifié préexiste à l'acte en question. Celui qui attribue la connaissance donne un sens à un acte en le rapportant à quelque chose qu'il connaît lui-même, quelque chose qui existe pour lui. L'acte vaut pour autre chose : il est ou il contient quelque chose tenu pour être une représentation de cette chose connue par celui qui fait l'attribution. La lecture sémantique est à l'œuvre lorsque le chat qui se promène sur le piano, à l'aube, est dit faire cela pour réveiller son maître. Une signification est attribuée à un comportement par la mise en relation de ce comportement avec un événement qui en est distinct. Cet événement est identifié par celui qui observe le comportement et qui situe celui-ci dans un contexte englobant l'événement en question. La connaissance de l'événement est attribuée, et aussi bien l'attribution de connaissance que le contenu de connaissance attribué dépendent de ce qui constitue déjà la connaissance de celui qui fait l'attribution – et il faut inclure dans cette connaissance les critères de l'attribution.</p>
+
+            <p><strong>Lecture sémantique et explication</strong></p>
+            <p>Les théories de l'esprit cognitivistes et connexionnistes s'inscrivent aussi dans une lecture sémantique. Mais là, la connaissance ne relève pas d'une pratique de la justification ; elle est la conséquence d'un processus causal de représentation. L'attribution de connaissance ne se présente pas comme une lecture sémantique, c'est-à-dire comme une description engagée, mais comme une lecture explicative, et exclusive. L'usage qui est fait dans ce cas du concept de représentation donne un sens fort à la notion : d'une part, la représentation est affirmée à titre d'explication et même de fondement, d'autre part, ce qui est représenté est chargé de déterminations ontologiques. Ces théories doivent présupposer au moins des formes simples, tenues pour des données évidentes, et qui sont présentées à l'exercice représentationnel du système cognitif théorique ; la charge ontologique est dans la mise hors de doute de ces formes simples. La nature sémantique de la perspective tient au fait que ces formes simples ne sont rien d'autre que des éléments du monde du théoricien – modélisateur, programmeur – du système en question et que tout ce dont le système peut être reconnu produire une connaissance appartient déjà à la connaissance du théoricien. L'activité du système reçoit une signification puisée dans l'univers de signification du théoricien. Le fait d'admettre comme données ces formes du monde du théoricien implique que le théoricien lui-même est déjà considéré comme un système représentationnel : ces formes simples qui appartiennent à son système de connaissance sont considérées comme des éléments de la réalité que tout système cognitif doit être capable de représenter – ces connaissances du théoricien sont tenues tout simplement pour des éléments de réalité.</p>
+
+            <p><strong>Confusion entre connaissance et cognition</strong></p>
+            <p>Les représentationnistes prétendent expliquer notre connaissance du monde, mais ils doivent présupposer cette connaissance dans leur explication lorsqu'ils mettent en scène des formes déjà connues de l'observateur. Ils prétendent expliquer la connaissance par le processus de représentation, mais celui-ci est déjà présupposé lorsque les formes simples sont prises comme des données hors de doute, des déterminations de la réalité indépendantes des processus cognitifs de l'observateur. Dans la perspective représentationniste explicative, lorsque c'est au sens fort que la notion de représentation intervient, il n'y a pas de distinction entre connaissance et cognition ; ou plutôt il ne doit pas, ou il ne doit plus y en avoir. Le but de l'entreprise théorique est de produire un discours scientifique qui suffise à dire tout ce qu'il y a dire au sujet de la connaissance. La définition scientifique du concept de cognition doit pouvoir remplacer, d'une façon ou d'une autre, par réduction ou par élimination, le discours ordinaire sur la connaissance. Apparemment l'attribution de connaissance ne dépend plus d'une pratique de la justification, ne se produit plus dans « l'espace logique des raisons » déployés par des jeux de langage.</p>
+            <p>Il appartient à une explication scientifique de ne pas dépendre des conditions dans lesquelles elle a été énoncée. Si la connaissance s'explique, elle est indépendante de toute procédure d'attribution, indépendante du fait d'être reconnue en tant que telle : elle dépend seulement de l'existence d'un processus par lequel sont produits des objets qui en représentent d'autres. Le théoricien, celui pour qui sont déjà présentes les formes que le système cognitif doit représenter, celui qui définit la procédure de représentation, qui définit l'objet constituant une représentation, qui choisit les critères d'existence d'une relation de représentation entre deux objets, celui-ci n'apparaît pas dans le discours explicatif. Et il semble alors que l'attribution de connaissance, la reconnaissance d'un objet comme étant une représentation, est un donné, une nécessité qui transcende la contingence des pratiques de justification ; et il semble que tout ce qui peut être représenté est donné aussi et déterminé indépendamment de ce que fait et dit, peut faire et peut dire le théoricien.</p>
+            <p>Le discours explicatif de la connaissance qui met en œuvre la notion de cognition relève d'une perspective sémantique qui est mise hors de question par le désengagement supposé du discours explicatif. D'une part, la distinction entre connaissance et cognition, justification et explication, concept ordinaire et concept scientifique est supposée devoir et pouvoir être effacée. D'autre part, le discours explicatif dont relève la cognition, en tant que concept scientifique, participe d'une lecture sémantique, qui s'ignore. Par opposition, l'approche énactive permet de thématiser une distinction entre connaissance et cognition, où la connaissance se développe dans l'espace logique de la justification, de ses règles, de ses accords tacites, de ses conventions tandis que la cognition est un phénomène qui fait l'objet d'une modélisation scientifique et d'une explication qui doit se conformer aux normes explicites d'évaluation intersubjective du discours scientifique.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Enaction et lecture participative === -->
+    <div class="capsule" id="capsule-enaction-participative">
+        <div class="capsule-title">🌱 Enaction et lecture participative</div>
+        <div class="capsule-content">
+            <p><strong>Le point de vue du système</strong></p>
+            <p>Il a été remarqué plusieurs fois que l'approche énactive est sous l'influence de la démarche herméneutique et de la phénoménologie. La critique de la lecture sémantique produite dans le cadre représentationniste et la notion de lecture participative sont une marque de cette influence. La philosophie continentale s'est intéressée à l'inscription de la pensée dans un corps et dans un milieu social et culturel ; elle a pointé la dimension cachée et omniprésente du ‘savoir-comment', du sens-commun, sur lequel s'appuie la connaissance propositionnelle. L'approche énactive de la cognition se veut être une étude scientifique capable de prendre en compte ce savoir-faire, et la condition de possibilité de la connaissance des choses, de leur existence, qu'est la rencontre du corps avec l'environnement. Une étude scientifique, objective, mais qui reste fidèle à la perspective nonobjectiviste qu'a produite l'attention aux conditions de la vie dans le monde et de l'expérience des choses :</p>
+            <div class="citation">
+                « If we are forced to admit that cognition cannot be properly understood without common sense, and that common sense is none other than our bodily and history, then the inevitable conclusion is that knower and known, mind and world, stand in relation to each other through mutual specification or dependent coorigination. »<br>
+                « If this critique is valid, then scientific progress in understanding cognition will not be forthcoming unless we start from a different basis from the idea of a pregiven world that exists “out there” and is internally recovered in a representation. » (Varela & al., 1991, p.150)
+            </div>
+            <p>À la différence de la lecture sémantique du comportement d'un organisme ou de l'activité d'un système, la lecture participative évite d'attribuer une signification aux phénomènes qui sont décrits, dans la mesure, en tout cas, où cette signification serait puisée dans le système de connaissance déjà constitué de l'observateur. La lecture participative adopte une attitude herméneutique, elle appréhende le système étudié en s'intéressant au point de vue de ce système. C'est le point de vue de l'organisme qui est étudié et caractérisé de l'extérieur,</p>
+            <div class="citation">
+                « studied and characterized from the outside, by an observer who basically relies on his/her own experience of being alive and conscious in order to infer the internal point of view of the agent<sup><a href="#ref201" class="reference-link" id="r201">[201]</a></sup>. »
+            </div>
+            <p>La lecture sémantique considérait le système en tant qu'élément dans un milieu déterminé. Les modifications qui affectaient ce système, que ce soient des comportements ou des moments d'un processus, étaient mises en relations avec des événements situés dans le milieu et indépendants de ces modifications. Les modifications du système pouvaient être tenues, suivant les critères posés par l'observateur, pour des représentations de ces événements identifiés par l'observateur. Du point de vue du système, cette procédure d'attribution n'est plus possible : le système évolue, subit des transformations qui doivent être comprises par référence à l'activité du système et à la structure qui réalise cette activité. Il n'est plus possible de considérer des objets déterminés comme cause des affections du système ; ce sont maintenant les affections du système elles-mêmes qui seront à l'origine de l'existence d'objets. L'approche énactive veut étudier la cognition en tant que ‘embodied action', action incorporée, inscrite dans le corps, dans le sens où : d'une part, la cognition dépend de l'expérience que procurent les capacités sensori-motrices, et où, d'autre part, ces capacités sensori-motrices elles-mêmes sont prises, enchâssées, dans un contexte biologique et culturel.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : Action-perception === -->
+    <div class="capsule" id="capsule-action-perception">
+        <div class="capsule-title">🔄 Action‑perception</div>
+        <div class="capsule-content">
+            <p>La perspective représentationiste schématise le processus cognitif comme un processus en trois temps où perception et action sont des moments distincts du processus et sont rapportés, lecture sémantique oblige, à des événements ou des objets indépendants du processus. La perception fournit au système des informations sur le monde, compris comme ensemble de déterminations prédéfinies, le système traite ces informations et produit les instructions pour une action sur le monde<sup><a href="#ref202" class="reference-link" id="r202">[202]</a></sup>. À l'opposé, selon l'approche énactive, les processus moteurs et sensoriels, la perception et l'action, ne constituent pas des moments qui peuvent être compris indépendamment l'un de l'autre : ils sont essentiellement dépendants l'un de l'autre dans le sens où ce en quoi consiste le processus sensoriel dépend de ce en quoi consiste le processus moteur, et inversement. La perception n'est pas une réception passive d'informations ; elle est une activité, une exploration active du monde par le corps. L'action n'est pas une simple exécution d'instructions ; elle est une manière de percevoir, une façon de donner forme au monde. Cette circularité, cette dépendance réciproque, est au cœur de l'approche énactive : elle est ce que Varela et al. appellent la « boucle sensorimotrice ».</p>
+            <p>Cette conception a des implications profondes pour la notion de représentation. Si la perception est une action, et si l'action est une perception, alors il n'y a pas de moment où le système reçoit passivement des informations sur un monde pré‑donné. Le monde n'est pas « là » avant l'action ; il est constitué dans et par l'action. Les représentations ne sont donc pas des copies internes d'un monde externe ; elles sont des patterns d'activité qui émergent de l'interaction du système avec son environnement. Elles ne sont pas des « états » qui représentent quelque chose, mais des « processus » qui sont des façons d'agir, de percevoir, de vivre.</p>
+            <p>Cette conception de l'action‑perception est directement inspirée par les travaux de Gibson sur l'écologie de la perception, par la phénoménologie de Merleau‑Ponty, et par la théorie des systèmes autopoïétiques de Maturana et Varela. Elle est également soutenue par les recherches en robotique et en intelligence artificielle qui montrent que des systèmes simples, sans représentations internes, peuvent accomplir des tâches complexes en interagissant directement avec leur environnement. L'énaction, c'est l'idée que la cognition n'est pas une représentation du monde, mais une <em>mise en forme</em> du monde par l'action, une <em>énaction</em> du monde et de soi.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref200"><strong>200.</strong> D. Davidson, 1974, « On the very idea of a conceptual scheme », repris dans Davidson, 1984, p.189 : « Ce dualisme du schème et du contenu, du système organisateur et de quelque chose qui attend d'être organisé ne peut être rendu intelligible et défendable. Il est lui-même un dogme de l'empirisme. »</p>
+            <p id="ref201"><strong>201.</strong> Varela et al., 1991, p.150.</p>
+            <p id="ref202"><strong>202.</strong> Varela et al., 1991, p.173.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A2_1.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_A2_3.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>

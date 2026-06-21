@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Peschard – III.B‑1. Étrangetés épistémologiques</title>
+    <style>
+        /* style_peschard.css – version améliorée */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #d4dec8;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+            line-height: 1.55;
+            padding: 2rem 1.5rem;
+            color: #2a3a2a;
+            font-size: 19px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f1ede2;
+            border-radius: 36px;
+            box-shadow: 0 12px 28px rgba(30, 40, 20, 0.12);
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #2c5a44;
+            border-left: 6px solid #8aa87a;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .sub {
+            color: #2a523a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #c8d7bc;
+            padding-bottom: 0.7rem;
+            font-style: italic;
+        }
+
+        .bande-sommaire {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background: #e8efdf;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2a523a;
+        }
+        .bande-sommaire a {
+            color: #2a523a;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa87a;
+        }
+        .bande-sommaire a:hover {
+            color: #1f3a1f;
+            border-bottom: 1px solid #2c6e2c;
+        }
+        .separateur {
+            color: #8aa87a;
+        }
+
+        .nav-top {
+            position: sticky;
+            top: 1rem;
+            float: right;
+            margin-top: -2.8rem;
+            z-index: 10;
+        }
+        .nav-btn-top {
+            display: inline-block;
+            background: #c2d4b4;
+            color: #2e553e;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+            line-height: 2.8rem;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .nav-btn-top:hover {
+            background: #aebe9a;
+            transform: scale(0.95);
+        }
+
+        .capsule {
+            background: #cbdcc0;
+            border-radius: 32px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            width: 100%;
+            color: #1f2f1f;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            border-left: 6px solid #2c6e2c;
+        }
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+        .capsule-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #2a523a;
+            border-bottom: 1px dashed #8aa87a;
+            padding-bottom: 0.3rem;
+        }
+        .capsule-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c3e2c;
+        }
+        .capsule-content p {
+            margin-bottom: 0.8rem;
+        }
+        .capsule-content .citation {
+            background: #3a5a3a;
+            color: #fef9e6;
+            padding: 0.8rem;
+            border-radius: 12px;
+            margin: 0.8rem 0;
+        }
+        .capsule.sources {
+            background: #e2e8ce;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: #c2d4b4;
+            color: #2e553e;
+            border: none;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.15s;
+        }
+        .nav-btn:hover {
+            background: #aebe9a;
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a8260;
+            border-top: 1px solid #c0cfb2;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            body { font-size: 17px; padding: 1rem; }
+            .container { padding: 1rem; }
+            .capsule { padding: 1rem; }
+            .capsule-title { font-size: 1rem; }
+        }
+
+        sup { font-size: 0.8rem; color: #2c6e2c; }
+        .reference-link {
+            color: #e59e4e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .reference-link:hover {
+            color: #f7b731;
+            text-decoration: underline;
+        }
+        .ref-list p { margin-bottom: 0.3rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>III. Approche non représentationniste de la science</h1>
+    <div class="sub">B‑1. Étrangetés épistémologiques (pages 432‑441)</div>
+
+    <!-- BANDE HORIZONTALE -->
+    <div class="bande-sommaire">
+        <a href="#capsule-intro">📖 Introduction</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-presupposes">🔍 B‑1‑1 Pré‑supposés épistémologiques</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-adequation">⚖️ Adéquation avec et sans représentations</a>
+        <span class="separateur">|</span>
+        <a href="#capsule-enaction">🌱 B‑1‑2 L'énaction : problème de légitimation</a>
+    </div>
+
+    <!-- FLÈCHE HAUT DROITE -->
+    <div class="nav-top">
+        <a href="03_III_B2_1.html" class="nav-btn-top" title="Page suivante">→</a>
+    </div>
+
+    <!-- === CAPSULE : Introduction === -->
+    <div class="capsule" id="capsule-intro">
+        <div class="capsule-title">📖 Introduction</div>
+        <div class="capsule-content">
+            <div class="citation">
+                « Je crois que le développement des sciences cognitives a eu, entre autres choses, pour effet de ramener au premier plan certains problèmes les plus difficiles et les moins résolus de la théorie de la connaissance traditionnelle, en particulier tous ceux qui sont liés depuis le début à l'idée même de ‘représentation' et à l'usage que nous faisons du mot.<sup><a href="#ref281" class="reference-link" id="r281">[281]</a></sup> »
+            </div>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : B-1-1 Les théories cognitives en général === -->
+    <div class="capsule" id="capsule-presupposes">
+        <div class="capsule-title">🔍 B‑1‑1 Les théories cognitives en général</div>
+        <div class="capsule-content">
+            <p><strong>Présupposés épistémologiques</strong></p>
+            <p>Contrairement aux autres phénomènes qui font l'objet d'une étude scientifique, la cognition implique une position épistémologique. Le physicien, en général<sup><a href="#ref282" class="reference-link" id="r282">[282]</a></sup>, n'a pas besoin d'avoir une thèse, un savoir propositionnel, explicite, argumenté, sur ce que c'est que la connaissance : il n'est pas nécessaire, soutient par exemple van Fraassen, de penser le but de l'activité scientifique comme étant autre chose que de produire des théories empiriquement adéquates. En revanche, la modélisation du phénomène de la cognition doit fournir une explication de la façon dont est produite toute connaissance. Il faut donc pour proposer un modèle de processus cognitif, nécessairement avoir une idée, une ‘thèse' sur le statut épistémologique d'une connaissance. Quelle est l'origine du contenu de la connaissance ? Est-il déterminé ? Par quoi ? A-t-il une valeur épistémique universelle ? Y-a-t-il une forme de ‘télos' qui préside à la constitution de la connaissance ? Peut-on penser un idéal de la connaissance, réalisable ou pas ? Ce sont les façons de répondre à ces questions qu'implique l'adhésion à un modèle plutôt qu'à un autre.</p>
+
+            <p>Le choix d'un modèle est d'autant plus lourd de conséquences, que la théorie qui le promeut est elle-même, en tant que connaissance, un objet en retour de son propre discours. L'idée qu'elle propose de ce qu'est un système cognitif, et plus précisément, de ce qu'est un processus cognitif vient s'appliquer immédiatement à son propre discours en tant qu'il est le produit d'un acte cognitif et prétend être une connaissance.</p>
+
+            <p>Nous avons vu qu'il y a en science cognitive trois grandes formes d'approche et de modélisation de la cognition, chacune définissant de façon très différenciée ce en quoi consistent les processus cognitifs. Il y a différents cadres de travail, le cognitivisme, le connexionnisme, les neurosciences, et beaucoup plus encore de théories de la représentation mentale puisqu'un cadre de travail autorise une gamme assez large de modélisations. Dans la mesure où ce que nous appelons ‘processus cognitif' ou ‘représentation mentale' n'est pas défini indépendamment d'une certaine structure conceptuelle, il semble dénué de sens de demander quelle théorie peut être jugée la meilleure ‘dans l'absolu' :</p>
+
+            <div class="citation">
+                « [O]f course it might be thought ... that the correct theory of mental representation is the one that describes the notion of mental representation exploited by the correct cognitive science. But I see no reason to suppose that there is a unique correct framework for theories in cognitive science<sup><a href="#ref283" class="reference-link" id="r283">[283]</a></sup> »
+            </div>
+
+            <p>Il n'y a pas d'idée consensuelle vraiment établie de ce qu'est le phénomène que les différents types d'approche ont pour visée d'expliquer – ou disons qu'il n'y a pas de caractéristiques définies du phénomène qui opéreraient comme des contraintes générales sur l'ensemble des recherches. Les approches cognitiviste, connexionnistes, énactives ne retiennent pas la même caractérisation de la connaissance et leurs modèles ne visent pas à décrire la même chose. L'approche cognitiviste voit l'appareil cognitif essentiellement comme un instrument de résolution de problèmes et voit les produits de l'activité cognitive comme des objets propositionnels. Le connexionnisme conserve l'idée de la cognition comme résolution d'un problème mais se distingue par la mise en avant d'une forme non propositionnelle de connaissance et par l'importance qu'il attache à la phase d'apprentissage. La conception énactive abandonne l'idée de la résolution de problèmes déterminés. Ce qui résume peut-être le mieux l'originalité de cette approche par rapport aux précédentes est la distinction qu'elle permet d'établir entre les lectures sémantique et participative, puisque c'est à partir de là, dans une perspective participative, qu'elle peut proposer, de façon théorique, avec la théorie autopoiétique du vivant, et pratique, avec la pratique neurophénoménologique, une inscription corporelle de la connaissance et donner à voir la cognition comme processus de transformation du système cognitif conditionné à différents niveaux par ses conditions de vie.</p>
+
+            <p><strong>L'adéquation avec et sans représentations</strong></p>
+            <p>La relation bipolaire de représentation est censée expliquer, rendre compte, justifier de l'adéquation d'un système cognitif avec le monde. ‘Adéquation' ne signifie pas simplement ‘aptitude à vivre', puisque tous les êtres vivants ne sont pas censés être capables de représenter la réalité, mais désigne une sorte de sophistication remarquable de la relation entre les êtres humains et leur environnement fondée sur une remarquable maîtrise des conditions dans lesquelles ils vivent, rendue possible par la représentation qu'ils en ont. Et cela vaut pour la connaissance que constitue la théorie représentationniste elle-même : si la théorie représentationniste elle-même est adéquate, si elle satisfait certains attendus, c'est parce qu'elle fournit une représentation, parce que le modèle qu'elle propose est un pôle d'une relation ayant à l'autre bout le phénomène de cognition.</p>
+
+            <p>Mais la relation de représentation ne peut pas se montrer elle-même, car nous sommes toujours du côté seulement de la représentation ; c'est seulement l'idée, l'affirmation que la relation de représentation est la seule ou la meilleure explication possible de notre manière d'être dans le monde qui conduit à conclure à l'adéquation de la relation de représentation. Mais qu'est-ce que l'adéquation ? Et adéquation à quoi ? Ainsi que le souligne encore van Fraassen, le choix que l'on fait d'une explication parmi d'autres repose, de façon généralement implicite, sur un ensemble de valeurs qui motive le jugement :</p>
+
+            <div class="citation">
+                « The very phrase ‘inference to the best explanation' should wave a red flag for us. What is good, better, best ? What values are slipped in here, under a common name, and where do they come from?<sup><a href="#ref284" class="reference-link" id="r284">[284]</a></sup> »
+            </div>
+
+            <p>Dans le cas des théories de la cognition, l'idée d'adéquation suppose une sélection dans ce qui est attendu d'une théorie de la cognition – et ce qui est attendu dépend de l'idée que l'on a du phénomène qui doit être expliqué. Mais comment peut-il y avoir un consensus autour de ce qui est attendu d'une théorie de la cognition s'il n'y en a pas autour de la caractérisation phénoménale de la cognition. Une théorie cognitiviste ou connexionniste n'est pas du tout adéquate pour ceux qui défendent une approche dynamique ; ils affirment qu'il y a des traits essentiels du phénomène dont ils veulent rendre compte qui ne sont pas, et ne peuvent pas être pris en considération par ces théories.</p>
+
+            <p>Dans le cas de l'explication représentationniste, selon laquelle l'existence d'une relation de représentation est la meilleure explication de notre adaptation, la valeur de l'explication dépend de la façon dont on conçoit notre adaptation. La capacité de représentation établit un contraste entre les différentes formes de relation cognitive qu'entretiennent les êtres vivants avec leurs environnements. La nôtre est censée requérir une forme très particulière, sans doute unique, de relation cognitive : une relation de représentation, lorsque notre forme d'adaptation est considérée comme une forme exceptionnelle d'adaptation. À forme d'adaptation exceptionnelle, forme de relation cognitive exceptionnelle.</p>
+
+            <p>Mais une plus grande sophistication de l'appareil neuronal et de la forme d'interaction avec l'environnement n'est pas en soi un argument qui peut servir d'assise à la thèse représentationniste. Même si l'on admet une forme d'argument évolutionniste, une forme qui ne soit pas nécessairement elle-même représentationniste, mais qui pourrait être pragmatique, la théorie de l'évolution n'autorise pas un jugement de valeur sur les différentes formes de vie, les différentes manières qu'ont différentes organisations vivantes d'être dans le monde. La théorie de l'évolution n'est pas, par elle-même, une théorie du ‘progrès' de l'intelligence ni de la connaissance par représentations. L'approche énactive reconnaît sans mal, et se repose même entièrement, sur l'idée que le fait de se maintenir en vie, d'être capable d'évoluer dans des situations différentes peut être interprété en terme de capacité cognitive. Mais à aucun moment cela n'autorise une évaluation comparative ; connaître d'une manière spécifique à une forme de vie n'est pas nécessairement connaître mieux que d'autres, et ne demande donc pas nécessairement l'invocation d'une forme fondamentalement différente de relation cognitive à l'environnement, qui nous distinguerait des autres formes d'êtres vivants.</p>
+        </div>
+    </div>
+
+    <!-- === CAPSULE : B-1-2 L'énaction en particulier : problème de légitimation scientifique === -->
+    <div class="capsule" id="capsule-enaction">
+        <div class="capsule-title">🌱 B‑1‑2 L'énaction en particulier : problème de légitimation scientifique</div>
+        <div class="capsule-content">
+            <p>Les questions épistémologiques que soulève la théorie de l'énaction sont liées à la double historicité qu'implique l'idée d'une co‑constitution de l'objet de la connaissance, les objets du monde, et du sujet cognitif, le sujet pour qui ces objets existent, par qui ils sont connus. L'historicité se manifeste d'abord au niveau du processus d'émergence, émergence des structures objectives et subjectives. Mais elle s'applique en retour au niveau de la théorie elle-même, de l'objet de la théorie et du statut du théoricien qui l'énonce, et par conséquent au niveau de la valeur épistémique à laquelle elle prétend, la scientificité qu'elle revendique, en dépit de ses proclamations de non représentationnisme. C'est à ce niveau là qu'elle fait surgir des interrogations épistémologiques.</p>
+
+            <p><strong>Co‑constitution du sujet et de l'objet de la cognition</strong></p>
+            <p><em>Au niveau de l'émergence</em></p>
+            <p>Dans le cadre de la théorie de l'énaction, un système devient cognitif par transformation, transformation d'une structure réalisant l'organisation qui le définit. La transformation est provoquée par une perturbation qui n'est pas pourvue de déterminations ; l'environnement qui se manifeste à ce moment-là, dans cette perturbation, n'est pas défini objectivement. La transformation que subit la structure du système cognitif est à la fois constitution d'un objet et d'un sujet. Le sujet se constitue dans la mesure où il se transforme et où cette transformation est incorporée, mémorisée, dans la mesure où il est modifié durablement suite à la perturbation et où cette modification se traduira par des changements au niveau de son domaine d'interaction et donc de son avenir cognitif. L'objet se constitue dans la mesure où il émerge de l'interaction au travers de la stabilisation du système cognitif perturbé sur une nouvelle structure cognitive impliquant la création d'un nouveau schème sensori‑moteur. L'objet n'est pas doté de déterminations antérieures et indépendantes de l'interaction perturbatrice. Il ne doit pas pour autant être pensé comme une ‘idée' enfermée dans l'enceinte pensante du système cognitif. L'émergence d'un objet pour un sujet cognitif signifie la réalisation d'un nouveau pouvoir‑faire associé à la réalisation d'un nouveau schème sensori‑moteur. Un événement cognitif comme l'objectivation n'est pas un événement mental ; ou disons plutôt que dans le cadre de l'énaction, le mental n'est pas un enclos, le mental et le monde dans lequel le sujet cognitif évolue ne sont pas a priori définis séparément ; la pensée, l'action, la sensation sont impliquées de façon indissociable dans l'objectivation de l'environnement.</p>
+
+            <p>De par cette intrication entre structure cognitive et structure ou schème sensori‑moteur, l'adéquation entre un système cognitif et le monde dans lequel il évolue ne réclame aucune explication. L'adéquation ne résulte pas de la cognition ; l'adéquation comme relation réussie entre deux systèmes indépendants est un jugement a posteriori sur le résultat du processus cognitif. Il semble alors que cette adéquation entre les capacités d'action du système cognitif et les objets du monde est contingente ou pourrait connaître des degrés dans la façon dont elle est réalisée. Mais dans la perspective énactive, il n'y a pas deux systèmes indépendants pré‑définis, il y a co‑constitution du système cognitif et des objets qu'il appréhende ; l'adaptation, l'adéquation, est une nécessité logique. Il n'y a pas de contingence de la relation : la définition de l'objet et celle de la transformation neuro‑sensori‑motrice du système a lieu au même moment, par le même processus, elles sont l'une pour l'autre comme les versions positive et négative d'une photographie. Il n'y a pas de degrés : la transformation structurelle que constitue un événement cognitif, un moment d'objectivation, se fait de telle sorte que l'organisation, qui est l'identité vitale du système, soit maintenue ; si cette organisation n'est pas maintenue, le système n'existe plus.</p>
+
+            <p>Dans un cadre de pensée non représentationniste, l'adéquation est nécessairement parfaite dans le sens où Wittgenstein dit que le langage est parfait comme il est – il n'y a pas une manière de parler qui serait mieux que celle que nous avons dans le sens où elle permettrait de dire des choses qu'il serait intéressant de pouvoir dire mais que notre langage ne nous permet pas de dire ; la réalité n'attend pas d'être dite, elle n'attend pas pour être dite que vienne enfin le langage qui lui conviendra pleinement ; la réalité n'excède pas le langage ; elle est ce que nous disons qui est. De même, il n'y a pas de manière d'être dans le monde qui serait mieux qu'une autre parce qu'elle s'ajusterait mieux aux complexités de la réalité – la réalité n'excède pas ce que nous pouvons faire et sentir, disons faire‑sentir pour ne pas oublier la dépendance de l'action et de la sensation. Pour l'énaction, l'adéquation ou adaptation, le ‘vivre', la cognition, ne sont pas des notions qui renvoient à des événements distincts.</p>
+
+            <p><strong>Historicité de l'objet et du sujet de la cognition</strong></p>
+            <p><em>Réflexion sur la théorie</em></p>
+            <p>Si toute connaissance s'enracine dans une expérience cognitive, et si celle‑ci est constitutive du contenu de l'objectivation et du sujet cognitif, comment penser l'objet que met sur scène la théorie énactive et le sujet cognitif qui réalise cette mise en scène et propose cet objet à titre de connaissance scientifique ? Quelle sorte d'épistémologie, s'il en est une, peut offrir une légitimité à cette proposition ?</p>
+
+            <p>Considérons en premier l'objet de la connaissance. Les déterminations de l'objet sont indissociables, d'après la théorie énactive, de la façon dont se stabilisent, à l'occasion d'une interaction entre un système cognitif et son environnement, les structures sensori‑motrices de ce système, c'est‑à‑dire indissociables des transformations que peut exhiber la structure qui, à chaque instant, instancie l'organisation de ce système. Dans le cas où le système cognitif est un sujet scientifique, la structure sensori‑motrice doit comprendre les instruments de la pratique scientifique par lesquels sont réalisées les mesures sensibles et les actions. La constitution d'objectivité serait corrélative de la stabilisation d'un certain dispositif expérimental qui prend assise sur un système organisé de connaissances devant être préservé, et qui prend place à l'intérieur d'une certaine gamme de possibles procéduraux. Cette conception exclura l'idée chère aux épistémologies réalistes que les déterminations de l'objet, bien qu'elles soient obtenues par l'intermédiaire de nos capacités sensori‑motrices et techniques, sur la base d'un certain système de connaissances et de présupposés, sont indépendantes des caractéristiques de tout ce qui a dû être effectué pour les obtenir. Mais, l'idée de constitution est familière aussi bien à l'épistémologie empirico‑logique qu'à l'épistémologie kuhnienne.</p>
+
+            <p>La face empiriste de l'empirisme logique ne doit pas occulter sa face logique. La connaissance est basée sur des énoncés d'observation et ceux‑ci dépendent des moyens et des procédures mis en œuvre pour l'observation. Mais la connaissance qui est produite par l'activité scientifique sur cette base est constituée par un ensemble de principes qui restent invariants, qui ne peuvent pas être mis en question. Les procédures d'objectivation s'écrivent toutes dans le même langage comme les transformations structurelles instancient toutes la même organisation. Le problème est que cette façon de voir l'empirisme logique lui fait violence et ne suffit quand même pas à remplir les conditions de l'énaction. D'abord, remarquons qu'avec la théorie énactive ce qui est constitutif, ce n'est pas l'invariant en tant que tel, qui reste une abstraction, c'est la relation interactive concrète entre le système et son environnement médiatisée par une pratique située et indexée, entendue dans un sens large. Or, avec l'empirisme logique, la pratique scientifique n'est pas constitutive pour la simple raison qu'elle n'est même pas thématisée. En outre, la distinction qui est défendue entre les énoncés théoriques et les énoncés d'observation, même si elle est plus principielle que factuelle, va complètement à l'encontre du couplage étroit entre connaissance, action et perception qui est central dans le cadre de l'énaction.</p>
+
+            <p>La thématisation de la pratique à titre de moment constitutif d'objectivité et le rejet de la distinction entre les énoncés théoriques et les énoncés d'observation est justement ce qui caractérise, par contraste, l'épistémologie kuhnienne. Et il pourrait sembler qu'une telle épistémologie, si attentive à la dimension historique et pratique de la connaissance scientifique correspond à ce qui est requis par l'énaction. Pourtant, cette épistémologie ne peut pas pourvoir à la légitimation de la scientificité de la théorie énactive, mais la raison de cela apparaît plus nettement si l'on considère ce qu'il en est du sujet de la connaissance.</p>
+
+            <p>Considérons alors le sujet de la connaissance. La façon dont celui‑ci est conçu dans le cadre d'une certaine épistémologie n'est pas indépendant de la façon dont celle‑ci conçoit l'objet de la connaissance. Sujet et objet de la connaissance se répondent. En ce qui concerne l'empirisme logique, tout objet de la connaissance doit ultimement s'écrire dans les termes d'un langage universel, anhistorique aussi bien par la logique de sa structure déductive que par son vocabulaire d'observation. Nous avons vu en II.B‑2‑4 que le sujet de la connaissance qui répond à ce mode de représentation de la connaissance est un être abstrait, sans histoire, idéalement rationnel. Ce n'est manifestement pas le type de sujet cognitif qui est impliqué par et dans la théorie énactive.</p>
+
+            <p>Dans le cas de l'épistémologie kuhnienne, l'objet de la connaissance scientifique est constitué dans la pratique et le langage qui lui est associé, et tout deux participent d'un moment historique de l'activité scientifique. Mais en toile de fond de cette historicité, il y a l'universalité de la rationalité des critères qui fondent le jugement des praticiens. Qui répond à cet objet, produit d'une rationalité trans‑historique, nous avons un sujet de la science constitué par une communauté scientifique, circonscrite. Cette communauté est historique de par la particularité du paradigme qui donne forme à sa pratique, mais, en même temps, elle est une unité pré‑définie, anhistorique, une entité abstraite qui unifie l'histoire de la science en tant que les jugements qu'elle produit au cours de l'histoire sont fondés sur des critères anhistoriques qui garantissent leur rationalité. Le sujet de la science, caractérisé par cette rationalité universelle n'est pas situé, il n'est pas constitué par l'histoire de son interaction avec son environnement ; il est clairement déterminé, défini antérieurement et indépendamment de la constitution de l'objet. Ce qui préserve cette détermination de toute atteinte par l'histoire qui traverse les individus et leurs formes de vie est l'isolement de la communauté, son autonomie. La communauté scientifique est insensible à l'histoire qui affecte le monde autour car elle est autonome – son autonomie rend possible son isolement, et son isolement assure sa rationalité en lui permettant de fonder son jugement seulement sur des critères universels, c'est‑à‑dire anhistoriques. Le praticien, en tant qu'il est scientifique, n'est pas un individu concret, il est une émanation abstraite de la rationalité qui fonde l'universalité de la connaissance scientifique.</p>
+
+            <p><strong>Difficultés de la légitimation scientifique</strong></p>
+            <p>La difficulté pour la théorie énactive est donc de pouvoir se donner un statut scientifique qui soit cohérent avec ses propres thèses. Si la cognition est toujours une pratique située, incarnée, historique, alors le discours scientifique qui prétend décrire cette cognition ne peut pas échapper à cette condition. Il doit lui‑même être compris comme une pratique située, un moment d'une histoire, une expression d'un certain point de vue. Mais alors, en quoi ce discours peut‑il prétendre à une validité universelle, à une objectivité qui transcenderait les conditions particulières de son énonciation ? La théorie énactive ne peut pas simplement adopter une posture de surplomb, comme si elle pouvait décrire la cognition « d'en haut », sans être elle‑même prise dans le processus qu'elle décrit.</p>
+
+            <p>La solution que propose l'approche énactive est de renoncer à ce point de vue de surplomb et d'assumer pleinement sa propre historicité et sa propre contingence. La théorie n'est pas une description définitive et universelle de la cognition ; elle est une proposition, une interprétation, un outil pour penser la cognition, qui est elle‑même le produit d'une certaine pratique, d'une certaine culture, d'une certaine histoire. Sa légitimité ne vient pas d'un fondement transcendantal, mais de sa capacité à être articulée à une expérience vécue, à faire sens pour des sujets cognitifs concrets. C'est cette articulation entre la théorie et l'expérience qui est au cœur de la pratique neurophénoménologique : il ne s'agit pas d'observer la cognition de l'extérieur, mais de la vivre, de l'explorer de l'intérieur, et de faire circuler entre ces deux pôles une compréhension qui ne soit ni purement objective ni purement subjective.</p>
+
+            <p>Cette exigence d'articulation entre la troisième personne (le discours scientifique) et la première personne (l'expérience vécue) est ce qui distingue l'approche énactive des autres approches scientifiques de la cognition. Mais elle soulève aussi une question délicate : lorsque le discours en troisième personne est la théorie elle‑même, non pas un discours produit dans le cadre de la théorie, mais un discours énonçant la théorie elle‑même, quel est le discours en première personne auquel il doit être articulé ? À quelle expérience vécue renvoie ou peut renvoyer le phénomène, la cognition comme énaction, que décrit celui qui formule la théorie de l'énaction ? La réponse à cette question est épistémologiquement cruciale si, selon les auteurs de la théorie énactive eux‑mêmes, un discours scientifique n'a de valeur épistémique, ne peut porter sur une réalité, qu'à la condition d'avoir une signification expérientielle, c'est‑à‑dire d'avoir été articulé à une expérience vécue.</p>
+
+            <p>Il y a bien, toutefois, un discours épistémologique, qui n'a pas encore été ici envisagé, et qui peut reconnaître à la théorie énactive une légitimité scientifique. Mais avant qu'il puisse être présenté, avant que l'on envisage cette nouvelle façon de comprendre ce qu'est ou qui est le sujet de la science, un travail d'éclaircissement de certaines notions doit être réalisé. Il faut spécialement mettre au clair, dans la mesure du possible, ce dont il est question lorsque nous parlons de ‘science' – le problème étant que ce n'est pas toujours de la même chose dont il s'agit sans que les variations de signification ne soient rendues explicites. Très typique, nous le verrons, de cette confusion est la forme que prend la critique formulée par C. A. Hooker<sup><a href="#ref285" class="reference-link" id="r285">[285]</a></sup> à l'encontre de l'empirisme constructif. Mais encore avant de procéder à ce travail de distinction, c'est l'idée de constitution d'objectivité que je voudrais rendre plus concrète. Je vais pour cela prendre pour exemple la description détaillée que donne B. Latour de l'activité d'un pédologue réalisant une analyse du sol d'un terrain amazonien.</p>
+        </div>
+    </div>
+
+    <!-- === NOTES === -->
+    <div class="capsule sources">
+        <div class="capsule-title">📚 Notes</div>
+        <div class="capsule-content ref-list">
+            <p id="ref281"><strong>281.</strong> J. Bouveresse, <em>Le philosophe et le réel</em>, 1998, p.?</p>
+            <p id="ref282"><strong>282.</strong> B. van Fraassen, <em>The Empirical Stance</em>, 2002, p.?</p>
+            <p id="ref283"><strong>283.</strong> S. Stich, « What is a theory of mental representation ? », in <em>Mental Representation</em>, 1994, p.?</p>
+            <p id="ref284"><strong>284.</strong> B. van Fraassen, <em>The Empirical Stance</em>, 2002, p.?</p>
+            <p id="ref285"><strong>285.</strong> C. A. Hooker, « Naturalism, Realism and the Problem of Scientific Change », 1985.</p>
+        </div>
+    </div>
+
+    <!-- === NAVIGATION BAS === -->
+    <div class="nav-buttons">
+        <a href="03_III_A4_4.html" class="nav-btn">← Précédent</a>
+        <a href="01.2_Introduction2_TablesDesMatieres.html" class="nav-btn">📑 Retour table</a>
+        <a href="03_III_B2_1.html" class="nav-btn">Suivant →</a>
+    </div>
+
+    <footer>
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
+    </footer>
+
+</div>
+</body>
+</html>
