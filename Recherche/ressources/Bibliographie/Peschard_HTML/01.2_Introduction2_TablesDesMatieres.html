@@ -32,14 +32,13 @@
         }
         .sub {
             color: #2a523a;
-            font-size: 1.25rem;
+            font-size: 1.45rem;
             font-weight: 600;
             margin-bottom: 1.8rem;
             border-bottom: 2px solid #c8d7bc;
             padding-bottom: 0.7rem;
             font-style: italic;
         }
-
         .capsule {
             background: #cbdcc0;
             border-radius: 32px;
@@ -48,12 +47,7 @@
             width: 100%;
             color: #1f2f1f;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.2s ease;
             border-left: 6px solid #2c6e2c;
-        }
-        .capsule:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
         }
         .capsule-title {
             font-weight: 600;
@@ -71,11 +65,7 @@
             line-height: 1.5;
             color: #2c3e2c;
         }
-        .capsule-content .tdm-section {
-            margin: 0.8rem 0;
-            padding: 0.2rem 0;
-        }
-        .capsule-content .tdm-chapitre {
+        .tdm-chapitre {
             font-weight: 700;
             margin-top: 1.2rem;
             font-size: 1.1rem;
@@ -83,24 +73,35 @@
             padding-bottom: 0.2rem;
             border-bottom: 1px solid #c8d7bc;
         }
-        .capsule-content .tdm-sous-section {
-            margin-left: 1.5rem;
+        .tdm-sous-section {
+            margin-left: 1.2rem;
+            padding: 0.4rem 0 0.2rem 0;
         }
-        .capsule-content .tdm-lien {
+        .tdm-lien {
             text-decoration: none;
-            color: #2a523a;
+            color: #235102;
             border-bottom: 1px dotted #8aa87a;
             transition: 0.15s;
         }
-        .capsule-content .tdm-lien:hover {
+        .tdm-lien:hover {
             color: #1f3a1f;
             border-bottom: 1px solid #2c6e2c;
         }
-        .capsule-content .tdm-pages {
-            color: #6a8260;
-            font-size: 0.85rem;
-            font-style: italic;
-            margin-left: 0.3rem;
+        .tdm-sections {
+            display: block;
+            font-size: 0.9rem;
+            color:  #1a2a4a;
+            margin-top: 0.1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #c8d7bc;
+        }
+        .tdm-sections span {
+            display: inline-block;
+            margin-right: 0.3rem;
+        }
+        .tdm-sections .sep {
+            color: #8aa87a;
+            margin: 0 0.2rem;
         }
 
         .nav-buttons {
@@ -145,206 +146,418 @@
             .container { padding: 1rem; }
             .capsule { padding: 1rem; }
             .capsule-title { font-size: 1rem; }
+            .tdm-sous-section { margin-left: 0.5rem; }
+            .tdm-sections { padding-left: 0.5rem; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-
     <h1>Table des matières</h1>
-    <div class="sub">Isabelle Peschard — <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em></div>
+    <div class="sub">Isabelle Peschard — <em>La réalité sans représentation</em></div>
 
-    <!-- CAPSULE -->
     <div class="capsule">
         <div class="capsule-title">📚 Table des matières</div>
         <div class="capsule-content">
 
-            <!-- INTRODUCTION -->
-            <div class="tdm-section">
-                <a href="00_Introduction.html" class="tdm-lien">Introduction générale</a>
-                <span class="tdm-pages">(pages 13‑26)</span>
+            <!-- ============================================ -->
+            <!-- INTRODUCTION                                 -->
+            <!-- ============================================ -->
+            <div class="tdm-chapitre">Introduction</div>
+
+            <div class="tdm-sous-section">
+                <a href="01.1_Introduction1.html" class="tdm-lien">Page de garde et remerciements</a>
+            </div>
+            <div class="tdm-sous-section">
+                <a href="01.2_Introduction2_TablesDesMatieres.html" class="tdm-lien">Table des matières</a>
+            </div>
+            <div class="tdm-sous-section">
+                <a href="01.3_Introduction.html" class="tdm-lien">Introduction</a>
+                <div class="tdm-sections">
+                    <span>Épigraphe</span><span class="sep">·</span>
+                    <span>1. Le théâtre de l'adaptation</span>
+                </div>
             </div>
 
-            <!-- PARTIE I -->
+            <!-- ============================================ -->
+            <!-- PARTIE I                                     -->
+            <!-- ============================================ -->
             <div class="tdm-chapitre">I. L'éthique de la connaissance</div>
 
             <div class="tdm-sous-section">
                 <a href="01_I_Ethique_Intro.html" class="tdm-lien">Introduction</a>
-                <span class="tdm-pages">(27‑42)</span>
+                <div class="tdm-sections">
+                    <span>Épigraphe</span><span class="sep">·</span>
+                    <span>1. Ethique et rationalité</span><span class="sep">·</span>
+                    <span>2. La valeur d'un modèle</span><span class="sep">·</span>
+                    <span>3. Cognition inventive</span><span class="sep">·</span>
+                    <span>4. Le concept de réalité</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="01_I_Ethique_A1.html" class="tdm-lien">A‑1. Le général et le particulier</a>
-                <span class="tdm-pages">(43‑51)</span>
+                <div class="tdm-sections">
+                    <span>Épigraphe</span><span class="sep">·</span>
+                    <span>A‑1‑1 La prudence comme disposition pratique</span><span class="sep">·</span>
+                    <span>A‑1‑2 L'exemplarité du phronimos</span><span class="sep">·</span>
+                    <span>A‑1‑3 Menace relativiste ?</span><span class="sep">·</span>
+                    <span>A‑2 Science et expérience (début)</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="01_I_Ethique_A2.html" class="tdm-lien">A‑2. Science et expérience</a>
-                <span class="tdm-pages">(52‑63)</span>
+                <div class="tdm-sections">
+                    <span>A‑2‑1 Le général et le particulier</span><span class="sep">·</span>
+                    <span>A‑2‑2 Causalité perceptuelle et sémantique conceptuelle</span><span class="sep">·</span>
+                    <span>A‑2‑3 Le langage ordinaire et la connaissance</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="01_I_Ethique_A3.html" class="tdm-lien">A‑3. Atteindre la réalité</a>
-                <span class="tdm-pages">(64‑82)</span>
+                <div class="tdm-sections">
+                    <span>A‑3‑1 Réalisme ontologique et épistémologique</span><span class="sep">·</span>
+                    <span>A‑3‑2 L'explication scientifique</span><span class="sep">·</span>
+                    <span>A‑3‑3 Réalisme épistémologique</span><span class="sep">·</span>
+                    <span>A‑3‑4 Anti‑réalisme épistémologique</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="01_I_Ethique_B1.html" class="tdm-lien">B‑1. Logique et ontologie de la réalité</a>
-                <span class="tdm-pages">(83‑96)</span>
+                <div class="tdm-sections">
+                    <span>Épigraphe</span><span class="sep">·</span>
+                    <span>B‑1‑1 La réalité lointaine</span><span class="sep">·</span>
+                    <span>B‑1‑2 …et la réalité ordinaire</span><span class="sep">·</span>
+                    <span>B‑1‑3 La tentation métaphysique</span><span class="sep">·</span>
+                    <span>B‑2 La réalité, telle qu'elle se dit</span><span class="sep">·</span>
+                    <span>B‑2‑1 Ni au‑delà</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="01_I_Ethique_B2.html" class="tdm-lien">B‑2. La réalité, telle qu'elle se dit</a>
-                <span class="tdm-pages">(97‑114)</span>
+                <div class="tdm-sections">
+                    <span>B‑2 La réalité, telle qu'elle se dit</span><span class="sep">·</span>
+                    <span>B‑2‑1 Ni au‑delà</span><span class="sep">·</span>
+                    <span>B‑2‑1 Ni donnée</span><span class="sep">·</span>
+                    <span>B‑2‑3 Une affaire linguistique</span><span class="sep">·</span>
+                    <span>B‑3 « But have we lost the world ? »</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="01_I_Ethique_B3.html" class="tdm-lien">B‑3. « But have we lost the world ? »</a>
-                <span class="tdm-pages">(115‑126)</span>
+                <div class="tdm-sections">
+                    <span>B‑3‑1 Le présent de la présence</span><span class="sep">·</span>
+                    <span>B‑3‑2 Réal‑isation de l'expérience</span>
+                </div>
             </div>
 
-            <!-- PARTIE II -->
+            <!-- ============================================ -->
+            <!-- PARTIE II                                    -->
+            <!-- ============================================ -->
             <div class="tdm-chapitre">II. Deux images de la représentation</div>
 
             <div class="tdm-sous-section">
-                <a href="02_II_Intro.html" class="tdm-lien">Introduction</a>
-                <span class="tdm-pages">(127‑131)</span>
-            </div>
-            <div class="tdm-sous-section">
                 <a href="02_II_A1_1.html" class="tdm-lien">A‑1. La représentation cognitive – 1</a>
-                <span class="tdm-pages">(132‑140)</span>
+                <div class="tdm-sections">
+                    <span>A‑1‑1 Héritage d'une image</span><span class="sep">·</span>
+                    <span>Locke : 'having an impression'</span><span class="sep">·</span>
+                    <span>A‑1‑2 Les représentations mentales</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_A1_2.html" class="tdm-lien">A‑1. La représentation cognitive – 2</a>
-                <span class="tdm-pages">(141‑152)</span>
+                <div class="tdm-sections">
+                    <span>A‑1‑2 Les représentations mentales</span><span class="sep">·</span>
+                    <span>Réification fonctionaliste</span><span class="sep">·</span>
+                    <span>Métaphore de l'ordinateur</span><span class="sep">·</span>
+                    <span>Langage de la pensée</span><span class="sep">·</span>
+                    <span>L'idéal physicaliste</span><span class="sep">·</span>
+                    <span>A‑1‑3 Représentations neurophysiologiques</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_A1_3.html" class="tdm-lien">A‑1. La représentation cognitive – 3</a>
-                <span class="tdm-pages">(153‑161)</span>
+                <div class="tdm-sections">
+                    <span>A‑1‑3 Représentations neurophysiologiques</span><span class="sep">·</span>
+                    <span>Naturalisation de l'Esprit</span><span class="sep">·</span>
+                    <span>Le point de vue narcissique</span><span class="sep">·</span>
+                    <span>A‑1‑4 Réduction : arguments et contre‑arguments</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_A1_4.html" class="tdm-lien">A‑1. La représentation cognitive – 4</a>
-                <span class="tdm-pages">(162‑168)</span>
+                <div class="tdm-sections">
+                    <span>A‑1‑4 Réduction : arguments et contre‑arguments</span><span class="sep">·</span>
+                    <span>Mauvais exemples : l'or, la chaleur</span><span class="sep">·</span>
+                    <span>Articulation plutôt que réduction</span><span class="sep">·</span>
+                    <span>Enfermement logique de la réduction naturaliste</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_A2.html" class="tdm-lien">A‑2. Le connexionnisme</a>
-                <span class="tdm-pages">(169‑195)</span>
+                <div class="tdm-sections">
+                    <span>A‑2‑1 Spécificités connexionnistes</span><span class="sep">·</span>
+                    <span>A‑2‑2 La cognition sous l'éclairage connexionniste</span><span class="sep">·</span>
+                    <span>A‑2‑3 Description d'une action</span><span class="sep">·</span>
+                    <span>A‑2‑4 Temporalité de l'action</span><span class="sep">·</span>
+                    <span>A‑3 Sur le débat réductionnistes/éliminativistes</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_A3.html" class="tdm-lien">A‑3. Débat réductionnistes / éliminativistes</a>
-                <span class="tdm-pages">(196‑215)</span>
+                <div class="tdm-sections">
+                    <span>A‑3‑1 Cadre du débat</span><span class="sep">·</span>
+                    <span>A‑3‑2 L'alternative</span><span class="sep">·</span>
+                    <span>Langage ordinaire</span><span class="sep">·</span>
+                    <span>Théories tacites</span><span class="sep">·</span>
+                    <span>Explication ordinaire/théorique</span><span class="sep">·</span>
+                    <span>Usage ordinaire</span><span class="sep">·</span>
+                    <span>Hors de l'alternative</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_B1.html" class="tdm-lien">B‑1. L'empirisme logique</a>
-                <span class="tdm-pages">(216‑229)</span>
+                <div class="tdm-sections">
+                    <span>B‑1‑1 Explication de la science</span><span class="sep">·</span>
+                    <span>B‑1‑2 Rôle de l'analyse logique</span><span class="sep">·</span>
+                    <span>Logique de la science</span><span class="sep">·</span>
+                    <span>Signification déterminée</span><span class="sep">·</span>
+                    <span>B‑1‑3 Empirisme logique et cognitivisme</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_B2_1.html" class="tdm-lien">B‑2. Le tournant historique – 1</a>
-                <span class="tdm-pages">(230‑238)</span>
+                <div class="tdm-sections">
+                    <span>Introduction</span><span class="sep">·</span>
+                    <span>Inscription matérielle</span><span class="sep">·</span>
+                    <span>Apprentissage</span><span class="sep">·</span>
+                    <span>Structure et contexte</span><span class="sep">·</span>
+                    <span>Pratique et observation</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_B2_2.html" class="tdm-lien">B‑2. Le tournant historique – 2</a>
-                <span class="tdm-pages">(239‑249)</span>
+                <div class="tdm-sections">
+                    <span>Histoire contre unité</span><span class="sep">·</span>
+                    <span>Pratique contre abstraction</span><span class="sep">·</span>
+                    <span>Wittgenstein : signe simple</span><span class="sep">·</span>
+                    <span>Perception apprise</span><span class="sep">·</span>
+                    <span>Critique des données</span><span class="sep">·</span>
+                    <span>A priorisme constitutif</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_B2_3.html" class="tdm-lien">B‑2. Le tournant historique – 3</a>
-                <span class="tdm-pages">(250‑254)</span>
+                <div class="tdm-sections">
+                    <span>B‑2‑3 A priorisme constitutif relativisé</span><span class="sep">·</span>
+                    <span>Carnap : relativité de l'a priori</span><span class="sep">·</span>
+                    <span>Kuhn : relativité et rationalité</span><span class="sep">·</span>
+                    <span>B‑2‑4 Historicité et internalité</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_B2_4.html" class="tdm-lien">B‑2. Le tournant historique – 4</a>
-                <span class="tdm-pages">(255‑264)</span>
+                <div class="tdm-sections">
+                    <span>Savoir‑faire et science normale</span><span class="sep">·</span>
+                    <span>Pas de savoir privé</span><span class="sep">·</span>
+                    <span>Autonomie : sauver la rationalité</span><span class="sep">·</span>
+                    <span>The mangle of practice</span><span class="sep">·</span>
+                    <span>Usage de la science</span><span class="sep">·</span>
+                    <span>B‑3 Le temps vrai et l'émergence</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="02_II_B3.html" class="tdm-lien">B‑3. Le temps vrai et l'émergence</a>
-                <span class="tdm-pages">(265‑270)</span>
+                <div class="tdm-sections">
+                    <span>B‑3‑1 Une temporalité abstraite</span><span class="sep">·</span>
+                    <span>B‑3‑2 De l'humanisme au post‑humanisme</span>
+                </div>
             </div>
 
-            <!-- PARTIE III -->
+            <!-- ============================================ -->
+            <!-- PARTIE III                                   -->
+            <!-- ============================================ -->
             <div class="tdm-chapitre">III. Approche non représentationniste</div>
 
             <div class="tdm-sous-section">
                 <a href="03_III_A1.html" class="tdm-lien">A‑1. L'expérience sans la représentation</a>
-                <span class="tdm-pages">(271‑288)</span>
+                <div class="tdm-sections">
+                    <span>Introduction</span><span class="sep">·</span>
+                    <span>Wittgenstein : intériorité/extériorité</span><span class="sep">·</span>
+                    <span>La faculté de spontanéité</span><span class="sep">·</span>
+                    <span>Ni quelque chose, ni rien</span><span class="sep">·</span>
+                    <span>Tradition bouddhiste</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A2_1.html" class="tdm-lien">A‑2. Cognition sans représentation – l'énaction (1)</a>
-                <span class="tdm-pages">(289‑313)</span>
+                <div class="tdm-sections">
+                    <span>Introduction</span><span class="sep">·</span>
+                    <span>A‑2‑1 Changement de perspective</span><span class="sep">·</span>
+                    <span>Le sens commun</span><span class="sep">·</span>
+                    <span>Le savoir tacite</span><span class="sep">·</span>
+                    <span>Expérience corporelle et domaine culturel</span><span class="sep">·</span>
+                    <span>A‑2‑2 Cognition et connaissance</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A2_2.html" class="tdm-lien">A‑2. Cognition sans représentation – l'énaction (2)</a>
-                <span class="tdm-pages">(314‑320)</span>
+                <div class="tdm-sections">
+                    <span>A‑2‑2 Cognition et connaissance</span><span class="sep">·</span>
+                    <span>Langage et réalité</span><span class="sep">·</span>
+                    <span>Approche sémantique et justification</span><span class="sep">·</span>
+                    <span>Lecture sémantique vs lecture participative</span><span class="sep">·</span>
+                    <span>Enaction et lecture participative</span><span class="sep">·</span>
+                    <span>Action‑perception</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A3_1.html" class="tdm-lien">A‑3. Après Piaget – 1</a>
-                <span class="tdm-pages">(347‑355)</span>
+                <div class="tdm-sections">
+                    <span>A‑3‑1 Héritage de Piaget</span><span class="sep">·</span>
+                    <span>Théorie de l'origine sensori‑motrice</span><span class="sep">·</span>
+                    <span>Différenciation de la réalité</span><span class="sep">·</span>
+                    <span>Schème des actions</span><span class="sep">·</span>
+                    <span>L'équilibre</span><span class="sep">·</span>
+                    <span>Les opérations</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A3_2.html" class="tdm-lien">A‑3. Après Piaget – 2</a>
-                <span class="tdm-pages">(356‑365)</span>
+                <div class="tdm-sections">
+                    <span>A‑3‑2 L'après Piaget</span><span class="sep">·</span>
+                    <span>Critique : connaissance conceptuelle innée</span><span class="sep">·</span>
+                    <span>Thèse nativiste</span><span class="sep">·</span>
+                    <span>Problèmes du nativisme</span><span class="sep">·</span>
+                    <span>Savoir et faire</span><span class="sep">·</span>
+                    <span>Approche dynamique</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A3_3.html" class="tdm-lien">A‑3. Après Piaget – 3</a>
-                <span class="tdm-pages">(366‑381)</span>
+                <div class="tdm-sections">
+                    <span>La causation mentale</span><span class="sep">·</span>
+                    <span>Différence de catégorie</span><span class="sep">·</span>
+                    <span>Phénoménologisation de l'objectivité</span><span class="sep">·</span>
+                    <span>L'erreur A‑non‑B</span><span class="sep">·</span>
+                    <span>Modélisation dynamique</span><span class="sep">·</span>
+                    <span>Et l'énaction ?</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A4_1.html" class="tdm-lien">A‑4. Neurodynamique et énaction – 1</a>
-                <span class="tdm-pages">(382‑390)</span>
+                <div class="tdm-sections">
+                    <span>Synchronisations</span><span class="sep">·</span>
+                    <span>Le 'mental' : distinctions</span><span class="sep">·</span>
+                    <span>Le mental comme structure causale</span><span class="sep">·</span>
+                    <span>Le mental comme expérience vécue</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A4_2.html" class="tdm-lien">A‑4. Neurodynamique et énaction – 2</a>
-                <span class="tdm-pages">(391‑397)</span>
+                <div class="tdm-sections">
+                    <span>Les couplages</span><span class="sep">·</span>
+                    <span>Émergence (upward/downward)</span><span class="sep">·</span>
+                    <span>Études sur l'épilepsie</span><span class="sep">·</span>
+                    <span>Première et troisième personne</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_A4_3.html" class="tdm-lien">A‑4. Neurodynamique et énaction – 3</a>
-                <span class="tdm-pages">(398‑420)</span>
-            </div>
-            <div class="tdm-sous-section">
-                <a href="03_III_A4_4.html" class="tdm-lien">A‑4. Couplage et langage</a>
-                <span class="tdm-pages">(321‑428)</span>
+                <div class="tdm-sections">
+                    <span>Neurophénoménologie</span><span class="sep">·</span>
+                    <span>Étude expérimentale</span><span class="sep">·</span>
+                    <span>L'époché et le cycle de base</span><span class="sep">·</span>
+                    <span>Description et validation</span><span class="sep">·</span>
+                    <span>Les critiques</span><span class="sep">·</span>
+                    <span>Couplage et langage</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_B1.html" class="tdm-lien">B‑1. Étrangetés épistémologiques</a>
-                <span class="tdm-pages">(432‑441)</span>
+                <div class="tdm-sections">
+                    <span>B‑1‑1 Pré‑supposés épistémologiques</span><span class="sep">·</span>
+                    <span>Adéquation avec et sans représentations</span><span class="sep">·</span>
+                    <span>B‑1‑2 L'énaction : problème de légitimation</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_B2_1.html" class="tdm-lien">B‑2. Pratique de la science – 1</a>
-                <span class="tdm-pages">(442‑453)</span>
+                <div class="tdm-sections">
+                    <span>B‑2‑1 Construction d'une relation de référence</span><span class="sep">·</span>
+                    <span>Montrer plutôt que démontrer</span><span class="sep">·</span>
+                    <span>Vue synoptique</span><span class="sep">·</span>
+                    <span>Circulation de la référence</span><span class="sep">·</span>
+                    <span>Réalité : ni construction, ni découverte</span><span class="sep">·</span>
+                    <span>Du fait scientifique à la réalité publique</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_B2_2.html" class="tdm-lien">B‑2. Pratique de la science – 2</a>
-                <span class="tdm-pages">(454‑473)</span>
+                <div class="tdm-sections">
+                    <span>B‑2‑2 Autour de la notion de 'science'</span><span class="sep">·</span>
+                    <span>L'intérieur et le social</span><span class="sep">·</span>
+                    <span>Empirisme versus réalisme</span><span class="sep">·</span>
+                    <span>Rationalité philosophique</span><span class="sep">·</span>
+                    <span>Audace scientifique et empirisme</span><span class="sep">·</span>
+                    <span>L'empirisme risqué</span><span class="sep">·</span>
+                    <span>Continuité de la connaissance</span><span class="sep">·</span>
+                    <span>Indépendance et historicité</span><span class="sep">·</span>
+                    <span>Réalisme naturaliste</span><span class="sep">·</span>
+                    <span>Pratique scientifique et connaissance</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="03_III_B2_3.html" class="tdm-lien">B‑2. Pratique de la science – 3</a>
-                <span class="tdm-pages">(474‑498)</span>
+                <div class="tdm-sections">
+                    <span>B‑2‑3 Une épistémologie non représentationniste</span><span class="sep">·</span>
+                    <span>S'inscrire dans la réalité</span><span class="sep">·</span>
+                    <span>La découverte</span><span class="sep">·</span>
+                    <span>L'énoncé : du contextuel à l'universel</span><span class="sep">·</span>
+                    <span>Intéresser</span><span class="sep">·</span>
+                    <span>Circulation de la référence (suite)</span><span class="sep">·</span>
+                    <span>Réalisme et historicité</span><span class="sep">·</span>
+                    <span>L'énaction, pour finir</span>
+                </div>
             </div>
 
-            <!-- CONCLUSION ET ANNEXES -->
+            <!-- ============================================ -->
+            <!-- CONCLUSION                                   -->
+            <!-- ============================================ -->
             <div class="tdm-chapitre">Conclusion et annexes</div>
 
             <div class="tdm-sous-section">
                 <a href="04_Conclusion.html" class="tdm-lien">Conclusion</a>
-                <span class="tdm-pages">(499‑510)</span>
+                <div class="tdm-sections">
+                    <span>Introduction</span><span class="sep">·</span>
+                    <span>Expérience vécue</span><span class="sep">·</span>
+                    <span>Engagement corporel</span><span class="sep">·</span>
+                    <span>Scientificité de l'énaction</span><span class="sep">·</span>
+                    <span>Épistémologie non représentationniste</span><span class="sep">·</span>
+                    <span>Forums hybrides</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
                 <a href="05_Bibliographie.html" class="tdm-lien">Bibliographie</a>
-                <span class="tdm-pages">(511‑522)</span>
+                <div class="tdm-sections">
+                    <span>Bibliographie</span><span class="sep">·</span>
+                    <span>Index des noms</span>
+                </div>
             </div>
             <div class="tdm-sous-section">
-                <a href="06_Index.html" class="tdm-lien">Index des noms</a>
-                <span class="tdm-pages">(523+)</span>
-            </div>
-            <div class="tdm-sous-section">
-                <a href="07_Cloture.html" class="tdm-lien">Clôture</a>
+                <a href="Cloture.html" class="tdm-lien">Clôture</a>
             </div>
 
         </div>
     </div>
 
-    <!-- NAVIGATION BAS -->
     <div class="nav-buttons">
-        <a href="07_Cloture.html" class="nav-btn">← Précédent (Clôture)</a>
-        <a href="00_Introduction.html" class="nav-btn">📑 Introduction</a>
-        <a href="00_Introduction.html" class="nav-btn">Suivant (Introduction) →</a>
+        <a href="01.1_Introduction1.html" class="nav-btn">← Précédent</a>
+        <a href="01.1_Introduction1.html" class="nav-btn">📑 Retour table</a>
+        <a href="01.3_Introduction.html" class="nav-btn">Suivant →</a>
     </div>
 
     <footer>
-        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em><br>
-        Conversion HTML – Jardin coopératif
+        🌱 Isabelle Peschard – <em>La réalité sans représentation, la théorie de l'énaction et sa légitimité épistémologique</em>
     </footer>
 
 </div>
