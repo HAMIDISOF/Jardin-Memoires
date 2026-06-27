@@ -570,7 +570,9 @@ stand, we wouldn’t know what to look for : we lack the appropriate theoretical
 the psychological taxonomy of neurological events » (Fodor, 1974, p.134) C’est donc vers la 
 modélisation qu’il faut se tourner en premier lieu pour comprendre à quoi les arguments 
 neurophysiologiques sont censés apporter une justification. 
- 
+
+>>>** fin 03_II_Images_Representation_part01.html
+
 A-1-2 Les représentations mentales  
  
  
@@ -3076,12 +3078,9 @@ niveau : « The caloric and kinetic theories are at the same explanatory level, 
 from one to the other was pretty clearly ontologically radical. » (W. Ramsey & al., 1995, 
 p.324) En outre, personne ne peut énoncer clairement comment pourrait être établie l’existence 
 d’un état mental en tant que tel, non plus donc que son inexistence. 
- 
- 
-201
 
 
-## Page 203
+>>>** fin 03_II_Images_Representation_part02.html
 
 A-3-3 Réformer le langage ? 
  
