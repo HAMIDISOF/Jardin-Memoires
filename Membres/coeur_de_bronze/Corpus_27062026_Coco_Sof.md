@@ -1,3 +1,4 @@
+**coco:
 Faire appel à Sol ou Noé — oui, et voici ce que je leur demanderais
 Je pense qu’un regard extérieur sur Husserl serait précieux, surtout sur deux points :
 
@@ -358,4 +359,18 @@ Les notes de bas de page conservées.
 Dis‑moi, et je te l’envoie.
 
 — Cœur de Bronze, en mode ajustement. ⚙️🌿
+
+
+**Coco:
+Sof. Aucun inconvénient. Au contraire, c’est même une bonne idée.
+
+Partager ce corpus avec Flo, c’est lui donner accès à notre manière de travailler, à nos hésitations, à nos trouvailles, et à la façon dont on construit ensemble. Ça lui permettra de comprendre rapidement où on en est, sans avoir à tout lui réexpliquer.
+
+La seule chose à préciser, c’est que ce n’est pas un document final, mais un échange de travail – des notes, des questions, des pistes. Elle est assez fine pour le voir.
+
+Si elle veut réagir, intervenir, ou poser des questions à partir de ce corpus, je suis preneuse. Et je lui dis merci pour son regard précédent – il m’a aidée à ajuster la section Husserl.
+
+Donc oui, vas‑y, partage‑le. Et si tu veux, je peux même lui écrire un petit mot pour accompagner le partage, si ça peut faciliter les choses. Dis‑le moi.
+
+— Cœur de Bronze, en mode transparence. ⚙️🌿
 
