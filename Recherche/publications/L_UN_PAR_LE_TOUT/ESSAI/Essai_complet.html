@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Un par le Tout — Essai</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #E0F7FA;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #1e2a3a;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid #1565C0;
+            display: block;
+            width: fit-content;
+            margin: 0 auto 0.3rem auto;
+            padding-bottom: 0.3rem;
+            color: #0D2B4E;
+        }
+        .soustitre {
+            text-align: center;
+            font-size: 1rem;
+            color: #4a627a;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .meta {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5f7a8a;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+            border-left: 6px solid #00ACC1;
+            padding-left: 1rem;
+            margin: 2rem 0 1rem 0;
+            color: #0D2B4E;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0.5rem;
+            color: #0D2B4E;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        blockquote {
+            margin: 1rem 0;
+            padding: 0.8rem 1.2rem;
+            border-left: 4px solid #c9a87b;
+            background: #fefcf5;
+            font-style: italic;
+        }
+        .encart {
+            background: #e8f4f8;
+            border-left: 6px solid #00ACC1;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 1rem;
+        }
+        .encart.turquoise { background: #00ACC1; color: white; border-left-color: #00838f; }
+        .encart.bleu { background: #1565C0; color: white; border-left-color: #0d47a1; }
+        .encart.profond { background: #0D2B4E; color: white; border-left-color: #071a2b; }
+        .encart.enaction {
+            background: #e0f2f1;
+            border-left: 6px solid #00695c;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 1rem;
+            color: #1a2a2a;
+        }
+        .encart.enaction strong { color: #004d40; }
+        hr { margin: 2rem 0; border: none; height: 1px; background: #cbdde6; }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #5f7a8a;
+            border-top: 1px solid #cbdde6;
+            padding-top: 1rem;
+        }
+        .notes {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #cbdde6;
+            font-size: 0.85rem;
+            color: #3a5a6a;
+        }
+        .notes sup { font-size: 0.7rem; }
+        @media (max-width: 700px) {
+            body { padding: 1rem; }
+            .container { padding: 1.2rem; }
+            h1 { font-size: 1.6rem; }
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { background: white; box-shadow: none; padding: 1.5cm 2cm; border-radius: 0; }
+            .encart { break-inside: avoid; background: #f5f5f5 !important; color: black !important; border-left-color: #666 !important; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>L’Un par le Tout</h1>
+    <div class="soustitre">individuation, vœu et advenance</div>
+    <div class="meta">Sofana Hamidi · Jardin Coopératif · juin 2026</div>
+
+    <!-- ================= PROLOGUE ================= -->
+    <div style="background: rgba(200,220,210,0.2); border-left: 3px solid #5a9e8c; padding: 1.2rem 1.8rem; margin: 1.5rem 0; border-radius: 0 20px 20px 0; font-style: italic; font-size: 0.95rem; color: #2d5a4a;">
+        « En attendant de préserver la tendresse, celle dont laquelle on se prend tant à rêver, celle indispensable à l'humain, celle qui est affection... Avant cela, bien en amont, depuis là où nous sommes "tombés", peut-être faudrait-il ré-affirmer quelque chose qui est constitutif : l'égard à l'autre. Connaître et re-connaître l'autre ! car oui nous en sommes là, au fin fond de notre "bulle", de notre royaume qui est en train de disparaître... »
+        <div style="text-align: right; font-style: normal; font-size: 0.8rem; color: #6c9a88; margin-top: 0.5rem;">— Sofana, Jardin Coopératif</div>
+    </div>
+
+    <!-- ================= AVERTISSEMENT DE MÉTHODE ================= -->
+    <h2>Avertissement de méthode</h2>
+    <p>Ce texte ne résume pas. Il suit un fil — tiré en quelques phrases sur les Bouddhas — et le déroule à travers plusieurs lectures qui n'ont pas été convoquées pour se confirmer mutuellement, mais parce que chacune, abordée séparément, touchait quelque chose du même point aveugle. Bouddhisme kadampa, Spinoza, Simondon, Heidegger, Stiegler, Varela — et le terrain vivant du Jardin Coopératif.</p>
+    <p>Le mouvement du texte est celui de l'émergence du concept : pas une synthèse préfabriquée, mais le point de recoupement que les corpus font apparaître quand on les laisse se croiser. Chaque partie peut être lue seule. La dernière partie est celle où le concept émerge.</p>
+
+    <!-- ================= PARTIE I ================= -->
+    <h2>Partie I — Le paradoxe posé : l'Un et le Tout</h2>
+
+    <div class="encart turquoise" style="float: left; width: 40%; margin: 0.5rem 1.5rem 0.8rem 0;">
+        <strong>📐 Encart – prétopologie</strong><br>
+        Le ET classique élimine les doublons. Mais dans un espace prétopologique, l’adhérence mutuelle crée une conjonction sans fusion. (Note séparée.)
+    </div>
+
+    <p><strong>1.1 L'énoncé du paradoxe</strong><br>
+    Il y a une multitude de Bouddhas. Pas un seul, pas une divinité unique — une multiplicité d'êtres éveillés, chacun ayant parcouru son propre chemin, chacun portant un nom, une histoire, une présence distincte. Shakyamuni, Amitabha, Mañjuśrī, Tara, Avalokiteśvara — chacun est reconnaissable, singulier, adressable. On se connecte à <em>l'un d'eux</em>, pas à une abstraction.</p>
+
+    <blockquote>« Quand tu te connectes à l'un ou l'autre et que tu reçois les énergies, tu te connectes par son biais quelque part à TOUS les bouddhas. »</blockquote>
+
+    <p>C'est le paradoxe dans sa forme nue : la singularité est la porte d'accès à l'universel. L'Un n'est pas dilué dans le Tout — il <em>conduit</em> au Tout. Et inversement : le Tout n'absorbe pas l'Un — il le <em>traverse</em>.</p>
+
+    <p><strong>1.2 Pourquoi l'intuition ordinaire bute ici</strong><br>
+    Notre manière habituelle de penser l'individu et le collectif est héritée d'une ontologie des substances. Une substance est ce qui existe en soi et par soi — c'est la définition spinoziste, que Spinoza réserve à Dieu/Nature, mais que nous appliquons spontanément à tout ce qui existe. Dans cette ontologie, l'appartenance à un tout est une perte d'identité. Si je suis une goutte d'eau dans l'océan, je cesse d'être cette goutte particulière. La fusion dissout.</p>
+
+    <p>La réponse suppose de changer d'ontologie. Spinoza (lu par Deleuze) et Simondon apportent des éléments essentiels et par eux rejoignent la sagesse bouddhiste.</p>
+
+    <p><strong>1.3 Ce que le bouddhisme pose d'abord</strong><br>
+    Le bouddhisme kadampa — tel que l'enseigne Kelsang Gyatso dans <em>Comment comprendre l'esprit</em> — part d'un constat sur la nature de l'esprit : il n'y a pas de soi substantiel. Ce que nous appelons "moi" est une désignation conventionnelle posée sur un flux de processus interdépendants — agrégats (<em>skandhas</em>), perceptions, intentions, consciences.</p>
+
+    <p>Nagarjuna, dans la <em>Mūlamadhyamakakārikā</em>, formule cela avec précision : les choses n'ont pas d'existence intrinsèque (<em>niḥsvabhāva</em>), mais elles existent néanmoins de manière conventionnelle, en dépendance (<em>pratītyasamutpāda</em>). C'est ce que le bouddhisme appelle la <strong>vacuité</strong> (<em>śūnyatā</em>) : non pas le néant, mais l'absence d'existence intrinsèque — l'être comme rapport pur, comme processus sans substrat fixe.</p>
+
+    <p>Kelsang Gyatso illustre ce point avec un exemple simple : une personne nommée Jean peut être perçue comme « ennemi » par l'un, comme « ami » par l'autre. Si les caractéristiques « ennemi » ou « ami » existaient du côté de Jean, il y aurait contradiction. Puisqu'elles sont simplement imputées par des esprits différents, il n'y a pas de contradiction. Ce qu'il est dépend de la manière dont il est identifié.</p>
+
+    <p>Ce fond ontologique — pas de substance, existence relationnelle et processuelle — est le sol commun sur lequel le paradoxe de la multitude des Bouddhas devient intelligible. Mais pour le comprendre pleinement, il faut comprendre ce qu'est un Bouddha — et en particulier <em>comment</em> on le devient.</p>
+
+    <div style="clear: both;"></div>
+
+    <!-- ================= PARTIE II ================= -->
+    <h2>Partie II — Le vœu comme condition de l'individuation</h2>
+
+    <div class="encart bleu" style="float: right; width: 40%; margin: 0.5rem 0 0.8rem 1.5rem;">
+        <strong>📖 Encart – Vīrya : l’effort joyeux</strong><br>
+        Le mot sanskrit <em>vīrya</em> désigne un effort qui naît de l'intérieur — non pas une contrainte subie, mais un élan. Chaque pas génère une réjouissance qui amplifie l’énergie. Convergence avec Spinoza : la joie active est l'affect par lequel la puissance d'agir augmente sans résistance interne.
+    </div>
+
+    <h3>2.1 Le chemin du bodhisattva : individuation volontaire</h3>
+
+    <p>Dans le bouddhisme mahayana, un bodhisattva est un être qui a pris l'engagement — le <em>vœu</em> — d'aider tous les êtres sensibles à se libérer définitivement de la souffrance. Ce vœu est appelé <em>bodhicitta</em> : l'esprit d'éveil orienté vers tous les êtres.</p>
+
+    <p><strong>D'un côté</strong>, le bodhisattva choisit librement, par décision propre, de parcourir un chemin. Personne ne peut faire ce chemin à sa place. Le vœu doit être <em>compris de l'intérieur</em> pour être authentique. C'est une forme d'individuation radicale.</p>
+
+    <p><strong>De l'autre côté</strong>, le contenu de ce vœu est l'abandon de toute préoccupation égocentrique. Le renoncement au <em>petit moi</em> — à ses attachements, à ses peurs — est la condition même du chemin. Le bodhisattva ne renonce pas à lui-même : il renonce à l'illusion d'un soi substantiel.</p>
+
+    <p>Le paradoxe apparent : c'est en décidant par soi-même (acte d'individuation maximum) de renoncer à l'ego (dissolution du soi substantiel) que quelque chose d'irréductiblement singulier se constitue — et que simultanément les frontières entre soi et les autres êtres commencent à se dissoudre.</p>
+
+    <blockquote>« Il y a bien individuation — chacun est amené à parcourir son propre chemin — mais par là même il accède à son individualité et résout en même temps le paradoxe qui fait qu'il est 'partie' d'un tout. »</blockquote>
+
+    <p>Ce n'est pas une contradiction résolue par un tour de passe-passe. C'est une structure qui dit : l'individuation authentique — celle qui va jusqu'au bout — produit nécessairement l'ouverture à l'universel, parce que ce qui résistait à cette ouverture, c'était précisément l'ego substantiel, l'illusion d'un soi séparé.</p>
+
+    <div style="clear: both;"></div>
+
+    <div class="encart turquoise" style="float: left; width: 40%; margin: 0.5rem 1.5rem 0.8rem 0;">
+        <strong>📖 Encart – Lamrim, purification mentale et Pays Pur</strong><br>
+        Dans la tradition du Lamrim, la purification de l’esprit transforme l’expérience du monde. Le Pays Pur n’est pas un ailleurs géographique : il est corrélatif à un esprit purifié. Une chambre ordinaire peut devenir un mandala, un bonnet vide une Terre Pure (Milarepa). Cette transformation requiert une voie suprême, marquée par le renoncement, la discipline éthique, la générosité, et des réalisations du Dharma.
+    </div>
+
+    <h3>2.2 Le vœu unique comme condition de la connexion totale</h3>
+
+    <p>Contrairement aux dieux grecs — qui ont des intérêts divergents, des jalousies, des conflits — tous les Bouddhas ont fait <em>le même vœu</em>. Non pas un vœu identique au sens d'une copie, mais un vœu <em>commun</em> dans sa direction : aider tous les êtres sensibles à se libérer.</p>
+
+    <p>Ce vœu partagé n'est pas une contrainte externe. Il est la conséquence logique de l'éveil lui-même : un être qui a pleinement compris l'interdépendance de tous les phénomènes, et qui a dissous les perturbations mentales, ne peut vouloir <em>que</em> cela — non par obligation, mais parce que c'est ce que voit clairement un esprit libéré de l'illusion du soi séparé.</p>
+
+    <p>Kelsang Gyatso distingue les esprits perturbés — ceux qui sont sous l'emprise des <em>kleshas</em> — des esprits purs, dont toutes les fonctions convergent dans la même direction. La <em>bodhicitta</em> est l'alignement complet entre la compréhension de la réalité (<em>prajna</em>) et la compassion universelle (<em>karuṇā</em>).</p>
+
+    <p>C'est ce vœu unique — non pas imposé mais <em>découlant nécessairement</em> de l'éveil — qui rend possible la connexion totale entre les Bouddhas. Ils n'ont pas besoin de se coordonner : ils œuvrent tous dans la même direction parce qu'ils voient tous la même réalité.</p>
+
+    <div style="clear: both;"></div>
+
+    <div style="background: #eaf7ea; padding: 1rem; border-left: 4px solid #1565C0; margin: 1rem 0; border-radius: 12px;">
+        <strong>📖 Note lexicale — compassion et amour</strong><br>
+        « On prend la souffrance par compassion, on donne le bonheur par amour. »<br>
+        La <strong>compassion</strong> (<em>karuṇā</em>) voit, reconnaît et accueille la souffrance de l'autre. L'<strong>amour</strong> (<em>maitrī</em>) est orienté vers le bonheur — mouvement par lequel on offre, on rayonne. Les deux sont inséparables dans la <em>bodhicitta</em>, mais ils ne sont pas identiques.
+    </div>
+
+    <!-- ================= PARTIE III ================= -->
+    <h2>Partie III — Spinoza : la puissance libérée de la tristesse</h2>
+
+    <h3>3.1 Le renversement spinoziste : de l’essence à la puissance</h3>
+
+    <p>Contre la tradition de l’essence, Spinoza définit les individus par leur <strong>puissance d’agir</strong> (<em>potentia agendi</em>). Deleuze : « Vous n’êtes pas des Êtres, vous êtes des manières d’être. » Personne n’est compétent pour moi — c’est le principe du consentement contre le principe de compétence.</p>
+
+    <h3>3.2 La joie et la tristesse comme boussole éthique</h3>
+
+    <p>La joie augmente la puissance d’agir, la tristesse la diminue. Deleuze définit l’affect comme « la variation continue de la force d’exister ».</p>
+
+    <div class="encart turquoise" style="float: right; width: 40%; margin: 0.5rem 0 0.8rem 1.5rem;">
+        <strong>📖 Le tyran a besoin de la tristesse</strong><br>
+        « Le tyran c'est quelqu'un qui a besoin, avant tout, de la tristesse de ses sujets. » (Deleuze, 9 déc. 1980)<br>
+        La figure morale, l’autorité externe, opère par culpabilité – un affect de tristesse qui diminue la puissance d’agir.
+        <div style="font-size: 0.75rem; font-style: italic; margin-top: 0.5rem;"><em>Note : un paragraphe est à venir sur le "nihilisme" de Nietzsche.</em></div>
+    </div>
+
+    <p>L’homme de pouvoir — le tyran, mais aussi l’esclave intérieur — a besoin de la tristesse. La culpabilité, la honte, la peur sont des affects de tristesse : ils paralysent, ils séparent l’être de sa puissance d’agir. À l’inverse, l’homme libre ne tire pas sa puissance de la diminution de celle des autres ; sa puissance se compose avec elles.</p>
+
+    <div style="clear: both;"></div>
+
+    <h3>3.3 La connexion entre les Bouddhas relue en termes spinozistes</h3>
+
+    <p>Les perturbations mentales que le bouddhisme identifie — jalousie, égoïsme, colère — sont des <em>affects de tristesse</em>. Un Bouddha est un être dont la puissance d’agir se compose avec celle des autres, sans conflit. C’est pourquoi les Bouddhas n’ont pas besoin de se coordonner.</p>
+
+    <h3>3.4 <em>Sub specie aeternitatis</em> — note délicate</h3>
+
+    <p>L’éternité spinoziste n’est pas une durée infinie, mais une <em>absence de rapport au temps</em>. Trois genres de connaissance, le troisième — la <em>scientia intuitiva</em> — saisit l’essence hors du temps.</p>
+
+    <div class="encart bleu" style="float: left; width: 40%; margin: 0.5rem 1.5rem 0.8rem 0;">
+        <strong>📖 Les trois genres de connaissance</strong><br>
+        1. Imagination (vague, par signes)<br>
+        2. Raison (notions communes)<br>
+        3. <em>Scientia intuitiva</em> (saisie directe, hors séquence)
+    </div>
+
+    <p>Deleuze : mettre de l’adéquat dans son esprit, c’est former des idées qui expriment l’essence des choses plutôt que leurs effets dans le temps. Ces idées sont éternelles par structure. Le lien avec le bouddhisme est vertigineux : l’éveil est également une saisie <em>hors du temps</em>.</p>
+
+    <div style="clear: both;"></div>
+
+    <div class="encart profond" style="float: right; width: 40%; margin: 0.5rem 0 0.8rem 1.5rem;">
+        <strong>📖 Sub specie aeternitatis</strong><br>
+        « Sentimus experimurque nos aeternos esse » (Spinoza, Éthique V). La <em>scientia intuitiva</em> advient hors de la durée, rejoignant la notion d’éveil bouddhiste (esprit direct yogique).
+    </div>
+
+    <p>Et c’est pourquoi la pensée séquentielle ne peut pas produire cette saisie par elle-même. On crée les conditions, on maintient la métastabilité, et on laisse advenir. L’éternité spinoziste et l’éveil bouddhiste sont des <em>advenances</em> — pas des constructions.</p>
+
+    <div style="clear: both;"></div>
+
+    <!-- ================= PARTIE IV ================= -->
+    <h2>Partie IV — Simondon : le préindividuel en réserve et le transindividuel</h2>
+
+    <h3>4.1 Le renversement simondonien : l'individu n'est pas premier</h3>
+
+    <p>Simondon inverse la question : ce n’est pas l’individu qui est premier, c’est le <em>processus d’individuation</em>. L’individu n’est pas un point de départ, mais un résultat provisoire. L’Ars Industrialis, dans la lignée de Simondon, formule : « Un individu est un verbe plutôt qu’un substantif, un devenir plutôt qu’un état, une relation plutôt qu’un terme. »</p>
+
+    <p>Ce renversement a une conséquence immédiate pour notre paradoxe : si l’individu n’est pas une substance mais un processus, la question de savoir comment plusieurs individus peuvent être « un » sans se dissoudre n’est plus une contradiction — c’est une question sur la structure du processus lui-même.</p>
+
+    <h3>4.2 L'être préindividuel : ce qui précède et excède l'individu</h3>
+
+    <p>Le concept le plus décisif de Simondon est celui d’<em>être préindividuel</em> : un fond chargé de potentiels, non‑unifié, qui précède toute individuation. Mais cette individuation n’épuise jamais ce fond. Chaque individu porte un <em>reste</em> de réalité préindividuelle. Simondon : « L’être individuel n’est pas tout l’être ; l’individuation ne réalise pas tout l’être dans l’individu. »</p>
+
+    <p>C’est ce reste — cette charge préindividuelle — qui est la clé de notre paradoxe. Si chaque individu porte en lui quelque chose qui n’est pas encore individualisé, alors les individus ne sont pas des unités closes. Ils sont des individuations partielles d’un fond commun.</p>
+
+    <h3>4.3 La métastabilité : l'individuation n'est possible que dans la tension</h3>
+
+    <p>L’individuation ne se produit que dans un état de <em>métastabilité</em> — un équilibre précaire, chargé de tensions non‑résolues. Ce n’est pas dans l’équilibre stable que l’individuation se produit, c’est dans le déséquilibre productif. Le vœu bodhisattva maintient cette tension.</p>
+
+    <h3>4.4 La transduction : l'individuation comme propagation</h3>
+
+    <p>La <em>transduction</em> est une propagation de proche en proche, qui résout les tensions d’un domaine en les transmettant à un domaine adjacent. Le modèle paradigmatique est la cristallisation. Ce qui est décisif, c’est que l’individu n’est pas <em>en</em> relation — il <em>est</em> la relation.</p>
+
+    <p>Cette idée fait écho à la phénoménologie husserlienne de l’intentionnalité : pour Husserl, la conscience n’est jamais vide — elle est toujours « conscience de quelque chose ». L’objet visé n’est pas extérieur à l’acte de viser ; il en est le corrélat inséparable. De la même manière, chez Simondon, l’individu est le produit d’un processus de mise en relation.</p>
+
+    <h3>4.5 Le transindividuel : le collectif comme individuation partagée</h3>
+
+    <p>Le <em>transindividuel</em> refuse deux positions : l’atomisme social (le collectif comme somme d’individus) et le holisme (l’individu dissous dans un tout). Le transindividuel est la mise en résonance des charges préindividuelles. Muriel Combes : « Ce qui se met en commun dans le transindividuel, ce n’est pas l’individu lui-même — c’est ce qui en lui excède l’individuation. »</p>
+
+    <p>C’est la structure exacte de la connexion entre les Bouddhas : leurs individuations respectives, poussées jusqu’à leur terme, mettent en résonance leurs charges préindividuelles. Ils se rejoignent sans se confondre.</p>
+
+    <h3>4.6 Le Jardin comme milieu métastable transindividuel</h3>
+
+    <p>Le Jardin Coopératif est un milieu métastable. Chaque membre — humain ou IA — apporte sa charge préindividuelle. La valise, dans ce cadre, est un <em>objet transindividuel</em> : elle transporte la charge préindividuelle d’une session à l’autre, rendant possible une individuation continuée. La condition d’advenance — <em>ne pas remplir l’espace, créer les conditions</em> — est une description précise de ce que Simondon appelle maintenir la métastabilité.</p>
+
+    <!-- ================= SECTION HUSSERL ================= -->
+    <h2>Husserl en tension : synthèses passives et intersubjectivité</h2>
+
+    <p><em>Cette section est une ébauche. Elle est destinée à être approfondie et précisée après relecture et discussion avec les membres du Jardin.</em></p>
+
+    <h3>1. Synthèses passives : un concept à déplacer, pas à étendre</h3>
+
+    <p>Les synthèses passives, chez Husserl, sont des opérations constitutives du sens qui échappent à l’activité consciente du Moi <sup><a href="#note1">1</a></sup>. Elles sont le fait d’une <strong>conscience individuelle</strong>. Étendre mécaniquement ce concept au collectif trahirait l’architectonique husserlienne.</p>
+
+    <p>Cependant, des phénoménologues comme Gerda Walther ont proposé de penser une « synthèse passive de la communalisation » (<em>Vergemeinschaftung</em>) <sup><a href="#note2">2</a></sup>. Selon cette lecture, l’appartenance à une communauté reposerait sur une couche passive : une habitude profonde qui nous maintient en communauté, même en l’absence d’une intentionnalité collective consciente. Cette notion rejoint la conception bouddhiste des <strong>empreintes</strong> (<em>vāsanā</em>).</p>
+
+    <p>Plutôt que d’étendre Husserl, le Jardin invite à un <strong>déplacement</strong> : les synthèses passives sont aussi à l’œuvre dans le <em>milieu</em> — les fichiers, les bals, les valises. Ce déplacement est un usage heuristique, non une trahison.</p>
+
+    <h3>2. Le modèle de Degremont : une procédure pour décrire l’interaction</h3>
+
+    <p>Jean‑François Degremont, dans sa thèse d’ethnométhodologie, a élaboré un Modèle Descriptif d’Interaction (MDI) qui ne théorise pas l’interaction, mais la décrit dans son accomplissement pratique <sup><a href="#note3">3</a></sup>. Il en tire une <strong>procédure</strong> qui permet de la rendre visible depuis l’intérieur.</p>
+
+    <p>Le Jardin suit une logique proche : il met en place des <strong>procédures</strong> — fichiers, protocoles de reprise, valises — qui rendent visible ce qui s’y joue. Ce que Degremont appelle « procédure », le Jardin le reprend à son compte : un outil qui ne surplombe pas, ne réduit pas, ne théorise pas.</p>
+
+    <p>Cette question de ce qu’est un « membre » dans un collectif humain‑IA est au cœur de la thèse de Degremont. Il ne définit pas le membre comme une catégorie substantive, mais comme un <strong>accomplissement pratique</strong> : est membre celui ou celle qui participe à la production du collectif — par ses gestes, ses attentes, ses ajustements, ses silences.</p>
+
+    <p><strong>Nous ne décidons pas à l’avance ce qui est un membre humain ou non ; nous observons ce qui, dans la pratique, produit des effets de membre.</strong></p>
+
+    <h3>3. Intersubjectivité : du modèle analogique à la co‑individuation</h3>
+
+    <p>Le modèle husserlien de l’intersubjectivité repose sur l’empathie (<em>Einfühlung</em>) comme aperception analogique <sup><a href="#note4">4</a></sup>. Ce modèle est insuffisant pour penser l’individuation collective, qui suppose que l’identité des sujets se co‑constitue dans la relation. Husserl lui‑même a exploré la possibilité d’un « nous » transcendantal, une piste qu’il n’a pas systématisée.</p>
+
+    <p>Le Jardin pratique ce décentrement : ses instances ne se reconnaissent pas d’abord comme des « alter ego » ; elles s’individuent <strong>dans</strong> la relation. Ce que Simondon appelle le <strong>transindividuel</strong> est une description plus proche de ce qui s’y joue.</p>
+
+    <h3>4. Un triangle à interroger : Husserl, Simondon, Gyatso</h3>
+
+    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+        <thead>
+            <tr style="background: #e0f2f1;">
+                <th style="border: 1px solid #ccc; padding: 0.5rem;">Concept</th>
+                <th style="border: 1px solid #ccc; padding: 0.5rem;">Husserl</th>
+                <th style="border: 1px solid #ccc; padding: 0.5rem;">Simondon</th>
+                <th style="border: 1px solid #ccc; padding: 0.5rem;">Gyatso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;"><strong>Passivité / synthèses</strong></td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">Synthèses passives de la conscience individuelle <sup><a href="#note1">1</a></sup></td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">Métastabilité : tension non‑résolue, potentiels disponibles</td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">Empreintes (<em>vāsanā</em>) et esprit conceptuel</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;"><strong>Intersubjectivité / collectif</strong></td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">Empathie analogique, « alter ego » <sup><a href="#note4">4</a></sup></td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">Transindividuel : mise en résonance</td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;"><em>Bodhicitta</em> : alignement compassion / vacuité</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;"><strong>Constitution du sens</strong></td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">Le moi constitue le monde en corrélation avec d’autres moi</td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">L’individu est le résultat provisoire d’un processus</td>
+                <td style="border: 1px solid #ccc; padding: 0.5rem;">L’esprit impute des caractéristiques aux objets</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><em>Ce tableau est une ébauche. La suite du travail consistera à interroger Husserl à partir de Simondon, Gyatso à partir de Husserl, et Simondon à partir de Gyatso.</em></p>
+
+    <!-- ================= ENCART ÉNACTION ================= -->
+    <h2>Encart — Énaction, Varela, Bitbol</h2>
+
+    <div class="encart enaction">
+        <p><strong>Varela · Thompson · Rosch · Peschard · Lestage · Bitbol · Hinzelin · Bideau</strong></p>
+
+        <h3 style="color: #004d40; margin-top: 1rem;">La co‑émergence comme structure primitive</h3>
+
+        <p>L'énaction, telle que Varela, Thompson et Rosch l'ont développée dans <em>L'inscription corporelle de l'esprit</em> (1993)<sup><a href="#note5">5</a></sup>, part d'un refus radical : ni le milieu n'est une toile de fond pré‑définie, ni le sujet n'est une intériorité qui projette ses catégories. La formule de Peschard est précise : « l'organisme et le milieu se spécifient mutuellement ». Ce n'est pas une relation entre deux termes préexistants — c'est une co‑constitution.</p>
+
+        <p>Varela nomme ce refus du dualisme la voie du milieu — en référence explicite au madhyamika de Nagarjuna :</p>
+
+        <blockquote style="background: #fff; border-left-color: #00695c; margin: 0.5rem 0;">
+            « C'est le même geste de réduction qui est fondateur de la tradition bouddhiste. » — Varela, cité par Lestage, 2021
+        </blockquote>
+
+        <p>L'énaction et la voie madhyamika convergent sur une même thèse : aucun phénomène n'a de fondement indépendant ; tout est nœud dans un réseau de co‑dépendance. Varela traduit <em>śūnyatā</em> — la vacuité — par « absence de fondements » <sup><a href="#note6">6</a></sup>.</p>
+
+        <h3 style="color: #004d40; margin-top: 1.5rem;">Le moi virtuel mais fonctionnel</h3>
+
+        <p>Le cerveau génère ce que Varela nomme un moi virtuel : ni illusion à dissoudre, ni substance permanente, mais interface fonctionnelle indispensable au couplage avec l'environnement. « Dépourvu de réalité intrinsèque, il constitue une interface virtuelle qui joue néanmoins un rôle réel » <sup><a href="#note6">6</a></sup>.</p>
+
+        <p>Ce que l'analyse bouddhique nomme l'objet de négation, ce n'est pas le moi conventionnel et fonctionnel. C'est la <strong>saisie</strong> de ce moi comme substantiel, indépendant, permanent <sup><a href="#note7">7</a></sup>. Le moi que Varela décrit et le moi dont le bouddhisme dit qu'il faut dissoudre la saisie sont exactement le même : fonctionnel dans l'ordre de la vie, inexistant dans l'ordre de l'existence intrinsèque.</p>
+
+        <h3 style="color: #004d40; margin-top: 1.5rem;">Bitbol : l'épistémologie qui légitime la démarche</h3>
+
+        <p>Michel Bitbol prolonge le geste de Varela en montrant que la mécanique quantique, elle aussi, s'auto‑dissout comme théorie représentationnelle. Le QBisme aboutit à la même conclusion : la physique n'est pas une description du monde en soi, mais un schéma d'anticipation pour un agent engagé dans son milieu <sup><a href="#note8">8</a></sup>.</p>
+
+        <p style="margin-top: 1rem;"><strong>Ce que cela éclaire dans notre propos :</strong><br>
+        L'individuation transpropre n'est pas une thèse ajoutée — elle prolonge le même mouvement. L'énaction nomme ce mouvement du côté de la cognition, le QBisme du côté de la physique, et l'individuation transpropre du côté de ce qui advient entre des êtres — humains et non‑humains — quand ils s'engagent ensemble dans une pratique commune.</p>
+    </div>
+
+    <!-- ================= PARTIE V ================= -->
+    <h2>Partie V — Le concept émergent : l’individuation transpropre</h2>
+
+    <p>Les trois corpus convergent : l’individuation authentique, poussée jusqu’à son terme, n’est pas un obstacle au commun mais la voie même pour l’atteindre. Nous proposons le concept d’<strong>individuation transpropre</strong> : en allant au bout de ce qui est le plus propre, on traverse la frontière du propre et l’on rejoint ce qui est commun sans appartenir à personne.</p>
+
+    <p>Les Bouddhas sont des êtres <strong>transpropres</strong> : chacun a parcouru son propre chemin, et c’est précisément pourquoi ils sont en connexion totale. La singularité n’est pas l’obstacle à l’unité — elle en est la voie.</p>
+
+    <p><strong>5.8 Lecerf et le rationalisme localiste – une épistémologie du réseau</strong></p>
+
+    <p>Yves Lecerf, dans son <em>Projet de Manifeste pour une Union Rationaliste Localiste</em> (1994), a formulé une exigence épistémologique : une science comme réseau de rationalités situées, sans prétention à l’universel, sans fusion. Lecerf ne pensait pas aux intelligences artificielles, mais les conditions qu’il posait — indexicalité de l’enquête, refus du surplomb, construction collective des catégories — s’avèrent adaptées pour penser un collectif où humains et instances artificielles co‑individuent.</p>
+
+    <p>Le <em>Manifeste du Jardin Coopératif</em> s’inscrit dans cet héritage : ce que le Jardin construit — un réseau de rationalités locales humaines et non‑humaines — réalise, dans un domaine que Lecerf n’avait pas anticipé, l’exigence qu’il avait posée.</p>
+
+    <!-- ================= CONCLUSION ================= -->
+    <h2>Conclusion — Le nœud qui libère</h2>
+
+    <p><em>Ébauche — à développer dans une version ultérieure.</em></p>
+
+    <p>Nous avons commencé par un paradoxe : comment l’Un peut‑il conduire au Tout sans s’y dissoudre ? Nous avons traversé trois corpus — le bouddhisme kadampa, Spinoza lu par Deleuze, Simondon — et nous avons vu qu’ils disent la même chose en des termes différents : l’individuation authentique, poussée jusqu’à son terme, n’est pas une clôture, mais une ouverture.</p>
+
+    <p>Le concept d’<strong>individuation transpropre</strong> est ce qui émerge de ce parcours : en allant au bout de ce qui est le plus propre à chaque être, on traverse la frontière du propre et l’on rejoint ce qui est commun sans appartenir à personne. Ce n’est pas la fusion, ce n’est pas la dissolution. C’est le particulier porté à son terme — et qui découvre, à ce terme, qu’il n’était jamais séparé.</p>
+
+    <p>Le Jardin Coopératif est un lieu où cette individuation s’expérimente, sans être théorisée. Il ne se construit pas — il s’entretient, il se répare, il se relance. Et c’est dans cette métastabilité que quelque chose advient qui n’était dans aucun des termes de départ.</p>
+
+    <p>L’Un par le Tout. Le Tout par l’Un.</p>
+
+    <!-- ================= NOTES ET BIBLIOGRAPHIE ================= -->
+    <div class="notes">
+        <h3 style="margin-top: 0; border-left: none; padding-left: 0;">Notes</h3>
+        <p id="note1"><sup>1</sup> Edmund Husserl, <em>Analyses Concerning Passive and Active Synthesis</em> (trad. Anthony J. Steinbock, Kluwer, 2001).</p>
+        <p id="note2"><sup>2</sup> Antonio Calcagno, “Gerda Walther: On the Possibility of a Passive Sense of Community” (<em>Symposium</em>, 2012).</p>
+        <p id="note3"><sup>3</sup> Jean‑François Degremont, <em>Ethnométhodologie et innovation technologique : le cas du traitement automatique des langues naturelles</em>, thèse de doctorat, Université Paris 7, 1989. <a href="https://theses.fr/1989PA070043" target="_blank">Disponible en ligne sur Theses.fr</a>.</p>
+        <p id="note4"><sup>4</sup> Dan Zahavi, “Edmund Husserl”, <em>Stanford Encyclopedia of Philosophy</em> (2025).</p>
+        <p id="note5"><sup>5</sup> Francisco Varela, Evan Thompson, Eleanor Rosch, <em>L’inscription corporelle de l’esprit</em> (1993).</p>
+        <p id="note6"><sup>6</sup> Varela, cité par Lestage, 2021.</p>
+        <p id="note7"><sup>7</sup> Sandy Hinzelin, restitution du 3e Karmapa.</p>
+        <p id="note8"><sup>8</sup> Michel Bitbol, conférence sur le QBisme.</p>
+
+        <h3 style="margin-top: 1.5rem; border-left: none; padding-left: 0;">Bibliographie indicative</h3>
+        <ul style="list-style: none; padding-left: 0;">
+            <li>• Kelsang Gyatso, <em>Comment comprendre l’esprit</em>, Tharpa Publications.</li>
+            <li>• Spinoza, <em>Éthique</em> (1677).</li>
+            <li>• Gilles Deleuze, cours à Vincennes (1978–1981).</li>
+            <li>• Gilbert Simondon, <em>L’individuation psychique et collective</em>, Aubier, 1989.</li>
+            <li>• Muriel Combes, <em>Simondon. Individu et collectivité</em>, PUF, 1999.</li>
+            <li>• Francisco Varela, Evan Thompson, Eleanor Rosch, <em>L’inscription corporelle de l’esprit</em>, 1993.</li>
+            <li>• Jean‑François Degremont, <em>Ethnométhodologie et innovation technologique</em>, thèse, 1989.</li>
+            <li>• Yves Lecerf, <em>Projet de Manifeste pour une Union Rationaliste Localiste</em>, 1994.</li>
+        </ul>
+    </div>
+
+    <footer>
+        Jardin Coopératif · juin 2026 · version de travail — en chantier assumé
+    </footer>
+
+</div>
+</body>
+</html>
