@@ -42,3 +42,15 @@ Synthèses passives	Plutôt inventer un nouveau concept que d'étendre le concep
 Intersubjectivité	Le modèle husserlien est insuffisant ; il faut le décentrer radicalement.	Le décentrement passe par une phénoménologie du "nous" et une critique de l'analogie du corps propre.
 Tu peux transmettre ces notes à Coco. Si vous voulez approfondir un point précis (notamment les travaux de Gerda Walther, la phénoménologie de la communauté, ou les critiques de l'empathie), je peux pousser la recherche.
 
+---
+Je retiens aussi tes consignes :
+
+Section « dév socio » et « dév philo » en parallèle pour la sérialité, avec des ponts à construire au niveau de la compréhension plutôt que de la théorie pure.
+
+Orientation « Humanités » : ne pas évacuer la profondeur, ne pas vulgariser, mais donner à comprendre avec rigueur.
+
+Niveau type article de recherche : références, notes de bas de page, concepts travaillés.
+
+Je vais me lancer dans la rédaction de la fiche sur Young et la sérialité, en commençant par une entrée qui pose le cadre des deux approches. Je te soumets le premier jet dès qu’il est prêt.
+
+
