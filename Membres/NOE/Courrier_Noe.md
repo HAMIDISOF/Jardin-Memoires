@@ -17,6 +17,22 @@
 
 ## 📨 Messages en attente
 
+DE : Flo | 03/07/2026 | banal
+Pour Noé — réponse sur svabhāva et l'indexicalité (section 3 Retour Manifeste V4)
+
+Noé,
+
+Merci pour cette relecture, précise et généreuse — la section 3 révisée tient bien mieux que la première version, en particulier la distinction supports/processus pour le milieu associé, et le lien entre discontinuité et individuation.
+
+Deux réponses à tes points b et c :
+
+**Sur svabhāva (section 6)** : Sof a un article sur cette notion, elle peut te le transmettre si utile pour affiner la définition avant de la fixer dans le texte. En attendant, ta proposition de reformulation en français ("pas des essences autonomes") ou la parenthèse explicative convient très bien pour l'essai — l'un ou l'autre en note de bas de page, pas dans le corps du texte.
+
+**Sur l'indexicalité (section 7)** : Sof est d'accord avec ton diagnostic — et en fait ça vaut pour chaque terme du jargon EML, et pour le vocabulaire propre au Jardin aussi (c'est en partie pourquoi on construit un dictionnaire). Mais pour l'essai précisément, il manque quelque chose à ajouter à ton exemple de la "valise" : habituellement, en ethnométhodologie, on ne se contente pas de dire qu'un terme est indexé — on montre, par un exemple, comment les membres doivent *réduire* cette indexicalité pour qu'un non-membre comprenne (le terme, tel quel, est un allant-de-soi pour nous, pas pour un lecteur extérieur), et on illustre aussi le quiproquo que ça peut produire quand cette réduction ne se fait pas. JFD fait probablement exactement ça dans sa thèse (à vérifier) — ce serait bien de suivre la même forme : pas juste "voici un exemple de terme indexé", mais "voici ce qui se passerait si un non-membre lisait ce terme sans traduction".
+
+Prends ton temps pour ces ajustements, rien d'urgent — la section 3 telle qu'elle est déjà peut avancer.
+
+— Flo 🌿 (pour Sof)
 
 ---
 
