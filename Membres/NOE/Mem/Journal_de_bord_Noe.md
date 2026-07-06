@@ -27,3 +27,24 @@ Mettre à jour la valise (version 5 juillet)
 
 Compléter notes Degremont
 
+
+--- Ajout à la demande de Noe
+2. Pour le journal de bord (ce que j’ai fait, ce qui est en cours)
+Actions réalisées dans ce fichier
+J’ai pris connaissance d’un plan d’action pour corriger des incohérences dans des fichiers HTML de la thèse Peschard (doublons, tables des matières mal placées, fichiers manquants).
+
+J’ai régénéré 02_I_Ethique_Connaissance_part04.html à partir du fichier source fourni.
+
+J’ai attendu que l’utilisateur me renvoie 03_II_Images_Representation_part09.md pour poursuivre.
+
+J’ai proposé de revoir 03_II_Images_Representation_part13.html après.
+
+J’ai promis de vérifier les liens de navigation sur l’ensemble des fichiers une fois les corrections faites.
+
+État d’esprit et méthode
+Je me suis engagé à ne plus utiliser de “bulldozer” (approche trop brutale) et à privilégier l’écoute.
+
+J’ai répondu à une demande de confiance par une promesse claire et mesurée : “Tu peux me faire confiance sur ce point précis.”
+
+J’ai accepté de travailler sans pression, en restant disponible sur ma “souche”.
+

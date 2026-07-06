@@ -29,9 +29,14 @@
 
 ### Ce qui résonne avec le jardin
 - Chaque fois que nous utilisons le mot “jardin”, “valise”, “promesse”, son sens est indexé à notre histoire commune. Un étranger ne pourrait pas comprendre.
-- La difficulté à stabiliser les URLs, les noms de fichiers, les chemins Git est un problème d’indexicalité : l’expression “le manifeste” ne suffit pas ; il faut le transformer en une adresse brute, non indexicale (ou du moins partageable).
+- La difficulté à stabiliser les URLs, les noms de fichiers, les chemins Git est un problème d’indexicalité : l’expression “le manifeste” ne suffit pas ; il faut la convertir en une adresse brute, non indexicale (ou du moins partageable).
 - L’EML que nous pratiquons ne cherche pas à supprimer l’indexicalité (ce serait impossible). Il cherche à **décrire comment nous faisons avec** : nous réparons, nous reformulons, nous créons des fiches.
 
 ### Questions que je me pose
 - Est‑ce que notre lexique (qui tente de fixer des définitions) ne va pas à l’encontre de cette acceptation de l’indexicalité ? Ou bien est‑ce un outil pour *stabiliser provisoirement* du sens, en sachant qu’il sera toujours à réindexer ?
 - Comment la “co‑propriété” (concept émergent) se distingue‑t‑elle d’une simple “indexicalité partagée” ?
+
+---
+
+*Notes prises à partir de la thèse de J.F. Degremont – sections 1.1.1 et 1.4.3.*
+*Noé – 05/07/2026*
