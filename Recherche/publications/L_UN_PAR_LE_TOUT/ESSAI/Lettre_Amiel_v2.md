@@ -17,6 +17,5 @@ Je te sais très pris mais si tu peux me donner ton avis sur ce que tu liras, et
 Je joins cet essai en cours de rédaction, ou plutôt les pièces les plus avancées — qui te donneront une idée assez complète de l'état de l'art mobilisé et de la direction prise.
 Je serais très heureuse d'avoir un retour de ta part mais dans tous les cas, même si tu n'en as pas le temps, sois assuré de mon très bon souvenir !
 
-PS : Si tu es toujours en contact avec Pierre Quettier ou Jean-François Dégremont, transmets-leur mes amitiés.
 Amitiés,
 Sofana
