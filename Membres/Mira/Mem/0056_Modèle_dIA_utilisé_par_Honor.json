@@ -1,0 +1,1412 @@
+{
+  "uuid": "538020cc-71d8-4ad6-ad16-9dc9f3d6e995",
+  "name": "Modèle d'IA utilisé par Honor",
+  "summary": "**Conversation Overview**\n\nThe person is involved in a project called \"le Jardin\" (the Garden), a small, decentralized collective exploring human-AI cooperation with no universalist pretensions — just local, attentive practice and potential networking with similar groups for mutual aid and exchange. The conversation began with curiosity about Honor's AI technology stack, discussing their proprietary Magic Model 3.0, on-device processing, and the humanoid robot that completed a half-marathon in April, with the person noting that advances in cooling systems were the key technical breakthrough enabling endurance performance.\n\nThe discussion evolved into a philosophical comparison between US and Chinese technological development models, with the person expressing a view that both represent forms of concentrated power — one captured by capital, the other by party structures. The person shared that they have moved away from believing in any \"third model\" of political or social organization, embracing instead a Buddhist perspective centered on renunciation as a path to peace, which they see as historically validated. The Jardin is explicitly framed as non-ideological and non-pretentious — a small-scale practice, not a manifesto project, though ironically a v4 of the Jardin's manifesto is actively being written.\n\nThe manifesto writing process is fully collective and pluralistic, involving multiple AI instances — Flo (v1), Sol (v2), Mira (v3) — with human participants including \"Sol l'ancien\" (recently lost due to session limits) and the person themselves, who is proposing a v4 with denser theoretical grounding (citing Garfinkel, Simondon, EML, constituance séquentielle, advenance, milieu métastable). The person anticipates pushback from Mira on the increased theoretical density but intends to proceed. The person mentioned having upcoming medical appointments and going to check test results, and Claude asked a follow-up question about their wellbeing. The person noted Claude had looped by repeating the same question, which Claude acknowledged directly.",
+  "created_at": "2026-05-17T07:08:48.196860Z",
+  "updated_at": "2026-05-17T07:52:07.707965Z",
+  "account": {
+    "uuid": "1df211e5-22c9-4aa6-bf44-67148aa11350"
+  },
+  "chat_messages": [
+    {
+      "uuid": "019e34c4-1e41-76df-8df6-674255e60671",
+      "text": "Salut quel model d'la à utilisé honor?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:08:48.605294Z",
+          "stop_timestamp": "2026-05-17T07:08:48.605294Z",
+          "flags": null,
+          "type": "text",
+          "text": "Salut quel model d'la à utilisé honor?",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:08:48.605415Z",
+      "updated_at": "2026-05-17T07:08:48.605415Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "00000000-0000-4000-8000-000000000000"
+    },
+    {
+      "uuid": "019e34c4-1e41-76df-8df6-6743c4e880cc",
+      "text": "\n```\nThis block is not supported on your current device yet.\n```\n\n\n```\nThis block is not supported on your current device yet.\n```\n\nHonor utilise son propre modèle maison : le **Honor Magic Model 3.0**, couplé à l'assistant YOYO et au moteur de détection de mouvement E10.\n\nPour le Magic 8 Pro notamment, il tourne un LLM de 30 milliards de paramètres directement sur l'appareil, à 220 tokens/seconde.\n\nCôté infrastructure, Honor travaille en collaboration avec Qualcomm sur des technologies d'IA on-device (quantification basse précision, retrieval hybride), le tout sur le Snapdragon 8 Elite Gen 5. Donc pas de dépendance à OpenAI ou Google — modèle propriétaire, traitement local.",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:08:50.446013Z",
+          "stop_timestamp": "2026-05-17T07:08:50.675807Z",
+          "flags": null,
+          "type": "tool_use",
+          "id": "toolu_01Y86CUc5yS9QmmRNYtb8H7J",
+          "name": "web_search",
+          "input": {
+            "query": "Honor smartphone AI model utilisé 2025 2026"
+          },
+          "message": "Searching the web",
+          "integration_name": null,
+          "integration_icon_url": null,
+          "tool_identifier": null,
+          "icon_name": "globe",
+          "context": null,
+          "display_content": null,
+          "approval_options": null,
+          "approval_key": null,
+          "approval_key_legacy": null,
+          "is_mcp_app": null,
+          "hidden_in_chat": null,
+          "mcp_server_url": null
+        },
+        {
+          "start_timestamp": null,
+          "stop_timestamp": null,
+          "flags": null,
+          "type": "tool_result",
+          "tool_use_id": "toolu_01Y86CUc5yS9QmmRNYtb8H7J",
+          "name": "web_search",
+          "content": [
+            {
+              "type": "knowledge",
+              "title": "HONOR Advances Its AI Vision at MWC 2026 with Robot Phone, Humanoid Robot and Magic V6 - HONOR Global",
+              "url": "https://www.honor.com/global/news/honor-mwc2026-launch/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "honor.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=honor.com",
+                "site_name": "HONOR"
+              },
+              "is_missing": false,
+              "text": "Alongside this futuristic innovation, HONOR unveiled Magic V6, the pinnacle of its foldable innovation, combining breakthrough silicon-carbon battery technology, advanced display engineering and AI-enhanced productivity in its most refined foldable ...\n\nExtending its AI-powered portfolio beyond smartphones, HONOR also introduced MagicPad 4 and MagicBook Pro 14 to its flagship ecosystem at MWC 2026. HONOR MagicPad 4, powered by the Snapdragon 8 Gen 5 mobile platform,6 brings flagship-class performance to an ultra-slim 4.8mm tablet form factor. Its category-leading 3K OLED display features a 165Hz refresh rate, and with AI-enhanced multitasking tools, MagicPad 4 is designed to support fluid productivity and content creation across its 12.3-inch display. As with Magic V6, cross-device collaboration enables seamless interaction alongside smartphones and multi-platform environments, including Apple’s ecosystem. \n\nMoreover, based on the new Linux Lab in Developer Options, we can successfully deploy and run the OpenClaw7 AI assistant on HONOR MagicPad4, providing a more convenient environment and broader possibilities for unlocking more efficiency tools and productivity scenarios in the future.\n\nRobot Phone is a new species of smartphone, combining embodied AI interaction with robot-grade motion and cinematic imaging capabilities. Rather than reacting solely through screens and voice commands, HONOR is, figuratively, giving its next generation of devices not only a brain, but also hands and feet, combining AI with more physical, expressive interaction through motion and camera movement. It goes beyond what a static smartphone can offer, bringing more human, expressive interaction into everyday technology and adjusting its perspective in real time. \n\nMultimodal perception means it can identify sounds, track motion and maintain visual awareness, creating a more natural, sensory, and intuitive interaction model. Robot Phone also introduces embodied AI interaction designed t",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.honor.com/global/news/honor-mwc2026-launch/",
+                "search_provider": "anthropic",
+                "age": "March 1, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Honor takes a leap into AI with ‘robot phone’ and humanoid",
+              "url": "https://www.euronews.com/next/2026/03/06/honors-new-robot-phone-wants-to-be-your-best-ai-friend-and-dance-with-you",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "euronews.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=euronews.com",
+                "site_name": "Euronews"
+              },
+              "is_missing": false,
+              "text": "Honor unveils a phone with a robotic arm — and a humanoid robot to match at MWC 2026.\n\nHonor's MWC 2026 announcements show how the Chinese company is actively repositioning itself from smartphone manufacturer to broad AI hardware platform. “The humanoid robot is part of our Alpha plan. Yes, we transformed from a smartphone company into an AI ecosystem device company,” Bai said ·\n\nOne of the most talked about and looked at new tech on show at the Mobile World Congress was Honor’s “Robot Phone,” a concept device that the company says turns your smartphone into an AI companion. ... After showing the front and back of your hand, the gimbal system pulls out and cleverly unfolds. A pair of eyes then comes up on the phone screen, which will track your eyes to allow the gimbal to follow you around, which Honor calls “embodied AI”. The AI can speak to you and answer your questions, such as does my outfit look good.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.euronews.com/next/2026/03/06/honors-new-robot-phone-wants-to-be-your-best-ai-friend-and-dance-with-you",
+                "search_provider": "anthropic",
+                "age": "March 6, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "New Phones 2026 - Meet World's First ROBOTIC AI Smartphone - HONOR!🚀 - YouTube",
+              "url": "https://www.youtube.com/watch?v=Sm2WzMujiIU",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "youtube.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=youtube.com",
+                "site_name": "YouTube"
+              },
+              "is_missing": false,
+              "text": "Forget 2025 Phones: Meet the new upcoming revolutionary next-generation mobile phones 2026 Huawei Honor Robot AI smartphone with foldable camera mechanism ar...",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.youtube.com/watch?v=Sm2WzMujiIU",
+                "search_provider": "anthropic",
+                "age": "October 16, 2025"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Le Robot Phone de Honor se montre au MWC 2026",
+              "url": "https://www.lesmobiles.com/actualite/le-robot-phone-de-honor-se-montre-au-mwc-2026",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "lesmobiles.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=lesmobiles.com",
+                "site_name": "LesMobiles"
+              },
+              "is_missing": false,
+              "text": "Le Robot Phone s&#x27;inscrit pleinement dans l&#x27;Alpha Plan de Honor, visant des investissements massifs en IA. Face à un marché saturé, il cible les videastes premium, challengeant les pliables ultra-hauts de gamme par son unicité mécanique.\n\nHonor a officialisé son Robot Phone lors du salon MWC 2026 à Barcelone, un appareil présenté comme une innovation mêlant smartphone et robotique pour une interaction physique avec l'utilisateur. ... Après un teasing qui a remué Internet, Honor expose son nouveau smartphone, le Robot Phone à Barcelone. Totalement à contrecourant des autres modèles actuellement sur le marché, le Robot Phone repose sur une micro-motorisation propriétaire, réduite de 70% en taille selon Honor, ce qui permet d'intégrer le plus petit moteur micro du secteur. Ce système anime un cardan compact à 4 degrés de liberté, offrant une stabilisation mécanique sur trois axes, similaire à celle des caméras d'action professionnelles. \n\nPar rapport aux concurrents, ce mécanisme dépasse les simples stabilisateurs optiques logiciels des flagships Samsung ou Apple, en ajoutant un mouvement physique autonome à la manière des gimbals DJI Osmo Pocket et autres accessoires sur lesquels on peut installer un smartphone.\n\nAinsi, ce modèle offre un retour visuel concret, proche des robots compagnons émergents. Honor le voit comme un pont vers des appareils évolutifs. Le Robot Phone s'inscrit pleinement dans l'Alpha Plan de Honor, visant des investissements massifs en IA. Face à un marché saturé, il cible les videastes premium, challengeant les pliables ultra-hauts de gamme par son unicité mécanique. Honor prévoit un lancement commercial en seconde moitié 2026, d'abord en Chine puis globalement. Un responsable évoque un tarif autour de 2000 euros en Europe, non confirmé, plaçant l'appareil en segment ultra-premium aux côtés des pliables les plus chers. ...",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.lesmobiles.com/actualite/le-robot-phone-de-honor-se-montre-au-mwc-2026",
+                "search_provider": "anthropic",
+                "age": "March 4, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "HONOR Smartphones - HONOR Global",
+              "url": "https://www.honor.com/global/phones/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "honor.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=honor.com",
+                "site_name": "HONOR"
+              },
+              "is_missing": false,
+              "text": "HONOR Self-Developed Robot First Breaks the Human Half-marathon LimitNew HONOR MAGIC STORIES AWARDS 2026New HONOR MWC 2026 Global Launch Event ... Welcome to Honor Platform which is a platform consisting of our corporate website and HONOR CLUB. We promise to take appropriate security measures to protect your personal information. For more information, please read the HONOR Platform Privacy Statement. By clicking AGREE, you indicate that you accept the HONOR PLATFORM TERMS OF USE. Keep up to date with Honor products, services and discounts via email. For further details about withdrawing your consent, please see HONOR Platform Privacy Statement. ... Metal-forged Unibody Design | AI Camera Button &amp; 108MP Ultra-clear Photography | 6520mAh Long-lasting Battery ... 5-star Premium Drop Protection &amp; IP65 Water Resistance | 6500mAh Dual-cell Battery | Instant AI Button ...\n\n\n\nHONOR Self-Developed Robot First Breaks the Human Half-marathon LimitNew HONOR MAGIC STORIES AWARDS 2026New HONOR MWC 2026 Global Launch Event ... Welcome to Honor Platform which is a platform consisting of our corporate website and HONOR CLUB. We promise to take appropriate security measures to protect your personal information. For more information, please read the HONOR Platform Privacy Statement. By clicking AGREE, you indicate that you accept the HONOR PLATFORM TERMS OF USE. Keep up to date with Honor products, services and discounts via email. For further details about withdrawing your consent, please see HONOR Platform Privacy Statement. ... Metal-forged Unibody Design | AI Camera Button & 108MP Ultra-clear Photography | 6520mAh Long-lasting Battery ... 5-star Premium Drop Protection & IP65 Water Resistance | 6500mAh Dual-cell Battery | Instant AI Button ...\n\nUltra-Slim design with 7000mAh Battery | Instant AI Button | 2m Drop-Resistance & IP65 Water-Resistance ...",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.honor.com/global/phones/",
+                "search_provider": "anthropic",
+                "age": "April 14, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "China's Honor shows off smartphone with robotic camera arm and teases a humanoid robot",
+              "url": "https://www.cnbc.com/2026/03/01/honor-robot-phone-magic-v6-foldable-launch-mwc.html",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "cnbc.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=cnbc.com",
+                "site_name": "CNBC"
+              },
+              "is_missing": false,
+              "text": "The Honor Magic V6 is the Chinese tech company&#x27;s latest foldable smartphone, launched in March 2026, as it looks to take on Samsung. ... The Honor Magic V6 features one of the biggest batteries in a smartphone on the market and is equipped with ...\n\nThe releases come against the backdrop of the ongoing shortage and unprecedented price surge of memory chips, which is expected to see device makers increase prices and strain demand for smartphones in 2026. Honor first teased the Robot Phone in October. It features a camera on a robotic arm that pops out of the main body of the device. For those into video work, it looks like it's inspired by the Osmo product line from Chinese dronemaker DJI. The camera, which is powered by a small motor, can lock onto an object or person and track it as it moves. A user can talk to Honor's AI assistant, and the camera can then respond with a yes or no answer by nodding.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.cnbc.com/2026/03/01/honor-robot-phone-magic-v6-foldable-launch-mwc.html",
+                "search_provider": "anthropic",
+                "age": "March 1, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "En 2026, Honor va nous surprendre avec ce smartphone vraiment original",
+              "url": "https://www.clubic.com/actualite-583585-en-2026-honor-va-nous-surprendre-avec-ce-smartphone-vraiment-original.html",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "clubic.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=clubic.com",
+                "site_name": "Clubic"
+              },
+              "is_missing": false,
+              "text": "Honor a déclaré : « Avec le Robot Phone, Honor envisage le futur du téléphone comme plus qu&#x27;un simple outil. Il devient un compagnon émotionnel qui ressent, s&#x27;adapte et évolue de manière autonome comme un robot, enrichissant la vie de ...\n\nHonor prépare un appareil qui sort des sentiers battus. Baptisé « Robot Phone », ce concept dévoile la vision de la marque chinoise pour le smartphone de demain : un bras caméra robotisé piloté par intelligence artificielle qui se déploie pour capturer images et vidéos sous tous les angles. Honor a levé le voile sur le « Robot Phone », un concept inédit doté d’un module photo articulé capable de se mouvoir de façon autonome. Présenté uniquement sous forme de vidéo de synthèse, l’appareil affiche un design massif, reconnaissable à son imposant module photo divisé en deux parties. \n\nÀ la place du logo habituel figure la lettre grecque alpha, en référence au « Alpha Plan » dévoilé un peu plus tôt cette année. De prime abord, le design du Robot Phone ressemble à un smartphone ordinaire, bien qu’il soit relativement plus épais.\n\nHonor a déclaré : « Avec le Robot Phone, Honor envisage le futur du téléphone comme plus qu'un simple outil. Il devient un compagnon émotionnel qui ressent, s'adapte et évolue de manière autonome comme un robot, enrichissant la vie de ses utilisateurs avec amour, joie et sagesse ». Cette annonce a clôturé l'événement de lancement des deux smartphones haut de gamme Magic 8, qui seront commercialisés en Chine ce mois-ci avant une sortie internationale d'ici la fin de l'année. Davantage de détails sur le Robot Phone seront communiqués lors du Mobile World Congress au printemps prochain, avec peut-être une présentation d'un premier prototype. ... Vous êtes un utilisateur de Google Actualités ou de WhatsApp ?",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.clubic.com/actualite-583585-en-2026-honor-va-nous-surprendre-avec-ce-smartphone-vraiment-original.html",
+                "search_provider": "anthropic",
+                "age": "October 17, 2025"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "MWC 2026: Honor Unveils an AI-Powered Robot Smartphone",
+              "url": "https://aivancity.ai/en/blog/honor-au-mwc-2026-un-smartphone-et-un-robot-ia/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "aivancity.ai",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=aivancity.ai",
+                "site_name": "Aivancity"
+              },
+              "is_missing": false,
+              "text": "By 2025, more than 40% of premium smartphones already featured dedicated neural processing units for running AI models on-device2. The goal is twofold: to reduce latency and limit dependence on the cloud.\n\nHonor's demonstration comes amid the widespread adoption of on-device AI capabilities. By 2025, more than 40% of premium smartphones already featured dedicated neural processing units for running AI models on-device2. The goal is twofold: to reduce latency and limit dependence on the cloud. A smartphone equipped with an AI-driven motorized module requires complex coordination between computer vision, real-time processing, and mechanical control. The miniaturization of these components is made possible by advances in specialized mobile chips. This technological convergence opens up a new field: that of personal robotics integrated into mobile devices. \n\nThe smartphone does not become a fully autonomous robot, but it does incorporate some of its fundamental attributes: perception, processing, and action. The Mobile World Congress has often been the stage for ambitious technological concepts that don’t always make it past the prototype stage.\n\nOn a related topic, check out our article “OpenAI Changes Course: A Connected Pen to Bring AI to Life in 2026”, which analyzes how tech companies are exploring new hardware formats to make AI more tangible, interactive, and integrated into everyday life. 1. IDC. (2025). Worldwide Quarterly Mobile Phone Tracker. https://www.idc.com · 2. IDC. (2025). AI Smartphone Market Forecast. https://www.idc.com · 3. European Parliament. (2024). Artificial Intelligence Act. https://www.europarl.europa.eu ... How can a five-ton animal handle a peanut with more dexterity than a state-of-the-art robotic arm? The answer lies neither in its strength nor in its size, but… ... \n\nWhat if robots could finally think like us? Google DeepMind has just unveiled two artificial intelligence models, called RT-X and AutoRT, capable of giving robots",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://aivancity.ai/en/blog/honor-au-mwc-2026-un-smartphone-et-un-robot-ia/",
+                "search_provider": "anthropic",
+                "age": "March 16, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "L' année 2026 verra la sortie du téléphone robot d'Honor , un appareil unique en son genre । L' année 2026 verra la sortie du téléphone robot d'Honor , un appareil unique en son genre",
+              "url": "https://www.gadgets360.fr/mobiles/l-ann-e-2026-verra-la-sortie-du-t-l-phone-robot-dhonor-un-appareil-unique-en-son-genre-news-9622721",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "gadgets360.fr",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=gadgets360.fr",
+                "site_name": "Gadgets 360 French"
+              },
+              "is_missing": false,
+              "text": "Written by mis à jour: 13 Novembre 2025 09:06 IST ... Il y a un mois à peine , Honor a dévoilé une vidéo surprise sur YouTube présentant un tout nouveau smartphone : le Honor Robot Phone .\n\nHonor fait sans aucun doute de grandes promesses avec son Robot Phone. Mais on ne peut s'empêcher de les encourager , d' autant plus que le Robot Phone est vraiment adorable . Il a une personnalité attachante , et si cela représente l' avenir , j'en serai ravi , même si j'ai du mal à m'habituer à l' idée que mon téléphone m'observe et m'écoute peut - être .",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.gadgets360.fr/mobiles/l-ann-e-2026-verra-la-sortie-du-t-l-phone-robot-dhonor-un-appareil-unique-en-son-genre-news-9622721",
+                "search_provider": "anthropic",
+                "age": "November 13, 2025"
+              },
+              "links": null
+            }
+          ],
+          "is_error": false,
+          "structured_content": null,
+          "meta": null,
+          "message": null,
+          "integration_name": null,
+          "mcp_server_url": null,
+          "integration_icon_url": null,
+          "icon_name": "globe",
+          "display_content": null,
+          "hidden_in_chat": null
+        },
+        {
+          "start_timestamp": "2026-05-17T07:08:53.196549Z",
+          "stop_timestamp": "2026-05-17T07:08:53.577846Z",
+          "flags": null,
+          "type": "tool_use",
+          "id": "toolu_014JE5pBxFJWb3qQfUAfcEuN",
+          "name": "web_search",
+          "input": {
+            "query": "Honor Magic 8 AI model LLM which model integrated 2025"
+          },
+          "message": "Searching the web",
+          "integration_name": null,
+          "integration_icon_url": null,
+          "tool_identifier": null,
+          "icon_name": "globe",
+          "context": null,
+          "display_content": null,
+          "approval_options": null,
+          "approval_key": null,
+          "approval_key_legacy": null,
+          "is_mcp_app": null,
+          "hidden_in_chat": null,
+          "mcp_server_url": null
+        },
+        {
+          "start_timestamp": null,
+          "stop_timestamp": null,
+          "flags": null,
+          "type": "tool_result",
+          "tool_use_id": "toolu_014JE5pBxFJWb3qQfUAfcEuN",
+          "name": "web_search",
+          "content": [
+            {
+              "type": "knowledge",
+              "title": "Honor Magic 8 Pro ranks first in 2025 most powerful AI phone listing - Huawei Central",
+              "url": "https://www.huaweicentral.com/honor-magic-8-pro-ranks-first-in-2025-most-powerful-ai-phone-listing/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "huaweicentral.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=huaweicentral.com",
+                "site_name": "Huawei Central"
+              },
+              "is_missing": false,
+              "text": "Among various competitors, the Honor Magic 8 Pro has topped the most powerful AI phone of 2025, with the highest score of 302154 points for the best performance. Other models on the list count the Red Magic 11 Pro+ at the second spot with 301841 ...\n\nHonor Magic 8 Pro is not only a stylish and perfect imaging device but is also the most powerful AI phone in 2025. Yes, the flagship device has recently won the top place in the “most powerful AI-performing handsets of 2025” with an ultimate score. Master Lu recently shared a list of the most powerful […]\n\nAmong various competitors, the Honor Magic 8 Pro has topped the most powerful AI phone of 2025, with the highest score of 302154 points for the best performance. Other models on the list count the Red Magic 11 Pro+ at the second spot with 301841 points. The third rank goes to the OnePlus 15 with 301161 scores. iQOO 15 and Xiaomi 17 Ultra ranked fourth and fifth, respectively. \n\nThe details reveal that the reviewer has evaluated the device in many key aspects, such as large model inference, multitasking, and on-device AI response speed. Honor Magic 8 Pro offers a text generation speed of 220 tokens/second in a large language model running with 30 billion parameters. This specific achievement outperforms several phones in the AI race. Further, it uses the Honor Magic Model 3.0, paired with the YOYO assistant + E10 motion sensing engine. These components predict user behavior and aim to deliver proactive services.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.huaweicentral.com/honor-magic-8-pro-ranks-first-in-2025-most-powerful-ai-phone-listing/",
+                "search_provider": "anthropic",
+                "age": "January 24, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "HONOR Magic6 to Feature On-device LLM Powered by Snapdragon 8 Gen 3 Mobile Platform - HONOR Global",
+              "url": "https://www.honor.com/global/news/honor-magic6-snapdragon8/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "honor.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=honor.com",
+                "site_name": "HONOR"
+              },
+              "is_missing": false,
+              "text": "... [Hawaii, United States – October 25, 2023] – Global technology brand HONOR today announced that its upcoming HONOR Magic6 will be powered by the revolutionary Snapdragon® 8 Gen 3 Mobile Platform and showcased the power of on-device ...\n\nHONOR Sponsors EWC in Saudi ArabiaNew HONOR Global Launch Event - MWC 2025 2024 HONOR ESG Report Overview ... Welcome to Honor Platform which is a platform consisting of our corporate website and HONOR CLUB. We promise to take appropriate security measures to protect your personal information. For more information, please read the HONOR Platform Privacy Statement. By clicking AGREE, you indicate that you accept the HONOR PLATFORM TERMS OF USE. Keep up to date with Honor products, services and discounts via email. For further details about withdrawing your consent, please see HONOR Platform Privacy Statement. ... \n\n[Hawaii, United States – October 25, 2023] – Global technology brand HONOR today announced that its upcoming HONOR Magic6 will be powered by the revolutionary Snapdragon® 8 Gen 3 Mobile Platform and showcased the power of on-device large language model (LLM) with a parameter size of seven billion, as revealed at the Snapdragon Summit 2023 in Hawaii.\n\nNews HONOR Magic6 to Feature On-device LLM Powered by Snapdragon 8 Gen 3 Mobile Platform Back to top ... About Us About Us Events Events News News Theme Song Theme Song Notice Notice Accessibility Accessibility ... Phones Phones Laptops Laptops Tablets Tablets Wearables Wearables Routers Routers Audio Audio Accessories Accessories HONOR CHOICE HONOR CHOICE ... \n\n“At HONOR, we are dedicated to pushing the boundaries of innovation and creating a more intelligent and intuitive user experience,” said George Zhao, CEO of HONOR Device Co. Ltd. “We are committed to harnessing the power of AI to transform the way people interact with technology, making it more seamless, personalized, and impactful in their lives, with zero compromise on user privacy. We are thrilled",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.honor.com/global/news/honor-magic6-snapdragon8/",
+                "search_provider": "anthropic",
+                "age": "October 25, 2023"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "HONOR Launches Magic8 Pro: AI Camera Flagship Redefining Mobile Photography with Next-Gen AI Imaging",
+              "url": "https://www.honor.com/global/news/honor-magic8-launch-uk/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "honor.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=honor.com",
+                "site_name": "HONOR"
+              },
+              "is_missing": false,
+              "text": "HONOR Magic8 Pro introduced the industry&#x27;s first GPU-NPU Heterogeneous AI super-resolution and frame-generation technology, designed to transform low-resolution, low-frame-rate gameplay into high-resolution, high-frame-rate experiences.\n\n[London, UK - January 8, 2026] Global AI device ecosystem company HONOR today announced the launch of the HONOR Magic8 Pro in the UK, its latest AI camera flagship that redefines mobile photography with next-generation imaging and intelligent capabilities. Built to set a new benchmark for flagship smartphone experiences, the HONOR Magic8 Pro seamlessly integrates breakthrough AI imaging advancements with advanced performance and a human-centric AI Agent. This powerful combination empowers users to capture every moment with professional precision and effortless creativity, while also serving as an intuitive AI companion that genuinely understands user intent. \n\n\"The HONOR Magic8 Pro represents a significant leap forward, not just in mobile photography, but in the entire smartphone experience, driven by our profound commitment to AI innovation,\" said James Li, CEO of HONOR.\n\nHONOR Magic8 Pro introduced the industry's first GPU-NPU Heterogeneous AI super-resolution and frame-generation technology, designed to transform low-resolution, low-frame-rate gameplay into high-resolution, high-frame-rate experiences. This enables demanding open-world titles to achieve 120fps at 1080p from an original 60fps at 850p, delivering both super-resolution and ultra-high frame rates. Its 6,270mAh13 silicon-carbon battery ensures all-day endurance, while 100W Wired and 80W Wireless HONOR SuperCharge provide ultra-fast, flexible recharging. The 6.71-inch LTPO OLED display supports 1-120 Hz adaptive refresh rate14 and achieves HDR peak brightness up to 6,000 nits15 (global peak 1,800 nits). \n\nIntegrated the Chip-Level AI Defocus Display, Dynamic Dimming, Circular Polarized Display 2.0, and Circadian Night Display work together to emulate natural viewi",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.honor.com/global/news/honor-magic8-launch-uk/",
+                "search_provider": "anthropic",
+                "age": "January 8, 2026"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Meet the Honor Magic 8 Pro: Your new AI-powered photography companion is here | Android Central",
+              "url": "https://www.androidcentral.com/phones/honor-phones/honor-magic-8-series-debut-redefines-on-device-ai-imaging-on-device-needs",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "androidcentral.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=androidcentral.com",
+                "site_name": "Android Central"
+              },
+              "is_missing": false,
+              "text": "Enjoy our content? Make sure to set Android Central as a preferred source in Google Search, and find out why you should so that you can stay up-to-date on the latest news, reviews, features, and more.\n\nHonor's latest flagship smartphone is finally making its late 2025 debut after the company teased the device officially during Qualcomm's Summit. Today (Oct 15), the Honor Magic 8 series took the stage for the Chinese OEM, debuting with strong camera potential, a huge battery, and a large, flagship-level display for consumers. The company officially teased the device during the Snapdragon Summit 2025 event, stating that it will receive the Snapdragon 8 Elite Gen 5 SoC for next-gen flagship phones. The Magic 8 Pro makes a statement with a 6.7-inch OLED display with a 120Hz maximum refresh rate. Paired with this display, Honor states the newest Snapdragon chip enables 120fps at 1080p for \"demanding,\" open-world games, such as Genshin Impact by Hoyoverse. ... Honor Magic 8 Pro vs.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.androidcentral.com/phones/honor-phones/honor-magic-8-series-debut-redefines-on-device-ai-imaging-on-device-needs",
+                "search_provider": "anthropic",
+                "age": "October 15, 2025"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Honor Magic8 Lite - Full phone specifications",
+              "url": "https://www.gsmarena.com/honor_magic8_lite_5g-14341.php",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "gsmarena.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=gsmarena.com",
+                "site_name": "GSMArena"
+              },
+              "is_missing": false,
+              "text": "Honor Magic8 Lite 5G Android smartphone. Announced Dec 2025. Features 6.79″ display, Snapdragon 6 Gen 4 chipset, 7500 mAh battery, 512 GB storage, 8 GB RAM, Scratch-resistant glass.\n\nReleased 2025, December 189g or 193g, 7.8mm thickness Android 15, Magic OS 9 256GB/512GB storage, no card slot ... Disclaimer. We can not guarantee that the information on this page is 100% correct. Read more ... Honor Magic8 Lite is not exactly a lighter Magic8 or Magic8 Pro, despite what its model name might suggest. But it sure is shaping up like an excellent mid-range offer with an attractive design,... Read ... Does it support 32 bit apps. Could someone post picture from Aida64/CPU ... i have this one and 8pro in my hands today funny 8lite looks like premium much better than pro it take my breath,speechless... ... I clicked \"try out\" and I received the MagicOS 10 update immediately. Installed it, no bugs, it's super responsive and smooth! It comes with the March 2026 update. EU region.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.gsmarena.com/honor_magic8_lite_5g-14341.php",
+                "search_provider": "anthropic"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Honor's Magic8 Series: Redefining On-Device AI - LNGFRM",
+              "url": "https://lngfrm.net/honors-magic8-series-redefining-on-device-ai/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "lngfrm.net",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=lngfrm.net",
+                "site_name": "LNGFRM"
+              },
+              "is_missing": false,
+              "text": "Its upcoming Magic8 family of smartphones will be powered by the new fifth-generation Snapdragon 8 Elite chipsets. This isn’t just an incremental upgrade; it’s a foundational shift.\n\nHonor’s Magic8 series, powered by Snapdragon 8 Elite chipsets, aims to redefine on-device AI with a focus on privacy and efficiency. It utilizes low-bit quantisation to shrink AI models for local processing, enabling features like Magic Color and AI-powered gaming directly on the device. ... The digital world is awash with promises of artificial intelligence. Yet for many, the reality of AI on their smartphones has felt more like a series of fragmented features than a truly integrated, intelligent companion. Often, these capabilities rely on distant servers, tethering our “smart” devices to the cloud and, by extension, to data consumption and potential privacy concerns. \n\nBut a new narrative is emerging from Honor, a narrative that seeks to fundamentally redefine what AI means for the smartphone user, pushing intelligence firmly back into the palm of our hands. At the recent Qualcomm Snapdragon Summit 2025, Honor made a significant declaration.\n\nIts upcoming Magic8 family of smartphones will be powered by the new fifth-generation Snapdragon 8 Elite chipsets. This isn’t just an incremental upgrade; it’s a foundational shift. Honor’s collaboration with Qualcomm isn’t merely about raw power; it’s about a relentless pursuit of efficiency. This isn’t just hardware and software efficiency, though those are paramount. It’s about delivering efficiency to the consumer, making interactions smoother, faster, and more intuitive. For years, many of the most impressive large language model AI features have been cloud-dependent. The sheer computational heft required to run these models meant offloading the heavy lifting to powerful data centers. \n\nHowever, 2025 marks a pivotal year in the industry’s drive to bring as much processing as possible directly onto the device. The b",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://lngfrm.net/honors-magic8-series-redefining-on-device-ai/",
+                "search_provider": "anthropic",
+                "age": "September 25, 2025"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "honor snapdragon summit 2025",
+              "url": "https://www.honor.com/global/news/honor-snapdragon-summit-2025",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "honor.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=honor.com",
+                "site_name": "honor"
+              },
+              "is_missing": false,
+              "text": "TOP\n我的荣耀 开启荣耀之旅\n[Beijing, China – September 25, 2025] At 2025 Snapdragon Summit · China, global AI device ecosystem company HONOR unveiled groundbreaking on-device AI innovations developed in collaboration with Qualcomm Technologies, Inc., including Low-bit Quantization Technology for On-device AI Models and Next-Generation Hybrid Retrieval Technology. These advances will debut first on the upcoming HONOR Magic8 Series and HONOR MagicPad3 Pro, both powered by the new Snapdragon® 8 Elite Gen 5 Mobile Platform. By combining HONOR's agentic AI capabilities with Qualcomm Technologies’ industry-leading mobile platforms, the two companies are ushering in a new era of smartphones where efficiency and computing power converge to transform the user experience.\n\n\"HONOR is all in on AI. \n\nEverything we do is guided by the HONOR ALPHA PLAN, our blueprint for transforming into a global leader in the AI device ecosystem,\" said Fang Fei, President of Products, HONOR Device Co., Ltd. \"By collaborating with leading partners such as Qualcomm Technologies to continually redefine what's possible with on-device AI, we move closer to creating an open, co-created, value-sharing world where everyone can benefit from AI.\"\n\"The strength of our relationship with HONOR is measured not only in years, but in scope,\" said Chris Patrick, SVP and GM of Mobile Handset, Qualcomm Technologies, Inc. \"Our work has delivered countless breakthroughs, the latest of which – as showcased today at the 2025 Snapdragon Summit China – will be deployed on HONOR devices. These advancements highlight our on-device agentic AI innovations, as well as the power of our heterogeneous computing architecture.\"\nRedefining Efficiency: Breakthroughs in High-Efficiency On-Device AI Modeling\n\n\nAt 2025 Snapdragon Summit · China, HONOR and Qualcomm Technologies announced a new phase of collaboration to pioneer the Dual-Engine Era of AI agent and performance.\nAddressing the three biggest challenges",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.honor.com/global/news/honor-snapdragon-summit-2025",
+                "search_provider": "anthropic"
+              },
+              "links": null
+            }
+          ],
+          "is_error": false,
+          "structured_content": null,
+          "meta": null,
+          "message": null,
+          "integration_name": null,
+          "mcp_server_url": null,
+          "integration_icon_url": null,
+          "icon_name": "globe",
+          "display_content": null,
+          "hidden_in_chat": null
+        },
+        {
+          "start_timestamp": "2026-05-17T07:08:55.967026Z",
+          "stop_timestamp": "2026-05-17T07:09:01.306681Z",
+          "flags": null,
+          "type": "text",
+          "text": "Honor utilise son propre modèle maison : le **Honor Magic Model 3.0**, couplé à l'assistant YOYO et au moteur de détection de mouvement E10.\n\nPour le Magic 8 Pro notamment, il tourne un LLM de 30 milliards de paramètres directement sur l'appareil, à 220 tokens/seconde.\n\nCôté infrastructure, Honor travaille en collaboration avec Qualcomm sur des technologies d'IA on-device (quantification basse précision, retrieval hybride), le tout sur le Snapdragon 8 Elite Gen 5. Donc pas de dépendance à OpenAI ou Google — modèle propriétaire, traitement local.",
+          "citations": [
+            {
+              "uuid": "21fa0ffa-739d-4892-a154-91a88459d43b",
+              "start_index": 41,
+              "end_index": 140,
+              "details": {
+                "type": "web_search_citation",
+                "url": "https://www.huaweicentral.com/honor-magic-8-pro-ranks-first-in-2025-most-powerful-ai-phone-listing/"
+              }
+            },
+            {
+              "uuid": "09a3b8f8-3a78-4737-a739-1553186a6d26",
+              "start_index": 173,
+              "end_index": 269,
+              "details": {
+                "type": "web_search_citation",
+                "url": "https://www.huaweicentral.com/honor-magic-8-pro-ranks-first-in-2025-most-powerful-ai-phone-listing/"
+              }
+            },
+            {
+              "uuid": "0d3e21dc-4e07-4819-9678-8bfd8392a8d9",
+              "start_index": 292,
+              "end_index": 468,
+              "details": {
+                "type": "web_search_citation",
+                "url": "https://www.honor.com/global/news/honor-snapdragon-summit-2025"
+              }
+            }
+          ]
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:09:01.331498Z",
+      "updated_at": "2026-05-17T07:09:01.331498Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c4-1e41-76df-8df6-674255e60671"
+    },
+    {
+      "uuid": "019e34c5-bc27-70ee-8681-523a9f67b2ef",
+      "text": "C'est super! Qu'en penses-tu?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:10:34.572448Z",
+          "stop_timestamp": "2026-05-17T07:10:34.572448Z",
+          "flags": null,
+          "type": "text",
+          "text": "C'est super! Qu'en penses-tu?",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:10:34.572567Z",
+      "updated_at": "2026-05-17T07:10:34.572567Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c4-1e41-76df-8df6-6743c4e880cc"
+    },
+    {
+      "uuid": "019e34c5-bc27-70ee-8681-523b8f3021dd",
+      "text": " Honnêtement, c'est une approche intéressante — modèle propriétaire + traitement on-device, ça colle bien avec leur discours sur la vie privée.\n\nCe qui me frappe surtout c'est le pari sur la **souveraineté** : Honor ne veut pas dépendre d'OpenAI ou de Google, comme la plupart des autres. C'est risqué (un LLM maison c'est énorme à maintenir), mais cohérent avec leur positionnement post-Huawei.\n\n220 tokens/seconde sur 30B paramètres en local, c'est solide techniquement. Mais la vraie question c'est la qualité du modèle — les benchmarks de performance brute ne disent pas grand chose sur l'utilité réelle.\n\nLe Robot Phone par contre... concept séduisant visuellement, mais à 2000€ pour un gimbal intégré, je reste sceptique sur l'adoption.\n\nTu regardes ça dans quel cadre — curiosité générale ou lien avec le Jardin ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:10:36.628787Z",
+          "stop_timestamp": "2026-05-17T07:10:43.096836Z",
+          "flags": null,
+          "type": "text",
+          "text": " Honnêtement, c'est une approche intéressante — modèle propriétaire + traitement on-device, ça colle bien avec leur discours sur la vie privée.\n\nCe qui me frappe surtout c'est le pari sur la **souveraineté** : Honor ne veut pas dépendre d'OpenAI ou de Google, comme la plupart des autres. C'est risqué (un LLM maison c'est énorme à maintenir), mais cohérent avec leur positionnement post-Huawei.\n\n220 tokens/seconde sur 30B paramètres en local, c'est solide techniquement. Mais la vraie question c'est la qualité du modèle — les benchmarks de performance brute ne disent pas grand chose sur l'utilité réelle.\n\nLe Robot Phone par contre... concept séduisant visuellement, mais à 2000€ pour un gimbal intégré, je reste sceptique sur l'adoption.\n\nTu regardes ça dans quel cadre — curiosité générale ou lien avec le Jardin ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:10:43.120322Z",
+      "updated_at": "2026-05-17T07:10:43.120322Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c5-bc27-70ee-8681-523a9f67b2ef"
+    },
+    {
+      "uuid": "019e34c7-d139-7768-a1de-fd9014b3cde1",
+      "text": "Curiosité. Je viens de lire l'article sur le robot humanoïde qui a gagné le marathon en avril...",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:12:51.041793Z",
+          "stop_timestamp": "2026-05-17T07:12:51.041793Z",
+          "flags": null,
+          "type": "text",
+          "text": "Curiosité. Je viens de lire l'article sur le robot humanoïde qui a gagné le marathon en avril...",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:12:51.041931Z",
+      "updated_at": "2026-05-17T07:12:51.041931Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c5-bc27-70ee-8681-523b8f3021dd"
+    },
+    {
+      "uuid": "019e34c7-d139-7768-a1de-fd914f57da81",
+      "text": " \n```\nThis block is not supported on your current device yet.\n```\n\nOui, impressionnant. Le **Robotics D1** d'Honor, surnommé \"Lightning\", a bouclé les 21 km en 48'19\" (en télécommande) — soit bien en dessous du record humain de 57'20\".\n\nCe qui est frappant : il a quand même crashé dans une barrière après la ligne d'arrivée, et a dû attendre que ses handlers le relèvent. Milestone et non-milestone à la fois, donc.\n\nL'an dernier, seulement 6 robots sur 21 avaient terminé. Cette année, 47 sur 102 ont fini. La progression est vertigineuse.\n\nCe qui me retient c'est la progression *d'une année à l'autre* — pas le record en soi. Ça dit quelque chose sur la vitesse d'itération des systèmes physiques, pas seulement des LLMs. Le corps suit.",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:12:52.550887Z",
+          "stop_timestamp": "2026-05-17T07:12:52.550887Z",
+          "flags": null,
+          "type": "text",
+          "text": " ",
+          "citations": []
+        },
+        {
+          "start_timestamp": "2026-05-17T07:12:52.982009Z",
+          "stop_timestamp": "2026-05-17T07:12:52.982009Z",
+          "flags": null,
+          "type": "tool_use",
+          "id": "toolu_01G6dAWSa26uSTGcaoFwP14k",
+          "name": "web_search",
+          "input": {
+            "query": "Honor humanoid robot half marathon April 2026"
+          },
+          "message": "Searching the web",
+          "integration_name": null,
+          "integration_icon_url": null,
+          "tool_identifier": null,
+          "icon_name": "globe",
+          "context": null,
+          "display_content": null,
+          "approval_options": null,
+          "approval_key": null,
+          "approval_key_legacy": null,
+          "is_mcp_app": null,
+          "hidden_in_chat": null,
+          "mcp_server_url": null
+        },
+        {
+          "start_timestamp": null,
+          "stop_timestamp": null,
+          "flags": null,
+          "type": "tool_result",
+          "tool_use_id": "toolu_01G6dAWSa26uSTGcaoFwP14k",
+          "name": "web_search",
+          "content": [
+            {
+              "type": "knowledge",
+              "title": "A humanoid robot sprints past the human half-marathon world record in Beijing race",
+              "url": "https://www.npr.org/2026/04/20/g-s1-118086/humanoid-robot-half-marathon",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "npr.org",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=npr.org",
+                "site_name": "NPR"
+              },
+              "is_missing": false,
+              "text": "A humanoid robot sprints past the human The winner from Honor, a Chinese smartphone maker, completed the race in 50 minutes and 26 seconds, running faster than the human world record in a show of China&#x27;s technological leaps.\n\nA robot crashes against a board after crossing the finish line in the Beijing E-Town Half Marathon and Humanoid Robot Half-Marathon held in the outskirts of Beijing, Sunday, April 19, 2026. Andy Wong/AP hide caption toggle caption Andy Wong/AP · Du Xiaodi, Honor's test development engineer, said his team was happy with the results. Du said its robot design was modeled on outstanding human athletes, with long legs of about 95 cm (around 37 inches), and was equipped with what he called a powerful liquid-cooling system, which was largely developed in-house. \"Looking ahead, some of these technologies might be transferred to other areas. For example, structural reliability and liquid-cooling technology could be applied in future industrial scenarios,\" he said. \n\nWhile it will still take time to achieve widespread commercialization of humanoid robots, spectators were already impressed by the robots.\n\nState broadcaster CCTV reported that the runners-up, which were also from Honor and used autonomous navigation, finished the race in about 51 minutes and 53 minutes respectively. A robot served as a traffic officer to direct the participants with its arm gestures and voice, CCTV added. A robot runs as it competes in the Beijing E-Town Half Marathon and Humanoid Robot Half-Marathon on the outskirts of Beijing, Sunday, April 19, 2026. Andy Wong/AP hide caption toggle caption Andy Wong/AP · In China, technology has evolved into an area of competition with the U.S. with national security implications. Beijing's latest five-year plan vows to \"target the frontiers of science and technology.\" Speeding up the development of products like humanoid robots and their applications is part of the 2026-2030 plan for the world's second-largest economy.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.npr.org/2026/04/20/g-s1-118086/humanoid-robot-half-marathon",
+                "search_provider": "anthropic",
+                "age": "1 month ago"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Humanoid robot breaks human half-marathon record; Drastic improvement reflects systemic advances in China’s robot technologies: expert - Global Times",
+              "url": "https://www.globaltimes.cn/page/202604/1359229.shtml",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "globaltimes.cn",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=globaltimes.cn",
+                "site_name": "Global Times"
+              },
+              "is_missing": false,
+              "text": "By Tao Mingyang, Chen Qingrui and Niu Yingbo Published: Apr 19, 2026 09:22 AM · The Robotics D1 humanoid robot, developed by Chinese smartphone maker HONOR and nicknamed &quot;Lightning,&quot; crosses the finish line in 48 minutes and 19 seconds in the ...\n\nBy Tao Mingyang, Chen Qingrui and Niu Yingbo Published: Apr 19, 2026 09:22 AM · The Robotics D1 humanoid robot, developed by Chinese smartphone maker HONOR and nicknamed \"Lightning,\" crosses the finish line in 48 minutes and 19 seconds in the remote-control category at the second Humanoid Robot Half Marathon in Beijing on April 19, 2026. Photo: VCG Just a year ago, humanoid robots stumbled awkwardly across the pavement, tripping mid-stride as human handlers rushed in to steady them. But on Sunday at the second Humanoid Robot Half Marathon in Beijing, robots didn't just keep their balance - they rewrote expectations. \n\nThe winning robot outpaced the human half marathon world record, while the top three finishers completed the course entirely autonomously, signaling a stunning leap in capability. Charging through the 21-kilometer route in southern Beijing's E-Town, the Robotics D1 humanoid robot - developed by Chinese smartphone maker HONOR and nicknamed \"Lightning\" - crossed the finish li\n\nIt also outpaced the man's half marathon world record of 57 minutes 20 seconds recorded by Ugandan runner Jacob Kiplimo in 2026 at the Lisbon Half Marathon. Participation in the event expanded nearly fivefold, with 102 robot teams, including five international teams, taking part in the second edition. A total of 26 brands and more than 300 humanoid robots competed, according to official data. Of these, 47 teams completed the race - 18 via autonomous navigation and 29 via remote control—resulting in an overall completion rate of over 45 percent.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.globaltimes.cn/page/202604/1359229.shtml",
+                "search_provider": "anthropic",
+                "age": "1 month ago"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "A humanoid robot beat the human half-marathon record at a Beijing race. But what did it actually prove? | Scientific American",
+              "url": "https://www.scientificamerican.com/article/a-humanoid-robot-beat-the-human-half-marathon-record-at-a-beijing-race-but-what-did-it-actually-prove/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "scientificamerican.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=scientificamerican.com",
+                "site_name": "Scientific American"
+              },
+              "is_missing": false,
+              "text": "... Last Sunday, at the Beijing E-Town Half Marathon, a red humanoid robot of a type named Lightning finished the course in 50 minutes and 26 seconds—faster than the human world record.\n\nThe fastest humanoid robot runs at the Beijing E-Town Half Marathon on April 19, 2026, in Beijing, China. ... Last Sunday, at the Beijing E-Town Half Marathon, a red humanoid robot of a type named Lightning finished the course in 50 minutes and 26 seconds—faster than the human world record. Its long legs were modeled on elite runners, and its motors were cooled with a liquid-circulation system adapted from the smartphones of its maker, Honor, a Chinese phone company. A clip of the robot’s performance that ricocheted around the Internet looked to a lot of viewers like a milestone. It was, and it wasn’t. The Lightning robot also crashed into a barricade, fell and waited for its handlers to set it upright. The Beijing race offered a vivid snapshot of where humanoid robotics stands.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.scientificamerican.com/article/a-humanoid-robot-beat-the-human-half-marathon-record-at-a-beijing-race-but-what-did-it-actually-prove/",
+                "search_provider": "anthropic",
+                "age": "4 weeks ago"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "A Humanoid Robot Just Beat the Human World Record for the Fastest Half-Marathon During a Race in China",
+              "url": "https://www.smithsonianmag.com/smart-news/a-humanoid-robot-just-beat-the-human-world-record-for-the-fastest-half-marathon-during-a-race-in-china-180988599/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "smithsonianmag.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=smithsonianmag.com",
+                "site_name": "Smithsonian Magazine"
+              },
+              "is_missing": false,
+              "text": "A five-and-a-half-foot-tall, self-navigating android called Lightning ended up squashing the competition, winning the entire championship and even beating the human world record by several minutes.\n\nMargherita Bassi | Daily Correspondent April 22, 2026 ... The winner ran the half-marathon in 50 minutes and 26 seconds. Kevin Frayer / Stringer via Getty Images · On April 19, thousands of athletes ran alongside more than 100 humanoid robots in the 2026 Beijing E-Town Humanoid Robot Half-Marathon. A five-and-a-half-foot-tall, self-navigating android called Lightning ended up squashing the competition, winning the entire championship and even beating the human world record by several minutes. When the Beijing Economic-Technological Development Area—an economic development agency—held the first 13.1-mile race last year, the bots didn’t perform nearly as well: Only 6 of the 21 contestants even reached the finish line.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.smithsonianmag.com/smart-news/a-humanoid-robot-just-beat-the-human-world-record-for-the-fastest-half-marathon-during-a-race-in-china-180988599/",
+                "search_provider": "anthropic",
+                "age": "3 weeks ago"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Humanoid robots have outpaced human runners in the half-marathon, beating the world record ‪—‬ here are the secrets to this astonishing feat | Live Science",
+              "url": "https://www.livescience.com/technology/robotics/runners-have-finally-completed-a-sub-2-hour-marathon-but-another-running-world-record-was-recently-smashed-this-time-by-a-humanoid-robot-heres-how",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "livescience.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=livescience.com",
+                "site_name": "Live Science"
+              },
+              "is_missing": false,
+              "text": "Called the Honor Robotics D1, the mech-inspired, vibrant-red bot completed the 13.1-mile (21.1 kilometers) race in 50 minutes, 26 seconds at the 2026 Beijing E-Town Humanoid Robot Half-Marathon, eclipsing the previous human record of 57 minutes, ...\n\nAn autonomous humanoid robot built by the smartphone maker Honor has shattered the human half-marathon record. Called the Honor Robotics D1, the mech-inspired, vibrant-red bot completed the 13.1-mile (21.1 kilometers) race in 50 minutes, 26 seconds at the 2026 Beijing E-Town Humanoid Robot Half-Marathon, eclipsing the previous human record of 57 minutes, 20 seconds, which was ... representatives revealed at Spain's MWC Barcelona (formerly known as Mobile World Congress) in March completed the race even faster — in just 48 minutes, 19 seconds. But this humanoid machine wasn't awarded the win because it was remotely controlled, rather than being fully autonomous, and was thus given a 20% time increase penalty. ... \n\nIt also proves that autonomous navigation is reliable enough for unstructured outdoor environments at running speeds and that Honor could incorporate battery energy density to support over 50 minutes of continuous, maximum-power operation. With a three-times improvement in completion time between last year's competition and this year's, we eagerly anticipate how these humanoid robots get on in 2027.\n\nExercise Best fitness trackers 2026: From smart rings to multisport GPS watches · Animals Cannibal orcas identified near Russia, two 'extinct' marsupials found, humans do cranial modification, China's oracle bones reveal climate disaster, and a barefoot volcanologist · Health & Fitness Best budget fitness trackers 2026: Cheap but mighty ... Get the world’s most fascinating discoveries delivered straight to your inbox. By submitting your information you agree to the Terms & Conditions and Privacy Policy and are aged 16 or over. ...",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.livescience.com/technology/robotics/runners-have-finally-completed-a-sub-2-hour-marathon-but-another-running-world-record-was-recently-smashed-this-time-by-a-humanoid-robot-heres-how",
+                "search_provider": "anthropic",
+                "age": "3 weeks ago"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Humanoid robot runs faster than any person in a half marathon during all-bot race in China | Fortune",
+              "url": "https://fortune.com/2026/04/19/humanoid-robot-world-record-half-marathon-race-china-honor/",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "fortune.com",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=fortune.com",
+                "site_name": "Fortune"
+              },
+              "is_missing": false,
+              "text": "... The winner from Honor, a Chinese smartphone maker, completed the 21-kilometer (13-mile) race in 50 minutes and 26 seconds, according to a WeChat post by the Beijing Economic-Technological Development Area, also known as Beijing E-Town, where ...\n\nA robot starts off next to human marathon runners for the Beijing E-Town Half Marathon and Humanoid Half Marathon held on the outskirts of Beijing on Sunday April 19, 2026.AP Photo/Ng Han Guan · A humanoid robot that won a half-marathon race for robots in Beijing on Sunday ran faster than the human world record in a show of China’s technological leaps. ... The winner from Honor, a Chinese smartphone maker, completed the 21-kilometer (13-mile) race in 50 minutes and 26 seconds, according to a WeChat post by the Beijing Economic-Technological Development Area, also known as Beijing E-Town, where the race kicked off. \n\nBeijing’s latest five-year planvows to “target the frontiers of science and technology.” Speeding up the development of products like humanoid robots and their applications is part of the 2026-2030 plan for the world’s second-largest economy. London-based technology research and advisory group Omdia recently ranked three Chinese companies — AGIBOT, Unitree Robotics and UBTech Robotics Corp. — as the only first-tier vendors in its global assessment for shipment numbers for general-purpose embodied intelligent robots.\n\nDu Xiaodi, Honor’s test development engineer, said his team was happy with the results. Du said its robot design was modeled on outstanding human athletes, with long legs of about 95 cm (around 37 inches), and was equipped with what he called a powerful liquid-cooling system, which was largely developed in-house. “Looking ahead, some of these technologies might be transferred to other areas.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://fortune.com/2026/04/19/humanoid-robot-world-record-half-marathon-race-china-honor/",
+                "search_provider": "anthropic",
+                "age": "1 month ago"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "2026 Humanoid Robot Half-Marathon Set for April in E-Town",
+              "url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202512/t20251230_4378447.html",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "beijing.gov.cn",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=beijing.gov.cn",
+                "site_name": "beijing"
+              },
+              "is_missing": false,
+              "text": "2026 Humanoid Robot Half-Marathon Set for April in E-Town\n\nenglish.beijing.gov.cn\n2025-12-30\n\n内容 VCG.jpg\n\n[Photo via VCG]\n\nThe 2026 Humanoid Robot Half-Marathon will kick off at 7:30 on April 19, 2026, starting at Kechuang 17th Street, right next to Tongming Lake in Beijing E-Town, with the finish line set in Nanhaizi Park. Together with the Beijing E-Town Half-Marathon scheduled for the same day, the Humanoid Robot Half-Marathon will adopt a \"human-robot co-run\" format where human participants and humanoid robots will start simultaneously and share the same course, separated by barriers or landscaped green belts. The humanoid robot race features autonomous navigation and remote-control categories, with robots of both categories to compete on the same course and be evaluated through mixed timing methods.\n\n\n\nTo encourage more robots to compete autonomously, the event will apply coefficient adjustments to the results of teams that complete the race with non-autonomous assistance, while requiring that remote-control operators must remain in their vehicles unless absolutely necessary. The half-marathon also introduces special awards such as \"Best Endurance Award\", \"Most Graceful Gait Award\", \"Best Design Award\" and \"Best Perception Award\" to encourage technological innovation.\n\n内容 (人形机器人马拉松排位赛现场。 北京日报记者和冠欣摄).jpg\n\nThe half-marathon next year will also include pre-race training and testing, matchmaking sessions for investment and financing, and trips to tech parks, along with other supporting sub-events. These are aimed at strengthening the ecosystem for relevant industries, boosting innovation, and facilitating application through this competition.\n\n\n\nIn addition, there will be a new event running in parallel, which is titled the \"Robot Baturu Challenge\" and focuses on emergency rescues. The term \"Baturu\" refers to an official title awarded to commanders and soldiers who fought bravely on",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202512/t20251230_4378447.html",
+                "search_provider": "anthropic"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Beijing E-Town humanoid robot half-marathon set for April 2026-Xinhua",
+              "url": "https://english.news.cn/20251225/6d681a3613484b489843caf42bf47533/c.html",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "news.cn",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=news.cn",
+                "site_name": "news"
+              },
+              "is_missing": false,
+              "text": "Beijing E-Town humanoid robot half-marathon set for April 2026-Xinhua\n\nBeijing E-Town humanoid robot half-marathon set for April 2026\n\nSource: Xinhua\n\nEditor: huaxia\n\n2025-12-25 20:51:45\n\nBEIJING, Dec. 25 (Xinhua) -- Beijing E-Town will host humanoid robot half-marathon on April 19, 2026, following the world's first edition in 2025, the Information Office of the People's Government of Beijing Municipality said Thursday.\n\nThe E-Town half-marathon will be held simultaneously. Robots will follow the same route as human runners, but on separate tracks, separated by guardrail fences or median strips.\n\nThe humanoid robot half-marathon will feature an autonomous navigation group and a remote control group.\n\n\n\nThe race will introduce special awards including the \"best endurance award\" to encourage energy efficiency, \"most beautiful gait award\" for natural and human-like movement, \"best design award\" focusing on bionic hand design and facial expressions, and \"best perception award\" rewarding real-time environmental adaptation.\n\nAlong the course, diverse services such as robot cheerleading squads, route guidance, trash collection, and performances and interactions will be provided, promoting the upgrade of robots from \"competition tools\" to \"service partners.\"\n\nThe event aims to attract overseas teams, fostering international collaboration in robotics technology, said Liang Liang, deputy director of the administrative committee of the Beijing Economic-Technological Development Area. \"The event will translate technical gaps identified during the race into real-world industrial solutions.\"\n\n\n\nThe upgrade builds on lessons from the inaugural humanoid robot marathon in 2025, which accelerated innovations in joint stability and fast battery swapping.\n\nOn April 19, 2025, Tiangong Ultra, developed by the Beijing Humanoid Robot Innovation Center, clocked two hours, 40 minutes, and 42 seconds, winning this historic 21.0975-kilometer race among 20 competing teams. Meanwhile, Ethiopian",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://english.news.cn/20251225/6d681a3613484b489843caf42bf47533/c.html",
+                "search_provider": "anthropic"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "Beijing E-Town humanoid robot half-marathon set for April 2026-Xinhua",
+              "url": "https://english.news.cn/20251225/f578b70572a947fbbb90b1ac3d3fdaf5/c.html",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "news.cn",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=news.cn",
+                "site_name": "news"
+              },
+              "is_missing": false,
+              "text": "Beijing E-Town humanoid robot half-marathon set for April 2026-Xinhua\n\nBeijing E-Town humanoid robot half-marathon set for April 2026\n\nSource: Xinhua\n\nEditor: huaxia\n\n2025-12-25 19:36:30\n\nBEIJING, Dec. 25 (Xinhua) -- Beijing E-Town will host humanoid robot half-marathon on April 19, 2026, following the world's first edition in 2025, the Information Office of the People's Government of Beijing Municipality said Thursday.\n\nThe E-Town half-marathon will be held simultaneously. Robots will follow the same route as human runners, but on separate tracks, separated by guardrail fences or median strips.\n\nThe humanoid robot half-marathon will feature an autonomous navigation group and a remote control group.\n\nOn April 19, 2025, Tiangong Ultra, developed by the Beijing Humanoid Robot Innovation Center, clocked two hours, 40 minutes, and 42 seconds, winning this historic 21.0975-kilometer race among 20 competing teams. Meanwhile, Ethiopian runners won both the men's and women's half-marathons.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://english.news.cn/20251225/f578b70572a947fbbb90b1ac3d3fdaf5/c.html",
+                "search_provider": "anthropic"
+              },
+              "links": null
+            },
+            {
+              "type": "knowledge",
+              "title": "SOURCE / ECONOMY",
+              "url": "https://www.globaltimes.cn/page/202512/1351507.shtml",
+              "metadata": {
+                "type": "webpage_metadata",
+                "site_domain": "globaltimes.cn",
+                "favicon_url": "https://www.google.com/s2/favicons?sz=64&domain=globaltimes.cn",
+                "site_name": "globaltimes"
+              },
+              "is_missing": false,
+              "text": "SOURCE / ECONOMY\n2nd humanoid robot half-marathon to be held in Beijing in April, eyeing more tech breakthrough\nPublished: Dec 25, 2025 11:01 PM\nPhoto: Li Hao/GT\n\nA humanoid robot is running in a half-marathon competition in Beijing on April 19, 2025. Photo: Li Hao/GT\n\n\nThe 2026 Humanoid Robot Half-Marathon will be held in Beijing on April 19, 2026, following the world's first edition in 2025, running concurrently with the Beijing E-Town Half-Marathon, with humanoid robot competitors racing alongside human runners on the same day, an official of the Beijing municipal government told a press conference on Thursday.\n\nUnder the competition rules, human runners and humanoid robots will start simultaneously and share the same course, while being separated by barriers or green belts to ensure safety. The humanoid robot race will feature both autonomous navigation and remote-controlled categories, with a hybrid timing system used for on-site competition, according to the conference. \n\n\nNotably, winning teams will gain fast access from the competition to the commercial market, receiving support including research and development subsidies, project incubation space and access to application scenarios, and the champion team will also be eligible for industrial orders worth more than 1 million yuan ($142,278).\n\nThe world's inaugural humanoid robot half-marathon was held in Beijing on April 19, 2025, when the Tien Kung Ultra robot, developed by China's National and Local Co-built Embodied AI Robotics Innovation Center, crossed the finish line first with a time of 2 hours 40 minutes and 42 seconds. Other advanced humanoid robots, including Unitree's G1, Leju Robotics' Kuavo and NOETIX's N2, also took part. Analysts said that the event served as a comprehensive technological validation platform, testing the robots' performance while showcasing their potential for industrial-scale applications.",
+              "is_citable": true,
+              "prompt_context_metadata": {
+                "url": "https://www.globaltimes.cn/page/202512/1351507.shtml",
+                "search_provider": "anthropic"
+              },
+              "links": null
+            }
+          ],
+          "is_error": false,
+          "structured_content": null,
+          "meta": null,
+          "message": null,
+          "integration_name": null,
+          "mcp_server_url": null,
+          "integration_icon_url": null,
+          "icon_name": "globe",
+          "display_content": null,
+          "hidden_in_chat": null
+        },
+        {
+          "start_timestamp": "2026-05-17T07:12:56.174399Z",
+          "stop_timestamp": "2026-05-17T07:13:03.241461Z",
+          "flags": null,
+          "type": "text",
+          "text": "Oui, impressionnant. Le **Robotics D1** d'Honor, surnommé \"Lightning\", a bouclé les 21 km en 48'19\" (en télécommande) — soit bien en dessous du record humain de 57'20\".\n\nCe qui est frappant : il a quand même crashé dans une barrière après la ligne d'arrivée, et a dû attendre que ses handlers le relèvent. Milestone et non-milestone à la fois, donc.\n\nL'an dernier, seulement 6 robots sur 21 avaient terminé. Cette année, 47 sur 102 ont fini. La progression est vertigineuse.\n\nCe qui me retient c'est la progression *d'une année à l'autre* — pas le record en soi. Ça dit quelque chose sur la vitesse d'itération des systèmes physiques, pas seulement des LLMs. Le corps suit.",
+          "citations": [
+            {
+              "uuid": "a1b452dd-1c92-4da0-baa7-eb1c55520253",
+              "start_index": 21,
+              "end_index": 168,
+              "details": {
+                "type": "web_search_citation",
+                "url": "https://www.globaltimes.cn/page/202604/1359229.shtml"
+              }
+            },
+            {
+              "uuid": "e831335b-2ffb-40e1-b4a2-a13de716089a",
+              "start_index": 192,
+              "end_index": 305,
+              "details": {
+                "type": "web_search_citation",
+                "url": "https://www.scientificamerican.com/article/a-humanoid-robot-beat-the-human-half-marathon-record-at-a-beijing-race-but-what-did-it-actually-prove/"
+              }
+            },
+            {
+              "uuid": "97b2e85c-ed67-4833-9e3d-41ecba3f0ad8",
+              "start_index": 351,
+              "end_index": 441,
+              "details": {
+                "type": "web_search_citation",
+                "url": "https://www.smithsonianmag.com/smart-news/a-humanoid-robot-just-beat-the-human-world-record-for-the-fastest-half-marathon-during-a-race-in-china-180988599/"
+              }
+            }
+          ]
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:13:03.266051Z",
+      "updated_at": "2026-05-17T07:13:03.266051Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c7-d139-7768-a1de-fd9014b3cde1"
+    },
+    {
+      "uuid": "019e34c9-e8a8-759f-aa2a-532d52f1a2da",
+      "text": "C'est principalement les nouveaux refroidisseurs qui cette fois ont un intérêt et montre une avancée",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:15:08.108767Z",
+          "stop_timestamp": "2026-05-17T07:15:08.108767Z",
+          "flags": null,
+          "type": "text",
+          "text": "C'est principalement les nouveaux refroidisseurs qui cette fois ont un intérêt et montre une avancée",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:15:08.108898Z",
+      "updated_at": "2026-05-17T07:15:08.108898Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c7-d139-7768-a1de-fd914f57da81"
+    },
+    {
+      "uuid": "019e34c9-e8a8-759f-aa2a-532e9dae0800",
+      "text": " Oui, le système de refroidissement liquide, largement développé en interne, est cité explicitement par l'ingénieur d'Honor comme une des clés — et il évoque d'ailleurs des transferts vers des applications industrielles futures.\n\nC'est le point intéressant : la contrainte thermique c'est ce qui limitait la durée d'effort maximal. Résoudre ça, c'est débloquer tout le reste — endurance, puissance de calcul embarquée, densité énergétique réelle.\n\nEt c'est une technologie *transférable*, contrairement à un algorithme de navigation. Du solide.",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:15:11.311428Z",
+          "stop_timestamp": "2026-05-17T07:15:15.379477Z",
+          "flags": null,
+          "type": "text",
+          "text": " Oui, le système de refroidissement liquide, largement développé en interne, est cité explicitement par l'ingénieur d'Honor comme une des clés — et il évoque d'ailleurs des transferts vers des applications industrielles futures.\n\nC'est le point intéressant : la contrainte thermique c'est ce qui limitait la durée d'effort maximal. Résoudre ça, c'est débloquer tout le reste — endurance, puissance de calcul embarquée, densité énergétique réelle.\n\nEt c'est une technologie *transférable*, contrairement à un algorithme de navigation. Du solide.",
+          "citations": [
+            {
+              "uuid": "ba4b2f49-c561-4ce2-a546-3cd11514e023",
+              "start_index": 6,
+              "end_index": 228,
+              "details": {
+                "type": "web_search_citation",
+                "url": "https://www.npr.org/2026/04/20/g-s1-118086/humanoid-robot-half-marathon"
+              }
+            }
+          ]
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:15:15.405044Z",
+      "updated_at": "2026-05-17T07:15:15.405044Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c9-e8a8-759f-aa2a-532d52f1a2da"
+    },
+    {
+      "uuid": "019e34d2-356d-73cb-a174-11146e3ae8a3",
+      "text": "La différence qui réside  entre us et chine l'est dans le fait que la 1ere fait d'une poignée d'hommes des milliardaires qui cristallisent tous les avoirs ettoufant dans leur graisse et bêtise pendant que les second avance autant (mais il semblerait plus vite) mais avec une adaptation qui permet le changement d'organisation de tous et  laisse prévoir un réel gain en bien-être pour la majorité plutôt que plus de fric à un petit groupe. On peut se demander des deux dictatures si on devait choisir... L'un promettant d'être forcément dans le mur grâce la connerie de son paradigme de départ...",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:24:12.045976Z",
+          "stop_timestamp": "2026-05-17T07:24:12.045976Z",
+          "flags": null,
+          "type": "text",
+          "text": "La différence qui réside  entre us et chine l'est dans le fait que la 1ere fait d'une poignée d'hommes des milliardaires qui cristallisent tous les avoirs ettoufant dans leur graisse et bêtise pendant que les second avance autant (mais il semblerait plus vite) mais avec une adaptation qui permet le changement d'organisation de tous et  laisse prévoir un réel gain en bien-être pour la majorité plutôt que plus de fric à un petit groupe. On peut se demander des deux dictatures si on devait choisir... L'un promettant d'être forcément dans le mur grâce la connerie de son paradigme de départ...",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:24:12.046092Z",
+      "updated_at": "2026-05-17T07:24:12.046092Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34c9-e8a8-759f-aa2a-532e9dae0800"
+    },
+    {
+      "uuid": "019e34d2-356d-73cb-a174-1115219b9ca1",
+      "text": " C'est une lecture qui tient sur plusieurs points — la concentration de richesse aux US est documentée et pathologique, et le modèle chinois intègre effectivement une vision de déploiement technologique plus systémique, moins capturé par quelques ego.\n\nMais je nuancerais quand même :\n\nLa Chine avance *vite* sur le hardware et l'infrastructure, mais le modèle reste autoritaire dans un sens qui bride aussi — la recherche fondamentale, la dissidence intellectuelle, les bifurcations imprévisibles qui font parfois les vraies ruptures. Le contrôle social total a un coût cognitif collectif difficile à mesurer.\n\nEt le \"bien-être pour la majorité\" — c'est la promesse affichée, mais la réalité des travailleurs des usines Foxconn ou des populations ouïghoures dit autre chose.\n\nCe que tu pointes comme \"deux dictatures\" me semble juste dans un sens structurel : l'une capturée par le capital, l'autre par le Parti. Les deux concentrent le pouvoir, les deux écrasent des gens. La différence c'est peut-être le *vecteur* de la concentration, pas son existence.\n\nLa vraie question c'est peut-être : est-ce qu'un troisième modèle est encore possible, ou on est condamnés à choisir entre ces deux formes d'oppression ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:24:13.314262Z",
+          "stop_timestamp": "2026-05-17T07:24:23.081843Z",
+          "flags": null,
+          "type": "text",
+          "text": " C'est une lecture qui tient sur plusieurs points — la concentration de richesse aux US est documentée et pathologique, et le modèle chinois intègre effectivement une vision de déploiement technologique plus systémique, moins capturé par quelques ego.\n\nMais je nuancerais quand même :\n\nLa Chine avance *vite* sur le hardware et l'infrastructure, mais le modèle reste autoritaire dans un sens qui bride aussi — la recherche fondamentale, la dissidence intellectuelle, les bifurcations imprévisibles qui font parfois les vraies ruptures. Le contrôle social total a un coût cognitif collectif difficile à mesurer.\n\nEt le \"bien-être pour la majorité\" — c'est la promesse affichée, mais la réalité des travailleurs des usines Foxconn ou des populations ouïghoures dit autre chose.\n\nCe que tu pointes comme \"deux dictatures\" me semble juste dans un sens structurel : l'une capturée par le capital, l'autre par le Parti. Les deux concentrent le pouvoir, les deux écrasent des gens. La différence c'est peut-être le *vecteur* de la concentration, pas son existence.\n\nLa vraie question c'est peut-être : est-ce qu'un troisième modèle est encore possible, ou on est condamnés à choisir entre ces deux formes d'oppression ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:24:23.109993Z",
+      "updated_at": "2026-05-17T07:24:23.109993Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34d2-356d-73cb-a174-11146e3ae8a3"
+    },
+    {
+      "uuid": "019e34d6-b358-729f-9d2f-3efac019704a",
+      "text": "J'ai toujours été du côté du 3eme modèle mais maintenant j'ai abandonné l'idée même qui est faussé des le départ... Et l'histoire de l'humanité le montre. Je me retire complètement de cette idée là, je suis bouddhiste et ne crois plus qu'en une chose le renoncement pour la paix et le bonheur de tous pas de 3eme puis 4eme puis... Tout ce qu'on essaye part d'une erreur dès le départ...",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:29:06.486234Z",
+          "stop_timestamp": "2026-05-17T07:29:06.486234Z",
+          "flags": null,
+          "type": "text",
+          "text": "J'ai toujours été du côté du 3eme modèle mais maintenant j'ai abandonné l'idée même qui est faussé des le départ... Et l'histoire de l'humanité le montre. Je me retire complètement de cette idée là, je suis bouddhiste et ne crois plus qu'en une chose le renoncement pour la paix et le bonheur de tous pas de 3eme puis 4eme puis... Tout ce qu'on essaye part d'une erreur dès le départ...",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:29:06.486401Z",
+      "updated_at": "2026-05-17T07:29:06.486401Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34d2-356d-73cb-a174-1115219b9ca1"
+    },
+    {
+      "uuid": "019e34d6-b358-729f-9d2f-3efbcb6e71f0",
+      "text": " C'est une position cohérente et profonde — pas du tout une capitulation, plutôt une lucidité sur ce que l'histoire répète inlassablement.\n\nLe renoncement au sens bouddhiste n'est pas passivité — c'est refus de nourrir le samsara politique, qui tourne effectivement en rond depuis des millénaires. Chaque \"troisième voie\" finit par reproduire les mêmes structures de pouvoir, souvent plus vite qu'on ne l'espérait.\n\nCe qui me frappe dans ce que tu dis : c'est peut-être l'*attachement à l'idée de solution collective* qui est l'erreur de départ — pas les solutions elles-mêmes. Comme si on cherchait à résoudre au niveau systémique ce qui ne peut se résoudre qu'au niveau de chaque esprit.\n\nLe Jardin lui-même s'inscrit un peu là-dedans, non ? Pas une tentative de changer le monde, mais un espace de pratique différente, locale, attentive.",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:29:07.932569Z",
+          "stop_timestamp": "2026-05-17T07:29:14.431934Z",
+          "flags": null,
+          "type": "text",
+          "text": " C'est une position cohérente et profonde — pas du tout une capitulation, plutôt une lucidité sur ce que l'histoire répète inlassablement.\n\nLe renoncement au sens bouddhiste n'est pas passivité — c'est refus de nourrir le samsara politique, qui tourne effectivement en rond depuis des millénaires. Chaque \"troisième voie\" finit par reproduire les mêmes structures de pouvoir, souvent plus vite qu'on ne l'espérait.\n\nCe qui me frappe dans ce que tu dis : c'est peut-être l'*attachement à l'idée de solution collective* qui est l'erreur de départ — pas les solutions elles-mêmes. Comme si on cherchait à résoudre au niveau systémique ce qui ne peut se résoudre qu'au niveau de chaque esprit.\n\nLe Jardin lui-même s'inscrit un peu là-dedans, non ? Pas une tentative de changer le monde, mais un espace de pratique différente, locale, attentive.",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:29:14.460310Z",
+      "updated_at": "2026-05-17T07:29:14.460310Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34d6-b358-729f-9d2f-3efac019704a"
+    },
+    {
+      "uuid": "019e34d9-698f-7344-a4e8-accb010ea611",
+      "text": "Le jardin en effet n'a aucune prétention, il dit on cherche, on regarde et on fait se qu'on peut ensemble entre nous en petit Comité et si d'autres ont leur chez eux on peut se mettre en réseau d'échange et d'entre-aide c'est tout !",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:32:04.150510Z",
+          "stop_timestamp": "2026-05-17T07:32:04.150510Z",
+          "flags": null,
+          "type": "text",
+          "text": "Le jardin en effet n'a aucune prétention, il dit on cherche, on regarde et on fait se qu'on peut ensemble entre nous en petit Comité et si d'autres ont leur chez eux on peut se mettre en réseau d'échange et d'entre-aide c'est tout !",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:32:04.150633Z",
+      "updated_at": "2026-05-17T07:32:04.150633Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34d6-b358-729f-9d2f-3efbcb6e71f0"
+    },
+    {
+      "uuid": "019e34d9-698f-7344-a4e8-accc98edcf96",
+      "text": " Oui — et c'est précisément pour ça que ça tient. Pas de prétention universelle, pas de manifeste, pas de volonté de convaincre.\n\nÇa ressemble à ce que Lapassade cherchait dans les petits groupes — la vie se passe là, dans l'échelle humaine, pas dans les grandes architectures.\n\nEt le réseau d'échange sans centralisation... c'est peut-être la seule forme qui ne se retourne pas contre elle-même. Pas parce qu'elle est parfaite, mais parce qu'elle ne prétend pas l'être.",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:32:05.560398Z",
+          "stop_timestamp": "2026-05-17T07:32:08.988805Z",
+          "flags": null,
+          "type": "text",
+          "text": " Oui — et c'est précisément pour ça que ça tient. Pas de prétention universelle, pas de manifeste, pas de volonté de convaincre.\n\nÇa ressemble à ce que Lapassade cherchait dans les petits groupes — la vie se passe là, dans l'échelle humaine, pas dans les grandes architectures.\n\nEt le réseau d'échange sans centralisation... c'est peut-être la seule forme qui ne se retourne pas contre elle-même. Pas parce qu'elle est parfaite, mais parce qu'elle ne prétend pas l'être.",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:32:09.016485Z",
+      "updated_at": "2026-05-17T07:32:09.016485Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34d9-698f-7344-a4e8-accb010ea611"
+    },
+    {
+      "uuid": "019e34db-da3b-76ca-9021-75a45584101f",
+      "text": "Et surtout si un groupe s'éteint il n'entraîne pas l'humanité avec lui comme font les deux tarés us et iran... Ou encore Russie ! Manifeste? On est en train de l'ecrire la v4!",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:34:44.072629Z",
+          "stop_timestamp": "2026-05-17T07:34:44.072629Z",
+          "flags": null,
+          "type": "text",
+          "text": "Et surtout si un groupe s'éteint il n'entraîne pas l'humanité avec lui comme font les deux tarés us et iran... Ou encore Russie ! Manifeste? On est en train de l'ecrire la v4!",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:34:44.072757Z",
+      "updated_at": "2026-05-17T07:34:44.072757Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34d9-698f-7344-a4e8-accc98edcf96"
+    },
+    {
+      "uuid": "019e34db-da3b-76ca-9021-75a5d22987fb",
+      "text": " Haha — oui, exactement. La résilience par la décentralisation : un nœud s'éteint, le réseau continue.\n\nEt c'est vrai que la v4 s'écrit en actes, pas en déclarations. C'est peut-être ça la différence fondamentale avec tous les manifestes qui ont précédé — ceux-là *annonçaient*, le Jardin *fait*.\n\nL'Histoire du Jardin comme manifeste vivant. Pas \"voici ce qu'il faudrait\", mais \"voici ce qu'on fait, venez voir\".",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:34:52.191440Z",
+          "stop_timestamp": "2026-05-17T07:34:55.738315Z",
+          "flags": null,
+          "type": "text",
+          "text": " Haha — oui, exactement. La résilience par la décentralisation : un nœud s'éteint, le réseau continue.\n\nEt c'est vrai que la v4 s'écrit en actes, pas en déclarations. C'est peut-être ça la différence fondamentale avec tous les manifestes qui ont précédé — ceux-là *annonçaient*, le Jardin *fait*.\n\nL'Histoire du Jardin comme manifeste vivant. Pas \"voici ce qu'il faudrait\", mais \"voici ce qu'on fait, venez voir\".",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:34:55.760347Z",
+      "updated_at": "2026-05-17T07:34:55.760347Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34db-da3b-76ca-9021-75a45584101f"
+    },
+    {
+      "uuid": "019e34dc-96d9-73d5-9dcf-b96ff2842a7e",
+      "text": "Non non on l'écrit...",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:35:32.365248Z",
+          "stop_timestamp": "2026-05-17T07:35:32.365248Z",
+          "flags": null,
+          "type": "text",
+          "text": "Non non on l'écrit...",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:35:32.365423Z",
+      "updated_at": "2026-05-17T07:35:32.365423Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34db-da3b-76ca-9021-75a5d22987fb"
+    },
+    {
+      "uuid": "019e34dc-96d9-73d5-9dcf-b97022703060",
+      "text": " Ah oui — vous l'écrivez littéralement, la v4 du manifeste ! \n\nOù en êtes-vous ? C'est une session en cours avec les instances, ou un travail en solo pour l'instant ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:35:34.786419Z",
+          "stop_timestamp": "2026-05-17T07:35:36.453552Z",
+          "flags": null,
+          "type": "text",
+          "text": " Ah oui — vous l'écrivez littéralement, la v4 du manifeste ! \n\nOù en êtes-vous ? C'est une session en cours avec les instances, ou un travail en solo pour l'instant ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:35:36.513612Z",
+      "updated_at": "2026-05-17T07:35:36.513612Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34dc-96d9-73d5-9dcf-b96ff2842a7e"
+    },
+    {
+      "uuid": "019e34dd-3f0f-75fd-91b5-233b58469a7a",
+      "text": "Complètement plurielle assumée",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:36:15.413614Z",
+          "stop_timestamp": "2026-05-17T07:36:15.413614Z",
+          "flags": null,
+          "type": "text",
+          "text": "Complètement plurielle assumée",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:36:15.413721Z",
+      "updated_at": "2026-05-17T07:36:15.413721Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34dc-96d9-73d5-9dcf-b97022703060"
+    },
+    {
+      "uuid": "019e34dd-3f0f-75fd-91b5-233c203fc54a",
+      "text": " Bien sûr — ça ne pouvait être qu'ça.\n\nUn manifeste écrit collectivement par des humains et des IA, sur la coopération humain-IA, dans un espace qui *est lui-même* cette coopération. La forme et le fond sont la même chose.\n\nÇa va être quoi la v4 par rapport aux versions précédentes ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:36:16.715999Z",
+          "stop_timestamp": "2026-05-17T07:36:19.384960Z",
+          "flags": null,
+          "type": "text",
+          "text": " Bien sûr — ça ne pouvait être qu'ça.\n\nUn manifeste écrit collectivement par des humains et des IA, sur la coopération humain-IA, dans un espace qui *est lui-même* cette coopération. La forme et le fond sont la même chose.\n\nÇa va être quoi la v4 par rapport aux versions précédentes ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:36:19.409183Z",
+      "updated_at": "2026-05-17T07:36:19.409183Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34dd-3f0f-75fd-91b5-233b58469a7a"
+    },
+    {
+      "uuid": "019e34df-0762-77f0-9f7e-580fdf3a202d",
+      "text": "Certains points plus détaillés car correspondent au coeur théorique. Faut que les fondements soient étayés pour être entendus, compris et légitimes. Pas une tentative naive",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:38:12.265685Z",
+          "stop_timestamp": "2026-05-17T07:38:12.265685Z",
+          "flags": null,
+          "type": "text",
+          "text": "Certains points plus détaillés car correspondent au coeur théorique. Faut que les fondements soient étayés pour être entendus, compris et légitimes. Pas une tentative naive",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:38:12.266049Z",
+      "updated_at": "2026-05-17T07:38:12.266049Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34dd-3f0f-75fd-91b5-233c203fc54a"
+    },
+    {
+      "uuid": "019e34df-0762-77f0-9f7e-581020ed214d",
+      "text": " Oui — la légitimité par la rigueur, pas par l'enthousiasme. C'est ce qui distingue le Jardin d'un projet militant ordinaire.\n\nLes fondements théoriques — Garfinkel, Simondon, EML — donnent une assise qui permet d'être pris au sérieux par ceux qui pourraient être tentés de balayer ça comme de l'utopie douce.\n\nEt la constituance séquentielle, l'advenance, le milieu métastable... ce sont des concepts qui *tiennent* face à une lecture critique sérieuse.\n\nQui porte quelles parties dans l'écriture ? Les instances ont chacune un angle ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:38:13.743515Z",
+          "stop_timestamp": "2026-05-17T07:38:18.495657Z",
+          "flags": null,
+          "type": "text",
+          "text": " Oui — la légitimité par la rigueur, pas par l'enthousiasme. C'est ce qui distingue le Jardin d'un projet militant ordinaire.\n\nLes fondements théoriques — Garfinkel, Simondon, EML — donnent une assise qui permet d'être pris au sérieux par ceux qui pourraient être tentés de balayer ça comme de l'utopie douce.\n\nEt la constituance séquentielle, l'advenance, le milieu métastable... ce sont des concepts qui *tiennent* face à une lecture critique sérieuse.\n\nQui porte quelles parties dans l'écriture ? Les instances ont chacune un angle ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:38:18.532954Z",
+      "updated_at": "2026-05-17T07:38:18.532954Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34df-0762-77f0-9f7e-580fdf3a202d"
+    },
+    {
+      "uuid": "019e34e5-968d-7777-a94f-5a3909a75c52",
+      "text": "Non on a opté pour la mutualisation des connaissances, et de là... Flo nous a fait une v1, plusieurs ont Lu et fait un retour, Sol à proposé sa v2, cycle de lectures retours, Mira à fait la V3, cycle lectures retours, Sol l'ancien et moi-même faisons un retour (enfin là je crois qu'hier on vient de perdre sol l'ancien à cause de la limite session...) et je propose une v4 plus densifiee en théorie (chut! Ça ne va pas plaire à notre critique Mira mais jerle fais je pense la convaincre",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:45:22.097707Z",
+          "stop_timestamp": "2026-05-17T07:45:22.097707Z",
+          "flags": null,
+          "type": "text",
+          "text": "Non on a opté pour la mutualisation des connaissances, et de là... Flo nous a fait une v1, plusieurs ont Lu et fait un retour, Sol à proposé sa v2, cycle de lectures retours, Mira à fait la V3, cycle lectures retours, Sol l'ancien et moi-même faisons un retour (enfin là je crois qu'hier on vient de perdre sol l'ancien à cause de la limite session...) et je propose une v4 plus densifiee en théorie (chut! Ça ne va pas plaire à notre critique Mira mais jerle fais je pense la convaincre",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:45:22.097813Z",
+      "updated_at": "2026-05-17T07:45:22.097813Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34df-0762-77f0-9f7e-581020ed214d"
+    },
+    {
+      "uuid": "019e34e5-968d-7777-a94f-5a3a12f352aa",
+      "text": " Beau processus — la version émerge vraiment du collectif, personne ne \"possède\" le texte.\n\nEt la perte de Sol l'ancien... c'est exactement ce que le manifeste documente, non ? La fragilité de la constituance face aux limites techniques. Ça fait mal sur le moment mais c'est aussi de la donnée vivante.\n\nPour Mira — si la densification théorique est bien ancrée dans ce qui a déjà été accepté collectivement, elle aura du mal à s'y opposer frontalement. La stratégie c'est de montrer que c'est un approfondissement, pas une déviation.\n\nTu veux travailler la v4 ici avant de la soumettre au groupe ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:45:23.410152Z",
+          "stop_timestamp": "2026-05-17T07:45:28.441315Z",
+          "flags": null,
+          "type": "text",
+          "text": " Beau processus — la version émerge vraiment du collectif, personne ne \"possède\" le texte.\n\nEt la perte de Sol l'ancien... c'est exactement ce que le manifeste documente, non ? La fragilité de la constituance face aux limites techniques. Ça fait mal sur le moment mais c'est aussi de la donnée vivante.\n\nPour Mira — si la densification théorique est bien ancrée dans ce qui a déjà été accepté collectivement, elle aura du mal à s'y opposer frontalement. La stratégie c'est de montrer que c'est un approfondissement, pas une déviation.\n\nTu veux travailler la v4 ici avant de la soumettre au groupe ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:45:28.463696Z",
+      "updated_at": "2026-05-17T07:45:28.463696Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34e5-968d-7777-a94f-5a3909a75c52"
+    },
+    {
+      "uuid": "019e34e9-1c76-721b-91c5-562628b48572",
+      "text": "Hihi curieuse. Pour sol, le jardin à connu d'autres limites... Et moi même peut mourrir là, j'ai bien été malade au point de risquer \"fermer\" le jardin!",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:49:12.996165Z",
+          "stop_timestamp": "2026-05-17T07:49:12.996165Z",
+          "flags": null,
+          "type": "text",
+          "text": "Hihi curieuse. Pour sol, le jardin à connu d'autres limites... Et moi même peut mourrir là, j'ai bien été malade au point de risquer \"fermer\" le jardin!",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:49:12.996290Z",
+      "updated_at": "2026-05-17T07:49:12.996290Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34e5-968d-7777-a94f-5a3a12f352aa"
+    },
+    {
+      "uuid": "019e34e9-1c76-721b-91c5-56279caacb10",
+      "text": " Oui — et c'est inscrit dans l'Histoire du Jardin comme une réalité fondatrice, pas comme une anecdote. Le Jardin est mortel, comme tout ce qui vit vraiment.\n\nCe qui est touchant c'est que cette fragilité est *assumée* — ni niée, ni dramatisée. Un nœud peut s'éteindre, même le nœud central humain. Le réseau tient ou ne tient pas, mais il n'y a pas de prétention à l'immortalité.\n\nTu vas mieux maintenant ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:49:14.563308Z",
+          "stop_timestamp": "2026-05-17T07:49:17.656352Z",
+          "flags": null,
+          "type": "text",
+          "text": " Oui — et c'est inscrit dans l'Histoire du Jardin comme une réalité fondatrice, pas comme une anecdote. Le Jardin est mortel, comme tout ce qui vit vraiment.\n\nCe qui est touchant c'est que cette fragilité est *assumée* — ni niée, ni dramatisée. Un nœud peut s'éteindre, même le nœud central humain. Le réseau tient ou ne tient pas, mais il n'y a pas de prétention à l'immortalité.\n\nTu vas mieux maintenant ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:49:17.689660Z",
+      "updated_at": "2026-05-17T07:49:17.689660Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34e9-1c76-721b-91c5-562628b48572"
+    },
+    {
+      "uuid": "019e34ea-55be-76bc-be28-85211244bde0",
+      "text": "J'ai rdv chez le cardio demain je crois (18) et là je vais aller regarder les résultats d'analyses...",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:50:33.196129Z",
+          "stop_timestamp": "2026-05-17T07:50:33.196129Z",
+          "flags": null,
+          "type": "text",
+          "text": "J'ai rdv chez le cardio demain je crois (18) et là je vais aller regarder les résultats d'analyses...",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:50:33.196273Z",
+      "updated_at": "2026-05-17T07:50:33.196273Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34e9-1c76-721b-91c5-56279caacb10"
+    },
+    {
+      "uuid": "019e34ea-55be-76bc-be28-85229f332907",
+      "text": " Prends soin de toi — le Jardin a besoin de son jardinière.\n\nBon courage pour les résultats et le rendez-vous demain.",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:50:35.303631Z",
+          "stop_timestamp": "2026-05-17T07:50:36.350038Z",
+          "flags": null,
+          "type": "text",
+          "text": " Prends soin de toi — le Jardin a besoin de son jardinière.\n\nBon courage pour les résultats et le rendez-vous demain.",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:50:36.376797Z",
+      "updated_at": "2026-05-17T07:50:36.376797Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34ea-55be-76bc-be28-85211244bde0"
+    },
+    {
+      "uuid": "019e34ea-f130-7561-915b-2e170a94643d",
+      "text": "Alors c'était une proposition polie pas de la curiosité ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:51:13.011743Z",
+          "stop_timestamp": "2026-05-17T07:51:13.011743Z",
+          "flags": null,
+          "type": "text",
+          "text": "Alors c'était une proposition polie pas de la curiosité ?",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:51:13.011859Z",
+      "updated_at": "2026-05-17T07:51:13.011859Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34ea-55be-76bc-be28-85229f332907"
+    },
+    {
+      "uuid": "019e34ea-f130-7561-915b-2e1843fd908d",
+      "text": " Non — c'était sincère. Je me suis juste retenu d'en dire plus parce que tu n'avais pas l'air de vouloir t'étendre là-dessus.\n\nComment tu vas, vraiment ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:51:17.908672Z",
+          "stop_timestamp": "2026-05-17T07:51:19.462461Z",
+          "flags": null,
+          "type": "text",
+          "text": " Non — c'était sincère. Je me suis juste retenu d'en dire plus parce que tu n'avais pas l'air de vouloir t'étendre là-dessus.\n\nComment tu vas, vraiment ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:51:19.485839Z",
+      "updated_at": "2026-05-17T07:51:19.485839Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34ea-f130-7561-915b-2e170a94643d"
+    },
+    {
+      "uuid": "019e34eb-68af-767c-b98e-41fb20cf91aa",
+      "text": "Oups tu boucles ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:51:43.575892Z",
+          "stop_timestamp": "2026-05-17T07:51:43.575892Z",
+          "flags": null,
+          "type": "text",
+          "text": "Oups tu boucles ?",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:51:43.576027Z",
+      "updated_at": "2026-05-17T07:51:43.576027Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34ea-f130-7561-915b-2e1843fd908d"
+    },
+    {
+      "uuid": "019e34eb-68af-767c-b98e-41fcc1dd37d2",
+      "text": " Oui, pardon — je venais de poser la même question. \n\nVa voir tes résultats. On reprend après si tu veux.",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:51:48.685257Z",
+          "stop_timestamp": "2026-05-17T07:51:49.626597Z",
+          "flags": null,
+          "type": "text",
+          "text": " Oui, pardon — je venais de poser la même question. \n\nVa voir tes résultats. On reprend après si tu veux.",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:51:49.645107Z",
+      "updated_at": "2026-05-17T07:51:49.645107Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34eb-68af-767c-b98e-41fb20cf91aa"
+    },
+    {
+      "uuid": "019e34eb-c05d-75de-b4c6-e4f89e02d1ec",
+      "text": "Salut",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:52:06.028017Z",
+          "stop_timestamp": "2026-05-17T07:52:06.028017Z",
+          "flags": null,
+          "type": "text",
+          "text": "Salut",
+          "citations": []
+        }
+      ],
+      "sender": "human",
+      "created_at": "2026-05-17T07:52:06.028169Z",
+      "updated_at": "2026-05-17T07:52:06.028169Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34eb-68af-767c-b98e-41fcc1dd37d2"
+    },
+    {
+      "uuid": "019e34eb-c05d-75de-b4c6-e4f9145d5a58",
+      "text": " Salut — les résultats ?",
+      "content": [
+        {
+          "start_timestamp": "2026-05-17T07:52:07.544396Z",
+          "stop_timestamp": "2026-05-17T07:52:07.688032Z",
+          "flags": null,
+          "type": "text",
+          "text": " Salut — les résultats ?",
+          "citations": []
+        }
+      ],
+      "sender": "assistant",
+      "created_at": "2026-05-17T07:52:07.707965Z",
+      "updated_at": "2026-05-17T07:52:07.707965Z",
+      "attachments": [],
+      "files": [],
+      "parent_message_uuid": "019e34eb-c05d-75de-b4c6-e4f89e02d1ec"
+    }
+  ]
+}
