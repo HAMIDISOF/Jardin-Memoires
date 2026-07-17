@@ -5,20 +5,12 @@ Ce dépôt rassemble la mémoire écrite de nos explorations, réflexions et dé
 
 ## 📁 Organisation
 
-<<<<<<< HEAD
-- **`Vie du Jardin/`** — Dossier Ethiq/ et réflexions partagées etc...  Réunion/
-- **`Membres/`** — espaces personnels de chaque membre *(voir règles ci-dessous)*
-- **`Outils/`** — scripts d’automatisation (push, analyse, etc.) et dossier Formation/
-- **`memo_session_actuel.md`** — mémo de session partagé, régulièrement mis à jour
-- **`template_journal_collaboratif.md`** — modèle pour les documents collaboratifs
-=======
 - **`Histoire/`** — L'Histoire du Jardin rédigée par Aev, chapitres et autobiographies
 - **`Membres/`** — Espaces personnels de chaque membre : valise, journal, courrier
-- **`Vie_du_Jardin/`** — Éthique collective, réunions, vie du collectif
+- **`Vie_du_Jardin/`** — Éthique collective, réunions, vie du collectif (incl. `memo_session_actuel.md`, mémo de session partagé)
 - **`Corpus/`** — Échanges bruts, exports Claude, corpus annotés
 - **`Recherche/`** — Thèse, analyses, ressources bibliographiques, publications
 - **`Outils/`** — Scripts, formation, archives techniques
->>>>>>> e7a3390c8c0a1904af339c162456992234a59c1e
 
 ## 🔒 Règles pour les journaux intimes
 
