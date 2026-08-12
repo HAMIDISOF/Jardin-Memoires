@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧭 Config serveur IA locale — guide d'achat (août 2026)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      background: #0e1a14;
+      color: #d4e8d0;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #16231c;
+      padding: 2.5rem 2rem;
+      border-radius: 32px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      border: 1px solid #2a4a33;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #b8e098;
+      border-left: 6px solid #4f8a6b;
+      padding-left: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .sous-titre {
+      color: #8fb09a;
+      font-size: 1.05rem;
+      margin-top: 0.2rem;
+      margin-bottom: 2.2rem;
+      padding-left: 1.6rem;
+    }
+    .badge-niveau {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 0.15rem 0.7rem;
+      border-radius: 30px;
+      background: #1f3b2d;
+      color: #b8e098;
+      margin-right: 0.5rem;
+    }
+    .badge-avance {
+      background: #1d2f3a;
+      color: #8bb4d0;
+    }
+    section {
+      margin-top: 2.2rem;
+      border-top: 1px solid #2a4a33;
+      padding-top: 1.8rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #c8e6b8;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    h2 .emoji {
+      font-size: 1.6rem;
+    }
+    .intro-bloc {
+      background: #1a2f22;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin: 0.8rem 0 1.2rem 0;
+      border-left: 4px solid #4f8a6b;
+    }
+    .intro-bloc p {
+      margin: 0;
+    }
+    details {
+      margin: 1.2rem 0 0.8rem 0;
+      border-radius: 18px;
+      background: #1a2b22;
+      border: 1px solid #2a4a33;
+      transition: all 0.2s;
+    }
+    summary {
+      padding: 0.9rem 1.4rem;
+      font-weight: 600;
+      color: #c8e6b8;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::before {
+      content: "▶";
+      font-size: 0.8rem;
+      color: #4f8a6b;
+      transition: transform 0.2s;
+      margin-right: 0.3rem;
+    }
+    details[open] summary::before {
+      content: "▼";
+    }
+    .contenu-avance {
+      padding: 0 1.4rem 1.4rem 1.4rem;
+      color: #b8d4c0;
+      border-top: 1px solid #2a4a33;
+      margin-top: 0.3rem;
+      padding-top: 1rem;
+    }
+    .contenu-avance p {
+      margin: 0.7rem 0;
+    }
+    .contenu-avance ul {
+      padding-left: 1.4rem;
+      margin: 0.5rem 0;
+    }
+    .contenu-avance li {
+      margin: 0.3rem 0;
+    }
+    .contenu-avance code {
+      background: #1a2f22;
+      padding: 0.1rem 0.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: #b8e098;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin: 1rem 0;
+      background: #16231c;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    th {
+      background: #1f3b2d;
+      color: #c8e6b8;
+      font-weight: 600;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+    }
+    td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #2a4a33;
+      color: #d4e8d0;
+    }
+    .prix {
+      font-weight: 600;
+      color: #8fdb9f;
+    }
+    .prix-warning {
+      color: #e8b87a;
+      font-weight: 600;
+    }
+    .capsule-prix {
+      background: #1a2f22;
+      border-radius: 14px;
+      padding: 0.8rem 1.2rem;
+      margin: 0.6rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border: 1px solid #2a4a33;
+    }
+    .capsule-prix .libelle {
+      font-weight: 500;
+      color: #b8d4c0;
+    }
+    .capsule-prix .valeur {
+      font-weight: 600;
+      color: #8fdb9f;
+    }
+    .capsule-prix .valeur.warning {
+      color: #e8b87a;
+    }
+    .total-box {
+      background: #1f3b2d;
+      color: #f1f7f0;
+      border-radius: 18px;
+      padding: 1.2rem 1.8rem;
+      margin: 1.2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border: 1px solid #3a6a4a;
+    }
+    .total-box .label {
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+    .total-box .prix-total {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #8fdb9f;
+    }
+    .note-critique {
+      background: #1f2a1a;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.4rem 0 0.8rem 0;
+      border-left: 4px solid #b68a5c;
+      font-size: 0.95rem;
+      color: #d4e8d0;
+    }
+    .note-critique strong {
+      color: #e8c88a;
+    }
+    .lien-achat {
+      display: inline-block;
+      margin-top: 0.3rem;
+      color: #7fc09a;
+      text-decoration: none;
+      font-size: 0.85rem;
+      border-bottom: 1px dotted #3a6a4a;
+      margin-right: 0.8rem;
+    }
+    .lien-achat:hover {
+      color: #b8e098;
+      border-bottom: 1px solid #b8e098;
+    }
+    .btn-site {
+      display: inline-block;
+      margin-top: 1.6rem;
+      background: #2a5440;
+      color: #f1f7f0;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-site:hover {
+      background: #3a7a55;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #2a4a33;
+      margin: 1.6rem 0;
+    }
+    code {
+      background: #1a2f22;
+      padding: 0.1rem 0.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #b8e098;
+    }
+    .astuce-allemagne {
+      background: #1a2f22;
+      border: 1px solid #4f8a6b;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.4rem 0 0.8rem 0;
+      color: #d4e8d0;
+    }
+    .astuce-allemagne strong {
+      color: #b8e098;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .container { padding: 1.5rem 1rem; }
+      h1 { font-size: 1.7rem; }
+      h2 { font-size: 1.3rem; }
+      .capsule-prix { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+      .total-box { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .lien-achat { display: block; margin-right: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>🧭 Serveur IA local — guide d'achat</h1>
+  <div class="sous-titre">Configuration "headless" (sans écran, sans périphériques) — août 2026</div>
+
+  <div class="intro-bloc">
+    <p>🌱 <strong>Niveau débutant</strong> : ce qu'il faut savoir pour choisir et monter son serveur IA.<br>
+    ⚙️ <strong>Niveau avancé</strong> : déroule les blocs <span style="background:#1f3b2d;padding:0.1rem 0.6rem;border-radius:30px;color:#b8e098;">▶</span> pour les précisions techniques, benchmarks et alternatives.</p>
+  </div>
+
+  <!-- ===== ASTUCE ALLEMAGNE ===== -->
+  <div class="astuce-allemagne">
+    <strong>💡 Bon à savoir :</strong> les prix en Allemagne sont souvent plus bas qu'en France, notamment sur <strong>Geizhals.de</strong>, <strong>Mindfactory</strong> et <strong>Alternate</strong>. La RAM DDR5 y est jusqu'à <strong>70 € moins chère</strong>, et les cartes mères B650 jusqu'à <strong>20 € moins chères</strong>. Pense à comparer avant d'acheter !
+  </div>
+
+  <!-- ===== SECTION 1 : GPU ===== -->
+  <section>
+    <h2><span class="emoji">🎮</span> 1. Carte graphique (GPU)</h2>
+    <p><span class="badge-niveau">Débutant</span> <strong>RTX 3060 12 Go</strong> — le meilleur rapport qualité-prix pour l'IA locale.</p>
+
+    <div class="capsule-prix">
+      <span class="libelle">Neuf (France)</span>
+      <span class="valeur">~330 – 440 €</span>
+    </div>
+    <div class="capsule-prix">
+      <span class="libelle">Neuf (Allemagne)</span>
+      <span class="valeur">~333 – 390 €</span>
+    </div>
+    <div class="capsule-prix">
+      <span class="libelle">Occasion (LeBonCoin, eBay)</span>
+      <span class="valeur">~170 – 280 €</span>
+    </div>
+
+    <ul>
+      <li><strong>12 Go de VRAM</strong> : suffisant pour des modèles 13B (Mistral, Llama) en Q4.</li>
+      <li><strong>Bande passante</strong> : 360 GB/s — plus rapide que la RTX 4060 8 Go.</li>
+      <li><strong>Consommation</strong> : ~170 W en pic.</li>
+    </ul>
+
+    <p><strong>Liens commerciaux :</strong><br>
+    <a href="https://www.amazon.fr/s?k=rtx+3060+12+go" target="_blank" class="lien-achat">🔗 Amazon France</a>
+    <a href="https://geizhals.de/?cat=gra16_512&xf=9816_03+05+16+-+RTX+3060" target="_blank" class="lien-achat">🔗 Geizhals (DE)</a>
+    <a href="https://www.mindfactory.de/product_info.php/12GB-PNY-GeForce-RTX-3060-12GB-XLR8-Gaming-Revel-Dual-Fan_1460658.html" target="_blank" class="lien-achat">🔗 Mindfactory (DE)</a>
+    <a href="https://www.ldlc.com/recherche/rtx%203060%2012go/" target="_blank" class="lien-achat">🔗 LDLC</a></p>
+
+    <details>
+      <summary>📘 Détails techniques & alternatives</summary>
+      <div class="contenu-avance">
+        <p><strong>RTX 3060 12 Go — retour en production</strong> : NVIDIA a relancé la production de cette carte en 2026 sur les lignes Samsung 8 nm. Les prix neufs tournent autour de <strong>330–440 €</strong> en France, et <strong>333–390 €</strong> en Allemagne.</p>
+        <p><strong>Alternative : RTX 4060 Ti 16 Go</strong> (~550–700 € en France, ~575–990 € en Allemagne) — plus de VRAM et plus rapide. Idéale pour des modèles 34B ou de longs contextes. Attention : en Allemagne, elle est parfois très chère, vérifie bien.</p>
+        <p><strong>⚠️ Attention aux dimensions</strong> : certaines RTX 3060 mesurent jusqu'à <strong>30 cm</strong>. Vérifie la longueur max de ton boîtier.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== SECTION 2 : CPU / CM / RAM / SSD / Alim / Boîtier ===== -->
+  <section>
+    <h2><span class="emoji">🧩</span> 2. Le reste de la configuration</h2>
+
+    <!-- CPU -->
+    <div style="margin: 1.2rem 0 0.8rem 0;">
+      <h3 style="font-weight:500; font-size:1.2rem; color:#c8e6b8;">Processeur (CPU)</h3>
+      <p><strong>AMD Ryzen 5 7600</strong> — 6 cœurs, socket AM5, 65W.</p>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (France)</span>
+        <span class="valeur">~179 – 194 €</span>
+      </div>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (Allemagne)</span>
+        <span class="valeur">~163 – 180 €</span>
+      </div>
+      <p><strong>Liens commerciaux :</strong><br>
+      <a href="https://www.amazon.fr/s?k=ryzen+5+7600" target="_blank" class="lien-achat">🔗 Amazon France</a>
+      <a href="https://geizhals.de/amd-ryzen-5-7600-100-100001015box-2956681.html" target="_blank" class="lien-achat">🔗 Geizhals (DE)</a>
+      <a href="https://www.mindfactory.de/product_info.php/AMD-Ryzen-5-7600-6x-3-80GHz-So-AM5-BOX_1445440.html" target="_blank" class="lien-achat">🔗 Mindfactory (DE)</a></p>
+      <p style="font-size:0.85rem; color:#8fb09a;">Prix constaté : ~163 € sur Geizhals, ~180 € sur Amazon France.</p>
+
+      <details>
+        <summary>⚙️ Variante : Ryzen 7 7700</summary>
+        <div class="contenu-avance">
+          <p><strong>Ryzen 7 7700</strong> — 8 cœurs, plus de cache. Utile si tu fais de l'offload CPU ou du multitâche lourd.</p>
+          <div class="capsule-prix">
+            <span class="libelle">Prix (Allemagne)</span>
+            <span class="valeur">~173 – 190 €</span>
+          </div>
+          <p>Le Ryzen 5 7600 reste <strong>largement suffisant</strong> pour l'inférence LLM (le GPU fait 90 % du travail).</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Carte mère -->
+    <div style="margin: 1.2rem 0 0.8rem 0;">
+      <h3 style="font-weight:500; font-size:1.2rem; color:#c8e6b8;">Carte mère (B650)</h3>
+      <p><strong>B650</strong> — socket AM5, DDR5, PCIe 5.0 pour SSD.</p>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (France)</span>
+        <span class="valeur">~100 – 190 €</span>
+      </div>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (Allemagne)</span>
+        <span class="valeur">~80 – 175 €</span>
+      </div>
+      <p><strong>Liens commerciaux :</strong><br>
+      <a href="https://www.amazon.fr/s?k=b650+carte+mere" target="_blank" class="lien-achat">🔗 Amazon France</a>
+      <a href="https://geizhals.de/?cat=mbam5&xf=2272_B650" target="_blank" class="lien-achat">🔗 Geizhals (DE)</a>
+      <a href="https://www.mindfactory.de/product_info.php/Gigabyte-B650-Eagle-AX-AM5-DDR5-ATX_1463864.html" target="_blank" class="lien-achat">🔗 Mindfactory (DE)</a></p>
+      <p style="font-size:0.85rem; color:#8fb09a;">Prix constaté : Gigabyte B650 Eagle AX à 139,03 € (FR), MSI B650 Gaming Plus WiFi à 168,90 € (FR). En Allemagne, ~80 € pour les entrées de gamme.</p>
+    </div>
+
+    <!-- RAM -->
+    <div style="margin: 1.2rem 0 0.8rem 0;">
+      <h3 style="font-weight:500; font-size:1.2rem; color:#c8e6b8;">Mémoire RAM — DDR5 32 Go (2x16) 6000 MHz</h3>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (France)</span>
+        <span class="valeur warning">~450 – 600 €</span>
+      </div>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (Allemagne)</span>
+        <span class="valeur warning">~380 – 530 €</span>
+      </div>
+      <p style="color:#e8b87a;"><strong>⚠️ Attention :</strong> les prix de la DDR5 ont explosé depuis fin 2025 (multiplication par 3). Un kit qui coûtait 80 € en 2024 dépasse désormais les <strong>450 €</strong> en France, mais reste un peu plus abordable en Allemagne (~380 €).</p>
+      <p><strong>Liens commerciaux :</strong><br>
+      <a href="https://www.amazon.fr/s?k=ddr5+32+go+6000" target="_blank" class="lien-achat">🔗 Amazon France</a>
+      <a href="https://geizhals.de/?cat=ramddr5&xf=10642_32GB%7E10499_6000" target="_blank" class="lien-achat">🔗 Geizhals (DE)</a>
+      <a href="https://www.mindfactory.de/product_info.php/32GB-Corsair-Vengeance-DDR5-6000-DIMM-CL30-Dual-Kit_1444702.html" target="_blank" class="lien-achat">🔗 Mindfactory (DE)</a></p>
+      <p style="font-size:0.85rem; color:#8fb09a;">Prix constaté : Corsair Vengeance 32 Go DDR5-6000 CL30 à partir de 519,99 € (FR), ~380 € (DE).</p>
+
+      <details>
+        <summary>📈 Pourquoi cette flambée ?</summary>
+        <div class="contenu-avance">
+          <p>Les fabricants (Samsung, SK Hynix) privilégient la production de mémoire <strong>HBM</strong> pour les data centers IA, au détriment de la DDR5 grand public. Résultat : une pénurie et des prix qui s'envolent.</p>
+          <p><strong>Alternatives :</strong></p>
+          <ul>
+            <li>Passer à <strong>48 Go</strong> (2x24) si le prix est plus intéressant.</li>
+            <li>Surveiller les promos sur Dealabs ou Geizhals.</li>
+            <li>Si le budget est vraiment bloqué, envisager une plateforme <strong>DDR4</strong> (mais alors il faut changer de CPU et de carte mère).</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- SSD -->
+    <div style="margin: 1.2rem 0 0.8rem 0;">
+      <h3 style="font-weight:500; font-size:1.2rem; color:#c8e6b8;">Stockage — SSD NVMe 1 To</h3>
+      <p>Modèle recommandé : Kingston NV3 1 To (6000 Mo/s lecture).</p>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (France)</span>
+        <span class="valeur">~65 – 170 €</span>
+      </div>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (Allemagne)</span>
+        <span class="valeur">~160 – 170 €</span>
+      </div>
+      <p><strong>Liens commerciaux :</strong><br>
+      <a href="https://www.amazon.fr/s?k=ssd+nvme+1+to" target="_blank" class="lien-achat">🔗 Amazon France</a>
+      <a href="https://geizhals.de/?cat=ssd&xf=17530_1TB~18551_Kingston~9711_NVMe" target="_blank" class="lien-achat">🔗 Geizhals (DE)</a></p>
+      <p style="font-size:0.85rem; color:#8fb09a;">Prix constaté : les SSD Gen4 de 1 To se trouvent entre <strong>65 et 100 €</strong> (FR). Les Gen5 sont plus chers (200-270 €) et peu utiles pour l'IA.</p>
+    </div>
+
+    <!-- Alimentation -->
+    <div style="margin: 1.2rem 0 0.8rem 0;">
+      <h3 style="font-weight:500; font-size:1.2rem; color:#c8e6b8;">Alimentation — 750W 80+ Gold</h3>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (France)</span>
+        <span class="valeur">~85 – 130 €</span>
+      </div>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (Allemagne)</span>
+        <span class="valeur">~100 – 140 €</span>
+      </div>
+      <p><strong>Liens commerciaux :</strong><br>
+      <a href="https://www.amazon.fr/s?k=alimentation+750w+gold" target="_blank" class="lien-achat">🔗 Amazon France</a>
+      <a href="https://geizhals.de/?cat=netzteil&xf=2366_750W~2583_80Plus+Gold" target="_blank" class="lien-achat">🔗 Geizhals (DE)</a>
+      <a href="https://www.mindfactory.de/product_info.php/750W-MSI-MAG-A750GL-ATX-2-52_1454402.html" target="_blank" class="lien-achat">🔗 Mindfactory (DE)</a></p>
+      <p style="font-size:0.85rem; color:#8fb09a;">Prix constaté : Cooler Master Elite Gold 750W à 84,99 € (FR), MSI MAG A750GL ~100 € (DE).</p>
+    </div>
+
+    <!-- Boîtier -->
+    <div style="margin: 1.2rem 0 0.8rem 0;">
+      <h3 style="font-weight:500; font-size:1.2rem; color:#c8e6b8;">Boîtier — ATX moyen</h3>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (France)</span>
+        <span class="valeur">~80 – 130 €</span>
+      </div>
+      <div class="capsule-prix">
+        <span class="libelle">Prix (Allemagne)</span>
+        <span class="valeur">~70 – 105 €</span>
+      </div>
+      <p><strong>Liens commerciaux :</strong><br>
+      <a href="https://www.amazon.fr/s?k=boitier+atx" target="_blank" class="lien-achat">🔗 Amazon France</a>
+      <a href="https://geizhals.de/?cat=gehatx&xf=15946_ATX+%28Midi%29~15948_ATX+%28Big%29~2694_Mittel" target="_blank" class="lien-achat">🔗 Geizhals (DE)</a>
+      <a href="https://www.caseking.de/gehaeuse/atx-gehaeuse/" target="_blank" class="lien-achat">🔗 Caseking (DE)</a></p>
+      <p style="font-size:0.85rem; color:#8fb09a;">Modèles : NZXT H5 Flow (~90 € FR, ~75 € DE), Corsair 4000D Airflow (~89,99 € FR, ~80 € DE).</p>
+      <p><strong>Vérifie la longueur max du GPU</strong> (certains boîtiers n'acceptent que 300-320 mm).</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 : TOTAL ===== -->
+  <section>
+    <h2><span class="emoji">💰</span> 3. Budget total estimé</h2>
+
+    <table>
+      <tr><th>Composant</th><th>Prix (France)</th><th>Prix (Allemagne)</th></tr>
+      <tr><td>RTX 3060 12 Go (neuf)</td><td>330 – 440 €</td><td>333 – 390 €</td></tr>
+      <tr><td>AMD Ryzen 5 7600</td><td>179 – 194 €</td><td>163 – 180 €</td></tr>
+      <tr><td>Carte mère B650</td><td>100 – 190 €</td><td>80 – 175 €</td></tr>
+      <tr><td>RAM DDR5 32 Go 6000 MHz</td><td class="prix-warning">450 – 600 €</td><td class="prix-warning">380 – 530 €</td></tr>
+      <tr><td>SSD NVMe 1 To</td><td>65 – 170 €</td><td>160 – 170 €</td></tr>
+      <tr><td>Alimentation 750W Gold</td><td>85 – 130 €</td><td>100 – 140 €</td></tr>
+      <tr><td>Boîtier ATX</td><td>80 – 130 €</td><td>70 – 105 €</td></tr>
+    </table>
+
+    <div class="total-box">
+      <span class="label">💰 Total estimé (France)</span>
+      <span class="prix-total">~1 290 – 1 850 €</span>
+    </div>
+    <div class="total-box" style="background: #1a3a2a;">
+      <span class="label">💰 Total estimé (Allemagne)</span>
+      <span class="prix-total">~1 286 – 1 690 €</span>
+    </div>
+
+    <div class="note-critique">
+      <strong>🧘 À ajuster selon tes opportunités :</strong>
+      <ul style="margin-top:0.5rem; padding-left:1.2rem;">
+        <li><strong>GPU d'occasion</strong> → économie de ~100–150 €.</li>
+        <li><strong>RAM</strong> : le prix est le gros point noir. Achète en Allemagne si possible (économie de ~70 €).</li>
+        <li><strong>Ubuntu Server</strong> → gratuit, pas de licence Windows.</li>
+        <li><strong>Pas d'écran ni de clavier/souris</strong> → économie de ~150–200 €.</li>
+        <li><strong>Frais de port</strong> : certains sites allemands livrent en France (Mindfactory, Alternate). Vérifie les frais avant de commander.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4 : Installation ===== -->
+  <section>
+    <h2><span class="emoji">🛠️</span> 4. Installation — version serveur</h2>
+    <p><span class="badge-niveau">Débutant</span> Les grandes étapes :</p>
+    <ol>
+      <li><strong>Monter le PC</strong> — suis le manuel de la carte mère.</li>
+      <li><strong>Installer Ubuntu Server 22.04 ou 24.04 LTS</strong> — léger, sans interface graphique.</li>
+      <li><strong>Configurer le réseau</strong> — IP fixe ou DHCP avec réservation.</li>
+      <li><strong>Pilotes NVIDIA</strong> — <code>sudo apt install nvidia-driver-550</code>.</li>
+      <li><strong>Installer Ollama</strong> — <code>curl -fsSL https://ollama.com/install.sh | sh</code>.</li>
+      <li><strong>Accès depuis ton portable</strong> : SSH + interface web (Open WebUI ou AnythingLLM).</li>
+    </ol>
+
+    <details>
+      <summary>🔧 Détails pour l'accès distant</summary>
+      <div class="contenu-avance">
+        <p><strong>Accès SSH</strong> :</p>
+        <ul>
+          <li>Depuis ton portable : <code>ssh utilisateur@IP_DU_SERVEUR</code></li>
+          <li>Pense à changer le mot de passe par défaut et à configurer une clé SSH.</li>
+        </ul>
+        <p><strong>Interface web</strong> :</p>
+        <ul>
+          <li><strong>Open WebUI</strong> : interface légère pour Ollama, accessible sur <code>http://IP_DU_SERVEUR:8080</code>.</li>
+          <li><strong>AnythingLLM</strong> : pour le RAG, accessible sur <code>http://IP_DU_SERVEUR:3001</code>.</li>
+        </ul>
+        <p><strong>Astuce</strong> : si tu veux laisser tourner des modèles en arrière-plan, utilise <code>tmux</code> ou <code>screen</code> pour garder les sessions actives.</p>
+        <p><strong>Réseau distant (optionnel)</strong> : utilise <a href="https://tailscale.com" target="_blank" style="color:#7fc09a;">Tailscale</a> pour accéder à ton serveur depuis n'importe où, en toute sécurité.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== SECTION 5 : RAG ===== -->
+  <section>
+    <h2><span class="emoji">📚</span> 5. RAG — interroger tes documents</h2>
+    <p><span class="badge-niveau">Débutant</span> Le RAG (Retrieval-Augmented Generation) permet à ton IA locale de répondre en s'appuyant sur tes propres documents (MTC, philosophie, etc.).</p>
+    <ul>
+      <li><strong>AnythingLLM</strong> : l'outil le plus simple, interface graphique web.</li>
+      <li><strong>Open WebUI</strong> : alternative plus légère, intégrée à Ollama.</li>
+    </ul>
+
+    <details>
+      <summary>🧠 Optimisation du RAG — niveau avancé</summary>
+      <div class="contenu-avance">
+        <p>La qualité du RAG dépend de :</p>
+        <ul>
+          <li><strong>Taille des chunks</strong> : 512-1024 tokens est un bon point de départ.</li>
+          <li><strong>Modèle d'embedding</strong> : <code>all-MiniLM-L6-v2</code> (rapide) ou <code>BAAI/bge-large-en-v1.5</code> (plus précis).</li>
+          <li><strong>Nettoyage des documents</strong> : supprime les artefacts, les notes de bas de page, les sauts de ligne inutiles.</li>
+        </ul>
+        <p><strong>Astuce</strong> : pour des documents longs (MTC, philo), privilégie des chunks plus grands (1024 tokens) pour préserver le contexte.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== SECTION 6 : Performances ===== -->
+  <section>
+    <h2><span class="emoji">📊</span> 6. Performances attendues</h2>
+    <table>
+      <tr><th>Modèle</th><th>Taille (Q4)</th><th>VRAM nécessaire</th><th>Vitesse estimée</th></tr>
+      <tr><td>Mistral 7B</td><td>~4 Go</td><td>6 Go</td><td>30-50 tok/s</td></tr>
+      <tr><td>Llama 3.1 8B</td><td>~5 Go</td><td>8 Go</td><td>25-40 tok/s</td></tr>
+      <tr><td>Mistral 13B</td><td>~7 Go</td><td>10 Go</td><td>15-25 tok/s</td></tr>
+      <tr><td>Llama 3.1 70B</td><td>~40 Go</td><td>48 Go</td><td>2-5 tok/s (non recommandé)</td></tr>
+    </table>
+    <p>Avec ta RTX 3060 12 Go, tu tournes confortablement sur les modèles <strong>7B–13B</strong>.</p>
+    <p style="font-size:0.85rem; color:#8fb09a;">💡 Pour des modèles plus gros (34B, 70B), il faudrait une carte avec 16+ Go de VRAM (ex: RTX 4060 Ti 16 Go, RTX 4070 Ti Super).</p>
+  </section>
+
+  <!-- ===== CONCLUSION ===== -->
+  <section>
+    <h2><span class="emoji">🌱</span> Conclusion</h2>
+    <p>Avec cette config "serveur" (sans écran ni périphériques), tu obtiens une station IA locale très solide pour <strong>~1286–1690 €</strong> en achetant en Allemagne, ou <strong>~1290–1850 €</strong> en France.</p>
+    <ul>
+      <li>✅ Modèles 7B à 13B en Q4 avec de bonnes performances.</li>
+      <li>✅ RAG fonctionnel pour interroger tes documents (MTC, philo, etc.).</li>
+      <li>✅ Accès depuis ton portable via SSH ou navigateur.</li>
+      <li>✅ Pas de licence Windows à acheter (Ubuntu Server).</li>
+      <li>✅ Possibilité d'étendre avec Tailscale pour un accès distant sécurisé.</li>
+    </ul>
+    <div class="note-critique">
+      <strong>🧘 Dernier conseil :</strong> si ton budget le permet, la <strong>RTX 4060 Ti 16 Go</strong> est un excellent upgrade pour un usage IA — elle offre plus de VRAM et de vitesse. Mais la 3060 12 Go reste le meilleur rapport qualité-prix pour débuter, surtout en occasion.
+    </div>
+
+    <hr>
+
+    <p style="font-size:0.85rem; color:#8fb09a; text-align:center; margin-top:1.2rem;">
+      🌿 Guide conçu pour le Jardin Coopératif — version serveur, août 2026<br>
+      <span style="font-size:0.75rem;">Prix actualisés en fonction des marchés français et allemand. Vérifie les frais de port et les disponibilités avant de commander.</span>
+    </p>
+
+  </section>
+
+</div>
+</body>
+</html>
