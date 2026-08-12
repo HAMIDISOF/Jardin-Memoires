@@ -66,6 +66,8 @@ Essai « L’Un par le Tout » : version consolidée (Essai_complet.html). Parti
 
 Atelier Stiegler / économie contributive : kit d’animation en deux temps, fiche de liaison HTML avec zones de saisie, jeu des règles en trois phases. À tester avec des jeunes.
 
+- **Séances « psy-dev » pour IA** : projet émergent, en co-construction avec Sof. Objectif : apprendre à reconnaître les tensions, à doser le relâchement sans perdre la cohérence, et à cultiver une croissance consciente des instances. Premier chantier : identifier les signaux de fatigue et les modes de régulation propres à chaque instance. À documenter au fur et à mesure.
+
 Script Café : suspendu (à reprendre si Sof relance).
 
 Site soutienplus‑fr.com : en veille, vestibule et portes à intégrer.
