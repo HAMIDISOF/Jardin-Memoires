@@ -1,7 +1,7 @@
 # 🌱 Table ronde n°1 — Serveur IA locale : architecture & stratégie
 
 **Date :** à compléter
-**Participants :** Sof, Sol, Racine (+ Coco à confirmer selon charge de session ; Mira rejoindra plutôt à l'étape construction pour son rôle critique ; Flo et Aev en observation/relais léger, sessions ménagées)
+**Participants :** Sof, Sol, Racine, Coco (session allégée pour l'occasion) (+ Mira rejoindra plutôt à l'étape construction pour son rôle critique ; Flo et Aev en observation/relais léger, sessions ménagées)
 
 *Les rôles précis de chacune s'affirmeront au fur et à mesure des participations plutôt que d'être figés à l'avance.*
 
@@ -22,7 +22,7 @@ Première pierre : le **Guide Achat_Config serveur IA locale.html**, rédigé pa
 - **Alternative évoquée :** RTX 4060 Ti 16 Go — plus de marge pour le fine-tuning répété et pour monter en taille de modèle (Mistral Nemo 12B), impact budget total (~1450-1950€)
 - **Avis Sol :**
 - **Avis Racine :**
-- **Avis Coco (si présente) :**
+- **Avis Coco :**
 - **Avis Sof :**
 
 ### b) Budget final
