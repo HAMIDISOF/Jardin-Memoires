@@ -1,0 +1,154 @@
+[
+  {
+    "fichier": "01_Couverture.txt",
+    "titre": "Couverture",
+    "sources_internes": [
+      "Text/Couverture.html"
+    ],
+    "mots": 0
+  },
+  {
+    "fichier": "02_Page-de-titre.txt",
+    "titre": "Page de titre",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-1.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-2.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-3.html"
+    ],
+    "mots": 419
+  },
+  {
+    "fichier": "03_Table-des-matieres.txt",
+    "titre": "Table des matières",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-4.html"
+    ],
+    "mots": 245
+  },
+  {
+    "fichier": "04_Illustrations.txt",
+    "titre": "Illustrations",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-5.html"
+    ],
+    "mots": 15
+  },
+  {
+    "fichier": "05_Preface.txt",
+    "titre": "Préface",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-5b.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-6.html"
+    ],
+    "mots": 818
+  },
+  {
+    "fichier": "06_Explications-preliminaires.txt",
+    "titre": "Explications préliminaires",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-7.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-8.html"
+    ],
+    "mots": 7768
+  },
+  {
+    "fichier": "12_La-voie-dune-personne-de-capacite-initiale.txt",
+    "titre": "La voie d'une personne de capacité initiale",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-9.html"
+    ],
+    "mots": 5151
+  },
+  {
+    "fichier": "18_La-voie-dune-personne-de-capacite-intermediaire.txt",
+    "titre": "La voie d'une personne de capacité intermédiaire",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-10.html"
+    ],
+    "mots": 7038
+  },
+  {
+    "fichier": "23_La-voie-dune-personne-de-grande-capacite.txt",
+    "titre": "La voie d'une personne de grande capacité",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-11.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-12.html"
+    ],
+    "mots": 60
+  },
+  {
+    "fichier": "24_Le-bon-coeur-supreme-la-bodhitchitta.txt",
+    "titre": "Le bon coeur suprême, la bodhitchitta",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-13.html"
+    ],
+    "mots": 5397
+  },
+  {
+    "fichier": "30_Sentrainer-sur-la-voie-de-la-bodhitchitta.txt",
+    "titre": "S'entraîner sur la voie de la bodhitchitta",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-14.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-15.html"
+    ],
+    "mots": 3735
+  },
+  {
+    "fichier": "34_Sentrainer-a-la-bodhitchitta-ultime.txt",
+    "titre": "S'entraîner à la bodhitchitta ultime",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-16.html",
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-17.html"
+    ],
+    "mots": 14327
+  },
+  {
+    "fichier": "44_Lexamen-de-notre-pratique-du-Lamrim.txt",
+    "titre": "L'examen de notre pratique du Lamrim",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-18.html"
+    ],
+    "mots": 263
+  },
+  {
+    "fichier": "45_Le-nada.txt",
+    "titre": "Le nada",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-19.html"
+    ],
+    "mots": 13
+  },
+  {
+    "fichier": "46_Bibliographie.txt",
+    "titre": "Bibliographie",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-20.html"
+    ],
+    "mots": 1152
+  },
+  {
+    "fichier": "47_Les-programmes-detude-du-bouddhisme-kadampa.txt",
+    "titre": "Les programmes d'étude du bouddhisme kadampa",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-21.html"
+    ],
+    "mots": 1430
+  },
+  {
+    "fichier": "48_Tharpa-dans-le-monde.txt",
+    "titre": "Tharpa dans le monde",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-22.html"
+    ],
+    "mots": 363
+  },
+  {
+    "fichier": "49_Plus-de-lecture.txt",
+    "titre": "Plus de lecture",
+    "sources_internes": [
+      "Text/Un-Bouddhisme-moderne-2ndEd-2013-23.html"
+    ],
+    "mots": 100
+  }
+]
