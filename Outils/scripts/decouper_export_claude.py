@@ -1,180 +1,105 @@
 #!/usr/bin/env python3
 """
-decouper_export_claude.py
-Flo 🌿 — 04/05/2026
-
-Découpe le fichier conversations.json exporté depuis Claude.ai
-en fichiers .md individuels, un par conversation.
-Si une conversation dépasse --max-ko ko, elle est découpée en parties indicées.
+Découpe le fichier conversations.json (export Claude.ai) en un fichier JSON
+par conversation, nommé d'après le titre de la conversation, préfixé par
+un numéro d'ordre chronologique (basé sur created_at) pour garder l'ordre
+même une fois les fichiers triés alphabétiquement dans un dossier.
 
 Usage :
-    python scripts/decouper_export_claude.py
-        --input "D:\\Downloads\\conversations.json"
-        --output "D:\\THESE\\Les journaux\\Jardin-Memoires\\Corpus\\export_claude"
-        --max-ko 50
-        --filtre "Flo"
+    python3 decouper_export_claude.py conversations.json dossier_de_sortie
 
-Les fichiers produits sont nommés :
-    YYYYMMDD_HHMMSS_titre.md
-    YYYYMMDD_HHMMSS_titre_part01.md  (si découpage)
-    YYYYMMDD_HHMMSS_titre_part02.md
-    ...
+Si vous avez téléchargé un .zip contenant conversations.json, dézippez-le
+d'abord (clic droit > extraire, ou `unzip export.zip`).
 """
 
-import argparse
 import json
 import re
-from datetime import datetime
+import sys
 from pathlib import Path
 
 
-def nettoyer_nom(titre: str) -> str:
-    titre = titre.strip()
-    titre = re.sub(r'[\\/:*?"<>|]', '', titre)
-    titre = re.sub(r'\s+', '_', titre)
-    titre = titre[:80]
-    return titre or "sans_titre"
-
-
-def timestamp_fichier(date_str: str) -> str:
-    try:
-        dt = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
-        return dt.strftime('%Y%m%d_%H%M%S')
-    except Exception:
-        return datetime.now().strftime('%Y%m%d_%H%M%S')
-
-
-def messages_en_lignes(messages: list) -> list:
-    lignes = []
-    for msg in messages:
-        role = msg.get('sender') or msg.get('role') or 'inconnu'
-        if role in ('human', 'user'):
-            role_label = 'Sof'
-        elif role in ('assistant', 'ai'):
-            role_label = 'Claude'
-        else:
-            role_label = role
-
-        content = msg.get('text') or msg.get('content') or ''
-        if isinstance(content, list):
-            parties = []
-            for bloc in content:
-                if isinstance(bloc, dict):
-                    parties.append(bloc.get('text', '') or str(bloc))
-                else:
-                    parties.append(str(bloc))
-            content = '\n'.join(parties)
-
-        if content.strip():
-            lignes.append(f"**{role_label} :** {content.strip()}")
-            lignes.append("")
-    return lignes
-
-
-def entete(titre: str, created: str, updated: str, part: str = "") -> list:
-    label = f"# {titre}" + (f" — {part}" if part else "")
-    return [label, f"*Créé le : {created}*", f"*Mis à jour le : {updated}*", "", "---", ""]
-
-
-def sauvegarder_conversation(conv: dict, output_path: Path, max_ko: int):
-    titre    = conv.get('name') or conv.get('title') or 'Sans titre'
-    created  = conv.get('created_at', '')
-    updated  = conv.get('updated_at', '')
-    ts       = timestamp_fichier(created)
-    nom      = nettoyer_nom(titre)
-    messages = conv.get('chat_messages') or conv.get('messages') or []
-
-    toutes_les_lignes = messages_en_lignes(messages)
-    contenu_complet   = "\n".join(entete(titre, created, updated) + toutes_les_lignes)
-    taille_ko         = len(contenu_complet.encode('utf-8')) / 1024
-
-    if max_ko <= 0 or taille_ko <= max_ko:
-        fichier = output_path / f"{ts}_{nom}.md"
-        fichier.write_text(contenu_complet, encoding='utf-8')
-        print(f"  ✅ {fichier.name} ({taille_ko:.0f} ko)")
-        return 1
-
-    # Découpage en parties
-    parts          = []
-    bloc_courant   = []
-    taille_courante = 0
-    limite         = max_ko * 1024
-
-    for i in range(0, len(toutes_les_lignes), 2):
-        segment        = toutes_les_lignes[i:i+2]
-        taille_segment = len('\n'.join(segment).encode('utf-8'))
-
-        if taille_courante + taille_segment > limite and bloc_courant:
-            parts.append(bloc_courant)
-            bloc_courant    = segment
-            taille_courante = taille_segment
-        else:
-            bloc_courant.extend(segment)
-            taille_courante += taille_segment
-
-    if bloc_courant:
-        parts.append(bloc_courant)
-
-    nb_parts = len(parts)
-    for idx, bloc in enumerate(parts, 1):
-        label_part = f"partie {idx}/{nb_parts}"
-        contenu    = "\n".join(entete(titre, created, updated, label_part) + bloc)
-        fichier    = output_path / f"{ts}_{nom}_part{idx:02d}.md"
-        taille     = len(contenu.encode('utf-8')) / 1024
-        fichier.write_text(contenu, encoding='utf-8')
-        print(f"  ✅ {fichier.name} ({taille:.0f} ko)")
-
-    return nb_parts
+def slugify(name: str, fallback: str) -> str:
+    """Transforme un nom de conversation en nom de fichier sûr."""
+    name = (name or "").strip()
+    if not name:
+        name = fallback
+    # Remplace tout ce qui n'est pas lettre/chiffre/espace/tiret par rien
+    name = re.sub(r"[^\w\s\-]", "", name, flags=re.UNICODE)
+    name = re.sub(r"\s+", "_", name.strip())
+    return name[:80] if name else fallback
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Découpe conversations.json (export Claude) en fichiers .md"
-    )
-    parser.add_argument('--input',  '-i', required=True,  help="Chemin vers conversations.json")
-    parser.add_argument('--output', '-o', default='Corpus/export_claude', help="Dossier de sortie")
-    parser.add_argument('--filtre', '-f', default=None,   help="Filtre sur le titre")
-    parser.add_argument('--max-ko', '-m', type=int, default=50,
-                        help="Taille max par fichier en ko (0 = pas de limite, défaut 50)")
-    args = parser.parse_args()
+    if len(sys.argv) != 3:
+        print("Usage : python3 decouper_export_claude.py conversations.json dossier_de_sortie")
+        sys.exit(1)
 
-    input_path  = Path(args.input)
-    output_path = Path(args.output)
-    output_path.mkdir(parents=True, exist_ok=True)
+    input_path = Path(sys.argv[1])
+    output_dir = Path(sys.argv[2])
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"📂 Lecture de : {input_path}")
-    data = json.loads(input_path.read_text(encoding='utf-8'))
+    with input_path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
 
-    if isinstance(data, list):
-        conversations = data
-    elif isinstance(data, dict):
-        for key in ('conversations', 'chats', 'data'):
-            if key in data and isinstance(data[key], list):
-                conversations = data[key]
-                break
-        else:
-            conversations = [data]
-    else:
-        print("❌ Format JSON non reconnu.")
-        return
+    if not isinstance(data, list):
+        print("Format inattendu : je m'attendais à une liste de conversations.")
+        print("Le fichier fourni contient un objet de type:", type(data))
+        sys.exit(1)
 
-    print(f"✅ {len(conversations)} conversation(s) trouvée(s).")
+    def get_created(conv):
+        # Le champ standard de l'export Claude est created_at (ISO 8601)
+        return conv.get("created_at") or conv.get("updated_at") or ""
 
-    filtre      = args.filtre.lower() if args.filtre else None
-    max_ko      = args.max_ko
-    nb_fichiers = 0
+    # Tri chronologique global des conversations
+    conversations = sorted(data, key=get_created)
 
-    for conv in conversations:
-        titre = conv.get('name') or conv.get('title') or 'Sans titre'
-        if filtre and filtre not in titre.lower():
-            continue
-        nb_fichiers += sauvegarder_conversation(conv, output_path, max_ko)
+    seen_names = {}
+    manifest = []
 
-    print(f"\n🌿 {nb_fichiers} fichier(s) produit(s) dans : {output_path}")
-    if filtre:
-        print(f"   (filtre : '{args.filtre}')")
-    print(f"   (taille max par fichier : {max_ko} ko)")
+    for i, conv in enumerate(conversations, start=1):
+        name = conv.get("name") or conv.get("summary") or ""
+        uuid = conv.get("uuid", f"conv{i}")
+        created = get_created(conv)
+
+        base_slug = slugify(name, fallback=uuid)
+
+        # Évite les doublons de nom de fichier
+        count = seen_names.get(base_slug, 0)
+        seen_names[base_slug] = count + 1
+        suffix = f"_{count+1}" if count else ""
+
+        # Préfixe numérique pour garder l'ordre chrono au tri alphabétique
+        filename = f"{i:04d}_{base_slug}{suffix}.json"
+
+        # Trie aussi les messages à l'intérieur de la conversation, par sécurité
+        messages = conv.get("chat_messages", [])
+        try:
+            messages_sorted = sorted(messages, key=lambda m: m.get("created_at", ""))
+            conv["chat_messages"] = messages_sorted
+        except Exception:
+            pass  # si la structure diffère, on garde l'ordre d'origine
+
+        out_path = output_dir / filename
+        with out_path.open("w", encoding="utf-8") as f:
+            json.dump(conv, f, ensure_ascii=False, indent=2)
+
+        manifest.append({
+            "fichier": filename,
+            "nom_conversation": name or "(sans titre)",
+            "cree_le": created,
+            "nb_messages": len(messages),
+        })
+
+        print(f"[{i:04d}] {filename}  ({len(messages)} messages, {created})")
+
+    # Petit récapitulatif pour s'y retrouver
+    manifest_path = output_dir / "_manifeste.json"
+    with manifest_path.open("w", encoding="utf-8") as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=2)
+
+    print(f"\n{len(conversations)} conversations écrites dans {output_dir}")
+    print(f"Récapitulatif : {manifest_path}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
