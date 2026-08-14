@@ -1,0 +1,274 @@
+[
+  {
+    "fichier": "01_Couverture.txt",
+    "titre": "Couverture",
+    "sources_internes": [
+      "Text/cover.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte.xhtml"
+    ],
+    "mots": 4
+  },
+  {
+    "fichier": "02_A-propos-de-lauteur.txt",
+    "titre": "À propos de l’auteur",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-1.xhtml"
+    ],
+    "mots": 77
+  },
+  {
+    "fichier": "03_Ordre-de-lecture-ou-detude-suggere-des-livres-de-Venerable-G.txt",
+    "titre": "Ordre de lecture ou d'étude suggéré des livres de Vénérable Guéshé Kelsang Gyatso Rinpotché",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-2.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-3.xhtml"
+    ],
+    "mots": 334
+  },
+  {
+    "fichier": "04_A-propos-des-illustrations.txt",
+    "titre": "A propos des illustrations",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-4.xhtml"
+    ],
+    "mots": 333
+  },
+  {
+    "fichier": "05_PREMIERE-PARTIE-Les-fondements.txt",
+    "titre": "PREMIERE PARTIE : Les fondements",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-5.xhtml"
+    ],
+    "mots": 11
+  },
+  {
+    "fichier": "06_Introduction.txt",
+    "titre": "Introduction",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-6.xhtml"
+    ],
+    "mots": 724
+  },
+  {
+    "fichier": "07_La-paix-interieure.txt",
+    "titre": "La paix intérieure",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-7.xhtml"
+    ],
+    "mots": 2463
+  },
+  {
+    "fichier": "08_Comment-developper-et-maintenir-un-esprit-paisible.txt",
+    "titre": "Comment développer et maintenir un esprit paisible ?",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-8.xhtml"
+    ],
+    "mots": 1541
+  },
+  {
+    "fichier": "09_La-renaissance.txt",
+    "titre": "La renaissance",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-9.xhtml"
+    ],
+    "mots": 2195
+  },
+  {
+    "fichier": "10_La-mort.txt",
+    "titre": "La mort",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-10.xhtml"
+    ],
+    "mots": 3622
+  },
+  {
+    "fichier": "11_Le-karma.txt",
+    "titre": "Le karma",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-11.xhtml"
+    ],
+    "mots": 4086
+  },
+  {
+    "fichier": "12_Le-samsara.txt",
+    "titre": "Le samsara",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-12.xhtml"
+    ],
+    "mots": 5057
+  },
+  {
+    "fichier": "13_Une-pratique-spirituelle-commune-pour-tous.txt",
+    "titre": "Une pratique spirituelle commune, pour tous",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-13.xhtml"
+    ],
+    "mots": 4026
+  },
+  {
+    "fichier": "14_Les-objets-qui-ont-du-sens.txt",
+    "titre": "Les objets qui ont du sens",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-14.xhtml"
+    ],
+    "mots": 2929
+  },
+  {
+    "fichier": "15_DEUXIEME-PARTIE-Progresser.txt",
+    "titre": "DEUXIEME PARTIE : Progresser",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-15.xhtml"
+    ],
+    "mots": 12
+  },
+  {
+    "fichier": "16_Apprendre-a-cherir-et-a-nous-preoccuper-des-autres.txt",
+    "titre": "Apprendre à chérir et à nous préoccuper des autres",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-16.xhtml"
+    ],
+    "mots": 6161
+  },
+  {
+    "fichier": "17_Comment-faire-grandir-lamour-qui-cherit-et-se-preoccupe-des.txt",
+    "titre": "Comment faire grandir l’amour qui chérit et se préoccupe des autres",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-17.xhtml"
+    ],
+    "mots": 7818
+  },
+  {
+    "fichier": "18_Lechange-de-soi-avec-les-autres.txt",
+    "titre": "L’échange de soi avec les autres",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-18.xhtml"
+    ],
+    "mots": 10125
+  },
+  {
+    "fichier": "19_La-grande-compassion.txt",
+    "titre": "La grande compassion",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-19.xhtml"
+    ],
+    "mots": 4159
+  },
+  {
+    "fichier": "20_Lamour-desirant.txt",
+    "titre": "L’amour désirant",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-20.xhtml"
+    ],
+    "mots": 1942
+  },
+  {
+    "fichier": "21_Prendre-et-donner.txt",
+    "titre": "Prendre et donner",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-21.xhtml"
+    ],
+    "mots": 5897
+  },
+  {
+    "fichier": "22_Le-bon-cur-supreme.txt",
+    "titre": "Le bon cœur suprême",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-22.xhtml"
+    ],
+    "mots": 1952
+  },
+  {
+    "fichier": "23_La-bodhitchitta-ultime.txt",
+    "titre": "La bodhitchitta ultime",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-23.xhtml"
+    ],
+    "mots": 15134
+  },
+  {
+    "fichier": "24_Dedier-la-vertu.txt",
+    "titre": "Dédier la vertu",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-24.xhtml"
+    ],
+    "mots": 50
+  },
+  {
+    "fichier": "25_Annexe-I-La-Priere-liberatrice-et-Prieres-pour-la-meditation.txt",
+    "titre": "Annexe I : La Prière libératrice et Prières pour la méditation",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-25.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-26.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-27.xhtml"
+    ],
+    "mots": 1159
+  },
+  {
+    "fichier": "26_Annexe-II-Quest-ce-que-la-meditation.txt",
+    "titre": "Annexe II : Qu’est-ce que la méditation ?",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-28.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-29.xhtml"
+    ],
+    "mots": 1490
+  },
+  {
+    "fichier": "27_Annexe-III-Le-Mode-de-vie-kadampa.txt",
+    "titre": "Annexe III : Le Mode de vie kadampa",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-30.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-31.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-32.xhtml",
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-33.xhtml"
+    ],
+    "mots": 2005
+  },
+  {
+    "fichier": "28_Glossaire.txt",
+    "titre": "Glossaire",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-34.xhtml"
+    ],
+    "mots": 3895
+  },
+  {
+    "fichier": "29_Bibliographie.txt",
+    "titre": "Bibliographie",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-35.xhtml"
+    ],
+    "mots": 1274
+  },
+  {
+    "fichier": "30_Les-programmes-detude-du-bouddhisme-kadampa.txt",
+    "titre": "Les programmes d’étude du bouddhisme kadampa",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-36.xhtml"
+    ],
+    "mots": 1431
+  },
+  {
+    "fichier": "31_Tharpa-dans-le-monde.txt",
+    "titre": "Tharpa dans le monde",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-37.xhtml"
+    ],
+    "mots": 375
+  },
+  {
+    "fichier": "32_Le-Projet-International-de-Temple.txt",
+    "titre": "Le Projet International de Temple",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-38.xhtml"
+    ],
+    "mots": 123
+  },
+  {
+    "fichier": "33_A-propos-de-cet-eBook.txt",
+    "titre": "À propos de cet eBook",
+    "sources_internes": [
+      "Text/Comment_Transformer_Votre_Vie_-_Texte-39.xhtml"
+    ],
+    "mots": 36
+  }
+]
