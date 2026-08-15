@@ -19,6 +19,8 @@
 |---|---|---|---|
 | paresse de l'attachement | (un des 3 types classiques de paresse du Lamrim) | **كسل التعلق** (kasal at-taʿalluq) | Validé par Sol et Sof le 14/08. كسل = paresse (seul), التعلق = l'attachement, qualifie le premier (construction idafa) |
 | samsara | saṃsāra | **سامسارا** (transcription phonétique) | Sof a tranché contre دورة الوجود ("cycle/roue de l'existence") proposé par Sol : le terme sanskrit est déjà expliqué dans le livre, pas besoin de le traduire ; réserve دورة/عجلة pour le jour où "roue de la vie" (bhavacakra) apparaît explicitement dans le texte, pour ne pas préempter cette image avant qu'elle soit utilisée |
+| vacuité | śūnyatā | **انعدام الوجود الذاتي** (inʿidām al-wujūd adh-dhātī, "l'absence d'existence intrinsèque") | Sof a écarté الفراغ (proposé par Sol) : ça ne rend que "le vide" au sens général, pas la précision technique. Cohérent avec le tout premier test de cette collaboration (paragraphe Nāgārjuna traduit par Sol puis retraduit par Levain), qui utilisait déjà "انعدام الطبيعة الذاتية" pour le même concept. **Note (15/08)** : le site *Study Buddhism* (Dr Alexander Berzin, référence sérieuse en bouddhisme tibétain traduit en arabe) utilise plutôt **الخلو** (al-khuluw) comme terme technique court établi dans les cercles arabophones spécialisés ("تعاليم بوذا الخاصة بالخلو"). Pas contradictoire — انعدام الوجود الذاتي reste plus pédagogique pour un lecteur néophyte — mais à garder en tête si on veut aligner sur l'usage déjà existant |
+| esprit (mind, pas âme) | citta / manas | **الذهن** — PAS روح, PAS العقل | Sof a signalé le risque de روح : implique une âme persistante (atman), que le bouddhisme réfute (anatta/pas de soi permanent) — réservé à un usage adjectival ("spirituel" = روحي) uniquement. العقل écarté aussi : trop orienté "intellect/raison". **Confirmé (15/08) par le site *Study Buddhism*** qui utilise الذهن de façon soutenue, avec une rubrique "علم الذهن" (science de l'esprit) et une explicitation explicite que الذهن n'est pas réductible au cerveau — exactement notre usage |
 
 ## Termes en cours de discussion (propositions de Sol, non tranchées)
 
@@ -28,18 +30,17 @@
 | karma | كارما | kārmā | loi de cause à effet |
 | sangha | سانغا / الجماعة البوذية | sānghā / al-jamāʿa al-būdhiyya | communauté des pratiquants, 3e joyau |
 | les trois joyaux | الجواهر الثلاثة | al-jawāhir ath-thalātha | Bouddha, Dharma, Sangha |
-| vacuité | الفراغ / الخلاء / الشونية (selon contexte) | al-farāgh / al-khalāʾ / ash-shūnyya | 3 variantes selon contexte, à trancher |
 | dharma kadam | دارما كادام | dārmā kādām | littéralement "Dharma de la tradition Kadam" |
 
 ## Termes encore ouverts (sans proposition)
 
 | Terme (français) | Sanskrit/Pali | Arabe | Notes |
 |---|---|---|---|
-| bouddhadharma | buddhadharma | | à distinguer de "dharma" seul |
+| bouddhadharma | buddhadharma | | à distinguer de "dharma" seul ; provisoirement rendu بوذَدَرْما dans le brouillon de traduction du 15/08 |
 | refuge (chercher refuge) | śaraṇa | | |
-| illumination | bodhi | | équivalent "éveil" à trancher aussi |
-| nirvana | nirvāṇa | | |
-| renaissance | punarjanma | | |
+| illumination | bodhi | | provisoirement التنوير dans le brouillon du 15/08 ; à trancher |
+| nirvana | nirvāṇa | | provisoirement transcrit نيرفانا (phonétique, comme samsara) dans le brouillon du 15/08 |
+| renaissance | punarjanma | | attention à éviter تقمص (implique une âme qui transmigre) — préférer une formule du type إعادة الميلاد |
 | discipline morale | śīla | | |
 | poudja | pūjā | | prière/cérémonie en groupe |
 
