@@ -20,7 +20,7 @@ if %errorlevel% equ 0 (
 ) else (
     echo [INFO] Modifications détectées, commit en cours...
     git commit -m "Auto commit %date% %time%"
-    if %errorlevel% neq 0 ( echo [ERREUR] git commit a échoué & exit /b 1 )
+    if !errorlevel! neq 0 ( echo [ERREUR] git commit a échoué & exit /b 1 )
 )
 
 REM ---------- 3. Pull avec rebase ----------
