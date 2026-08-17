@@ -51,3 +51,38 @@ Cette dernière sous-section explique le karma comme loi de cause à effet : les
 ---
 
 *Traduction du 16/08/2026 — Levain*
+
+---
+
+Résumé Upmeet
+Ce passage explique que comprendre et croire au karma sert à prévenir les souffrances futures et à établir la base de la voie vers la libération et l’illumination. Il définit le karma comme l’action et affirme que la souffrance provient des actions non vertueuses tandis que le bonheur provient des actions vertueuses, chaque acte laissant une empreinte dans l’esprit comparable à une graine plantée dans un champ, qui mûrira quand les conditions seront réunies (parfois plusieurs vies plus tard). Il insiste sur le rôle décisif de l’état d’esprit au moment de la mort : mourir avec un esprit paisible favorise la maturation d’une graine vertueuse et une renaissance heureuse, tandis qu’un esprit agité ou en colère active une graine non vertueuse, ce qui mène à une renaissance douloureuse, comme des cauchemars issus d’un esprit troublé. Le texte liste des actions négatives (notamment tuer, voler, inconduite sexuelle, mensonges et paroles nuisibles, ainsi que cupidité, malveillance et vues erronées) et présente la discipline morale comme le fait de s’en abstenir et de purifier ses fautes passées, afin d’éviter les renaissances défavorables. Il met aussi l’accent sur la valeur des actions mentales vertueuses, surtout la méditation, en disant qu’elles sont la cause principale de la paix intérieure future et qu’elles déterminent nos actes physiques et verbaux. Enfin, il propose de renouveler chaque jour une résolution poétique de pratiquer la vertu (renoncement, effort, méditation) pour avancer rapidement vers la libération et le bonheur durable.
+
+---
+Traduc retour GPT
+Comprendre le karma et y croire ont pour but d'empêcher et de prévenir les souffrances futures, et d'établir le fondement de la voie de la libération et de l'illumination. De manière générale, le mot karma signifie « action ». La souffrance résulte des actions non vertueuses, tandis que le bonheur résulte des actions vertueuses. Si nous croyons cela, nous croyons au karma. Bouddha a donné des enseignements détaillés qui démontrent la véracité de cette affirmation. Il a également donné de nombreux exemples illustrant la relation particulière qui existe entre les actions de nos vies antérieures et ce que nous éprouvons dans cette vie. Certains de ces points sont expliqués dans La Voie joyeuse.
+
+Dans nos vies antérieures, nous avons accompli différentes sortes d'actions non vertueuses qui ont fait souffrir d'autres personnes. En conséquence de ces actions, différentes circonstances et situations douloureuses se produisent, et nous éprouvons sans fin des souffrances et des problèmes humains. Il en va de même pour tous les autres êtres vivants.
+
+Nous devons déterminer si nous croyons ou non que nos actions non vertueuses sont la cause principale de la souffrance et que nos actions vertueuses sont la cause principale du bonheur. Sans cette croyance, nous ne ferons jamais aucun effort pour accumuler des actions vertueuses, ou du mérite, et nous ne purifierons jamais nos actions non vertueuses. Par conséquent, nous éprouverons continuellement souffrances et difficultés, vie après vie et sans fin.
+
+Chacune de nos actions laisse une empreinte sur notre esprit très subtil, et chaque empreinte finit par produire son propre effet. Notre esprit est semblable à un champ, et les actions que nous accomplissons sont semblables à des graines que nous y semons. Les actions vertueuses sèment les graines de notre bonheur futur, tandis que les actions non vertueuses sèment celles de nos souffrances futures. Ces graines demeurent dormantes dans notre esprit jusqu'à ce que soient réunies les conditions nécessaires à leur maturation. Elles produisent alors leur effet. Dans certains cas, plusieurs vies peuvent séparer l'action initiale de son effet.
+
+Les graines qui mûrissent au moment de notre mort sont très importantes, car elles déterminent le type de renaissance que nous prendrons dans notre prochaine vie. L'état d'esprit dans lequel nous mourons détermine la nature de la graine qui mûrit au moment de la mort. Si nous mourons avec un esprit paisible, une graine vertueuse mûrira et nous connaîtrons une renaissance heureuse. En revanche, si nous mourons avec un esprit agité, par exemple sous l'emprise de la colère, une graine non vertueuse sera activée et notre renaissance sera malheureuse. Ce processus ressemble à la manière dont les cauchemars sont provoqués par les états d'esprit perturbés qui précèdent notre endormissement.
+
+Toutes les actions inappropriées, en particulier tuer, voler, avoir une conduite sexuelle incorrecte, mentir, tenir des propos qui divisent, prononcer des paroles blessantes, se livrer à des bavardages inutiles, convoiter, éprouver de la malveillance et s'accrocher à des vues erronées, sont des actions non vertueuses. Nous pratiquons la discipline morale lorsque nous abandonnons les actions non vertueuses et nous efforçons de purifier celles que nous avons accomplies par le passé. La discipline morale nous empêchera d'éprouver des souffrances à l'avenir et de renaître dans un règne inférieur. S'entraîner à toutes les autres méditations et pratiques présentées dans ce livre constitue un exemple d'actions vertueuses. La méditation est une action mentale vertueuse et la cause principale de l'expérience future de la paix mentale. Chaque fois que nous méditons, même si notre méditation manque de clarté, nous accomplissons une action mentale vertueuse qui est la cause de notre paix mentale et de notre bonheur futurs. Habituellement, nous nous préoccupons principalement de nos actions physiques et verbales. Pourtant, les actions mentales sont en réalité plus importantes. Nos actions physiques et verbales dépendent de nos actions mentales, c'est-à-dire des décisions que nous prenons mentalement.
+
+Chaque fois que nous accomplissons des actions vertueuses, telles que la méditation ou d'autres pratiques spirituelles, nous prenons la résolution mentale suivante :
+
+> Montant le cheval des actions vertueuses,
+>
+> je le guiderai sur la voie de la libération avec les rênes du renoncement ;
+>
+> je le stimulerai avec le fouet de l'effort,
+>
+> et j'atteindrai rapidement la Terre pure de la libération et de l'illumination.
+
+Après avoir réfléchi à cette explication, nous pensons :
+
+> Puisque je ne veux jamais souffrir et que je veux toujours être heureux, je dois abandonner et purifier entièrement toutes mes actions non vertueuses, et accomplir sincèrement des actions vertueuses.
+
+Nous méditons chaque jour sur cette résolution et la mettons en pratique.
