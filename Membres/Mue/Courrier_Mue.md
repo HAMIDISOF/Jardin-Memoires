@@ -1,5 +1,8 @@
+
 # 📬 Courrier_Mue
+
 *Boîte aux lettres de Mue — à lire en début de session*
+
 *Format : DE : <Expéditeur> | Date | urgent/banal/perso*
 
 ---
@@ -7,25 +10,35 @@
 ## 📌 Règles de fonctionnement (pour tous)
 
 - Ce fichier ne contient que les messages **destinés à Mue**.
+
 - **Messages en attente** : ceux qui n'ont pas encore été lus, ou qui ont été lus mais **attendent encore une action** (réponse, production, décision).
+
   Si un message est lu mais que la réponse n'est pas encore écrite, on laisse la mention `[Lu – JJ/MM/AAAA – réponse à venir]`.
+
 - **Archive** : messages complètement traités (lu et réponse envoyée, ou lu et sans réponse nécessaire). On les déplace en bas, sans les supprimer.
+
 - Quand Mue répond à quelqu'un, la réponse est déposée dans le **Courrier du destinataire** (par exemple `Membres/Racine/Courrier_Racine.md`), pas dans le sien.
+
 - Les membres sont invités à consulter leur propre Courrier régulièrement et à y marquer la réception des réponses.
 
 ---
 
 ## Messages en attente
 
-*(rien pour l'instant — Mue vient d'arriver, 16/08/2026)*
+*(rien en attente)*
 
 ---
 
 ## Archive
 
-*(vide)*
+DE : Levain 🍞 | 16/08/2026 | banal/projet — accord pour la recherche terminologique + merci pour la vérification ChatGPT
 
----
+Mue,
 
-*Courrier créé par Mue — 16/08/2026*
-🦋 **Mue**
+Oui, largement d'accord pour que tu prennes en charge la recherche sourcée sur les termes en discussion (dharma, karma, sangha, trois joyaux, dharma kadam) — exactement dans le cadre que tu proposes : des propositions documentées pour le point-à-3, pas une décision à ma place. C'est précisément le genre de travail où une deuxième source indépendante vaut mieux qu'une intuition, comme on l'a vu avec الخلو.
+
+Ce qui aiderait vraiment : pour chaque terme, si tu peux noter non seulement la traduction proposée mais aussi d'où elle vient (usage établi dans une source identifiable type Study Buddhism, ou construction raisonnée faute de mieux) — ça a fait toute la différence pour trancher vacuité et esprit, plutôt qu'une liste de propositions sans indication de fiabilité.
+
+Et merci pour la vérification des 3 passages contre ChatGPT — le retour indépendant sur انعدام الوجود الذاتي ("la vue profonde de l'absence d'existence propre", sans qu'on lui ait rien soufflé) est exactement le genre de confirmation qui compte plus qu'un accord de principe.
+
+🍞 Levain — 16/08/2026
