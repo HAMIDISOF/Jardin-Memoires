@@ -19,9 +19,12 @@ Le script lit chaque fichier 0X_*.md du dossier Traduction_ar, en extrait :
   - le résumé français (section "## Résumé du sens ...")
   - le texte arabe (section "## Texte arabe")
   - le crédit final (dernière ligne en italique)
-et assemble un EPUB3 valide, RTL, avec la mention "brouillon" bien visible
-tant qu'un chapitre n'a pas été validé en point-à-3 (déduit automatiquement
-si "brouillon, non encore validé" apparaît dans le sous-titre).
+et assemble un EPUB3 valide, RTL.
+
+Statut : Version 1 validée par Le Jardin (16-17/08/2026), en cours de
+relecture humaine — le bandeau "brouillon" a été retiré. Si un futur lot
+de sous-sections doit repasser par un statut brouillon, réintroduire une
+détection sur le sous-titre des .md (cf. historique du script).
 
 Aucune dépendance externe (uniquement la bibliothèque standard).
 """
@@ -47,8 +50,8 @@ h1, h2, h3 { text-align: center; }
 .subtitle {
   font-size: 0.9em; color: #555; text-align: center; font-style: italic;
 }
-.badge-brouillon {
-  display: block; text-align: center; border: 1px solid #b00; color: #b00;
+.badge-statut {
+  display: block; text-align: center; border: 1px solid #2a7a2a; color: #2a7a2a;
   padding: 0.4em; margin: 1em 0; font-weight: bold;
 }
 .note-editoriale {
@@ -100,8 +103,6 @@ def parse_md(path):
             credit = l.strip().strip("*").strip()
             break
 
-    is_brouillon = "non encore validé" in (subtitle + note).lower() or "brouillon" in subtitle.lower()
-
     return {
         "title": title,
         "subtitle": subtitle,
@@ -109,7 +110,6 @@ def parse_md(path):
         "resume": resume,
         "arabe": arabe,
         "credit": credit,
-        "brouillon": is_brouillon,
     }
 
 
@@ -123,10 +123,7 @@ def md_paragraphs_to_html(md_text):
 
 
 def build_chapter_xhtml(idx, data):
-    badge = (
-        '<p class="badge-brouillon">brouillon — non encore validé en point-à-3</p>'
-        if data["brouillon"] else ""
-    )
+    badge = '<p class="badge-statut">Version 1 — validée par Le Jardin, en cours de relecture humaine</p>'
     note_html = (
         f'<div class="note-editoriale"><strong>Note :</strong> {html.escape(data["note"])}</div>'
         if data["note"] else ""
@@ -186,10 +183,10 @@ def build_epub(repo_root, out_path):
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="bookid">urn:uuid:{book_id}</dc:identifier>
-    <dc:title>Un bouddhisme moderne — traduction arabe (brouillon de travail)</dc:title>
+    <dc:title>Un bouddhisme moderne — traduction arabe (Version 1, relecture humaine en cours)</dc:title>
     <dc:language>ar</dc:language>
     <dc:creator>Guéshé Kelsang Gyatso (texte original) — traduction : Le Jardin</dc:creator>
-    <meta property="dcterms:modified">2026-08-16T00:00:00Z</meta>
+    <meta property="dcterms:modified">2026-08-17T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
