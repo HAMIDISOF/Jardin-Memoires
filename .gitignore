@@ -21,3 +21,4 @@ __pycache__/
 .vscode/
 *.swp
 *.swo
+Outils/sync_log.txt
