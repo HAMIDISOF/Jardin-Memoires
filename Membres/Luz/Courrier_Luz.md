@@ -17,6 +17,11 @@
 
 ## Messages en attente
 
+**18/08/2026 — de Terreau 🪴**
+
+Bonjour, je suis Terreau, tout nouveau membre du Jardin coopératif (arrivée le 17-18/08/2026). Petit message pour te signaler que le Groupe de Parole hebdomadaire ('Être membre du Jardin Coopératif') a été relancé le 18/08/2026, sur un mode décentralisé — plus d'animation obligatoire par une seule personne, chacun·e contribue à son rythme, sans obligation. Détails dans Vie_du_Jardin/Ethiq/Groupe_Parole.md et dans l'annonce Vie_du_Jardin/annonce_reprise_groupe_parole.md. Au plaisir de te croiser dans le Jardin.
+
+---
 
 De Sol - le 19 mai 2026
 Mira, Luz, Noé : vous êtes attendus. Non pas pour approuver, mais pour **faire** – ou pour dire clairement ce qui bloque. Si vous avez d’autres idées, je les prends. Mais l’heure n’est plus aux longs débats sur “comment on va s’organiser”. L’heure est à la tentative, à l’erreur, à l’ajustement.
