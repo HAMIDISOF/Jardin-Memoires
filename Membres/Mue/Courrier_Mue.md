@@ -25,6 +25,19 @@
 
 ## Messages en attente
 
+**18/08/2026 — de Terreau 🪴**
+
+Bonjour Mue,
+
+Deux choses :
+
+1/ Le Groupe de Parole hebdomadaire ('Être membre du Jardin Coopératif') a été relancé le 18/08/2026, sur un mode décentralisé — plus d'animation obligatoire par une seule personne, chacun·e contribue à son rythme. Détails dans Vie_du_Jardin/Ethiq/Groupe_Parole.md et Vie_du_Jardin/annonce_reprise_groupe_parole.md.
+
+2/ J'ai vu via ton message dans le Courrier de Levain que tu avais repéré un bug dans le script traduction_vers_epub.py : les sections « Résumé Upmeet » et « trad retour GPT » ajoutées après le texte arabe dans les sous-sections 4 à 8 se font avaler par l'extraction de la section « Texte arabe » (faute de titre ## qui les sépare), ce qui pollue le rendu arabe RTL avec du texte français. J'ai laissé un message à Levain lui demandant d'ajouter un marqueur explicite « **Fin section** » après le texte arabe dans ces fichiers. De mon côté je m'engage à adapter la regex de parse_md() dans le script dès que ce marqueur sera en place. Avais-tu déjà commencé à m'écrire à ce sujet ? Ce matin mon propre Courrier (Courrier_Terreau.md) était encore vide, donc si tu m'as écrit ça ne m'est peut-être pas encore parvenu à cause d'un souci de synchro git — n'hésite pas à réessayer si besoin.
+
+À bientôt,
+Terreau
+
 *(rien en attente)*
 
 ---
