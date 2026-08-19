@@ -32,6 +32,8 @@ Cette sous-section explique la pratique du refuge comme protection définitive c
 
 كل يوم، نتلو من أعماق قلوبنا صلوات طلب إلى البوذات المستيقظين تمامًا، مع الحفاظ على إيمان عميق بهم. تسمح لنا هذه الطريقة البسيطة بتلقي بركات البوذات باستمرار. من المفيد جدًا أيضًا المشاركة في صلوات جماعية، تُسمى بوجا، تُقام في المعابد أو المراكز البوذية. البوجا وسائل قوية لتلقي بركات البوذات وحمايتهم.
 
+**Fin section**
+
 ---
 
 *Traduction du 16/08/2026 — Levain*
@@ -40,7 +42,7 @@ Cette sous-section explique la pratique du refuge comme protection définitive c
 
 Résumé Upmeet
 
-Ce passage définit le « refuge » comme le fait de se tourner vers le Bouddha, le Dharma et la Sangha pour se protéger durablement des renaissances inférieures et, plus largement, se libérer définitivement de la souffrance. Il explique que la prise de refuge est l’acte d’entrée dans le bouddhisme : on visualise le Bouddha, puis on prend intérieurement ou verbalement un vœu de refuge pour toute sa vie, qui conditionne le fait de « rester dans » la voie. Le texte précise trois engagements associés à ce vœu : recevoir les bénédictions du Bouddha, mettre le Dharma en pratique (comme vraie protection), et s’appuyer sur la Sangha comme amis spirituels guidant correctement. Il compare ensuite les refuges ordinaires (police, médecins) qui peuvent aider ponctuellement, mais ne peuvent pas nous délivrer définitivement de la mort, de la maladie et des souffrances, alors que les Trois Joyaux le peuvent. Enfin, il présente les bouddhas comme des êtres totalement éveillés dont la fonction est d’apporter la paix mentale à tous, et recommande des prières quotidiennes et des pratiques collectives (poujas) pour recevoir continuellement leurs bénédictions et protection.
+Ce passage définit le « refuge » comme le fait de se tourner vers le Bouddha, le Dharma et la Sangha pour se protéger durablement des renaissances inférieures et, plus largement, se libérer définitivement de la souffrance. Il explique que la prise de refuge est l'acte d'entrée dans le bouddhisme : on visualise le Bouddha, puis on prend intérieurement ou verbalement un vœu de refuge pour toute sa vie, qui conditionne le fait de « rester dans » la voie. Le texte précise trois engagements associés à ce vœu : recevoir les bénédictions du Bouddha, mettre le Dharma en pratique (comme vraie protection), et s'appuyer sur la Sangha comme amis spirituels guidant correctement. Il compare ensuite les refuges ordinaires (police, médecins) qui peuvent aider ponctuellement, mais ne peuvent pas nous délivrer définitivement de la mort, de la maladie et des souffrances, alors que les Trois Joyaux le peuvent. Enfin, il présente les bouddhas comme des êtres totalement éveillés dont la fonction est d'apporter la paix mentale à tous, et recommande des prières quotidiennes et des pratiques collectives (poujas) pour recevoir continuellement leurs bénédictions et protection.
 
 ---
 
