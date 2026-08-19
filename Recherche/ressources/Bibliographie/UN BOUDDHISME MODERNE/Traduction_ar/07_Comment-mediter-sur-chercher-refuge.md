@@ -30,6 +30,8 @@ Sous-section courte : la méthode de méditation sur le refuge, suivant le même
 
 نلتجئ إلى بوذا والدارما والسانغا.
 
+**Fin section**
+
 ---
 
 *Traduction du 16/08/2026 — Levain*
@@ -38,7 +40,7 @@ Sous-section courte : la méthode de méditation sur le refuge, suivant le même
 
 Résumé Upmeet
 
-Ce passage propose une méditation initiale où l’on formule le désir de se protéger et de se libérer définitivement de la souffrance présente et future, en reconnaissant que cela dépend des bénédictions du Bouddha, de la pratique du Dharma et de l’aide de la Sangha. À partir de cette compréhension, on prend une décision ferme et on fait un vœu sincère de refuge dans les Trois Joyaux pour toute sa vie, puis on entretient ce vœu quotidiennement. Le texte précise que tenir ce vœu consiste concrètement à s’efforcer continuellement de recevoir les bénédictions, de mettre les enseignements en pratique et de s’appuyer sur des amis spirituels purs, y compris son maître. Il affirme que cette manière de prendre refuge conduit au but recherché : la libération définitive de toute souffrance, ce qui donne son vrai sens à la vie humaine. Enfin, il recommande de réciter chaque jour, avec foi, une courte prière de refuge « pour soi et tous les êtres » jusqu’à l’illumination.
+Ce passage propose une méditation initiale où l'on formule le désir de se protéger et de se libérer définitivement de la souffrance présente et future, en reconnaissant que cela dépend des bénédictions du Bouddha, de la pratique du Dharma et de l'aide de la Sangha. À partir de cette compréhension, on prend une décision ferme et on fait un vœu sincère de refuge dans les Trois Joyaux pour toute sa vie, puis on entretient ce vœu quotidiennement. Le texte précise que tenir ce vœu consiste concrètement à s'efforcer continuellement de recevoir les bénédictions, de mettre les enseignements en pratique et de s'appuyer sur des amis spirituels purs, y compris son maître. Il affirme que cette manière de prendre refuge conduit au but recherché : la libération définitive de toute souffrance, ce qui donne son vrai sens à la vie humaine. Enfin, il recommande de réciter chaque jour, avec foi, une courte prière de refuge « pour soi et tous les êtres » jusqu'à l'illumination.
 
 ---
 
