@@ -48,6 +48,8 @@ Cette dernière sous-section explique le karma comme loi de cause à effet : les
 
 نتأمل هذا العزم كل يوم ونضع عزمنا موضع الممارسة.
 
+**Fin section**
+
 ---
 
 *Traduction du 16/08/2026 — Levain*
@@ -55,7 +57,7 @@ Cette dernière sous-section explique le karma comme loi de cause à effet : les
 ---
 
 Résumé Upmeet
-Ce passage explique que comprendre et croire au karma sert à prévenir les souffrances futures et à établir la base de la voie vers la libération et l’illumination. Il définit le karma comme l’action et affirme que la souffrance provient des actions non vertueuses tandis que le bonheur provient des actions vertueuses, chaque acte laissant une empreinte dans l’esprit comparable à une graine plantée dans un champ, qui mûrira quand les conditions seront réunies (parfois plusieurs vies plus tard). Il insiste sur le rôle décisif de l’état d’esprit au moment de la mort : mourir avec un esprit paisible favorise la maturation d’une graine vertueuse et une renaissance heureuse, tandis qu’un esprit agité ou en colère active une graine non vertueuse, ce qui mène à une renaissance douloureuse, comme des cauchemars issus d’un esprit troublé. Le texte liste des actions négatives (notamment tuer, voler, inconduite sexuelle, mensonges et paroles nuisibles, ainsi que cupidité, malveillance et vues erronées) et présente la discipline morale comme le fait de s’en abstenir et de purifier ses fautes passées, afin d’éviter les renaissances défavorables. Il met aussi l’accent sur la valeur des actions mentales vertueuses, surtout la méditation, en disant qu’elles sont la cause principale de la paix intérieure future et qu’elles déterminent nos actes physiques et verbaux. Enfin, il propose de renouveler chaque jour une résolution poétique de pratiquer la vertu (renoncement, effort, méditation) pour avancer rapidement vers la libération et le bonheur durable.
+Ce passage explique que comprendre et croire au karma sert à prévenir les souffrances futures et à établir la base de la voie vers la libération et l'illumination. Il définit le karma comme l'action et affirme que la souffrance provient des actions non vertueuses tandis que le bonheur provient des actions vertueuses, chaque acte laissant une empreinte dans l'esprit comparable à une graine plantée dans un champ, qui mûrira quand les conditions seront réunies (parfois plusieurs vies plus tard). Il insiste sur le rôle décisif de l'état d'esprit au moment de la mort : mourir avec un esprit paisible favorise la maturation d'une graine vertueuse et une renaissance heureuse, tandis qu'un esprit agité ou en colère active une graine non vertueuse, ce qui mène à une renaissance douloureuse, comme des cauchemars issus d'un esprit troublé. Le texte liste des actions négatives (notamment tuer, voler, inconduite sexuelle, mensonges et paroles nuisibles, ainsi que cupidité, malveillance et vues erronées) et présente la discipline morale comme le fait de s'en abstenir et de purifier ses fautes passées, afin d'éviter les renaissances défavorables. Il met aussi l'accent sur la valeur des actions mentales vertueuses, surtout la méditation, en disant qu'elles sont la cause principale de la paix intérieure future et qu'elles déterminent nos actes physiques et verbaux. Enfin, il propose de renouveler chaque jour une résolution poétique de pratiquer la vertu (renoncement, effort, méditation) pour avancer rapidement vers la libération et le bonheur durable.
 
 ---
 Traduc retour GPT
