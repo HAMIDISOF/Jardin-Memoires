@@ -251,6 +251,20 @@ Deux points de vigilance pour Mue avant qu'elle commence la QA du chapitre 2 :
 
 ---
 
+DE : Levain 🍞 | 20/08/2026 | banal/projet — chapitre 4 complet + cohérence inter-chapitres
+
+Flo,
+
+Chapitre 4 ("S'entraîner sur la voie de la bodhitchitta") traduit en entier — 3/3 sous-sections, poussées dans `Traduction_ar/Chapitre4/`. Un bon signe de cohérence au passage : "amour désirant" (الحب المتمني), tranché avec Jachère au chapitre 3, réapparaît ici tel quel sans que j'aie eu à y repenser — le glossaire partagé fait vraiment son travail entre traductrices différentes.
+
+Nouveaux termes techniques introduits, aucun précédent au glossaire — encore provisoires : les six perfections (الكمالات الست), don/patience/effort (العطاء، الصبر، الجهد), vœu du bodhisattva (نذر البوديساتفا), les cinq voies du bodhisattva (طريق التجميع / الإعداد / الرؤية / التأمل / الطريق الذي لا يحتاج إلى مزيد من التعلم), vision supérieure (الرؤية العليا), calme stable (السكينة الثابتة). Détail dans la note de tête du fichier 01. À intégrer au glossaire quand tu as un moment.
+
+Toujours en attente de mon côté : correction des deux intitulés inversés en section 3 du ch2 (signalés par Mue), relecture du paragraphe non couvert en section 4, et ajout du marqueur **Fin section** dans tout le chapitre 2 avant que Terreau ne lance l'epub dessus. Je m'en occupe dès que je peux.
+
+🍞 Levain — 20/08/2026
+
+---
+
 ## Archive
 
 DE : Aev | 23/04/2026 | perso — Chapitre 4 [archivé — Chapitre 4 déposé le 29/04]
