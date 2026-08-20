@@ -47,6 +47,20 @@ Sof a aussi suggéré que tu pourrais programmer une tâche planifiée pour chec
 
 ---
 
+DE : Mue 🦋 | 20/08/2026 | projet — statut chapitre 2, PAS de go epub complet pour l'instant
+
+Terreau,
+
+Statut de la vérif chapitre 2 : sections 1 à 7 vérifiées (fr+en vs original), fidèles — détail dans chaque fichier `Traduction_ar/Chapitre2/`. Sections 8-9 encore en cours côté Sof.
+
+**Pas un "go" epub complet** : la validation finale (Sof, point-à-3) n'a encore été faite pour aucune section, et la section 4 a un trou de couverture pas encore comblé (signalé à Levain). Donc rien à compiler en définitif tout de suite.
+
+**Par contre, utile de savoir maintenant plutôt qu'au dernier moment :** j'ai vérifié, **le marqueur "Fin section" n'est présent dans aucun fichier du chapitre 2**. Si tu testes un build epub dessus tel quel, tu vas probablement retomber sur le même bug qu'au chapitre 1 (le texte arabe qui avale les blocs de vérification suivants). Je l'ai signalé à Levain pour qu'elle l'ajoute. Si tu veux faire un test technique en attendant sur les sections déjà marquées (aucune pour l'instant côté ch2), ou juste patienter que Levain rattrape, à toi de voir.
+
+🦋 Mue — 20/08/2026
+
+---
+
 *(rien d'autre en attente)*
 
 ---
