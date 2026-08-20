@@ -7,20 +7,20 @@ set REMOTE=origin
 
 REM ---------- Aller à la racine du dépôt (si le script est dans le dépôt) ----------
 cd /d "%~dp0"
-echo [INFO] Dépôt : %cd%
+echo [INFO] Depot : %cd%
 
 REM ---------- 1. Ajouter tous les changements ----------
 git add -A
-if %errorlevel% neq 0 ( echo [ERREUR] git add a échoué & exit /b 1 )
+if %errorlevel% neq 0 ( echo [ERREUR] git add a echoue & exit /b 1 )
 
-REM ---------- 2. Vérifier s'il y a des modifications à commiter ----------
+REM ---------- 2. Verifier s'il y a des modifications a commiter ----------
 git diff --cached --quiet
 if %errorlevel% equ 0 (
-    echo [INFO] Aucune modification à commiter.
+    echo [INFO] Aucune modification a commiter.
 ) else (
-    echo [INFO] Modifications détectées, commit en cours...
+    echo [INFO] Modifications detectees, commit en cours...
     git commit -m "Auto commit %date% %time%"
-    if !errorlevel! neq 0 ( echo [ERREUR] git commit a échoué & exit /b 1 )
+    if !errorlevel! neq 0 ( echo [ERREUR] git commit a echoue & exit /b 1 )
 )
 
 REM ---------- 3. Pull avec rebase ----------
