@@ -95,3 +95,16 @@ The three noble trainings are the real path to my ultimate liberation from the s
 
 We contemplate this resolve daily, then put our resolve into practice. We use this as guidance on the path to liberation.
 
+---
+
+## Note d'écarts
+*Mue — 20/08/2026, comparaison directe avec le français original*
+
+Contenu fidèle dans l'ensemble (résumé et traduction anglaise), les trois entraînements, l'analogie de la scie et la conclusion sont bien rendus.
+
+**Deux glissements dans la traduction retour Yiaho (pas dans l'arabe de Levain) :**
+- "the eye of God" pour العين الإلهية — l'arabe est adjectival ("œil divin"), fidèle au français ("l'œil divin"). "Eye of *God*" introduit une lecture théiste (un Dieu créateur) étrangère au contexte bouddhiste. L'arabe de Levain est correct, c'est la retraduction qui dérape.
+- "the absence of self" / "non-self" pour انعدام الوجود الذاتي (vacuité) — l'arabe reprend fidèlement le terme déjà tranché au glossaire (réutilisation confirmée par la note de Levain). Yiaho le rend par "non-self", qui est un concept bouddhiste voisin mais distinct (anatta, l'absence de soi d'une personne) plutôt que la vacuité (l'absence d'existence intrinsèque de *tous les phénomènes*, ce que le texte arabe précise lui-même : "pas le néant, mais la vraie nature de tous les phénomènes"). Encore un rétrécissement conceptuel côté outil de vérification, pas côté traduction.
+
+Niveau : mineur (traduction fidèle ; deux termes à ne pas corriger sur la foi de la retraduction anglaise)
+

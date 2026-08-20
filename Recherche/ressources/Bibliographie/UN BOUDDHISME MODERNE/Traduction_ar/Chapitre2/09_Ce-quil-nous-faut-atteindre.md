@@ -61,3 +61,16 @@ What We Must Achieve
 Buddha says in the Sutra of the Noble Truths: “You must achieve the state of stoppage.” In this context, stoppage means the final cessation of suffering, as well as the cessation of its root, the ignorance of self-clinging. By saying this, Buddha counsels us not to be satisfied with a temporary liberation from a particular suffering, but rather to develop, instead, the intention to attain the ultimate goal of human life: supreme and final mind peace (Nirvana), and the pure, eternal happiness of enlightenment.
 
 Every living being, without exception, is compelled to experience the cycle of suffering (illness, aging, death, and rebirth), life after life, without end. Following Buddha’s example, we develop a strong renunciation of this endless cycle. When he lived in the palace with his family, he saw how his people continually experienced this suffering. It was then that he resolved to achieve enlightenment, the final stoppage of all suffering, and to guide every living being to this state.
+
+---
+
+## Note d'écarts
+*Mue — 20/08/2026, comparaison directe avec le français original*
+
+**Résumé Upmeet (fr) : complet et fidèle**, couvre bien les 5 points du texte (cessation définitive, exemple de Bouddha, activités quotidiennes non abandonnées mais insuffisantes, valeur de la vie humaine vs animaux, détermination finale).
+
+**Traduction retour Yiaho (en) : incomplète.** Elle s'arrête après le deuxième paragraphe ("...guide every living being to this state.") — il manque tout le reste : le passage sur les activités quotidiennes non découragées mais insuffisantes (dangers des technologies modernes inclus), le rappel de la valeur de la vie humaine face aux animaux, et la détermination finale. Seul le résumé français couvre l'intégralité de cette sous-section.
+
+J'ai vérifié le reste directement contre l'arabe et le français (lecture propre, pas une passe d'outil indépendante) : contenu fidèle sur les parties non couvertes par Yiaho.
+
+Niveau : modéré (trou de couverture côté anglais, comblé côté français ; recommandé de compléter la trad retour en avant validation)

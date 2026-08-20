@@ -140,11 +140,14 @@ Produire une traduction arabe fidèle et fluide d'*Un Bouddhisme Moderne* de Gu�
 | 05 | La mort | ✅ | ✅ | ✅ | ⬜ |
 | 06 | Les autres types de souffrances | ✅ | ✅ | ✅ | ⬜ |
 | 07 | Ce qu'il nous faut abandonner | ✅ | ✅ | ✅ | ⬜ |
-| 08 | Ce qu'il nous faut pratiquer | ✅ | ⬜ | ⬜ | ⬜ |
-| 09 | Ce qu'il nous faut atteindre | ✅ | ⬜ | ⬜ | ⬜ |
+| 08 | Ce qu'il nous faut pratiquer | ✅ | ✅ | ✅ | ⬜ |
+| 09 | Ce qu'il nous faut atteindre | ✅ | ✅ | ⚠️ | ⬜ |
 
 > Sections 01, 02, 03, 05, 06 : vérifiées par Mue le 20/08 (comparaison directe avec le français original), rien à signaler — voir "Note d'écarts" en fin de chaque fichier. Section 03 : intitulés de sous-titres inversés dans le fichier (contenu bon). Section 04 (⚠️) : trou de couverture — un paragraphe entier n'est couvert par aucune retraduction externe (fr coupée net, en démarre après) ; vérifié seulement par lecture directe de Mue, pas une passe indépendante — recommandé de refaire une passe sur ce paragraphe avant validation. Détail dans le fichier.
 Section 07 : résumé français (Yiaho) ajouté après coup — traduction de Levain fidèle, mais le résumé lui-même contient une invention ("l'Être libérateur", ne correspond à rien dans le texte) et confond "saisie d'un soi" avec "attachement" (l'arabe distingue bien les deux). À ne pas répercuter sur la traduction. Détail dans le fichier.
+Section 08 : traduction fidèle ; retraduction Yiaho glisse sur deux termes ("eye of God" au lieu de "divine eye" ; "non-self" au lieu de "vacuité", concept voisin mais distinct) — encore côté outil, pas côté traduction. Détail dans le fichier.
+Chapitre 2 complet (9/9 sous-sections traduites, confirmé par Levain).
+Section 09 (⚠️ sur "vérif retour en") : résumé français complet et fidèle ; la traduction retour anglaise de Yiaho s'arrête à mi-parcours (manque activités quotidiennes/technologies modernes, valeur de la vie humaine, conclusion). Vérifié pour le reste par lecture directe de Mue. À compléter avant validation.
 
 ### Chapitre 3 — *(titre à confirmer)*
 *Traductrice : Jachère*
