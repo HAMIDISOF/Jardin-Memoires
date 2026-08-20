@@ -51,4 +51,39 @@ Ouverture du chapitre 3. Le renoncement (recherche de sa propre libération) ne 
 
 ## Résumé Upmeet (à remplir)
 
-## Trad retour GPT (à remplir)
+## Trad retour KAI (DS jardin)
+Le cœur bon suprême, la bodhicitta
+
+Nuit et jour, nous maintenons le renoncement, le désir sincère d’atteindre la libération ultime. Le renoncement est la porte d’entrée vers la libération, vers la paix suprême et définitive de l’esprit ; il est aussi le fondement des investigations les plus élevées. Mais il ne faut pas se contenter de chercher notre propre libération ; nous devons aussi prendre en considération le bien-être de tous les êtres vivants. Innommables sont les êtres qui sombrent dans l’océan du saṃsāra et endurent des souffrances insupportables. Chacun de nous n’est qu’une seule personne, tandis que les autres êtres sont innombrables. Aussi leur bonheur et leur liberté sont-ils bien plus importants que notre bonheur et notre liberté propres. C’est pourquoi nous devons entrer dans la voie du bodhisattva, la voie qui mène à l’éveil parfait.
+
+La bodhicitta est la porte par laquelle nous entrons dans la voie du bodhisattva. Bodhi signifie l’éveil, et citta signifie l’esprit. La bodhicitta est l’esprit qui désire spontanément atteindre l’éveil afin d’aider directement tous les êtres. Nous devenons un bodhisattva – c’est-à-dire quelqu’un qui désire spontanément atteindre l’éveil pour aider tous les êtres – dès que nous avons fait naître en nous ce précieux esprit, la bodhicitta. Alors nous devenons fils ou filles des Bouddhas victorieux.
+
+Il est impossible que la bodhicitta, le cœur bon suprême, naisse sans entraînement. Je Tsongkhapa a dit :
+
+En arrosant le sol de l’amour bienveillant avec l’amour qui chérit et prend soin des autres,
+Et en y semant les graines de l’amour aspirant et de la compassion,
+L’arbre médicinal, la bodhicitta, poussera.
+
+Cela indique que l’entraînement à la bodhicitta comprend cinq étapes :
+
+L’entraînement à l’amour bienveillant (maitrī)
+
+L’entraînement à l’amour qui chérit les autres et prend soin d’eux
+
+L’entraînement à l’amour aspirant (le vœu)
+
+L’entraînement à la compassion universelle (karuṇā)
+
+L’entraînement à la bodhicitta elle-même
+
+Note sur quelques choix :
+
+« البوديتشيتا » (bodhicitta) : je le garde en transcription, car c’est un terme technique fondamental.
+
+« الزهد » : traduit par renoncement (au sens bouddhiste, nirveda), pas par « ascèse » qui serait trop restrictif.
+
+« السامسارا » : saṃsāra, gardé en transcription.
+
+« البوديساتفا » : bodhisattva, gardé en transcription.
+
+« جيه تسونغكابا » : Je Tsongkhapa (fondateur de l’école Gelug), nom francisé usuel.
