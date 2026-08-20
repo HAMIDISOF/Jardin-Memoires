@@ -45,5 +45,53 @@ Troisième noble vérité — "il vous faut pratiquer la voie" — une voie int�
 ---
 
 ## Résumé Upmeet (à remplir)
+Un lecteur comprendrait que ce texte explique, dans une logique bouddhiste (Quatre Nobles Vérités), ce qu’il faut pratiquer concrètement pour atteindre la libération : non pas un chemin extérieur, mais un chemin intérieur fait de réalisations spirituelles.
 
-## Trad retour GPT (à remplir)
+Idée centrale
+La “voie” que Bouddha demande de pratiquer est résumée en trois entraînements supérieurs, dits “supérieurs” parce qu’ils sont motivés par le renoncement (le désir de sortir définitivement de la souffrance).
+
+Les trois pratiques (résumé)
+Discipline morale supérieure
+C’est la décision de renoncer aux actions inappropriées et de maintenir une conduite pure.
+Elle protège de problèmes futurs pour soi et pour les autres.
+Le texte la compare à une bonne terre : sans elle, il est très difficile de faire pousser des réalisations spirituelles.
+Concentration supérieure
+C’est un esprit vertueux placé sur un seul point ; tant qu’elle est maintenue, elle apporte paix et bonheur.
+Elle sert à empêcher les distractions : sans concentration, aucune pratique n’avance.
+La discipline évite les distractions “grossières”, la concentration évite les distractions “subtiles” ; ensemble, elles accélèrent les résultats.
+Sagesse supérieure
+Ce n’est pas l’intelligence ordinaire (utile pour réussir ou se défendre), mais une compréhension profonde de sujets essentiels : karma, vies passées et futures, et surtout l’absence d’existence intrinsèque du soi (vacuité).
+Cette sagesse est présentée comme un “guide intérieur” qui ne trompe pas.
+Comment tout s’articule
+Le texte donne une image : pour couper un arbre, une scie seule ne suffit pas.
+
+Discipline = comme le corps,
+Concentration = comme les mains,
+Sagesse = comme la scie.
+En les combinant, on peut “couper” la racine empoisonnée (l’ignorance et l’attachement au soi), et ainsi faire cesser les autres perturbations mentales et les souffrances : c’est l’accès au nirvana, la paix mentale ultime.
+
+Conclusion pratique
+Le texte se termine par une résolution : reconnaître que ces trois entraînements sont la vraie méthode de libération, donc faire de grands efforts pour les pratiquer, en méditant régulièrement cette détermination puis en la mettant en acte.
+
+
+## Trad retour yiaho (à remplir)
+What We Must Practice
+
+Buddha says in the Sutra of the Noble Truths: “You must practice the path.” In this context, the path does not refer to an external road that leads from one place to another, but to an inner path, a spiritual realization that leads us to the pure happiness of liberation and enlightenment.
+
+The practice can be condensed into three trainings on the path to liberation: the training in supreme ethical discipline, the training in supreme concentration, and the training in supreme wisdom. These trainings are called supreme because they are motivated by renunciation. Therefore, they are the true path to liberation that we need to practice.
+
+Ethical discipline is, by nature, a noble resolve to renounce unskillful actions. When we practice supreme ethical discipline, we renounce unskillful actions, observe pure conduct, and perform every action in a correct manner, motivated by virtue. Ethical discipline is extremely important for each one of us because it allows us to avoid future problems for ourselves and for others. By making our actions pure, ethical discipline makes us purer. We need to be clean and pure. It is not enough to have a clean body alone because we are not our body. Ethical discipline is like good soil that supports and nourishes the crops of spiritual inquiry. It is very hard to progress in our spiritual trainings without practicing ethical discipline. We train in supreme ethical discipline through a deep understanding of the practice of ethical conduct, driven by renunciation.
+
+The second noble training is the training in supreme concentration. Concentration is, by nature, a virtuous mind focused on a single point. As long as we maintain this mind, we know mental peace and thus we are happy. By practicing concentration, we prevent distractions and focus on virtuous topics. It is very important to train in concentration, because we cannot accomplish anything when we are scattered. The training in supreme concentration consists of learning to deeply recognize the ability to stop the appearance of distractions and to focus on virtuous topics, with renunciation as the motive. If our concentration is clear and strong, progress in any Dharma practice is very easy. Usually, distractions are the main obstacle to our practice. Supreme ethical discipline prevents crude distractions from arising, and supreme concentration prevents subtle distractions from arising. Together, they allow our Dharma practice to yield quick results.
+
+The third noble training is the training in supreme wisdom. Wisdom is, by nature, a virtuous and intelligent mind whose function is to understand meaningful topics such as the existence of past lives and future lives, karma, and the absence of self. Understanding these topics gives great meaning to this life and to our countless future lives. Many people are very smart when it comes to defeating enemies, caring for their families, and getting what they want, etc., but this is not wisdom. Even animals possess this type of intelligence. Ordinary intelligence is deceptive, while wisdom will never deceive us. Wisdom is our inner spiritual guide that leads us on the right paths, the eye of God through which we can see past lives and future lives, as well as the definite link between our actions in past lives and our experiences in this life, a link called karma. Karma is a vast and very precise subject that only wisdom allows us to understand. The training in supreme wisdom consists of developing and increasing our wisdom that perceives the non-self as we reflect and meditate on non-self driven by renunciation. This wisdom is very deep. The subject of non-self is not nothingness, but the true nature of all phenomena. There is a detailed explanation of non-self in the section titled Training in the Final Bodhisattva.
+
+The three noble trainings are the true method that allows us to be liberated permanently from the suffering of this life and the suffering of innumerable future lives. The following analogy can help us understand: a saw used to cut a tree cannot cut the tree by itself. It needs our hands, which in turn depend on our body. The training in supreme ethical discipline is like our body, the training in supreme concentration is like our hands, and the training in supreme wisdom is like the saw. By using all three together, we can cut the poisonous tree of our ignorance of self-clinging, and automatically all other mental disturbances, their branches, and all problems and suffering, their fruits, will stop. We will then have achieved the final stoppage of suffering in this life and in all our future lives, supreme and final mind peace called Nirvana, or liberation. We will have resolved all our human problems and achieved the true meaning of our life.
+
+Reflecting on the explanation above, we think:
+
+The three noble trainings are the real path to my ultimate liberation from the suffering of this life and the suffering of my innumerable future lives. Therefore, I must make great efforts to practice them.
+
+We contemplate this resolve daily, then put our resolve into practice. We use this as guidance on the path to liberation.
+
