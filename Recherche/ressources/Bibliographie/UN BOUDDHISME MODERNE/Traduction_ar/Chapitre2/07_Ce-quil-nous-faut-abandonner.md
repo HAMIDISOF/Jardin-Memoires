@@ -37,17 +37,25 @@ Explique la deuxième noble vérité — "il vous faut abandonner les origines" 
 ---
 
 ## Résumé Yiaho 
- ما يجب أن نتخلى عنه
+Voici ce qu’un lecteur pourrait comprendre en lisant ce texte arabe, en résumé et en français clair:
 
-يقول بوذا في سوترا الحقائق النبيلة الأربع: «يجب أن تتخلوا عن الأصول.» إن أردنا التحرر نهائيًا من معاناة حيواتنا المستقبلية التي لا تُحصى، ينصحنا بوذا بالتخلي عن الأصول. تشير الأصول إلى اضطراباتنا الذهنية، وخصوصًا تشبثنا بالذات. يُسمى تشبث الذات أصلًا لأنه مصدر كل معاناتنا ومشاكلنا. يُسمى أيضًا الشيطان الداخلي. الاضطرابات الذهنية هي إدراكات خاطئة وظيفتها تدمير سلامنا الذهني، مصدر السعادة. ليس لها وظيفة أخرى سوى إيذائنا. تسكن الاضطرابات الذهنية كتشبث الذات في قلبنا وتؤذينا باستمرار بتدمير سلام ذهننا، ليل نهار، دون أن تتوقف أبدًا. في السامسارا، دورة الحياة غير النقية، لا يملك أي كائن إمكانية معرفة سعادة حقيقية لأن سلامه الذهني، مصدر السعادة، يُدمَّر باستمرار بالشيطان الداخلي لتشبث الذات.
+Thème central: le Bouddha enseigne qu’il faut se débarrasser des “attachements” (les origines des perturbations mentales) pour atteindre la libération définitive des souffrances présentes et des futures renaissances.
 
-جهلنا لتشبث الذات هو ذهن يعتقد خطأً أننا، وجسدنا، وكل الأشياء الأخرى التي نراها عادةً، موجودة وجودًا حقيقيًا. بسبب هذا الجهل، نطوّر تعلقًا بالأشياء التي نحبها وغضبًا تجاه الأشياء التي لا نحبها. نقوم بعد ذلك بأفعال غير فاضلة مختلفة، ونتيجة لهذه الأفعال، نختبر أنواعًا مختلفة من المعاناة والمشاكل في هذه الحياة، وحياة بعد حياة.
+Définition des attachements: ce sont les perturbations mentales liées à notre ego et à notre perception erronée que nous sommes une entité fixe et séparée. Cet ego, cette illusion de soi, est présenté comme le “diable intérieur” qui détruit notre paix mentale.
 
-جهل تشبث الذات سم داخلي يسبب ضررًا أكبر بكثير من أي سم خارجي. يرى ذهننا كل شيء بطريقة خاطئة لأنه ملوث بهذا السم الداخلي. نتيجة لذلك، نختبر معاناة ومشاكل أشبه بالهلوسات. في الواقع، نحن، وجسدنا، وكل الأشياء الأخرى التي نراها عادةً، غير موجودة. يمكن تشبيه تشبث الذات بشجرة مسمومة، والاضطرابات الذهنية الأخرى بأغصانها، وكل معاناتنا ومشاكلنا بثمارها. إنه المصدر الأساسي لكل اضطراباتنا الذهنية الأخرى، وكل معاناتنا، وكل مشاكلنا. يمكننا أن نفهم من هذا أنه إن تخلينا نهائيًا عن تشبثنا بالذات، ستتوقف نهائيًا كل معاناتنا ومشاكلنا في هذه الحياة، وكذلك في الحيوات المستقبلية التي لا تُحصى. أعلن اليوغي العظيم سارها: «إن تحرر ذهنك نهائيًا من تشبث الذات، فمن المؤكد أنك ستتحرر نهائيًا من المعاناة.» بفهم هذا وبعد التفكر في الشروحات السابقة، نفكر:
+Effets de l’attachement: en s’identifiant au corps et aux choses comme réels et Permanents, nous développons de l’attachement et de la colère, puis nous commettons des actes non vertueux. Cela génère des souffrances ici et dans les renaissances futures.
 
-يجب علي أن أبذل جهودًا كبيرة للتعرف على جهلي بتشبث الذات، وتقليله، والتخلي عنه نهائيًا في النهاية.
+Métaphores: l’attachement au soi est comparé à un poison intérieur; la perception erronée rend tout problématique et illusoire. L’attachement est décrit comme la cause première de nos troubles; l’attachement est représenté comme une tree toxique avec ses branches et fruits qui symbolisent les perturbations et les souffrances.
 
-نتأمل باستمرار هذا العزم ونضعه موضع الممارسة.
+Règle directe: si nous nous libérons complètement de l’attachement au soi, toutes les souffrances et problèmes cesseraient, dans cette vie et dans les vies futures.
+
+Citations et sagesse: le texte cite des enseignements et des phrases d’un “maître” (Sârha) et de l’“Être libérateur” pour appuyer l’idée que la libération de l’esprit du soi est la clé pour mettre fin à la souffrance.
+
+Voie proposée: cultiver la connaissance de son propre ignorance du soi, diminuer puis abandonner progressivement cet attachement jusqu’à une libération complète; réfléchir régulièrement à cet engagement et le mettre en pratique.
+
+Objectif final: atteindre un état de libération durable (renoncement et tranquillité mentale), en comprenant et en surmontant l’attachement au soi.
+
+En somme, le lecteur retient que le texte présente l’attachement au soi comme racine de toute souffrance et propose la pratique pour s’en défaire afin d’atteindre la libération, tel que décrite dans les enseignements bouddhistes.
 
 
 ## Trad retour Upmeet
@@ -97,12 +105,14 @@ ou une version avec quelques choix terminologiques différents (ex. self-graspin
 ---
 
 ## Note d'écarts
-*Mue — 20/08/2026, comparaison directe avec le français original*
+*Mue — 20/08/2026, comparaison directe avec le français original — mise à jour après ajout du résumé Yiaho*
 
-**Note sur les étiquettes de ce fichier :** "Résumé Yiaho" contient en fait l'arabe recopié tel quel (pas de résumé) ; "Trad retour Upmeet" contient en fait deux traductions anglaises complètes (pas un résumé français). Donc **aucune vérification française indépendante n'a été produite pour cette sous-section** — seulement de l'anglais, et via Upmeet plutôt que Yiaho. Je vérifie avec ce qu'il y a plutôt que redemander une repasse, comme convenu.
+**Volet anglais (Upmeet, 2 versions) :** fidèle au français original, paragraphe par paragraphe — origines/perturbations mentales/saisie d'un soi, démon intérieur, arbre empoisonné, citation de Saraha, détermination finale. Rien à signaler.
 
-**Sur le fond :** les deux traductions anglaises d'Upmeet (fluide et littérale) correspondent fidèlement au français original, paragraphe par paragraphe — la définition des "origines" comme perturbations mentales/saisie d'un soi, le "démon intérieur", la métaphore de l'arbre empoisonné, la citation de Saraha, la détermination finale. Rien à signaler sur le sens.
+**Volet français (Yiaho, résumé maintenant présent) : deux points réels à signaler, tous les deux dans le résumé, pas dans la traduction arabe de Levain.**
+- **Invention non fondée :** le résumé dit *"le texte cite des enseignements... d'un 'maître' (Sârha) et de l'Être libérateur"* — il n'y a qu'une seule figure citée dans le français comme dans l'arabe, le yogi Saraha. "L'Être libérateur" n'existe ni dans le français ni dans l'arabe de Levain ; c'est un ajout du résumé, sans source.
+- **Glissement conceptuel :** le résumé traduit تشبث الذات (saisie d'un soi / self-grasping) par "attachement" tout du long, et parle d'"attachement au soi". Or le français original distingue clairement les deux : la saisie d'un soi (l'ignorance de base) *produit* l'attachement ("nous développons de l'attachement aux choses que nous aimons") — ce n'est pas la même chose. L'arabe de Levain respecte bien cette distinction (تشبث الذات ≠ تعلق, deux mots différents) ; c'est le résumé Yiaho qui les confond.
 
-**Manque, pour la complétude du protocole :** pas de résumé français vérifié indépendamment (à la différence des sections 1,2,3,5,6). Pas bloquant vu que le contenu anglais est déjà fidèle deux fois de suite, mais à avoir en tête si Sof veut une couverture homogène avant validation finale.
+**Donc :** la traduction arabe de Levain est fidèle sur ces deux points (vérifié à la fois par l'anglais Upmeet et par lecture directe de l'arabe) — les deux écarts viennent d'un outil de vérification externe, pas de la traduction elle-même. À signaler pour que personne ne corrige l'arabe à tort sur la base du résumé.
 
-Niveau : mineur (contenu fidèle ; volet fr manquant plutôt qu'erroné)
+Niveau : mineur (traduction fidèle ; le résumé de vérification, lui, contient une invention et une confusion conceptuelle à ne pas répercuter)
