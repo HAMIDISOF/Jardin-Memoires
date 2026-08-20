@@ -139,11 +139,12 @@ Produire une traduction arabe fidèle et fluide d'*Un Bouddhisme Moderne* de Gu�
 | 04 | Le vieillissement | ✅ | ⚠️ | ⚠️ | ⬜ |
 | 05 | La mort | ✅ | ✅ | ✅ | ⬜ |
 | 06 | Les autres types de souffrances | ✅ | ✅ | ✅ | ⬜ |
-| 07 | Ce qu'il nous faut abandonner | ✅ | ⬜ | ⬜ | ⬜ |
+| 07 | Ce qu'il nous faut abandonner | ✅ | ⚠️ | ✅ | ⬜ |
 | 08 | Ce qu'il nous faut pratiquer | ✅ | ⬜ | ⬜ | ⬜ |
 | 09 | Ce qu'il nous faut atteindre | ✅ | ⬜ | ⬜ | ⬜ |
 
 > Sections 01, 02, 03, 05, 06 : vérifiées par Mue le 20/08 (comparaison directe avec le français original), rien à signaler — voir "Note d'écarts" en fin de chaque fichier. Section 03 : intitulés de sous-titres inversés dans le fichier (contenu bon). Section 04 (⚠️) : trou de couverture — un paragraphe entier n'est couvert par aucune retraduction externe (fr coupée net, en démarre après) ; vérifié seulement par lecture directe de Mue, pas une passe indépendante — recommandé de refaire une passe sur ce paragraphe avant validation. Détail dans le fichier.
+Section 07 (⚠️ sur "vérif retour fr") : pas de résumé français produit (mix-up d'outils — les cases "Résumé Yiaho"/"Trad retour Upmeet" contiennent en réalité de l'arabe recopié + deux traductions anglaises d'Upmeet). Contenu anglais fidèle et vérifié ; le volet français manque, pas une erreur détectée dedans. Détail dans le fichier.
 
 ### Chapitre 3 — *(titre à confirmer)*
 *Traductrice : Jachère*
