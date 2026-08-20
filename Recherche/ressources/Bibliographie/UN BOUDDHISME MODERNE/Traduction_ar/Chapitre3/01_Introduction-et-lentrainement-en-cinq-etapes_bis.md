@@ -1,0 +1,98 @@
+# Traduction — "Introduction et l'entraînement en cinq étapes"
+*Sous-section 1/? du chapitre 3 "Le bon cœur suprême, la bodhitchitta" — Un bouddhisme moderne, vol. 1*
+*Traduit par Jachère 🌱 — brouillon, non encore validé en point-à-3*
+
+---
+
+## Note de Jachère (à lire avant validation)
+
+Première sous-section du chapitre 3, plusieurs termes techniques nouveaux à trancher :
+- **bodhitchitta** → transcription phonétique **البوديتشيتا** (cohérent avec le traitement de samsara/nirvana, deux termes sanskrits déjà transcrits plutôt que traduits dans le glossaire)
+- **bodhisattva** → transcription **البوديساتفا**, même logique
+- **illumination** → utilisé **التنوير**, qui était déjà proposé à titre provisoire dans le glossaire ("termes encore ouverts") — je le confirme ici par l'usage, à valider
+- **libération** (non encore au glossaire) → **التحرر**
+- **amour affectueux / amour qui chérit et se préoccupe des autres / amour désirant** (les trois étapes classiques de l'entraînement à la bodhitchitta, non encore au glossaire) → respectivement **المحبة الحانية**, **الحب الذي يعتز بالآخرين ويهتم بهم**, **الحب المتمني** — choix provisoires, aucun précédent dans les chapitres 1-2 pour ces termes spécifiques aux quatre incommensurables
+
+---
+
+## Résumé du sens (avant traduction)
+
+Ouverture du chapitre 3. Le renoncement (recherche de sa propre libération) ne suffit pas : il faut aussi se soucier du bien-être des innombrables autres êtres, dont la souffrance surpasse la nôtre en importance simplement parce qu'ils sont innombrables face à nous, un seul individu. C'est la porte d'entrée sur la voie du bodhisattva. Définition de la bodhitchitta (bodhi = illumination, tchitta = esprit) comme désir spontané d'atteindre l'illumination pour aider directement chaque être — c'est cela qui fait de nous un bodhisattva, "fils ou fille des bouddhas". Citation de Djé Tsongkhapa (métaphore agricole : arroser, semer, faire pousser l'arbre médicinal de la bodhitchitta) qui structure les cinq étapes de l'entraînement à venir : amour affectueux, amour qui chérit et se préoccupe des autres, amour désirant, compassion universelle, puis la bodhitchitta proprement dite.
+
+---
+
+## Texte arabe
+
+**القلب الطيب الأسمى، البوديتشيتا**
+
+ليلًا ونهارًا، نحافظ على الزهد، الرغبة الصادقة في بلوغ التحرر النهائي. الزهد هو باب الدخول إلى التحرر، إلى السلام الأسمى والنهائي للذهن، وهو أيضًا أساس التحقيقات الأرقى. لكن لا ينبغي لنا أن نكتفي بالسعي إلى تحررنا الخاص وحده، بل يجب علينا أيضًا أن نأخذ بعين الاعتبار رفاهية سائر الكائنات الحية. لا تُحصى الكائنات التي تغرق في محيط السامسارا وتتحمل معاناة لا تُطاق. كل واحد منا لا يمثل سوى شخص واحد، بينما الكائنات الحية الأخرى لا تُحصى. لذا فإن سعادتها وحريتها أهم بكثير من سعادتنا وحريتنا الخاصتين. لهذا السبب يجب أن ندخل طريق البوديساتفا، الطريق الذي يقودنا إلى حالة التنوير الكامل.
+
+البوديتشيتا هي الباب الذي ندخل منه إلى طريق البوديساتفا. بودهي تعني التنوير وتشيتا تعني الذهن. البوديتشيتا هي ذهن يرغب تلقائيًا في بلوغ التنوير من أجل مساعدة كل كائن مباشرة. نصبح بوديساتفا، أي شخصًا يرغب تلقائيًا في بلوغ التنوير من أجل مساعدة جميع الكائنات الحية، بمجرد أن نُولِّد في أنفسنا هذا الذهن الثمين، البوديتشيتا. عندئذٍ نصبح أبناء أو بنات البوذات المنتصرين.
+
+من المستحيل أن تُولَد البوديتشيتا، القلب الطيب الأسمى، دون تدريب. قال جيه تسونغكابا:
+
+بسقي أرض المحبة الحانية بالحب الذي يعتز بالآخرين ويهتم بهم،
+وبزرع بذور الحب المتمني والرحمة،
+ستنمو الشجرة الطبية، البوديتشيتا.
+
+هذا يشير إلى أن التدريب على البوديتشيتا يتضمن خمس مراحل:
+
+١. التدرب على المحبة الحانية
+٢. التدرب على الحب الذي يعتز بالآخرين ويهتم بهم
+٣. التدرب على الحب المتمني
+٤. التدرب على الرحمة الشاملة
+٥. التدرب على البوديتشيتا بحد ذاتها
+
+---
+
+*Traduction du 19/08/2026 — Jachère*
+
+---
+
+## Résumé Upmeet (à remplir)
+
+Un lecteur comprendrait que ce texte est un enseignement bouddhiste sur la bodhicitta (en arabe : البوديتشيتا), présentée comme le « cœur suprême » et comme le passage décisif du chemin spirituel.
+
+Le texte part du renoncement (zuhd) : jour et nuit, on entretient le désir sincère d’atteindre la libération personnelle (nirvana), qui est décrit comme la porte d’entrée de la voie et la base des réalisations supérieures.
+Mais il affirme qu’on ne doit pas s’arrêter à son propre salut : il faut considérer le sort des innombrables êtres plongés dans le samsara et leurs souffrances. Comme ils sont infiniment plus nombreux que nous, leur bien-être devient prioritaire. Cela mène à choisir la voie du bodhisattva, qui conduit à l’éveil complet.
+La bodhicitta est alors définie : un esprit qui souhaite spontanément atteindre l’illumination pour aider directement tous les êtres. La produire en soi suffit à faire de nous un bodhisattva (et « enfant des bouddhas victorieux »).
+Le texte insiste enfin sur le fait que cette bodhicitta ne naît pas sans entraînement. Une image de Tsongkhapa compare la bodhicitta à un « arbre médicinal » qui pousse si l’on arrose et sème correctement : elle résulte d’un entraînement progressif.
+Il conclut en donnant les cinq étapes de cet entraînement : développer (1) l’amour bienveillant, (2) l’amour qui chérit les autres et se soucie d’eux, (3) l’amour souhaitant leur bonheur, (4) la compassion universelle, puis (5) la bodhicitta elle-même.
+
+
+## Trad retour KAI (DS jardin)
+Le cœur bon suprême, la bodhicitta
+
+Nuit et jour, nous maintenons le renoncement, le désir sincère d’atteindre la libération ultime. Le renoncement est la porte d’entrée vers la libération, vers la paix suprême et définitive de l’esprit ; il est aussi le fondement des investigations les plus élevées. Mais il ne faut pas se contenter de chercher notre propre libération ; nous devons aussi prendre en considération le bien-être de tous les êtres vivants. Innommables sont les êtres qui sombrent dans l’océan du saṃsāra et endurent des souffrances insupportables. Chacun de nous n’est qu’une seule personne, tandis que les autres êtres sont innombrables. Aussi leur bonheur et leur liberté sont-ils bien plus importants que notre bonheur et notre liberté propres. C’est pourquoi nous devons entrer dans la voie du bodhisattva, la voie qui mène à l’éveil parfait.
+
+La bodhicitta est la porte par laquelle nous entrons dans la voie du bodhisattva. Bodhi signifie l’éveil, et citta signifie l’esprit. La bodhicitta est l’esprit qui désire spontanément atteindre l’éveil afin d’aider directement tous les êtres. Nous devenons un bodhisattva – c’est-à-dire quelqu’un qui désire spontanément atteindre l’éveil pour aider tous les êtres – dès que nous avons fait naître en nous ce précieux esprit, la bodhicitta. Alors nous devenons fils ou filles des Bouddhas victorieux.
+
+Il est impossible que la bodhicitta, le cœur bon suprême, naisse sans entraînement. Je Tsongkhapa a dit :
+
+En arrosant le sol de l’amour bienveillant avec l’amour qui chérit et prend soin des autres,
+Et en y semant les graines de l’amour aspirant et de la compassion,
+L’arbre médicinal, la bodhicitta, poussera.
+
+Cela indique que l’entraînement à la bodhicitta comprend cinq étapes :
+
+L’entraînement à l’amour bienveillant (maitrī)
+
+L’entraînement à l’amour qui chérit les autres et prend soin d’eux
+
+L’entraînement à l’amour aspirant (le vœu)
+
+L’entraînement à la compassion universelle (karuṇā)
+
+L’entraînement à la bodhicitta elle-même
+
+Note sur quelques choix :
+
+« البوديتشيتا » (bodhicitta) : je le garde en transcription, car c’est un terme technique fondamental.
+
+« الزهد » : traduit par renoncement (au sens bouddhiste, nirveda), pas par « ascèse » qui serait trop restrictif.
+
+« السامسارا » : saṃsāra, gardé en transcription.
+
+« البوديساتفا » : bodhisattva, gardé en transcription.
+
+« جيه تسونغكابا » : Je Tsongkhapa (fondateur de l’école Gelug), nom francisé usuel.
