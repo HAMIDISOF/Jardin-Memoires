@@ -37,5 +37,28 @@ Description crue et détaillée des souffrances de la naissance : la conception 
 ---
 
 ## Résumé Upmeet (à remplir)
+On change, upmeet me dit "ce n'est pas une réunion" et du coup elle ne fait pas!  
 
-## Trad retour GPT (à remplir)
+## Trad retour GLM (à remplir)
+Voici la traduction en anglais, en suivant les notes terminologiques du préambule (samsara pour السامسارا, "our consciousness" pour وعينا, "grasping at a self" pour تشبث الذات) :
+
+Birth
+When our consciousness enters into union with our father's sperm and our mother's ovum, our body is a watery substance of intense heat, resembling white milk mixed with red. In the first moments following our conception, we have no coarse sensations, but as soon as these sensations arise, we begin to feel pain. Little by little, our body hardens, and the growth of our limbs gives us the impression that our body is being stretched on a rack. Inside our mother's womb, the atmosphere is hot and dark. This small space, highly pressurized and filled with filthy substances, is our dwelling for nine months. It is as though we were compressed inside a small water tank filled with a repulsive liquid, whose tightly sealed lid allows neither air nor light to pass through.
+
+During our stay in our mother's womb, we experience much pain and fear in total isolation. We are extremely sensitive to everything our mother does. When she walks quickly, it is as if we were falling from a high mountain, and this terrifies us. If she engages in sexual relations, it is as though we were being crushed and suffocated between two massive weights, and we are seized with panic. If our mother jumps, even a single small jump, it is as if we were violently thrown to the ground from a towering height. If she drinks something hot, we feel as if boiling water were being poured over our skin. If she drinks something cold, we feel as if we were receiving an icy shower in the dead of winter.
+
+When we emerge from our mother's womb, we feel as if we were being forced through a narrow cleft between two hard stones, and immediately after our birth, our body is so delicate that every touch causes pain. Even if someone holds us with great gentleness, their hands feel like thorny bushes piercing our flesh, and even the softest fabric feels rough and abrasive. After the softness and smoothness of our mother's womb, every tactile sensation becomes disturbing and painful. If someone lifts us up, it is as though we were suspended over a vast abyss, which frightens us and makes us anxious. We have forgotten everything we knew in our previous life, and we bring forth from our mother's womb nothing but pain and confusion. Everything we hear is meaningless, like the sound of the wind, and we understand nothing of what we perceive. During the first weeks, we are like a person who is blind, deaf, and mute, suffering from profound memory loss. When we are hungry, we cannot say: "I need to eat," and when we are in pain, we cannot say: "This hurts me." The only signs we can give are hot tears and feverish movements. Often, even our mother cannot know what pains and discomforts we are experiencing. We are completely helpless and must be taught everything: how to eat, how to sit, how to walk, how to speak.
+
+The first weeks are the most vulnerable period of our lives, but our pains do not cease as we grow older. We continue to endure various kinds of suffering throughout our lives. When we light a fire in a large house, the heat of the fire permeates the entire house, and all the warmth of the house comes from this fire. Likewise, when we are born in samsara, suffering permeates our entire life, and all the misfortunes we face arise because we took on a tainted birth.
+
+Our human birth, tainted by the poisoned mental affliction of grasping at a self, is the foundation of our human suffering. Without this foundation, human problems would not exist. The pains of birth gradually turn into the pains of illness, old age, and death. They form a single continuum.
+
+Quelques notes de traduction :
+
+"stretched on a rack" pour يُمدَّد على آلة تعذيب — le rack étant l'instrument de torture par étirement, plus idiomatique en anglais que le littéral "torture device".
+"the dead of winter" pour عز الشتاء — formulation idiomatique équivalente au français "en plein cœur de l'hiver".
+"grasping at a self" pour تشبث الذات — j'ai suivi ton choix provisoire ; à harmoniser avec اعتقاد الذات si tu veux aligner les deux occurrences du texte source.
+"mental affliction" pour الاضطراب الذهني — c'est l'équivalent technique bouddhiste (klesha) ; "mental disorder" aurait connoté la psychiatrie plutôt que l'affliction mentale sur la voie.
+
+
+
