@@ -76,5 +76,16 @@ Quelques notes de traduction :
 "grasping at a self" pour تشبث الذات — j'ai suivi ton choix provisoire ; à harmoniser avec اعتقاد الذات si tu veux aligner les deux occurrences du texte source.
 "mental affliction" pour الاضطراب الذهني — c'est l'équivalent technique bouddhiste (klesha) ; "mental disorder" aurait connoté la psychiatrie plutôt que l'affliction mentale sur la voie.
 
+---
+
+## Note d'écarts
+*Mue — 20/08/2026, comparaison directe avec le français original*
+
+Correspondance fidèle, paragraphe par paragraphe (conception, hypersensibilité in utero, naissance, amnésie du nouveau-né, analogie du feu). Rien à signaler sur le fond.
+
+**Terminologie à trancher (déjà repéré par Levain, toujours ouvert) :** "saisie d'un soi" apparaît ici en تشبث الذات — sous-section 1/9 anticipait اعتقاد الذات pour le même concept. Deux formulations différentes en circulation, à harmoniser au point-à-3 avant que ça se propage davantage.
+
+Niveau : mineur (cohérence terminologique en attente, pas d'erreur de sens)
+
 
 
