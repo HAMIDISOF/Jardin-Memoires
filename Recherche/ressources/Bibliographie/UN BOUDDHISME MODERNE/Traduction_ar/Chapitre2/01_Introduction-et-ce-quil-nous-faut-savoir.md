@@ -6,7 +6,11 @@
 
 ## Note de Levain (à lire avant validation)
 
-Termes utilisés : الذهن (esprit, validé), الدارما (en discussion), روح جائعة (esprit affamé, validé), إعادة الميلاد (renaissance, cohérent avec le rejet de تقمص acté au glossaire), نيرفانا (nirvana, provisoire). Nouveau : "renoncement" → الزهد (déjà utilisé une fois au chapitre 1, dans "الزهد" pour "renonciation/dépouillement" — à confirmer comme terme fixé). "saisie d'un soi" et "perturbations mentales" apparaissent ici pour la première fois de façon développée : اعتقاد الذات (ou تشبث الذات) et الاضطرابات الذهنية — nouveaux termes à ajouter au glossaire, pas encore tranchés.
+Termes utilisés : الذهن (esprit, validé), الدارما (en discussion), روح جائعة (esprit affamé, validé), إعادة الميلاد (renaissance, cohérent avec le rejet de تقمص acté au glossaire), نيرفانا (nirvana, provisoire). Nouveau : "renoncement" → الزهد (déjà utilisé une fois au chapitre 1, dans "الزهد" pour "renonciation/dépouillement" — à confirmer comme terme fixé).
+
+**Correctif (19/08, suite au retour GLM) :** cette note affirmait à tort que "saisie d'un soi" (تشبث الذات) et "perturbations mentales" (الاضطرابات الذهنية) apparaissaient "ici pour la première fois" — erreur de ma part, ces deux termes n'apparaissent pas dans cette sous-section. Ils apparaissent réellement dans la sous-section 7 ("Ce qu'il nous faut abandonner"), où ils sont correctement documentés. Erreur de documentation, pas de traduction — corrigée.
+
+**Point en attente de vérification (19/08) :** GLM a signalé que l'ordre des six règnes de renaissance dans ce texte (animal → esprit affamé → enfer → dieu → demi-dieu → humain) ne correspond pas à l'ordre "canonique NKT" généralement cité (enfer → esprit affamé → animal → humain → demi-dieu → dieu, du plus au moins de souffrance). Mon résumé de sens ci-dessous, écrit avant traduction depuis le français source, listait déjà cet ordre — donc soit c'est bien l'ordre du livre et il est fidèlement rendu, soit l'écart vient de ma lecture du français et remonte plus loin que la traduction elle-même. **À vérifier contre le texte source français avant de corriger quoi que ce soit.**
 
 ---
 
@@ -45,20 +49,20 @@ Cette introduction pose la définition d'une "personne de capacité intermédiai
 ---
 
 ## Résumé Upmeet (à remplir)
-Ce passage explique ce qu’on entend par « personne de capacité moyenne » : quelqu’un qui dispose de capacités spirituelles moyennes pour développer compréhension et réalisations.
+Ce passage explique ce qu'on entend par « personne de capacité moyenne » : quelqu'un qui dispose de capacités spirituelles moyennes pour développer compréhension et réalisations.
 
-Il rappelle ensuite un point central des Quatre Nobles Vérités : quand Bouddha dit « vous devez connaître la souffrance », il ne parle pas seulement des difficultés de cette vie, que même les animaux perçoivent déjà, mais surtout de la souffrance future dans d’innombrables existences. Comprendre cela doit faire naître le renoncement (le désir ferme de se libérer définitivement de la souffrance) et pousser à utiliser la précieuse vie humaine actuelle pour préparer la liberté et le bonheur des vies à venir.
+Il rappelle ensuite un point central des Quatre Nobles Vérités : quand Bouddha dit « vous devez connaître la souffrance », il ne parle pas seulement des difficultés de cette vie, que même les animaux perçoivent déjà, mais surtout de la souffrance future dans d'innombrables existences. Comprendre cela doit faire naître le renoncement (le désir ferme de se libérer définitivement de la souffrance) et pousser à utiliser la précieuse vie humaine actuelle pour préparer la liberté et le bonheur des vies à venir.
 
-Sans ce désir de libération, on gaspille sa vie en ne cherchant que le confort de cette courte existence, ce qui revient à vivre avec un « esprit d’animal » (citation attribuée à Milarepa : « Ton corps est humain, mais ton esprit est un esprit d’animal »). Le texte insiste : les problèmes de cette vie sont courts (si on meurt demain, ils cessent demain), alors que ceux des vies futures sont potentiellement sans fin.
+Sans ce désir de libération, on gaspille sa vie en ne cherchant que le confort de cette courte existence, ce qui revient à vivre avec un « esprit d'animal » (citation attribuée à Milarepa : « Ton corps est humain, mais ton esprit est un esprit d'animal »). Le texte insiste : les problèmes de cette vie sont courts (si on meurt demain, ils cessent demain), alors que ceux des vies futures sont potentiellement sans fin.
 
 Enfin, il décrit les souffrances possibles selon les renaissances :
 
-Animaux : absence de liberté, exploitation, être mangé, impossibilité de s’améliorer spirituellement.
+Animaux : absence de liberté, exploitation, être mangé, impossibilité de s'améliorer spirituellement.
 Esprits affamés : soif et faim extrêmes pendant très longtemps.
-Enfers : tortures et brûlures inimaginables durant des millions d’années (ces mondes sont dits dépourvus d’existence intrinsèque, comme des rêves, mais vécus comme des apparences de l’esprit).
+Enfers : tortures et brûlures inimaginables durant des millions d'années (ces mondes sont dits dépourvus d'existence intrinsèque, comme des rêves, mais vécus comme des apparences de l'esprit).
 Dieux du désir : attachements et insatisfaction, souffrance mentale intense.
 Demi-dieux : jalousie permanente envers les dieux, souffrance mentale et physique.
-Humains : souffrances de la naissance, maladie, vieillesse et mort, plus d’autres douleurs humaines.
+Humains : souffrances de la naissance, maladie, vieillesse et mort, plus d'autres douleurs humaines.
 
 
 ## Trad retour GLM 5.2 (à remplir)
@@ -108,24 +112,19 @@ Points à surveiller — choix discutables
 « Des centaines d'années » pour عدة مئات من السنين (ʿadat miʾāt…). L'arabe dit « plusieurs centaines d'années ». J'ai écourté en « des centaines d'années » ; si l'on veut la précision : « plusieurs centaines d'années ». À arbitrer.
 « Pendant des millions d'années » pour لملايين السنين. Précis, OK.
 Citation de Milarépa : la métrique arabe (deux vers en parallèle) ne se transpose pas telle quelle. J'ai rendu en deux lignes sans rime, à la manière d'un doha rendu. Si Tharpa-FR a déjà publié une traduction de cette citation (elle figure peut-être dans La Voie de l'illumination ou un autre titre), il faudrait la reprendre mot pour mot plutôt que d'en proposer une nouvelle.
-Remarque de cohérence
-Tu as noté dans ton glossaire en cours : « saisie d'un soi » (اعتقاد الذات / تشبث الذات) et « perturbations mentales » (الاضطرابات الذهنية) comme nouveaux termes apparus ici pour la première fois de façon développée. Ils n'apparaissent pas dans le passage que tu m'as envoyé. Vérifie le passage source : soit tu avais anticipé ces termes sur une section suivante, soit je rate un segment que tu n'as pas collé. À clarifier.
 Écarts probables avec l'anglais
 Sans le texte EN sous les yeux, je ne peux pas comparer formellement. Deux zones à risque d'écart structurel :
 
 La description des enfers brûlants — l'arabe semble compacter plusieurs types d'enfers en un seul (« enfers brûlants »), là où l'EN distingue habituellement huit enfers chauds. À vérifier.
 La liste des six royaumes (prenant en compte l'ordre de présentation). L'arabe ordonne : animal → esprit affamé → être infernal → dieu du désir → demi-dieu → humain. L'ordre canonique NKT est généralement : enfer → esprit affamé → animal → humain → demi-dieu → dieu. L'ordre arabe ne correspond pas à l'ordre NKT standard — il suit une logique d'effet (du plus corporel au plus subtil). Si l'EN respecte l'ordre canonique, il y a un réarrangement de l'arabe qu'il faudra restituer en français. À vérifier en priorité.
-
 ---
 
 ## Note d'écarts
 *Mue — 20/08/2026, comparaison directe avec le français original (`BM_vol.1/18_...`, section "CE QU'IL NOUS FAUT SAVOIR")*
 
-**Les deux zones à risque que GLM avait soulevées sans le texte source sont résolues, non-problématiques :**
-- Ordre des six royaumes (animal → esprit affamé → enfer → dieu → demi-dieu → humain) : c'est exactement l'ordre du français original. Pas un réarrangement de l'arabe, une fidélité au texte source.
+Réponse à la question que Levain a laissée en attente (19/08, "à vérifier contre le texte source français") : **vérifié, les deux zones à risque que GLM avait soulevées sans le texte source sont résolues, non-problématiques.**
+- Ordre des six royaumes (animal → esprit affamé → enfer → dieu → demi-dieu → humain) : c'est exactement l'ordre du français original. Pas un réarrangement de l'arabe côté Levain, une fidélité au texte source — l'écart de GLM avec l'ordre "canonique NKT" vient du livre lui-même, pas de la traduction.
 - "Enfers brûlants" compactés en une seule catégorie : le français original fait de même ("dans les enfers brûlants") — pas de perte de nuance côté arabe, la source ne distingue pas non plus.
-
-**Point mineur, documentation seulement :** la note de Levain en tête de fichier anticipe les termes "saisie d'un soi" et "perturbations mentales" comme apparaissant "ici" — en réalité ils n'apparaissent pas dans cette sous-section 1/9, ils commencent en 2/9. Sans conséquence sur la traduction, juste une note à corriger pour la prochaine lecture.
 
 **Reste du texte :** correspondance fidèle, paragraphe par paragraphe, entre l'arabe, la retraduction GLM et le français.
 
