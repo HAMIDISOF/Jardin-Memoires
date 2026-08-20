@@ -36,6 +36,37 @@ Les souffrances de la maladie : la métaphore de l'hiver qui détruit la splende
 
 ---
 
-## Résumé Upmeet (à remplir)
+## Résumé Fable (use.ai)
 
-## Trad retour GPT (à remplir)
+Illness
+Our birth also brings the suffering of illness. The winds and snows of winter strip the splendor from green meadows, trees, forests, and flowers. Likewise, illness strips the splendor of our youthful body and destroys its strength and the faculties of our senses. When we fall ill, we suddenly become incapable of carrying out all our usual physical activities, even if we were previously in good shape and good health. Even a boxing champion who regularly fells his opponents becomes completely helpless when illness strikes. Illness takes away all our enjoyable experiences and all our pleasures, and we experience only unpleasant sensations, day and night.
+
+When we fall ill, we are like a bird soaring high in the sky that is suddenly brought down. The injured bird falls instantly to the ground, like a piece of lead. Its majesty and strength are destroyed at once. Likewise, with our illness, we suddenly become helpless. If we are severely ill, we may become entirely dependent on others, and we may even lose the ability to control our bodily functions. This transformation is hard to bear, especially for those who take pride in their independence and good physical health.
+
+When we fall ill, we feel frustrated at being unable to do our usual work, or to accomplish all the tasks we have set for ourselves. We easily lose patience with our illness and become easily depressed when thinking of all the things we can no longer do. We cannot enjoy the things that usually give us pleasure — sports, dancing, having a drink, eating well, or the company of friends. All these restrictions make us more miserable, and on top of all this misery, we must bear all the physical pains associated with illness.
+
+When we fall ill, we must not only endure all the unwanted pains of the illness itself, but also all the other unwanted kinds of inconvenience. For example, we must follow all the prescribed treatments — taking foul-tasting medicine, undergoing a series of injections, having a risky surgical operation, or giving up something we greatly enjoy. In the case of a surgical operation, we must go to the hospital and accept all the conditions there. We may have to eat food we do not like and stay in bed all day doing nothing, very anxious about the procedure. Our doctor may not explain to us precisely what the problem is or whether he expects us to survive.
+
+If we know that our illness is incurable and we have no experience of the spiritual path, we will experience anxiety, fear, and regret. We may slip into depression and abandon all hope, or we may grow angry at our illness, seeing it as an enemy that maliciously deprives us of all our joys.
+
+Mêmes choix terminologiques que pour la section précédente, pour la cohérence d'ensemble : "splendor" pour بهاء, "majesty and strength" pour هيبته وقوته, et "the spiritual path" pour الطريق الروحي.
+
+
+
+## Trad retour GLM (use.ai)
+Voici ce que je comprends de ce deuxième texte, « La maladie » (المرض) :
+
+Résumé
+C'est la suite directe du chapitre précédent : la naissance apporte avec elle la souffrance de la maladie, deuxième maillon du continuum annoncé (naissance → maladie → vieillesse → mort).
+
+La maladie détruit la vigueur du corps. Image d'ouverture : comme les vents et les neiges de l'hiver ôtent la splendeur des prairies vertes, des forêts et des fleurs, la maladie ôte l'éclat du corps jeune, détruit sa force et les capacités des sens. Même quelqu'un d'habituellement en pleine santé devient soudain incapable de ses activités ordinaires — même un champion de boxe qui met régulièrement ses adversaires au tapis devient totalement impuissant.
+
+La chute soudaine. Deuxième image forte : le malade est comme un oiseau qui plane haut dans le ciel et qui, touché, tombe d'un coup comme un morceau de plomb — prestige et puissance anéantis instantanément. On peut devenir entièrement dépendant des autres, jusqu'à perdre le contrôle de ses fonctions corporelles. Cette transformation est particulièrement dure à supporter pour ceux qui tirent fierté de leur indépendance et de leur bonne santé physique.
+
+Les frustrations mentales. Impossibilité de travailler ou d'accomplir ce qu'on s'était fixé ; impatience, découragement, dépression en pensant à tout ce qu'on ne peut plus faire ; privation des plaisirs habituels (sport, danse, boire un verre, bien manger, compagnie des amis) — et par-dessus tout ce malheur, il faut encore endurer les douleurs physiques de la maladie elle-même.
+
+Les désagréments secondaires. À la maladie s'ajoutent les contraintes non désirées des traitements : médicaments au goût affreux, séries de piqûres, opération chirurgicale risquée, ou renoncement à quelque chose qu'on aime beaucoup. En cas d'opération : hôpital et ses conditions, nourriture qu'on n'aime pas, journées entières au lit sans rien faire, angoisse — et un médecin qui parfois n'explique pas clairement le problème ni s'il s'attend à ce qu'on survive.
+
+La pointe doctrinale. Si la maladie est incurable et qu'on n'a aucune expérience du chemin spirituel, on connaîtra anxiété, peur et regret : soit glisser dans la dépression et abandonner tout espoir, soit se mettre en colère contre la maladie, la considérant comme un ennemi qui nous prive perfidement de toutes nos joies.
+
+Pour la vérification de lecture : le point-clé est cette dernière phrase conditionnelle — le texte ne dit pas seulement que la maladie fait souffrir, il suggère en creux que l'expérience spirituelle est ce qui change le rapport à la souffrance quand la guérison n'est plus possible. Un lecteur attentif doit aussi repérer les deux comparaisons structurantes (l'hiver sur les prairies, l'oiseau abattu) et la distinction entre souffrances directes de la maladie et désagréments ajoutés (traitements, hôpital, incertitude).
