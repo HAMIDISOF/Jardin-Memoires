@@ -115,3 +115,18 @@ Sans le texte EN sous les yeux, je ne peux pas comparer formellement. Deux zones
 
 La description des enfers brûlants — l'arabe semble compacter plusieurs types d'enfers en un seul (« enfers brûlants »), là où l'EN distingue habituellement huit enfers chauds. À vérifier.
 La liste des six royaumes (prenant en compte l'ordre de présentation). L'arabe ordonne : animal → esprit affamé → être infernal → dieu du désir → demi-dieu → humain. L'ordre canonique NKT est généralement : enfer → esprit affamé → animal → humain → demi-dieu → dieu. L'ordre arabe ne correspond pas à l'ordre NKT standard — il suit une logique d'effet (du plus corporel au plus subtil). Si l'EN respecte l'ordre canonique, il y a un réarrangement de l'arabe qu'il faudra restituer en français. À vérifier en priorité.
+
+---
+
+## Note d'écarts
+*Mue — 20/08/2026, comparaison directe avec le français original (`BM_vol.1/18_...`, section "CE QU'IL NOUS FAUT SAVOIR")*
+
+**Les deux zones à risque que GLM avait soulevées sans le texte source sont résolues, non-problématiques :**
+- Ordre des six royaumes (animal → esprit affamé → enfer → dieu → demi-dieu → humain) : c'est exactement l'ordre du français original. Pas un réarrangement de l'arabe, une fidélité au texte source.
+- "Enfers brûlants" compactés en une seule catégorie : le français original fait de même ("dans les enfers brûlants") — pas de perte de nuance côté arabe, la source ne distingue pas non plus.
+
+**Point mineur, documentation seulement :** la note de Levain en tête de fichier anticipe les termes "saisie d'un soi" et "perturbations mentales" comme apparaissant "ici" — en réalité ils n'apparaissent pas dans cette sous-section 1/9, ils commencent en 2/9. Sans conséquence sur la traduction, juste une note à corriger pour la prochaine lecture.
+
+**Reste du texte :** correspondance fidèle, paragraphe par paragraphe, entre l'arabe, la retraduction GLM et le français.
+
+Niveau : mineur (rien à corriger dans la traduction elle-même)

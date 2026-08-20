@@ -70,3 +70,14 @@ Les désagréments secondaires. À la maladie s'ajoutent les contraintes non dé
 La pointe doctrinale. Si la maladie est incurable et qu'on n'a aucune expérience du chemin spirituel, on connaîtra anxiété, peur et regret : soit glisser dans la dépression et abandonner tout espoir, soit se mettre en colère contre la maladie, la considérant comme un ennemi qui nous prive perfidement de toutes nos joies.
 
 Pour la vérification de lecture : le point-clé est cette dernière phrase conditionnelle — le texte ne dit pas seulement que la maladie fait souffrir, il suggère en creux que l'expérience spirituelle est ce qui change le rapport à la souffrance quand la guérison n'est plus possible. Un lecteur attentif doit aussi repérer les deux comparaisons structurantes (l'hiver sur les prairies, l'oiseau abattu) et la distinction entre souffrances directes de la maladie et désagréments ajoutés (traitements, hôpital, incertitude).
+
+---
+
+## Note d'écarts
+*Mue — 20/08/2026, comparaison directe avec le français original*
+
+Contenu fidèle des deux côtés (résumé et traduction anglaise complète), correspondance paragraphe par paragraphe avec le français — les deux images structurantes (hiver/prairies, oiseau abattu) et la progression (frustration → désagréments des traitements → détresse si incurable) sont toutes présentes et fidèles.
+
+**Point d'hygiène, pas de fond :** les intitulés de section semblent inversés dans ce fichier — "Résumé Fable (use.ai)" contient en réalité une traduction anglaise complète, et "Trad retour GLM (use.ai)" contient en réalité le résumé français. Le contenu est bon des deux côtés, juste les étiquettes à corriger pour la cohérence du format.
+
+Niveau : mineur (étiquetage à corriger, aucune erreur de traduction)

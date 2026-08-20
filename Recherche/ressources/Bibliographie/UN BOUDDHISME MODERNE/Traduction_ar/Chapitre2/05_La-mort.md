@@ -35,5 +35,32 @@ Les souffrances de la mort : devoir abandonner tous les biens accumulés et tant
 ---
 
 ## Résumé Upmeet (à remplir)
+Un lecteur comprendrait que ce texte (dans une perspective spirituelle, très proche d’un enseignement bouddhiste) veut faire prendre conscience de la souffrance et du dépouillement total liés à la mort, afin de dénoncer l’attachement.
 
-## Trad retour GPT (à remplir)
+D’abord, il explique que la mort devient très douloureuse si, toute sa vie, on a accumulé des biens auxquels on est très attaché : au moment de mourir, on doit tout laisser, ce qui provoque tristesse et détresse.
+Ensuite, il élargit à l’attachement aux personnes : il faudra se séparer des amis, du partenaire, de la famille pour toujours, sans pouvoir ralentir la mort, même si les proches supplient.
+Puis il parle de l’attachement au corps : malgré tous les soins qu’on lui a donnés, il devient inerte “comme une pierre” et finit enterré ou brûlé ; sans préparation intérieure, on ressent peur, anxiété et douleurs.
+Enfin, le texte affirme que la seule chose qui “suit” l’esprit au moment de la mort, ce sont les empreintes/potentiels accumulés par nos actions (vertueuses ou non). Tout le reste est illusion : activités, relations, objets, jusqu’à l’exemple de la canne du mendiant qu’il devra aussi abandonner. Au bout du compte, il ne reste au mort qu’un nom sur une pierre tombale.
+En résumé : la mort révèle que tout ce à quoi on s’accroche (biens, relations, corps) est perdu, et que seule la préparation intérieure / la qualité de nos actions a un “poids” réel.
+
+
+## Trad retour Deepseek (vers en)
+Death
+
+Our birth also brings the suffering of death. We will experience great suffering at the moment of death if we have worked hard all our lives to acquire possessions to which we are deeply attached. We will then think: “Now, I must leave behind all these possessions that I cherish so much.” Today, we find it difficult to lend something we cherish greatly, let alone give it up. No wonder we are so unhappy when we realize that we must give up everything into the hands of death.
+
+At the moment of our death, we must even part from our dearest friends. We must leave our partner, even after years of shared life without being separated for a single day. If we are deeply attached to our friends, we will feel great distress at the moment of death, but holding their hands will be the only thing we can do. We will be powerless to stop the process of death, even if those friends beg us not to die. Usually, we feel jealous when someone we are deeply attached to leaves us to spend time with someone else. But at our death, we will have to leave our friends with others forever. We will have to leave everyone, including our family and all those who helped us in this life.
+
+At the moment of our death, we will have to give up this body that we have cared for and protected in many ways. It will become like a stone, without a mind, and will be buried or cremated. Without the inner protection provided by spiritual experience, we will experience physical pains as well as fear and anxiety at the moment of death.
+
+When our mind leaves our body at the moment of death, it carries with it all the potentialities we have accumulated in our mind by performing virtuous and non-virtuous actions. Apart from these potentialities, we cannot take anything else with us from this world. Everything that remains deceives us. Death puts an end to all our activities, our conversations, our meals, our meetings with friends, and our sleep. Everything ends on the day of our death, and we must leave everything behind, even the rings we wear on our fingers. In Tibet, beggars carry a stick to defend themselves against dogs. To understand that death entails total loss, we can think that at the moment of death, beggars must even leave behind this old stick, the most trivial of human possessions. We can see everywhere in the world that the only thing the dead own is their name carved on a tombstone.
+
+---
+
+## Note d'écarts
+*Mue — 20/08/2026, comparaison directe avec le français original*
+
+Correspondance fidèle et complète, paragraphe par paragraphe (biens abandonnés, séparation des proches, corps laissé "comme une pierre", seules les empreintes karmiques accompagnent l'esprit, jusqu'à l'image du bâton du mendiant et du nom sur la pierre tombale). Rien à signaler.
+
+Niveau : RAS
+
