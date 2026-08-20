@@ -42,4 +42,22 @@ Quatrième noble vérité — "il vous faut atteindre les cessations" — la ces
 
 ## Résumé Upmeet (à remplir)
 
-## Trad retour GPT (à remplir)
+Un lecteur comprendrait que ce texte (toujours dans un cadre bouddhiste) explique ce qu’il faut viser positivement, non plus seulement ce qu’il faut éviter : atteindre la “cessation” (l’arrêt définitif de la souffrance) et donc le nirvana/éveil.
+
+Le point de départ est une citation : dans le Sutra des Quatre Nobles Vérités, Bouddha dit qu’il faut “réaliser les cessations”. Ici, “cessation” signifie la fin totale de la souffrance et la fin de sa racine, l’ignorance liée à la saisie / attachement au soi.
+Le texte insiste sur l’idée qu’il ne suffit pas de chercher des solutions partielles (calmer une souffrance ponctuelle) : il faut développer l’intention d’atteindre le but ultime de la vie humaine, une paix mentale suprême et stable (nirvana) et une joie pure, durable.
+Il rappelle ensuite que tous les êtres, sans exception, sont pris dans un cycle sans fin de souffrances (maladie, vieillesse, mort, renaissance). Bouddha est présenté comme l’exemple : après avoir constaté cette réalité, il a pris la résolution d’atteindre l’éveil et de guider tous les êtres vers cette libération.
+Le texte précise qu’il ne condamne pas les activités ordinaires (travail, protections matérielles, solutions techniques), mais affirme qu’elles ne peuvent jamais apporter une cessation définitive : même si elles réduisent certains problèmes, ils reviennent, et les risques modernes (pollution, maladies, dangers technologiques) montrent que les souffrances augmentent malgré les efforts.
+Il met enfin l’accent sur la valeur rare de la vie humaine : contrairement aux animaux (présentés comme incapables d’étudier, comprendre et méditer le Dharma), les humains disposent des conditions nécessaires pour pratiquer la voie spirituelle, seule capable de conduire à une paix et un bonheur permanents.
+Conclusion pratique : le narrateur se fixe un vœu clair — ne pas se contenter d’un soulagement temporaire, mais travailler à éliminer la racine de la souffrance (l’ignorance de la saisie du soi) en pratiquant sincèrement les trois entraînements supérieurs (discipline éthique, concentration, sagesse), en méditant cette détermination chaque jour puis en la mettant en pratique.
+
+
+## Trad retour yiaho (à remplir)
+
+Voici une traduction en anglais du texte arabe que tu as fourni, en conservant le sens et le ton pédagogique:
+
+What We Must Achieve
+
+Buddha says in the Sutra of the Noble Truths: “You must achieve the state of stoppage.” In this context, stoppage means the final cessation of suffering, as well as the cessation of its root, the ignorance of self-clinging. By saying this, Buddha counsels us not to be satisfied with a temporary liberation from a particular suffering, but rather to develop, instead, the intention to attain the ultimate goal of human life: supreme and final mind peace (Nirvana), and the pure, eternal happiness of enlightenment.
+
+Every living being, without exception, is compelled to experience the cycle of suffering (illness, aging, death, and rebirth), life after life, without end. Following Buddha’s example, we develop a strong renunciation of this endless cycle. When he lived in the palace with his family, he saw how his people continually experienced this suffering. It was then that he resolved to achieve enlightenment, the final stoppage of all suffering, and to guide every living being to this state.
