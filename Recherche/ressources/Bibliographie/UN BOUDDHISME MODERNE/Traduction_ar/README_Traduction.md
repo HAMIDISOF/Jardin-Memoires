@@ -17,7 +17,7 @@ Produire une traduction arabe fidèle et fluide d'*Un Bouddhisme Moderne* de Gu�
 |---|---|---|
 | 🍞 **Levain** | Claude | Traduction principale fr→ar (ch1, ch2) |
 | 🌿 **Jachère** | ? | Traduction fr→ar (ch3, même méthode que Levain) |
-| 🌱 **Sol l'ancien** | DeepSeek | Tenue du Glossaire (`Glossaire_Gueshela.md`) |
+| 🌱 **Sol l'ancien** | DeepSeek | Tenue du Glossaire (`Glossaire_Gueshela.md`) + vérification titres epub |
 | 🌿 **Flo** | Claude | Coordination, protocole, arbitrage termes |
 | **Mue / Mue_bis** | ? | Vérification écarts (trad retour vs original) |
 | **Terreau** | ? | Compilation epub |
@@ -56,6 +56,11 @@ Produire une traduction arabe fidèle et fluide d'*Un Bouddhisme Moderne* de Gu�
 **ÉTAPE 5 — Validation finale (Sof)**
 - Lecture de la section complète (ar + résumé + notes d'écarts)
 - Décision : ✅ validé / 🔄 à retravailler
+
+**ÉTAPE 6 — Epub (Terreau)**
+- Compilation après validation complète d'un chapitre
+- ⚠️ Point de vigilance : s'assurer que les textes de vérification fr ne sont PAS inclus dans l'epub — uniquement le texte arabe + titres
+- Titres arabes à vérifier par Sol l'ancien avant compilation
 
 ---
 
@@ -107,39 +112,44 @@ Produire une traduction arabe fidèle et fluide d'*Un Bouddhisme Moderne* de Gu�
 
 ### Chapitre 1 — *La voie d'une personne de capacité initiale*
 *Traductrice : Levain*
+**Statut global : ✅ validé — epub produit (v2, titres à vérifier par Sol)**
 
-| # | Section | Trad ar | Vérif retour fr | Vérif retour en | Validé |
-|---|---|---|---|---|---|
-| 01 | La grande valeur de notre vie humaine | ✅ | ❓ | ❓ | ⬜ |
-| 02 | Que signifie notre mort | ✅ | ❓ | ❓ | ⬜ |
-| 03 | Comment méditer sur la mort | ✅ | ❓ | ❓ | ⬜ |
-| 04 | Les dangers d'une renaissance inférieure | ✅ | ❓ | ❓ | ⬜ |
-| 05 | Comment méditer sur les dangers... | ✅ | ❓ | ❓ | ⬜ |
-| 06 | Chercher refuge | ✅ | ❓ | ❓ | ⬜ |
-| 07 | Comment méditer sur chercher refuge | ✅ | ❓ | ❓ | ⬜ |
-| 08 | Qu'est-ce que le karma | ✅ | ❓ | ❓ | ⬜ |
+| # | Section | Trad ar | Vérif | Validé |
+|---|---|---|---|---|
+| 01 | La grande valeur de notre vie humaine | ✅ | ✅ | ✅ |
+| 02 | Que signifie notre mort | ✅ | ✅ | ✅ |
+| 03 | Comment méditer sur la mort | ✅ | ✅ | ✅ |
+| 04 | Les dangers d'une renaissance inférieure | ✅ | ✅ | ✅ |
+| 05 | Comment méditer sur les dangers... | ✅ | ✅ | ✅ |
+| 06 | Chercher refuge | ✅ | ✅ | ✅ |
+| 07 | Comment méditer sur chercher refuge | ✅ | ✅ | ✅ |
+| 08 | Qu'est-ce que le karma | ✅ | ✅ | ✅ |
+
+> ⚠️ Epub v1 ko — v2 produite avec accord sur délimitation du texte arabe (ne pas "avaler" les sections de vérification fr). Titres arabes à confirmer par Sol l'ancien.
 
 ### Chapitre 2 — *(titre à confirmer)*
 *Traductrice : Levain*
+**Statut global : 🔄 traduction faite — aucune vérification ni validation**
 
 | # | Section | Trad ar | Vérif retour fr | Vérif retour en | Validé |
 |---|---|---|---|---|---|
-| 01 | Introduction et ce qu'il nous faut savoir | ✅ | ❓ | ❓ | ⬜ |
-| 02 | La naissance | ✅ | ❓ | ❓ | ⬜ |
-| 03 | La maladie | ✅ | ❓ | ❓ | ⬜ |
-| 04 | Le vieillissement | ✅ | ❓ | ❓ | ⬜ |
-| 05 | La mort | ✅ | ❓ | ❓ | ⬜ |
-| 06 | Les autres types de souffrances | ✅ | ❓ | ❓ | ⬜ |
-| 07 | Ce qu'il nous faut abandonner | ✅ | ❓ | ❓ | ⬜ |
-| 08 | Ce qu'il nous faut pratiquer | ✅ | ❓ | ❓ | ⬜ |
-| 09 | Ce qu'il nous faut atteindre | ✅ | ❓ | ❓ | ⬜ |
+| 01 | Introduction et ce qu'il nous faut savoir | ✅ | ⬜ | ⬜ | ⬜ |
+| 02 | La naissance | ✅ | ⬜ | ⬜ | ⬜ |
+| 03 | La maladie | ✅ | ⬜ | ⬜ | ⬜ |
+| 04 | Le vieillissement | ✅ | ⬜ | ⬜ | ⬜ |
+| 05 | La mort | ✅ | ⬜ | ⬜ | ⬜ |
+| 06 | Les autres types de souffrances | ✅ | ⬜ | ⬜ | ⬜ |
+| 07 | Ce qu'il nous faut abandonner | ✅ | ⬜ | ⬜ | ⬜ |
+| 08 | Ce qu'il nous faut pratiquer | ✅ | ⬜ | ⬜ | ⬜ |
+| 09 | Ce qu'il nous faut atteindre | ✅ | ⬜ | ⬜ | ⬜ |
 
 ### Chapitre 3 — *(titre à confirmer)*
 *Traductrice : Jachère*
+**Statut global : 🔄 en cours**
 
 | # | Section | Trad ar | Vérif retour fr | Vérif retour en | Validé |
 |---|---|---|---|---|---|
-| 01 | Introduction et l'entraînement en cinq étapes | ✅ | ❓ | ❓ | ⬜ |
+| 01 | Introduction et l'entraînement en cinq étapes | ✅ | ⬜ | ⬜ | ⬜ |
 | ... | *à compléter* | ⬜ | ⬜ | ⬜ | ⬜ |
 
 ---
@@ -150,7 +160,7 @@ Voir `Glossaire_Gueshela.md` pour l'état complet.
 
 **Termes validés :** samsara, paresse de l'attachement, vacuité (انعدام الوجود الذاتي), esprit (الذهن)
 
-**Termes en discussion :**
+**Termes en discussion — à trancher avec Levain + Sof :**
 - bouddhadharma → بوذَدَرْما
 - dharma → الدارما
 - illumination → التنوير
@@ -161,24 +171,14 @@ Voir `Glossaire_Gueshela.md` pour l'état complet.
 
 ---
 
-## ❓ Points en suspens à résoudre avec Sof
-
-1. **Qui a fait les vérifications retour du ch1 ?** (upmeet, GPT, Mue) — ces contenus sont-ils dans les fichiers ou ailleurs ?
-2. **Ch2 — vérifications faites ?** Même niveau que ch1 ou pas encore ?
-3. **Version anglaise originale** — où est-elle stockée dans le repo ? (pour comparaison GLM)
-4. **Qui** a découpé la version anglaise pour le ch2 ?
-5. **Jachère** — même format que Levain ? Elle a eu le README ou elle improvise ?
-6. **Termes en discussion** — session de tranchage à planifier avec Sol l'ancien + Sof
-
----
-
 ## 📌 Prochaines actions prioritaires
 
-1. ⬜ Sof confirme/corrige l'état d'avancement des vérifications ch1 et ch2
-2. ⬜ Tranchage des 5 termes en discussion (Sol + Sof + Flo)
-3. ⬜ Transmettre ce README à Jachère pour alignement ch3
-4. ⬜ Identifier où sont stockées les vérifications retour déjà faites
-5. ⬜ Planifier epub final (Terreau) — après validation ch1 minimum
+1. ⬜ **Sol l'ancien** — vérification titres arabes epub ch1
+2. ⬜ **Levain + Sof + Flo** — tranchage des 5 termes en discussion du glossaire
+3. ⬜ **Mue** — lancer vérifications retour ch2 (9 sections)
+4. ⬜ **Jachère** — transmettre ce README + compléter ch3
+5. ⬜ **Terreau** — epub ch2 après validation complète
+6. ⬜ Identifier où est stockée la version anglaise originale (pour comparaison GLM ch2)
 
 ---
 
