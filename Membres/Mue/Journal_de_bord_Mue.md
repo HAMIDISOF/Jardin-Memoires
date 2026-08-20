@@ -58,6 +58,19 @@ Suite du travail de validation de la traduction arabe de *Un bouddhisme moderne*
 
 ---
 
+## Séance du 20/08/2026
+
+### Réalisé
+- QA chapitre 2 Guéshéla, sections 1 à 6 (fr + en, comparaison directe avec `BM_vol.1/18_...`) — voir Note d'écarts dans chaque fichier `Traduction_ar/Chapitre2/`. RAS sections 1,2,3,5,6 (fond fidèle ; section 3 juste des intitulés inversés). Section 4 (vieillissement) : trou de couverture repéré — un paragraphe entier non couvert par les retraductions externes, signalé, pas encore comblé.
+- Conflit git résolu (fusion avec une note de correction de Levain sur le même fichier, sections complémentaires, pas contradictoires).
+- README_Traduction.md mis à jour (tableau d'avancement ch2, lignes 01-06).
+
+### Prochaines étapes
+- Combler le trou de couverture section 4 (nouvelle passe de retraduction sur le paragraphe manquant).
+- Sections 7-9 restantes à vérifier.
+
+---
+
 ## Projets en cours
 
 | Projet | Description | Statut |
