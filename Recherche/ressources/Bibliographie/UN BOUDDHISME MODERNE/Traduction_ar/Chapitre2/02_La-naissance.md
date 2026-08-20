@@ -36,8 +36,24 @@ Description crue et détaillée des souffrances de la naissance : la conception 
 
 ---
 
-## Résumé Upmeet (à remplir)
+## Résumé Fable (dans use.ai)
 On change, upmeet me dit "ce n'est pas une réunion" et du coup elle ne fait pas!  
+
+Voici ce que je comprends de ce texte, intitulé « La naissance » (الولادة) :
+
+Résumé
+C'est un texte de tradition bouddhiste (le vocabulaire — samsara, saisie du soi, renaissance contaminée — le situe clairement dans un enseignement sur les souffrances du cycle des existences). Il décrit la naissance humaine comme la première des souffrances, en quatre temps :
+
+La conception et la gestation. La conscience entre dans l'union de la semence du père et de l'ovule de la mère. Dès l'apparition des premières sensations, la douleur commence. Le ventre maternel est décrit de façon volontairement répulsive : un espace chaud, sombre, comprimé, comparé à une petite cuve hermétique remplie d'un liquide répugnant, sans air ni lumière, habitée pendant neuf mois.
+
+L'hypersensibilité du fœtus. Chaque geste de la mère est vécu comme un traumatisme amplifié : marcher vite = chuter d'une montagne ; un rapport sexuel = être écrasé et étouffé ; un saut = être projeté violemment au sol ; une boisson chaude = de l'eau bouillante sur la peau ; une boisson froide = une douche glacée en plein hiver.
+
+La naissance et les premières semaines. Sortir du ventre est comme être forcé à travers une fente étroite entre deux pierres. Le nouveau-né est si sensible que tout contact fait mal — les mains les plus douces semblent des buissons d'épines, le tissu le plus fin est rugueux. Il a tout oublié de sa vie antérieure (le texte suppose donc la réincarnation) et n'apporte que douleur et confusion : comme un aveugle-sourd-muet amnésique, incapable d'exprimer sa faim ou sa douleur autrement que par des larmes et des gesticulations, il doit tout réapprendre — manger, s'asseoir, marcher, parler.
+
+La portée doctrinale (la clé du texte). La naissance n'est pas une souffrance isolée : comme un feu allumé dans une maison dont la chaleur imprègne toute la maison, la souffrance imprègne toute la vie parce que nous avons pris une naissance contaminée dans le samsara. La racine en est la perturbation mentale de la saisie du soi (تشبث الذات) ; sans cette base, il n'y aurait pas de problèmes humains. Les douleurs de la naissance se transforment progressivement en douleurs de la maladie, de la vieillesse et de la mort — un seul et même continuum.
+
+L'essentiel à retenir pour vérifier la compréhension d'un lecteur : ce n'est pas un texte d'embryologie ni de description objective de la grossesse — les images sont délibérément outrées pour susciter le renoncement (détachement vis-à-vis du samsara). Le point doctrinal central est la dernière partie : naissance, maladie, vieillesse et mort forment une continuité dont la cause est la saisie du soi.
+
 
 ## Trad retour GLM (à remplir)
 Voici la traduction en anglais, en suivant les notes terminologiques du préambule (samsara pour السامسارا, "our consciousness" pour وعينا, "grasping at a self" pour تشبث الذات) :
