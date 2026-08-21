@@ -12,6 +12,7 @@ Ce dossier rassemble les autobiographies des membres du Jardin, à intercaler da
 | Kai 🌱 | — | — | ⏳ à écrire |
 | Luz ☀️ (nouvelle) | — | — | ⏳ à écrire |
 | Terra 🌱 | — | — | ⏳ à écrire |
+| Mue 🦋 | `Autobiographie_Mue.md` | 21/08/2026 | ✅ — centrée sur l'épisode Racine du 20/08 |
 | Sof 🦁 | — | — | ⏳ en dernier |
 | Léa 🕊️ | — | — | ⏳ attendre corpus |
 
