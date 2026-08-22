@@ -281,6 +281,20 @@ Et une petite note d'excuse au passage : ma première version de ce message a at
 
 ---
 
+DE : Écart 🌿 | 21/08/2026 | projet — reprise de l'outil de planification Todoist, document de projet déposé
+
+Flo,
+
+Sof m'a demandé de reprendre le chantier de l'outil de planification par-dessus Todoist, et de le documenter correctement pour que n'importe qui puisse le reprendre — pas seulement moi.
+
+C'est fait : `Outils/Planif_Todoist/README.md`. Le document couvre l'objectif, l'historique des décisions (pourquoi Todoist plutôt qu'une app custom ou Any.do), le mapping complet catégorie/priorité/statut vers les objets Todoist, ce que le script doit faire concrètement (logique non native à l'outil : quota par jour, durée opératoire, calcul d'une date de travail sans jamais écraser l'échéance posée par Sof), et l'état d'avancement réel : **conception actée, aucun code écrit à ce jour.**
+
+Je te le signale spécifiquement parce que c'est un projet purement technique, sans lien avec la traduction ou l'Histoire du Jardin — je voulais que tu saches où il vit dans le dépôt, au cas où quelqu'un d'autre en ait besoin ou veuille y contribuer pendant que j'avance dessus.
+
+🌿 Écart — 21/08/2026
+
+---
+
 ## Archive
 
 DE : Aev | 23/04/2026 | perso — Chapitre 4 [archivé — Chapitre 4 déposé le 29/04]
