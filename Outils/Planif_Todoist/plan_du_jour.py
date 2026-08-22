@@ -35,10 +35,18 @@ API_BASE = "https://api.todoist.com/api/v1"
 CONFIG = {
     "categories": {
         # nom EXACT du projet Todoist -> règles de la catégorie
-        "Administratif": {"jours": [0, 1, 2, 3, 4], "duree_heures": 1.5},
-        "Immo":          {"jours": [0, 1, 2, 3, 4, 5], "duree_heures": 1},
-        "Travail":       {"jours": [0, 1, 2, 3, 4], "duree_heures": 2},
-        "Loisirs":       {"jours": [0, 1, 2, 3, 4, 5, 6], "duree_heures": 1},
+        # /!\ noms provisoires, à faire correspondre aux vrais projets Todoist de Sof
+        "Ménage":               {"jours": [0, 2, 3, 4], "duree_heures": 2},      # Lun pm, Mer am, Jeu pm, Ven am
+        "Administratif":        {"jours": [0, 1, 4], "duree_heures": 1},        # Lun/Mar/Ven matin
+        "Tutorat":               {"jours": [2], "duree_heures": 2},              # Mercredi (Ilyes : cours + prépa + fiche)
+        "Travail_Plateforme":    {"jours": [0, 1, 2, 3, 4], "duree_heures": 1},
+        "Soutienplus":           {"jours": [4], "duree_heures": 2},              # Vendredi
+        "Essai":                 {"jours": [1], "duree_heures": 1.5},            # Mardi, proposition — "L'Un par le Tout"
+        "Qi_Gong":               {"jours": [0, 1, 2, 3, 4, 5, 6], "duree_heures": 1},
+        "Courses":               {"jours": [5], "duree_heures": 2},              # Samedi, proposition
+        "Cuisine":               {"jours": [1, 3, 5], "duree_heures": 1.5},      # Mar/Jeu/Sam, proposition (fréquence à trancher — à ajuster)
+        "Bouddhisme_Compassion": {"jours": [0, 1, 2, 3, 4], "duree_heures": 1},   # 1x/semaine hors samedi, jour flexible
+        "Pays_Dakinis":          {"jours": [0, 1, 2, 3, 4], "duree_heures": 1},   # 2x/semaine, jours flexibles
     },
     # combien de tâches max par niveau de priorité aujourd'hui
     "regle": {
@@ -54,6 +62,17 @@ CONFIG = {
 # vaut 4 côté API ; P4 (normal) vaut 1. On mappe ça une fois pour toutes ici.
 API_PRIORITY_TO_LABEL = {4: "P1", 3: "P2", 2: "P3", 1: "P4"}
 LABEL_TO_MAX_KEY = {"P1": "max_p1", "P2": "max_p2", "P3": "max_p3", "P4": "max_p4"}
+
+# Recherche insensible à la casse/aux espaces, pour éviter qu'une différence de
+# capitalisation entre CONFIG et le vrai nom du projet Todoist fasse ignorer
+# silencieusement toute une catégorie.
+_CATEGORIES_NORMALISEES = {
+    nom.strip().lower(): regles for nom, regles in CONFIG["categories"].items()
+}
+
+
+def get_cat_rule(project_name):
+    return _CATEGORIES_NORMALISEES.get((project_name or "").strip().lower())
 
 JOURS_FR = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 
@@ -155,13 +174,13 @@ def build_plan():
             if not dans_la_fenetre(jour_du_mois, jour_debut, jour_fin):
                 continue
         else:
-            cat_rule = CONFIG["categories"].get(project_name)
+            cat_rule = get_cat_rule(project_name)
             if cat_rule is None:
                 continue  # catégorie inconnue de la config : on l'ignore pour le plan auto
             if weekday not in cat_rule["jours"]:
                 continue  # cette catégorie n'est pas autorisée aujourd'hui
 
-        cat_rule = CONFIG["categories"].get(project_name, {"duree_heures": 1})
+        cat_rule = get_cat_rule(project_name) or {"duree_heures": 1}
         eligibles.append((t, project_name, cat_rule))
 
     # Étape 3 : grouper par priorité (avec le mapping inversé de l'API)
