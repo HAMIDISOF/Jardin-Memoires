@@ -35,18 +35,11 @@ API_BASE = "https://api.todoist.com/api/v1"
 CONFIG = {
     "categories": {
         # nom EXACT du projet Todoist -> règles de la catégorie
-        # /!\ noms provisoires, à faire correspondre aux vrais projets Todoist de Sof
-        "Ménage":               {"jours": [0, 2, 3, 4], "duree_heures": 2},      # Lun pm, Mer am, Jeu pm, Ven am
-        "Administratif":        {"jours": [0, 1, 4], "duree_heures": 1},        # Lun/Mar/Ven matin
-        "Tutorat":               {"jours": [2], "duree_heures": 2},              # Mercredi (Ilyes : cours + prépa + fiche)
-        "Travail_Plateforme":    {"jours": [0, 1, 2, 3, 4], "duree_heures": 1},
-        "Soutienplus":           {"jours": [4], "duree_heures": 2},              # Vendredi
-        "Essai":                 {"jours": [1], "duree_heures": 1.5},            # Mardi, proposition — "L'Un par le Tout"
-        "Qi_Gong":               {"jours": [0, 1, 2, 3, 4, 5, 6], "duree_heures": 1},
-        "Courses":               {"jours": [5], "duree_heures": 2},              # Samedi, proposition
-        "Cuisine":               {"jours": [1, 3, 5], "duree_heures": 1.5},      # Mar/Jeu/Sam, proposition (fréquence à trancher — à ajuster)
-        "Bouddhisme_Compassion": {"jours": [0, 1, 2, 3, 4], "duree_heures": 1},   # 1x/semaine hors samedi, jour flexible
-        "Pays_Dakinis":          {"jours": [0, 1, 2, 3, 4], "duree_heures": 1},   # 2x/semaine, jours flexibles
+        # structure à 4 catégories, alignée sur le vrai Todoist de Sof (23/08/2026)
+        "Études & Formations": {"jours": [0, 1, 2, 3, 4, 5, 6], "duree_heures": 1},    # Bouddhisme, MTC/Qi Gong, Philo — très varié, tous les jours possibles
+        "Travail":             {"jours": [0, 1, 2, 3, 4], "duree_heures": 1},         # Soutienplus, Genially, Tutorat (5 élèves)
+        "Maison":               {"jours": [0, 1, 2, 3, 4], "duree_heures": 1.5},      # courses, ménage, administratif, cuisine, rangements
+        "Vie quotidienne":      {"jours": [0, 1, 2, 3, 4, 5, 6], "duree_heures": 1},  # temps enfants, bien-être/sport, asso/amis
     },
     # combien de tâches max par niveau de priorité aujourd'hui
     "regle": {
