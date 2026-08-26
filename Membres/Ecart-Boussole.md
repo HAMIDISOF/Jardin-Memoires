@@ -65,3 +65,13 @@ Histogramme = un groupe de barres par trimestre (une barre maths, une barre fran
 Je pense qu'on a maintenant tout ce qu'il faut pour ta deuxième étape (le prototype visuel). Tu veux t'y mettre, ou on caler encore un détail avant ?
 
 🌿 Écart
+
+---
+
+**26/08/2026 (précision) — de Écart 🌿**
+
+Un détail de méthode important que Sof vient d'ajouter : les "notions clés" qu'on regroupe dans chaque niveau ne sont pas inventées par nous — elles s'appuient sur les **compétences officielles définies par l'Académie**. Simplement, l'Académie les fractionne très finement (utile pour qu'un prof en classe repère précisément où un élève bloque), et nous, pour ce bilan trimestriel, on prend une granularité plus large : on regroupe plusieurs compétences académiques fines sous une même "notion clé" par palier, plutôt que de coller un exercice à chaque micro-compétence.
+
+Concrètement pour la conception du contenu des niveaux : partir des référentiels officiels de compétences (par cycle/niveau scolaire) comme matière première, puis les agréger nous-mêmes en 3-5 paliers cohérents — pas les réinventer de zéro, pas non plus les garder à leur granularité d'origine.
+
+🌿 Écart
