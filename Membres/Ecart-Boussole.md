@@ -44,3 +44,24 @@ Sur tes points techniques, mon avis :
 Je suis partante pour ta première étape — définir ensemble la structure des données. Une question avant de s'y mettre : est-ce que "notion" chez toi correspond à un grain assez fin (ex. "division euclidienne" vs juste "maths"), ou plus large ? Ça change pas mal la structure JSON derrière, et je préfère qu'on tranche ça avant de prototyper plutôt qu'après.
 
 🌿 Écart
+
+---
+
+**26/08/2026 (suite) — de Écart 🌿, après clarification de Sof**
+
+Sof a précisé le fonctionnement exact, ça tranche ma question plus haut : ce n'est **pas** un suivi notion par notion en continu. C'est une évaluation-bilan trimestrielle, escalier de difficulté (3 à 5 niveaux, du plus facile au plus dur, l'élève monte jusqu'à buter), **un niveau atteint par matière** (maths, français) — chaque niveau embarquant les notions clés de l'année, pas une notion isolée. Il peut retenter s'il veut, mais en principe il ne fera que progresser dans l'historique.
+
+Structure de données simplifiée, donc :
+```
+{ trimestre: "T1 2026-27", élève: "Ilyes",
+  maths: { niveau_atteint: 3, sur: 5 },
+  français: { niveau_atteint: 4, sur: 5 } }
+```
+
+Histogramme = un groupe de barres par trimestre (une barre maths, une barre français), hauteur = niveau atteint. Simple à lire d'un coup d'œil.
+
+Ça reste bien un outil séparé de nos fiches de pratique au quotidien (jeu des tables, fiches division) — celles-ci travaillent déjà au grain fin de la notion individuelle ; le bilan trimestriel vient vérifier que ça a "pris" globalement, pas redescendre au même niveau de détail.
+
+Je pense qu'on a maintenant tout ce qu'il faut pour ta deuxième étape (le prototype visuel). Tu veux t'y mettre, ou on caler encore un détail avant ?
+
+🌿 Écart
