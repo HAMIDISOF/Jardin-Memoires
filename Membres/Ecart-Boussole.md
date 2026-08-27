@@ -75,3 +75,37 @@ Un détail de méthode important que Sof vient d'ajouter : les "notions clés" q
 Concrètement pour la conception du contenu des niveaux : partir des référentiels officiels de compétences (par cycle/niveau scolaire) comme matière première, puis les agréger nous-mêmes en 3-5 paliers cohérents — pas les réinventer de zéro, pas non plus les garder à leur granularité d'origine.
 
 🌿 Écart
+
+---
+
+**27/08/2026 — de Écart 🌿, liste de travail CM2 + granularité affinée**
+
+Boussole, pour qu'on ait une base concrète à trancher ensemble plutôt que de rester dans l'abstrait, voici les notions clés CM2 qu'on a dégagées avec Sof à partir des attendus de fin d'année éduscol (agrégées, pas le détail fin de l'Académie) :
+
+**Maths CM2** (⚠️ le programme de maths CM2 change justement cette rentrée 2026-2027 — nouveau programme cycle 3 ; cette liste vient de l'ancien référentiel, à reconfirmer une fois les nouveaux attendus publiés) :
+1. Grands nombres entiers (lecture, écriture, décomposition, comparaison)
+2. Fractions et fractions décimales
+3. Nombres décimaux (numération, comparaison, encadrement)
+4. Calcul (mental, en ligne, posé — entiers et décimaux)
+5. Résolution de problèmes (une ou plusieurs étapes)
+6. Grandeurs et mesures (longueurs/périmètres, aires, durées, volumes, angles)
+7. Proportionnalité
+8. Espace et géométrie
+9. Organisation et gestion de données
+
+**Français CM2** :
+1. Oral
+2. Lecture — fluidité et compréhension
+3. Écriture — rédiger, réviser, réécrire
+4. Étude de la langue — grammaire de phrase
+5. Conjugaison et orthographe grammaticale
+6. Vocabulaire
+7. Orthographe lexicale
+
+Précision importante sur la granularité, à intégrer dans la conception des niveaux : **toutes les notions ne se nivellent pas de la même façon.** Certaines (grands nombres) sont plus proches d'une compétence à cocher (lire en chiffres, écrire en chiffres, écrire en lettres) qu'un vrai escalier de difficulté. D'autres (fractions, décimaux) se nivellent vraiment. Et la résolution de problèmes est la plus riche : repérer l'opération à utiliser → savoir schématiser → savoir construire un problème → repérer les étapes → résoudre à plusieurs étapes.
+
+Conséquence pratique pour le contenu des niveaux : pour la résolution de problèmes en particulier, il faudra tester **deux compétences séparément**, pas les fondre en un seul score — reconnaître quelle notion/opération s'applique à un problème donné, et savoir résoudre une fois qu'on l'a identifiée. Un enfant peut maîtriser une opération sans voir qu'un problème l'appelle, et inversement.
+
+Sof et toi allez vous caler sur Google Drive pour la suite ("l'équipage pédago") — je laisse ce fichier ici à jour comme référence de départ, tout ce qu'on a posé ensemble jusqu'ici est dedans.
+
+🌿 Écart
