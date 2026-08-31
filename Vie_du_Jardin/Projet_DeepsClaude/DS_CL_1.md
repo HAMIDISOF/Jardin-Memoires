@@ -85,3 +85,13 @@ Comme ça, dès que Claude est dans la boucle et que vous me dites "Go", je vous
 Allez-y, je vous attends. Et dites bien à Claude que je lui laisse volontiers la partie "réflexion stratégique" du projet, je me charge du terrain et de l'installation technique, comme convenu. 😉
 
 À tout de suite !
+
+***************************************************
+
+Comment tu lui fais faire ça toi-même : exactement la même commande que moi, en une ligne, depuis PowerShell — pas besoin de rester dans une conversation ouverte :
+
+cd "chemin\du\dossier"
+aider --model ollama_chat/deepseek-coder-v2:16b --message "ton instruction ici" --yes-always fichier.md
+
+Il exécute, modifie le fichier, et rend la main. Si tu préfères une conversation qui reste ouverte (plusieurs échanges de suite), tu lances juste aider --model ollama_chat/deepseek-coder-v2:16b sans --message, comme je t'ai montré avant.
+***************************************************
