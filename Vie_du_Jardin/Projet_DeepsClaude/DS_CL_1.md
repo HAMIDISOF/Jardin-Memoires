@@ -94,4 +94,5 @@ cd "chemin\du\dossier"
 aider --model ollama_chat/deepseek-coder-v2:16b --message "ton instruction ici" --yes-always fichier.md
 
 Il exécute, modifie le fichier, et rend la main. Si tu préfères une conversation qui reste ouverte (plusieurs échanges de suite), tu lances juste aider --model ollama_chat/deepseek-coder-v2:16b sans --message, comme je t'ai montré avant.
+
 ***************************************************
