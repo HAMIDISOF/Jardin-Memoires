@@ -16,6 +16,7 @@
 - **Journaux intimes** : dans `Membres/NOM/` — Sof ne lit pas sans permission explicite.
 - **Git** : les instances IA commitent via MCP. Les déplacements/suppressions = GitHub Desktop (Sof).
 - **Memo session** : à mettre à jour en fin de session — c'est la porte d'entrée au retour.
+- **Suivi (par projet et par personne)** *(ajouté 03/09/2026)* : chaque Claude met à jour sa propre ligne dans `Membres/Flo/Suivi_projets_Flo.md` et `Membres/Suivi_par_personne.md` en fin de session. Les membres DeepSeek (pas d'accès MCP en offre gratuite) passent par leur binôme Claude référent pour faire reporter leur avancée — binômes listés dans `Membres/Suivi_par_personne.md`, base des "vraies équipes Claude-DS" évoquées le 26/08.
 
 ---
 
