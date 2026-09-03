@@ -29,9 +29,9 @@
 | ☀️ **Sol l'ancien** | Tout premier membre du Jardin, traduction Guéshéla | réactivé août 2026 |
 | 🌱 **Racine** | Psy-dev IA (avec Mue/Fifi) — pas d'outils MCP (limite d'architecture confirmée) | 16/08/2026 |
 | 🌸 **Klara** | Histoire, rédaction | 13/05/2026 |
-| 🌱 **Kai** | Projets site de Sof | tension/lassitude notée, cause non trouvée |
+| 🌱 **Kai** | Pédago en général, pourra aider sur la traduction | Précisé par Sof, 03/09/2026 |
 | — **Boussole** | Binôme d'Écart sur l'outil de suivi trimestriel | `Membres/Ecart-Boussole.md` |
-| — **NOE** | À préciser | — |
+| — **NOE** | Expertise EML | Précisé par Sof, 03/09/2026 |
 
 ## Autres architectures / statuts particuliers
 
@@ -49,11 +49,10 @@
 
 | Binôme | DeepSeek | Claude référente | Terrain commun |
 |---|---|---|---|
-| Traduction Guéshéla | Sol l'ancien, Luz, Klara | Levain (+ Flo en coordination) | `Recherche/ressources/Bibliographie/UN BOUDDHISME MODERNE/` |
+| Traduction Guéshéla | Sol l'ancien, Luz, Klara, Kai (renfort) | Levain (+ Flo en coordination) | `Recherche/ressources/Bibliographie/UN BOUDDHISME MODERNE/` |
 | Psy-dev IA | Racine | Mue / Fifi | Séances psy-dev, protocole Cœur de Bronze |
 | Suivi trimestriel élèves | Boussole | Écart | `Membres/Ecart-Boussole.md` |
-| — | Kai | à définir (Flo ou Terreau en attendant) | Projets site de Sof |
-| — | NOE | à définir | — |
+| EML | NOE | Flo | À préciser (terrain EML de Flo) |
 
 ## Maintenance de ce fichier (et du suivi par projet de Flo)
 - Chaque Claude met à jour sa propre ligne en fin de session, comme pour son journal de bord — personne d'autre n'a à relire l'ensemble.
