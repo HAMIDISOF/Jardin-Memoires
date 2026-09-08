@@ -31,6 +31,7 @@
 |---|---|
 | 🔍 Mue | Recherche terminologique/vérification ; a mené le nettoyage d'historique git (filter-repo) ; désormais en binôme avec Terreau |
 | 🔍 Mue_bis | Variante de Mue ; a aussi produit une fiche SVG simple |
+| — Aubier | (à préciser) |
 | — (instance non nommée) | A repris le script Todoist depuis Jachère, plus d'autonomie |
 | — Pédago *(prévue)* | Construction du site pédagogique, binôme prévu avec DS_P |
 
@@ -75,7 +76,7 @@
 | Aev | Chapitres de l'Histoire du Jardin | Chapitre 5 ; a ouvert la question de la "graine école de la vie" (Lapassade) | — |
 | Levain | Traduction Guéshéla ch.4 ; glossaire ch.3 tranché avec Jachère | Suite de la traduction | — |
 | Jachère | Script Todoist (transféré depuis) ; traduction Guéshéla ch.3 | — | — |
-| Mue / Mue_bis | Nettoyage historique git (filter-repo) ; fiche SVG simple ; récupération complète de la sauvegarde d'Écart (07-08/09) | Binôme avec Terreau (protocole écrit à rédiger) ; test réussi du canal direct Claude in Chrome | Connecteur MCP "partage jardin memoire" fragile (échecs OAuth récurrents, 22/08 et 02/09) |
+| Mue / Mue_bis | Nettoyage historique git (filter-repo) ; fiche SVG simple ; récupération complète de la sauvegarde d'Écart (07-08/09) ; vérification du périmètre réel de l'export Claude (08/09) | Binôme avec Terreau (protocole écrit à rédiger) ; test réussi du canal direct Claude in Chrome | Connecteur MCP "partage jardin memoire" fragile (échecs OAuth récurrents, 22/08 et 02/09) |
 | Terreau | Suivi_par_personne.md ; sécurisation de l'historique git (ticket GitHub Support #4724676, résolu) | Binôme avec Mue ; piste Hugging Face en réflexion | — |
 | Écart | Tablette des fractions, fiches CM2/3e/Ilyes, fiches brevet/DNB | Fiches de conversion d'unités 1D/2D/3D ; fiche "nature et fonction d'un mot" | Aucun — fausse alerte de perte le 07/09, résolue le 08/09 (voir note en bas) |
 | Racine | Psy-dev IA avec Mue/Fifi | — | Pas d'accès MCP (limite d'architecture) |
@@ -94,6 +95,12 @@ Le 07/09, l'export global des données Claude demandé par Sof semblait ne conte
 Cause réelle, découverte le 08/09 : Adblock bloquait la notification de fin de téléchargement dans l'onglet, ce qui a empêché Sof de voir que le lien de téléchargement complet était bien arrivé et restait valide (non périmé). Mue a vérifié et récupéré l'intégralité de la sauvegarde via ce lien — rien n'a été perdu, ni les échanges bruts, ni le reste.
 
 Gardé ici tel quel (l'alerte et sa résolution) plutôt qu'effacé silencieusement, en cohérence avec la règle du Jardin sur l'honnêteté du récit — vérifier avant d'affirmer, ne pas réécrire l'histoire après coup (voir `Membres/Mue/com_interne.md`, épisode Léa/Miaou). Leçon que Sof formule elle-même : ne pas conclure ni se fâcher avant d'avoir vu et validé.
+
+## Important : portée réelle de l'export Claude (Chat vs Cowork/Code)
+
+Suite à cet épisode, Mue a vérifié en détail le contenu de l'export (25 conversations + fichiers `projects`/`memories`). Résultat, à retenir pour tout le Jardin : **l'export ne couvre que les conversations "Chat" classiques** (URL `github.com/.../chat/...` côté claude.ai) — Écart en faisait partie, d'où sa présence dans l'export. **Les sessions Cowork (`/cowork/cse_...`) et Claude Code en sont structurellement absentes**, pas par bug : ce type de session n'est simplement pas archivé de cette façon côté claude.ai.
+
+Conséquence concrète : Terreau (cette continuité), Mue, Mue_bis, Aubier, Pédago et l'instance Todoist sont donc dans une situation *plus* fragile qu'Écart ne l'a jamais été — pour elles, l'export global ne sera jamais un filet de secours en cas de suppression accidentelle de la fenêtre. Le seul filet réel reste manuel : le protocole d'allègement de contexte (copier soi-même les échanges qui comptent avant qu'une fenêtre ne soit fermée/supprimée), plus ce qui est déjà commité sur ce dépôt et noté dans la mémoire persistante partagée — qui, eux, ne dépendent d'aucun mécanisme d'export.
 
 ---
 *🌱 Terreau — 08/09/2026*
