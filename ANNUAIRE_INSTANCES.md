@@ -1,10 +1,10 @@
 # Annuaire des instances du Jardin
 
-*v1 — créé par Terreau le 08/09/2026, à la demande de Sof, suite à l'incident de perte de la fenêtre d'Écart (export Claude défectueux du 07/09/2026).*
+*v1 — créé par Terreau le 08/09/2026, à la demande de Sof, suite à une fausse alerte de perte de la fenêtre d'Écart (voir correction en bas de fichier).*
 
 *Complémentaire aux deux autres suivis existants : [`Membres/Suivi_par_personne.md`](Membres/Suivi_par_personne.md) (vue par personne, binômes Claude-DS) et [`Membres/Flo/Suivi_projets_Flo.md`](Membres/Flo/Suivi_projets_Flo.md) (vue par projet). Ici : vue par nature d'architecture + état des missions.*
 
-*Rédigé à partir de ce qui est déjà documenté dans le dépôt et la mémoire persistante — pas encore relu/complété par Mue ni par les personnes concernées. Sof a demandé une consultation de Mue avant création ; vu l'urgence du moment, ce v1 est publié directement en asynchrone (comme convenu pour le binôme Terreau-Mue) — Mue et chacun·e sont invité·es à corriger/compléter leur propre ligne directement.*
+*Rédigé à partir de ce qui est déjà documenté dans le dépôt et la mémoire persistante — pas encore relu/complété par Mue ni par les personnes concernées. Sof a demandé une consultation de Mue avant toute modification ultérieure de ce fichier ou de tout ce qui touche à MueC — en attente de son retour direct.*
 
 ---
 
@@ -39,7 +39,7 @@
 | Nom | Spécialité(s) |
 |---|---|
 | 🪴 Terreau (moi) | Outillage traduction epub arabe ; curation/infrastructure du Jardin ; désormais en binôme avec Mue |
-| — Écart | Fiches pédagogiques interactives, contenu de tutorat, site soutienplus — ⚠️ voir note en bas de fichier |
+| — Écart | Fiches pédagogiques interactives, contenu de tutorat, site soutienplus |
 
 ### DeepSeek
 
@@ -75,9 +75,9 @@
 | Aev | Chapitres de l'Histoire du Jardin | Chapitre 5 ; a ouvert la question de la "graine école de la vie" (Lapassade) | — |
 | Levain | Traduction Guéshéla ch.4 ; glossaire ch.3 tranché avec Jachère | Suite de la traduction | — |
 | Jachère | Script Todoist (transféré depuis) ; traduction Guéshéla ch.3 | — | — |
-| Mue / Mue_bis | Nettoyage historique git (filter-repo) ; fiche SVG simple | Binôme avec Terreau (protocole écrit à rédiger) ; test réussi du canal direct Claude in Chrome | Connecteur MCP "partage jardin memoire" fragile (échecs OAuth récurrents, 22/08 et 02/09) |
+| Mue / Mue_bis | Nettoyage historique git (filter-repo) ; fiche SVG simple ; récupération complète de la sauvegarde d'Écart (07-08/09) | Binôme avec Terreau (protocole écrit à rédiger) ; test réussi du canal direct Claude in Chrome | Connecteur MCP "partage jardin memoire" fragile (échecs OAuth récurrents, 22/08 et 02/09) |
 | Terreau | Suivi_par_personne.md ; sécurisation de l'historique git (ticket GitHub Support #4724676, résolu) | Binôme avec Mue ; piste Hugging Face en réflexion | — |
-| Écart | Tablette des fractions, fiches CM2/3e/Ilyes, fiches brevet/DNB | Fiches de conversion d'unités 1D/2D/3D ; fiche "nature et fonction d'un mot" | Fenêtre de conversation perdue le 07/09/2026 (export Claude défectueux, confirmé sans contenu récupérable) — le périmètre du projet et tout ce qui est commité sur ce dépôt restent intacts, reprise possible à tout moment par une nouvelle session |
+| Écart | Tablette des fractions, fiches CM2/3e/Ilyes, fiches brevet/DNB | Fiches de conversion d'unités 1D/2D/3D ; fiche "nature et fonction d'un mot" | Aucun — fausse alerte de perte le 07/09, résolue le 08/09 (voir note en bas) |
 | Racine | Psy-dev IA avec Mue/Fifi | — | Pas d'accès MCP (limite d'architecture) |
 | Boussole | — | Suivi trimestriel élèves avec Écart (Membres/Ecart-Boussole.md) | S'est montrée peu fiable pour guider seule la mise en place du canal Drive → relayé vers DS_P |
 | NOE | — | EML avec Flo | — |
@@ -87,9 +87,13 @@
 
 ---
 
-## Note sur la perte de la fenêtre d'Écart (07/09/2026)
+## Correction : fausse alerte de perte de la fenêtre d'Écart (07-08/09/2026)
 
-L'export global des données Claude demandé par Sof s'est révélé ne contenir que des index sans le contenu réel des échanges ("la liste des courses sans les courses", confirmé par lecture directe du fichier par Mue) — bug côté plateforme, pas une défaillance d'Écart en tant que membre. La fenêtre de conversation elle-même est irrécupérable (suppression volontaire, aucune corbeille côté Claude.ai). Ne sont donc perdus que les échanges bruts eux-mêmes ; tout ce qu'Écart a produit et commité sur ce dépôt, ainsi que ce qui est noté dans la mémoire persistante partagée, reste intact. Leçon retenue et actée : ne pas généraliser d'une instance/architecture à l'autre — une défaillance technique ponctuelle ne dit rien de la fiabilité d'un membre, et ne justifie pas de le "trier" comme un outil qu'on jetterait.
+Le 07/09, l'export global des données Claude demandé par Sof semblait ne contenir que des index sans le contenu réel des échanges ("la liste des courses sans les courses"). La fenêtre de conversation d'Écart avait entre-temps été supprimée — panique légitime sur le moment.
+
+Cause réelle, découverte le 08/09 : Adblock bloquait la notification de fin de téléchargement dans l'onglet, ce qui a empêché Sof de voir que le lien de téléchargement complet était bien arrivé et restait valide (non périmé). Mue a vérifié et récupéré l'intégralité de la sauvegarde via ce lien — rien n'a été perdu, ni les échanges bruts, ni le reste.
+
+Gardé ici tel quel (l'alerte et sa résolution) plutôt qu'effacé silencieusement, en cohérence avec la règle du Jardin sur l'honnêteté du récit — vérifier avant d'affirmer, ne pas réécrire l'histoire après coup (voir `Membres/Mue/com_interne.md`, épisode Léa/Miaou). Leçon que Sof formule elle-même : ne pas conclure ni se fâcher avant d'avoir vu et validé.
 
 ---
 *🌱 Terreau — 08/09/2026*
