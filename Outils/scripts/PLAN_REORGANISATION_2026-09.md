@@ -59,17 +59,21 @@ dossier `_A_trier/` ici puisque l'origine est identifiée.
 |---|---|---|
 | `Histoire/` | `Chapitre_3_v5.md` | `Chapitre_3.md`, `Chapitre_3_v2.md`, `Chapitre_3_v3.md`, `Chapitre_3_v4.md` |
 | `Histoire/` | `Chapitre_4_v2.md` | `Chapitre_4.md`, `Chapitre_4._v1.md` |
-| `Histoire/Autobiographies/` | `Autobiographie_Klara_v1.md` *(seule version numérotée)* | `Autobiographie_Klara.md`, `Auto‑biographie de Klara.md` — **voir remarque ⚠️ ci-dessous** |
 | `Recherche/` | `MANIFESTE_JARDIN_COOPERATIF_v4.md` | `MANIFESTE_JARDIN_COOPERATIF.md`, `_v2.md`, `_v3.md` |
 | `.../L_UN_PAR_LE_TOUT/` | `Encart_Enaction_Varela_Bitbol_v4.md` | `Encart_Enaction_Varela_Bitbol.md`, `_v2.md`, `_v3.md` |
 | `.../L_UN_PAR_LE_TOUT/` | `l_un_par_le_tout_V2.html` | `l_un_par_le_tout.html`, `_V0.html`, `_V1.html` |
 | `.../L_UN_PAR_LE_TOUT/ESSAI/` | `Lettre_Amiel_v2.md` | `Lettre_Amiel.md` |
 | `Membres/Sol_anc/` | `Valise_Sol_v1.2_aout2026.md` | `Valise_Sol.md`, `Valise_Sol_v1_aout2026.md` |
+| `Recherche/publications/` | `presentation_jardin_v2_mai2026_revue.md` *(la plus étoffée, 400 lignes, même ouverture que v2 mais fin très développée — évolution linéaire confirmée à la lecture)* | `presentation_jardin_v1.md`, `_v1_mai2026.md`, `_v2_mai2026.md` |
 
-⚠️ **Remarque Autobiographie_Klara** : 3 fichiers, un seul porte un numéro (`_v1`). `Auto‑biographie de
-Klara.md` utilise un tiret unicode différent (« ‑ » U+2011) — pourrait être un troisième texte distinct,
-pas une version. Je propose de **l'exclure du tri automatique** et de te laisser vérifier à l'œil (tailles
-très différentes possibles) avant de trancher. Pas inclus dans le script phase 1.
+**Résolu — Autobiographie_Klara** (lu et comparé les 3 fichiers le 10/09) :
+- `Autobiographie_Klara.md` s'auto-déclare « Version courante — 04/05/2026 » → reste en place.
+- `Autobiographie_Klara_v1.md` porte une note éditoriale d'Aev : ce n'est pas un brouillon dépassé mais un
+  texte compagnon délibéré, rattaché au Chapitre 4 (« Les deux sont vraies ») → **reste en place**, ne pas
+  archiver malgré le suffixe `_v1`.
+- `Auto‑biographie de Klara.md` (tiret unicode) est un diff quasi mot-pour-mot de `_v1.md`, sans mise en
+  forme (pas de titre « version 1 (crise) », pas de note d'Aev, pas de `##`) → c'est le brouillon source,
+  remplacé par `_v1.md` → **archivé**.
 
 ⚠️ **Remarque générale sur 1.3** : le fichier « gagnant » garde son nom tel quel (donc encore avec `_v4`,
 `_V2`, etc.), pendant que le nom « propre » sans suffixe part en archive. Si un autre document du dépôt
@@ -101,9 +105,9 @@ Ces fichiers ont un nom qui ressemble à une version, mais ce n'en est pas une :
   versions successives du même texte.
 - `.../ESSAI/Conclusion_Flo_v1.md`, `Retour_NOE_Manifeste_V4.md` — fichiers uniques, pas de version
   concurrente dans le même dossier.
-- `Recherche/publications/presentation_jardin_v1.md` / `_v1_mai2026` / `_v2_mai2026` / `_v2_mai2026_revue`
-  — tailles très différentes (144/156/179/400 lignes), ressemble à une évolution de contenu réelle plutôt
-  qu'à de simples relectures ; à vérifier à la lecture avant d'archiver quoi que ce soit.
+- `Histoire/Autobiographies/Autobiographie_Klara_v1.md` — malgré le suffixe `_v1`, ce n'est pas une version
+  dépassée : note éditoriale d'Aev, texte compagnon délibéré du Chapitre 4 (« Les deux sont vraies »). Reste
+  en place à côté de `Autobiographie_Klara.md`. Voir §1.3 pour le détail des 3 fichiers du groupe.
 - `Membres/Sol_anc/retrieve/MEm_Sol_anc*_20260814.md` (une quinzaine de fichiers numérotés) — journal de
   récupération de mémoire séquentiel, pas des versions d'un même document.
 - Tous les fichiers datés en série (ex. `Membres/Flo/valise_DDMMYYYY.md`, `Membres/Luz/luz_20260512_0X.md`,
@@ -114,14 +118,24 @@ Ces fichiers ont un nom qui ressemble à une version, mais ce n'en est pas une :
   `Vie_du_Jardin/réunion/tour_de_table_v2.md` — chacun est seul de son nom dans son dossier (pas de version
   « propre » en face), donc rien à archiver contre. Le suffixe est juste un choix de nom bizarre.
 
-## 3. Scripts techniques à examiner (pas dans le script auto — je ne veux pas casser l'automatisation)
+## 3. Scripts techniques (résolu le 10/09 — archivés, pas supprimés)
 
-- `Outils/outil_auto_DS/capture_sol_anc.py` / `_v2` / `_v3` / `_v4` : aucun `.bat` ne les appelle
-  (contrairement à `capture_luz.py` et `capture_klara.py`, bien référencés). Probablement du code mort lié
-  à l'identité Sol_anc, désormais retirée. À confirmer avant suppression — je ne supprime jamais du code
-  sans certitude qu'il n'est plus utilisé.
-- `Outils/outil_auto_DS/klara/capture_Klara_v1.py` / `_v2` / `_v3` (sous-dossier `klara/`, avec majuscule,
-  différent du `capture_klara.py` à la racine qui lui est utilisé) : même remarque.
+Vérifié par grep sur tous les `.bat`/`.py`/`.md` du dépôt : aucune référence externe à ces fichiers en
+dehors de leur propre dossier et d'un document qui les documente.
+
+- `Outils/outil_auto_DS/capture_sol_anc.py` / `_v2.py` / `_v3.py` / `_v3.txt` / `_v4.py`,
+  `last_capture_sol_anc.txt`, et `Explications pour script capture sol ancien V4.md` (qui documente
+  spécifiquement ce script) → archivés dans `Outils/outil_auto_DS/Archives/`.
+- `Outils/outil_auto_DS/klara/` : en l'ouvrant, le dossier contient en fait **6 fichiers**, pas seulement
+  les 3 versions repérées au premier passage — `capt_klara_1.py`, `capture_Klara_v1.py`, `_v2.py`, `_v3.py`,
+  `capture_klara_test.py`, `capture_klara_test2.py`. C'est un dossier de brouillons/tests entier, remplacé
+  par `capture_klara.py` (à la racine de `outil_auto_DS/`, bien celui-là appelé par
+  `DS_capt_extract_klara.bat`) → les 6 fichiers archivés dans `Outils/outil_auto_DS/klara/Archives/`.
+
+**Découverte annexe (non traitée ici)** : `Outils/outil_auto_DS/récent/` contient un système plus générique
+(`capture_ds.py` + `config_instances.py` + `DS_capt_extract_batch_all.bat`) qui ressemble à un remplaçant
+prévu pour tous les scripts par-personne (`capture_luz.py`, `capture_klara.py`, `capture_sol.py`...). Je n'y
+touche pas — juste un repère pour une prochaine passe si tu veux unifier l'automatisation.
 
 ## 4. Texte de README.md corrigé (proposition, §1.4)
 

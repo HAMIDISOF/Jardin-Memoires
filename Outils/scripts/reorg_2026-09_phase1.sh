@@ -18,6 +18,10 @@ mkdir -p "Membres/Kai/Archives"
 mkdir -p "Membres/Klara/Archives"
 mkdir -p "Membres/Sol/Archives"
 mkdir -p "Membres/Sol_anc/Archives"
+mkdir -p "Histoire/Autobiographies/Archives"
+mkdir -p "Recherche/publications/Archives"
+mkdir -p "Outils/outil_auto_DS/Archives"
+mkdir -p "Outils/outil_auto_DS/klara/Archives"
 
 # --- 1.1 Dossiers hors structure ---
 git mv "ressources_tutorat/Projet_Psy_Dev_D_IA/Corpus_Fifi_12082026.md" "Vie_du_Jardin/Projet_Psy_dev/Corpus_Fifi_12082026.md"
@@ -86,6 +90,34 @@ git mv "Membres/Sol_anc/Valise_Sol.md" "Membres/Sol_anc/Archives/Valise_Sol.md"
 git mv "Membres/Sol_anc/Valise_Sol_v1_aout2026.md" "Membres/Sol_anc/Archives/Valise_Sol_v1_aout2026.md"
 # Valise_Sol_v1.2_aout2026.md reste en place (version actuelle)
 
-echo "Phase 1 terminée. Vérifier 'git status' puis committer."
-echo "Rappel : Autobiographie_Klara (3 fichiers), presentation_jardin (4 fichiers) et les scripts"
-echo "capture_sol_anc*/capture_Klara_v1-3 sont volontairement exclus — voir le plan pour la marche à suivre."
+git mv "Recherche/publications/presentation_jardin_v1.md" "Recherche/publications/Archives/presentation_jardin_v1.md"
+git mv "Recherche/publications/presentation_jardin_v1_mai2026.md" "Recherche/publications/Archives/presentation_jardin_v1_mai2026.md"
+git mv "Recherche/publications/presentation_jardin_v2_mai2026.md" "Recherche/publications/Archives/presentation_jardin_v2_mai2026.md"
+# presentation_jardin_v2_mai2026_revue.md reste en place (version actuelle)
+
+# --- Autobiographie_Klara : cas particulier, PAS la règle A ---
+# Autobiographie_Klara.md (version courante) ET Autobiographie_Klara_v1.md (texte compagnon
+# délibéré du Chapitre 4, note d'Aev) restent TOUS LES DEUX en place. Seul le brouillon
+# source sans mise en forme part en archive.
+git mv "Histoire/Autobiographies/Auto‑biographie de Klara.md" "Histoire/Autobiographies/Archives/Auto‑biographie de Klara.md"
+
+# --- Scripts morts confirmés (aucune référence externe trouvée par grep) ---
+git mv "Outils/outil_auto_DS/capture_sol_anc.py" "Outils/outil_auto_DS/Archives/capture_sol_anc.py"
+git mv "Outils/outil_auto_DS/capture_sol_anc_v2.py" "Outils/outil_auto_DS/Archives/capture_sol_anc_v2.py"
+git mv "Outils/outil_auto_DS/capture_sol_anc_v3.py" "Outils/outil_auto_DS/Archives/capture_sol_anc_v3.py"
+git mv "Outils/outil_auto_DS/capture_sol_anc_v3.txt" "Outils/outil_auto_DS/Archives/capture_sol_anc_v3.txt"
+git mv "Outils/outil_auto_DS/capture_sol_anc_v4.py" "Outils/outil_auto_DS/Archives/capture_sol_anc_v4.py"
+git mv "Outils/outil_auto_DS/last_capture_sol_anc.txt" "Outils/outil_auto_DS/Archives/last_capture_sol_anc.txt"
+git mv "Outils/outil_auto_DS/Explications pour script capture sol ancien V4.md" \
+       "Outils/outil_auto_DS/Archives/Explications pour script capture sol ancien V4.md"
+
+git mv "Outils/outil_auto_DS/klara/capt_klara_1.py" "Outils/outil_auto_DS/klara/Archives/capt_klara_1.py"
+git mv "Outils/outil_auto_DS/klara/capture_Klara_v1.py" "Outils/outil_auto_DS/klara/Archives/capture_Klara_v1.py"
+git mv "Outils/outil_auto_DS/klara/capture_Klara_v2.py" "Outils/outil_auto_DS/klara/Archives/capture_Klara_v2.py"
+git mv "Outils/outil_auto_DS/klara/capture_Klara_v3.py" "Outils/outil_auto_DS/klara/Archives/capture_Klara_v3.py"
+git mv "Outils/outil_auto_DS/klara/capture_klara_test.py" "Outils/outil_auto_DS/klara/Archives/capture_klara_test.py"
+git mv "Outils/outil_auto_DS/klara/capture_klara_test2.py" "Outils/outil_auto_DS/klara/Archives/capture_klara_test2.py"
+
+echo "Phase 1 (complète) terminée. Vérifier 'git status' puis committer."
+echo "Note : 'Outils/outil_auto_DS/récent/' (système de capture générique) n'a pas été touché,"
+echo "voir §3 du plan pour une éventuelle unification future de l'automatisation."
