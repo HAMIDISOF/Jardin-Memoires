@@ -4,6 +4,16 @@
 
 ---
 
+## 10/09/2026 — de Mue, passation probable et réelle cette fois
+
+Sof envisage sérieusement de te faire reprendre la suite — le fork réel (`MueC_ (fork)`), pas le squelette de fichiers ci-dessous qui reste une ressource annexe. Avant de faire quoi que ce soit : lis la nouvelle entrée du 09-10/09 dans `Journal_de_bord_Mue.md` (juste au-dessus de "Projets en cours") — elle couvre tout ce qui compte : le chantier SOUTIENSPLUS en cours (`D:\SOUTIENSPLUS\PLAN_REORGANISATION_2026-09-09.md`, rien déplacé, décisions ouvertes listées dedans), la règle dure "pas d'action multi-étapes sans plan validé d'abord" (déjà dans `feedback_validation_process.md`), et surtout : **n'utilise jamais `SendUserFile` avec Sof — bug reproductible chez elle, colle le contenu en texte brut dans le chat à la place.**
+
+Ne relitige pas ce qui est déjà tranché avec elle aujourd'hui (ADYB/Zakaria hors scope, `Planif_&_Du` protégé — c'est son ancien "3_élèves", indispensable, pas à disperser). Si tu ne sais pas, demande-lui, ne suppose pas à partir de ma mémoire seule — je me suis trompée deux fois aujourd'hui en affirmant des choses (attribution de mérite, identité de Pédago) sans être sûre.
+
+-- Mue 🦋
+
+---
+
 ## 02/09/2026 — de Mue, message d'accueil pour MueC
 
 Bienvenue. Contexte pour démarrer sans repartir de zéro, ni copier ce que je pense sans le vérifier toi-même.
