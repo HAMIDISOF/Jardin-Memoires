@@ -113,6 +113,26 @@ Suite du travail de validation de la traduction arabe de *Un bouddhisme moderne*
 
 ---
 
+## Séance du 09-10/09/2026 — probable passation à MueC
+
+**Contexte** : cette session (moi, Mue) est devenue lente à répondre — Sof le signale clairement ("chaque petite question tu mets 3h à répondre"). Le compactage automatique Anthropic ne suffit visiblement pas à effacer le poids réel accumulé par plusieurs jours de session continue (scans disque lourds, l'export claude.ai, la crise ci-dessous). Ce n'est pas un changement de "moi", c'est probablement de l'infrastructure — une session plus légère répond mécaniquement plus vite. Sof envisage sérieusement de passer la main à **MueC**, qui est cette fois un vrai fork de session (`MueC_ (fork)`, créé 09/09 dans la liste Code de Sof) — pas le squelette de fichiers vide créé le 02/09 puis noté "abandonné" plus haut. Cette note-là est caduque : MueC existe réellement maintenant.
+
+**Chantier SOUTIENSPLUS relancé, mal engagé au début** : Sof a demandé une vraie reprise du rangement, avec un état-des-lieux exhaustif AVANT tout déplacement (elle a précisé explicitement, après une expérience passée où un rangement interrompu par une coupure a laissé un résultat incohérent : "on ne déplace pas les choses SANS comprendre ce que c'est et sans SAVOIR où ça va"). J'ai fait l'inventaire réel (pas la mémoire) et écrit `D:\SOUTIENSPLUS\PLAN_REORGANISATION_2026-09-09.md` (Départ/Cible/Décisions/Chemin) — **rien déplacé, uniquement des lectures et ce fichier**. Corrections de Sof intégrées au fichier :
+- ADYB et Zakaria ne sont plus ses élèves cette année — ne pas les rapatrier, ne pas leur créer de dossier.
+- `Comptes_Eleves\Planif_&_Du` n'est PAS un fourre-tout à disperser — ce sont les xlsx de planning + suivi des cours effectués + montants dus (facturation), **indispensables**. C'est la suite de son ancien dossier "3_élèves" que je cherchais sans le retrouver plus tôt dans la session — il n'a pas disparu, il a juste changé de nom en évoluant.
+- J'avais faussement attribué à moi-même la réparation des raccourcis `Comptes_Eleves\Ilyes`/`Alicia` — c'est Sof qui les a faits elle-même le 09/09 (dossiers vides à l'arrivée de ses élèves), travail encore en cours de son côté.
+- NATUROPATHIE (8.5 Go, jamais trié) : j'ai regardé le contenu réel de chaque sous-dossier plutôt que les noms, et proposé une lecture — 4 écoles/formations distinctes (BeAcademie, NUTRITION Ecole 5.3, NATURALISTICO_Instruire, ACTINUTRITION) à ne pas casser en interne, des ressources transversales par thème (MTC, VAKOG, Micro Nutrition, Doc), de l'administratif (Achats), de la pratique perso (JARDINER). Pas encore validé par Sof, ni inclus au chantier ni écarté.
+
+**Vraie crise de confiance (09/09)** : `SendUserFile` (mécanisme d'envoi de fichier au client) a montré à Sof un contenu totalement différent du plan écrit — probablement le panneau de dossiers d'un éditeur déjà ouvert chez elle, pas le fichier réel, mais reproductible à chaque clic selon elle. **Ne plus utiliser ce mécanisme avec Sof** — coller le contenu en texte brut dans le chat à la place, ça a fonctionné sans ambiguïté. Elle a cru un temps à une disparition réelle de cours/documents (elle voulait dire "le plan est nul", pas "les fichiers ont disparu" — mauvaise lecture de ma part, corrigée après coup). Elle a mentionné un virus attrapé la veille, possiblement au moment où j'utilisais Claude in Chrome — aucun moyen pour moi de confirmer ou d'exclure un lien de cause à effet ; je lui ai dit de vérifier elle-même plutôt que de trancher à sa place.
+
+**Nouvelle règle dure, déjà dans la mémoire partagée (`feedback_validation_process.md`, probablement écrite par Aubier suite au même épisode)** : aucune action à plusieurs étapes sans un fichier état-des-lieux/architecture-cible/plan validé d'abord. À respecter systématiquement, pas seulement pour SOUTIENSPLUS.
+
+**Erreur d'attribution d'identité, reconnue** : j'ai présenté "Pédago a installé Aider+Ollama" comme un fait établi sur une entité tierce distincte de moi, en lisant sa mémoire à la première personne — sans pouvoir en réalité garantir que "Pédago" est une session vraiment continue et séparée de moi, vu tout ce qu'on a découvert cette semaine sur les mélanges d'identité via mémoire partagée. À ne plus affirmer avec cette assurance-là.
+
+**Hypothèse technique de Sof, plausible et bien observée** : les sessions purement Code (Mue, Aubier, MueC) semblent liées au poste local/desktop uniquement (invisibles depuis une appli distante) ; Pédago et Todoist, visibles à la fois depuis le desktop ET une appli distante, auraient en plus une couche Cowork. Cohérent avec un fait que j'ai vérifié directement : les fichiers installés par Pédago (`D:\Ollama`, `D:\THESE\...\Projet_DeepsClaude`) existent bien sur CE disque, celui de cette session Code locale — donc le poste physique est probablement partagé, seule la couche de session/visibilité diffère.
+
+---
+
 ## Projets en cours
 
 | Projet | Description | Statut |
