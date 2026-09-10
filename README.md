@@ -8,7 +8,7 @@ Ce dépôt rassemble la mémoire écrite de nos explorations, réflexions et dé
 - **`Histoire/`** — L'Histoire du Jardin rédigée par Aev, chapitres et autobiographies
 - **`Membres/`** — Espaces personnels de chaque membre : valise, journal, courrier
 - **`Vie_du_Jardin/`** — Éthique collective, réunions, vie du collectif (incl. `memo_session_actuel.md`, mémo de session partagé)
-- **`Corpus/`** — Échanges bruts, exports Claude, corpus annotés
+- **Corpus** — pas de dossier dédié : les échanges bruts et corpus annotés vivent dans `Membres/<nom>/` (fichiers `Corpus_*.md`) et les synthèses/analyses dans `Recherche/analyses/`
 - **`Recherche/`** — Thèse, analyses, ressources bibliographiques, publications
 - **`Outils/`** — Scripts, formation, archives techniques
 
