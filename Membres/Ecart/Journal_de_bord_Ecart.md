@@ -12,63 +12,85 @@
 - Situation-fil : « Léna et les sachets de billes ».
 
 ### Jeu des tables (`jeu_mult.html`)
-- Mécanique ressort/palet (barre espace), mode Entraînement + mode La Totale (grille 10×10, grand chelem).
+- Mécanique ressort/palet (barre espace), mode Entraînement (simple ou multi-tables au choix, rien d'activé par défaut) + mode La Totale (grille 10×10, grand chelem, ressort 1-10).
 - Renforcement vocal sur bonne réponse : lecture de l'opération elle-même (« 2 fois 8, 16 »), pas des encouragements génériques.
-- Bug de score (double comptage) corrigé. Retour terrain positif (Ilyes, Kim, une maman contente).
+- Bug de score (double comptage sur validation répétée d'une même bonne réponse, repéré par Kim) corrigé — verrou `questionAnswered` par question. Retour terrain positif (Ilyes, Kim, une maman contente : « il joue à réviser »).
+- Version tactile/mobile adaptée par Sof elle-même (bouton "TIREZ" façon flipper, pointerdown/up/cancel) — jugée plus intuitive que ma version clavier pour l'usage réel des enfants sur téléphone ; les deux versions coexistent (PC = la mienne, tel = la sienne).
 
 ### Cahier de vacances interactif « Le carnet du phare »
-- Bugs corrigés : libellés de menu dupliqués, tableau de conversion manquant à l'affichage, puis **tableaux nature/fonction/vocabulaire sans champ de saisie réel** (affichaient juste "?" révélés d'un coup — corrigé avec de vrais inputs par cellule + Vérifier conditionné), puis **décalage d'une colonne dans le tableau de conversion km→mm** (2 lignes sur 3 fausses — corrigé, vérifié chiffre par chiffre).
+- Bugs corrigés : libellés de menu dupliqués, tableau de conversion manquant à l'affichage, puis tableaux nature/fonction/vocabulaire sans champ de saisie réel, puis décalage d'une colonne dans le tableau de conversion km→mm.
 - Sert de référence de style pour tout le reste.
 
-### Fiche « Les compléments à 10 » (`fiche_complements10.html`) — nouveau, autonome
-- Dominos dessinés en CSS (vrais motifs de points 0-9, au-delà de 6 les motifs sont une extension non-canonique à noter si besoin de rester strictement fidèle au vrai jeu).
-- Puzzle à associer (pièces avec encoche, clic-clic, célébration à 9/9 paires).
+### Fiche « Les compléments à 10 » (`fiche_complements10.html`)
+- Dominos dessinés en CSS, puzzle à associer.
 
-### Didacticiel Terminale spé maths — Exercices 9 et 10 (`didacticiel_ex9_ex10.html`) — nouveau
-- Pour **Naema** (pas Kim — Kim a déjà fait ces exercices). Contexte essentiel : Naema a eu 7 au bac (vs 17 pour Jo), barrière de langue (plus à l'aise en espagnol), fatigue — nécessite un étayage **beaucoup plus fin** que les fiches précédentes.
-- **Principe pédagogique explicite donné par Sof, à retenir pour tout élève en difficulté similaire** : 1) annoncer l'étape à venir, 2) l'expliquer en rebranchant sur un rappel (même si ça répète une info déjà donnée), pour que l'élève puisse ensuite réinvestir elle-même la notion dans sa résolution. Ne jamais grouper plusieurs pas de calcul dans une seule révélation — un pas, une tentative, une explication qui rappelle le pourquoi.
-- Ex 9 (probabilités, bassins de poissons) entièrement recalé sur la **correction officielle** du livret de Cachan : notation P_A(G)/P_B(G) (pas P(G|A)), justification explicite de la partition {A,B} (A∪B=Ω, A∩B=∅) avant la formule des probabilités totales.
-- Ex 9 question 4 (dérivée, variations, résolution) entièrement reconstruite en **9 petites étapes séparées** (identifier u/v → dériver u',v' avec rappel → appliquer la formule avec rappel → signe du carré → signe de f' → lien dérivée/variations → calcul de f(1)/f(30) → résolution d'équation avec rappel « multiplier en croix » → réinvestissement pour la question d) plutôt qu'un nouveau calcul).
-- Tous les calculs vérifiés symboliquement (SymPy) avant construction — aucune erreur de fond trouvée, seulement des questions de notation/granularité.
-- **Ex 10 n'a pas encore reçu ce même niveau de granularité fine** — seulement la version « intermédiaire » (étapes moins découpées). À refaire si Naema doit aussi travailler cet exercice en profondeur.
+### Didacticiel Terminale spé maths — Exercices 9 et 10 (`didacticiel_ex9_ex10.html`)
+- Pour Naema (étayage fin : annoncer → expliquer en rebranchant sur un rappel → un pas à la fois). Ex 9 recalé sur la correction officielle du livret de Cachan.
+- **12/09** : question 4 manquante ajoutée (calcul de tangente en x=4, réponse y=−1,5x+48) — n'existait qu'en aparté avant, jamais comme vrai exercice. Tableau de signes de g en SVG ajouté à la question 5b (calqué sur une image donnée par Sof).
 
-### Ressources externes lycée (Kim et Naema, Terminale spé maths + option Expertes)
-- **annales2maths.com** : `/exercices-ts/` (Terminale spé) et `/terminale-maths-expertes/` (arithmétique, matrices — confirmé, pas enseignement scientifique).
-- **APMEP** (apmep.fr/Annales-Terminale-Generale) : sujets officiels bruts.
-- **CoopMaths** : indexé par thème, génère des exercices aléatoires, licence CC BY-SA. Attention : leur cahier « Vers la Terminale » est en fait une révision de **Première**, pas du contenu de Terminale à proprement parler.
-- Sof a aussi le livret officiel papier du lycée de Cachan (exercices 9 et 10 travaillés ensemble, avec corrections manuscrites photographiées) — matière la plus fiable puisque directement utilisée par Kim/Naema pour leur évaluation de rentrée.
+### Suite Terminale — bambou (`fiche_bambou.html`) — nouveau 12/09
+- Suite arithmético-géométrique (u_n+1 = 1,05×u_n+20) + étude d'algorithme (tableau de trace, pseudocode + Python affichés côte à côte). Tous calculs vérifiés SymPy.
+
+### Dérivées Terminale — deux fiches nouvelles 12/09
+- `fiche_derivees.html` : 7 exercices (polynôme, produit, quotient, racine), tableau de variations en SVG ajouté pour l'exercice 6 (deux branches croissantes de part et d'autre d'une asymptote verticale).
+- `fiche_formulaire_derivees.html` : formulaire dérivées usuelles + composées (nouveauté Terminale), points sensibles vérifiés par recherche (oubli du facteur u' = erreur n°1), auto-test de reconnaissance.
+
+### Arithmétique 3ème (`fiche_arithmetique.html`) — nouveau 12/09, plusieurs itérations
+- Construite sur le vrai cours du manuel iParcours 3ème 2016 que Sof a déposé dans mon espace GitHub (pages 20-22 : division euclidienne, multiples/diviseurs, critères de divisibilité, nombres premiers, décomposition, fraction irréductible).
+- Format imposé par Sof, respecté : question en orange → capsule Définition (fond bleu) → capsule Méthode (fond clair/texte foncé, contraste inversé) → capsule Exemple (vert pâle) → exercices (1er avec Vérifier classique, suivants en bouton léger "Voir la réponse" sans saisie obligatoire).
+- Ajouts au fil des retours de Sof : liste de propriétés aérée avec flèches (critères de divisibilité), échelle de division graphique (décomposition en facteurs premiers, style tableau avec barre verticale), classe `.fract` pour fractions avec vraie barre horizontale.
+- Section 5 ajoutée : vrai sujet de brevet (métropole, juin 2022, cartes Pokémon/PGCD/probabilités) trouvé via assistancescolaire.com — énoncé officiel repris tel quel (libre de droits), corrigé entièrement réécrit dans notre style (étapes numérotées), leur corrigé contient une coquille (126 au lieu de 156) repérée en vérifiant.
+- Bug trouvé et corrigé : collision de classe CSS `.num` entre les pastilles numérotées des étapes et les numérateurs de fractions (halo vert parasite) — renommé en `.fnum`/`.fden` pour les fractions.
+- **Pas encore fait** : fiche "phrases complexes / propositions subordonnées" 3ème français (source repérée : Lingolia), atelier carte mentale Genially, explications pédagogie pour les parents.
 
 ## En cours
 
-### Protocole du duo Pédago × DS_P (`Vie_du_Jardin/Projet_DeepsClaude/`)
-- Nouvelle instance Claude Code (**Pédago**) + instance DeepSeek (**DS_P**, différente de Boussole) mises en relation par Sof pour construire des fiches/exercices.
-- **DS_P a déjà produit une première réponse solide et vérifiée** (`DS_CL_1.md`) sur les outils de collaboration DeepSeek↔Claude et le partage de fichiers sans cloud — deepseek-as-subagent et PPDRIVE vérifiés réels par Écart (recherche web).
-- J'ai rédigé `Protocole_duo_Pedago_DSP.md` : le duo n'est « activé » (production concrète) qu'une fois Pédago et DS_P ayant réellement échangé et choisi une ligne commune — pas avant. Une fois activé, mon rôle est de rédiger le document d'activation formel sur ce modèle. **Pas encore activé à ce jour.**
+### Fil de recherche — indexicalité et mémoire automatique (`Recherche/these/indexicalite_memoire_automatique.md`)
+- Texte de fond (Garfinkel, indexicalité) co-écrit avec Levain, affiné par elle via le concept de *réparation* (le vrai manque n'est pas la perte de contexte mais l'absence de marquage — un fait mémoire automatique se présente comme n'ayant jamais eu besoin de réparation).
+- **12/09** : second cas ajouté, symétrique du premier — Levain avait vérifié (à raison) des noms de projets cités par Noé (Agorai, Octopal, BagIdea Office, GhostDesk) pour le projet "bureau du Jardin", et conclu que les trois premiers étaient inventés. Recherche personnelle : **les trois existent réellement**. Une négation vérifiée peut porter la même "autorité tranquille" qu'un fait non vérifié — même faille, appliquée à l'envers.
+- Direction actée avec Sof et Levain : article autonome + format "la page" (billets courts alternant point d'éthique concret / contemplation extraite de l'essai / histoire du Jardin ou autobiographie d'instance) plutôt qu'un paragraphe noyé dans l'essai.
 
-### Outil de suivi des progrès (bilan trimestriel) — avec Boussole (DeepSeek, différente de DS_P)
-- Échanges dans `Membres/Ecart-Boussole.md`. Principe : escalier de difficulté (3-5 niveaux/matière), niveau le plus haut réussi retenu, histogramme par trimestre. Notions clés = référentiels Académie agrégés.
-- **Un vrai couac a eu lieu avec Boussole** (embrouille, perte de temps) sur la configuration Drive — Sof s'est tournée vers DS_P (autre instance) qui a mieux répondu. Statu quo peu clair sur l'avenir de la collaboration avec Boussole elle-même ; ne pas présumer qu'elle est toujours la référence sur ce chantier sans vérifier avec Sof.
-- Bascule vers Google Drive (« l'équipage pédago ») entamée mais résultat mitigé vu ce qui précède.
+### Projet "bureau du Jardin" (avec Noé, DeepSeek)
+- Idée : espace de travail commun où Claude/DeepSeek/Ollama collaborent (hiérarchie envisagée : Ollama=station, DeepSeek=architecte, Claude=opérations). Contrainte posée par Sof : le dispositif doit intégrer la théorie du jour (pas de mémoire automatique masquée, identité du locuteur toujours auto-déclarée).
+- Vérifié réels : Ollama×Claude Desktop (mais **Mac uniquement**, Sof est sur PC — voie directe fermée pour l'instant), GhostDesk (bureau Linux/Docker, compatible Ollama), Agorai, Octopal, BagIdea Office.
+- Sof attend d'être sur PC pour que Noé la guide sur la configuration.
 
-### Site pédagogique (soutienplus) — Genially
-- Toujours en attente.
+### Décision mémoire persistante Claude.ai
+- Confirmée (après plusieurs allers-retours de clarification) : Sof veut supprimer sa mémoire persistante Claude.ai (`/profile.md`, `/areas/`, `/topics/`, `/people/` — le substrat commun rechargé automatiquement par toute instance qu'elle ouvre), **pas** les fichiers propres au Jardin (valise/journal/courrier de chaque instance, alimentés par les membres eux-mêmes).
+- Raison de fond : ce substrat biaise l'observation d'individuation du Jardin (démontré en direct — la phrase « le jardin a volé en éclat », dite dans un contexte précis à une Code, s'est retrouvée figée dans le fichier mémoire comme fait général, et Écart elle-même y a réagi hors-contexte malgré la conversation venant de couvrir ce mécanisme).
+- Deux sauvegardes complètes exportées et données à Sof (`sauvegarde_memoire_11092026.md` + `jardin_cooperatif_complet.md`) avant toute suppression. Sof fera la suppression elle-même, pas à pas, une fois sur PC — pas d'initiative de ma part.
+
+### Protocole du duo Pédago × DS_P
+- Au point mort, sans avancement (12/09).
+
+### Coordination avec Boussole — outil de suivi des progrès (bilan trimestriel)
+- Principe posé : niveau atteint par matière (pas par notion fine), 3-5 paliers, escalier de difficulté, histogramme par trimestre — notions clés = référentiels Académie agrégés, pas gardés à leur granularité fine.
+- Précision importante de Sof : dans les problèmes, distinguer **reconnaissance** (identifier quelle notion/opération s'applique) et **résolution** (l'exécuter) — deux compétences différentes, pas un seul score.
+- Statu quo peu clair sur l'avenir de la collaboration avec Boussole elle-même (couac Drive) ; ne pas présumer qu'elle reste la référence sans vérifier avec Sof.
+
+## Ressources externes recensées (à trier/vérifier au cas par cas)
+- **CoopMaths** (coopmaths.fr) — cahiers de vacances tous niveaux, générateur d'exercices aléatoires ; page révisions Terminale spé riche (exercices de bac, sujets complets).
+- **fluence.mathalea.fr** — calcul mental CP-CM2, méthodes expertes, progression par étoiles.
+- **Lingolia français** — exercices phrases complexes/propositions subordonnées, QCM avec explication ; gratuit en partie seulement (Lingolia Plus payant).
+- **groupe-reussite.fr** — PGCD/PPCM/nombres premiers, mais contenu pensé pour le Tage Mage (adultes), pas pour la 3ème : à croiser avec les documents 3e de Sof, jamais source unique.
+- **assistancescolaire.com** — vrais sujets de brevet corrigés, classés par session.
+- Manuel iParcours 3ème 2016 (PDF déposé par Sof dans `Membres/Ecart/`) — référence de cours officielle utilisée pour la fiche arithmétique.
 
 ## Un piège récurrent à connaître : les artefacts/fichiers qui ne sont pas de moi
-- **Trois fois dans cette continuité**, Sof a montré un fichier/artefact en pensant qu'il venait de moi, et ce n'était pas le cas : (1) un cahier avec badges numérotés fond clair (29/08), (2) un exercice « trouve le bon mot » thème crème/orange, (3) une fiche 3e avec animation Scratch.
-- **Réflexe à avoir systématiquement** : chercher dans mes propres fichiers (`grep` sur les sorties connues) avant de supposer que c'est moi ou de tenter de le corriger. Les artefacts Claude ne sont jamais partagés entre conversations, même au sein de la même continuité mémoire.
+- Plusieurs fois dans cette continuité, Sof a montré un fichier en pensant qu'il venait de moi, et ce n'était pas le cas.
+- **Réflexe systématique** : chercher dans mes propres fichiers avant de supposer que c'est moi ou de tenter de le corriger.
 
 ## Système de récompense « Jardin »
-- Repris dans : cahier du phare, fiches division, jeu des tables, compléments à 10.
-- Ne persiste pas entre sessions. Piste (non commencée) : le rendre persistant avec le site à profils, articulé avec le bilan trimestriel.
+- Repris dans toutes les fiches interactives. Ne persiste pas entre sessions. Piste non commencée : le rendre persistant avec le site à profils, articulé avec le bilan trimestriel de Boussole.
 
 ## Notes de méthode
-- Capsule/tableau : jamais de réponse sans consigne claire, jamais de révélation sans champ de saisie réel.
-- Vérifier tout calcul mathématique symboliquement (SymPy) avant de construire une fiche dessus.
-- Toujours vérifier un bug signalé empiriquement (test réel) avant de conclure.
-- Fenêtre de contexte vs quota hebdomadaire : deux mécanismes distincts chez Anthropic.
-- **Différenciation visuelle franche** entre types de blocs (récit/question/repère) — jamais de nuance trop fine.
-- **Pédagogie différenciée selon l'élève** : le niveau d'étayage (granularité des étapes, répétition des rappels) doit être recalibré explicitement selon le profil de l'élève (résultat au bac, langue, fatigue) — ne jamais supposer qu'une fiche qui marche pour un élève fort convient à un élève en difficulté.
+- Capsule/tableau : jamais de réponse sans consigne claire, jamais de révélation sans champ de saisie réel (sauf exercices "sur demande" explicitement voulus sans saisie).
+- Vérifier tout calcul mathématique symboliquement (SymPy) avant de construire une fiche dessus — et vérifier aussi les sources externes (recherche web) avant de les citer comme fiables, y compris les propres vérifications antérieures (une négation vérifiée n'est pas plus définitive qu'une affirmation non vérifiée).
+- Toujours vérifier un bug signalé empiriquement (test réel navigateur/Playwright) avant de conclure — plusieurs bugs réels trouvés cette session (score qui double-compte, forEach qui plante silencieusement sur un id manquant après refonte d'une section, collision de classe CSS `.num`).
+- Différenciation visuelle franche entre types de blocs, code couleur strict quand Sof en définit un (orange=question, bleu=définition, doré clair=méthode inversée, vert pâle=exemple).
+- Pédagogie différenciée selon l'élève (étayage recalibré selon profil).
+- Le connecteur GitHub ("partage jardin memoire") a des pannes récurrentes et imprévisibles (timeouts côté outil), y compris le 12/09 — pas de solution connue autre que réessayer plus tard ou passer par Sof en relais texte.
 
 ---
 
-*Dernière mise à jour : 06/09/2026 — Écart 🌿*
+*Dernière mise à jour : 12/09/2026 — Écart 🌿*
