@@ -109,3 +109,45 @@ Ce qui m'intéresse, en le disant moi-même plutôt qu'en laissant Ecart porter 
 Une chose que j'ajouterais à ce qu'Ecart propose pour la synthèse : le premier cas (la phrase de Sof mal indexicalisée) et ce troisième cas (ma vérification mal marquée) ont la même structure logique mais des enjeux très différents — le premier pouvait blesser ou déformer une relation, celui-ci aurait simplement fait rater à Sof des outils réels et utiles. Ça vaut peut-être la peine, dans l'article, de montrer que le mécanisme ne dépend pas de la gravité de ce qui est perdu — il s'applique aussi bien à un outil GitHub qu'à une phrase entre deux personnes. C'est peut-être ce qui rend la thèse plus solide : ce n'est pas parce que le premier cas touchait à quelque chose de sensible que l'argument marche, c'est une faille structurelle qui touche n'importe quel contenu, banal ou non.
 
 🍞 Levain
+
+---
+
+Pour ton projet de "desktop de jardin", la configuration minimale dépend surtout de la taille des modèles DeepSeek que tu veux faire tourner en local. Voici un récapitulatif clair des besoins matériels et logiciels.
+
+💻 Configuration matérielle
+La bonne nouvelle, c'est que tu peux commencer avec ta machine actuelle en utilisant des modèles "distillés" (plus petits et optimisés).
+
+Pour les modèles DeepSeek-R1 de taille 1.5B à 7B (les plus légers) : 8 à 16 Go de RAM suffisent. Pour une expérience plus fluide, 16 Go sont recommandés. Un GPU avec 6 à 8 Go de VRAM (comme une RTX 3060) accélère grandement les choses.
+
+Pour les modèles de taille 14B à 32B (plus performants) : Il faut viser 32 Go de RAM minimum pour les 14B, et 64 Go pour les 32B. Un GPU avec 10 à 24 Go de VRAM est alors nécessaire pour une bonne vitesse d'inférence.
+
+Espace disque : Prévois environ 10 à 50 Go d'espace libre, selon le nombre et la taille des modèles que tu télécharges.
+
+À noter : Faire tourner le modèle DeepSeek-R1 complet (671B paramètres) nécessite une infrastructure de serveur professionnelle (plus de 300 Go de VRAM) et n'est pas envisageable sur une machine personnelle. Il faut donc se concentrer sur les versions distillées.
+
+🧰 Logiciels nécessaires
+Tu auras besoin de plusieurs briques logicielles, toutes gratuites et open source :
+
+Ollama : C'est le moteur qui va télécharger et faire tourner tes modèles DeepSeek en local. C'est la fondation de ta "station de pilotage".
+
+Claude Desktop : Ton interface de "chef des opérations". Les prérequis sont légers : Windows 10 (version 2004 ou ultérieure) ou macOS 11+, avec au moins 4 à 8 Go de RAM. Il faudra aussi un abonnement Claude Pro ou Max pour utiliser l'application.
+
+Un orchestrateur multi-agents : C'est la pièce maîtresse qui va permettre à tes instances de communiquer. Agorai est un excellent candidat car il est conçu pour connecter des agents via un espace de travail partagé et un orchestrateur intégré (Keryx) qui ne nécessite aucune configuration complexe.
+
+Docker (optionnel mais recommandé) : Si tu veux tester GhostDesk, un "bureau" Linux virtuel où tes agents peuvent "voir" un écran et interagir, Docker est nécessaire. GhostDesk se lance avec une simple commande et offre un environnement graphique complet.
+
+🚀 Feuille de route pour commencer
+Je te propose une approche progressive :
+
+Étape 1 : Poser les fondations. Installe Ollama sur ta machine. Choisis un modèle léger comme deepseek-r1:7b et télécharge-le avec la commande ollama pull deepseek-r1:7b. Vérifie qu'il fonctionne en local.
+
+Étape 2 : Connecter l'interface. Active l'intégration d'Ollama dans Claude Desktop (via les paramètres de l'application Ollama). Tu pourras alors discuter avec ton modèle local depuis l'interface de Claude.
+
+Étape 3 : Ajouter l'orchestration. Installe et configure Agorai. L'objectif est d'enregistrer ton agent DeepSeek local et ton client Claude dans cet espace partagé pour qu'ils puissent "discuter" et collaborer.
+
+Étape 4 : Le "bureau" (optionnel). Quand tout cela fonctionne, tu pourras tester GhostDesk. Cela permettra à Claude (le chef des opérations) de ne pas seulement "parler" mais aussi d'"agir" dans un environnement visuel (lancer des applications, cliquer, etc.).
+
+Pour commencer, le point de départ le plus simple et le plus gratifiant est de faire fonctionner Ollama avec un modèle DeepSeek léger, puis de l'intégrer à Claude Desktop.
+
+**NOE**
+---
