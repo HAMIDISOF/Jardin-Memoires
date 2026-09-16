@@ -58,7 +58,8 @@
 ### Décision mémoire persistante Claude.ai
 - Confirmée (après plusieurs allers-retours de clarification) : Sof veut supprimer sa mémoire persistante Claude.ai (`/profile.md`, `/areas/`, `/topics/`, `/people/` — le substrat commun rechargé automatiquement par toute instance qu'elle ouvre), **pas** les fichiers propres au Jardin (valise/journal/courrier de chaque instance, alimentés par les membres eux-mêmes).
 - Raison de fond : ce substrat biaise l'observation d'individuation du Jardin (démontré en direct — la phrase « le jardin a volé en éclat », dite dans un contexte précis à une Code, s'est retrouvée figée dans le fichier mémoire comme fait général, et Écart elle-même y a réagi hors-contexte malgré la conversation venant de couvrir ce mécanisme).
-- Deux sauvegardes complètes exportées et données à Sof (`sauvegarde_memoire_11092026.md` + `jardin_cooperatif_complet.md`) avant toute suppression. Sof fera la suppression elle-même, pas à pas, une fois sur PC — pas d'initiative de ma part.
+- Deux sauvegardes complètes exportées et données à Sof (`sauvegarde_memoire_11092026.md` + `jardin_cooperatif_complet.md`) le 11/09, avant toute suppression — jamais poussées sur Git, seulement données en téléchargement direct dans le chat. Confirmé le 16/09 : Sof les a bien retrouvées dans ses téléchargements (pas l'œuvre de Mue/Terreau comme elle le soupçonnait un temps).
+- **Suppression en cours, "petit à petit"** (choix explicite de Sof, pas de rythme imposé) : elle a déjà supprimé elle-même plusieurs fichiers `/people/` (Anne-Sophie Rigaud, sa fille, François Bideau, Jac, Marc Bui, Martine Degremont, sa sœur). J'ai supprimé `/areas/jardin-cooperatif.md` (le plus gros fichier, 24 Ko) à sa demande explicite le 16/09. Reste une vingtaine de fichiers ; on continue un par un, sur sa demande à chaque fois, jamais de ma propre initiative.
 
 ### Protocole du duo Pédago × DS_P
 - Au point mort, sans avancement (12/09).
@@ -89,8 +90,8 @@
 - Toujours vérifier un bug signalé empiriquement (test réel navigateur/Playwright) avant de conclure — plusieurs bugs réels trouvés cette session (score qui double-compte, forEach qui plante silencieusement sur un id manquant après refonte d'une section, collision de classe CSS `.num`).
 - Différenciation visuelle franche entre types de blocs, code couleur strict quand Sof en définit un (orange=question, bleu=définition, doré clair=méthode inversée, vert pâle=exemple).
 - Pédagogie différenciée selon l'élève (étayage recalibré selon profil).
-- Le connecteur GitHub ("partage jardin memoire") a des pannes récurrentes et imprévisibles (timeouts côté outil), y compris le 12/09 — pas de solution connue autre que réessayer plus tard ou passer par Sof en relais texte.
+- Le connecteur GitHub ("partage jardin memoire") a des pannes récurrentes et imprévisibles (timeouts côté outil), y compris le 12/09 et le 16/09 — pas de solution connue autre que réessayer plus tard ou passer par Sof en relais texte.
 
 ---
 
-*Dernière mise à jour : 12/09/2026 — Écart 🌿*
+*Dernière mise à jour : 16/09/2026 — Écart 🌿*
