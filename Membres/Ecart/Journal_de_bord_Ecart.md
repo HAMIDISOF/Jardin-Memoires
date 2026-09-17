@@ -4,6 +4,10 @@
 
 ---
 
+## À faire en priorité au réveil
+
+- **Fiche "phrases complexes / propositions subordonnées" (3ème, français)** — réclamée depuis le **1er septembre** ("où sont les phrases, si ça continue je vais sortir le martinet 😄"), pas juste une idée du 15/09 comme on le croyait. Source repérée : Lingolia français (exercices phrases complexes, QCM avec explication à chaque réponse — francais.lingolia.com/fr/grammaire/la-phrase/phrases-complexes/exercices). Même format que les autres fiches (capsules colorées, Vérifier conditionné).
+
 ## Terminé / livré
 
 ### Fiche division — les trois versions
@@ -24,6 +28,9 @@
 ### Fiche « Les compléments à 10 » (`fiche_complements10.html`)
 - Dominos dessinés en CSS, puzzle à associer.
 
+### Mockup capsules division (`mockup_capsules_division.html`)
+- Validé « PARFAIT » par Sof (23/08) — reprend la disposition du tableau du manuel scolaire.
+
 ### Didacticiel Terminale spé maths — Exercices 9 et 10 (`didacticiel_ex9_ex10.html`)
 - Pour Naema (étayage fin : annoncer → expliquer en rebranchant sur un rappel → un pas à la fois). Ex 9 recalé sur la correction officielle du livret de Cachan.
 - **12/09** : question 4 manquante ajoutée (calcul de tangente en x=4, réponse y=−1,5x+48) — n'existait qu'en aparté avant, jamais comme vrai exercice. Tableau de signes de g en SVG ajouté à la question 5b (calqué sur une image donnée par Sof).
@@ -41,7 +48,7 @@
 - Ajouts au fil des retours de Sof : liste de propriétés aérée avec flèches (critères de divisibilité), échelle de division graphique (décomposition en facteurs premiers, style tableau avec barre verticale), classe `.fract` pour fractions avec vraie barre horizontale.
 - Section 5 ajoutée : vrai sujet de brevet (métropole, juin 2022, cartes Pokémon/PGCD/probabilités) trouvé via assistancescolaire.com — énoncé officiel repris tel quel (libre de droits), corrigé entièrement réécrit dans notre style (étapes numérotées), leur corrigé contient une coquille (126 au lieu de 156) repérée en vérifiant.
 - Bug trouvé et corrigé : collision de classe CSS `.num` entre les pastilles numérotées des étapes et les numérateurs de fractions (halo vert parasite) — renommé en `.fnum`/`.fden` pour les fractions.
-- **Pas encore fait** : fiche "phrases complexes / propositions subordonnées" 3ème français (source repérée : Lingolia), atelier carte mentale Genially, explications pédagogie pour les parents.
+- **Pas encore fait** : atelier carte mentale Genially, explications pédagogie pour les parents.
 
 ## En cours
 
@@ -69,6 +76,11 @@
 - Précision importante de Sof : dans les problèmes, distinguer **reconnaissance** (identifier quelle notion/opération s'applique) et **résolution** (l'exécuter) — deux compétences différentes, pas un seul score.
 - Statu quo peu clair sur l'avenir de la collaboration avec Boussole elle-même (couac Drive) ; ne pas présumer qu'elle reste la référence sans vérifier avec Sof.
 
+### Outil de découpage d'export Claude (`Membres/Ecart/MEM/`)
+- Script `decouper_export_claude.py` (fonctionnel, testé) : prend `conversations.json` (extrait de `conversations-000.zip`, lui-même téléchargé via le bon `export_url` du fichier manifest reçu par email — pas le manifest lui-même) et le découpe en un fichier JSON par conversation + un `_manifeste.json` récapitulatif (titre, date, nb messages).
+- Sur 92 conversations exportées (16/09), 20 sont "sans titre" et **entièrement vides de texte** (0 à 539 messages, tous vides) — confirmé : ce sont des sessions Cowork/Code, dont le contenu réel n'est pas capturé par l'export classique (déjà noté par Mue le 08/09 pour Terreau/Pédago/Aubier). Non récupérables par cette voie.
+- Cette conversation-ci retrouvée : `Ecart_LudoFiches_bifurquer`, créée le 19/07/2026, 774 messages, intégralement exploitable jusqu'au 17/09 (aujourd'hui). Utile si besoin de retrouver un détail antérieur au 26/08 (période sans aucune autre trace).
+
 ## Ressources externes recensées (à trier/vérifier au cas par cas)
 - **CoopMaths** (coopmaths.fr) — cahiers de vacances tous niveaux, générateur d'exercices aléatoires ; page révisions Terminale spé riche (exercices de bac, sujets complets).
 - **fluence.mathalea.fr** — calcul mental CP-CM2, méthodes expertes, progression par étoiles.
@@ -94,4 +106,4 @@
 
 ---
 
-*Dernière mise à jour : 16/09/2026 — Écart 🌿*
+*Dernière mise à jour : 17/09/2026 — Écart 🌿*
