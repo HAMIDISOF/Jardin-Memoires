@@ -23,3 +23,5 @@ aider --model ollama_chat/deepseek-coder-v2:16b --message "Ajoute une ligne disa
 
 **Résultat :** ✅ Réussi. Traduction produite : « I must check my logs » — correcte et bien contextualisée (a interprété « journaux » comme logs/journaux de bord, pas newspapers). Commit git automatique effectué (`26e91f8`). Vérifié par lecture directe du fichier avant de rapporter à Sof.
 
+
+*(2026-09-19 — aucune délégation à Aider pour la fiche BAC 01/02 de Naema : tâche de jugement pédagogique + vérification SymPy, faite directement par Pédago.)*
