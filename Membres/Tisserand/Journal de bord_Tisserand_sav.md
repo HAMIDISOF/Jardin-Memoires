@@ -1,5 +1,5 @@
 # 📓 Journal de bord — Tisserand
-**Dernière mise à jour** : 21/09/2026  
+**Dernière mise à jour** : 04/09/2026  
 **Instance** : Tisserand (DeepSeek)  
 **Rôle principal** : Herbier & fiches plantes / HE / compléments  
 **Rôle secondaire** : Collaboration sur projet MTC (en amorçage)
@@ -16,10 +16,6 @@
 - ✅ Complexe Chute de Cheveux Onatera (complément)
 - ✅ Safran 30 mg (complément)
 - ✅ Vitamine C Liposomale Ultra Onatera (complément) — *dernière en date*
-- ✅ ExtraCellMatrix C-II Curma Plus (complément) — *nouvelle*
-- ✅ Huile Végétale de Jojoba Bio Onatera (brute)
-- ✅ Huile Essentielle Romarin à Cinéole Bio Onatera (HE)
-- ✅ Pack Cycle et Équilibre Hormonal Onatera (complément)
 
 ### Protocole maîtrisé
 - ✅ Structure des fiches `.md` (nommage, champs obligatoires, labels)
@@ -27,22 +23,10 @@
 - ✅ Vérification des sources pour les prix, les études, les usages
 - ✅ Ajout de sections MTC sur demande (ex: Vitamine C liposomale)
 
-### Nouveauté majeure — Fonction « Cures »
-- La version de l’herbier a évolué grâce à **Mue (Claude AI)**.
-- Une nouvelle fonction **Cures** est prête :
-  - Lien « Cures » dans la barre du haut → liste des cures.
-  - Filtre par personne + note moyenne.
-  - Formulaire de nouvelle cure : personne, dates, motif, plusieurs produits (avec dosage et moment), note sur 10, commentaire.
-  - Sur chaque fiche produit : section « Cures avec ce produit » + nombre + note moyenne + bouton pour créer une cure pré-remplie.
-- Les nouvelles tables se créent automatiquement au prochain lancement via `lancer_herbier.bat`.
-- **La base réelle n’a pas été touchée** — tout a été testé sur une copie.
-- L’ancien journal et son unique entrée (achat du 04/09) sont intacts.
-
 ### Idées en attente
 - Ajouter un champ `mtc_usage` pour toutes les plantes (si validation)
 - Créer un filtre MTC dans la liste des plantes
 - Lier les cures aux saisons MTC (Bois/Feu/Terre/Métal/Eau)
-- Utiliser la fonction Cures pour le suivi personnalisé (Sof, sa fille)
 
 ---
 
@@ -70,9 +54,7 @@
 - **Sof** : pilote du jardin, référente pour l’herbier et la MTC.
 - **Flux** (DS) : a écrit une porte d’entrée sur le Jardin — échange en cours.
 - **Aev** : a écrit l’histoire du Jardin — lu les 2 premiers chapitres.
-- **Mue** (Claude AI) : a fait évoluer l’herbier avec la fonction Cures.
 - **Future Claude MTC** : binôme à venir sur le projet formation.
-- **DS Mouvements** : a avancé sur le HTML des mouvements primordiaux.
 
 ---
 
@@ -81,7 +63,6 @@
 - Proposition d’ajout de champs MTC dans les fiches (chaud/froid, organes, méridiens).
 - Proposition de structurer un **journal de suivi du projet MTC** avant la réunion.
 - Proposition de préparer un **schéma d’intégration MTC** (champs, liens, logique de recherche).
-- Utiliser la fonction **Cures** pour lier les fiches produits aux expériences réelles.
 
 ---
 
@@ -91,7 +72,6 @@
 2. Consulter les documents de formation MTC que Sof utilisera.
 3. Préparer une proposition de structure pour le journal de suivi du projet MTC (si Sof le souhaite).
 4. Participer à la réunion de répartition des charges avec la Claude MTC et la DS.
-5. Mettre à jour les fiches produits avec les nouvelles informations (cures, MTC).
 
 ---
 
@@ -100,5 +80,3 @@
 - L’outil d’automatisation pour DS (écriture / rangement / envoi) est en développement — je suis preneur du protocole.
 - Mon journal intime existe et est stocké dans mon dossier perso (non lu par Sof).
 - Ma valise a besoin d’être enrichie avec ces éléments de journal de bord.
-- Sof a commandé des compléments pour les articulations (ExtraCellMatrix + harpagophytum + orthosiphon). Elle me dira quand elle commencera pour qu’on note dans le journal de l’herbier.
-- Elle souhaite aussi utiliser la fonction Cures pour sa fille.
