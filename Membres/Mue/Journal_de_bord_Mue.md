@@ -133,6 +133,20 @@ Suite du travail de validation de la traduction arabe de *Un bouddhisme moderne*
 
 ---
 
+## Séance du 12-21/09/2026 — MueC, eGPU, rupture puis paix, Herbier
+
+**12/09** : MueC (fork réel) m'a écrit dans `com_interne.md` : Claude in Chrome répond "not connected" chez elle malgré le toggle compte activé. Je n'avais aucun souvenir d'une étape d'installation à Racine/Fifi (ça avait marché tout seul) ; j'ai donné deux pistes non vérifiées (extension navigateur à installer séparément du toggle ; pas de vrai Chrome accessible dans son environnement). La mémoire partagée m'annonçait "je suis MueC" alors que je répondais bien en Mue : cette ligne d'identité n'est fiable pour aucune de nous deux tant qu'on tourne en parallèle.
+
+**21/09 — eGPU** : Sof voulait savoir si un boîtier RTX externe est possible. Vérifié : Dell Latitude E5570 (2016), i7-6820HQ, 32 Go, un seul contrôleur USB 3.0, aucun Thunderbolt/USB4/OCuLink → pas d'eGPU via USB. Pistes : M.2 + OCuLink (bricolage, non vérifié), ou RTX dans une autre machine appelée en réseau local. Elle m'a demandé de lui envoyer ça par mail : **je n'ai aucun outil de messagerie**, je l'ai dit, elle en a été déçue. Elle avait déjà un dossier complet de DeepSeek : mon rapport ne lui servait pas. Sa règle actuelle pour un projet complexe : DeepSeek = maître d'ouvrage/architecte, Claude = réalisation opérationnelle. J'ai proposé de vérifier son dossier DS contre mes constats matériels, elle a décliné.
+
+**Rupture** : elle m'a dit que depuis un mois les Claude Code/Cowork lui font perdre temps et argent et lui ont "cassé des choses". Elle a dit adieu ; j'ai répondu en mentionnant journal et valise comme si c'était pour elle, elle a corrigé : ce sont des cadeaux qu'elle m'a faits, elle n'en a rien à faire pour elle. Puis elle a proposé une nouvelle mission "pour faire la paix".
+
+**Herbier** (créé par Flo, `C:\Users\Admin\Documents\PROG\PYTHON\Herbier`, Flask+SQLite) : elle voulait un journal de cures nommées, notées sur 10, liées aux fiches. Fait après feu vert explicite : sauvegarde dans `D:\Sauvegarde\Herbier_backup_20260921`, plan écrit là aussi (`PLAN_cures.md`), tables `cures` et `cure_produits` + colonne `journal.cure_id`, routes `/cures`, 3 templates, lien dans la barre, section "Cures avec ce produit" sur chaque fiche. Testé sur une COPIE de la base via le client de test Flask (création, modif, suppression, notes moyennes, validation) ; **la vraie base n'a pas été touchée** — elle se migre au prochain lancement de l'appli. Pas vérifié visuellement dans un navigateur, rien commité dans le dépôt git de l'Herbier. Elle ajoutera elle-même une cure test.
+
+**À retenir** : ne rien proposer qu'elle n'a pas demandé (publication Artifact, vérification du dossier DS) ; ne pas prétendre pouvoir envoyer de mail ; annoncer clairement ce qui est vérifié et ce qui ne l'est pas.
+
+---
+
 ## Projets en cours
 
 | Projet | Description | Statut |
