@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Mon Classeur de Philosophie</title>
+    <style>
+        :root {
+            --bg-color: #2E4A3A;       /* Vert sauge foncé */
+            --card-bg: #3A5A46;        /* Vert plus clair pour les cartes */
+            --text-color: #F5E6CA;     /* Beige clair */
+            --text-muted: #D4C4A8;     /* Beige plus foncé */
+            --accent-color: #8FBC8F;   /* Vert clair pour les titres */
+            --author-color: #E67E22;   /* Orange pour les questions/auteurs */
+            --question-color: #E67E22; /* Orange pour les questions */
+            --methode-bg: #C8E6C9;     /* Vert amande pour les méthodes */
+            --methode-text: #004D40;   /* Bleu canard foncé */
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 2em;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.4em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--question-color);
+            padding-left: 15px;
+        }
+
+        /* --- Accordéon --- */
+        details {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(245, 230, 202, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        summary {
+            cursor: pointer;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--question-color);
+            list-style: none; /* Enlève la flèche par défaut */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+        summary::-webkit-details-marker { display: none; } /* Pour Chrome/Safari */
+        summary::after {
+            content: "▼";
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        summary:hover {
+            background-color: rgba(143, 188, 143, 0.1);
+        }
+
+        .details-content {
+            padding: 0 20px 20px 20px;
+            border-top: 1px solid rgba(245, 230, 202, 0.1);
+        }
+        .details-content ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .details-content li {
+            margin-bottom: 8px;
+        }
+        .btn-fiche {
+            display: inline-block;
+            background-color: var(--bg-color);
+            color: var(--accent-color);
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--accent-color);
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+        .btn-fiche:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        /* --- Section Notions / Repères (v0) --- */
+        .notions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .notion-card {
+            background-color: var(--card-bg);
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9em;
+            border: 1px solid rgba(245, 230, 202, 0.1);
+        }
+        .reperes-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+        }
+        .repere-item {
+            background-color: var(--card-bg);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            border: 1px solid rgba(245, 230, 202, 0.15);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            h1 { font-size: 1.6em; }
+            .notions-grid { grid-template-columns: 1fr 1fr; }
+            summary { font-size: 1em; padding: 12px 15px; }
+            .details-content { padding: 0 15px 15px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧠 Mon Classeur de Philosophie</h1>
+
+    <!-- CHAPITRE 17 : LA VÉRITÉ -->
+    <h2>📖 Chapitre 17 : La Vérité</h2>
+
+    <details>
+        <summary>Q1. La vérité est-elle universelle ?</summary>
+        <div class="details-content">
+            <ul>
+                <li><strong>Opinion courante :</strong> Toute vérité est relative et subjective.</li>
+                <li><strong>Après réflexion :</strong> La vérité renvoie à une idée universelle ou une réalité objective.</li>
+                <li><strong>Définition :</strong> Accord d'une proposition avec ce qui est (adéquation).</li>
+                <li><strong>Textes clés :</strong> Platon (Protagoras), Malebranche (Raison universelle), William James (Pragmatisme).</li>
+            </ul>
+            <a href="verite_q1.html" class="btn-fiche">📄 Lire la fiche complète</a>
+        </div>
+    </details>
+
+    <details>
+        <summary>Q2. Peut-on douter de tout ?</summary>
+        <div class="details-content">
+            <ul>
+                <li><strong>Le scepticisme :</strong> Sextus Empiricus et la régression à l'infini de la démonstration.</li>
+                <li><strong>La distinction de Hume :</strong> Vérités de raison (relations d'idées) vs vérités de fait (choses empiriques).</li>
+                <li><strong>Conclusion :</strong> Le scepticisme modéré reconnaît les limites de la connaissance empirique sans renoncer à la science.</li>
+            </ul>
+            <a href="verite_q2.html" class="btn-fiche">📄 Lire la fiche complète</a>
+        </div>
+    </details>
+
+    <details>
+        <summary>Q3. Faut-il toujours dire la vérité ?</summary>
+        <div class="details-content">
+            <ul>
+                <li><strong>Kant :</strong> La véracité est un impératif catégorique absolu, sans exception.</li>
+                <li><strong>Constant :</strong> Le devoir de vérité est conditionnel : il n'existe qu'envers ceux qui ont droit à la vérité.</li>
+                <li><strong>Débat :</strong> Morale absolue vs morale des conséquences.</li>
+            </ul>
+            <a href="verite_q3.html" class="btn-fiche">📄 Lire la fiche complète</a>
+        </div>
+    </details>
+
+    <details>
+        <summary>Q4. La science jouit-elle du monopole de la vérité ?</summary>
+        <div class="details-content">
+            <ul>
+                <li><strong>Descartes :</strong> Les mathématiques comme modèle de certitude méthodologique.</li>
+                <li><strong>Popper :</strong> La falsifiabilité comme critère de scientificité.</li>
+                <li><strong>Einstein & Infeld :</strong> La vérité comme limite idéale (analogie de la montre fermée).</li>
+            </ul>
+            <a href="verite_q4.html" class="btn-fiche">📄 Lire la fiche complète</a>
+        </div>
+    </details>
+
+    <!-- SECTION NOTIONS ET REPÈRES (v0) -->
+    <h2>📌 Programme officiel (rappel)</h2>
+    
+    <h3 style="color: var(--text-muted); font-size: 1.1em;">Les 17 notions</h3>
+    <div class="notions-grid">
+        <div class="notion-card">L'art</div>
+        <div class="notion-card">Le bonheur</div>
+        <div class="notion-card">La conscience</div>
+        <div class="notion-card">Le devoir</div>
+        <div class="notion-card">L'État</div>
+        <div class="notion-card">L'inconscient</div>
+        <div class="notion-card">La justice</div>
+        <div class="notion-card">Le langage</div>
+        <div class="notion-card">La liberté</div>
+        <div class="notion-card">La nature</div>
+        <div class="notion-card">La raison</div>
+        <div class="notion-card">La religion</div>
+        <div class="notion-card">La science</div>
+        <div class="notion-card">La technique</div>
+        <div class="notion-card">Le temps</div>
+        <div class="notion-card">Le travail</div>
+        <div class="notion-card">La vérité</div>
+    </div>
+
+    <h3 style="color: var(--text-muted); font-size: 1.1em;">Les repères</h3>
+    <ul class="reperes-list">
+        <li class="repere-item">Absolu / relatif</li>
+        <li class="repere-item">Abstrait / concret</li>
+        <li class="repere-item">En acte / en puissance</li>
+        <li class="repere-item">Analyse / synthèse</li>
+        <li class="repere-item">Concept / image / métaphore</li>
+        <li class="repere-item">Contingent / nécessaire</li>
+        <li class="repere-item">Croire / savoir</li>
+        <li class="repere-item">Essentiel / accidentel</li>
+        <li class="repere-item">Exemple / preuve</li>
+        <li class="repere-item">Expliquer / comprendre</li>
+        <li class="repere-item">En fait / en droit</li>
+        <li class="repere-item">Formel / matériel</li>
+        <li class="repere-item">Genre / espèce / individu</li>
+        <li class="repere-item">Hypothèse / conséquence / conclusion</li>
+        <li class="repere-item">Idéal / réel</li>
+        <li class="repere-item">Identité / égalité / différence</li>
+        <li class="repere-item">Impossible / possible</li>
+        <li class="repere-item">Intuitif / discursif</li>
+        <li class="repere-item">Légal / légitime</li>
+        <li class="repere-item">Médiat / immédiat</li>
+        <li class="repere-item">Objectif / subjectif / intersubjectif</li>
+        <li class="repere-item">Obligation / contrainte</li>
+        <li class="repere-item">Origine / fondement</li>
+        <li class="repere-item">Persuader / convaincre</li>
+        <li class="repere-item">Principe / cause / fin</li>
+        <li class="repere-item">Public / privé</li>
+        <li class="repere-item">Ressemblance / analogie</li>
+        <li class="repere-item">Théorie / pratique</li>
+        <li class="repere-item">Transcendant / immanent</li>
+        <li class="repere-item">Universel / général / particulier / singulier</li>
+        <li class="repere-item">Vrai / probable / certain</li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 50px; color: var(--text-muted); font-size: 0.8em;">
+        Fiches de révision - Construites au fil de l'année 🚀
+    </div>
+</div>
+
+</body>
+</html>

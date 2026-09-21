@@ -1,0 +1,28 @@
+<button class="btn-audio" onclick="lireCitation('Kant', 'Être véridique...')">🔊</button>
+
+<script>
+const prononciations = {
+    "Kant": "Kante",
+    "Hume": "HYOUM",
+    "Descartes": "Décarte",
+    "Popper": "Popèr",
+    "Malebranche": "Malbranche",
+    "Husserl": "Ousserl"
+};
+
+function lireCitation(auteur, citation) {
+    let auteurPrononce = auteur;
+    let citationPrononcee = citation;
+
+    for (const [nom, prononciation] of Object.entries(prononciations)) {
+        auteurPrononce = auteurPrononce.replace(new RegExp(nom, 'g'), prononciation);
+        citationPrononcee = citationPrononcee.replace(new RegExp(nom, 'g'), prononciation);
+    }
+
+    const texte = `Citation de ${auteurPrononce}. ${citationPrononcee}`;
+    const utterance = new SpeechSynthesisUtterance(texte);
+    utterance.lang = 'fr-FR';
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+}
+</script>

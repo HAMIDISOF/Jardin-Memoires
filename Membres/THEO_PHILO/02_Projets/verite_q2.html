@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Philo - Q2 : Peut-on douter de tout ?</title>
+    <style>
+        :root {
+            --bg-color: #2E4A3A;       /* Vert sauge foncé */
+            --card-bg: #3A5A46;        /* Vert plus clair pour les cartes */
+            --text-color: #F5E6CA;     /* Beige clair */
+            --text-muted: #D4C4A8;     /* Beige plus foncé */
+            --accent-color: #8FBC8F;   /* Vert clair pour les titres */
+            --author-color: #E67E22;   /* Orange doux pour les auteurs */
+            --question-color: #E67E22; /* Orange */
+            --reponse-color: #57c2e6;  /* Bleu */
+            --dev-color: #26415b;      /* Gris foncé */
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            background: rgba(143, 188, 143, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        h3 {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p { margin-bottom: 15px; text-align: justify; }
+        .card {
+            background-color: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(245, 230, 202, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card strong { color: var(--accent-color); }
+        
+        /* --- Capsule de citation --- */
+        .citation {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            font-style: italic;
+            border-left: 6px solid var(--accent-color);
+            position: relative;
+        }
+        .citation .auteur {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--author-color);
+            text-align: right;
+            font-size: 0.95em;
+        }
+        
+        .btn-retour {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            border: 1px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        .btn-retour:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            h1 { font-size: 1.4em; }
+            .citation { padding: 15px; }
+        }
+            /* --- Capsule pour les Méthodes --- */
+        .methode {
+            background-color: #e8f5f3;
+            color: #004D40;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 6px solid #004D40;
+        }
+        .methode h4 { margin-top: 0; color: #004D40; border-bottom: 1px solid rgba(0,77,64,0.2); padding-bottom: 5px; }
+        .methode p { margin-bottom: 0; color: #004D40; }
+
+    </style>
+</head>
+<body>0
+
+
+<div class="container">
+    <h1>Peut-on douter de tout ?</h1>
+
+    <div class="card">
+        <p><strong>Introduction :</strong> On se méfie du doute comme on se méfie des graines... sans savoir ce qui en résultera. Le doute apparaît comme le signe qu'il nous est impossible de <em>connaître</em>, mais il peut aussi être un moyen d'y accéder. Peut-on douter de tout sans tomber dans le scepticisme paralysant ?</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2>🛑 1. L'impossibilité de parvenir au vrai</h2>
+    <p>Pour parvenir à connaître la vérité, il peut être utile de commencer par douter de ce qu'on croit savoir, et de l'examiner de plus près. Les <strong>sceptiques</strong>, qui se considèrent comme des chercheurs inlassables de vérité, se montrent particulièrement intransigeants sur nos conditions d'accès à la connaissance certaine. Les critères de reconnaissance du vrai sont tellement controversés que cette quête semble condamnée à ne jamais aboutir.</p>
+    
+    <div class="citation">
+        « On ne peut assurer qu'il y a du vrai ni sans, ni moyennant une démonstration. [...] Si c'est à l'aide d'une démonstration vraie, d'où vient que ce qui démontre qu'il y a quelque chose de vrai soit vrai ? [...] Il devient impossible de connaître avec certitude qu'il y a quelque chose de vrai. »
+        <span class="auteur">— Sextus Empiricus, Contre les logiciens</span>
+    </div>
+    <p><em>Analyse :</strong> Sextus Empiricus montre ici le problème de la <strong>régression à l'infini</strong>. Pour prouver qu'une chose est vraie, il faut une démonstration. Mais pour prouver que cette démonstration est vraie, il en faut une autre, et ainsi de suite. On ne peut donc jamais atteindre une certitude première et absolue.</em></p>
+
+    <!-- SECTION 2 -->
+    <h2>🤔 2. La tentation du scepticisme</h2>
+    <p>Mais nous ne sommes pas condamnés à désespérer de la possibilité d'accéder au vrai. Au moins certains énoncés, de type logique, apparaissent-ils incontestables parce que leur contraire est impossible et implique contradiction. Qu'en est-il toutefois des « vérités » de fait ? Faut-il en douter au risque de mettre en cause une grande partie de notre prétendu savoir ?</p>
+    
+    <h3>La distinction de David Hume : Vérités de raison et vérités de fait</h3>
+    <p>Hume fait ici une distinction fondamentale entre deux types d'objets de connaissance :</p>
+    <ul>
+        <li><strong>Les « relations d'idées »</strong> (vérités de raison) : elles s'acquièrent démonstrativement (ou intuitivement). Ce sont les propositions de la géométrie, de l'algèbre et de l'arithmétique. Leur vérité est certaine et ne dépend pas de l'expérience.</li>
+        <li><strong>Les « choses de fait »</strong> (vérités empiriques) : elles s'acquièrent empiriquement (par l'expérience). Leur contraire est toujours possible, car elles ne sont pas démontrables logiquement. Exemple : « Le soleil ne se lèvera pas demain » n'est pas une contradiction logique, même si c'est très improbable.</li>
+    </ul>
+
+    <div class="citation">
+        « Les choses de fait, qui constituent la seconde classe d'objets sur lesquels s'exerce la raison humaine, ne donnent point lieu au même genre de certitude ; et quelque évidente que soit pour nous leur vérité, cette évidence n'est pas de même nature que la précédente. [...] C'est donc en vain que nous tenterions d'en démontrer la fausseté. »
+        <span class="auteur">— David Hume, Enquête sur l'entendement humain</span>
+    </div>
+    <p><em>Analyse :</em> Pour Hume, on ne peut être certain des faits que par expérience, mais cette certitude n'est jamais absolue. Le scepticisme modéré (ou académique) nous invite à reconnaître les limites de notre connaissance empirique sans pour autant renoncer à la science.</p>
+
+    <!-- CONCLUSION / METHODE -->
+    <h2>🎓 Vers le Bac : Méthode de la dissertation</h2>
+    <div class="methode">
+        <h4>💡 Sujet type : "Peut-on ne pas vouloir la vérité ?"</h4>
+        <p><strong>Conseil de méthode :</strong> La première partie d'une dissertation est souvent consacrée à étudier les opinions couramment reçues concernant une question. La dissertation progresse ensuite en allant du plus simple au plus complexe. Ce qui a été étudié dans la première partie doit donc être « dépassé » dans les parties qui suivent.</p>
+    </div>
+
+    <!-- BOUTON RETOUR -->
+    <a href="index.html" class="btn-retour">← Retour au sommaire</a>
+</div>
+
+</body>
+</html>
+
+10.0.0.191(C431E11R103P1H1) GPU TURBO

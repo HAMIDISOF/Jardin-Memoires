@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 17 : La Vérité</title>
+    <style>
+        :root {
+            --bg-color: #2E4A3A; --card-bg: #3A5A46; --text-color: #F5E6CA;
+            --text-muted: #D4C4A8; --accent-color: #8FBC8F; --question-color: #E67E22;
+            --branche-color: #4A90E2; --sous-branche-bg: rgba(143, 188, 143, 0.15);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { text-align: center; color: var(--accent-color); border-bottom: 2px solid var(--card-bg); padding-bottom: 15px; margin-bottom: 30px; }
+        
+        /* --- Style des cartes mentales --- */
+        .carte-mentale {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border-left: 6px solid var(--question-color);
+        }
+        .carte-mentale h2 {
+            color: var(--question-color);
+            margin-top: 0;
+            font-size: 1.3em;
+            border-bottom: 1px solid rgba(245, 230, 202, 0.2);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .branche {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid var(--branche-color);
+        }
+        .branche-titre {
+            color: var(--branche-color);
+            font-weight: bold;
+            font-size: 1.05em;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .sous-branche {
+            background-color: var(--sous-branche-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            color: var(--text-color);
+            border: 1px solid rgba(245, 230, 202, 0.1);
+        }
+        .auteur-tag {
+            color: var(--author-color);
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .btn-retour { display: inline-block; margin-top: 40px; padding: 10px 20px; background-color: var(--card-bg); color: var(--accent-color); text-decoration: none; border-radius: 20px; font-weight: bold; border: 1px solid var(--accent-color); transition: all 0.3s ease; }
+        .btn-retour:hover { background-color: var(--accent-color); color: var(--bg-color); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chapitre 17 : La Vérité</h1>
+    <p style="text-align: center; font-style: italic; color: var(--text-muted); margin-bottom: 30px;">
+        (Carte mentale basée sur la page 409 du manuel - Version HTML en attendant Genially)
+    </p>
+
+    <!-- CARTE MENTALE Q1 -->
+    <div class="carte-mentale">
+        <h2>Q1. La vérité est-elle universelle ?</h2>
+        <div class="branche">
+            <span class="branche-titre">La vérité est particulière</span>
+            <div class="sous-branche">Parce que l'homme au sens de l'individu est la mesure de toute chose (<span class="auteur-tag">Protagoras</span>)</div>
+            <div class="sous-branche">Parce que c'est le contexte qui rend un même énoncé vrai ou faux (<span class="auteur-tag">Austin</span>)</div>
+        </div>
+        <div class="branche">
+            <span class="branche-titre">La vérité est universelle</span>
+            <div class="sous-branche">Il y a une vérité unique et une raison universelle même si on peut se tromper sur cette vérité (<span class="auteur-tag">Malebranche</span>)</div>
+        </div>
+        <a href="verite_q1.html" class="btn-fiche">📄 Voir la fiche complète Q1</a>
+    </div>
+
+    <!-- CARTE MENTALE Q2 -->
+    <div class="carte-mentale">
+        <h2>Q2. Peut-on douter de tout ?</h2>
+        <div class="branche">
+            <span class="branche-titre">De tous les énoncés, sans exception</span>
+            <div class="sous-branche">On ne peut donc rien tenir pour vrai (scepticisme radical) (<span class="auteur-tag">Sextus Empiricus</span>)</div>
+        </div>
+        <div class="branche">
+            <span class="branche-titre">Il faut distinguer les relations d'idées et les faits</span>
+            <div class="sous-branche">On peut douter des vérités issues de l'expérience car leur contraire est toujours possible</div>
+            <div class="sous-branche">Les vérités de raison sont indémontrables mais indubitables car leur contraire est impossible (<span class="auteur-tag">Hume</span>)</div>
+        </div>
+        <a href="verite_q2.html" class="btn-fiche">📄 Voir la fiche complète Q2</a>
+    </div>
+
+    <!-- CARTE MENTALE Q3 -->
+    <div class="carte-mentale">
+        <h2>Q3. Faut-il toujours dire la vérité ?</h2>
+        <div class="branche">
+            <span class="branche-titre">Non, il y a certaines circonstances où nous devons mentir</span>
+            <div class="sous-branche">Au nom de valeurs morales supérieures à celle de véracité (<span class="auteur-tag">Constant</span>)</div>
+        </div>
+        <div class="branche">
+            <span class="branche-titre">Peut-être, mais il m'arrive de mentir</span>
+            <div class="sous-branche">Cela dépend si j'y trouve mon intérêt</div>
+        </div>
+        <div class="branche">
+            <span class="branche-titre">Oui, toujours et sans exception</span>
+            <div class="sous-branche">Car la véracité est un devoir à l'égard de l'humanité (<span class="auteur-tag">Kant</span>)</div>
+        </div>
+        <a href="verite_q3.html" class="btn-fiche">📄 Voir la fiche complète Q3</a>
+    </div>
+
+    <!-- CARTE MENTALE Q4 -->
+    <div class="carte-mentale">
+        <h2>Q4. La science jouit-elle du monopole de la vérité ?</h2>
+        <div class="branche">
+            <span class="branche-titre">Les sciences utilisent une méthode pour atteindre la vérité</span>
+            <div class="sous-branche">Les sciences peuvent prendre exemple sur les mathématiques comme modèle de certitude (<span class="auteur-tag">Descartes</span>)</div>
+        </div>
+        <div class="branche">
+            <span class="branche-titre">Les sciences ne peuvent prétendre à une vérité définitive</span>
+            <div class="sous-branche">Parce qu'elles s'appuient sur des hypothèses, la vérité est pour elles un idéal peut-être inatteignable (<span class="auteur-tag">Einstein & Infeld</span>)</div>
+            <div class="sous-branche">Car elles ne sont sciences que si elles sont falsifiables, leur vérité est toujours en suspens (<span class="auteur-tag">Popper</span>)</div>
+        </div>
+        <a href="verite_q4.html" class="btn-fiche">📄 Voir la fiche complète Q4</a>
+    </div>
+
+    <a href="index.html" class="btn-retour">← Retour au sommaire général</a>
+</div>
+
+</body>
+</html>

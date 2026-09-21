@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiches de Philosophie - Terminale</title>
+    <style>
+        /* --- Palette de couleurs douces --- */
+        :root {
+            --bg-color: #2E4A3A;       /* Vert sauge foncé, très reposant */
+            --card-bg: #3A5A46;        /* Vert légèrement plus clair pour les cartes */
+            --text-color: #F5E6CA;     /* Beige clair pour le texte principal */
+            --text-muted: #D4C4A8;     /* Beige plus foncé pour les détails */
+            --accent-color: #8FBC8F;   /* Vert clair pour les titres */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Défilement fluide vers les chapitres */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 2em;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* --- Sommaire des chapitres --- */
+        .sommaire {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(245, 230, 202, 0.1);
+        }
+
+        .sommaire h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            border-bottom: 1px solid rgba(245, 230, 202, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .sommaire-boutons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn-chapitre {
+            display: inline-block;
+            background-color: var(--bg-color);
+            color: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--accent-color);
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .btn-chapitre:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        /* --- Sections des chapitres --- */
+        .chapitre {
+            margin-bottom: 50px;
+            scroll-margin-top: 20px; /* Évite que le titre soit collé en haut */
+        }
+
+        .chapitre h2 {
+            color: var(--accent-color);
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            background: rgba(143, 188, 143, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        h3 {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* --- Citations et notes importantes --- */
+        .citation {
+            background-color: rgba(143, 188, 143, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .citation strong {
+            color: var(--accent-color);
+            font-style: normal;
+        }
+
+        /* --- Listes --- */
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* --- Adaptation pour les petits écrans (téléphones) --- */
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            h1 { font-size: 1.6em; }
+            .btn-chapitre { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Mes Fiches de Philosophie</h1>
+
+    <!-- SOMMAIRE -->
+    <div class="sommaire">
+        <h2>📌 Sommaire des cours</h2>
+        <div class="sommaire-boutons">
+            <!-- Tu ajouteras ici les futurs boutons -->
+            <a href="#chapitre1" class="btn-chapitre">1. Présentation du cours</a>
+            <a href="#chapitre2" class="btn-chapitre">2. Persuader / Convaincre</a>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 1 -->
+    <section id="chapitre1" class="chapitre">
+        <h2>📖 Chapitre 1 : Présentation du cours</h2>
+        
+        <p><strong>Épreuve :</strong> Coefficient 8 — Durée : 4h au Bac.</p>
+        
+        <h3>📝 Structure de l'épreuve</h3>
+        <p>Il y a <strong>3 sujets</strong> au choix :</p>
+        <ul>
+            <li>2 dissertations</li>
+            <li>1 explication de texte</li>
+        </ul>
+
+        <h3>📚 Le Programme</h3>
+        <p>Le programme repose sur <strong>17 notions</strong> (vues précédemment). Chaque sujet de dissertation repose sur <strong>deux notions</strong>.</p>
+        <p><em>Exemple : "L'État doit-il nous rendre heureux ?"</em> (Croisement entre L'État et Le bonheur).</p>
+
+        <h3>💡 Méthodologie de la dissertation</h3>
+        <p>La dissertation est une <strong>réponse argumentée et organisée</strong> à la question posée.</p>
+        
+        <div class="citation">
+            <strong>⚠️ À retenir :</strong> Ce n'est pas l'opinion qui est notée, mais <strong>l'argument</strong>.
+        </div>
+
+        <p>La philosophie sert à réfléchir sur nos opinions, à les questionner pour savoir si elles sont justifiées. Il faut donc se confronter au sujet posé.</p>
+
+        <h3>🧠 Exemple d'analyse</h3>
+        <p><em>Exemple de sujet : "Sans l'État, les hommes seraient-ils heureux ?" (La guerre)</em></p>
+        <p>Réflexion : De toute façon, la recherche du bonheur est propre à chacun, donc c'est impossible. Il est dangereux de prétendre rendre les gens heureux.</p>
+    </section>
+
+    <!-- CHAPITRE 2 -->
+    <section id="chapitre2" class="chapitre">
+        <h2>💬 Chapitre 2 : Persuader / Convaincre</h2>
+        
+        <div class="citation">
+            <p>« Il est dangereux d'attendre de notre bonheur à la politique. »</p>
+        </div>
+
+        <h3>🔍 Distinction des termes</h3>
+        <p><strong>Persuader :</strong> Faire appel au <em>Sentiment</em>.</p>
+        <p><strong>Convaincre :</strong> Faire appel à l'<em>Argument</em>.</p>
+
+        <h3>📝 Note de cours</h3>
+        <div class="citation">
+            « Nous donnons beaucoup de raisons de penser beaucoup de choses, mais c'est l'opinion dont elles [découlent] (c'est ce qu'il faut se demander). »
+        </div>
+    </section>
+
+    <!-- FIN DE PAGE -->
+    <div style="text-align: center; margin-top: 50px; color: var(--text-muted); font-size: 0.8em;">
+        Fiches de révision - Construites au fil de l'année 🚀
+    </div>
+
+</div>
+
+</body>
+</html>

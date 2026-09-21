@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Philo - Q4 : La science jouit-elle du monopole de la vérité ?</title>
+    <style>
+        :root {
+            --bg-color: #2E4A3A;       /* Vert sauge foncé */
+            --card-bg: #3A5A46;        /* Vert plus clair pour les cartes */
+            --text-color: #F5E6CA;     /* Beige clair */
+            --text-muted: #D4C4A8;     /* Beige plus foncé */
+            --accent-color: #8FBC8F;   /* Vert clair pour les titres */
+            --author-color: #E67E22;   /* Orange pour les auteurs */
+            --question-color: #E67E22; /* Orange pour les questions */
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            background: rgba(143, 188, 143, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--question-color);
+        }
+        h3 {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p { margin-bottom: 15px; text-align: justify; }
+        .card {
+            background-color: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(245, 230, 202, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card strong { color: var(--accent-color); }
+        
+        /* --- Capsule de citation --- */
+        .citation {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            font-style: italic;
+            border-left: 6px solid var(--accent-color);
+            position: relative;
+        }
+        .citation .auteur {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--author-color);
+            text-align: right;
+            font-size: 0.95em;
+        }
+
+        /* --- Capsule pour les Méthodes --- */
+        .methode {
+            background-color: #C8E6C9; /* Vert amande validé */
+            color: #004D40;            /* Bleu canard foncé */
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 6px solid #004D40;
+        }
+        .methode h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #004D40;
+            border-bottom: 1px solid rgba(0, 77, 64, 0.2);
+            padding-bottom: 5px;
+        }
+        .methode p, .methode ul {
+            margin-bottom: 0;
+            color: #004D40;
+            font-size: 0.95em;
+        }
+        .methode ul { padding-left: 20px; }
+        .methode li { margin-bottom: 5px; }
+        
+        .btn-retour {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            border: 1px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        .btn-retour:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            h1 { font-size: 1.4em; }
+            .citation, .methode { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>La science jouit-elle du monopole de la vérité ?</h1>
+
+    <!-- CONTEXTE -->
+    <div class="card">
+        <p><strong>Introduction :</strong> On entend souvent « c'est prouvé scientifiquement » comme un équivalent de « c'est vrai ». La science semble être la voie la plus sûre pour <em>connaître</em> la vérité. Mais est-elle la seule ? La science jouit-elle d'un monopole de la vérité ?</p>
+    </div>
+
+    <!-- TEXTE 1 : DESCARTES -->
+    <h2>1. Descartes : Les mathématiques comme modèle</h2>
+    <p>Pour Descartes, les mathématiques sont le modèle de la <strong>certitude méthodologique</strong> (et non métaphysique) car elles procèdent par déduction logique à partir de principes simples.</p>
+    
+    <div class="citation">
+        « De là se conclut avec évidence la raison pour laquelle l'arithmétique et la géométrie sont bien plus certaines que toutes les autres disciplines. [...] Elles consistent tout entières à tirer des conséquences par voie de déduction rationnelle. Elles sont ainsi les plus faciles et les plus claires de toutes, et elles ont un objet tel que celui qui les examine attentivement ne peut se tromper. »
+        <span class="auteur">— René Descartes, Règles pour la direction de l'esprit</span>
+    </div>
+    
+    <p><strong>Analyse :</strong> Les mathématiques sont le modèle de la certitude car elles procèdent par déduction logique à partir de principes simples. Descartes ne dit pas qu'il faut étudier <em>uniquement</em> les mathématiques, mais que celles-ci doivent servir de modèle pour toutes les sciences qui cherchent la certitude.</p>
+
+    <!-- TEXTE 2 : POPPER -->
+    <h2>2. Popper : L'irréfutabilité est un défaut</h2>
+    <p>Karl Popper renverse la vision classique. Pour lui, une théorie n'est pas scientifique parce qu'elle est irréfutable, mais au contraire parce qu'elle peut être <strong>réfutée</strong> par l'expérience.</p>
+    
+    <div class="citation">
+        « Une théorie qui n'est réfutable par aucun événement qui se puisse concevoir est dépourvue de caractère scientifique. [...] Toute mise à l'épreuve véritable d'une théorie par des tests constitue une tentative pour en démontrer la fausseté ou la réfuter. Pouvoir être testée c'est pouvoir être réfutée. »
+        <span class="auteur">— Karl Popper, Conjectures et réfutations (1963)</span>
+    </div>
+    <p>Popper donne un exemple célèbre : l'énoncé « il pleuvra ou il ne pleuvra pas ici demain » n'est pas scientifique car il est toujours vrai (tautologique), donc irréfutable. En revanche, « il pleuvra ici demain » est scientifique car on peut vérifier s'il pleut ou non.</p>
+    
+    <div class="citation">
+        « Je n'exigerai pas d'un système scientifique qu'il puisse être choisi une fois pour toutes, dans une acceptation positive, mais j'exigerai que sa forme logique soit telle qu'il puisse être distingué, au moyen de tests empiriques, dans une acceptation négative : un système faisant partie de la science empirique doit pouvoir être réfuté par l'expérience. »
+        <span class="auteur">— Karl Popper, La Logique de la découverte scientifique (1934)</span>
+    </div>
+    <p><strong>Analyse :</strong> La <strong>falsifiabilité</strong> devient le critère de démarcation entre science et pseudo-science (ou métaphysique). Une théorie qui s'adapte à tout, qui ne peut jamais être contredite, n'est pas scientifique.</p>
+
+    <!-- TEXTE 3 : EINSTEIN ET INFELD -->
+    <h2>3. Einstein et Infeld : La vérité n'est qu'une limite idéale</h2>
+    <p>Pour Einstein et Infeld, la physique ne nous donne pas une description fidèle et définitive de la réalité. Nos théories sont des <strong>conjectures</strong>, des créations libres de l'esprit humain.</p>
+    
+    <div class="citation">
+        « Les concepts physiques sont des créations libres de l'esprit humain et ne sont pas, comme on pourrait le croire, uniquement déterminés par le monde extérieur. Dans l'effort que nous faisons pour comprendre le monde, nous ressemblons quelque peu à l'homme qui essaie de comprendre le mécanisme d'une montre fermée. Il voit le cadran et les aiguilles en mouvement, il entend le tic-tac, mais il n'a aucun moyen d'ouvrir le boîtier. [...] Il pourra appeler cette limite idéale la vérité objective. »
+        <span class="auteur">— Albert Einstein et Léopold Infeld, L'Évolution des idées en physique (1936)</span>
+    </div>
+    
+    <p><strong>Analyse :</strong> La vérité scientifique n'est pas une adéquation parfaite avec le réel, mais une <strong>limite idéale</strong> que l'on cherche à atteindre sans jamais pouvoir la toucher. La science est une construction humaine, faillible, qui progresse par essais et erreurs, et non une révélation absolue.</p>
+
+    <!-- MÉTHODE -->
+    <h2>🎓 Méthode : Préciser le sens des concepts</h2>
+    <div class="methode">
+        <h4>📝 Pour l'explication de texte</h4>
+        <p>Pour bien expliquer un texte philosophique, il faut :</p>
+        <ul>
+            <li><strong>Cerner les difficultés :</strong> Soulignez les mots importants et repérez les expressions difficiles.</li>
+            <li><strong>Repérer :</strong> Identifiez les exemples et les expressions clés.</li>
+            <li><strong>Définir :</strong> Donnez une définition précise des concepts (ex: <em>conjecture</em> = hypothèse de travail provisoire).</li>
+            <li><strong>Identifier :</strong> Rattachez le texte à une doctrine philosophique (ex: scepticisme, pragmatisme, falsificationnisme).</li>
+        </ul>
+    </div>
+
+    <!-- BOUTON RETOUR -->
+    <a href="index.html" class="btn-retour">← Retour au sommaire</a>
+</div>
+
+</body>
+</html>

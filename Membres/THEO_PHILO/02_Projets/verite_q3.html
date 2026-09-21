@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Philo - Q3 : Faut-il toujours dire la vérité ?</title>
+    <style>
+        :root {
+            --bg-color: #2E4A3A; --card-bg: #3A5A46; --text-color: #F5E6CA;
+            --text-muted: #D4C4A8; --accent-color: #8FBC8F; --author-color: #E67E22;
+            --question-color: #E67E22; --methode-bg: #C8E6C9; --methode-text: #004D40;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { text-align: center; color: var(--accent-color); font-size: 1.8em; border-bottom: 2px solid var(--card-bg); padding-bottom: 15px; margin-bottom: 30px; }
+        h2 { color: var(--accent-color); font-size: 1.3em; margin-top: 35px; margin-bottom: 15px; background: rgba(143, 188, 143, 0.1); padding: 10px 15px; border-radius: 8px; border-left: 4px solid var(--question-color); }
+        h3 { color: var(--text-muted); font-size: 1.1em; margin-top: 20px; margin-bottom: 10px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        .card { background-color: var(--card-bg); padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid rgba(245, 230, 202, 0.1); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card strong { color: var(--accent-color); }
+        
+        .citation {
+            background-color: var(--text-color); color: var(--bg-color);
+            padding: 20px; margin: 25px 0; border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2); font-style: italic;
+            border-left: 6px solid var(--accent-color); position: relative;
+        }
+        .citation .auteur {
+            display: block; margin-top: 10px; font-weight: bold;
+            font-style: normal; color: var(--author-color); text-align: right;
+            font-size: 0.95em;
+        }
+        .btn-audio {
+            background-color: var(--bg-color); color: var(--accent-color);
+            border: 1px solid var(--accent-color); border-radius: 50%;
+            width: 32px; height: 32px; font-size: 1em; cursor: pointer;
+            display: inline-flex; align-items: center; justify-content: center;
+            position: absolute; bottom: 10px; left: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn-audio:hover { background-color: var(--accent-color); color: var(--bg-color); }
+        
+        .methode {
+            background-color: var(--methode-bg); color: var(--methode-text);
+            padding: 20px; margin: 25px 0; border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 6px solid var(--methode-text);
+        }
+        .methode h4 { margin-top: 0; margin-bottom: 10px; font-size: 1.1em; color: var(--methode-text); border-bottom: 1px solid rgba(0, 77, 64, 0.2); padding-bottom: 5px; }
+        .methode p, .methode ul { margin-bottom: 0; color: var(--methode-text); font-size: 0.95em; }
+        .methode ul { padding-left: 20px; }
+        .methode li { margin-bottom: 5px; }
+        
+        .btn-retour { display: inline-block; margin-top: 40px; padding: 10px 20px; background-color: var(--card-bg); color: var(--accent-color); text-decoration: none; border-radius: 20px; font-weight: bold; border: 1px solid var(--accent-color); transition: all 0.3s ease; }
+        .btn-retour:hover { background-color: var(--accent-color); color: var(--bg-color); }
+        @media (max-width: 600px) { body { padding: 15px; } h1 { font-size: 1.4em; } .citation, .methode { padding: 15px; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Faut-il toujours dire la vérité ?</h1>
+
+    <div class="card">
+        <p><strong>Contexte :</strong> Une célèbre polémique a opposé Constant à Kant vers 1797 concernant le droit de mentir. Aucun des deux ne défend le mensonge par égoïsme. Tous deux s'accordent à considérer que dire la vérité est un devoir. Mais Constant estime indispensable de regarder les circonstances et les conséquences du mensonge avant de condamner le menteur. Intransigeant, Kant fait de la véracité un devoir absolu et considère qu'un mensonge nuit non seulement à quelqu'un en particulier, mais à l'humanité en général.</p>
+    </div>
+
+    <h2>1. Kant : Dire la vérité est un impératif absolu</h2>
+    <p>Pour Kant, la véracité est un devoir <strong>inconditionnel</strong>. Elle ne souffre aucune exception, même si les conséquences semblent désastreuses.</p>
+    
+    <div class="citation" id="citation-kant">
+        « Être véridique dans les propos qu'on ne peut éluder, c'est là le devoir formel de l'homme envers chaque homme, quelque soit la gravité du préjudice qui peut en résulter pour soi-même ou pour autrui. [...] Car le mensonge nuit toujours à autrui : même s'il ne nuit pas à un autre homme, il nuit à l'humanité en général et rend vaine la source du droit. [...] Il y a donc un commandement sacré de la raison, qui commande inconditionnellement et qu'aucune convenance ne doit restreindre : être véridique (honnête) dans toutes ses déclarations. »
+        <span class="auteur">— Emmanuel Kant, D'un prétendu droit de mentir par humanité (1797)</span>
+        <button class="btn-audio" onclick="lireCitation('Kant', 'Être véridique dans les propos qu\'on ne peut éluder, c\'est là le devoir formel de l\'homme envers chaque homme, quelque soit la gravité du préjudice qui peut en résulter pour soi-même ou pour autrui. Car le mensonge nuit toujours à autrui : même s\'il ne nuit pas à un autre homme, il nuit à l\'humanité en général et rend vaine la source du droit. Il y a donc un commandement sacré de la raison, qui commande inconditionnellement et qu\'aucune convenance ne doit restreindre : être véridique dans toutes ses déclarations.')">🔊</button>
+    </div>
+    
+    <p><strong>Analyse :</strong> Pour Kant, le mensonge est toujours un tort causé à l'humanité en général, car il sape la confiance et rend vains les contrats et les droits. Même si mentir peut sauver un ami, cela détruit le fondement même de la morale et de la société. La véracité est donc un <strong>impératif catégorique</strong> : une règle absolue, sans exception.</p>
+
+    <h2>2. Constant : Il y a des vérités qui nuisent à autrui</h2>
+    <p>Constant s'oppose à Kant. Il soutient qu'un principe moral pris de manière absolue et isolée rendrait toute société impossible. Il faut tenir compte des circonstances et des conséquences.</p>
+    
+    <div class="citation" id="citation-constant">
+        « Le principe moral que dire la vérité est un devoir, s'il était pris de manière absolue et isolée, rendrait toute société impossible. [...] Dire la vérité est un devoir. Qu'est-ce qu'un devoir ? L'idée de devoir est inséparable de celle de droits : un devoir est ce qui, dans un être, correspond aux droits d'un autre. Là où il n'y a pas de droit, il n'y a pas de devoirs. Dire la vérité n'est donc un devoir qu'envers ceux qui ont droit à la vérité. Or nul homme n'a droit à la vérité qui nuit à autrui. »
+        <span class="auteur">— Benjamin Constant, Des réactions politiques (1797)</span>
+        <button class="btn-audio" onclick="lireCitation('Constant', 'Le principe moral que dire la vérité est un devoir, s\'il était pris de manière absolue et isolée, rendrait toute société impossible. Dire la vérité est un devoir. Qu\'est-ce qu\'un devoir ? L\'idée de devoir est inséparable de celle de droits : un devoir est ce qui, dans un être, correspond aux droits d\'un autre. Là où il n\'y a pas de droit, il n\'y a pas de devoirs. Dire la vérité n\'est donc un devoir qu\'envers ceux qui ont droit à la vérité. Or nul homme n\'a droit à la vérité qui nuit à autrui.')">🔊</button>
+    </div>
+    
+    <p><strong>Analyse :</strong> Constant introduit une distinction cruciale : le devoir de vérité n'est pas absolu, il est <strong>conditionnel</strong>. Il n'existe qu'envers ceux qui ont <em>droit</em> à la vérité. Par exemple, un assassin qui demande où se cache votre ami n'a pas droit à la vérité, car elle nuirait à autrui. Constant défend donc une morale qui prend en compte les conséquences de nos actes.</p>
+
+    <h2>🎓 Pour aller plus loin : Méthode du débat</h2>
+    <div class="methode">
+        <h4>💬 Sujet de débat : "Faut-il toujours dire la vérité aux enfants ?"</h4>
+        <p><strong>Consigne :</strong> Organisez un débat en deux groupes. Un groupe défendra la position de Kant (la vérité est un devoir absolu, même pour les enfants). L'autre groupe défendra la position de Constant (il faut parfois mentir pour protéger l'enfant).</p>
+        <p><strong>Objectif :</strong> Montrer comment s'articulent le droit et la morale pour chacun des deux auteurs.</p>
+    </div>
+
+    <a href="index.html" class="btn-retour">← Retour au sommaire</a>
+</div>
+
+<script>
+const prononciations = {
+    "Kant": "Kante",
+    "Hume": "HYOUM",
+    "Descartes": "Décarte",
+    "Popper": "Popèr",
+    "Malebranche": "Malbranche",
+    "Husserl": "Ousserl"
+};
+
+function lireCitation(auteur, citation) {
+    let auteurPrononce = auteur;
+    let citationPrononcee = citation;
+
+    for (const [nom, prononciation] of Object.entries(prononciations)) {
+        auteurPrononce = auteurPrononce.replace(new RegExp(nom, 'g'), prononciation);
+        citationPrononcee = citationPrononcee.replace(new RegExp(nom, 'g'), prononciation);
+    }
+
+    const texte = `Citation de ${auteurPrononce}. ${citationPrononcee}`;
+    const utterance = new SpeechSynthesisUtterance(texte);
+    utterance.lang = 'fr-FR';
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Philo - Q1 : La vérité est-elle universelle ?</title>
+    <style>
+        :root {
+            --bg-color: #2E4A3A;       /* Vert sauge foncé */
+            --card-bg: #3A5A46;        /* Vert plus clair pour les cartes */
+            --text-color: #F5E6CA;     /* Beige clair */
+            --text-muted: #D4C4A8;     /* Beige plus foncé */
+            --accent-color: #8FBC8F;   /* Vert clair pour les titres */
+            --author-color: #E67E22;   /* Orange doux pour les auteurs */
+            --question-color: #E67E22; /* Orange */
+            --reponse-color: #57c2e6;  /* Bleu */
+            --dev-color: #26415b;      /* Gris foncé */
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            background: rgba(143, 188, 143, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        h3 {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p { margin-bottom: 15px; text-align: justify; }
+        .card {
+            background-color: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(245, 230, 202, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card strong { color: var(--accent-color); }
+        
+        /* --- Nouvelle capsule de citation --- */
+        .citation {
+            background-color: var(--text-color); /* Fond beige */
+            color: var(--bg-color); /* Texte vert foncé */
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            font-style: italic;
+            border-left: 6px solid var(--accent-color);
+            position: relative;
+        }
+        .citation .auteur {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--author-color); /* Orange */
+            text-align: right;
+            font-size: 0.95em;
+        }
+        
+        .btn-retour {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            border: 1px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        .btn-retour:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            h1 { font-size: 1.4em; }
+            .citation { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>La vérité est-elle universelle ?</h1>
+
+    <!-- INTRODUCTION -->
+    <div class="card">
+        <p><strong>Opinion courante :</strong> Toute vérité est relative et subjective. Chacun juge de la vérité d'après ce qu'il voit et ressent. Il n'y aurait pas de différence réelle, seulement une différence de perspective.</p>
+    </div>
+    <div class="card">
+        <p><strong>Après réflexion :</strong> La vérité renvoie toujours à une idée universelle ou à une réalité objective. On peut adopter des points de vue différents, mais dès que l'on parle de la chose elle-même, il n'y a qu'une seule vérité universelle, valable pour tout le monde.</p>
+    </div>
+
+    <!-- DEFINITION -->
+    <h2>📖 Définition de la vérité</h2>
+    <p>La vérité désigne <strong>l'accord d'une proposition avec ce qui est</strong>.</p>
+    
+    <div class="citation">
+        « La vérité est l'adéquation de la chose et de l'intelligence. »
+        <span class="auteur">— Thomas d'Aquin (philosophie scolastique)</span>
+    </div>
+    
+    <p>Attention : la vérité est une propriété des jugements (nos idées, nos paroles), et non une propriété des choses réelles. C'est l'affirmation qui est vraie ou fausse, pas l'objet lui-même.</p>
+    
+    <h3>L'exemple du bâton de Descartes (Nos sens nous trompent-ils ?)</h3>
+    <p>Un bâton droit, à moitié immergé dans l'eau, paraît "rompu" ou "tordu" à l'endroit où l'eau rencontre l'air. Ce phénomène s'explique par la différence entre les indices de réfraction de la lumière dans l'air et dans l'eau.</p>
+    <p>Ma perception me le montre rompu, mais elle ne correspond pas à la réalité. Celui qui pense que le bâton est "réellement" rompu commet une erreur.</p>
+
+    <!-- LA THESE DU RELATIVISME -->
+    <h2>🌍 1. La vérité n'est pas une simple opinion</h2>
+    <p>Si la vérité désigne l'accord avec la réalité objective, n'est-elle pas censée mettre tout le monde d'accord ? Pourtant, les avis divergent. Selon le relativisme de Protagoras, <em>« l'homme est la mesure de toute chose »</em> : chacun juge selon son point de vue.</p>
+    <p>Mais il ne s'agit alors que d'opinions subjectives et relatives. <strong>Ex :</strong> Si je dis que la Terre est plate, mon opinion est fausse car contredite par les faits. Je peux avoir une "opinion droite" (qui est vraie par hasard), mais ce n'est pas une véritable connaissance.</p>
+
+    <!-- DEPASSER LA SUBJECTIVITE -->
+    <h2>🎯 2. Surmonter les différences subjectives pour parvenir au vrai</h2>
+    <p>Puisque la vérité relève d'un jugement, qu'est-ce qui nous permet de qualifier de "vrai" un jugement subjectif ? Nous avons des attentes différentes. Mais nos désaccords viennent de nos motivations subjectives, qui nous détournent de la voix de la raison.</p>
+    <p>Pour se mettre d'accord, on peut s'en remettre au critère du succès pratique, en considérant avec les pragmatistes comme William James que <strong>le propre du vrai est de se vérifier dans les faits</strong>.</p>
+
+    <!-- LES TEXTES -->
+    <h2>📚 Les textes clés</h2>
+    
+    <h3>Platon : L'homme, mesure de toute vérité ? (Protagoras)</h3>
+    <div class="citation">
+        « Telle m'apparaît chaque chose, telle elle est pour moi, et telle elle t'apparaît à toi, telle à nouveau elle est pour toi. »
+        <span class="auteur">— Platon</span>
+    </div>
+    <p>Socrate critique ici le relativisme radical de Protagoras. Si tout est relatif à la sensation, alors la vérité n'existe plus. Pourtant, on peut distinguer le "souffle" (objectif) de la "sensation de souffle" (subjective).</p>
+
+    <h3>Malebranche : Nous avons tous la vérité en partage</h3>
+    <div class="citation">
+        « Il n'y a personne qui ne convienne que tous les hommes sont capables de connaître la vérité. [...] C'est pourquoi ils le définissent animal raisonnable. »
+        <span class="auteur">— Nicolas Malebranche</span>
+    </div>
+    <p>Malebranche défend l'idée d'une Raison universelle qui nous éclaire tous. Il prend l'exemple des Chinois : si la raison que nous consultons n'était pas la même, nous ne pourrions pas être assurés de la vérité. La vérité ne dépend pas des cultures.</p>
+
+    <h3>William James : Le vrai se vérifie (Pragmatisme)</h3>
+    <div class="citation">
+        « Le vrai est une idée qui fonctionne, qui a une valeur pratique dans l'expérience. »
+        <span class="auteur">— William James</span>
+    </div>
+    <p>James critique la définition classique de la vérité comme "copie" de la réalité. Pour lui, une idée vraie est une idée qui <strong>fonctionne</strong>, qui a une valeur pratique dans l'expérience. La vérité est un processus dynamique, un événement qui se produit, et non une propriété statique et immuable.</p>
+
+    <a href="index.html" class="btn-retour">← Retour au sommaire</a>
+</div>
+
+</body>
+</html>
