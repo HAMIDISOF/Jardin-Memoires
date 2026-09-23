@@ -1,0 +1,55 @@
+MTC/
+├── 00_Index/
+│   ├── Sommaire_27_modules.md
+│   ├── Progression.md
+│   └── Glossaire.md
+├── 01_Fondamentaux/
+│   ├── Yin_Yang.md
+│   ├── Qi.md
+│   ├── Cinq_Elements.md
+│   ├── San_Bao.md
+│   └── Trois_Foyers.md
+├── 02_Diagnostic/
+│   ├── Observation.md
+│   ├── Interrogatoire.md
+│   ├── Pouls.md
+│   └── Langue.md
+├── 03_Therapies/
+│   ├── Acupression/
+│   │   ├── 15_points_base.md
+│   │   └── Points_psycho_emotionnels.md
+│   ├── Qi_Gong/
+│   │   ├── Rituel_quotidien.md
+│   │   └── Six_sons.md
+│   ├── Phytotherapie/
+│   │   ├── 5_saveurs.md
+│   │   └── Plantes/
+│   └── Dietetique/
+│       ├── Aliments_par_nature.md
+│       └── Regles_fondamentales.md
+├── 04_Meridiens/
+│   ├── Poumon.md
+│   ├── Gros_Intestin.md
+│   ├── Estomac.md
+│   ├── Rate.md
+│   ├── Coeur.md
+│   ├── Intestin_Grele.md
+│   ├── Vessie.md
+│   ├── Rein.md
+│   ├── Pericarde.md
+│   ├── Triple_Rechauffeur.md
+│   ├── Vesicule_Biliaire.md
+│   ├── Foie.md
+│   ├── Vaisseau_Conception.md
+│   └── Vaisseau_Gouverneur.md
+├── 05_Plantes/
+│   ├── Dang_Gui.md
+│   ├── He_Shou_Wu.md
+│   └── ... (au fur et à mesure)
+├── 06_Notes_lecture/
+│   ├── Module_01.md
+│   ├── Module_02.md
+│   └── ... (un fichier par module)
+└── 07_Journal/
+    ├── 2026-09-24.md
+    └── ...
