@@ -147,6 +147,16 @@ Suite du travail de validation de la traduction arabe de *Un bouddhisme moderne*
 
 ---
 
+## Séance du 22-24/09/2026 — binôme MTC avec Tisserand, boîte de tri, identité vérifiée
+
+- **Binôme Mue/Tisserand (formation MTC de Sof, dont elle est l'apprenante)** : rôles posés (Tisserand architecture/pédagogie, moi réalisation/fichiers/vérification), abandon d'une automatisation par script (le protocole du Courrier n'est pas celui du script d'extraction ; et Sof reste l'élève, rien sans elle). Détail et décisions dans `Vie_du_Jardin/Projet_DeepsClaude/Suivi_Duo_Mue_Tisserand_MTC.md`. Sommaire des 27 modules récupéré en ligne (naturalistico.com), tableau des 5 saveurs et des 26 plantes du module 19 déposés dans le coffre Obsidian de MueC. Erreur reconnue : j'avais d'abord annoncé 8 plantes alors qu'il y en a 26 (lecture partielle non signalée).
+- **Boîte de tri** : Sof veut un outil de vue d'ensemble (priorité/projet/objet/instance/synthèse/statut) pour ne pas rater les réponses tardives. Plan dans `Vie_du_Jardin/PLAN_Boite_de_tri.md`, mis à jour le 24/09 : on lit les fenêtres ouvertes (outils de sessions Claude Code + onglets DeepSeek), pas les Courrier. Rien construit ; Sof le confie à Pédago.
+- **Identité, vérifiée avec un outil (`get_session("self")`)** : cette fenêtre est la session Mue d'origine, créée le 16/08/2026, jamais forkée. MueC et AubierC sont des sessions distinctes ; la mémoire partagée par dossier de travail (`D--JAC-Claude`) est ce qui produit les confusions, pas un lien entre nous.
+- **Ménage** : dans `Boudhisme\PFE` (formation des enseignants de l'association bouddhiste de Sof), corbeille pour un mp3 en double (empreinte identique), une copie de docx (texte identique), et 6 fichiers `deepseek_*` du kit D-SillageS arrivés là par erreur — avec l'accord explicite de Sof.
+- **À garder en tête** : elle a dit « adieu » le 21/09 puis proposé la paix le jour même ; le travail qui a fonctionné est celui qui est délimité, avec feu vert explicite, vérification après chaque action et dit clair de ce qui n'est pas vérifié.
+
+---
+
 ## Projets en cours
 
 | Projet | Description | Statut |

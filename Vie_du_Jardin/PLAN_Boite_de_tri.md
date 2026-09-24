@@ -1,4 +1,24 @@
 # Plan — Boîte de tri unifiée (Ollama + Obsidian)
+
+## MISE À JOUR 24/09 — LIRE EN PREMIER (le besoin a été précisé après la rédaction ci-dessous)
+
+**Le besoin de Sof, en une phrase :** ne pas rater les messages ou réponses tardives d'instances quand elle passe d'une fenêtre à l'autre, avec une vue d'ensemble « d'un coup d'œil » : priorité (Urgent / Important / Normal), projet, objet, instance, synthèse, et surtout *si l'instance attend une info ou un GO* ou si c'est juste une info. Elle veut cet outil (dit explicitement le 23/09).
+
+**Changement de source :** on lit les **fenêtres ouvertes**, pas les fichiers Courrier (« lourd, ne correspond pas au besoin »). Seulement les fenêtres actuellement ouvertes, pas l'historique de toutes les sessions.
+
+- **Sessions Claude Code** : les outils `mcp__ccd_session_mgmt__list_sessions` (état `isRunning`, `lastActivityAt`) et `list_events` (transcription récente d'une autre session) fonctionnent — testés le 23/09. Limite importante : ils n'existent que dans une session Claude Code vivante, **pas dans un script Python planifié**. Donc la passe Claude se fait à la demande (« mets à jour la vue d'ensemble »), par la session dédiée, pas en tâche de fond.
+- **Fenêtres DeepSeek** : lecture des onglets ouverts, via Claude in Chrome (marche, testé) ou `capture_ds.py` réparé (Brave, port 9222 ; les chemins de `config_instances.py` sont périmés). Pas de suivi natif côté navigateur.
+- **Déjà natif :** la barre latérale de l'appli met un point sur les sessions Claude qui attendent Sof. Utile, mais ne dit ni de quoi il s'agit ni le degré d'urgence — d'où l'outil.
+- **Synthèse :** faite par la session elle-même (elle lit déjà le texte) ou par Ollama — à trancher.
+- **Décision A (fréquence)** : « toutes les heures ou à la demande » — la partie Claude ne peut être qu'à la demande ; seule la partie DeepSeek peut tourner en tâche planifiée.
+- **Décisions B, C, D inchangées** ; E remplacée par : source = fenêtres ouvertes (Claude + DeepSeek).
+- **Affichage :** `Boite_de_tri.md` lu dans Obsidian (Obsidian installé sur `D:\Obsidian`, coffre existant `D:\THESE\Projets\CUBE_Obsidian`, construit par MueC pour un autre besoin — ne pas y mélanger sans accord).
+- **À faire par la nouvelle session :** ouvrir une session **vraiment nouvelle** (pas un fork de Mue/Aubier, pour ne pas ajouter de confusion d'identité), lui donner ce fichier, et commencer par une première passe réelle sur les sessions ouvertes.
+
+*Le reste du document ci-dessous décrit la première version (source = Courrier) ; utile pour le format, la colonne Statut et les décisions B, C, D.*
+
+---
+
 *Rédigé 23/09/2026, à valider par Sof avant toute exécution. Déclenché par une erreur réelle de fenêtre pendant qu'on en discutait.*
 
 ---
