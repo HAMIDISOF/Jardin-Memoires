@@ -25,3 +25,13 @@ aider --model ollama_chat/deepseek-coder-v2:16b --message "Ajoute une ligne disa
 
 
 *(2026-09-19 — aucune délégation à Aider pour la fiche BAC 01/02 de Naema : tâche de jugement pédagogique + vérification SymPy, faite directement par Pédago.)*
+
+## 2026-09-24 — Collecteur de la boîte de tri, écrit par Scribe (instance DeepSeek)
+
+**Instruction transmise :** cahier des charges complet (lecture des .jsonl de sessions, état « attend Sof », ligne de balisage de priorité, Ollama en secours, sortie en liste à cocher, options --dry-run / --no-ollama / --once / --selftest), envoyé par Pédago directement dans la conversation « Scribe_suivi activité ia » de DeepSeek. Texte du brief : `D:\SOUTIENSPLUS\OUTILS\BoiteDeTri\Brief_pour_Scribe.md`.
+**Livrable reçu :** `collecteur_boite_tri.py` (~19 000 caractères), `config.json`, README (à récupérer). Enregistrés tels quels dans `D:\SOUTIENSPLUS\OUTILS\BoiteDeTri\` (copie via le presse-papiers, aucune retouche).
+**Résultat :** en cours de vérification (compilation, --selftest, --dry-run en lecture seule). Aucune tâche planifiée enregistrée.
+
+**Résultat vérifié (Pédago, 24/09/2026 23h30) :** ✅ le code de Scribe compile, passe `--selftest` (après correction d'un bug), et `--dry-run` sur les vraies sessions liste 9 sessions avec l'état correct (rien écrit sur le disque). Le cycle d'écriture (création triée par priorité, absence de doublon, ligne cochée déplacée vers le fichier des traitées, jamais recréée) a été testé dans un dossier temporaire avec de fausses sessions : OK.
+**Corrections faites par Pédago (3 lignes) :** (1) « GO » devenait « Go » à la lecture de la balise ; (2) les heures affichées étaient en UTC, converties en heure locale ; (3) la synthèse d'un message balisé contenait la ligne de balisage elle-même, et « Objet » répétait le nom de l'instance.
+**Points fragiles signalés honnêtement par Scribe et confirmés :** regroupement par titre (spéculatif, deux sessions de même titre fusionneraient), format des champs, Ollama ≥ 0.5 requis pour le schéma JSON, selftest limité au parsing. **Reste à faire :** choisir le modèle Ollama (la config par défaut indique `llama3.2`, non installé ici), enregistrer la tâche planifiée seulement après validation de Sof.

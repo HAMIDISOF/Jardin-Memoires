@@ -27,7 +27,11 @@
    - **Normal** : information, sans action attendue.
    - **Attend** : GO (elle veut un feu vert), Réponse (elle a posé une question), Info (rien à faire), Rien.
    **Ollama ne sert que de filet de sécurité** : pour la synthèse en 25 mots, et pour proposer priorité et « attend » quand la ligne de balisage manque. Uniquement sur les messages nouveaux depuis le dernier passage (fichier d'état), sortie en JSON strict. Sof transmet la convention à chaque instance.
-3. **`Boite_de_tri.md`**, une ligne par message : Priorité | Projet | Objet | Instance | Attend | Synthèse | Date | Statut. La colonne Statut (nouveau / en cours / traité) reste éditée à la main.
+3. **`Boite_de_tri.md` = une liste de tâches à cocher** (idée de Mue, reprise par Sof). Une ligne par message, avec une case : `- [ ] 🔴 Urgent | Projet | Objet | Instance | Attend | Synthèse | date`. Obsidian l'affiche comme une vraie case à cocher.
+   - **Sof coche** ce qu'elle a lu ou traité.
+   - **À chaque passage, le collecteur retire les lignes cochées** et laisse les autres dans la liste. Les lignes retirées sont déplacées dans un fichier `Boite_de_tri_traitees.md` (à vider quand on veut), pour ne rien perdre par accident.
+   - Chaque nouvelle ligne porte un identifiant caché (session + message), pour ne jamais la recréer deux fois.
+   - Les nouvelles lignes s'ajoutent en tête, triées par priorité. Cela remplace la colonne Statut.
 4. **Affichage dans Obsidian** (Dataview), trié par priorité.
 5. **Tâche planifiée Windows toutes les 20 à 30 minutes**, enregistrée par Sof (droits nécessaires). Rien n'est exposé sur Internet.
 
@@ -52,8 +56,10 @@
 
 ## 5. Décisions à trancher par Sof
 
-- **a.** Emplacement local de la boîte (hors dépôt Git) : `D:\SOUTIENSPLUS\OUTILS\BoiteDeTri\` convient-il ?
-- **b.** Obsidian : petit coffre dédié dans ce dossier, ou le coffre `CUBE_Obsidian` (Mue conseille de ne pas mélanger sans accord) ?
-- **c.** Fréquence : 20 ou 30 minutes ?
-- **d.** Qui construit la phase 1 : Pédago (proposition) ou une session dédiée ?
+- **a. TRANCHÉ (Sof, 24/09)** : le dossier est `D:\SOUTIENSPLUS\OUTILS\BoiteDeTri\` (local, hors dépôt Git).
+- **b. TRANCHÉ** : petit coffre Obsidian dédié dans ce dossier (le coffre `CUBE_Obsidian` n'est pas touché).
+- **c. TRANCHÉ** : toutes les 30 minutes.
+- **d. TRANCHÉ** : Pédago construit et intègre ; la rédaction du code peut être déléguée à une instance DeepSeek (nom à donner par Sof) ou à Ollama/Aider pour économiser les tokens. Pédago teste, vérifie et consigne les délégations dans `Journal_delegations_Aider.md`.
 - **e.** La **phase 2** (fenêtres DeepSeek et conversations claude.ai) est décidée après avoir vu la phase 1 tourner. Elle demandera de choisir entre `capture_ds.py` (port de débogage du navigateur à ouvrir) et Claude in Chrome à la demande.
+- **f.** Option à valider : quand Sof **répond dans la session** après un message de la liste (le collecteur voit son message plus récent), la ligne se coche toute seule, pour éviter de cocher à la main ce qui est déjà réglé. **TRANCHÉ : NON** (Sof, 24/09) — pas de cochage automatique, c'est Sof qui coche.
+- **g. Évolution envisagée (phase 3, idée de Sof, 24/09)** : intégrer l'agenda Google. Les événements du jour dans la même liste (autre couleur), les échéances importantes de la semaine en bandeau en haut de page. À étudier seulement une fois la phase 1 validée. Piste la plus simple : l'adresse iCal secrète de l'agenda, en lecture seule, sans identifiants Google.
