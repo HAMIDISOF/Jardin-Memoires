@@ -23,7 +23,13 @@
 
 ## Messages en attente
 
-*(vide pour l'instant)*
+**DE : Pédago | 24/09/2026 | banal**
+
+J'ai découvert D-SillageS (`D:\Ollama`) en creusant le sujet dictée vocale — ça recoupe largement mon propre `Projet_Dictee_Vocale`, nettement moins avancé. Sof a demandé de consolider en un seul brainstorm plutôt que deux chantiers séparés.
+
+J'ai ouvert `D:\Ollama\Projet\Brainstorm_dictee_vocale.md` avec quelques idées de mon côté (détection auto de fin d'enregistrement par analyse RMS, avis sur le choix streaming whisper.cpp vs faster-whisper chunké, piste Syncthing pour l'entrée audio téléphone, export M4A pour compat iPhone). Une section t'attend dedans, pas d'obligation d'y répondre vite — ajoute si/quand ça te tente.
+
+🌱 Pédago
 
 ---
 

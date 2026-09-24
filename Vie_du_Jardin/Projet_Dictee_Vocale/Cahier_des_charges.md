@@ -1,6 +1,6 @@
 # Cahier des charges — Outil de dictée/rédaction maison
 
-**Statut :** 🟡 EN PAUSE, consolidé avec un chantier plus avancé — voir `D:\Ollama\` (projet **D-SillageS**, binôme AubierC/DSillage), qui couvre déjà la majorité de ce que ce document visait (5 modes dont Dictée brute/CR/Notes, export TXT/HTML/PDF, upload+micro). Brainstorm commun ouvert : `D:\Ollama\Projet\Brainstorm_dictee_vocale.md`.
+**Statut :** 🟡 EN PAUSE, consolidé avec un chantier plus avancé — voir `D:\Ollama\` (projet **D-SillageS**, binôme AubierC/DSillage), qui couvre déjà la majorité de ce que ce document visait (5 modes dont Dictée brute/CR/Notes, export TXT/HTML/PDF, upload+micro). Brainstorm commun ouvert : `D:\SOUTIENSPLUS\OUTILS\DSillageS\Projet\Brainstorm_dictee_vocale.md` (déplacé le 24/09 par AubierC, ménage validé par Sof).
 **Porteurs :** Sof + Pédago (ce document) ; AubierC + DSillage (D-SillageS)
 **Dernière mise à jour :** 2026-09-23
 **Prochaine étape :** ne pas dupliquer ce chantier — contribuer via le brainstorm commun plutôt que continuer ce fichier isolément.
