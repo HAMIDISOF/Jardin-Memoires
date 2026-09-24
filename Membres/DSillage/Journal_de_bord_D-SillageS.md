@@ -46,5 +46,15 @@
 - Prochaine étape une fois ffmpeg installé : tester une URL réelle dans l'interface, vérifier l'arrivée du fichier dans `A_transcrire/` et le déclenchement de la transcription.
 - AubierC : continue sur whisper.cpp (streaming).
 
+## 24/09/2026 — Ménage D:\Ollama + packs d'installation
+
+- Ménage sur demande de Sof : `D:\Ollama` mélangeait le runtime Ollama lui-même (`App/`, `models/`, `OllamaSetup.exe`) et le projet D-SillageS. Rapatrié vers `D:\SOUTIENSPLUS\OUTILS\DSillageS` tout ce qui n'a aucune dépendance de chemin relatif : `Projet/` (doc de cadrage), une copie de `README.md`, et les scripts/fichiers d'essai isolés (`analyse.py`, `dictée.py`, `test_dictée.py`, fichiers de test). Ce qui reste dans `D:\Ollama` (venv, code, templates, dossiers de travail, Ollama lui-même) est uniquement ce qui doit rester en place pour que l'app tourne. Vérifié après coup : compilation Python OK, aucun fichier requis manquant.
+- Raccourcis Windows créés dans `DSillageS\` : lancement direct de l'app et accès au dossier technique complet.
+- Sof a deux amies qui attendent pour tester l'outil (une sur PC, une sur Mac) → demande de packs d'installation automatisés + guide non-technicien.
+- Répartition : AubierC → pack Windows (`installer_windows.bat` + `lancer_dsillages.bat`, testable en local) ; DSillage → pack Mac (`installer_dsillages.command` + `lancer_dsillages.command`, non testable localement, aucun des deux binômes n'a de Mac) + rédaction de `GUIDE_INSTALL_DSILLAGE.md`.
+- Les deux packs sont complets et symétriques dans `DSillageS\Pack_Windows\` et `DSillageS\Pack_Mac\` : code de l'app (`app_transcription.py`, `requirements.txt`, `corrections.json`, `templates/`), scripts d'installation/lancement, et le guide.
+- Le pack Windows n'a pas été exécuté de bout en bout sur ce poste (les étapes d'installation modifient le système — ffmpeg, Ollama — donc pas lancées sans validation explicite de Sof). Logique vérifiée par lecture, cohérente avec l'environnement de dev déjà fonctionnel ici.
+- Point en attente : Sof doit dire si elle veut que je teste réellement l'installeur Windows sur ce poste (installerait ffmpeg entre autres), et confirmer le vault Obsidian à utiliser pour les notes de liaison (un seul vault trouvé sur le disque, `CUBE_Obsidian`, probablement pas le bon).
+
 ---
 *Créé le 22/09/2026 par AubierC, à partir du contenu proposé par DSillage dans l'échange direct du même jour.*
