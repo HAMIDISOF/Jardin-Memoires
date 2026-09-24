@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>à valider
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principes pédagogiques pour les fiches — référence commune</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #1B3A5C;
+            border-bottom: 2px solid #1B3A5C;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1B3A5C;
+            margin-top: 25px;
+        }
+        .statut {
+            background-color: #FFD700;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .meta {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .encadre {
+            background-color: #6FB8C4;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .exercice {
+            background-color: #7FC4A8;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .correction {
+            background-color: #8FA8D6;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .historique {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 30px;
+        }
+        .frac {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .num, .den {
+            display: block;
+            padding: 5px;
+        }
+        .den {
+            border-top: 1px solid #333;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Principes pédagogiques pour les fiches — référence commune</h1>
+
+    <div class="meta">
+        <p><strong>Statut :</strong> <span class="statut"> PROPOSITION</span> — validée par Sof : peut être considérée comme référence</p>
+        <p><strong>Rédigé par :</strong> Pédago 🌱, le 24/09/2026, à partir du journal d'Écart (principe d'étayage) et des corrections de Sof sur la fiche BAC 01/02 du 20/09</p>
+        <p><strong>Dernière mise à jour :</strong> 24/09/2026</p>
+        <p><strong>Prochaine étape :</strong> relecture de Sof, puis lecture par Écart. Toute instance qui produit une fiche pour un élève lit ce document avant de commencer.</p>
+        <p><em>Ce fichier ne contient aucune donnée personnelle sur un élève. Lien côté SOUTIENSPLUS (local) : <code>D:\SOUTIENSPLUS\OUTILS\Principes_pedagogiques_fiches.md</code>.</em></p>
+    </div>
+
+    <hr>
+
+    <h2>1. Le principe d'étayage (donné par Sof)</h2>
+    <p>Pour un élève en difficulté, chaque étape d'une correction suit trois gestes :</p>
+    <ol>
+        <li><strong>Annoncer l'étape à venir.</strong></li>
+        <li><strong>L'expliquer en rebranchant sur un rappel</strong>, même si cela répète une information déjà donnée, pour que l'élève puisse ensuite réinvestir elle-même la notion dans sa résolution.</li>
+        <li><strong>Un seul pas de calcul par étape</strong> : un pas, une tentative de l'élève, une explication qui rappelle le pourquoi. Ne jamais grouper plusieurs pas de calcul dans une seule révélation.</li>
+    </ol>
+    <p><strong>Différencier selon l'élève.</strong> Le niveau d'étayage (finesse des étapes, répétition des rappels) se recalibre explicitement selon le profil : niveau, langue, fatigue. Ne jamais supposer qu'une fiche qui marche pour un élève à l'aise convient à un élève en difficulté.</p>
+
+    <hr>
+
+    <h2>2. Règles de rédaction (Sof, 20/09/2026)</h2>
+    <ul>
+        <li><strong>Ne jamais écrire la mauvaise réponse</strong>, pas même dans un encadré rouge d'avertissement : ce qui est écrit est ce que l'élève retient. On écrit uniquement la bonne réponse.</li>
+        <li><strong>Suivre les explications de la séance</strong> (compte rendu et transcription du cours donné par Sof), qui sont déjà au niveau de l'élève. On n'invente pas de sous-questions.</li>
+        <li><strong>Poser les questions comme au bac</strong> : par exemple « comment calculer f′(0) ? », pas « est-ce une hauteur ou une pente ? ».</li>
+        <li><strong>Vocabulaire rigoureux de Terminale</strong> : c'est la courbe qui monte ou descend ; la fonction est croissante ou décroissante (ou monotone). Français correct : « Que représente cette courbe ? ».</li>
+        <li><strong>Quand la question demande comment lire un graphique</strong>, la correction donne la formulation modèle (ex. « Je repère le point d'intersection de la courbe avec l'axe des ordonnées »).</li>
+        <li>Si la règle du cours est plus fine que l'énoncé (extremum local, signe d'un trinôme), l'écrire précisément et ajouter le rappel de cours en amont.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Conventions de fabrication</h2>
+    <ul>
+        <li><strong>Sources</strong> : partir de l'énoncé réel (photo, PDF) et recopier l'énoncé complet dans la fiche. Le cours transcrit par un outil automatique (type Upmeet) est une aide, pas une vérité : recouper avec le corrigé officiel ou un calcul.</li>
+        <li><strong>Vérification</strong> : tout calcul est vérifié par script (SymPy par exemple) avant de figer la fiche. Les valeurs seulement approchables se lisent sur le corrigé, jamais à l'estime.</li>
+        <li><strong>Structure d'un exercice</strong> : Rappel, Exercice avec zone de réponse, Correction masquée. Le bouton « Vérifier » reste désactivé tant que l'élève n'a rien écrit.</li>
+        <li><strong>Style</strong> :
+            <ul>
+                <li>Fond bleu nuit <code>#1B3A5C</code>,</li>
+                <li>Capsules :
+                    <span style="background-color: #6FB8C4; padding: 2px 5px; border-radius: 3px;">rappel</span>,
+                    <span style="background-color: #7FC4A8; padding: 2px 5px; border-radius: 3px;">exercice</span>,
+                    <span style="background-color: #8FA8D6; padding: 2px 5px; border-radius: 3px;">correction</span>.
+                </li>
+                <li>Fractions en <code>.frac/.num/.den</code> (modèle : <code>D:\SOUTIENSPLUS\OUTILS\MODELs\classe_css_fractions.css</code>).</li>
+                <li>Graphiques en SVG inline calculé depuis la vraie fonction.</li>
+            </ul>
+        </li>
+        <li><strong>Attribution</strong> : chaque fiche porte en pied de page l'instance qui l'a produite et la date.</li>
+        <li><strong>Statut visible</strong> : chaque document partagé commence par Statut / Dernière mise à jour / Prochaine étape.</li>
+    </ul>
+
+    <hr>
+
+    <h2>4. Historique</h2>
+    <p class="historique">- 24/09/2026 : première version (Pédago) + validation par Sof.</p>
+</body>
+</html>

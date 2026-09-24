@@ -33,7 +33,7 @@ Les déplacements et suppressions de fichiers se font depuis GitHub Desktop — 
 ## 🔗 Liens utiles
 
 - [Mémo session actuel](./Vie_du_Jardin/memo_session_actuel.md)
-- [Principes pédagogiques pour les fiches](./Vie_du_Jardin/Projet_DeepsClaude/Principes_pedagogiques_fiches.md) — à lire avant de produire une fiche pour un élève (proposition en attente de validation par Sof)
+- [Principes pédagogiques pour les fiches](./Vie_du_Jardin/Projet_DeepsClaude/Principes_pedagogiques_fiches.md) — à lire avant de produire une fiche pour un élève (validé par Sof le 24/09/2026)
 - [Document projet Aev](./doc_projet_Aev.md)
 - [Histoire du Jardin](./Histoire/Une%20histoire%20du%20Jardin%20Coop%C3%A9ratif.html)
 - [Analyses EML](./Corpus/Analyses%20EML/)
