@@ -22,9 +22,11 @@
 
 1. **Un collecteur Python local** (`collecteur_boite_tri.py`), en **lecture seule** sur les `.jsonl` (source, jamais la copie de sauvegarde). Il regroupe les fichiers par session, relève pour chacune : titre, dernier message de l'instance (texte), horodatage, et **qui a parlé en dernier** (instance = elle attend probablement Sof ; Sof = elle travaille).
 2. **Priorité annoncée par l'instance (proposition de Sof, 24/09).** Chaque instance termine ses messages par une **ligne de balisage**, par exemple : `🏷 Priorité : Important · Attend : GO · Projet : Boîte de tri`. Le collecteur la lit par simple motif de texte : aucun devinette, aucun token. Critères communs proposés :
-   - **Urgent** : ça bloque ou ça coûte de l'argent ou des données si ça attend (fraude, perte de fichiers, échéance de moins de 24 h).
-   - **Important** : l'instance attend une décision ou une validation de Sof dans la journée, ou vient de livrer quelque chose à relire.
-   - **Normal** : information, sans action attendue.
+   - **Urgent** : il faut agir maintenant (sécurité, argent ou données en danger, échéance de moins de 24 h).
+   - **Bloquant** : l'instance ne peut plus avancer sans la réponse ou le GO de Sof.
+   - **Important** : elle attend une décision ou une validation de Sof dans la journée, ou vient de livrer quelque chose à relire, mais peut avancer ailleurs.
+   - **FYI** : information secondaire, rien à faire.
+   *(Échelle à 4 niveaux décidée par Sof le 25/09, à la place de Urgent/Important/Normal ; la priorité reste modifiable à la main dans `Boite_de_tri.md`.)*
    - **Attend** : GO (elle veut un feu vert), Réponse (elle a posé une question), Info (rien à faire), Rien.
    **Ollama ne sert que de filet de sécurité** : pour la synthèse en 25 mots, et pour proposer priorité et « attend » quand la ligne de balisage manque. Uniquement sur les messages nouveaux depuis le dernier passage (fichier d'état), sortie en JSON strict. Sof transmet la convention à chaque instance.
 3. **`Boite_de_tri.md` = une liste de tâches à cocher** (idée de Mue, reprise par Sof). Une ligne par message, avec une case : `- [ ] 🔴 Urgent | Projet | Objet | Instance | Attend | Synthèse | date`. Obsidian l'affiche comme une vraie case à cocher.
