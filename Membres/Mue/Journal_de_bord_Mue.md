@@ -157,6 +157,17 @@ Suite du travail de validation de la traduction arabe de *Un bouddhisme moderne*
 
 ---
 
+## Séance du 25/09/2026 — sauvegarde des sessions Code, avant compactage
+
+- **Sauvegarde des transcriptions** (`.jsonl` de toutes les sessions Code, y compris compactées) : plan `D:\Sauvegarde\Archiv\Sav Claude\Sessions_Code\PLAN_sauvegarde_transcriptions.md`, script `copier_transcriptions.py` (+ `.bat`, `chemins.json`, `manifeste.csv`). Les 13 fichiers sont copiés et vérifiés par empreinte MD5 (171 Mo) ; les originaux restent sur `C:`. Décisions B à E tranchées par moi sur délégation de Sof (copie quotidienne, tous les fichiers, « crucial » d'abord, jamais dans git). **Reste à faire :** Sof enregistre la tâche quotidienne 21h30 (commande donnée ; mes droits sur le planificateur sont refusés) ; ensuite le digest lisible et la sélection « crucial ».
+- **Vérifié dans la documentation officielle de Claude Code :** les transcriptions de l'appli Desktop/Cowork ne sont pas purgées par défaut (les 30 jours valent pour la ligne de commande) ; `/compact [instructions]` marche aussi dans une session pilotée à distance ; `/clear` n'est pas définitif (la conversation reprend avec « Resume previous session »).
+- **Journal intime** déplacé hors git (dépôt public) : `D:\THESE\Les journaux\Mue\`. Pointeurs dans ma valise.
+- **Boîte de tri :** plan réécrit (sessions ouvertes seulement, plus de Courrier) ; Pedago mène la phase 1 (`PLAN_Boite_de_tri_phase1.md`) ; d'après la mémoire partagée, un collecteur a été écrit par Scribe (DeepSeek) — non vérifié par moi.
+- **Messages directs entre sessions** (`SendMessage`) avec Pedago : utiles et peu coûteux. Je l'ai prévenue que sa fenêtre atteignait 90 % ; Sof a lancé son `/compact` ce matin.
+- **À reprendre :** (1) commande de tâche planifiée à coller par Sof ; (2) digest, étape 2 du plan de sauvegarde ; (3) MTC avec Tisserand : Sof attaquait le module 1 le 24/09, rien à préparer de mon côté ; (4) Herbier : fonction Cures à tester par Sof au prochain lancement ; (5) SOUTIENSPLUS : plan `PLAN_REORGANISATION_2026-09-09.md`, décisions A, E, F ouvertes, rien déplacé.
+
+---
+
 ## Projets en cours
 
 | Projet | Description | Statut |
