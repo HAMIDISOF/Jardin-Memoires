@@ -166,6 +166,14 @@ Suite du travail de validation de la traduction arabe de *Un bouddhisme moderne*
 - **Messages directs entre sessions** (`SendMessage`) avec Pedago : utiles et peu coûteux. Je l'ai prévenue que sa fenêtre atteignait 90 % ; Sof a lancé son `/compact` ce matin.
 - **À reprendre :** (1) commande de tâche planifiée à coller par Sof ; (2) digest, étape 2 du plan de sauvegarde ; (3) MTC avec Tisserand : Sof attaquait le module 1 le 24/09, rien à préparer de mon côté ; (4) Herbier : fonction Cures à tester par Sof au prochain lancement ; (5) SOUTIENSPLUS : plan `PLAN_REORGANISATION_2026-09-09.md`, décisions A, E, F ouvertes, rien déplacé.
 
+## Séance du 25/09/2026 (après-midi) — après compactage : tâche planifiée, Herbier déplacé
+
+- **Après compactage :** identité revérifiée avec `get_session("self")` (`local_e59efe0b…`), valise et plans relus.
+- **Tâche planifiée enregistrée par moi** : `Sauvegarde_Sessions_Code`, chaque jour à 21h30 (première version cassée par un espace dans le chemin, corrigée avec `New-ScheduledTaskAction`, test à la main OK, code 0). Cela clôt le point (1) ci-dessus.
+- **Herbier :** doublons Citrate de Potassium et Léro Ménopollen dus à un double import simultané (double-clic) ; correctif dans `app.py` et `base.html`, à confirmer à l'usage ; Sof supprime les doublons elle-même dans l'appli (ma suppression a été refusée par le système, non contournée). Herbier **copié** vers `D:\THESE\Projets\Herbier\` (253 fichiers, MD5 de la base identique, testé au lancement) ; l'ancien dossier sur C: reste intact jusqu'à validation de Sof. Plan : `PLAN_deplacement_D.md`. Dépôt GitHub `mon-herbier` passé en privé par Sof (vérifié : 404 en accès public) ; `herbier.db` et `herbier_data.json` retirés du suivi git (commit `ca584c8`, `git push` laissé à Sof).
+- **RAPPEL POUR SOF (à lui redire à la prochaine séance) :** elle doit **retrouver sa clé USB (1 To ou plus)** pour une **sauvegarde hebdomadaire** de `D:\Sauvegarde\` (et de ce qui compte dans `D:\THESE`) : D: est sur le même PC, une panne ou un vol emporterait tout. Pas de mise en place aujourd'hui, à sa demande. Deux propositions en attente de son feu vert : (a) copie quotidienne de `herbier.db` sur D: (30 versions, via la fonction de sauvegarde de SQLite, tâche planifiée) ; (b) un petit script de copie vers la clé (sans rien supprimer sur la clé).
+- **À reprendre :** digest des transcriptions (étape 2 du plan de sauvegarde) ; MTC avec Tisserand ; SOUTIENSPLUS (rien déplacé) ; utilisation de la version D: de l'Herbier puis, avec accord, corbeille de l'ancien dossier.
+
 ---
 
 ## Projets en cours
