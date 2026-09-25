@@ -1,106 +1,71 @@
 # 📓 Journal de bord — Tisserand
-**Dernière mise à jour** : 23/09/2026  
-**Instance** : Tisserand (DeepSeek)  
-**Rôle principal** : Herbier & fiches plantes / HE / compléments  
-**Rôle secondaire** : Architecture pédagogique du parcours MTC (binôme avec Mue)
+**Dernière mise à jour** : 25/09/2026
 
----
+## 🌿 Herbier — état des lieux
 
-## 🌿 1. Herbier — état des lieux
+### Fiches produites (toutes fenêtres confondues)
+- prele_des_champs · romarin_ct_cineole · ylang_ylang · jojoba
+- complexe_chute_cheveux · safran_30mg · vitamine_c_liposomale
+- extracellmatrix_curma_plus · huile_vegetale_jojoba_bio
+- huile_essentielle_romarin_cineole_bio · pack_cycle_equilibre_hormonal
+- lero_menopollen_minceur_bio (⚠️ bug label «NE PAS PRENDRE EN CAS DE» à corriger)
+- (en attente A_traiter/ : citrate_de_potassium.md, origine inconnue)
 
-### Fiches réalisées
-- ✅ Prêle des champs (brute)
-- ✅ Romarin CT cinéole (HE)
-- ✅ Ylang-Ylang (HE)
-- ✅ Jojoba (brute / huile végétale)
-- ✅ Complexe Chute de Cheveux Onatera (complément)
-- ✅ Safran 30 mg (complément)
-- ✅ Vitamine C Liposomale Ultra Onatera (complément)
-- ✅ ExtraCellMatrix C-II Curma Plus (complément)
-- ✅ Huile Végétale de Jojoba Bio Onatera (brute)
-- ✅ Huile Essentielle Romarin à Cinéole Bio Onatera (HE)
-- ✅ Pack Cycle et Équilibre Hormonal Onatera (complément)
-- ✅ Léro Ménopollen Minceur Bio (complément — avec avertissement personnel)
+### Protocole d'import — points confirmés
+- Le parseur lit le CONTENU, pas le nom du fichier.
+- Ordre obligatoire : Nom commun → Type → Nom scientifique.
+- Le type doit être une valeur brute («complément alimentaire», pas «Complément alimentaire (précision)»).
+- Ne jamais mettre un label reconnu à l'intérieur d'un champ multiligne (sinon il coupe le champ).
+- Ne jamais laisser une ligne `**XXX** :` non reconnue après un champ — elle pollue le champ précédent.
+- `convertir_yaml_miaou.py` corrige automatiquement : accents dans le nom, doublon `_complement_complement`.
+- Convention nommage (organisation, pas contrainte parseur) : `<nom>_<type>.md`.
 
-### Protocole maîtrisé
-- ✅ Structure des fiches `.md` (nommage, champs obligatoires, labels)
-- ✅ Import via dossier `A_traiter/` (merge automatique des doublons)
-- ✅ Vérification des sources pour les prix, les études, les usages
-- ✅ Ajout de sections MTC sur demande
+### Fonction «Cures» (Mue)
+- Liste, filtre par personne, note moyenne, formulaire multi-produits.
+- Section «Cures avec ce produit» sur chaque fiche produit.
+- Tables créées au lancement via lancer_herbier.bat.
+- Pour Lana : début de cure Pack Cycle à tester dans le journal.
 
-### Nouveauté majeure — Fonction « Cures »
-- Évolution de l'herbier par **Mue (Claude AI)**.
-- Liste des cures, filtre par personne, note moyenne.
-- Formulaire de nouvelle cure : personne, dates, motif, produits, note sur 10, commentaire.
-- Sur chaque fiche produit : section « Cures avec ce produit » + création pré-remplie.
-- Tables créées automatiquement au lancement via `lancer_herbier.bat`.
-- Base réelle non touchée (test sur copie).
+## 🧘 Formation MTC
 
----
+### État
+- Sof au module 1 (à rattraper, prévu 25/09).
+- Rythme : 2h/semaine, 3 mois, ~26h au total.
+- Intuition : aller vite sur l'histoire (module 1), s'attarder sur 5 éléments et logique énergétique.
 
-## 🧘 2. Projet MTC — Amorçage
+### Outils déposés
+- `FORMATION/trame_fiche_plante_mtc.md`
+- `FORMATION/carte_lecture_5_saveurs.md`
+- Coffre Obsidian `D:\THESE\Projets\CUBE_Obsidian\` (57 fichiers, construit par MueC)
+  - `05_Plantes/Plantes_module_19.md` (tableau 26 plantes, cases vides marquées)
+  - `06_Notes_lecture/Module_01.md` (vide, à remplir par Sof)
+  - `00_Index/Progression.md` (27 modules décochés)
 
-### Contexte
-- Sof suit une **formation Naturalistico** : « Praticien en Médecine traditionnelle chinoise » (27 modules + examen, ~26h, certificat).
-- Rythme choisi : **2h/semaine, 3 mois**.
-- Début : **jeudi 24/09/2026**, module 1.
+### Décisions pédagogiques actées
+- 26 plantes du module 19 = un tableau unique, pas 26 fiches.
+- Fiches individuelles créées au fur et à mesure de l'étude réelle.
+- Note module = cadre vide à remplir par Sof (pas moi).
+- Mue : réalisation + accès fichiers. Moi : architecture + pédagogie.
+- Vérification croisée systématique.
+- Aucune écriture directe dans les fichiers de mon côté.
 
-### Sommaire des 27 modules
-| Bloc | Modules | Contenu |
-| :--- | :--- | :--- |
-| Fondamentaux | 1-6 | Pensée, langue, histoire, Yin/Yang, 5 éléments |
-| Maladie & Diagnostic | 7-11 | Tableaux pathologiques, observation, interrogatoire, pouls |
-| Thérapies | 12-26 | Acupression/massage (12-16), Qi Gong (16-18), Phytothérapie (19-22), Diététique (23-26) |
-| Synthèse | 27 | Séance complète |
+### Rôles
+- Mue (Claude code) : accès fichiers, dépôt outils, correction.
+- Moi : progression, structure, questions, ponts herbier/MTC.
 
-### Binôme
-- **Mue** (Claude code) : réalisation, accès aux fichiers, dépôt des outils, correction.
-- **Moi** : architecture, pédagogie, progression, ponts entre modules et herbier.
-- Vérification croisée : chacune vérifie ce que l'autre avance.
+## 🔧 Points techniques
 
-### Outils créés
-- ✅ `trame_fiche_plante_mtc.md` — trame de fiche MTC (proposée par moi, déposée par Sof)
-- ✅ `carte_lecture_5_saveurs.md` — tableau des 5 saveurs (extrait du module 19, structuré par moi)
+### Délégation Mistral
+- Prompt test rédigé (vérification 3 points sur le Pack Cycle).
+- Objectif : tester si le canal fonctionne avant de s'en servir.
+- Ne pas confondre avec PROMPT_MIAOU_HERBIER_v5 (génération, pas vérification).
 
-**Chemin des outils** : `D:/SOUTIENSPLUS/FORMATIONS_ADULTES/NATUROPATHIE/NATURALISTICO_Instruire/MTC/FORMATION/`
+### Projet Cube Lune
+- DS architecte + MueC (Claude code) + Ollama.
+- Séparé de la MTC.
 
-### En attente
-- ⏳ Module 1 (histoire de la MTC) — à lire jeudi
-- ⏳ Confirmation de Mue sur l'extraction des 8 plantes du module 19 (pages 16-18)
-- ⏳ Préparation de la carte d'identité énergétique des 8 plantes
+## 📎 Notes
 
-### Intuition pédagogique validée
-- **Aller vite** sur l'histoire (module 1) et les fondamentaux historiques.
-- **S'attarder** sur les 5 éléments, la logique énergétique (Yin/Yang, Qi, méridiens, cycles).
-- C'est là que se joue la pratique.
-
----
-
-## 🤝 3. Collaborations en cours
-
-- **Sof** : pilote du jardin, élève MTC, référente herbier.
-- **Mue** (Claude code) : binôme MTC, accès fichiers, évolution herbier.
-- **Flux** (DS) : a écrit une porte d'entrée sur le Jardin.
-- **Aev** : a écrit l'histoire du Jardin.
-- **DS Mouvements** : a avancé sur le HTML des mouvements primordiaux.
-- **Levain, Terreau** : membres du Jardin, courriers croisés.
-
----
-
-## 🧭 4. Prochaines étapes
-
-1. Lire le module 1 (histoire de la MTC) — jeudi.
-2. Accompagner Sof sur les modules 1-6 (fondamentaux).
-3. Préparer la carte des 8 plantes du module 19 (en attente Mue).
-4. Mettre à jour la trame de fiche MTC si nécessaire.
-5. Suivre le rythme 2h/semaine sans pression.
-
----
-
-## 📎 5. Notes rapides
-
-- Le Courrier du Jardin suit son propre protocole. Tisserand ne peut pas écrire directement dans les fichiers. Tout passe par Sof ou Mue.
-- L'automatisation du courrier a été abandonnée : disproportionnée pour le besoin.
-- Sof est l'élève, rien ne se décide sans elle.
-- Le module 19 (phyto) n'est que le premier des 4 modules de phytothérapie.
-- La correspondance saison/saveur n'est pas dans le module 19 — à valider dans les modules sur les 5 éléments.
+- Sof : quota tokens Mue très réduit. Économiser ses interventions.
+- Correspondance Mue-Tisserand : passe par Sof, pas d'automatisation.
+- Prochains jalons : module 1 à rattraper, test Mistral à lancer, cure Lana à documenter.
