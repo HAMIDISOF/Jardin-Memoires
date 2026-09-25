@@ -62,7 +62,7 @@
 - Tests (dossier temporaire, commande exacte de l'app) : 3 URL, toutes OK (code 0, AAC lisible par PyAV, durées exactes) — vidéo réunion de 88 min, vidéo YouTube de 12 min, post Reddit intégrant une vidéo YouTube de 3 min. Limite : aucun test sur une vraie source non-YouTube (le post Reddit renvoie vers YouTube).
 - Avis DSillage : validé sur le fond ; risques connus = sources non-YouTube (SoundCloud, HLS) pouvant réclamer ffmpeg, et durée parfois mal lue par des lecteurs externes sur m4a non fixé (sans effet sur la transcription).
 - Appliqué (Sof : go) : `--fixup never` dans `telecharger_audio()` (`app_transcription.py`, instantané `_v4.py` pris avant), ffmpeg retiré des installeurs Windows et Mac, README corrigé (« aucun ffmpeg système requis »), guide : section ffmpeg remplacée par « source autre que YouTube → contacter Sof ». Packs resynchronisés.
-- Point ouvert : le guide dit que l'installateur gère Node.js, mais seul l'installateur Mac l'installe ; de plus yt-dlp n'active par défaut que deno comme runtime JS (avertissement vu, téléchargements OK sans). À trancher : retirer la mention Node.js ou l'installer et passer `--js-runtimes node`.
+- Node.js : le guide dit que l'installateur gère Node.js, mais seul l'installateur Mac l'installe ; yt-dlp n'active par défaut que deno comme runtime JS (avertissement vu, téléchargements OK sans). Décision de Sof (25/09) : ne rien changer tant qu'aucun téléchargement n'échoue. Si un échec YouTube apparaît, rouvrir : installer Node côté Windows + `--js-runtimes node`, ou corriger la mention du guide.
 
 ---
 *Créé le 22/09/2026 par AubierC, à partir du contenu proposé par DSillage dans l'échange direct du même jour.*
