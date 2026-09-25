@@ -71,6 +71,10 @@
 - Packs resynchronisés avec cache Whisper **relatif** (`hf_cache` dans le dossier) : l'ancien pack contenait `D:\Whisper\hf_cache` en dur, inutilisable chez les amies. Conséquence à documenter : le modèle Whisper `medium` (~1,5 Go) se télécharge au premier usage, connexion Internet requise (le guide dit « se charge en mémoire, 1 à 2 min »).
 - Le serveur qui transcrivait `meeting_le_cunn.m4a` n'a pas été arrêté : il garde l'ancien code en mémoire. À relancer une seule fois après la fin de la transcription, puis re-test propre.
 
+- Réponse de DSillage (relayée par Sof) sur la non-promotion de v2Bis : aucun souvenir, aucune décision documentée → **oubli, pas un choix**. Elle valide le diagnostic, le cache Whisper relatif et `--fixup never`.
+- **Règle de vigilance (proposée par DSillage, adoptée)** : à chaque session, vérifier que la version courante est bien celle attendue (template et app cohérents) ; si une variante existe, soit la promouvoir, soit documenter pourquoi elle ne l'est pas.
+- Docs mises à jour par AubierC (DSillage n'a pas d'accès fichiers) : README (entrée URL, section téléchargement réécrite, arborescence/versions, note téléchargement du modèle Whisper) et guide d'installation (première transcription = téléchargement ~1,5 Go, Internet requis), copies packs incluses.
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
