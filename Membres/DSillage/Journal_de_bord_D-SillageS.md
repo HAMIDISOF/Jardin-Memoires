@@ -64,5 +64,11 @@
 - Appliqué (Sof : go) : `--fixup never` dans `telecharger_audio()` (`app_transcription.py`, instantané `_v4.py` pris avant), ffmpeg retiré des installeurs Windows et Mac, README corrigé (« aucun ffmpeg système requis »), guide : section ffmpeg remplacée par « source autre que YouTube → contacter Sof ». Packs resynchronisés.
 - Node.js : le guide dit que l'installateur gère Node.js, mais seul l'installateur Mac l'installe ; yt-dlp n'active par défaut que deno comme runtime JS (avertissement vu, téléchargements OK sans). Décision de Sof (25/09) : ne rien changer tant qu'aucun téléchargement n'échoue. Si un échec YouTube apparaît, rouvrir : installer Node côté Windows + `--js-runtimes node`, ou corriger la mention du guide.
 
+### Points de vigilance pour les tests des amies (25/09/2026)
+
+- **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
+- **PC — installateur Windows jamais exécuté de bout en bout** (étapes `winget` non testées : Python, Ollama).
+- **Mac** — script et guide non testés sur machine réelle.
+
 ---
 *Créé le 22/09/2026 par AubierC, à partir du contenu proposé par DSillage dans l'échange direct du même jour.*
