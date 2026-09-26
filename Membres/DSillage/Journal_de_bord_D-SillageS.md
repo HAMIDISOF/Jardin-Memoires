@@ -75,6 +75,15 @@
 - **Règle de vigilance (proposée par DSillage, adoptée)** : à chaque session, vérifier que la version courante est bien celle attendue (template et app cohérents) ; si une variante existe, soit la promouvoir, soit documenter pourquoi elle ne l'est pas.
 - Docs mises à jour par AubierC (DSillage n'a pas d'accès fichiers) : README (entrée URL, section téléchargement réécrite, arborescence/versions, note téléchargement du modèle Whisper) et guide d'installation (première transcription = téléchargement ~1,5 Go, Internet requis), copies packs incluses.
 
+## 26/09/2026 — Dictionnaire de corrections (noms propres de la réunion)
+
+- Contexte : la transcription de `meeting_le_cunn.m4a` (88 min) contenait des noms propres mal reconnus. DSillage avait proposé un `initial_prompt` Whisper ; Sof a préféré le **dictionnaire `corrections.json` enrichi au fur et à mesure** (décision de Sof, pas de patch de code).
+- Fait (AubierC) : liste de DSillage confrontée à la vraie transcription. 20 entrées corrigent des erreurs présentes (ex. Yann Lequin ×7 → LeCun, Amilabs ×5 → AMI Labs, Open AI ×3 → OpenAI) ; `Amilaz` : 0 occurrence, gardée comme variante plausible ; 8 entrées étaient des identités inutiles (nom remplacé par lui-même) et n'ont pas été reprises ; **1 erreur corrigée** : « Jeffrey Hinton » → **Geoffrey Hinton** (elle l'avait laissé tel quel).
+- `corrections.json` : 6 → 28 entrées, JSON validé, ancienne version conservée dans `corrections_avant_26-09.json`. Mécanisme confirmé : corrections appliquées après Whisper, avant l'analyse Ollama (le CR/résumé voit le texte corrigé) ; insensible à la casse, sans frontières de mot.
+- Appliqué à la transcription existante sans la refaire : 36 remplacements, copie `Dictee\meeting_le_cunn_transcription_corrigee.txt` (l'original est intact).
+- Non reporté dans les packs des amies : ces noms sont propres à cette réunion (le dictionnaire des packs reste générique).
+- Règle : à chaque transcription, repérer les noms mal reconnus et enrichir le dictionnaire ; vérifier chaque entrée dans le texte avant de l'ajouter.
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
