@@ -1,0 +1,9 @@
+- j'ai modifié cette ligne car on ne voyait pratiquement rien du texte... 
+ .explanation{background:#1e3a6e; border:1.5px solid #1ab5f8; border-radius:12px; padding:14px; margin:10px 0; color:#67bee7;}
+
+>> idée à ajouter ici :  une image svg par exmple =   des poupées russes emboitées (chacune est un ensemble : nom spécifié par une étiquette / couleurs comme celles déjà choisies avec le carré de la lettre)  avec quelques exemples de nombres :  appartenant à un petit ensemble et donc à tous ceux qui le contiennent implicitement; et le cas où il appartient au complément donc par exemple il est dans Q mais pas D donc dans R mais pas dans N ou Z non plus...
+
+
+- on peut aussi réfléchir à une animation qui donne par le visuel l'illustration de la problématique à l'origine du nouvel ensemble... 
+
+
