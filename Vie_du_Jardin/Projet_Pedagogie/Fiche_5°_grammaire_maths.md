@@ -6,3 +6,6 @@ Que le curseur se déplace dent par dent (case par case) en comptant à voix hau
 Soit qu'il y ait une étape de décomposition : "tu pars de -3, tu gagnes 5 → tu avances de 5 cases : -3, -2, -1, 0, 1, 2 → tu arrives à 2"
 
 ====>>  Soit qu'il y ait une étape de décomposition : "tu pars de -3, tu gagnes 5 → tu avances de 5 cases : -3, -2, -1, 0, 1, 2 → tu arrives à 2" d'abords puis le curseur se déplace dent par dent (case par case) en comptant à voix haute  
+
++++ demande Ecart >>>
+Jeu dettes/gains à retravailler --- décomposition textuelle + curseur case par case

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2nde — Les ensembles de nombres N, Z, D, Q, R</title>
+<style>
+  :root{
+    --q-bg:#ffedd5; --q-border:#fb923c; --q-texte:#9a3412;
+    --m-bg:#fceec8; --m-border:#d4a017; --m-texte:#8a6d1f;
+    --ex-bg:#dcfce7; --ex-border:#22c55e; --ex-texte:#14532d;
+    --violet:#7c3aed;
+    --border:#243244;
+    --muted:#374151;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:28px 16px;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+    background:#f3f4f6; color:#0b0b0b; line-height:1.55;
+  }
+  .container{max-width:880px;margin:0 auto;}
+  .header{
+    background:#fff; border:1px solid var(--border); border-radius:14px;
+    padding:18px; margin-bottom:16px;
+  }
+  .header h1{margin:0 0 6px 0; font-size:22px;}
+  .meta{color:var(--muted); font-size:13px;}
+
+  .section{background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px; margin:16px 0;}
+  .section h2{margin:0 0 12px 0; font-size:17px;}
+
+  .question{background:var(--q-bg); border:1px solid var(--q-border); border-radius:12px; padding:12px; margin:10px 0 14px 0;}
+  .question .label{font-weight:700; color:var(--q-texte); font-size:12px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:block;}
+
+  .explanation{background:#1e3a6e; border:1.5px solid #1ab5f8; border-radius:12px; padding:14px; margin:10px 0; color:#67bee7;}
+  .explanation .label{font-weight:700; color:#5B9BD5; font-size:12px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:block;}
+
+  .method{background:var(--m-bg); border:1px solid var(--m-border); border-radius:12px; padding:12px; margin:10px 0; color:var(--m-texte);}
+  .method .label{font-weight:700; color:#8a6d1f; font-size:12px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:block;}
+
+  .example{background:var(--ex-bg); border:1px solid var(--ex-border); border-radius:12px; padding:12px; margin:10px 0;}
+  .example .label{font-weight:700; color:var(--ex-texte); font-size:12px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:block;}
+
+  .violet{color:var(--violet); font-weight:700;}
+
+  .schema-inclusions{
+    display:flex; align-items:center; justify-content:center; gap:6px;
+    font-family:"Georgia", serif; font-size:1.3em; margin:14px 0; flex-wrap:wrap;
+  }
+  .ens{padding:4px 10px; border-radius:8px; font-weight:bold;}
+  .ens.N{background:#fee2e2;} .ens.Z{background:#fed7aa;} .ens.D{background:#fef08a;}
+  .ens.Q{background:#bbf7d0;} .ens.R{background:#bfdbfe;}
+
+  table.tableau{width:100%; border-collapse:collapse; margin-top:10px;}
+  table.tableau th, table.tableau td{border:1px solid #d1d5db; padding:6px 10px; text-align:left; font-size:0.95em;}
+  table.tableau th{background:#f9fafb;}
+
+  .exo-item{margin-bottom:16px; padding-bottom:14px; border-bottom:1px dashed #d1d5db;}
+  .exo-item:last-child{border-bottom:none;}
+  .cases label{display:inline-block; margin-right:14px; cursor:pointer;}
+  .cases input{margin-right:4px;}
+  .verdict{font-size:0.9em; font-weight:bold; margin-top:4px;}
+
+  .btn{background:#2C5480; color:#fff; border:none; padding:9px 18px; border-radius:20px; cursor:pointer; font-weight:bold;}
+  .btn:hover{background:#E8871E;}
+  .score-global{margin-top:8px; font-weight:bold;}
+
+  .bibliography{background:#fff; border:1px dashed #9ca3af; border-radius:14px; padding:14px; margin-top:18px;}
+  .bibliography h2{margin:0 0 8px 0; font-size:15px;}
+  .bibliography li{margin:6px 0; font-size:0.92em;}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Nombres et calculs — Les ensembles N, Z, D, Q, R</h1>
+    <div class="meta">
+      <div><strong>Niveau :</strong> 2nde</div>
+      <div><strong>Chapitre :</strong> Nombres et calculs (page pilote)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>1) Un peu d'histoire — pourquoi plusieurs ensembles de nombres ?</h2>
+
+    <div class="question">
+      <span class="label">Question</span>
+      <p>Si les nombres "existent" depuis toujours, pourquoi a-t-on eu besoin d'inventer plusieurs catégories (N, Z, D, Q, R) au lieu d'une seule ?</p>
+    </div>
+
+    <div class="explanation">
+      <span class="label">Explications</span>
+      <p>Chaque ensemble de nombres est né d'un problème que le précédent ne savait pas résoudre.</p>
+      <p>Les nombres négatifs, par exemple, ont mis des siècles à être acceptés en Europe — encore contestés au XVIIIe siècle par certains mathématiciens qui les jugeaient "absurdes" (comment un nombre pourrait-il être plus petit que rien ?). Ils étaient pourtant déjà manipulés bien avant en Chine et en Inde, notamment dans les <em>Neuf Chapitres sur l'art mathématique</em> chinois, puis formalisés par le mathématicien indien <span class="violet">Brahmagupta</span> au VIIe siècle, qui donnait les règles de calcul sur les nombres positifs et négatifs en les présentant comme des "fortunes" et des "dettes".</p>
+      <p>Le zéro lui-même a une histoire mouvementée : les Babyloniens l'utilisaient déjà comme simple "espace vide" dans l'écriture des nombres, mais c'est <span class="violet">Brahmagupta</span>, en 628, qui en fait pour la première fois un vrai nombre, sur lequel on peut calculer (addition, soustraction) au même titre que les autres.</p>
+      <p>Plus tôt encore, chez les pythagoriciens de la Grèce antique, la découverte que √2 ne pouvait s'écrire comme une fraction (un rapport de deux entiers) aurait provoqué une véritable crise : toute leur philosophie reposait sur l'idée que tout pouvait s'exprimer par des rapports de nombres entiers. Cette découverte marque, symboliquement, la nécessité d'un ensemble de nombres encore plus vaste que les fractions : les <strong>nombres réels</strong>.</p>
+    </div>
+
+    <div class="example">
+      <span class="label">À retenir</span>
+      <p>Chaque "crise" historique correspond à un besoin mathématique précis : compter (N) → pouvoir soustraire sans limite (Z) → mesurer avec des parts (D, Q) → pouvoir représenter n'importe quelle longueur sur une droite, même non exprimable en fraction (R).</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2) Les ensembles de nombres</h2>
+
+    <div class="explanation">
+      <span class="label">Explications</span>
+      <table class="tableau">
+        <tr><th>Ensemble</th><th>Nom</th><th>Contient</th></tr>
+        <tr><td><strong>N</strong></td><td>Entiers naturels</td><td>0, 1, 2, 3, 4…</td></tr>
+        <tr><td><strong>Z</strong></td><td>Entiers relatifs</td><td>…, −2, −1, 0, 1, 2…</td></tr>
+        <tr><td><strong>D</strong></td><td>Décimaux</td><td>nombres à écriture décimale finie : 3 ; −2,5 ; 0,125…</td></tr>
+        <tr><td><strong>Q</strong></td><td>Rationnels</td><td>quotients de deux entiers : 1/3 ; −5/7 ; 2 (= 2/1)…</td></tr>
+        <tr><td><strong>R</strong></td><td>Réels</td><td>tous les précédents + les irrationnels : √2, π…</td></tr>
+      </table>
+      <p style="margin-top:10px;">Ces ensembles sont <strong>emboîtés</strong> les uns dans les autres :</p>
+      <div class="schema-inclusions">
+        <span class="ens N">N</span> ⊂ <span class="ens Z">Z</span> ⊂ <span class="ens D">D</span> ⊂ <span class="ens Q">Q</span> ⊂ <span class="ens R">R</span>
+      </div>
+      <p>Autrement dit : tout entier naturel est aussi un entier relatif, tout décimal est aussi un rationnel, etc. Mais l'inverse n'est pas vrai (par exemple 1/3 est rationnel mais pas décimal, car son écriture décimale ne s'arrête jamais : 0,333…).</p>
+    </div>
+
+    <div class="example">
+      <span class="label">Exemple</span>
+      <p><strong>−3,5</strong> : c'est un décimal (écriture finie), donc aussi rationnel et réel, mais pas un entier (à cause de la virgule) donc pas dans Z ni N.
+      <br>Son "adresse" la plus précise : <strong>−3,5 ∈ D</strong> (et donc aussi ∈ Q et ∈ R).</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>3) Méthode — déterminer à quel(s) ensemble(s) appartient un nombre</h2>
+
+    <div class="method">
+      <span class="label">Méthode</span>
+      <ol>
+        <li>Le nombre a-t-il une partie décimale non nulle ? Si non → c'est au moins un entier relatif (Z), et même naturel (N) s'il est positif ou nul.</li>
+        <li>S'il a une virgule : son écriture décimale s'arrête-t-elle ? Si oui → il est décimal (D).</li>
+        <li>Peut-on l'écrire comme une fraction a/b avec a et b entiers ? Si oui → il est rationnel (Q) (c'est toujours vrai s'il est déjà entier ou décimal).</li>
+        <li>Si aucune fraction ne permet de l'obtenir exactement (comme √2 ou π) → il est réel (R) sans être rationnel : c'est un <strong>irrationnel</strong>.</li>
+      </ol>
+    </div>
+
+    <div class="method">
+      <span class="label">Astuce</span>
+      <p>Pour repérer un irrationnel "à l'œil" : méfie-toi des racines carrées de nombres qui ne sont pas des carrés parfaits (√2, √3, √5… mais <strong>pas</strong> √4 = 2 ou √9 = 3, qui sont en fait des entiers déguisés !), et des constantes classiques comme π. Si tu ne peux ni le simplifier en entier, ni l'écrire en fraction exacte, il est irrationnel.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4) Exercice — coche tous les ensembles auxquels appartient chaque nombre</h2>
+    <div id="exo-ensembles"></div>
+    <button class="btn" onclick="verifierEnsembles()">Vérifier</button>
+    <div class="score-global" id="score-ensembles"></div>
+  </div>
+
+  <div class="bibliography">
+    <h2>Sources</h2>
+    <ul>
+      <li>Sur l'histoire du zéro et de Brahmagupta : Futura Sciences, "La longue histoire du zéro" et "Qui a inventé le zéro ?" (articles de vulgarisation, 2020/2023)</li>
+      <li>Sur les nombres négatifs en Chine et en Inde : discussions académiques autour des <em>Neuf Chapitres sur l'art mathématique</em> et du <em>Brahmasphutasiddhanta</em> de Brahmagupta (628)</li>
+    </ul>
+    <div class="meta">Note : à compléter avec les sources propres au CR/cours une fois le format validé.</div>
+  </div>
+
+</div>
+
+<script>
+const items = [
+  {nombre:"5", correct:["N","Z","D","Q","R"]},
+  {nombre:"−3", correct:["Z","D","Q","R"]},
+  {nombre:"2,5", correct:["D","Q","R"]},
+  {nombre:"1/3", correct:["Q","R"]},
+  {nombre:"√2", correct:["R"]},
+  {nombre:"−7/2", correct:["D","Q","R"]},
+  {nombre:"√9", correct:["N","Z","D","Q","R"]}
+];
+const ensembles = ["N","Z","D","Q","R"];
+
+const zone = document.getElementById('exo-ensembles');
+items.forEach((it,i) => {
+  const div = document.createElement('div');
+  div.className = 'exo-item';
+  let cases = ensembles.map(e => `<label><input type="checkbox" name="item${i}" value="${e}"> ${e}</label>`).join('');
+  div.innerHTML = `<div><strong>${i+1}. ${it.nombre}</strong></div><div class="cases">${cases}</div><div class="verdict" id="verdict-${i}"></div>`;
+  zone.appendChild(div);
+});
+
+function verifierEnsembles(){
+  let score = 0;
+  items.forEach((it,i) => {
+    const cochees = Array.from(document.querySelectorAll(`input[name="item${i}"]:checked`)).map(c=>c.value);
+    const verdict = document.getElementById('verdict-'+i);
+    const memeEnsemble = cochees.length === it.correct.length && cochees.every(c => it.correct.includes(c));
+    if(memeEnsemble){
+      score++;
+      verdict.innerHTML = '<span style="color:#166534;">✓ Correct</span>';
+    } else {
+      verdict.innerHTML = '<span style="color:#991b1b;">✗ Bonne réponse : ' + it.correct.join(', ') + '</span>';
+    }
+  });
+  document.getElementById('score-ensembles').textContent = "Score : " + score + " / " + items.length;
+}
+</script>
+</body>
+</html>
