@@ -1,4 +1,6 @@
 # Plan — Boîte de tri unifiée
+**GELÉ le 26/09/2026 (décision de Sof) : ne sert qu'aux sessions Code, trop peu nombreuses. Piste à définir : agent autonome ou Ollama + Aider pour gérer les fenêtres. Ne rien construire sans sa demande.**
+
 *Version réécrite le 24/09/2026 (première version du 23/09, fondée sur les fichiers Courrier, retirée : Sof ne veut aucun lien avec le courrier). À valider par Sof avant toute exécution. Plan d'exécution de la phase 1 : `PLAN_Boite_de_tri_phase1.md` (Pedago).*
 
 ---
