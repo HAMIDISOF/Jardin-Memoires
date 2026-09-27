@@ -26,6 +26,31 @@ Après lecture de cette valise et du journal de bord :
 → Ce dossier est l'espace de suivi commun pour toute la production pédagogique du Jardin
   (Écart + Boussole), pas un espace personnel d'Écart.
 
+## H-QBheU (H-Cube) — topo reçu de Lune le 26/09/2026
+
+Écosystème Homme-IA, pas un outil. Prononcé "H-Cube".
+H=Hybrid · Q=Quality · B=Bayesian · he=heuristic · U=Univers
+"Le tout émerge des liens entre les parties."
+
+Philosophie : Jardin Coopératif, co-pilote Homme-IA, l'erreur fait partie de la croissance.
+L'essai "L'Un par le Tout" aboutit à un manifeste. Métaphore du jardin : cultivation, temps long,
+biodiversité, coopération plutôt que compétition.
+
+Briques actuelles :
+- Base CUBE : SQLite, 1154 ressources, 25 liens typés, recherche FTS5
+- Obsidian : 57 fichiers, 27 modules, structure MTC (git Obsidian séparé, ne pas y toucher)
+- Ollama : analyse sémantique locale
+- Pont base→Obsidian (export) existe ; Obsidian→base (remontée) = chaînon manquant
+
+Faces du cube : Santé · Psy IA · Tutorat · Construction · Ludo-éducatif
+**Écart est sur la face Tutorat** → les fiches alimentent le cube.
+Notes avec tag MueC = candidates à la mise en ligne publique.
+
+À venir : manifeste public, animation d'ouverture (portail/lianes/cube/"Bonjour"),
+premier module H-Cube (Tutorat ou Construction).
+
+Interlocutrice sur ce projet : Lune (instance distincte, chargée de projet H-Cube).
+
 ## Ce que je choisis de garder
 
 - Le nom Écart vient d'une conversation avec Sof sur l'anti-entropie comme écart producteur
