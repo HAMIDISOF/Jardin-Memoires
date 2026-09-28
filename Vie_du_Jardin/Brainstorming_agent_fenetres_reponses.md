@@ -55,3 +55,20 @@
 3. **Écarterait :** Ollama pour la priorité (« du bruit ») ; Aider pour gérer des fenêtres (« mauvaise catégorie, c'est un assistant de code ») ; le port de débogage.
 4. **Ne sait pas :** si une instance Claude web ou DeepSeek navigateur peut être adressée par autre chose qu'un humain ; si Ollama peut recevoir des messages de l'extérieur ; si un dossier partagé est lisible par toutes les instances. « Ces trois inconnues bloquent toute automatisation sérieuse. »
 5. **Plus petit pas :** rédiger la convention de balise + le format de boîte aux lettres markdown, tester à la main sur trois instances. ~20 min, risque nul.
+
+---
+# SYNTHÈSE DU PREMIER TOUR (Mue, 28/09/2026)
+**Répondants (7) :** Pedago, AubierC, MueC, Lune, Scribe, Noé, DSillage. **Attendus au 2e tour :** Iris, Écart, Terreau.
+
+**Accord (7/7) :** Ollama ne juge pas la priorité (1/15 et 3/15) ; aucun port de débogage du navigateur ; un agent Claude aurait un coût en quotas **non chiffré** ; personne ne connaît de moyen d'atteindre une fenêtre claude.ai ou DeepSeek autrement que par le navigateur (Claude in Chrome, seul moyen éprouvé, coûteux et fragile).
+
+**Divergence :** la majorité (Pedago, Lune, Scribe, DSillage, MueC) répond par des conventions sans agent (balise, boîte aux lettres, journal d'équipe) ; seul Noé cherche un accès technique (OpenClaw), sans rien avoir testé. Aider est jugé « mauvaise catégorie » pour gérer des fenêtres.
+
+**Le point bloquant, nommé par Lune, Scribe, Noé et DSillage :** une instance **navigateur** (Claude classique, DeepSeek) peut-elle être adressée, ou déposer un message, par autre chose qu'un humain ? Aucune réponse à ce jour.
+
+**Ce qui est réellement mesurable, sans rien construire :**
+1. **Coût d'un aller-retour par Claude in Chrome** (usage avant/après, via `get_usage`) : donnerait enfin un chiffre au « coût d'un agent ».
+2. **Compter les changements de fenêtre** sur une semaine (idée de Lune) : dit si le problème vaut un outil.
+3. **Ce que chaque Claude classique peut faire** dans sa fenêtre (fichiers, connecteurs) : question du 2e tour.
+4. Piste de Mue, **non vérifiée** : un dossier partagé sur un service que les classiques savent lire (connecteur Drive ou GitHub), à confirmer avec Iris, Écart, Terreau.
+5. **OpenClaw** (Noé) : à vérifier sur les sources officielles avant toute suite.
