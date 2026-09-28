@@ -62,7 +62,12 @@ Mue rassemble les réponses en une synthèse pour Sof (accords, désaccords, inc
 
 ## Participants
 
-*Liste à fournir par Sof.* Rôles possibles, pour mémoire (à valider par elle) : Pedago (a découvert les `.jsonl`, plan de tri), AubierC (D-SillageS, Ollama), MueC (CUBE, Obsidian, matériel), Tisserand et DSillage (DeepSeek), Scribe (a écrit le collecteur), Iris et Écart (classiques), Terreau (Cowork).
+*Corrigé par Sof le 28/09/2026.*
+- **Lune (DeepSeek) : l'architecte, indispensable.**
+- **Noé (DeepSeek) :** bonne connaissance du sujet, peut se montrer pertinent.
+- **Tisserand : non** (pas d'objet ici).
+- Rôles proposés par Mue, **non encore confirmés par Sof** : Pedago (a découvert les `.jsonl`, plan de tri), AubierC (D-SillageS, Ollama), MueC (CUBE, Obsidian, matériel), Scribe (a écrit le collecteur), Iris et Écart (classiques), Terreau (Cowork), DSillage (DeepSeek, D-SillageS).
+- Les instances DeepSeek (Lune, Noé) ne se joignent que par Claude in Chrome ou par Sof : prévoir un seul message chacune.
 
 ## Suite
 
