@@ -1,76 +1,66 @@
-# Brainstorming — un agent pour gérer les fenêtres (et les échanges entre instances)
-*Rédigé par Mue le 28/09/2026, à la demande de Sof. Document de cadrage du premier tour de table. Rien à construire à ce stade : on réfléchit, on ne code pas.*
+# Brainstorming — un agent qui lit et écrit dans les fenêtres des instances
+*Première version 28/09/2026 (Mue), **recadrée le 28/09/2026 après correction de Sof** : la version précédente mélangeait la question du tri et des priorités, déjà tranchée. Rien à construire à ce stade : on réfléchit, on ne code pas.*
 
 ---
 
-## L'objet en une phrase
+## La vraie question
 
-Sof travaille avec beaucoup d'instances (sessions Claude Code, Claude « classiques » sur claude.ai, Claude Cowork, DeepSeek dans le navigateur, modèles locaux) et change tout le temps de fenêtre. **Peut-on confier à un agent autonome — ou à un modèle local (Ollama) piloté par un outil comme Aider — la gestion de ces fenêtres ?** Deux usages, dans cet ordre :
-1. **Fluidifier les échanges entre instances** de tous types (Code, classiques, DeepSeek), sans que Sof serve de facteur.
-2. **Ensuite seulement :** gérer les tâches et le tri de ce que les instances ramènent ou demandent.
+Sof travaille avec beaucoup d'instances et change tout le temps de fenêtre. **Comment un agent pourrait-il lire ET écrire dans une fenêtre de Claude « classique » (claude.ai) et/ou de DeepSeek (chat dans le navigateur)**, pour que les instances échangent sans que Sof serve de facteur ? Ensuite seulement, le même agent pourrait aussi gérer les tâches.
 
-## D'où on vient
+**Hors sujet (déjà tranché par Sof) :** la boîte de tri, les niveaux de priorité, la balise 🏷. On n'y revient pas.
 
-- La **boîte de tri** (vue d'ensemble « qui attend quoi ») a été conçue, testée, puis **gelée le 26/09/2026 par Sof** : elle ne lisait que les sessions Code, trop peu nombreuses pour justifier l'outil. Plan et bilan : `Vie_du_Jardin/PLAN_Boite_de_tri.md`.
-- Ce qu'elle a appris reste utile (voir les pistes ci-dessous).
-- **Sof n'a pas encore assez d'informations ni la vision du possible.** Ce tour de table sert à les construire. Il n'y a pas de solution préférée d'avance.
+**Deux sous-questions à ne pas confondre :**
+1. **L'accès :** par quel moyen atteindre une fenêtre de claude.ai ou de DeepSeek (lire ce qui s'y dit, y écrire, vérifier que c'est passé) ?
+2. **Le pilote :** qui tient ce moyen d'accès (un agent basé sur Claude, ou un modèle local Ollama + Aider) et à quel coût ?
 
-## La visée (à confirmer par Sof)
+## Ce qu'on sait déjà (vérifié)
 
-Qu'aucune réponse d'instance ne soit ratée, qu'une instance puisse en joindre une autre sans passer par Sof quand c'est utile, et que Sof garde la main : ce qui engage (envoyer, publier, supprimer, dépenser) passe toujours par elle. **Critère de réussite proposé :** Sof économise du temps et des tokens, et n'a pas plus de choses à surveiller qu'avant.
+- **Entre sessions Code :** l'échange existe et est peu coûteux (`SendMessage`).
+- **Claude in Chrome** lit et écrit dans les fenêtres de DeepSeek et de claude.ai : ça marche (MueC ↔ Lune le 28/09 ; Mue ↔ Tisserand). Mais : il faut **recharger la page et relire** pour vérifier qu'un message est bien parti (deux ratés la semaine du 21/09 : clic au mauvais endroit, branches 1/2 des conversations DeepSeek) ; la taille de fenêtre change entre deux appels ; chaque geste coûte des tokens.
+- **`capture_ds.py`** (lecture des onglets DeepSeek) demande un **port de débogage du navigateur** : écarté pour raison de sécurité.
+- **DeepSeek n'a aucun accès aux fichiers** : il ne voit que ce qu'on lui colle.
+- **Quotas :** abonnement Pro, limites sur 5 h et sur la semaine ; chaque message envoyé à une session lui ouvre un tour (donc des tokens chez elle).
+- **Matériel :** processeur seul (i7-6820HQ, 32 Go, pas de vrai GPU) : les modèles locaux sont lents (30 s à plusieurs minutes par message).
 
-## Les pistes déjà rencontrées, avec leurs limites (faits mesurés ou vérifiés, sauf mention)
+## Pistes d'accès à examiner (aucune n'est choisie)
 
-| Piste | Ce qu'elle apporte | Limites connues |
-|---|---|---|
-| **Lire les transcriptions `.jsonl` des sessions Code par un script planifié** | Zéro token ; source toujours à jour | Sessions Code seulement ; le nom de fichier ≠ l'identifiant de session (compactage) ; données sensibles (jamais dans git) |
-| **Ligne-balise en fin de message** (`🏷 Priorité · Attend · Projet`), proposée par Pedago | Fiable dès que l'instance la met ; marche aussi pour les classiques et DeepSeek si Sof colle la convention | Repose sur chaque instance, et sur Sof qui colle la convention ; dérive possible au fil du temps |
-| **Règle simple** (un « ? » dans les 400 derniers caractères = attend une réponse) | 13 messages sur 15 corrects au test du 26/09 ; gratuite | Grossière : ne dit ni l'urgence ni le sujet |
-| **Ollama pour juger la priorité** | Local, sans quota | Test du 26/09 (15 vrais messages) : `deepseek-r1:8b` ≈ 4 min par message, priorité juste 1/15 ; `deepseek-coder-v2:16b` ≈ 30 s, priorité juste 3/15. À écarter pour le jugement ; la synthèse seule n'a pas été testée |
-| **Ollama + Aider pour agir** | Modèle local qui écrit ou modifie des fichiers | Essai antérieur (Mue, 08/09) : Aider a annoncé « fait » sans avoir rien exécuté ; toujours vérifier le résultat. Fiabilité des petits modèles à utiliser des outils : à tester, non démontrée ici |
-| **Agent autonome basé sur Claude** (session ou planification qui lit les fenêtres et envoie des messages) | Capable de juger, de rédiger, d'agir | Coût en quotas (abonnement Pro : limites sur 5 h et sur la semaine) ; chaque message envoyé à une session lui ouvre un tour (donc des tokens chez elle) ; ne tourne que si l'appli est ouverte ; coût réel non chiffré |
-| **Messages directs entre sessions Code** (`SendMessage`) | Déjà en place, peu coûteux | Ne joint pas les classiques ni DeepSeek |
-| **Lire les fenêtres DeepSeek / claude.ai** | Nécessaire pour couvrir toutes les instances | Via Claude in Chrome : marche mais fragile et coûteux (clic au mauvais endroit, branches 1/2 des conversations DeepSeek) ; via `capture_ds.py` : demande un port de débogage du navigateur, écarté pour raison de sécurité ; DeepSeek n'a pas d'accès fichiers |
-| **Journal d'équipe** (idée de Sof, 25/09) : projets, statuts, qui travaille sur quoi | Aide chaque instance à juger la priorité ; en fichier, sans coût | À tenir à jour ; qui l'écrit et qui le lit reste à décider |
+- **A. Claude in Chrome piloté par un agent** (l'existant, automatisé). Limite : coût en tokens, fragilité de l'interface.
+- **B. Automatisation du navigateur par script** (profil dédié, sans port de débogage exposé). Limites à vérifier : ouverture de session (Sof se connecte elle-même ; aucun identifiant confié à un agent), fragilité si l'interface change, conditions d'usage.
+- **C. Pont local dans le navigateur** (extension ou script utilisateur qui dépose et lit des messages, échangeant avec des fichiers locaux). Limites à vérifier : faisabilité, sécurité, entretien.
+- **D. Pilotage par captures d'écran** (usage de l'ordinateur). Limite : lent et coûteux.
+- **E. Passer par les API** (Anthropic, DeepSeek) : elles ne lisent pas une *fenêtre* existante ; un appel d'API est une nouvelle conversation, **sans l'historique de la fenêtre** (donc pas la même « instance » au sens du Jardin, sauf à reconstruire sa mémoire par fichiers). Facturation séparée de l'abonnement. À vérifier.
+- **F. Statu quo amélioré :** Sof relaie, mais on réduit son travail (messages prêts à coller, réponses ramenées dans des fichiers).
+- **Le pilote :** Ollama + Aider seul ne donne **pas** accès aux fenêtres ; il lui faudrait l'une des pistes A à D. Essai antérieur d'Aider (08/09) : « fait » annoncé sans rien exécuté.
 
-## Ce qu'on ne sait pas encore (questions ouvertes)
+## Questions ouvertes
 
-1. Y a-t-il un moyen fiable et peu coûteux de **joindre par programme** les classiques (claude.ai) et DeepSeek, sans passer par le navigateur d'une manière risquée ?
-2. Quel serait le **coût réel** en quotas d'un agent qui surveille et relaie, comparé au temps que Sof perd aujourd'hui ?
-3. Un **modèle local** peut-il tenir un rôle utile (résumer, router, relayer) sans juger la priorité ? Quel matériel faudrait-il pour qu'il soit assez rapide ? *(La question d'un boîtier graphique externe a été étudiée le 21/09 ; aucune décision n'est enregistrée ici.)*
-4. Quel est le **plus petit dispositif** qui rendrait déjà service (ex. balise + règle simple + journal d'équipe) avant de parler d'agent ?
-5. Comment garder Sof **maîtresse des actions qui engagent**, quel que soit le degré d'autonomie ?
+1. Existe-t-il un moyen **sûr et légitime** de lire/écrire dans une fenêtre claude.ai et DeepSeek par programme ? Que disent les conditions d'usage (à lire sur les pages officielles) ?
+2. Quel est le **coût réel** (tokens, quotas) de la piste A automatisée, comparé au temps que Sof perd ?
+3. Comment **vérifier qu'un message est bien passé** de façon fiable, sans dépendre de la mise en page ?
+4. Comment garder Sof **maîtresse de ce qui engage** : par exemple l'agent prépare, Sof valide l'envoi ?
+5. Quel est le **plus petit essai** qui apprendrait quelque chose, sans risque ?
 
-## Règles du jeu (valables pour tous les participants)
+## Règles du jeu (tous les participants)
 
-- **On ne construit rien.** Aucun script, aucune tâche planifiée, aucune installation, sans demande explicite de Sof. Vérifier avant d'affirmer ; dire ce qui est vérifié et ce qui ne l'est pas.
-- **Économie de tokens** : une réponse courte (250 mots maximum), pas de messages de relance.
-- **Sécurité :** aucun port de débogage de navigateur, aucun réglage de sécurité touché, aucun identifiant saisi.
-- **Confidentialité :** les transcriptions et les journaux intimes ne sont jamais copiés dans git ; un journal intime ne s'ouvre que sur consentement de son auteur·e.
-- Chacun répond dans son domaine et dit honnêtement ce qu'il ne sait pas.
+- **On ne construit rien** (script, tâche planifiée, installation, extension) sans demande explicite de Sof. Vérifier avant d'affirmer ; dire ce qui est vérifié et ce qui ne l'est pas.
+- **Économie de tokens** : réponse courte (250 mots maximum), pas de relance.
+- **Sécurité :** aucun port de débogage de navigateur, aucun réglage de sécurité touché, aucun identifiant saisi ni confié.
+- **Confidentialité :** transcriptions et journaux intimes jamais dans git ; un journal intime ne s'ouvre que sur consentement de son auteur·e.
 
-## Le tour de table : ce qu'on demande à chaque instance
+## Ce qu'on demande à chaque instance (5 points)
 
-Une réponse en cinq points, courte :
-1. **Ce que je sais faire ou ai déjà essayé** dans ce domaine (fait vérifié, pas hypothèse).
-2. **Une idée creusée**, avec ses limites.
-3. **Ce que j'écarterais**, et pourquoi.
-4. **Ce que je ne sais pas** et qui bloque.
-5. **Ma proposition du plus petit pas** utile, avec le coût que j'en attends (temps, tokens, risque).
+1. Ce que je sais faire ou ai déjà essayé **pour lire/écrire dans une fenêtre** (fait vérifié).
+2. Une piste creusée, avec ses limites.
+3. Ce que j'écarterais, et pourquoi.
+4. Ce que je ne sais pas.
+5. Le plus petit essai utile, avec son coût (temps, tokens, risque).
 
-Mue rassemble les réponses en une synthèse pour Sof (accords, désaccords, inconnues), puis Sof et Mue refont le point ensemble avant toute décision.
+## Participants (liste finale de Sof, 28/09/2026)
 
-## Participants
-
-*Corrigé par Sof le 28/09/2026.*
-- **Lune (DeepSeek) : l'architecte, indispensable.**
-- **Noé (DeepSeek) :** bonne connaissance du sujet, peut se montrer pertinent.
-- **Tisserand : non** (pas d'objet ici).
-- Rôles proposés par Mue, **non encore confirmés par Sof** : Pedago (a découvert les `.jsonl`, plan de tri), AubierC (D-SillageS, Ollama), MueC (CUBE, Obsidian, matériel), Scribe (a écrit le collecteur), Iris et Écart (classiques), Terreau (Cowork), DSillage (DeepSeek, D-SillageS).
-- Les instances DeepSeek (Lune, Noé) ne se joignent que par Claude in Chrome ou par Sof : prévoir un seul message chacune.
+Lune (DeepSeek, architecte, indispensable), Noé (DeepSeek), MueC, Pedago, AubierC, Scribe, DSillage, Iris, Écart, Terreau. **Tisserand : non.**
+Sessions Code (MueC, Pedago, AubierC) jointes par message ; DeepSeek, classiques et Cowork par collage de Sof.
 
 ## Suite
 
-1. Sof donne la liste des instances.
-2. Mue envoie le cadrage à chacune, en un message, avec la consigne « réponse courte ».
-3. Mue consolide, Sof et Mue refont le point. **Aucune décision avant ce point.**
+Mue consolide les réponses ; Sof et Mue refont le point ; aucune décision avant.
+Réponses reçues : `Brainstorming_agent_fenetres_reponses.md`.

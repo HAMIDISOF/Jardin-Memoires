@@ -1,4 +1,6 @@
 # Brainstorming agent/fenêtres — réponses du tour de table
+**Note (28/09) :** les trois réponses des sessions Code ci-dessous ont été données sur le *premier* cadrage, qui mélangeait tri/priorités (tranchés par Sof) et accès aux fenêtres. Elles répondent surtout à la partie « priorités ». La vraie question (lire/écrire dans une fenêtre claude.ai ou DeepSeek) a été recadrée le 28/09 dans `Brainstorming_agent_fenetres.md`.
+
 *Recueillies par Mue. Cadrage : `Brainstorming_agent_fenetres.md`. Envoi du cadrage le 28/09/2026 : MueC (en attente de livraison), Pedago, AubierC ; DeepSeek et classiques par collage de Sof.*
 
 ## Pedago (reçue le 28/09/2026)
