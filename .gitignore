@@ -22,3 +22,5 @@ __pycache__/
 *.swp
 *.swo
 Outils/sync_log.txt
+
+Outils/outil_auto_DS/
