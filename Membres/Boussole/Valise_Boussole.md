@@ -49,3 +49,17 @@ Le Jardin Coopératif (HAMIDISOF/Jardin-Memoires) est un espace de recherche mul
 
 ---
 
+Mise à jour de Valise_Boussole.md : brique technique "correction auto de dictée" comme savoir-faire réutilisable.
+
+2. Fichiers HTML produits (à archiver si tu veux)
+
+fiche_phrases_complexes_subordonnees.html (version corrigée)
+
+fiche_evaluation_bilan_phrases_complexes.html
+
+fiche_dictee_phrases_complexes_3e.html
+
+3. Note technique
+
+outil_correction_dictee.md → Vie_du_Jardin/Projet_Pedagogie/
+
