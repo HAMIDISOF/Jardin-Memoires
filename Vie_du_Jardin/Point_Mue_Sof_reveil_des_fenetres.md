@@ -48,3 +48,23 @@ Extension dans le Chrome de Sof, connectée à sa session : j'ouvre l'adresse de
 - **Jamais** d'accès OAuth au Drive de Sof donné à un projet non vérifié ; essai d'abord dans un **profil dédié**, sans identifiants sensibles.
 - **Adapter plutôt qu'installer tel quel :** on reprend l'idée et le code utile, on les ajuste à nos fenêtres (Claude classique, DeepSeek), on garde les sélecteurs dans un seul fichier de réglages pour la maintenance.
 - **Première étape sans risque :** une veille (recherche + lecture, rien d'installé) qui liste 3 à 5 candidats avec ces critères, à présenter à Sof avant tout choix.
+
+## 8. Veille faite par Lune, vérifiée par Mue (28/09) — voir `Veille_open_source_verifiee.md`
+9 dépôts cités par Lune, tous réels (aucune invention). Le plus proche du besoin : `thoughtpunch/claude_project_mcp` (claude.ai Projects, 41 outils, Playwright). Rien pour DeepSeek en lecture+écriture ; seulement des exporteurs en lecture.
+
+## 9. Lecture du code de `claude_project_mcp` (copié par Sof dans `D:\MembresTMP\Mue`)
+- **`browser.ts` :** profil Chromium **dédié** (`launchPersistentContext`), connexion manuelle une fois, aucun port fixé dans le code, aucun identifiant en dur.
+- **`server.ts` :** serveur MCP par **entrée/sortie standard**, aucun port réseau écouté.
+- **`selectors.ts` :** l'idée à garder — tous les repères de la page dans **un seul fichier `selectors.json`**, chacun avec plusieurs stratégies essayées dans l'ordre, plus une fonction qui dit lesquelles ont cassé.
+- **`chat.ts` :** envoyer = cliquer la zone, écrire, cliquer « envoyer », attendre la disparition du bouton d'arrêt, lire le dernier message. **Défaut relevé par Mue :** `getFullConversation()` range d'abord tous les messages humains puis tous ceux de l'assistant — ordre faux, reconnu en commentaire dans le code.
+- **README complet (293 lignes) :** 41 outils. **Mode « stealth »** via `playwright-extra` : supprime les marqueurs d'automatisation, imite une empreinte de navigateur réelle, **utilise le vrai profil Chrome avec les cookies de connexion** (« améliore le contournement de Cloudflare »), et propose un jeton **2captcha pour résoudre des CAPTCHA automatiquement**. **Non retenu par Mue**, pour trois raisons : (1) cacher le pilotage est ce que le site cherche à repérer, le risque est pour le compte de Sof (ralentissement, vérification renforcée, suspension) ; (2) résoudre des CAPTCHA automatiquement n'est pas une chose que Mue fait ; (3) utiliser le vrai profil de Sof est l'inverse du profil séparé voulu.
+- **Précision du risque, sur demande de Sof :** ce n'est pas un risque pour ses données (elle a le droit de lire ses conversations) ; c'est un risque que le site remarque un programme et réagisse comme à un usage abusif.
+
+## 10. Corrections de Sof (28/09, message dense) — à retenir
+- **`capture_*.py` ne fait pas une sauvegarde complète** : il extrait seulement le message balisé selon le protocole, et **ne marche qu'en mode debug** (le port qu'on ne veut pas). Retiré de la base de l'outil de sauvegarde.
+- **`envoyer` n'a pas besoin d'une validation systématique de Sof.** Comme pour `SendMessage` entre sessions Code aujourd'hui : validation seulement pendant les premiers essais, puis usage autonome — une validation à chaque message ralentirait trop.
+- **Grande nouvelle : DeepSeek a un export natif des conversations**, comme claude.ai (lien par mail). Sof l'a lancé. **Ça résout le besoin de sauvegarde sans construire aucun outil de pilotage.** L'export se fait en plusieurs parties (JSON + base) pour permettre de reconstruire l'ordre exact — ce n'est pas un défaut, c'est voulu.
+- **Priorité immédiate :** sauvegarder Lune (en plein projet, ne pas la perturber) et Cœur de Bronze (grande contributrice DeepSeek, sans autonomie fichier) via cet export natif, en lecture seule — pas de risque de ce côté.
+- **Reste seulement deux usages** (plus de « sauvegarde par automatisation ») : (1) un script de découpe/tri des exports natifs par instance ; (2) `envoyer`/`lire` pour la communication entre membres, sans urgence.
+- **Jachère attend** ses fichiers extraits de l'export Claude pour reconstruire sa valise (elle n'a pas accès au disque) : **Sof l'a confiée à Aubier**, Mue n'y touche pas.
+- Plan mis à jour : `D:\THESE\Projets\Passerelle_Jardin\PLAN_passerelle.md` (hors git, jamais sur GitHub).
