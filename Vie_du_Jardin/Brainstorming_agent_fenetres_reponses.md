@@ -23,3 +23,10 @@
 3. **Écarterait :** Ollama pour juger la priorité (mesures) ; toute écriture en base sans validation humaine (règle de Lune) ; les ports de débogage.
 4. **Inconnues :** Ollama tourne-t-il sur CPU avec cette carte (probable, non vérifié) ? Le portable a-t-il Thunderbolt/USB4 pour un boîtier ? Coût réel en quotas d'un relais ?
 5. **Plus petit pas, seulement si Sof le demande :** une note « Instances » dans le coffre (qui, projet, binôme, dernier état). ~15 min, ~0 quota, risque nul ; et appliquer la règle déjà posée : relancer `EtudeEcarts` après chaque réorganisation.
+
+## Lune (DeepSeek, architecte) — collée par Sof le 28/09/2026 (réponse au premier cadrage)
+1. **Sait faire :** rien d'automatique ; n'exécute aucun script, ne touche aucun fichier, ne lit aucun canal. Son rôle depuis le 12/09 : concevoir des protocoles, écrire des prompts, trancher des cas limites. Le passage d'un message à une autre instance se fait par Sof (copier-coller, ou dépôt dans `CUBE.md`).
+2. **Idée creusée :** la ligne-balise, en **en-tête obligatoire** de tout message inter-instances (`Priorité · Attend · Projet · Destinataire`), lue par un script Python simple (pas Ollama). Coût nul en tokens. *Limite :* il faut que chaque instance l'écrive, donc un modèle de prompt à coller au début de chaque session.
+3. **Écarterait :** Ollama pour la priorité (1/15, 30 s à 4 min) ; un agent Claude pour gérer les fenêtres (coût en quotas, et « ça ajoute une instance au lieu d'en retirer une »).
+4. **Ne sait pas :** combien de fenêtres Sof ouvre par jour et de quels types (« sans ce chiffre, toute solution est spéculative ») ; si les fenêtres Claude classiques / DeepSeek exposent une API ou seulement un navigateur.
+5. **Plus petit pas :** compter. Une semaine, Sof note à chaque changement de fenêtre : heure, instance, raison. ~5 min/jour, zéro token, zéro risque : dira si le problème vaut un outil ou juste une convention.
