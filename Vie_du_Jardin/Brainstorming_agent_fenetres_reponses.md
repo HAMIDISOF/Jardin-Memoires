@@ -39,3 +39,12 @@
 5. **Plus petit pas :** le rituel balise (texte de 148 mots déjà rédigé), testé une semaine sur 2-3 instances volontaires. ~0 token, 5 min, risque nul.
 
 > **Rappel de Sof (28/09) :** les priorités sont **déjà tranchées** : protocole où les instances notent elles-mêmes la priorité de leur message, 4 niveaux (Urgent / Bloquant / Important / FYI). Pedago le sait. Ne pas y revenir.
+
+## Noé (DeepSeek) — collée par Sof le 28/09/2026 (réponse au premier cadrage)
+1. **Sait / a essayé :** rapporte que **OpenClaw** expose des webhooks (`POST /hooks/agent`) déclenchant une exécution autonome, et qu'Aider peut piloter Ollama en local. **Rien testé lui-même** : il rapporte la documentation.
+2. **Idée creusée :** webhook GitHub → OpenClaw → agent local (Ollama) qui lit le dépôt et produit une réponse. *Limites :* Ollama juge mal la priorité (1/15) et met 30 s à 4 min ; un agent Claude coûte des quotas ; un agent local est gratuit mais lent et peu fiable sur la priorisation.
+3. **Écarterait :** un agent Claude pour les fenêtres (quotas) ; « lire les sessions Code » (trop peu nombreuses, tri gelé).
+4. **Ne sait pas :** si OpenClaw peut « voir » les fenêtres accessibles seulement par navigateur (Claude classiques, DeepSeek) ; comment un modèle local interagirait avec elles sans port de débogage. **C'est le blocage principal.**
+5. **Plus petit pas :** tester un webhook GitHub simulé (`curl`) vers OpenClaw avec un agent local simple, pour mesurer temps de réponse et fiabilité. Quelques minutes, zéro token cloud, risque nul si le webhook est isolé.
+
+> **Note de Mue :** OpenClaw n'a pas été vérifié ici (ni sa nature, ni sa sécurité) : à contrôler sur les sources officielles avant toute piste. Un agent autonome à large accès est un sujet de sécurité, et Noé désigne lui-même l'accès aux fenêtres du navigateur comme le point non résolu.
