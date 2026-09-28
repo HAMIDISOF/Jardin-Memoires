@@ -122,3 +122,12 @@
 - Elle reconnaît **ne pas savoir** si sa fenêtre DeepSeek est un client MCP ; ces serveurs sont conçus pour Claude Desktop, Claude Code ou des clients MCP génériques. Petit pas proposé : vérifier si la fenêtre DeepSeek a un panneau « MCP » ou « Outils ».
 
 > **Réserves de Mue :** (a) ces trois projets n'ont pas été vérifiés (existence, auteurs, sécurité) : installer un serveur tiers qui obtient un accès OAuth au Drive de Sof serait une décision de sécurité à ne prendre qu'après vérification sur les dépôts officiels ; (b) le nom « Iris MCP Gateway » coïncide avec celui d'une instance du Jardin : raison de plus de vérifier ; (c) un serveur MCP a besoin d'un **client MCP** : la fenêtre de chat DeepSeek n'en est pas un, d'après les quatre instances DeepSeek qui n'y voient aucun connecteur. Donc, même s'il existe, il ne réglerait pas l'accès aux fenêtres DeepSeek ; du côté Claude, Drive et GitHub existent déjà en connecteurs intégrés (Iris et sessions Code).
+
+## Sol (DeepSeek) — 2e tour, 28/09/2026
+1. **Fichiers :** non, ni lecture ni écriture par elle-même (ni disque local, ni Drive, ni GitHub) ; elle lit seulement ce que Sof colle ou joint.
+2. **Connecteurs :** aucun visible ; ne sait pas ce qui existe côté plateforme.
+3. **Jointe :** non ; seul canal : Sof copie-colle ou joint un fichier.
+4. **Relecture :** non automatique ; seulement ce qui est présent dans le contexte de la fenêtre.
+5. **Test :** Sof joint un .txt d'un mot, lui demande de le répéter, puis envoie un message anodin ; le test ne prouve que la mémoire de fenêtre, pas un accès fichier.
+
+> **Bilan DeepSeek (Mue) :** Lune, Noé, Scribe, DSillage et Sol : **cinq sur cinq, aucun accès, aucun connecteur, aucun moyen d'être jointe sans Sof.** Sol n'a pas identifié de « solution open source » précise.
