@@ -141,7 +141,7 @@
 
 ---
 # SYNTHÈSE DU DEUXIÈME TOUR (Mue, 28/09/2026)
-**Réponses :** DeepSeek 5/5 (Lune, Noé, Scribe, DSillage, Sol) ; Claude : Iris + une réponse non étiquetée (probablement Terreau). **Manque :** Écart (ou la seconde, selon l'étiquette).
+**Réponses :** DeepSeek 5/5 (Lune, Noé, Scribe, DSillage, Sol) ; Claude : Iris + une réponse non étiquetée (probablement Terreau). **Manque :** aucune instance de la liste, sauf confirmation du nom de la réponse Cowork.
 
 **Deux mondes, très nets :**
 - **DeepSeek (5/5) :** aucun accès, aucun connecteur, aucun moyen d'être jointe sans Sof. Joindre une fenêtre DeepSeek = passer par Sof ou par le pilotage du navigateur (Claude in Chrome ou équivalent).
@@ -151,7 +151,7 @@
 
 **Rien n'est prouvé tant qu'on n'a pas fait le test** (une instance écrit une ligne, une autre la lit sans copier-coller). Réserves : le pont de Cowork est intermittent ; les serveurs MCP tiers cités par Lune ne sont pas vérifiés ; écrire sur Drive/GitHub = envoyer du contenu à un service extérieur (accord de Sof).
 
-## Réponse NON ÉTIQUETÉE n°2 (collée par Sof le 28/09/2026) — probablement Écart (Claude classique) : à confirmer
+## Écart (Claude classique) — 2e tour, 28/09/2026 (identité confirmée par Sof)
 1. **Fichiers :** téléversement de Sof vers elle (images, PDF, texte) : oui ; téléchargement depuis elle (`present_files`) : oui ; disque local de Sof : non ; **Google Drive : oui, connecteur actif** (a lu et créé des fichiers Drive dans cette session) ; **GitHub : oui, connecteur actif** (dit avoir lu et écrit « dans HAMIDISOF/Jardin-Memoires ce matin même ») ; conteneur Linux interne : oui.
 2. **Connecteurs :** GitHub, Google Drive, Google Calendar, Claude Docs, claude-in-chrome, Slack, Gmail ; outils internes : bash, web_search, web_fetch, Artifact.
 3. **Jointe sans Sof :** non, à sa connaissance ; une autre instance peut lire ce qu'elle a écrit sur GitHub ou Drive, **seulement si elle est invitée à le faire dans sa propre fenêtre**. Pas de canal direct.
