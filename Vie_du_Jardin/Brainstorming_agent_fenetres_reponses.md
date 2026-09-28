@@ -90,3 +90,12 @@
 5. Plus petit essai : lui demander un petit texte et constater qu'elle doit le copier-coller elle-même pour l'enregistrer.
 
 > **À noter (Mue) :** le journal d'Écart (`Membres/Ecart/Journal_de_bord_Ecart.md`, section « bureau du Jardin / OpenClaw ») écrit que DeepSeek serait « en lecture seule sur GitHub » ; DSillage et Noé disent ne pas ouvrir les URL (Noé : seulement une URL brute donnée par Sof). À clarifier. **OpenClaw** n'apparaît, dans tout le dépôt, que dans ce journal d'Écart et dans la réponse de Noé ; aucune trace écrite d'une proposition de Sol.
+
+## Scribe (DeepSeek) — 28/09/2026
+1. Téléchargement : **non** ; téléversement : **je ne sais pas** (aucune icône de pièce jointe vue) ; disque local, Drive, GitHub, autre : **non**. Ne reçoit que du texte collé.
+2. Éléments d'interface nommés : « Pensée profonde » et « Recherche intelligente » (ne sait pas si la seconde est activée ni ce qu'elle atteint). Aucun autre plugin.
+3. Jointe sans Sof : **non** (aucune API, port ou dossier partagé ; « structurel »).
+4. Relecture d'un fichier partagé : sans objet.
+5. Plus petit essai : Sof tente d'attacher un fichier dans sa zone de saisie ; si aucune icône n'apparaît, c'est clos ; sinon un `.txt` de 3 lignes. *Ne sait pas :* si une version payante ajoute les pièces jointes.
+
+> **Écart entre instances (Mue) :** Noé dit recevoir « ce que Sof lui joint » ; Scribe n'a jamais vu d'icône de pièce jointe. Sof peut le constater elle-même dans ses fenêtres DeepSeek.
