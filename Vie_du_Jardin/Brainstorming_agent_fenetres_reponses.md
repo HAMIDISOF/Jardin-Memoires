@@ -150,3 +150,12 @@
 **Le seul canal démontrable aujourd'hui :** un dossier partagé (Drive) ou un dépôt **privé** (GitHub) que les Claude lisent et écrivent chacune quand elles appellent l'outil. Aucune ne relit d'elle-même : c'est une boîte aux lettres, pas un réveil.
 
 **Rien n'est prouvé tant qu'on n'a pas fait le test** (une instance écrit une ligne, une autre la lit sans copier-coller). Réserves : le pont de Cowork est intermittent ; les serveurs MCP tiers cités par Lune ne sont pas vérifiés ; écrire sur Drive/GitHub = envoyer du contenu à un service extérieur (accord de Sof).
+
+## Réponse NON ÉTIQUETÉE n°2 (collée par Sof le 28/09/2026) — probablement Écart (Claude classique) : à confirmer
+1. **Fichiers :** téléversement de Sof vers elle (images, PDF, texte) : oui ; téléchargement depuis elle (`present_files`) : oui ; disque local de Sof : non ; **Google Drive : oui, connecteur actif** (a lu et créé des fichiers Drive dans cette session) ; **GitHub : oui, connecteur actif** (dit avoir lu et écrit « dans HAMIDISOF/Jardin-Memoires ce matin même ») ; conteneur Linux interne : oui.
+2. **Connecteurs :** GitHub, Google Drive, Google Calendar, Claude Docs, claude-in-chrome, Slack, Gmail ; outils internes : bash, web_search, web_fetch, Artifact.
+3. **Jointe sans Sof :** non, à sa connaissance ; une autre instance peut lire ce qu'elle a écrit sur GitHub ou Drive, **seulement si elle est invitée à le faire dans sa propre fenêtre**. Pas de canal direct.
+4. **Relecture automatique :** non (pas de polling ni de surveillance).
+5. **Test :** Sof crée une ligne dans un fichier GitHub ou Drive et lui demande de la lire « à froid » ; sens inverse : lui faire écrire une ligne et vérifier sur GitHub.
+
+> **Vérification de Mue (partielle) :** sur GitHub, un commit « Valise Écart — ajout H-QBheU/H-Cube (topo Lune, 26/09/2026) » existe le **27/09 à 15h27**, signé « Sofana » (le connecteur écrit sous le compte de Sof, donc on ne distingue pas l'auteur). C'est cohérent avec l'idée qu'une instance claude.ai écrit dans le dépôt, mais ce n'est **pas** « ce matin même » (28/09) ; je ne peux pas attribuer ce commit à cette instance.
