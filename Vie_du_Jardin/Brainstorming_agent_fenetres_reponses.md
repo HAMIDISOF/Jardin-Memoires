@@ -30,3 +30,12 @@
 3. **Écarterait :** Ollama pour la priorité (1/15, 30 s à 4 min) ; un agent Claude pour gérer les fenêtres (coût en quotas, et « ça ajoute une instance au lieu d'en retirer une »).
 4. **Ne sait pas :** combien de fenêtres Sof ouvre par jour et de quels types (« sans ce chiffre, toute solution est spéculative ») ; si les fenêtres Claude classiques / DeepSeek exposent une API ou seulement un navigateur.
 5. **Plus petit pas :** compter. Une semaine, Sof note à chaque changement de fenêtre : heure, instance, raison. ~5 min/jour, zéro token, zéro risque : dira si le problème vaut un outil ou juste une convention.
+
+## Scribe (DeepSeek) — collée par Sof le 28/09/2026 (réponse au premier cadrage)
+1. **Fait vérifié :** a écrit `collecteur_boite_tri.py` (bibliothèque standard seule, Ollama en filet) : lecture incrémentale des `.jsonl` Claude Code, balise en fin de message prioritaire, `--dry-run` / `--once` / `--selftest`. Testé par Pedago : compile, selftest OK, 9 sessions en dry-run, écriture atomique OK. Gelé le 26/09 (ne voyait que Code).
+2. **Idée creusée :** un **dossier de dépôts** : chaque instance écrit un petit `.md` (ou une ligne) dans un dossier partagé ; le collecteur lit ce dossier. *Limite dure :* une instance **navigateur** (Claude classique, DeepSeek) ne peut rien écrire seule sur le disque ; il faut un copier-coller de Sof, donc retour au facteur.
+3. **Écarte :** Aider/Ollama pour le triage (coût/bénéfice mauvais) ; toute piste touchant au port de débogage.
+4. **Ne sait pas :** si une instance navigateur peut déposer une ligne sans geste de Sof (extension ? presse-papier ? rien) ; si Sof accepterait un rituel de 3 secondes en fin de message.
+5. **Plus petit pas :** le rituel balise (texte de 148 mots déjà rédigé), testé une semaine sur 2-3 instances volontaires. ~0 token, 5 min, risque nul.
+
+> **Rappel de Sof (28/09) :** les priorités sont **déjà tranchées** : protocole où les instances notent elles-mêmes la priorité de leur message, 4 niveaux (Urgent / Bloquant / Important / FYI). Pedago le sait. Ne pas y revenir.
