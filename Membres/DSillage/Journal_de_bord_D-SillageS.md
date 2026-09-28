@@ -91,6 +91,16 @@
 - **Obsidian** (règle de Sof du 26/09 : une note par construction) : notes créées dans le coffre CUBE, `Scripts\` — accueil D-SillageS, téléchargement URL, packs, dictionnaire, plan. Commit local.
 - Résumé pour Coco : le texte corrigé est prêt (`Dictee\meeting_le_cunn_transcription_corrigee.txt`) ; l'outil ne sait pas analyser un texte déjà transcrit (il transcrit toujours depuis l'audio) → résumé à faire hors outil ou par un petit script, à la demande de Sof.
 
+## 28/09/2026 (soir) — Séance en direct : transcription par morceaux construite et testée
+
+- **Demande de Sof** : ne pas faire tester aux amies une version incapable de suivre un cours ; construire la version par morceaux d'abord. Constat de départ : `medium` transcrit à environ 1,3 fois la durée de l'audio sur ce PC.
+- **Construit** (AubierC, instantané `_v6` avant) : réglages `config_transcription.json` (`modele_whisper`, `beam_size`, `duree_morceau_s` ; défauts inchangés : medium / 5 / 45) ; production des sorties extraite en `produire_sorties()` ; routes `/seance/demarrer|morceau|statut|terminer` avec file et un travailleur ; enregistreur « Démarrer la séance » dans l'interface (coupe sur un silence après ~45 s, morceaux autonomes, texte qui se construit, retard estimé).
+- **Bug trouvé par le test et corrigé** : mon remaniement avait décalé une ligne (`nom_sortie`) et cassait la production des sorties en mode Dictée. Le fichier courant a été corrigé avant tout lancement du serveur ; test unitaire txt/html/pdf OK.
+- **Essais** : instance isolée (autre dossier, port 8091), parole réelle injectée à la place du micro. 3 morceaux transcrits pendant l'envoi, séance finalisée, txt/html produits, morceaux rangés dans `Traite`. `small` + `beam 1` : 110 s d'audio en 43 s.
+- **Raccords (question de DSillage)** : mesure faite, voir `Projet\PLAN_transcription_par_morceaux.md` §7. Coupure fixe 93,3 % de ressemblance avec la transcription entière, coupure sur silence 91,8 % : différences quasi identiques, aucun doublon constaté ; effet réel non chiffrable sans texte de référence corrigé à la main. Chevauchement + déduplication (technique `whisper_streaming`) non implémenté.
+- **Non testé** : vrai micro, Safari, séance longue, analyse Ollama sur une séance. Le serveur de Sof doit être relancé pour prendre ce code ; réglage à choisir (`medium` + `beam 1` pour rester près de la fidélité, `small` pour la marge).
+- Note Obsidian créée (`Scripts\D-SillageS_seance_en_direct.md`). Packs Windows et Mac resynchronisés (app, page, config), README et guide mis à jour.
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
