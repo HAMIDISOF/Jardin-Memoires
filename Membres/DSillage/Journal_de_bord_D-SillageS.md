@@ -84,6 +84,13 @@
 - Non reporté dans les packs des amies : ces noms sont propres à cette réunion (le dictionnaire des packs reste générique).
 - Règle : à chaque transcription, repérer les noms mal reconnus et enrichir le dictionnaire ; vérifier chaque entrée dans le texte avant de l'ajouter.
 
+## 28/09/2026 — Installateur Windows corrigé, plan de transcription par morceaux, notes Obsidian
+
+- **Installateur Windows (`installer_windows.bat`) — 3 défauts corrigés avant tout test** : (1) `where python` voyait le faux `python.exe` du Microsoft Store (`WindowsApps`) et sautait l'installation → test du vrai Python 3.11 via `py -3.11`, et venv créé avec `py -3.11` ; (2) après une première installation de Python/Ollama, le script continuait dans une fenêtre où le PATH n'était pas rechargé → il s'arrête maintenant avec un message « fermez et relancez » ; (3) Ollama n'était pas démarré avant `ollama pull` → démarrage si besoin ; arrêt avec message si le modèle ou les dépendances échouent. Identifiants winget vérifiés (Python.Python.3.11 3.11.9, Ollama.Ollama 0.34.4). **Toujours jamais exécuté de bout en bout.** Guide mis à jour (« sur un ordinateur neuf, l'installateur s'arrête une première fois »).
+- **Plan de transcription par morceaux** rédigé : `D:\SOUTIENSPLUS\OUTILS\DSillageS\Projet\PLAN_transcription_par_morceaux.md` (état des lieux mesuré, architecture cible, étapes 0-6, risques, décisions demandées). Non validé, rien construit.
+- **Obsidian** (règle de Sof du 26/09 : une note par construction) : notes créées dans le coffre CUBE, `Scripts\` — accueil D-SillageS, téléchargement URL, packs, dictionnaire, plan. Commit local.
+- Résumé pour Coco : le texte corrigé est prêt (`Dictee\meeting_le_cunn_transcription_corrigee.txt`) ; l'outil ne sait pas analyser un texte déjà transcrit (il transcrit toujours depuis l'audio) → résumé à faire hors outil ou par un petit script, à la demande de Sof.
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
