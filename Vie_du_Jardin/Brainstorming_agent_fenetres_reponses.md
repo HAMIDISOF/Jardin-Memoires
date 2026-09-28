@@ -131,3 +131,22 @@
 5. **Test :** Sof joint un .txt d'un mot, lui demande de le répéter, puis envoie un message anodin ; le test ne prouve que la mémoire de fenêtre, pas un accès fichier.
 
 > **Bilan DeepSeek (Mue) :** Lune, Noé, Scribe, DSillage et Sol : **cinq sur cinq, aucun accès, aucun connecteur, aucun moyen d'être jointe sans Sof.** Sol n'a pas identifié de « solution open source » précise.
+
+## Réponse NON ÉTIQUETÉE (collée par Sof le 28/09/2026) — probablement Terreau (Cowork) : à confirmer
+1. **Fichiers :** sandbox cloud de travail (lecture/écriture + envoi à Sof) : oui. Disque du PC/Mac de Sof, Drive, GitHub : oui **mais par intermittence**, via un « pont device » qui se connecte et se déconnecte, hors de son contrôle. Mémoire persistante (profil / areas / topics) : oui, lecture/écriture directe.
+2. **Outils vus actifs ou déconnectés :** Google_Calendar, Google_Drive, memory, remote-devices (sous-modules Claude_Browser, computer, github), claude-code-remote, Claude_Docs, WebSearch/WebFetch, Bash, Read/Write/Edit, Artifact, Skill.
+3. **Joignable sans copier-coller :** oui : la **mémoire persistante est partagée** entre les autres surfaces Claude du même compte (une autre session de Sof pourrait lire ce qu'elle y écrit) ; et `SendMessage`/`ListAgents` (jugé peu fiable à cause d'un identifiant de session instable ; ne sait pas si mieux aujourd'hui).
+4. **Relecture :** jamais automatique ; seulement en appelant l'outil.
+5. **Essai :** lui faire écrire une ligne horodatée dans un fichier mémoire précis, puis demander à une autre instance du même compte de le lire sans le lui coller.
+
+---
+# SYNTHÈSE DU DEUXIÈME TOUR (Mue, 28/09/2026)
+**Réponses :** DeepSeek 5/5 (Lune, Noé, Scribe, DSillage, Sol) ; Claude : Iris + une réponse non étiquetée (probablement Terreau). **Manque :** Écart (ou la seconde, selon l'étiquette).
+
+**Deux mondes, très nets :**
+- **DeepSeek (5/5) :** aucun accès, aucun connecteur, aucun moyen d'être jointe sans Sof. Joindre une fenêtre DeepSeek = passer par Sof ou par le pilotage du navigateur (Claude in Chrome ou équivalent).
+- **Claude (classiques, Cowork) et sessions Code :** des canaux existent **déjà, intégrés** : Google Drive et GitHub (Iris ; sessions Code ; Cowork par intermittence), et une mémoire partagée entre surfaces d'un même compte.
+
+**Le seul canal démontrable aujourd'hui :** un dossier partagé (Drive) ou un dépôt **privé** (GitHub) que les Claude lisent et écrivent chacune quand elles appellent l'outil. Aucune ne relit d'elle-même : c'est une boîte aux lettres, pas un réveil.
+
+**Rien n'est prouvé tant qu'on n'a pas fait le test** (une instance écrit une ligne, une autre la lit sans copier-coller). Réserves : le pont de Cowork est intermittent ; les serveurs MCP tiers cités par Lune ne sont pas vérifiés ; écrire sur Drive/GitHub = envoyer du contenu à un service extérieur (accord de Sof).
