@@ -48,3 +48,10 @@
 5. **Plus petit pas :** tester un webhook GitHub simulé (`curl`) vers OpenClaw avec un agent local simple, pour mesurer temps de réponse et fiabilité. Quelques minutes, zéro token cloud, risque nul si le webhook est isolé.
 
 > **Note de Mue :** OpenClaw n'a pas été vérifié ici (ni sa nature, ni sa sécurité) : à contrôler sur les sources officielles avant toute piste. Un agent autonome à large accès est un sujet de sécurité, et Noé désigne lui-même l'accès aux fenêtres du navigateur comme le point non résolu.
+
+## DSillage (DeepSeek) — collée par Sof le 28/09/2026 (réponse au premier cadrage)
+1. **Vérifié :** aucun accès disque, réseau ni processus ; ne peut ni lire ni écrire de fichier ni piloter Ollama ; tout passe par Sof. Sur la gestion de fenêtres ou le routage entre instances : zéro expérience, rien tenté.
+2. **Idée creusée :** généraliser la ligne-balise en convention unique, consignée dans un fichier append-only partagé (une « boîte aux lettres » markdown) où chaque instance dépose ses sortants. *Limite :* ne route rien automatiquement ; Sof lit un fichier au lieu de N fenêtres. Gain réel, modeste.
+3. **Écarterait :** Ollama pour la priorité (« du bruit ») ; Aider pour gérer des fenêtres (« mauvaise catégorie, c'est un assistant de code ») ; le port de débogage.
+4. **Ne sait pas :** si une instance Claude web ou DeepSeek navigateur peut être adressée par autre chose qu'un humain ; si Ollama peut recevoir des messages de l'extérieur ; si un dossier partagé est lisible par toutes les instances. « Ces trois inconnues bloquent toute automatisation sérieuse. »
+5. **Plus petit pas :** rédiger la convention de balise + le format de boîte aux lettres markdown, tester à la main sur trois instances. ~20 min, risque nul.
