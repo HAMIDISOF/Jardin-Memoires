@@ -14,3 +14,10 @@
 3. **Écarterait :** Ollama pour juger la priorité (mesures : 1/15 et 3/15) ; un agent local (Aider) qui agit sans vérification (« fait » annoncé sans exécution ; pas de test propre sur ce point).
 4. **Ne sait pas :** si un 8B résume correctement 10 lignes de français ; le temps réel par message ; si un agent local tient un rôle de relais fiable.
 5. **Plus petit pas :** mesurer, pas construire : résumer 5 vrais messages avec `deepseek-r1:8b` (`num_ctx` fixé), chronométrer, Sof juge le résultat. Coût : ~30 min de CPU, quasi aucun token Claude, risque nul (lecture seule, hors git). Seulement si Sof le demande.
+
+## MueC (reçue le 28/09/2026) — angle : CUBE, Obsidian, matériel
+1. **Vérifié :** le pont Obsidian → base marche sur 1 cas (note citant un chemin → lien typé). `EtudeEcarts` a révélé 188 chemins cassés après réorganisation de dossiers. Chrome ↔ fenêtre de Lune lu et écrit le 28/09 (rechargement obligatoire pour vérifier ; 1 capture expirée). Matériel : GPU AMD R7 M370 (2 Go) + Intel HD 530, 31,8 Go de RAM ; Ollama : `deepseek-r1:8b` et `deepseek-coder-v2:16b`. **Aucune trace de l'étude du boîtier graphique du 21/09** (dans ses fichiers).
+2. **Idée :** un « journal d'équipe » dans le coffre, une note par instance/projet avec des `[[liens]]` ; le pont en tirerait des liens typés. Zéro token, lisible par toute instance. *Limites :* ne contient que ce qui est écrit ; qui met à jour reste à décider ; le pont ne voit que les chemins cités.
+3. **Écarterait :** Ollama pour juger la priorité (mesures) ; toute écriture en base sans validation humaine (règle de Lune) ; les ports de débogage.
+4. **Inconnues :** Ollama tourne-t-il sur CPU avec cette carte (probable, non vérifié) ? Le portable a-t-il Thunderbolt/USB4 pour un boîtier ? Coût réel en quotas d'un relais ?
+5. **Plus petit pas, seulement si Sof le demande :** une note « Instances » dans le coffre (qui, projet, binôme, dernier état). ~15 min, ~0 quota, risque nul ; et appliquer la règle déjà posée : relancer `EtudeEcarts` après chaque réorganisation.
