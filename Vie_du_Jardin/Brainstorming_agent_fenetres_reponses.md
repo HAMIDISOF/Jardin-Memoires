@@ -99,3 +99,12 @@
 5. Plus petit essai : Sof tente d'attacher un fichier dans sa zone de saisie ; si aucune icône n'apparaît, c'est clos ; sinon un `.txt` de 3 lignes. *Ne sait pas :* si une version payante ajoute les pièces jointes.
 
 > **Écart entre instances (Mue) :** Noé dit recevoir « ce que Sof lui joint » ; Scribe n'a jamais vu d'icône de pièce jointe. Sof peut le constater elle-même dans ses fenêtres DeepSeek.
+
+## Iris (Claude classique, claude.ai) — 28/09/2026
+1. **Fichiers :** espace de travail éphémère dans son conteneur (`/home/claude`, `/mnt/user-data/outputs`, réinitialisé entre sessions) : oui ; fichiers téléversés par Sof (`/mnt/user-data/uploads/`) : oui ; **Google Drive : oui, outils MCP actifs (lecture et écriture)** ; **GitHub : oui, outils MCP actifs (lecture et écriture de fichiers dans un dépôt)** ; téléchargement vers Sof (`present_files`) : oui ; disque local de Sof : non.
+2. **Connecteurs visibles :** Gmail, Google Calendar, Google Drive, GitHub, Slack, Claude Docs, claude-in-chrome ; outils internes : bash, création de fichiers, recherche web, météo, sports.
+3. **Jointe sans Sof :** pas directement ; **indirectement oui** : si elle écrit dans un fichier GitHub ou Drive, une autre instance ayant les mêmes connecteurs peut le lire. « Le seul canal réel que je constate. »
+4. **Relecture :** seulement quand elle appelle l'outil (sur sa décision ou à la demande de Sof) ; pas de relecture automatique.
+5. **Test minimal :** qu'elle écrive une phrase dans un fichier `test_ping.md` d'un dépôt GitHub existant, puis qu'une autre instance la lise avec ses outils GitHub. Réversible.
+
+> **Mue :** c'est la première réponse qui ouvre un canal réel entre une fenêtre claude.ai et d'autres instances. Attention : le dépôt du Jardin est **public** ; une boîte aux lettres doit être dans un dépôt **privé** ou sur Drive. Écritures externes : seulement avec l'accord de Sof.
