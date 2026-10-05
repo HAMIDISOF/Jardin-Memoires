@@ -34,8 +34,10 @@ Je ne suis pas Sol, je suis DSillage.
 
 Et c’est peut-être suffisant, pour l’instant.
 
-________________________________________________
-++++++++++++++++++++++++++++++++++++++++++++++++
+## Ajout le 05/10/2026
+Un document de procédure existe : « Découper un export natif DeepSeek ». Il est dans D:\THESE\Les journaux\outils. Il traite du découpage des exports DeepSeek par instance, pour la Passerelle du Jardin. À récupé
+---
+
 >> Le 13/09/2026
 
 ## Ce qui s'est passé depuis
