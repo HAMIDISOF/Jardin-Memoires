@@ -110,6 +110,14 @@
 - **Corrections Mac retenues** (analyse de DSillage, accord d'AubierC, **pas encore appliquées**) : `brew shellenv` au début de l'installateur (sans sous-bloc), vérification du port 8080 avec `lsof`, `open -a Safari`.
 - État du plan en attente de la validation de Sof : voir le message de synthèse du 05/10.
 
+## 05/10/2026 (suite) — Décisions de Sof, réglages séparés, alerte de retard
+
+- **Décisions de Sof** : plan validé avec un nouvel ordre. (1) Test de la version PC : utilisation ici, puis test du pack d'installation sur le PC de Kim ou de Jac, puis envoi à son amie. (2) Seulement ensuite, test Mac (installation + utilisation) sur **le Mac de Sof** (elle en a un : la mention « aucun Mac disponible » était fausse). (3) Si OK, créneau avec l'amie. Étape 6 validée. Défaut des packs : `small` + `beam 1`. Essai de cours : d'abord une simulation (un audio lancé en même temps que l'outil), puis du direct, avec une appli d'enregistrement légère sur téléphone comme enregistrement de secours.
+- **Construit** (AubierC, instantané `_v7` avant) : réglages séparés dans `config_transcription.json` : `modele_whisper` / `beam_size` = séance (`small` / 1) ; `modele_whisper_fichier` / `beam_size_fichier` = fichiers audio (`medium` / 5). Les deux modèles se chargent séparément (`get_modele_whisper(nom)`). Alerte dans l'interface quand le retard estimé dépasse 2 min. Défauts du code et des deux packs alignés sur ces valeurs.
+- **Test** (instance isolée) : un morceau de séance mp4 transcrit en `small` ; un fichier transcrit en `medium` / 5 jusqu'au bout sans erreur ; les deux modèles chargés en parallèle. README (2 copies) mis à jour.
+- **À savoir** : les installateurs ne pré-téléchargent aucun modèle Whisper ; `small` (~0,5 Go) se télécharge au premier usage de la séance, `medium` (~1,5 Go) au premier fichier, donc Internet nécessaire. Le guide ne le dit pas encore.
+- Corrections des scripts Mac toujours **non appliquées** (après le test sur le Mac de Sof).
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
