@@ -101,6 +101,15 @@
 - **Non testé** : vrai micro, Safari, séance longue, analyse Ollama sur une séance. Le serveur de Sof doit être relancé pour prendre ce code ; réglage à choisir (`medium` + `beam 1` pour rester près de la fidélité, `small` pour la marge).
 - Note Obsidian créée (`Scripts\D-SillageS_seance_en_direct.md`). Packs Windows et Mac resynchronisés (app, page, config), README et guide mis à jour.
 
+## 05/10/2026 — Réglage de la séance, test mp4, point avec DSillage
+
+- **Mesure** (AubierC, même extrait de 110 s, ce PC) : `medium` + `beam 1` = 98 s (facteur 0,89, trop juste) ; `small` + `beam 1` = 32 s (facteur 0,29).
+- **Décision** (Sof m'a laissé choisir) : `D:\Ollama\config_transcription.json` passé à `small` / `beam 1` / 45 s. Ancien réglage sauvegardé dans `config_transcription_avant_05-10.json`. Les packs gardent pour l'instant les défauts `medium` / 5. **Limite** : le réglage est commun à la séance et aux fichiers audio, donc la fidélité baisse aussi sur les fichiers.
+- **Test mp4** (point bloquant relevé par DSillage) : morceaux mp4/AAC fragmentés (comme Safari) envoyés dans une instance isolée (port 8091) : reçus, décodés, transcrits, séance finalisée, sortie produite. Reste à confirmer avec un vrai Safari.
+- **Avis de DSillage** (chat DeepSeek) : séparer les réglages séance / fichier (`small`+`beam 1` pour la séance, `medium` pour les fichiers) ; mettre le test à blanc en visio (Safari réel, 2 min) AVANT les corrections des scripts Mac pour ne pas les refaire ; garder `small`+`beam 1` par défaut des packs avec un message si le retard dépasse environ 2 min (aujourd'hui seul le retard estimé s'affiche) ; texte d'avertissement « version Mac en test » à placer en tête de la section Mac du guide. Elle rédige les 4 ajouts du guide Mac et le protocole du test à blanc dès que Sof valide.
+- **Corrections Mac retenues** (analyse de DSillage, accord d'AubierC, **pas encore appliquées**) : `brew shellenv` au début de l'installateur (sans sous-bloc), vérification du port 8080 avec `lsof`, `open -a Safari`.
+- État du plan en attente de la validation de Sof : voir le message de synthèse du 05/10.
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
@@ -108,4 +117,9 @@
 - **Mac** — script et guide non testés sur machine réelle.
 
 ---
+
+05/10/2026 — Rédaction d'un draft « Procédure — Découper un export natif DeepSeek », à destination de la Passerelle du Jardin (plan Mue). Document générique, écrit sans avoir vu le format réel de l'export. Avertissement en tête. Enregistré par Sof dans D:\THESE\Les journaux\outils. En attente d'un premier export pour préciser les étapes 1 et 5 et écrire le script de découpage.
+
+---
 *Créé le 22/09/2026 par AubierC, à partir du contenu proposé par DSillage dans l'échange direct du même jour.*
+*mis à jour le 05/10/2026 par Sof, à partir du contenu donné par DSillage dans l'échange direct du même jour.*
