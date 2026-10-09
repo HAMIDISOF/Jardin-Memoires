@@ -125,7 +125,7 @@
 - **Construit** (AubierC, instantané `_v8` avant) : liste à cases à cocher (Tout cocher / décocher) ; `/lancer` accepte une liste de fichiers ; file d'attente avec un seul travailleur (« En file d'attente... » puis traitement dans l'ordre). Le mode parallèle reste. **Supprimé** : lien « Éditer » et route `/editer` (jamais fonctionné ; décision de Sof). Packs et README synchronisés.
 - **Test** (instance isolée + vraie page) : 3 fichiers lancés ensemble traités à la suite ; fichier inexistant refusé ; 2 fichiers cochés par « Tout cocher » puis lancés depuis la page, sans erreur.
 - **Correction** : la ligne « aucun des deux binômes n'a de Mac » (entrée du 24/09) est fausse : Sof a son propre Mac, qui sera utilisé pour le test Mac après le test PC.
-- À noter : les cartes de résultats restent affichées jusqu'à « Effacer les résultats » ou au redémarrage ; Sof signale qu'elles restent même après avoir déplacé les fichiers hors de `Traite` (comportement prévu : l'historique n'est pas lié aux fichiers).
+- **Historique** : Sof signale que les cartes de résultats restent affichées même après avoir déplacé les fichiers. Sur sa demande, l'historique des traitements terminés s'efface maintenant tout seul au chargement d'un nouveau fichier et au lancement d'un traitement (testé en instance isolée ; packs synchronisés). Les 23 mp3 restants (04 à 26) ont été copiés dans `A_transcrire` (copies, originaux intacts).
 
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
