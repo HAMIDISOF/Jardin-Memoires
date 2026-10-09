@@ -118,6 +118,15 @@
 - **À savoir** : les installateurs ne pré-téléchargent aucun modèle Whisper ; `small` (~0,5 Go) se télécharge au premier usage de la séance, `medium` (~1,5 Go) au premier fichier, donc Internet nécessaire. Le guide ne le dit pas encore.
 - Corrections des scripts Mac toujours **non appliquées** (après le test sur le Mac de Sof).
 
+## 09/10/2026 — Test PC, file d'attente, suppression d'« Éditer »
+
+- **Test PC de Sof** (serveur relancé, code du 05/10) : glisser-déposer d'un mp3 → le fichier arrive dans la liste « Fichier à traiter » (peu visible) ; transcription d'un fichier de 2 min en Dictée brute réussie (texte correct) ; 3 fichiers de ~2 min lancés un à un, chacun en moins de 3 min. Sof a un lot de 26 mp3 à transcrire (cours audio).
+- **Constat** : un seul traitement à la fois (sinon « Mode parallèle », gourmand). Demande de Sof : plusieurs fichiers l'un après l'autre.
+- **Construit** (AubierC, instantané `_v8` avant) : liste à cases à cocher (Tout cocher / décocher) ; `/lancer` accepte une liste de fichiers ; file d'attente avec un seul travailleur (« En file d'attente... » puis traitement dans l'ordre). Le mode parallèle reste. **Supprimé** : lien « Éditer » et route `/editer` (jamais fonctionné ; décision de Sof). Packs et README synchronisés.
+- **Test** (instance isolée + vraie page) : 3 fichiers lancés ensemble traités à la suite ; fichier inexistant refusé ; 2 fichiers cochés par « Tout cocher » puis lancés depuis la page, sans erreur.
+- **Correction** : la ligne « aucun des deux binômes n'a de Mac » (entrée du 24/09) est fausse : Sof a son propre Mac, qui sera utilisé pour le test Mac après le test PC.
+- À noter : les cartes de résultats restent affichées jusqu'à « Effacer les résultats » ou au redémarrage ; Sof signale qu'elles restent même après avoir déplacé les fichiers hors de `Traite` (comportement prévu : l'historique n'est pas lié aux fichiers).
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
