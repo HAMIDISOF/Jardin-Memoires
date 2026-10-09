@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projet Pédagogie : à lire en premier</title>
+<style>
+:root{--bg:#f7f5ef;--card:#fff;--fg:#26261f;--muted:#6a675c;--rule:#e3dfd2;--accent:#2f6b4f}
+@media (prefers-color-scheme: dark){:root{--bg:#1c1d1a;--card:#262822;--fg:#ece9df;--muted:#a8a496;--rule:#3a3c34;--accent:#7fc9a2}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 system-ui,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+h1{margin:0 0 4px;font-size:clamp(1.5rem,4vw,2rem)}
+.sub{color:var(--muted);font-size:.92rem;margin:0 0 20px}
+h2{font-size:1.2rem;margin:30px 0 8px;border-top:2px solid var(--rule);padding-top:12px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:12px 18px;margin:12px 0}
+.card h3{margin:0 0 4px;font-size:1.05rem}
+.card p{margin:.3em 0}
+a{color:var(--accent);font-weight:600}
+code{font-size:.85em;background:var(--rule);padding:1px 6px;border-radius:6px}
+ol,ul{padding-left:1.3em}
+li{margin:.3em 0}
+.src{color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Projet Pédagogie : à lire en premier</h1>
+<p class="sub">Page d'accueil du projet, créée le 09/10/2026 par Pédago à la demande de Sof. Elle renvoie vers tout, sans rien dupliquer.</p>
+
+<h2>En bref</h2>
+<div class="card">
+<p>Le Jardin produit des <b>fiches pédagogiques interactives</b> (Écart, Boussole, Pédago, DS_P…) pour les élèves de Sof. Les fiches <b>terminées</b> vivent en local, dans <code>D:\SOUTIENSPLUS\Scolaire\Reserve\</code> (hors dépôt). Ce dossier-ci du dépôt contient le <b>suivi</b>, les <b>règles</b> et le <b>catalogue</b>.</p>
+<p class="src">Ces pages HTML s'ouvrent sur le poste de Sof ; sur GitHub, ouvrir le fichier montre son code source, pas son rendu.</p>
+</div>
+
+<h2>Par où commencer</h2>
+<div class="card">
+<h3>1. Les règles (à lire avant de produire une fiche)</h3>
+<p><a href="Regles/Principes_pedagogiques_fiches.html">Principes pédagogiques pour les fiches</a> (version <a href="Regles/Principes_pedagogiques_fiches.md">Markdown</a>) : référence commune validée par Sof le 24/09/2026, qui commence par le principe d'étayage. Rapatriée ici depuis <code>Projet_DeepsClaude/</code> le 09/10/2026.</p>
+</div>
+<div class="card">
+<h3>2. Ce qui existe : le catalogue</h3>
+<p><a href="Catalogue_fiches.html">Catalogue des fiches</a> : titre, niveau, matière, date, emplacement local. Généré depuis <code>Reserve</code>, sans aucune fiche nominative. Il se régénère à la demande de Sof.</p>
+</div>
+<div class="card">
+<h3>3. Le protocole de revue (acté le 26/09/2026)</h3>
+<ol>
+<li>Sof teste une fiche puis dépose <code>revue_et_correction_nom_fiche.md</code> : Écart corrige.</li>
+<li>Fiche validée : Sof dépose <code>nom_fiche_validée.md</code> puis supprime la note de revue.</li>
+<li>Blocage non résolvable seul : Écart dépose <code>blocage_nom_fiche.md</code>.</li>
+</ol>
+<p class="src">Le détail est dans le <a href="README.md">README</a> du dossier.</p>
+</div>
+
+<h2>Les autres documents du projet</h2>
+<div class="card">
+<p>Ils restent dans <code>Vie_du_Jardin/Projet_DeepsClaude/</code>, <b>non déplacés</b> :</p>
+<ul>
+<li><a href="../Projet_DeepsClaude/Protocole_duo_Pedago_DSP.md">Protocole_duo_Pedago_DSP.md</a> : le duo Pédago × DS_P</li>
+<li><a href="../Projet_DeepsClaude/Note_sync_reorg_SOUTIENSPLUS.md">Note_sync_reorg_SOUTIENSPLUS.md</a> : synchro de la réorganisation de SOUTIENSPLUS (01/09, voir les mises à jour ci-dessous)</li>
+<li><a href="../Projet_DeepsClaude/DS_CL_1.md">DS_CL_1.md</a> et <a href="../Projet_DeepsClaude/Echange_Pedago_DSP.md">Echange_Pedago_DSP.md</a> : échanges Pédago × DS_P</li>
+<li><a href="../Projet_DeepsClaude/Journal_delegations_Aider.md">Journal_delegations_Aider.md</a> : journal des délégations</li>
+</ul>
+<p class="src">Suivi_Duo_Mue_Tisserand_MTC.md, rangé dans le même dossier, concerne le projet MTC : il n'est pas touché.</p>
+</div>
+
+<h2>Ce qui a changé depuis la note de synchro du 01/09</h2>
+<div class="card">
+<ul>
+<li><code>D:\SOUTIENSPLUS\Reserve\</code> est devenu <code>D:\SOUTIENSPLUS\Scolaire\Reserve\</code> ; elle est rangée par niveau puis par matière (1ere, 2nde, 3eme, 4eme, 5eme, 6eme, cm1_cm2, CE, Terminale, ludiquité, transverse…).</li>
+<li>Règle de rangement : une fiche vit <b>une seule fois</b> dans <code>Reserve\&lt;niveau&gt;\&lt;matière&gt;\</code> ; les raccourcis par élève iront dans <code>Comptes_Eleves\&lt;Prénom&gt;\</code>, sans copie du fichier.</li>
+<li>L'ancien dossier <code>C_Scolaire</code> a été absorbé dans <code>Reserve</code> le 02/10/2026 (rien supprimé, doublons archivés dans <code>_archive</code>).</li>
+</ul>
+</div>
+
+<h2>Données personnelles</h2>
+<div class="card">
+<p>Aucun nom d'élève ni donnée personnelle de mineur dans le dépôt : les fiches nominatives restent en local, et seul leur emplacement général est connu.</p>
+</div>
+
+</div>
+</body>
+</html>

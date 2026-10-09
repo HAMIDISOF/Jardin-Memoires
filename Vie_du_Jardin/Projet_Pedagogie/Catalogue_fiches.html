@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue des fiches pédagogiques</title>
+<style>
+:root{--bg:#f7f5ef;--card:#fff;--fg:#26261f;--muted:#6a675c;--rule:#e3dfd2;--accent:#2f6b4f}
+@media (prefers-color-scheme: dark){:root{--bg:#1c1d1a;--card:#262822;--fg:#ece9df;--muted:#a8a496;--rule:#3a3c34;--accent:#7fc9a2}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 system-ui,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 16px 60px}
+h1{margin:0 0 4px;font-size:clamp(1.5rem,4vw,2rem)}
+.sub{color:var(--muted);font-size:.92rem;margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:12px 16px;margin:12px 0}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+input,select{font:inherit;padding:8px 12px;border-radius:10px;border:1px solid var(--rule);background:var(--card);color:var(--fg)}
+input{flex:1;min-width:200px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{position:sticky;top:0;background:var(--bg);color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
+td.p{font-family:Consolas,monospace;font-size:.78rem;color:var(--muted);word-break:break-all}
+h2{font-size:1.15rem;margin:30px 0 8px;border-top:2px solid var(--rule);padding-top:10px}
+.cnt{color:var(--accent);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Catalogue des fiches pédagogiques</h1>
+<p class="sub">Généré le 09/10/2026 par Pédago, depuis le dossier <code>Reserve</code> (local). Cette page ne contient <b>aucune fiche</b> : seulement ce qui existe et où.</p>
+
+<div class="card">
+<p><span class="cnt">179</span> fiches HTML et notes Markdown listées.</p>
+<p><b>Comment lire :</b> « Emplacement » est un chemin local, visible seulement sur le poste de Sof (Écart ne voit que le dépôt) : pour qu'Écart ouvre une fiche, Sof la lui transmet. <b>Il n'existe pas, dans les données, de statut de validation pédagogique</b> (validée / à revoir) : ce suivi est celui du protocole de revue (voir le README du dossier).</p>
+<p class="sub">Écartés volontairement : 46 fichiers dont le chemin contient un prénom d'élève, 13 pages web enregistrées (avec leur dossier de fichiers), tous les dossiers <code>_archive</code>. Les PDF, Word, zip, images, audio sont comptés plus bas, non listés un par un.</p>
+</div>
+
+<div class="tools">
+<input id="q" type="search" placeholder="Chercher un titre, un mot, un dossier…">
+<select id="lv"><option value="">Tous les niveaux / dossiers</option><option>(racine)</option><option>1ere</option><option>2nde</option><option>3eme</option><option>4eme</option><option>5eme</option><option>cm1_cm2</option><option>ludiquité</option><option>Supérieur</option><option>Terminale</option><option>transverse</option></select>
+</div>
+
+<table id="t">
+<thead><tr><th>Niveau</th><th>Matière</th><th>Titre</th><th>Type</th><th>Date</th><th>Emplacement</th></tr></thead>
+<tbody>
+<tr data-n="(racine)"><td>(racine)</td><td>—</td><td><b>Fiche 1 — Équations différentielles d&#x27;ordre 1 : y&#x27; = ay + b</b></td><td>md</td><td>01/10/2026</td><td class="p">Reserve\Fiche_1_Equations_differentielles_ordre1.md</td></tr>
+<tr data-n="(racine)"><td>(racine)</td><td>—</td><td><b>Fiche 2 — Suites : arithmétiques, géométriques, arithmético-géométriques, limites, récurrence</b></td><td>md</td><td>01/10/2026</td><td class="p">Reserve\Fiche_2_Suites.md</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>maths</td><td><b>Sujet dérivées – 1ère spécialité maths</b></td><td>html</td><td>02/05/2026</td><td class="p">Reserve\1ere\maths\sujet_derivees.html</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>phys-chim</td><td><b>Correction DM – Électricité et chimie</b></td><td>html</td><td>04/05/2026</td><td class="p">Reserve\1ere\phys-chim\suite DM ch 7.8.9.html</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>phys-chim</td><td><b>Correction DM – Éolienne &amp; Éclairage (1ère spé PC)</b></td><td>html</td><td>03/05/2026</td><td class="p">Reserve\1ere\phys-chim\1ePC_ERRA_Jo_DM_ch.7.8.9.html</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>phys-chim</td><td><b>Correction DM – Éolienne et consommation (1ère spé PC)</b></td><td>html</td><td>03/05/2026</td><td class="p">Reserve\1ere\phys-chim\1ePC_ERRA_Jo_DM_ch.7.8.9_v1.html</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>svt</td><td><b>L&#x27;ADN : Schéma niv 2 : exercice gratuit en ligne - SVT - Premiere</b></td><td>html</td><td>08/12/2022</td><td class="p">Reserve\1ere\svt\Jeu_ADN_SVT 1ere.html</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>svt</td><td><b>Video_cellules et histoire théorie cell_E.S.1ere</b></td><td>html</td><td>10/11/2022</td><td class="p">Reserve\1ere\svt\Video_cellules et histoire théorie cell_E.S.1ere.html</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>svt</td><td><b>Video_membrane plasmique_E.S.1ere</b></td><td>html</td><td>10/11/2022</td><td class="p">Reserve\1ere\svt\Video_membrane plasmique_E.S.1ere.html</td></tr>
+<tr data-n="1ere"><td>1ere</td><td>svt</td><td><b>Video_structure complexe_cellule_e_E.S.1ere</b></td><td>html</td><td>10/11/2022</td><td class="p">Reserve\1ere\svt\Video_structure complexe_cellule_e_E.S.1ere.html</td></tr>
+<tr data-n="2nde"><td>2nde</td><td>—</td><td><b>2nde — Les ensembles de nombres N, Z, D, Q, R</b></td><td>html</td><td>27/09/2026</td><td class="p">Reserve\2nde\2nde_ensembles_nombres_pilote.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>Colette – Claudine à l&#x27;école</b></td><td>html</td><td>17/06/2026</td><td class="p">Reserve\3eme\francais\DNB_FR\2018\Sujet_DNB_2018_Colette.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>Contrôle – La phrase complexe (Niveau 1)</b></td><td>html</td><td>15/09/2026</td><td class="p">Reserve\3eme\francais\Contrôle – La phrase complexe (Niveau 1).html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>Dictée &amp; Questions — La phrase complexe (3e)</b></td><td>html</td><td>27/09/2026</td><td class="p">Reserve\3eme\francais\Dictée préparée_niv 3.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>DNB 2018 – Colette (sujet + corrigé intégral + dictée + rédaction)</b></td><td>html</td><td>16/06/2026</td><td class="p">Reserve\3eme\francais\DNB_FR\2018\DNB_FR_2018_corrigé.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>DNB 2024 – Français (sujet + corrigés interactifs)</b></td><td>html</td><td>13/05/2026</td><td class="p">Reserve\3eme\francais\DNB_FR\2024\DNB_FR_2024_V3.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>DNB 2025 – Français (Sujet + corrigés interactifs)</b></td><td>html</td><td>07/05/2026</td><td class="p">Reserve\3eme\francais\DNB_FR\2025\DNB_FR_2025_V3_1.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>Entraînnement – Grammaire (partie interactive)</b></td><td>html</td><td>13/05/2026</td><td class="p">Reserve\3eme\francais\DNB_FR\Questions_brevet blanc_FR.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>Phrases complexes &amp; propositions subordonnées — 3e</b></td><td>html</td><td>27/09/2026</td><td class="p">Reserve\3eme\francais\fiche_phrases_complexes.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>francais</td><td><b>Évaluation — La phrase complexe (3e)</b></td><td>html</td><td>27/09/2026</td><td class="p">Reserve\3eme\francais\Contrôle – La phrase complexe (Niveau 2).html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>histoire-geo</td><td><b>Civils et militaires dans la Première Guerre mondiale — DNB 3e</b></td><td>html</td><td>07/10/2026</td><td class="p">Reserve\3eme\histoire-geo\fiche_dnb_3e_pгm.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>histoire-geo</td><td><b>Les violences de guerre — DNB Sujet 4</b></td><td>html</td><td>08/10/2026</td><td class="p">Reserve\3eme\histoire-geo\Les violences de guerre — DNB Sujet 4.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>histoire-geo</td><td><b>Mémo PGM</b></td><td>html</td><td>08/10/2026</td><td class="p">Reserve\3eme\histoire-geo\Mémo PGM.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>histoire-geo</td><td><b>Méthode DNB Histoire</b></td><td>html</td><td>08/10/2026</td><td class="p">Reserve\3eme\histoire-geo\Méthode DNB Histoire.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Brevet – Exercice 1 (Q2,3,4) – Fiche de révision</b></td><td>html</td><td>22/04/2026</td><td class="p">Reserve\3eme\maths\DNB_Maths\sujets_dnb\Sujet 2020_exo1.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Brevet – Exercice 2 (Statistiques) – Fiche de révision</b></td><td>html</td><td>23/04/2026</td><td class="p">Reserve\3eme\maths\DNB_Maths\sujets_dnb\Brevet blanc – Exercice 2 (Statistiques).html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Exercice guidé – Développement, factorisation...</b></td><td>html</td><td>13/05/2026</td><td class="p">Reserve\3eme\maths\Maths_Equations\Equation_Exo supplément. interactif.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Fiche DNB - Fonctions (3ème)</b></td><td>html</td><td>12/04/2026</td><td class="p">Reserve\3eme\maths\fonctions.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Fiche DNB - Homothétie (3ème)</b></td><td>html</td><td>12/04/2026</td><td class="p">Reserve\3eme\maths\homothetie.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Fiche Révision – DNB Maths 2022 Métropole</b></td><td>html</td><td>28/05/2026</td><td class="p">Reserve\3eme\maths\DNB_Maths\2022\DNB MATHS 2022.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Proba 3ème — Cours interactif</b></td><td>html</td><td>30/03/2026</td><td class="p">Reserve\3eme\maths\cours_interactif_proba_v2.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Probabilités &amp; Statistiques — 3ème</b></td><td>html</td><td>30/03/2026</td><td class="p">Reserve\3eme\maths\cours_proba_3eme.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Progr_Mult_div_3e</b></td><td>md</td><td>15/09/2026</td><td class="p">Reserve\3eme\maths\PROG\Progr_Mult_div_3e.md</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Résoudre une équation - 5ème - 4ème - 3ème - Vidéo La Fée des Maths</b></td><td>htm</td><td>16/11/2025</td><td class="p">Reserve\3eme\maths\PassEducation\résolution équations video.htm</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Terminale spé maths — Suite arithmético-géométrique et algorithme</b></td><td>html</td><td>15/09/2026</td><td class="p">Reserve\3eme\maths\fiche_arithmetique.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Triangles semblables – Exercices (3e)</b></td><td>html</td><td>10/05/2026</td><td class="p">Reserve\3eme\maths\Triangles_semblables\triangles_semblables_exercices_v2.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Triangles semblables – Exercices (3e)</b></td><td>html</td><td>06/05/2026</td><td class="p">Reserve\3eme\maths\Memo\Fiche_Tri.Semblables.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Triangles semblables – Exercices (3e) – Extraits 1 à 6</b></td><td>html</td><td>10/05/2026</td><td class="p">Reserve\3eme\maths\Triangles_semblables\triangles_semblables_exercices.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>maths</td><td><b>Équation produit nul – fiche 3e</b></td><td>html</td><td>13/05/2026</td><td class="p">Reserve\3eme\maths\Maths_Equations\fiche_equations_prodt nul.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>—</td><td><b>3e — L&#x27;atome : protons, neutrons, électrons</b></td><td>html</td><td>28/09/2026</td><td class="p">Reserve\3eme\fiche_3e_atomes.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>—</td><td><b>Arithmétique 3e — Nombres, PGCD, PPCM</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\3eme\fiche_arithmetique_3e.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>—</td><td><b>L&#x27;atome — Physique-Chimie 3e</b></td><td>html</td><td>29/09/2026</td><td class="p">Reserve\3eme\fiche_3e_atomes_anim.html</td></tr>
+<tr data-n="3eme"><td>3eme</td><td>—</td><td><b>Révisions – Fiches et exemples interactifs</b></td><td>html</td><td>13/05/2026</td><td class="p">Reserve\3eme\index.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>francais</td><td><b>4ème – Le complément du nom</b></td><td>html</td><td>20/04/2026</td><td class="p">Reserve\4eme\francais\Grammaire\Complément du nom_4eme.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>francais</td><td><b>Fiche grammaire 4e - Nature et fonction des mots</b></td><td>html</td><td>16/05/2026</td><td class="p">Reserve\4eme\francais\Natures et Fonctions des mots.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>francais</td><td><b>Figures de style – 4e (capsules différenciées)</b></td><td>html</td><td>10/06/2026</td><td class="p">Reserve\4eme\francais\figures_de_style_Fiche.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>francais</td><td><b>Étude de la langue : Le GN et ses expansions — Correction de l&#x27;évaluation</b></td><td>md</td><td>30/09/2026</td><td class="p">Reserve\4eme\francais\Correction-évaluation-Le-GN-et-ses-expansions-4ème.md</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>francais</td><td><b>Étude de la langue : Le GN et ses expansions — Évaluation</b></td><td>md</td><td>30/09/2026</td><td class="p">Reserve\4eme\francais\Evaluation-Le-GN-et-ses-expansions-4ème.md</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>maths</td><td><b>Fiche 4ème - Calcul littéral</b></td><td>html</td><td>13/04/2026</td><td class="p">Reserve\4eme\maths\calcul_litteral_4eme.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>maths</td><td><b>Fiche 4ème – Puissances</b></td><td>html</td><td>13/04/2026</td><td class="p">Reserve\4eme\maths\Fiche_Puissances_Maths_4eme.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>maths</td><td><b>Fiche : Translation (4ème) – glissement oblique</b></td><td>html</td><td>27/05/2026</td><td class="p">Reserve\4eme\maths\Fiche_translation.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>maths</td><td><b>Puissances de 10 – Exercices 4e (énoncé + corrigé côte à côte)</b></td><td>html</td><td>12/05/2026</td><td class="p">Reserve\4eme\maths\puissances de 10.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>maths</td><td><b>Translation en Maths (4ème)</b></td><td>html</td><td>27/05/2026</td><td class="p">Reserve\4eme\maths\translation_anim.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>svt</td><td><b>Cours SVT 4ème : Nutrition</b></td><td>html</td><td>24/05/2026</td><td class="p">Reserve\4eme\svt\Nutrition.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>svt</td><td><b>cours_4éme_etres vivants</b></td><td>md</td><td>02/04/2026</td><td class="p">Reserve\4eme\svt\cours_4éme_etres vivants.md</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>svt</td><td><b>Nutrition des organismes vivants - SVT 4e</b></td><td>html</td><td>25/05/2026</td><td class="p">Reserve\4eme\svt\Nutrition animale_vs_végétale.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>svt</td><td><b>Évaluation SVT – Nutrition (vérification incluse)</b></td><td>html</td><td>25/05/2026</td><td class="p">Reserve\4eme\svt\Nutrition Evaluation interactive.html</td></tr>
+<tr data-n="4eme"><td>4eme</td><td>svt</td><td><b>Évaluation SVT – Nutrition des organismes vivants</b></td><td>html</td><td>10/07/2026</td><td class="p">Reserve\4eme\svt\Évaluation SVT – Nutrition des organismes vivants.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>francais</td><td><b>Le GN et ses expansions — Correction de l&#x27;évaluation (5ème)</b></td><td>md</td><td>30/09/2026</td><td class="p">Reserve\5eme\francais\Correction-évaluation-Le-GN-et-ses-expansions-5ème.md</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>francais</td><td><b>Le GN et ses expansions — Évaluation (5ème)</b></td><td>md</td><td>30/09/2026</td><td class="p">Reserve\5eme\francais\Evaluation-Le-GN-et-ses-expansions-5ème.md</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>francais</td><td><b>Le GN et ses extensions — 5e</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\5eme\francais\GN_minimal_etendu.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>francais</td><td><b>Le GN et ses extensions — 5e</b></td><td>html</td><td>04/10/2026</td><td class="p">Reserve\5eme\francais\GN_extensions.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>francais</td><td><b>Raconter une expérience, exprimer des sentiments — Fiche interactive</b></td><td>html</td><td>26/09/2026</td><td class="p">Reserve\5eme\francais\niv_5eme_REDACTION_1.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>general</td><td><b>Le carnet du phare</b></td><td>html</td><td>01/09/2026</td><td class="p">Reserve\5eme\general\general_cahier-vacances-6e-5e_carnet-du-phare.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>maths</td><td><b>Fiche révision_Nombres décimaux_6e → 5e</b></td><td>md</td><td>26/08/2026</td><td class="p">Reserve\5eme\maths\Fiche révision_Nombres décimaux_6e → 5e.md</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>maths</td><td><b>Fiche – Opérations mathématiques</b></td><td>html</td><td>25/08/2026</td><td class="p">Reserve\5eme\maths\Les opérations_termes.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>maths</td><td><b>Les opérations et les priorités — entrée en 5ème</b></td><td>html</td><td>10/09/2026</td><td class="p">Reserve\5eme\maths\fiche_operations.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>maths</td><td><b>Symétries axiale et centrale — 5e</b></td><td>html</td><td>08/10/2026</td><td class="p">Reserve\5eme\maths\fiche_symetrie_5e.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>maths</td><td><b>Symétries axiale et centrale — 5e</b></td><td>html</td><td>08/10/2026</td><td class="p">Reserve\5eme\maths\fiche_symetrie_5e_&amp;imp.html</td></tr>
+<tr data-n="5eme"><td>5eme</td><td>—</td><td><b>Fiche 5e — grammaire &amp; maths</b></td><td>html</td><td>27/09/2026</td><td class="p">Reserve\5eme\fiche_5eme_grammaire_maths.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>CM1 – Lecture et grammaire (passé, futur, déterminants, attribut)</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\CM1_Révisions_Future_accordsVS_déterminants_attributs.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>Compréhension – La petite souris</b></td><td>html</td><td>24/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\Textes_Compréh\Text2\texte2_comprehension.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>Déterminants – La petite souris</b></td><td>html</td><td>24/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\Textes_Compréh\Text2\texte2_determinants.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>Grammaire – Sujet/verbe (La petite souris)</b></td><td>html</td><td>24/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\Textes_Compréh\Text2\texte2_grammaire.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>Lecture – La petite souris</b></td><td>html</td><td>24/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\Textes_Compréh\Text2\texte2_lecture.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>Lexique – La petite souris</b></td><td>html</td><td>24/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\Textes_Compréh\Text2\texte2_lexique.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>Parcours n°2 – La petite souris (sommaire)</b></td><td>html</td><td>24/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\Textes_Compréh\Text2\index_texte2.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>CM1</td><td><b>Vocabulaire – La petite souris</b></td><td>html</td><td>24/04/2026</td><td class="p">Reserve\cm1_cm2\CM1\Textes_Compréh\Text2\texte2_vocabulaire.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>francais</td><td><b>Contrôle – L&#x27;imparfait (CM2)</b></td><td>html</td><td>30/09/2026</td><td class="p">Reserve\cm1_cm2\francais\Fiche_Imparfait.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>francais</td><td><b>Fiche conjugaison — L&#x27;imparfait et le passé composé</b></td><td>html</td><td>21/08/2026</td><td class="p">Reserve\cm1_cm2\francais\fiche-conjugaison-cm2-imparfait-passe-compose.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>francais</td><td><b>Fiche conjugaison — Le présent</b></td><td>html</td><td>21/08/2026</td><td class="p">Reserve\cm1_cm2\francais\fiche-conjugaison-cm2-present.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>CM1 – Exercices : division posée</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\exercices_division_CM1.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>CM1 – Exercices : la division</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\exercices_divisions_CM1.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>CM1 – Exercices de grammaire</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\CM1_Exos_1.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>CM1 – La division posée pas à pas</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\divisions_pas_a_pas_CM1.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>CM1 – Lecture et compréhension</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\CM1_Lecture_1.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>CM1 – Révision : la division</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\revision_divisions_CM1.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>CM1 – Révision : la division posée</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\cm1_cm2\revision_division_CM1.html</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>Etude-de-phrase-CM1-Periode-2-Fiche-de-preparation</b></td><td>md</td><td>22/05/2026</td><td class="p">Reserve\cm1_cm2\Etude-de-phrase-CM1-Periode-2-Fiche-de-preparation.md</td></tr>
+<tr data-n="cm1_cm2"><td>cm1_cm2</td><td>—</td><td><b>Les formes de phrases - Fiche élève CM1 (pastilles vertes + explications bleues)</b></td><td>html</td><td>22/05/2026</td><td class="p">Reserve\cm1_cm2\Fiche_Formes_phrases.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>ATOME</td><td><b>L&#x27;atome — Physique-Chimie 3e</b></td><td>html</td><td>29/09/2026</td><td class="p">Reserve\ludiquité\ATOME\fiche_animation_atome.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>ATOME</td><td><b>Plongée vers l&#x27;atome</b></td><td>html</td><td>29/09/2026</td><td class="p">Reserve\ludiquité\ATOME\zoom_atome.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Division</td><td><b>doc_pedago_div</b></td><td>md</td><td>31/08/2026</td><td class="p">Reserve\ludiquité\Division\doc_pedago_div.md</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Division</td><td><b>La division — Léna et les sachets de billes</b></td><td>html</td><td>16/09/2026</td><td class="p">Reserve\ludiquité\Division\fiche_division_ludique.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Division</td><td><b>La division — Léna et les sachets de billes</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\ludiquité\Division\fiche_division_complete.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Division</td><td><b>Mockup — capsules autour de la division posée</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\ludiquité\Division\mockup_capsules_division.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>HG</td><td><b>Civils et militaires dans la Première Guerre mondiale — DNB 3e</b></td><td>html</td><td>08/10/2026</td><td class="p">Reserve\ludiquité\HG\sujet PGM.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Les notions d&#x27;infini</td><td><b>Flocon de Koch – la fractale infinie</b></td><td>html</td><td>24/05/2026</td><td class="p">Reserve\ludiquité\Les notions d&#x27;infini\Fractale – Flocon de Koch_zoom infini.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Les notions d&#x27;infini</td><td><b>Hôtel infini de Hilbert – jeu de déménagement</b></td><td>html</td><td>24/05/2026</td><td class="p">Reserve\ludiquité\Les notions d&#x27;infini\Hôtel infini de Hilbert – l’animation des déménagements.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Les notions d&#x27;infini</td><td><b>La diagonale comme Coulisse de Théâtre</b></td><td>md</td><td>24/05/2026</td><td class="p">Reserve\ludiquité\Les notions d&#x27;infini\La diagonale comme Coulisse de Théâtre.md</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Les notions d&#x27;infini</td><td><b>La diagonale de Cantor – avec conteur (bulle séparée)</b></td><td>html</td><td>24/05/2026</td><td class="p">Reserve\ludiquité\Les notions d&#x27;infini\La diagonale comme Coulisse de Théâtre.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Les notions d&#x27;infini</td><td><b>L’hôtel infini revisité_version terrain de jeu</b></td><td>md</td><td>24/05/2026</td><td class="p">Reserve\ludiquité\Les notions d&#x27;infini\L’hôtel infini revisité_version terrain de jeu.md</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Par l Histoire</td><td><b>2nde — Les ensembles de nombres N, Z, D, Q, R</b></td><td>html</td><td>23/09/2026</td><td class="p">Reserve\ludiquité\Par l Histoire\2nde_ensembles_nombres_pilote.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>Par l Histoire</td><td><b>Script — Pourquoi tous les nombres ne sont pas des fractions</b></td><td>html</td><td>19/09/2026</td><td class="p">Reserve\ludiquité\Par l Histoire\script_histoire_irrationnels.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Engrenages — PPCM et proportionnalité</b></td><td>html</td><td>26/09/2026</td><td class="p">Reserve\ludiquité\engrenages_ppcm.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>expe_visuel_masse volumique</b></td><td>md</td><td>11/05/2026</td><td class="p">Reserve\ludiquité\expe_visuel_masse volumique.md</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Jeu de Go – Apprendre en jouant</b></td><td>html</td><td>07/05/2026</td><td class="p">Reserve\ludiquité\go.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Jeu des tables — appuie sur ESPACE</b></td><td>html</td><td>01/09/2026</td><td class="p">Reserve\ludiquité\maths_multiplication_jeu_ludo.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Jeu des tables — appuie sur ESPACE</b></td><td>html</td><td>08/09/2026</td><td class="p">Reserve\ludiquité\jeu_mult.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>La division — Léna et les sachets de billes</b></td><td>html</td><td>01/09/2026</td><td class="p">Reserve\ludiquité\maths_division_jeu_ludo.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Le carnet du phare</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\ludiquité\le_carnet_du_phare_interactif.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Les compléments à 10</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\ludiquité\fiche_complements_a_10.html</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Mélange des Couleurs</b></td><td>md</td><td>11/05/2026</td><td class="p">Reserve\ludiquité\Mélange des Couleurs.md</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Mélange des Couleurs_Scratch</b></td><td>md</td><td>16/05/2026</td><td class="p">Reserve\ludiquité\Mélange des Couleurs_Scratch.md</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Mélange des Couleurs_Storyboard_StopMotion</b></td><td>md</td><td>11/05/2026</td><td class="p">Reserve\ludiquité\Mélange des Couleurs_Storyboard_StopMotion.md</td></tr>
+<tr data-n="ludiquité"><td>ludiquité</td><td>—</td><td><b>Symétrie centrale - Exercice 5B.1</b></td><td>html</td><td>03/06/2026</td><td class="p">Reserve\ludiquité\Rotation_animation.html</td></tr>
+<tr data-n="Supérieur"><td>Supérieur</td><td>—</td><td><b>Carte des notions — *Outils mathématiques pour physiciens et ingénieurs* (J.-M. Poitevin, 2e éd.)</b></td><td>md</td><td>01/10/2026</td><td class="p">Reserve\Supérieur\Carte_notions_Outils_maths_physiciens.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Dérivation, tangentes et convexité — corrections guidées</b></td><td>html</td><td>20/09/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-bac01-bac02-derivation-convexite-terminale.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Dérivées, tangentes et variations — Terminale Spé</b></td><td>html</td><td>19/09/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-derivees-tangentes-terminale.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Exercices de révision — Terminale Spé Maths</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\Exo_Extraits_Révision_deb_term.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Exercices de révision — Terminale Spé Maths</b></td><td>html</td><td>31/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\Recueil_Exos_Révision_Maths_Spé_début_Terminales.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche mémo — Acides, bases &amp; pH</b></td><td>html</td><td>21/09/2026</td><td class="p">Reserve\Terminale\Spé_Maths\Phys\fiche-memo-acides-bases.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Probabilités conditionnelles et arbre pondéré</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-probabilites-conditionnelles-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – QCM Automatismes, mini bilan</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-qcm-automatismes-bilan-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Section I : Calculs, (in)équations</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-section1-calculs-inequations-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Section II : Suites</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-section2-suites-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Section III : Probabilités</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-section3-probabilites-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Section IV : Fonctions</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-section4-fonctions-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Section V : Repérage</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-section5-reperage-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Vecteurs, norme et produit scalaire</b></td><td>html</td><td>21/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-produit-scalaire-vecteurs-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Fiche – Vrai/Faux : second degré, suites, tangente</b></td><td>html</td><td>28/08/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche-vrai-faux-second-degre-suites-tangente-1erespe.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Terminale spé maths — Calculs de dérivées</b></td><td>html</td><td>14/09/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche_derivees.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Terminale spé maths — Exercices 9 et 10</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\Terminale\Spé_Maths\didacticiel_ex9_ex10.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Terminale spé maths — Suite arithmético-géométrique et algorithme</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche_bambou.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Terminale spé maths — Suite arithmético-géométrique et algorithme</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche_formulaire_derivees.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>Spé_Maths</td><td><b>Terminale spé — Suites numériques</b></td><td>html</td><td>01/10/2026</td><td class="p">Reserve\Terminale\Spé_Maths\fiche_suites_terminale.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Ajout_HP</b></td><td>html</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\Ajout_HP.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Chapitre 17 : La Vérité</b></td><td>html</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\VERITE.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Fiche Philo - [Nom du Chapitre]</b></td><td>html</td><td>14/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\squelette_Fiche.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Fiche Philo - Q1 : La vérité est-elle universelle ?</b></td><td>html</td><td>21/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\verite_q1.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Fiche Philo - Q2 : Peut-on douter de tout ?</b></td><td>html</td><td>21/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\verite_q2.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Fiche Philo - Q3 : Faut-il toujours dire la vérité ?</b></td><td>html</td><td>21/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\verite_q3.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Fiche Philo - Q4 : La science jouit-elle du monopole de la vérité ?</b></td><td>html</td><td>19/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\verite_q4.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Fiches de Philosophie - Terminale</b></td><td>html</td><td>13/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\index1.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Fiches de Philosophie - Terminale</b></td><td>html</td><td>14/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\chapitre_02.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>Le mode d&#x27;emploi du répertoire et le sommaire</b></td><td>md</td><td>14/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\README.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>lecture_audio</b></td><td>html</td><td>21/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\lecture_audio.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>PROMPT_RÉVEIL _THEO_PHILO</b></td><td>md</td><td>21/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\03_Archives\PROMPT_RÉVEIL _THEO_PHILO.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🎨 Code Couleur Pédagogique (Charte mise à jour)</b></td><td>md</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\03_Charte_Code_Couleur.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🏗️ Structure HTML – Index et Chapitre 17</b></td><td>md</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Structure_Index_et_Chapitre_17.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>📔 Journal de Théo</b></td><td>md</td><td>21/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\00_Journal_de_Theo.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>📜 MÉTHODE DE TRAVAIL &amp; CHARTE PÉDAGOGIQUE – PROJET PHILO</b></td><td>md</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\01_Methodo_Philo.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🔊 Dictionnaire de prononciation pour l&#x27;audio</b></td><td>md</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\05_Prononciations.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🔬 Pistes de Recherche Personnelle : Vérité et Science (Hors Programme)</b></td><td>md</td><td>19/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\Et au delà\pistes_AD_verite.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🧠 Mon Classeur de Philosophie</b></td><td>html</td><td>19/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\index1.1.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🧠 Mon Classeur de Philosophie</b></td><td>html</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\02_Projets\index.html</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🧠 Projet Genially – Carte mentale interactive</b></td><td>md</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\04_Projet_Genially.md</td></tr>
+<tr data-n="Terminale"><td>Terminale</td><td>THEO_PHILO</td><td><b>🧳 CAPSULE DE THÉO – PROJET PHILO</b></td><td>md</td><td>20/09/2026</td><td class="p">Reserve\Terminale\THEO_PHILO\CAPSULE_THEO.md</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>Grammaire_Rappels</td><td><b>Fiche – Deux verbes : le 2e à l&#x27;infinitif</b></td><td>html</td><td>25/08/2026</td><td class="p">Reserve\transverse\Grammaire_Rappels\Fiche_Deux verbes qui se suivent.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>Grammaire_Rappels</td><td><b>Fiche – le N devient M</b></td><td>html</td><td>25/08/2026</td><td class="p">Reserve\transverse\Grammaire_Rappels\Orthographe_n_devant_m_b_p.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>Grammaire_Rappels</td><td><b>Fiche – Pronoms personnels</b></td><td>html</td><td>25/08/2026</td><td class="p">Reserve\transverse\Grammaire_Rappels\Fiche_Les pronoms personnels.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>Grammaire_Rappels</td><td><b>Orthographe – G, GU, GE (CM1) – Évaluation progressive corrigée</b></td><td>html</td><td>18/05/2026</td><td class="p">Reserve\transverse\Grammaire_Rappels\Ecriture_Son_Avec_G.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Calcul du MCLM</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\05_calcul_mclm.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Compréhension – Sara</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\03_comprehension_reformulation.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Compréhension – Sara</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\TEXTE1\texte1_comprehension.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Déroulement d’une séance</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\04_deroulement_seance.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Déterminants</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\TEXTE1\texte1_determinants.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Fluidité et automatisation</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\02_fluence_automatisation.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Grammaire – Sujet/verbe</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\TEXTE1\texte1_grammaire.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Lecture – Sara</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\TEXTE1\texte1_lecture.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Lexique – Sara</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\TEXTE1\texte1_lexique.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Matériel et principes</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\06_materiel_principes.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Méthode de lecture – Fluence et compréhension</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\index_methode_lecture.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Parcours n°1 – Sara (sommaire)</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\TEXTE1\index_texte1.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Reconnaître les signes écrits</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\01_identification_mots.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>LECTURE</td><td><b>Vocabulaire – Synonyme</b></td><td>html</td><td>17/04/2026</td><td class="p">Reserve\transverse\LECTURE\TEXTE1\texte1_vocabulaire.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>MATHS</td><td><b>La division — Léna et les sachets de billes</b></td><td>html</td><td>01/09/2026</td><td class="p">Reserve\transverse\MATHS\La division — Léna et les sachets de billes.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>—</td><td><b>La tablette des fractions</b></td><td>html</td><td>21/08/2026</td><td class="p">Reserve\transverse\tablette-des-fractions.html</td></tr>
+<tr data-n="transverse"><td>transverse</td><td>—</td><td><b>Tableau des nombres – capsules</b></td><td>html</td><td>13/08/2026</td><td class="p">Reserve\transverse\tableau_D_nmbres.html</td></tr>
+</tbody>
+</table>
+
+<h2>Autres ressources de Reserve (comptées, non listées)</h2>
+<table><thead><tr><th>Niveau / dossier</th><th>Fichiers (extension : nombre, 6 principales)</th></tr></thead><tbody><tr><td>1ere</td><td>pdf : 38, docx : 4, mhtml : 2, rtf : 1, doc : 1</td></tr><tr><td>2nde</td><td>pdf : 15, odt : 1</td></tr><tr><td>3eme</td><td>pdf : 147, zip : 13, png : 10, docx : 8, jpg : 4, py : 3</td></tr><tr><td>4eme</td><td>pdf : 83, zip : 22, docx : 12, jpg : 8, doc : 4, rtf : 3</td></tr><tr><td>5eme</td><td>pdf : 243, mp3 : 14, smil : 14, docx : 12, zip : 11, png : 4</td></tr><tr><td>6eme</td><td>pdf : 44, docx : 12, zip : 10, jpg : 3, rtf : 2, odt : 2</td></tr><tr><td>CE</td><td>zip : 6, pdf : 2, docx : 1</td></tr><tr><td>cm1_cm2</td><td>pdf : 82, docx : 27, zip : 11, odt : 2, doc : 2, py : 1</td></tr><tr><td>doc_cog_pedago</td><td>pdf : 28, zip : 2, docx : 2, xlsx : 1</td></tr><tr><td>FLE</td><td>pdf : 16, mp3 : 13, zip : 11, docx : 11, 7z : 1</td></tr><tr><td>francais_DYS</td><td>webp : 5, docx : 4, pdf : 2, png : 1</td></tr><tr><td>LECTURE</td><td>pdf : 2</td></tr><tr><td>ludiquité</td><td>m4a : 5, jpg : 4, zip : 2, png : 1, sb3 : 1</td></tr><tr><td>Lycee</td><td>pdf : 20, mp3 : 11, zip : 3, acsm : 2, jpg : 1, pptx : 1</td></tr><tr><td>Supérieur</td><td>pdf : 5, acsm : 4, docx : 1</td></tr><tr><td>Terminale</td><td>pdf : 32, docx : 2, dot : 1, odt : 1, zip : 1, lnk : 1</td></tr><tr><td>transverse</td><td>pdf : 7, png : 2, docx : 2, doc : 1, acsm : 1</td></tr></tbody></table>
+</div>
+<script>
+(function(){
+  var q=document.getElementById('q'), lv=document.getElementById('lv'), rows=[].slice.call(document.querySelectorAll('#t tbody tr'));
+  function f(){ var s=q.value.toLowerCase(), l=lv.value; rows.forEach(function(r){ var ok=(!l||r.getAttribute('data-n')===l)&&(!s||r.textContent.toLowerCase().indexOf(s)>-1); r.style.display=ok?'':'none'; }); }
+  q.addEventListener('input',f); lv.addEventListener('change',f);
+})();
+</script>
+</body>
+</html>
