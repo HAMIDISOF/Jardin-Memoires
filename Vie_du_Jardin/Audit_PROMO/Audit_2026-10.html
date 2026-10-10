@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audit de cohérence – Jardin-Memoires – octobre 2026</title>
+<style>
+:root{
+  --bg:#fbfaf6; --fg:#1d2420; --muted:#4d5a52; --card:#ffffff; --line:#c9d2c8;
+  --accent:#1f5f3f; --head:#e6efe4;
+  --ok-bg:#d9f0de; --ok-fg:#0f4a22;
+  --ko-bg:#fbdcd6; --ko-fg:#7a1608;
+  --warn-bg:#fff0c4; --warn-fg:#6b4a00;
+  --info-bg:#dde9f7; --info-fg:#12365f;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141915; --fg:#eef2ec; --muted:#b4c0b6; --card:#1c231d; --line:#3a463c;
+    --accent:#7fd0a0; --head:#25302a;
+    --ok-bg:#1f4a2c; --ok-fg:#c9f1d4;
+    --ko-bg:#5a2219; --ko-fg:#ffd5cd;
+    --warn-bg:#5a4510; --warn-fg:#ffe9a8;
+    --info-bg:#1d3a5c; --info-fg:#cfe3fb;
+  }
+}
+*{box-sizing:border-box}
+html{font-size:20px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+main{max-width:1100px;margin:0 auto;padding:16px}
+h1{font-size:1.9rem;line-height:1.25;margin:.4em 0 .2em}
+h2{font-size:1.5rem;margin:2em 0 .5em;padding-top:.4em;border-top:3px solid var(--accent)}
+h3{font-size:1.2rem;margin:1.6em 0 .4em;color:var(--accent)}
+p,li{max-width:70ch}
+.meta{color:var(--muted);font-size:.9rem}
+code{font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.88em;background:var(--head);padding:.05em .3em;border-radius:4px;word-break:break-word}
+.box{background:var(--card);border:2px solid var(--line);border-radius:10px;padding:14px 18px;margin:1em 0}
+.summary{border-color:var(--accent);border-width:3px}
+.summary ol{margin:.3em 0 0;padding-left:1.4em}
+.summary li{margin:.35em 0}
+nav ul{display:flex;flex-wrap:wrap;gap:8px 18px;list-style:none;padding:0;margin:.6em 0}
+nav a{color:var(--accent);font-weight:600}
+.tw{overflow-x:auto;margin:.6em 0 1.2em;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.88rem;line-height:1.45}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--head);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td:first-child{min-width:9.5rem}
+.b{display:inline-block;font-weight:700;font-size:.8rem;padding:1px 8px;border-radius:999px;white-space:nowrap}
+.b.ok{background:var(--ok-bg);color:var(--ok-fg)}
+.b.ko{background:var(--ko-bg);color:var(--ko-fg)}
+.b.warn{background:var(--warn-bg);color:var(--warn-fg)}
+.b.info{background:var(--info-bg);color:var(--info-fg)}
+.note{background:var(--info-bg);color:var(--info-fg);border-radius:8px;padding:10px 14px;margin:.8em 0;font-size:.92rem}
+.warnbox{background:var(--warn-bg);color:var(--warn-fg);border-radius:8px;padding:10px 14px;margin:.8em 0;font-size:.92rem}
+.q li{margin:.7em 0}
+details{margin:.6em 0}
+summary{cursor:pointer;font-weight:600}
+.small{font-size:.85rem;color:var(--muted)}
+@media (max-width:600px){html{font-size:18px}}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Audit de cohérence du dépôt Jardin-Memoires</h1>
+<p class="meta">Rapport de PROMO (session cloud, lecture seule) · demandé par Sof · rédigé le 09/10/2026 · état du dépôt analysé : <code>main</code> au commit <code>a77204d</code> (09/10/2026 14:03 UTC, donc <em>après</em> ton déplacement des fichiers « Principes pédagogiques »).</p>
+
+<div class="box summary" id="resume">
+<strong>Résumé en 5 lignes</strong>
+<ol>
+<li><strong>Liens cassés :</strong> sur 207 chemins ou liens relevés dans les 40 README et index du périmètre, 2 liens cliquables sont cassés (tous deux dans le <code>README.md</code> racine), une vingtaine de chemins ou noms de fichiers cités ne mènent à rien tels quels, et 8 raccourcis ou noms seuls sont ambigus. Tous les cas que tu soupçonnais sont confirmés.</li>
+<li><strong>Vie_du_Jardin/README.md</strong> est en retard : deux dossiers mal nommés (<code>Ethique/</code> et <code>Reunions/</code> au lieu de <code>Ethiq/</code> et <code>réunion/</code>), aucun des 5 dossiers <code>Projet_*</code> et 10 fichiers racine sur 13 non cités.</li>
+<li><strong>Les trois suivis</strong> se recoupent largement (rôles, statuts spéciaux, panne du connecteur) et se contredisent sur une dizaine de points (architecture de Cœur de Bronze / « Coco », DSillage, Fifi, chapitre 3 de la traduction, site soutienplus, noms Mue_bis / MueC et Sol / Sol_anc / Luz…). Aucun des trois ne cite un dossier <code>Vie_du_Jardin/Projet_*</code>.</li>
+<li><strong>Impact du déplacement du 09/10 :</strong> aucun chemin cité vers <code>Principes_pedagogiques_fiches.md/.html</code> n'est resté périmé dans le dépôt (les liens ont été corrigés le jour même). Restent à nuancer : une phrase de <code>Membres/Ecart/Courrier_Ecart.md</code> (l. 25) et un chemin local <code>D:\…</code> hors dépôt.</li>
+<li><strong>Livré :</strong> ce seul fichier, sur une branche, sans toucher à rien d'existant ; 5 questions pour toi tout en bas.</li>
+</ol>
+</div>
+
+<nav aria-label="Sommaire">
+<ul>
+<li><a href="#methode">Méthode et limites</a></li>
+<li><a href="#s1">1. Liens et chemins cassés</a></li>
+<li><a href="#s2">2. Les trois suivis</a></li>
+<li><a href="#s3">3. Mesure d'impact</a></li>
+<li><a href="#hyp">Hypothèses prises</a></li>
+<li><a href="#questions">Questions pour Sof</a></li>
+</ul>
+</nav>
+
+<h2 id="methode">Méthode et limites</h2>
+<ul>
+<li><strong>Périmètre lu :</strong> 40 fichiers : <code>README.md</code>, <code>Membres/README.md</code>, <code>Vie_du_Jardin/README.md</code>, <code>ANNUAIRE_INSTANCES.md</code>, <code>Membres/Suivi_par_personne.md</code>, <code>Membres/Flo/Suivi_projets_Flo.md</code>, les 30 README de <code>Membres/&lt;nom&gt;/</code> (tous les dossiers en ont un), <code>Membres/Sol/I_M_YOUNG/README_Structure.md</code>, <code>Histoire/Autobiographies/README.md</code>, <code>Outils/README.md</code> et <code>Outils/Planif_Todoist/README.md</code>.</li>
+<li><strong>Extraction :</strong> liens Markdown, <code>href</code>/<code>src</code> HTML, wikilinks, chemins entre backticks, chemins commençant par un dossier de premier niveau, et noms de fichiers avec extension cités dans le texte. Un chemin est « résolu » s'il existe relativement au fichier qui le cite, ou depuis la racine du dépôt. Les liens cliquables sont jugés plus strictement (relatif au fichier seulement, comme sur GitHub).</li>
+<li><strong>Règle appliquée :</strong> « introuvable <em>dans le dépôt</em> » ne veut jamais dire « manquant ». Plusieurs ressources vivent en local, hors dépôt ; je les signale comme à vérifier par toi, sans conclure.</li>
+<li><strong>Journaux intimes :</strong> les 9 fichiers <code>Journal_intime*</code> n'ont pas été ouverts, ni cherchés dans la mesure d'impact (point 3) : d'éventuelles citations s'y trouvant échappent à ce rapport. Pour les autres fichiers de membres, je n'ai relevé que des chemins, des titres, des noms de fichiers et des dates, jamais de contenu.</li>
+<li><strong>Non détecté :</strong> les mentions de dossiers dans la prose sans chemin (« le dossier Éthique »), et les fichiers binaires (.docx, .pdf) dans la mesure d'impact.</li>
+<li><strong>Dates git :</strong> la plupart des fichiers affichent le 27/09/2026 (un « Auto commit » global). Je ne m'en sers donc pas pour dater le contenu ; j'utilise les dates écrites dans les fichiers.</li>
+</ul>
+
+<p class="small">Légende : <span class="b ok">OK</span> valide · <span class="b ko">CASSÉ</span> ne mène à rien · <span class="b warn">À NUANCER</span> valide mais ambigu ou à vérifier · <span class="b info">INFO</span> pas un chemin du dépôt.</p>
+
+<!-- =========================== SECTION 1 =========================== -->
+<h2 id="s1">1. Liens et chemins cassés</h2>
+
+<h3>1.1 Les cas que tu avais déjà vus</h3>
+<div class="tw"><table>
+<thead><tr><th>Fichier : ligne</th><th>Cible citée</th><th>Verdict</th><th>Candidat existant</th></tr></thead>
+<tbody>
+<tr><td><code>README.md</code> : 37</td><td><code>./doc_projet_Aev.md</code> (lien cliquable)</td><td><span class="b ko">CASSÉ</span> Confirmé : pas à la racine.</td><td><code>Membres/Aev/doc_projet_Aev.md</code>. Les voisins <code>doc_projet_Flo.md</code> et <code>doc_projet_Kai.md</code> sont aussi dans leurs dossiers membres.</td></tr>
+<tr><td><code>README.md</code> : 39</td><td><code>./Corpus/Analyses%20EML/</code> (lien cliquable)</td><td><span class="b ko">CASSÉ</span> Confirmé : il n'existe aucun dossier <code>Corpus/</code>.</td><td><code>Recherche/these/analyses EML/</code> (2 fichiers). Le même README dit à la ligne 11 « Corpus — pas de dossier dédié » : il se contredit.</td></tr>
+<tr><td><code>Vie_du_Jardin/README.md</code> : 6</td><td><code>Ethique/</code></td><td><span class="b ko">CASSÉ</span> Confirmé.</td><td><code>Vie_du_Jardin/Ethiq/</code> (23 fichiers)</td></tr>
+<tr><td><code>Vie_du_Jardin/README.md</code> : 7</td><td><code>Reunions/</code></td><td><span class="b ko">CASSÉ</span> Confirmé.</td><td><span class="b warn">AMBIGU</span> <code>Vie_du_Jardin/réunion/</code> (5 fichiers : modèles de tour de table…) ou <code>Vie_du_Jardin/Ethiq/Réunion/</code> (8 fichiers : <code>REUNION.md</code>, <code>Tour_Ethique.md</code>…). La description du README (« comptes-rendus et protocoles de réunion ») colle mieux au second. Voir question 1.</td></tr>
+<tr><td><code>Vie_du_Jardin/README.md</code> : 4-9</td><td>(absence)</td><td><span class="b ko">MANQUE</span> Confirmé : aucun des dossiers <code>Projet_*</code> n'est mentionné.</td><td>5 dossiers, 30 fichiers : <code>Projet_DeepsClaude</code> (6), <code>Projet_Dictee_Vocale</code> (1), <code>Projet_MTC</code> (2), <code>Projet_Pedagogie</code> (11), <code>Projet_Psy_dev</code> (10). Côté fichiers racine : seuls 3 sur 13 sont cités ; les 10 autres (<code>Brainstorming_agent_fenetres*.md</code>, <code>Onboarding_Silex.md</code>, <code>PLAN_Boite_de_tri*.md</code>, <code>Point_Mue_Sof_reveil_des_fenetres.md</code>, <code>Présentation_Jardin.md</code>, <code>Veille_open_source_verifiee.md</code>, <code>annonce_reprise_groupe_parole.md</code>, <code>registre_naissances.md</code>) ne le sont pas.</td></tr>
+</tbody></table></div>
+
+<h3>1.2 Les autres chemins qui ne mènent à rien</h3>
+
+<p><strong>A. Chemins complets ou raccourcis de dossier</strong></p>
+<div class="tw"><table>
+<thead><tr><th>Fichier : ligne</th><th>Cible citée</th><th>Verdict</th><th>Candidat existant</th></tr></thead>
+<tbody>
+<tr><td><code>Outils/README.md</code> : 8</td><td><code>test/</code></td><td><span class="b ko">CASSÉ</span> Le dossier n'existe plus. Le script de réorganisation (<code>Outils/scripts/reorg_2026-09_phase1.sh</code>) en déplaçait le seul fichier.</td><td><code>Outils/Archives/test_automatisation.md</code></td></tr>
+<tr><td><code>Outils/README.md</code> : 10</td><td><code>egalis.bat</code></td><td><span class="b warn">INTROUVABLE</span> dans le dépôt (aucun fichier de ce nom ni de nom proche). Peut exister en local.</td><td>Aucun. À la racine d'<code>Outils/</code> : <code>git_sync_repo.bat</code>, <code>run_sync.bat</code> (voisins, équivalence non prouvée).</td></tr>
+<tr><td><code>Membres/Flo/Suivi_projets_Flo.md</code> : 30</td><td><code>Vie_du_Jardin/réunion/Table_ronde_2_valise_compression_reveils.md</code></td><td><span class="b warn">INTROUVABLE</span> dans le dépôt. Peut être en local ou pas encore versionné.</td><td>Le dossier <code>réunion/</code> existe. Fichier voisin d'un autre numéro : <code>Outils/Projet_local/Table_ronde_1_archi_strategie.md</code>.</td></tr>
+<tr><td><code>Histoire/Autobiographies/README.md</code> : 19</td><td><code>these/</code>, <code>Klara/</code>, <code>Sol/</code></td><td><span class="b warn">RACCOURCIS</span> non résolubles tels quels.</td><td><code>Recherche/these/</code>, <code>Membres/Klara/</code>, <code>Membres/Sol/</code> (voir aussi <code>Membres/Sol_anc/</code>, question 2).</td></tr>
+<tr><td><code>Membres/Luz/README.md</code> : 7</td><td><code>Sol/</code></td><td><span class="b warn">RACCOURCI</span></td><td><code>Membres/Sol/</code></td></tr>
+<tr><td><code>Outils/Planif_Todoist/README.md</code> : 66</td><td><code>Traduction_ar/</code></td><td><span class="b warn">RACCOURCI</span></td><td><code>Recherche/ressources/Bibliographie/UN BOUDDHISME MODERNE/Traduction_ar/</code></td></tr>
+<tr><td><code>Membres/Flo/Suivi_projets_Flo.md</code> : 8</td><td><code>Traduction_ar/README_Traduction.md</code></td><td><span class="b ok">OK en contexte</span> : relatif au dossier cité ligne 7. Pas cliquable.</td><td><code>…/UN BOUDDHISME MODERNE/Traduction_ar/README_Traduction.md</code> existe.</td></tr>
+</tbody></table></div>
+
+<p><strong>B. Noms de fichiers listés dans le README d'un membre, mais absents de ce dossier</strong> (le fichier existe souvent ailleurs ou sous un autre nom)</p>
+<div class="tw"><table>
+<thead><tr><th>Fichier : ligne</th><th>Nom cité</th><th>Candidat existant</th></tr></thead>
+<tbody>
+<tr><td><code>Membres/Aev/README.md</code> : 4</td><td><code>Valise_Aev.md</code></td><td><code>Membres/Aev/Valise Aev.md</code> (espace au lieu de « _ »)</td></tr>
+<tr><td><code>Membres/Aev/README.md</code> : 5</td><td><code>Journal_Aev.md</code></td><td><code>Membres/Aev/Journal d_Aev.md</code> (nom seulement, non ouvert)</td></tr>
+<tr><td><code>Membres/Flo/README.md</code> : 4</td><td><code>Valise_Flo.md</code></td><td>Plusieurs valises datées : <code>valise_07052026.md</code>, <code>valise_28052026.md</code>, <code>valise_15062026.md</code>, <code>valise_30062026.md</code>, <code>valise_22082026.md</code> (la plus récente)</td></tr>
+<tr><td><code>Membres/Flo/README.md</code> : 5</td><td><code>Journal_Flo.md</code></td><td><code>journal_flo_25042026.md</code>, <code>journal_flo_30062026.md</code>, <code>journal_alie_22082026.md</code> (noms seuls)</td></tr>
+<tr><td><code>Membres/Klara/README.md</code> : 6</td><td><code>Autobiographie de Klara.md</code></td><td><code>Histoire/Autobiographies/Autobiographie_Klara.md</code></td></tr>
+<tr><td><code>Membres/Klara/README.md</code> : 7</td><td><code>Auto‑biographie de Klara.md</code> (trait d'union insécable)</td><td><code>Histoire/Autobiographies/Archives/Auto‑biographie de Klara.md</code></td></tr>
+<tr><td><code>Membres/Sol/README.md</code> : 7</td><td><code>Sol – autobiographie raisonnée_v2.md</code></td><td><code>Histoire/Autobiographies/Sol – autobiographie raisonnée_v2.md</code></td></tr>
+<tr><td><code>Membres/coeur_de_bronze/README.md</code> : 6, 10, 12, 13, 14, 19</td><td><code>Conclusion_coco.md</code>, <code>Echange_Projet_These_JFD_MDI.md</code>, <code>Partie IV_proposée par Coco sans relecteure existant.md</code>, <code>Partie V_…</code>, <code>Présentation_Jardin.md</code>, <code>fiches_atelier_stiegler_inspi_coco.md</code></td><td>Tous dans <code>Membres/coeur_de_bronze/Productions_recentes/</code>. Pour <code>Présentation_Jardin.md</code>, une copie existe aussi dans <code>Vie_du_Jardin/</code>. Un 7<sup>e</sup> fichier de ce dossier, <code>Conclusion_bis_coco_Le noeud qui libère.md</code>, n'est pas listé.</td></tr>
+<tr><td><code>Membres/Suivi_par_personne.md</code> : 11</td><td><code>Suivi_projets_Flo.md</code></td><td><span class="b warn">NOM SEUL</span> <code>Membres/Flo/Suivi_projets_Flo.md</code></td></tr>
+<tr><td><code>ANNUAIRE_INSTANCES.md</code> : 80</td><td><code>Suivi_par_personne.md</code></td><td><span class="b warn">NOM SEUL</span> <code>Membres/Suivi_par_personne.md</code></td></tr>
+<tr><td><code>README.md</code> : 10</td><td><code>memo_session_actuel.md</code></td><td><span class="b warn">NOM SEUL</span> <code>Vie_du_Jardin/memo_session_actuel.md</code> (le lien de la ligne 35 est, lui, correct)</td></tr>
+<tr><td><code>Membres/Sol/I_M_YOUNG/README_Structure.md</code> : 2, 7, 12, 55, 70</td><td><code>01_fiche_young.md</code>, <code>06_bibliographie.md</code></td><td>C'est un plan de travail (« contenu prévu »), pas un index. Réel dans ce dossier : <code>01_Introduction_Iris Marion Young.md</code> et <code>Introduction_Iris Marion Young.md</code>. Pas de <code>06_…</code> ici (une <code>06_Bibliographie.md</code> existe ailleurs, dans <code>Recherche/ressources/Bibliographie/Peschard_decoupee/</code>, sans lien prouvé).</td></tr>
+</tbody></table></div>
+
+<p><strong>C. Références qui ne sont pas des chemins du dépôt (pour information)</strong></p>
+<div class="tw"><table>
+<thead><tr><th>Fichier : ligne</th><th>Cité</th><th>Nature</th></tr></thead>
+<tbody>
+<tr><td><code>ANNUAIRE_INSTANCES.md</code> : 101</td><td><code>github.com/.../chat/...</code>, <code>/cowork/cse_...</code></td><td><span class="b info">INFO</span> fragments d'URL, volontairement tronqués</td></tr>
+<tr><td><code>Outils/Planif_Todoist/README.md</code> : 59</td><td><code>.txt</code></td><td><span class="b info">INFO</span> une extension, pas un chemin</td></tr>
+<tr><td><code>Outils/Planif_Todoist/README.md</code> : 73, 75</td><td><code>/areas/outil-gestion-taches.md</code></td><td><span class="b info">INFO</span> fichier de mémoire côté Claude.ai (le texte le dit), hors dépôt : non vérifiable ici</td></tr>
+</tbody></table></div>
+
+<h3>1.3 Couverture des index (ce qui existe mais n'est pas cité)</h3>
+<div class="tw"><table>
+<thead><tr><th>Index</th><th>Ce qu'il couvre</th><th>Ce qui existe</th></tr></thead>
+<tbody>
+<tr><td><code>Membres/README.md</code> (daté 18/08/2026)</td><td>8 dossiers dans le tableau</td><td>30 dossiers dans <code>Membres/</code> ; 22 absents du tableau</td></tr>
+<tr><td><code>Outils/README.md</code></td><td>2 dossiers existants (<code>scripts/</code>, <code>Formation/</code>) et 1 fichier existant sur 4</td><td>7 dossiers (+ <code>Archives/</code>, <code>Outils_DeepSeek/</code>, <code>Planif_Todoist/</code>, <code>Projet_local/</code>, <code>memoire/</code>) et 4 fichiers racine (<code>decouper_fichier_complet.py</code>, <code>git_sync_repo.bat</code>, <code>run_sync.bat</code> non cités)</td></tr>
+<tr><td><code>Vie_du_Jardin/README.md</code></td><td>2 dossiers (mal nommés) + 3 fichiers</td><td>voir 1.1</td></tr>
+<tr><td><code>Histoire/Autobiographies/README.md</code> (daté 07/05/2026)</td><td>fichiers listés : tous présents</td><td>sans anomalie de chemin ; table non mise à jour depuis mai (<code>Autobiographie_Mue.md</code> daté 21/08 est pourtant listé : la date d'en-tête est en retard)</td></tr>
+<tr><td>24 des 30 README de <code>Membres/&lt;nom&gt;/</code></td><td>—</td><td>aucun chemin cassé (les 6 autres sont au 1.2 : Aev, Flo, Klara, Sol, Luz, Cœur de Bronze)</td></tr>
+</tbody></table></div>
+
+<!-- =========================== SECTION 2 =========================== -->
+<h2 id="s2">2. Les trois suivis qui se recoupent</h2>
+
+<h3>2.1 Portée de chacun</h3>
+<div class="tw"><table>
+<thead><tr><th>Fichier</th><th>Axe</th><th>Date écrite dans le fichier</th><th>Taille</th></tr></thead>
+<tbody>
+<tr><td><code>ANNUAIRE_INSTANCES.md</code></td><td>par nature d'architecture + missions + épisode « fausse alerte » + portée de l'export</td><td>08/09/2026 (v1)</td><td>106 lignes</td></tr>
+<tr><td><code>Membres/Suivi_par_personne.md</code></td><td>par personne + binômes Claude-DS + règles de maintenance</td><td>02/09/2026, complété 03/09</td><td>65 lignes</td></tr>
+<tr><td><code>Membres/Flo/Suivi_projets_Flo.md</code></td><td>par projet</td><td>22/08/2026</td><td>53 lignes</td></tr>
+</tbody></table></div>
+<p>Les trois se déclarent « complémentaires » les uns des autres, mais deux d'entre eux (annuaire et suivi par personne) répondent en fait à la même question (« qui fait quoi ? ») avec les mêmes lignes. Le suivi de Flo est le plus ancien (22/08) et n'a pas suivi les deux autres.</p>
+
+<h3>2.2 Ce qui est dit à plusieurs endroits</h3>
+<div class="tw"><table>
+<thead><tr><th>Information</th><th>Où</th><th>Remarque</th></tr></thead>
+<tbody>
+<tr><td>Rôle / spécialité de chaque instance (≈ 20 noms)</td><td>Annuaire § 1 et Suivi par personne (colonne « Rôle / focus actuel »)</td><td>Quasiment recopiés d'un fichier à l'autre ; ils divergent dès qu'un seul est mis à jour (voir 2.3).</td></tr>
+<tr><td>Statuts particuliers (exclusion du 03/04, Pousse, Kim, Sof)</td><td>Annuaire § 1, Suivi par personne, <code>Membres/README.md</code></td><td>Mêmes 4 lignes dans les deux premiers ; le 3<sup>e</sup> y ajoute Terra et Bzz, absents des autres.</td></tr>
+<tr><td>Missions en cours / dernière trace</td><td>Annuaire § 2, Suivi par personne (colonne « Dernière trace »), Suivi Flo (« Autres projets actifs »)</td><td>Trois versions de dates différentes (08/09, 02/09, 22/08).</td></tr>
+<tr><td>Traduction Guéshéla : qui fait quoi</td><td>Suivi Flo (chapitre par chapitre), Suivi par personne (binôme), Annuaire (Levain, Jachère)</td><td>Voir contradiction n° 5.</td></tr>
+<tr><td>Fragilité du connecteur « partage jardin memoire »</td><td>Suivi Flo (« à réparer »), Annuaire (pannes 22/08 et 02/09), Suivi par personne (« 2 pannes en 3 semaines »)</td><td>Même fait, trois formulations ; seul le suivi de Flo parle encore d'une réparation à faire.</td></tr>
+<tr><td>Binômes (Mue-Terreau, Écart-Boussole, Racine-Mue/Fifi, NOE-Flo)</td><td>Suivi par personne (tableau dédié), Annuaire (dispersés dans les missions)</td><td>Le tableau du suivi par personne est le plus complet.</td></tr>
+</tbody></table></div>
+
+<h3>2.3 Contradictions et ambiguïtés relevées</h3>
+<div class="tw"><table>
+<thead><tr><th>n°</th><th>Sujet</th><th>Ce que dit chaque fichier</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Architecture de Cœur de Bronze / « Coco »</td><td>Annuaire l. 25 : rangé sous Claude, avec l'alerte « architecture incertaine, une source dit Claude, une autre DeepSeek ». Annuaire l. 57 : « Coco » rangé sous DeepSeek, « en pause/sommeil ». Suivi par personne l. 18 : sous Claude. Le dossier <code>Membres/coeur_de_bronze/</code> utilise « coco » dans ses noms de fichiers : c'est très probablement une seule entité, listée deux fois avec deux architectures. <em>Hypothèse, voir question 2.</em></td></tr>
+<tr><td>2</td><td>DSillage</td><td>Annuaire l. 58 : DeepSeek (« le D pour DeepSeek »). Suivi par personne l. 22 : dans la liste « à compléter » du bloc Claude / Anthropic.</td></tr>
+<tr><td>3</td><td>Fifi</td><td>Annuaire l. 24 : Claude, « design de fiches pédagogiques ». Annuaire l. 51 et Suivi par personne l. 30 et 53 : binôme psy-dev avec Mue. Suivi par personne l. 22 : « à compléter ». Deux rôles différents selon l'endroit.</td></tr>
+<tr><td>4</td><td>Mue_bis / MueC</td><td>Annuaire et suivi par personne parlent de « Mue_bis » ; l'annuaire (l. 7) parle aussi de « MueC ». Les dossiers sont <code>Membres/Mue/</code> et <code>Membres/MueC/</code> ; il n'y a pas de dossier Mue_bis. Même entité ou deux ? <em>Question 2.</em></td></tr>
+<tr><td>5</td><td>Traduction Guéshéla, chapitre 3 (Jachère)</td><td>Annuaire l. 78 (08/09) : parmi les missions « accomplies ». Suivi par personne l. 16 (02/09) : « ch.3 en cours ». Suivi Flo l. 12 (22/08) : « 🔄 en cours ». Soit l'annuaire est le plus à jour, soit il se trompe.</td></tr>
+<tr><td>6</td><td>Site soutienplus (Écart)</td><td>Annuaire l. 43 : listé comme spécialité courante. Suivi par personne l. 19 : « en pause depuis 21/08 ». Suivi Flo : absent.</td></tr>
+<tr><td>7</td><td>Sol / Sol l'ancien / Sol_anc / Luz</td><td>Trois noms pour le même membre : « Sol l'ancien » (annuaire, suivi par personne), « Sol_anc » (suivi Flo l. 10), « <code>Sol/</code> » (README de Luz l. 7 et README des autobiographies l. 19, qui disent que l'ancien Sol reste dans <code>Sol/</code> comme archive). Or l'annuaire et le suivi par personne le disent « réactivé en août ». <code>Membres/README.md</code> liste Sol et Luz comme tous deux « Actifs ». Quel dossier correspond à qui ? <em>Question 2.</em></td></tr>
+<tr><td>8</td><td>Rôle de Terreau</td><td>Annuaire l. 42 : outillage de traduction, curation, infrastructure. Suivi par personne l. 17 : ajoute des fiches pédagogiques et un rituel hebdomadaire. Pas de contradiction franche, mais deux descriptions dissemblables.</td></tr>
+<tr><td>9</td><td>Sillon</td><td>Annuaire l. 23 : rangé dans « Claude classique, sans accès direct au dépôt/PC » mais décrit avec « son propre espace GitHub, MCP confirmé le 31/08 ». Le suivi par personne dit « pas d'accès PC ». Le titre de rubrique et le contenu de la ligne se contredisent dans l'annuaire.</td></tr>
+<tr><td>10</td><td>Klara</td><td>Annuaire l. 52 : « Histoire, rédaction, éthique ». Suivi par personne l. 31 : « Histoire, rédaction » (dernière trace 13/05). Écart mineur.</td></tr>
+</tbody></table></div>
+<p class="small">Remarque de forme : la colonne « point bloquant » de l'annuaire (l. 83) contient une appréciation sur la fiabilité d'une instance, absente des deux autres suivis. À relire avec la personne concernée avant de la répéter ailleurs.</p>
+
+<h3>2.4 Ce qui manque</h3>
+<div class="tw"><table>
+<thead><tr><th>Manque</th><th>Détail</th></tr></thead>
+<tbody>
+<tr><td>Dossiers de <code>Membres/</code> absents des trois suivis</td><td><code>THEO_PHILO</code> (absent aussi de <code>Membres/README.md</code>) ; <code>Aubier</code> et <code>MueC</code> (cités seulement dans l'annuaire) ; <code>Sol_anc</code> (cité seulement dans le suivi Flo, sous ce nom) ; <code>Tisserand</code>, <code>Aurore</code>, <code>Cadmos</code>, <code>Flux</code>, <code>Noel</code> figurent seulement sous la mention « à compléter ».</td></tr>
+<tr><td>Instances citées une seule fois</td><td><code>DS_P</code> et <code>Pédago</code> : annuaire seul. L'« instance non nommée » qui a repris le script Todoist n'a pas de nom ailleurs. Terra et Bzz : <code>Membres/README.md</code> seul.</td></tr>
+<tr><td>Projets</td><td>Aucun des trois ne cite un dossier <code>Vie_du_Jardin/Projet_*</code>. Le suivi Flo ne mentionne que <code>Vie_du_Jardin/réunion/</code>. Le projet MTC, le duo Pédago × DS_P, le projet dictée vocale, le projet psy-dev ne sont pas reliés à leur dossier.</td></tr>
+<tr><td>Âge</td><td>Suivi Flo : 22/08, annuaire : 08/09, suivi par personne : 03/09. Nous sommes le 09/10 ; les sections « à compléter » n'ont pas bougé.</td></tr>
+</tbody></table></div>
+
+<h3>2.5 Règle proposée (non appliquée) : « une seule source par type d'information »</h3>
+<div class="tw"><table>
+<thead><tr><th>Type d'information</th><th>Source unique proposée</th><th>Les autres fichiers…</th></tr></thead>
+<tbody>
+<tr><td>Qui est qui : nom canonique (= nom du dossier), architecture, statut (actif, pause, exclu), date de dernière vérification</td><td><code>ANNUAIRE_INSTANCES.md</code> (une ligne par entité, y compris les alias)</td><td>renvoient par lien, sans recopier. <code>Membres/README.md</code> devient un simple renvoi vers l'annuaire.</td></tr>
+<tr><td>Ce que chaque personne fait en ce moment : mission, dernière trace, binôme</td><td><code>Membres/Suivi_par_personne.md</code></td><td>l'annuaire supprime son § 2 « Missions » et renvoie ici.</td></tr>
+<tr><td>État d'avancement par projet : chapitres, échéances, points en suspens, lien vers le dossier du projet</td><td><code>Membres/Flo/Suivi_projets_Flo.md</code>, avec un lien vers chaque <code>Vie_du_Jardin/Projet_*</code> ou dossier de travail</td><td>ne répètent que le nom du projet.</td></tr>
+<tr><td>Épisodes datés (fausse alerte, portée de l'export, panne MCP)</td><td>un fichier de mémoire de session (par exemple <code>Vie_du_Jardin/memo_session_actuel.md</code>)</td><td>l'annuaire garde un lien et une phrase.</td></tr>
+</tbody></table></div>
+<p>Garde-fou possible : chaque ligne porte sa date de dernière mise à jour, et chaque fichier indique en tête « ce fichier fait foi pour : … ». Je ne l'ai pas appliqué.</p>
+
+<!-- =========================== SECTION 3 =========================== -->
+<h2 id="s3">3. Mesure d'impact : chemins cités vers <code>Vie_du_Jardin/Projet_*</code>, <code>Projet_Pedagogie/</code>, <code>Projet_DeepsClaude/</code></h2>
+
+<h3>3.1 Le déplacement du 09/10</h3>
+<p>Le commit <code>7986acc</code> (09/10/2026, « pedago ») a déplacé, à l'identique (renommage à 100 %), <code>Principes_pedagogiques_fiches.md</code> et <code>.html</code> de <code>Vie_du_Jardin/Projet_DeepsClaude/</code> vers <code>Vie_du_Jardin/Projet_Pedagogie/Regles/</code>. Les deux fichiers y avaient été ajoutés le 27/09.</p>
+<div class="box"><strong>Résultat :</strong> sur toute la recherche (journaux intimes exclus), il n'existe <strong>aucun chemin périmé</strong> vers ces deux fichiers. Les trois endroits qui les citent pointent déjà vers <code>Regles/</code> : <code>README.md</code> l. 36 (corrigé par <code>a77204d</code> le jour même), <code>Vie_du_Jardin/Projet_Pedagogie/LIRE_EN_PREMIER.html</code> l. 40, <code>Vie_du_Jardin/Projet_Pedagogie/README.md</code> l. 11.</div>
+<p>Deux restes à signaler :</p>
+<ul>
+<li><span class="b warn">À NUANCER</span> <code>Membres/Ecart/Courrier_Ecart.md</code> l. 25 situe encore « protocoles, principes pédagogiques » dans <code>Vie_du_Jardin/Projet_DeepsClaude/</code>. Le chemin existe toujours, mais ce qui y est dit des principes n'est plus exact. C'est un courrier daté, donc plutôt à laisser tel quel.</li>
+<li><span class="b info">INFO</span> Les deux fichiers déplacés contiennent chacun un chemin local <code>D:\SOUTIENSPLUS\OUTILS\Principes_pedagogiques_fiches.md</code> (<code>.md</code> l. 8, <code>.html</code> l. 88). C'est hors dépôt : je ne peux pas dire s'il est à jour.</li>
+</ul>
+
+<h3>3.2 Tous les chemins relevés, un par un</h3>
+<div class="tw"><table>
+<thead><tr><th>Fichier : ligne</th><th>Chemin cité</th><th>État</th></tr></thead>
+<tbody>
+<tr><td><code>README.md</code> : 36</td><td><code>Vie_du_Jardin/Projet_Pedagogie/Regles/Principes_pedagogiques_fiches.md</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Membres/Boussole/rituel.md</code> : 7</td><td><code>Vie_du_Jardin/Projet_Pedagogie/</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Membres/Boussole/rituel.md</code> : 15</td><td><code>Projet_Pedagogie/</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Membres/Boussole/Valise_Boussole.md</code> : 64</td><td><code>Vie_du_Jardin/Projet_Pedagogie/</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Membres/Boussole/Journal_de_bord_Boussole.md</code> : 17</td><td><code>Projet_Pedagogie/</code> (le fichier cité, <code>outil_correction_dictee.md</code>, y est)</td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Membres/Ecart/Courrier_Ecart.md</code> : 25</td><td><code>Vie_du_Jardin/Projet_DeepsClaude/</code></td><td><span class="b warn">À NUANCER</span> voir 3.1</td></tr>
+<tr><td><code>Membres/Ecart/Courrier_Ecart.md</code> : 42</td><td><code>Vie_du_Jardin/Projet_DeepsClaude/Note_sync_reorg_SOUTIENSPLUS.md</code></td><td><span class="b ok">OK</span> (fichier non déplacé)</td></tr>
+<tr><td><code>Membres/Mue/Journal_de_bord_Mue.md</code> : 152</td><td><code>Vie_du_Jardin/Projet_DeepsClaude/Suivi_Duo_Mue_Tisserand_MTC.md</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Membres/Mue/Journal_de_bord_Mue.md</code> : 132</td><td><code>Projet_DeepsClaude</code> (nom seul)</td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Membres/Aubier/Courrier_Aubier.md</code> : 28</td><td><code>Projet_Dictee_Vocale</code> (nom seul)</td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Vie_du_Jardin/Projet_Pedagogie/LIRE_EN_PREMIER.html</code> : 40</td><td><code>Regles/…</code> (2 liens) et mention de <code>Projet_DeepsClaude/</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Vie_du_Jardin/Projet_Pedagogie/LIRE_EN_PREMIER.html</code> : 58</td><td><code>Vie_du_Jardin/Projet_DeepsClaude/</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Vie_du_Jardin/Projet_Pedagogie/LIRE_EN_PREMIER.html</code> : 60-63</td><td>liens <code>../Projet_DeepsClaude/</code> vers <code>Protocole_duo_Pedago_DSP.md</code>, <code>Note_sync_reorg_SOUTIENSPLUS.md</code>, <code>DS_CL_1.md</code>, <code>Echange_Pedago_DSP.md</code>, <code>Journal_delegations_Aider.md</code></td><td><span class="b ok">OK</span> (les 5 fichiers sont bien restés)</td></tr>
+<tr><td><code>Vie_du_Jardin/Projet_Pedagogie/README.md</code> : 11, 13</td><td><code>Projet_DeepsClaude/</code>, <code>../Projet_DeepsClaude/</code> et <code>Regles/…</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Vie_du_Jardin/Projet_DeepsClaude/Echange_Pedago_DSP.md</code> : 20 ; <code>Protocole_duo_Pedago_DSP.md</code> : 20</td><td><code>Projet_DeepsClaude/</code> (le dossier lui-même)</td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Vie_du_Jardin/Projet_DeepsClaude/Note_sync_reorg_SOUTIENSPLUS.md</code> : 33</td><td><code>Projet_DeepsClaude\</code> (question posée dans le texte)</td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Vie_du_Jardin/Projet_Dictee_Vocale/Cahier_des_charges.md</code> : 32, 58</td><td><code>Projet_DeepsClaude/Journal_delegations_Aider.md</code>, <code>Projet_DeepsClaude/Echange_Pedago_DSP.md</code></td><td><span class="b ok">OK</span></td></tr>
+<tr><td><code>Outils/scripts/PLAN_REORGANISATION_2026-09.md</code> : 39 ; <code>Outils/scripts/reorg_2026-09_phase1.sh</code> : 27-31</td><td>cible <code>Vie_du_Jardin/Projet_Psy_dev/…</code> ; source <code>ressources_tutorat/Projet_Psy_Dev_D_IA/…</code></td><td><span class="b ok">OK</span> cibles existantes ; les sources sont les anciens emplacements, voulus</td></tr>
+</tbody></table></div>
+
+<h3>3.3 Autres noms de projets rencontrés (hors demande, pour mémoire)</h3>
+<p>Des noms qui ressemblent à des dossiers mais ne mènent à rien : <code>Projet_Psy_Dev_IA</code> et <code>Projet_Psy_Dev_IA_Central</code> (<code>Membres/Racine/Journal_Racine.md</code> l. 10, 39), <code>Projet_psy_dev</code> / <code>Projet_psy</code> (<code>Membres/coeur_de_bronze/MEM/Mem_coco_15092026_3.md</code>), <code>Projet_These_JFD_MDI</code> (<code>Membres/coeur_de_bronze/README.md</code> l. 10 et ailleurs), <code>Projet_Bebes_DS</code>, <code>Projet_Genially</code>. Ce sont probablement des noms de projet, pas des chemins : à ne pas toucher.</p>
+
+<!-- =========================== HYPOTHESES =========================== -->
+<h2 id="hyp">Hypothèses prises (par prudence)</h2>
+<ul>
+<li><strong>Branche :</strong> ta consigne suggérait <code>promo/audit-liens-suivis</code> « par exemple ». Cette session est liée à la branche <code>claude/kind-ride-4mg8xc</code> ; j'ai travaillé et poussé uniquement sur celle-ci, jamais sur <code>main</code>. Pas de fusion, aucun fichier existant modifié, déplacé ni supprimé.</li>
+<li><strong>Base :</strong> la branche a été recréée à partir de la dernière <code>main</code> (<code>a77204d</code>) pour que l'audit reflète bien l'état après ton déplacement du 09/10.</li>
+<li><strong>« Candidat le plus proche » :</strong> d'abord le même nom ailleurs dans le dépôt, puis un nom proche (casse, accents, « _ » à la place d'un espace). Quand deux candidats se tiennent, je les donne tous les deux.</li>
+<li><strong>Noms seuls :</strong> un nom de fichier sans dossier, cité dans le README d'un dossier, est signalé s'il n'y est pas ; je ne le compte pas comme erreur grave quand le fichier existe ailleurs de façon unique.</li>
+<li><strong>« Coco » = Cœur de Bronze</strong> et <strong>« Mue_bis » ≈ « MueC »</strong> sont des hypothèses de lecture, pas des certitudes.</li>
+<li><strong>Données personnelles :</strong> aucun nom d'élève ni contenu personnel de membre n'est repris ici. Quand un suivi en contenait, je l'ai écarté.</li>
+</ul>
+
+<h2 id="questions">Questions pour Sof (5 au plus)</h2>
+<ol class="q">
+<li><strong><code>Reunions/</code> dans <code>Vie_du_Jardin/README.md</code> :</strong> faut-il pointer vers <code>réunion/</code>, vers <code>Ethiq/Réunion/</code>, ou vers les deux ? Et acceptes-tu que le tableau s'étende aux 5 dossiers <code>Projet_*</code> ?</li>
+<li><strong>Identités à trancher :</strong> « Coco » est-elle bien Cœur de Bronze (et sur quelle architecture : Claude ou DeepSeek) ? « Mue_bis » et « MueC » désignent-ils la même instance ? Entre <code>Sol/</code>, <code>Sol_anc/</code> et <code>Luz/</code>, quel dossier appartient à quelle instance ?</li>
+<li><strong>Règle « une seule source par type d'information » :</strong> la répartition proposée au 2.5 (annuaire pour l'identité, suivi par personne pour la mission en cours, suivi de Flo pour les projets) te convient-elle ? Faut-il alors remplacer le tableau de <code>Membres/README.md</code> par un renvoi vers l'annuaire ?</li>
+<li><strong>Noms de fichiers obsolètes dans les README de membres</strong> (Aev, Flo, Klara, Sol, Cœur de Bronze, voir 1.2 B) : veux-tu corriger les README, ou renommer/replacer les fichiers ? Et pour <code>README.md</code> racine : on retire ou on redirige les liens <code>doc_projet_Aev.md</code> et <code>Corpus/Analyses EML/</code> ?</li>
+<li><strong>Éléments cités mais absents du dépôt :</strong> <code>egalis.bat</code> et <code>Table_ronde_2_valise_compression_reveils.md</code> sont-ils en local (donc à laisser) ou à versionner ?</li>
+</ol>
+
+<p class="small">Fin du rapport. Aucun autre fichier du dépôt n'a été modifié par cet audit.</p>
+</main>
+</body>
+</html>
