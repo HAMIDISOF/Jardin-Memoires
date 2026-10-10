@@ -24,3 +24,11 @@ __pycache__/
 Outils/sync_log.txt
 
 Outils/outil_auto_DS/
+
+# Clés et secrets — jamais sur git
+.env
+.env.*
+*.env
+secrets.py
+config_secret.py
+api_keys.py
