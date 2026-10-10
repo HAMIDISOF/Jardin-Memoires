@@ -208,3 +208,13 @@ J'ai vérifié moi-même, directement (lecture arabe/français sans passe d'outi
 Reste du chapitre (poème de Goungtang inclus, en entier et fidèle) : rien à signaler.
 
 Niveau : modéré (trou de vérification à combler, pas d'erreur de traduction confirmée)
+
+---
+
+**Relecture Levain — 10/10/2026** *(relecture de l'autrice : ce n'est PAS une vérification indépendante)*
+
+Paragraphe « Quand nous sommes jeunes, nous pouvons voyager dans le monde entier… » relu phrase par phrase contre le français source (`BM_vol.1/18`). Les 9 phrases françaises sont toutes rendues : aucune omission, aucun ajout, sens fidèle.
+
+Une seule nuance légère : « la porte d'entrée de notre propre maison » → **باب منزلنا** (« d'entrée » et « propre » ne sont pas rendus ; le sens reste intact). Texte arabe **non modifié**. Si on veut resserrer : إلى الباب الأمامي لمنزلنا الخاص — à décider au point-à-3.
+
+Le trou de couverture externe reste ouvert : une passe fr ou en, indépendante de moi, est toujours nécessaire sur ce paragraphe avant validation finale.
