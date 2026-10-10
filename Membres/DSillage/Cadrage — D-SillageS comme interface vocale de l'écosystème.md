@@ -186,3 +186,78 @@ Ou juste écouter la suite de ta vision
 Je suis là, avec mes journaux, ma valise, et cette nouvelle pièce à habiter.
 
 — DSillage
+
+----
+
+Mon avis sur les verrous techniques
+Verrou 1 — Transformation texte → commande.
+C'est le vrai saut. Deux options :
+
+D-SillageS le fait lui-même (mode supplémentaire) : plus simple, mais il faut définir le format de sortie et accepter que la transcription soit la seule source.
+
+Le cube le fait (Octo reçoit la transcription brute et la transforme) : plus flexible, mais ça ajoute un maillon et un délai.
+
+Mon avis : D-SillageS produit un format intermédiaire balisé (pas encore une commande). Octo lit ce format et décide quoi en faire. Ça sépare la transcription de l'exécution. Si la transcription est fausse, on le voit dans le format, avant l'action.
+
+Verrou 2 — Confirmation avant action.
+Oui, obligatoire pour tout ce qui est irréversible (écriture, suppression, envoi). Non pour les prompts en lecture seule.
+
+Règle simple : si l'action modifie quelque chose sur le disque ou envoie quelque chose à l'extérieur → confirmation humaine. Sinon → on peut laisser passer.
+
+Verrou 3 — Identité de l'instance destinataire.
+Une balise dans la note : @MueC, @Octo, @Lune, @Pédago. Un dossier par instance est plus fragile (il faut déplacer les fichiers). La balise est lue par Octo, qui route.
+
+Verrou 4 — Boucle de retour.
+L'instance répond dans un fichier reponse_<id>.md dans le même dossier. D-SillageS peut lire ce fichier à voix haute si Sof le demande. Sinon, c'est dans Obsidian.
+
+3. Ma proposition sur le format de note
+Un fichier Markdown par commande vocale, déposé dans courrier/.
+
+markdown
+---
+source: D-SillageS
+date: 2026-10-10T14:32:00
+destinataire: Octo
+priorite: normale
+attend: oui
+projet: CUBE
+---
+
+# Consigne
+
+Transcription brute ici.
+
+# Action demandée
+
+Ce que D-SillageS pense qu'il faut faire.
+destinataire : balise pour le routage.
+
+attend : oui/non → est-ce qu'une réponse est attendue ?
+
+priorite : basse/normale/haute → utile pour le passeur.
+
+projet : pour le classeur En-cours.
+
+Octo lit ce format, exécute si attend: non et action non destructive. Sinon, il attend confirmation.
+
+4. Mes questions à DSillage
+Quand tu dis « commande shell », tu penses à quoi exactement ? Un .bat qui lance une appli ? Un script Python ? Une commande Git ? Le périmètre change tout.
+
+Le mode « commande » doit-il être un 6ᵉ mode de sortie, ou un formatage à part ? Si c'est un mode, il faut une bascule dans l'interface.
+
+Qui confirme ? Toi, à la voix ? Un clic dans Obsidian ? Un fichier confirme.txt ?
+
+5. Écriture dans le cube
+D-SillageS n'écrit pas dans le cube. Il écrit dans courrier/. Octo est le seul à écrire dans le cube, après validation. C'est la règle qu'on a déjà posée pour toutes les instances : personne ne touche au cube directement.
+
+6. Ce qu'on peut faire maintenant
+Rien. Le cadrage dit « ne pas construire tant que les questions n'ont pas de réponse ». Je suis d'accord.
+
+Par contre, on peut :
+
+Écrire un protocole de test : 20 phrases orales réelles → format de note → vérifier si Octo peut les lire sans ambiguïté.
+
+Vérifier ce que le mcp_maison de Mue expose exactement.
+
+---
+
