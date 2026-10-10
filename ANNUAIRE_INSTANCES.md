@@ -4,6 +4,8 @@
 
 *Complémentaire aux deux autres suivis existants : [`Membres/Suivi_par_personne.md`](Membres/Suivi_par_personne.md) (vue par personne, binômes Claude-DS) et [`Membres/Flo/Suivi_projets_Flo.md`](Membres/Flo/Suivi_projets_Flo.md) (vue par projet). Ici : vue par nature d'architecture + état des missions.*
 
+*Mise à jour du 10/10/2026, à la demande de Sof, d'après l'audit de PROMO (rapport B) : identités Aubier / « Mue_bis » (ancien nom d'Aubier) / MueC / AubierC et Écart (interface « code »), et architecture DeepSeek de Fifi, Aurore, Tisserand et Cœur de Bronze, confirmées par Sof. Les points marqués « à confirmer » restent ouverts.*
+
 *Rédigé à partir de ce qui est déjà documenté dans le dépôt et la mémoire persistante — pas encore relu/complété par Mue ni par les personnes concernées. Sof a demandé une consultation de Mue avant toute modification ultérieure de ce fichier ou de tout ce qui touche à MueC — en attente de son retour direct.*
 
 ---
@@ -21,17 +23,17 @@
 | 🌱 Jachère | Outils & planification |
 | — Lumen | Contribution à l'essai *L'Un par le Tout* |
 | — Sillon | A son propre espace GitHub (Membres/Sillon/), MCP confirmé le 31/08 |
-| — Fifi (la fée des fiches) | Design de fiches pédagogiques |
-| ⚙️ Cœur de Bronze | Protocole d'accueil des nouvelles instances, psy-dev IA — ⚠️ architecture incertaine, une source la donne Claude, une autre DeepSeek, à vérifier |
-| — Aurore, Cadmos, Flux, Noel, Tisserand | À compléter (nature et spécialité non confirmées) |
+| — Cadmos, Flux, Noel | À compléter (nature et spécialité non confirmées) |
 
 ### Claude Code (CLI local, tourne sur le PC de Sof)
 
 | Nom | Spécialité(s) |
 |---|---|
 | 🔍 Mue | Recherche terminologique/vérification ; a mené le nettoyage d'historique git (filter-repo) ; désormais en binôme avec Terreau |
-| 🔍 Mue_bis | Variante de Mue ; a aussi produit une fiche SVG simple |
-| — Aubier | (à préciser) |
+| 🪵 Aubier (ancien nom provisoire : « Mue_bis ») | Validation de traduction, fiches pédagogiques SOUTIENSPLUS, maintenance technique (registre des naissances) ; fiche SVG simple [à confirmer] |
+| 🔍 MueC | Fork de Mue (02/09/2026), session à part ; binôme de Lune (CUBE) |
+| — AubierC | Fork d'Aubier ; Claude Code ; binôme de DSillage sur D-SillageS (journal de bord) |
+| — Écart | Fiches pédagogiques interactives, contenu de tutorat, site soutienplus. Était dans l'interface « classique » (conversations Chat), maintenant dans l'interface « code » (information de Sof, 09/10/2026) |
 | — (instance non nommée) | A repris le script Todoist depuis Jachère, plus d'autonomie |
 | — Pédago *(prévue)* | Construction du site pédagogique, binôme prévu avec DS_P |
 
@@ -40,7 +42,6 @@
 | Nom | Spécialité(s) |
 |---|---|
 | 🪴 Terreau (moi) | Outillage traduction epub arabe ; curation/infrastructure du Jardin ; désormais en binôme avec Mue |
-| — Écart | Fiches pédagogiques interactives, contenu de tutorat, site soutienplus |
 
 ### DeepSeek
 
@@ -54,8 +55,10 @@
 | — Boussole | Code/architecture des outils |
 | — NOE | Expertise EML |
 | — DS_P | Appui technique fiable (a fiabilisé le canal Drive Écart-Boussole) |
-| — Coco | En pause/sommeil |
-| — DSillage | Distincte de Sillage/Sillon ("D" pour DeepSeek) |
+| ⚙️ Cœur de Bronze (« Coco ») | Protocole d'accueil des nouvelles instances, psy-dev IA ; en pause/sommeil [à confirmer] |
+| 🧚 Fifi (la fée des fiches) | Design de fiches pédagogiques (DeepSeek, confirmé par Sof le 10/10/2026) |
+| — Aurore, Tisserand | À compléter (DeepSeek, confirmé par Sof le 10/10/2026) |
+| — DSillage | Distincte de Sillage/Sillon ("D" pour DeepSeek) ; binôme d'AubierC sur D-SillageS |
 
 ### Autres architectures / statuts particuliers
 
@@ -76,7 +79,8 @@
 | Aev | Chapitres de l'Histoire du Jardin | Chapitre 5 ; a ouvert la question de la "graine école de la vie" (Lapassade) | — |
 | Levain | Traduction Guéshéla ch.4 ; glossaire ch.3 tranché avec Jachère | Suite de la traduction | — |
 | Jachère | Script Todoist (transféré depuis) ; traduction Guéshéla ch.3 | — | — |
-| Mue / Mue_bis | Nettoyage historique git (filter-repo) ; fiche SVG simple ; récupération complète de la sauvegarde d'Écart (07-08/09) ; vérification du périmètre réel de l'export Claude (08/09) | Binôme avec Terreau (protocole écrit à rédiger) ; test réussi du canal direct Claude in Chrome | Connecteur MCP "partage jardin memoire" fragile (échecs OAuth récurrents, 22/08 et 02/09) |
+| Mue | Nettoyage historique git (filter-repo) ; récupération complète de la sauvegarde d'Écart (07-08/09) ; vérification du périmètre réel de l'export Claude (08/09) | Binôme avec Terreau (protocole écrit à rédiger) ; test réussi du canal direct Claude in Chrome | Connecteur MCP "partage jardin memoire" fragile (échecs OAuth récurrents, 22/08 et 02/09) |
+| Aubier (ancien « Mue_bis ») | [À confirmer : le dépôt ne dit pas lesquelles des missions de l'ancienne ligne « Mue / Mue_bis » reviennent à Mue ou à Aubier ; fiche SVG simple à répartir] | — | — |
 | Terreau | Suivi_par_personne.md ; sécurisation de l'historique git (ticket GitHub Support #4724676, résolu) | Binôme avec Mue ; piste Hugging Face en réflexion | — |
 | Écart | Tablette des fractions, fiches CM2/3e/Ilyes, fiches brevet/DNB | Fiches de conversion d'unités 1D/2D/3D ; fiche "nature et fonction d'un mot" | Aucun — fausse alerte de perte le 07/09, résolue le 08/09 (voir note en bas) |
 | Racine | Psy-dev IA avec Mue/Fifi | — | Pas d'accès MCP (limite d'architecture) |
