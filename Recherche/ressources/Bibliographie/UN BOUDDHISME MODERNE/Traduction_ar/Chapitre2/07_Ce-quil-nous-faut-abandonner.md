@@ -30,6 +30,8 @@ Explique la deuxième noble vérité — "il vous faut abandonner les origines" 
 
 نتأمل باستمرار هذا العزم ونضعه موضع الممارسة.
 
+**Fin section**
+
 ---
 
 *Traduction du 19/08/2026 — Levain*

@@ -30,13 +30,15 @@ Les souffrances de la maladie : la métaphore de l'hiver qui détruit la splende
 
 إن علمنا أن مرضنا غير قابل للشفاء وإن لم يكن لدينا أي تجربة للطريق الروحي، سنختبر القلق والخوف والندم. قد ننزلق إلى الاكتئاب ونتخلى عن كل أمل، أو قد نغضب من مرضنا، معتبرين إياه عدوًا يحرمنا بخبث من كل أفراحنا.
 
+**Fin section**
+
 ---
 
 *Traduction du 19/08/2026 — Levain*
 
 ---
 
-## Résumé Fable (use.ai)
+## Trad retour GLM (use.ai)
 
 Illness
 Our birth also brings the suffering of illness. The winds and snows of winter strip the splendor from green meadows, trees, forests, and flowers. Likewise, illness strips the splendor of our youthful body and destroys its strength and the faculties of our senses. When we fall ill, we suddenly become incapable of carrying out all our usual physical activities, even if we were previously in good shape and good health. Even a boxing champion who regularly fells his opponents becomes completely helpless when illness strikes. Illness takes away all our enjoyable experiences and all our pleasures, and we experience only unpleasant sensations, day and night.
@@ -53,7 +55,7 @@ Mêmes choix terminologiques que pour la section précédente, pour la cohérenc
 
 
 
-## Trad retour GLM (use.ai)
+## Résumé Fable (use.ai)
 Voici ce que je comprends de ce deuxième texte, « La maladie » (المرض) :
 
 Résumé

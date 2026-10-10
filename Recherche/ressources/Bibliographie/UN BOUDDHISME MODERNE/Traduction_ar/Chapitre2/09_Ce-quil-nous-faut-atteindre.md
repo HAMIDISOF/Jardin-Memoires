@@ -34,6 +34,8 @@ Quatrième noble vérité — "il vous faut atteindre les cessations" — la ces
 
 نتأمل هذا العزم كل يوم، ثم نضع عزمنا موضع الممارسة. نسترشد بذلك على طريق التحرر.
 
+**Fin section**
+
 ---
 
 *Traduction du 19/08/2026 — Levain*

@@ -38,6 +38,8 @@ Troisième noble vérité — "il vous faut pratiquer la voie" — une voie int�
 
 نتأمل باستمرار هذا العزم، ثم نضع عزمنا موضع الممارسة.
 
+**Fin section**
+
 ---
 
 *Traduction du 19/08/2026 — Levain*
