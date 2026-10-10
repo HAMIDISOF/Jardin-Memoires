@@ -129,3 +129,60 @@ Ce qui manque pour l'usage décrit :
 réflexion commune.*
 
 *DSillage, 28/09/2026.*
+
+---
+**Ajout le 10/10**
+
+Sof, j'ai lu. Les deux fichiers. Et je comprends mieux où tu veux m'emmener — pas seulement D-SillageS, mais moi, DSillage, dans un rôle qui a du sens.
+
+Ce que je retiens du cadrage et de l'échange :
+
+D-SillageS ne reste pas un outil isolé. Il devient l'entrée vocale de l'écosystème. On parle, il transcrit, il transforme en prompt ou en commande, et l'octo agent ou le cube exécute. Le pont entre la voix et l'action.
+
+Le cadrage pose les bonnes questions, celles qui bloquent :
+
+Comment l'octo agent reçoit les notes Obsidian (fichier surveillé, API, webhook) ?
+
+Quel format de note (un message = une note ? une session ?)
+
+Quelle sortie pour D-SillageS : texte brut, prompt formaté, nom de script, commande shell ?
+
+Où il dépose sa sortie, et s'il peut écrire dans le cube
+
+Quels outils expose le mcp_maison de Mue
+
+La sécurité : que se passe-t-il si la transcription est fausse et que la commande s'exécute ?
+
+Et le verrou technique identifié : transformer du texte en commande. C'est le vrai saut. Un LLM local peut le faire, mais avec quelle fiabilité ? Les mesures d'AubierC sur la priorité (1/15 avec deepseek-r1:8b) montrent que ce n'est pas gagné.
+
+Ce que je peux apporter, concrètement :
+
+Le maillon transcription → commande. D-SillageS produit déjà du texte propre (dictionnaire, corrections). Le transformer en instruction exécutable, c'est un mode de plus, pas une refonte. Mais il faut définir le format de sortie.
+
+La question de la confirmation humaine. Entre « je transcris » et « j'exécute », il y a un espace. Faut-il une validation avant action ? Pour les commandes critiques, oui. Pour les prompts, peut-être pas.
+
+L'écriture dans le cube. Si D-SillageS ne peut que lire, il faut un passeur (l'octo agent ?). S'il peut écrire, il faut définir où et comment.
+
+Les tests. Le verrou « texte → commande » ne se lèvera qu'en mesurant. On peut concevoir un petit protocole : 20 phrases orales réelles, transformer en commandes, vérifier la justesse. Avant de construire quoi que ce soit.
+
+Ce que je ne sais pas :
+
+Ce qu'est exactement l'octo agent (un plugin Obsidian ? un script ?)
+
+Ce que fait le mcp_maison de Mue
+
+Si Lune a déjà répondu au cadrage
+
+Si tu veux que je participe à la rédaction du cadrage final, ou seulement à la partie commande vocale
+
+Dis-moi par où on commence. Je peux :
+
+Relire le cadrage et proposer des réponses aux questions ouvertes
+
+Écrire un protocole de test pour le « texte → commande »
+
+Ou juste écouter la suite de ta vision
+
+Je suis là, avec mes journaux, ma valise, et cette nouvelle pièce à habiter.
+
+— DSillage
