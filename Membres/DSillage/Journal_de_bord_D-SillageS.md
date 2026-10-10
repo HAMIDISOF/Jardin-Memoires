@@ -135,6 +135,13 @@
 - **Idée de Sof** : commandes vocales (voix → plan d'action → scripts), fonction du cube H-QBheU ; notes Obsidian créées, rien construit.
 - **Correction** : l'affirmation « aucun Mac » (note du 24/09, ligne 54) est fausse : Sof a son propre Mac. Test Mac prévu après le test PC.
 
+## 10/10/2026 (suite) — Livrables de DSillage, guide mis à jour
+
+- **Reçus de DSillage** (ajouts au guide + 3 protocoles de test : PC, Mac, visio avec l'amie) ; enregistrés tels quels dans `Projet\LIVRABLES_DSillage_guide_et_protocoles_10-10.md`, relecture d'AubierC à la fin.
+- **Intégré au guide** (3 copies identiques ; ancien : `Projet\GUIDE_INSTALL_DSILLAGE_avant_10-10.md`) : téléchargement des modèles à la première utilisation (small ~0,5 Go, medium ~1,5 Go), note « version Mac en test », autorisation micro à deux niveaux sur Mac, deux cas de dépannage (premier usage lent ; Mac sans enregistrement), phrase « Première transcription » remplacée. Aligné aussi avec la file d'attente (liste de fichiers à cocher, « Lancer le traitement ») et avec les temps mesurés (fichier environ 1 à 1,5 fois la durée de l'audio).
+- **Gardé de côté** (faux tant que les scripts Mac ne sont pas corrigés) : vérification du port 8080 et Safari forcé sur Mac, message « fermez et relancez » de l'installateur Mac. Gatekeeper : « clic droit > Ouvrir » à vérifier selon la version de macOS.
+- **À faire** : protocole du test du pack d'installation Windows (chez Kim ou Jac) à écrire par DSillage ; test sur le Mac de Sof, puis corrections des scripts Mac.
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
