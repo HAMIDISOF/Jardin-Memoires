@@ -127,6 +127,14 @@
 - **Correction** : la ligne « aucun des deux binômes n'a de Mac » (entrée du 24/09) est fausse : Sof a son propre Mac, qui sera utilisé pour le test Mac après le test PC.
 - **Historique** : Sof signale que les cartes de résultats restent affichées même après avoir déplacé les fichiers. Sur sa demande, l'historique des traitements terminés s'efface maintenant tout seul au chargement d'un nouveau fichier et au lancement d'un traitement (testé en instance isolée ; packs synchronisés). **Défaut corrigé le soir même** : « Effacer les résultats » effaçait aussi de l'affichage les traitements EN COURS (Sof a perdu la vue de son fichier en cours) ; il n'efface plus que les traitements terminés (testé). Les 23 mp3 restants (04 à 26) ont été copiés dans `A_transcrire` (copies, originaux intacts).
 
+## 10/10/2026 — File d'attente validée en réel, dictionnaire enrichi (recueil de 26 pistes)
+
+- **File d'attente** : les 26 pistes du recueil (≈ 55 min d'audio, Sof et Mue) ont été transcrites avec `medium` / `beam 5`. Sof a confirmé que la page affiche le fichier en cours et ceux en attente. Test réel concluant.
+- **Défauts constatés pendant ce lot** : (1) plusieurs serveurs sur le port 8080 en même temps quand on relance sans que l'ancien soit arrêté ; fermer la fenêtre n'a pas arrêté les anciens processus Python, et la page affichait l'ancien code ; (2) « Effacer les résultats » effaçait aussi les traitements en cours (corrigé le 09/10) ; (3) le glisser-déposer n'indique pas clairement où va le fichier (liste « Fichier à traiter » plus bas). **À traiter** : empêcher le double lancement sur le port 8080, et rendre l'arrêt plus fiable.
+- **Dictionnaire** : fautes signalées par Sof (varice, non-onte, agite, non-fois, inayanistes/maayanistes, voix, un « B » parasite piste 09) confrontées aux vraies transcriptions ; 9 entrées ajoutées, contextes exacts (deux propositions de DSillage ne correspondaient pas au texte réel : « s'agite de », « voix de fait/de recours »). 37 entrées ; sauvegarde `corrections_avant_10-10.json`.
+- **Idée de Sof** : commandes vocales (voix → plan d'action → scripts), fonction du cube H-QBheU ; notes Obsidian créées, rien construit.
+- **Correction** : l'affirmation « aucun Mac » (note du 24/09, ligne 54) est fausse : Sof a son propre Mac. Test Mac prévu après le test PC.
+
 ### Points de vigilance pour les tests des amies (25/09/2026)
 
 - **PC — téléchargement par URL** : si un téléchargement YouTube échoue chez l'amie sur PC, penser d'abord à Node.js. Le guide affirme que l'installateur s'en occupe, ce qui est **faux côté Windows** (`installer_windows.bat` n'installe pas Node ; seul le script Mac le fait). Conséquence directe de la décision de Sof (option 3, statu quo). Piste si échec : installer Node côté Windows (`winget install OpenJS.NodeJS.LTS`) + `--js-runtimes node` dans `telecharger_audio()`, avec test avant/après. Ou corriger la mention du guide.
