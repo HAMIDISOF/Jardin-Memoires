@@ -32,3 +32,9 @@ Outils/outil_auto_DS/
 secrets.py
 config_secret.py
 api_keys.py
+
+# Thèse d'Isabelle Peschard (HAL tel-00007975) : pas de licence explicite, copie locale uniquement
+Recherche/ressources/Bibliographie/Peschard_HTML/
+Recherche/ressources/Bibliographie/Peschard_decoupee/
+Recherche/ressources/Bibliographie/Peschard_HTML - REFONTE/
+Recherche/ressources/Bibliographie/*_Isabelle_Peschard.md
