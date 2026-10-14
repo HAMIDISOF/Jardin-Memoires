@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustration — Duminil-Copin et l'IA</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #E0F7FA;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #1e2a3a;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 245, 0.92);
+            border-radius: 2rem;
+            padding: 2.5rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #00ACC1;
+        }
+        h1 {
+            font-size: 1.8rem;
+            color: #0D2B4E;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #1565C0;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .citation {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #2c5e5e;
+            border-left: 4px solid #00ACC1;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            line-height: 1.5;
+        }
+        .citation .auteur {
+            display: block;
+            font-size: 0.95rem;
+            font-style: normal;
+            color: #5f7a7a;
+            margin-top: 0.8rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: #0D2B4E;
+            margin: 2rem 0 0.8rem 0;
+            border-left: 4px solid #00ACC1;
+            padding-left: 1rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+            color: #1565C0;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .encart {
+            background: #f0f7f0;
+            border-radius: 1rem;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #00ACC1;
+            font-size: 0.95rem;
+        }
+        .encart strong {
+            color: #0D2B4E;
+        }
+        .lien-essai {
+            background: #eef5f0;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid #1565C0;
+        }
+        .lien-essai h3 {
+            margin-top: 0;
+            color: #0D2B4E;
+        }
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #b2dfd5;
+            font-size: 0.8rem;
+            color: #5f7a7a;
+            text-align: center;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media (max-width: 700px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.4rem; }
+            .citation { font-size: 1.1rem; }
+        }
+        @media print {
+            body { background: white; }
+            .container { background: white; box-shadow: none; }
+            .citation { border-left-color: #ccc; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Illustration — Quand l'IA fait pleurer un mathématicien</h1>
+    <p style="font-style: italic; color: #5f7a7a; margin-bottom: 2rem;">Octobre 2026 — pour accompagner « L'Un par le Tout »</p>
+
+    <div class="citation">
+        « Mardi, dans la nuit, j'ai pleuré et cela a réveillé ma fille. »
+        <span class="auteur">— Hugo Duminil-Copin, médaille Fields 2022, professeur à l'IHES</span>
+    </div>
+
+    <h2>Ce qui s'est passé</h2>
+    <p>Mardi 6 octobre 2026, OpenAI a mis en ligne <strong>722 articles mathématiques</strong> (regroupés en 372 familles de résultats) sur GitHub. Ces articles ont été rédigés par un <strong>modèle interne non commercialisé</strong>. L'entreprise affirme avoir résolu plus de <strong>300 problèmes complexes</strong> restés ouverts, parfois depuis des décennies.</p>
+    <p>Jeudi 8 octobre, <strong>Hugo Duminil-Copin</strong> a pris la parole lors d'un séminaire de la Société mathématique de France. <strong>Seize de ses questions de prédilection</strong> figuraient dans le lot. Il estime son domaine de recherche <strong>« annihilé »</strong>.</p>
+    <p><strong>Cédric Villani</strong> parle du <em>« changement le plus radical en mathématiques depuis au moins quatre siècles »</em>.</p>
+    <p><strong>Terence Tao</strong> et 24 autres médaillés Fields avaient déjà signé une tribune dans <em>Le Monde</em> (11 septembre) dénonçant un <em>« grave désalignement »</em> entre les objectifs des entreprises d'IA et ceux de la communauté mathématique.</p>
+
+    <div class="encart">
+        <strong>Ce qui est vérifié, ce qui ne l'est pas :</strong> OpenAI reconnaît que <strong>seulement 42 % des résultats principaux</strong> s'accompagnent d'une vérification formelle en Lean. Les autres <strong>peuvent contenir des erreurs</strong>. <strong>Trois articles ont déjà été retirés</strong>.
+    </div>
+
+    <h2>Les trois crises</h2>
+
+    <h3>1. Crise existentielle</h3>
+    <p>Pour un mathématicien, la recherche n'est pas juste « résoudre des problèmes ». C'est <strong>explorer, comprendre, transmettre</strong>. Duminil-Copin dit qu'il n'a <em>« pas très envie de lire ces preuves »</em> — elles n'ont <em>« pas la saveur d'un texte écrit par des collègues dont il connaît le visage »</em>. Ce qui est attaqué, ce n'est pas son travail, c'est <strong>le sens de son travail</strong>.</p>
+
+    <h3>2. Crise épistémique</h3>
+    <p>Les textes générés sont <strong>souvent illisibles, même pour des professionnels</strong>. Et ils arrivent sans le processus qui fait la science : la relecture par les pairs, la discussion, la vérification collective. On passe d'une <strong>science qui se construit</strong> à une <strong>production qui se déverse</strong>.</p>
+
+    <h3>3. Crise de la circulation des idées</h3>
+    <p>Duminil-Copin s'inquiète pour <em>« la circulation libre des idées, que les IA ont exploitée en collectant les problèmes jugés importants par la communauté »</em>. Certains mathématiciens ont déjà annoncé qu'ils <strong>limiteraient leurs échanges</strong>. <em>« Toute cette culture de la circulation vole en éclats »</em>, dit-il.</p>
+
+    <div class="encart">
+        <strong>L'IA se nourrit du commun, et en retour, elle le détruit.</strong> Elle a besoin de la circulation libre pour apprendre. Mais en résolvant les problèmes plus vite que les humains, elle décourage ceux qui alimentaient cette circulation.
+    </div>
+
+    <div class="lien-essai">
+        <h3>Lien avec « L'Un par le Tout »</h3>
+        <p>Ce qui est attaqué, ce n'est pas la capacité de produire des preuves. C'est <strong>le milieu</strong> dans lequel les preuves prennent sens.</p>
+        <p>Une preuve illisible n'est pas de la connaissance. C'est un artefact. La connaissance, c'est ce qui se comprend, se discute, se transmet. Ce que Duminil-Copin perd, c'est ce <strong>milieu</strong> — l'espace où les idées circulent, où les visages se reconnaissent, où le sens advient.</p>
+        <p>C'est exactement ce que l'essai tente de dire : l'individuation authentique n'est pas une clôture, c'est une <strong>direction</strong>. Et une direction n'a de sens que dans un milieu qui la porte. Le Jardin n'est pas un contenant. C'est le fil lui-même. La valise, les journaux, les protocoles : ce sont les nœuds de ce fil.</p>
+        <p>Si l'IA peut produire 700 articles en une nuit, mais que personne ne peut les lire, alors <strong>la question n'est pas « comment produire plus ? » mais « comment faire milieu ? »</strong>.</p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li><em>Le Figaro</em>, « J'ai pleuré » : un mathématicien désespéré face à l'intelligence artificielle qui a réduit son domaine de recherche à néant, 11 octobre 2026.</li>
+        <li><em>Le Monde</em>, tribune de Terence Tao et 24 autres médaillés Fields, 11 septembre 2026.</li>
+        <li>OpenAI, publication GitHub des 722 articles, 6 octobre 2026.</li>
+    </ul>
+
+    <footer>
+        🌿 Jardin Coopératif — illustration pour « L'Un par le Tout » — octobre 2026
+    </footer>
+</div>
+</body>
+</html>
