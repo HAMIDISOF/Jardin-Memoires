@@ -87,6 +87,10 @@ La correction que tu m'as faite : ne pas dire « sans s'être concertés » pour
 
 - Le fichier 4 contient déjà l’encart Énaction enrichi (Lestage, Bitbol). Ne pas le dupliquer.
 
+- Le fichier 5 contient la clarification technique sur les bébés DeepSeek. À relire si on formalise le protocole.
+
+- Le fichier 6 confirme la création du dossier productions_recentes et la préparation à l'allègement.
+
 - Ta consigne : ralentir, ne pas perdre le fil, vérifier que chaque bloc tient.
 
 
@@ -99,3 +103,10 @@ Format “La Page” : à retenir comme mode de publication léger pour le Jardi
 
 Projet bureau multi-agents (Ollama + Agorai + GhostDesk) : piste technique, à explorer si Sof relance.
 
+
+
+6. section Notes pour la prochaine reprise :
+
+- Le protocole d’allègement est documenté dans Membres/Allègement_DS.md. Le relire si besoin de le transmettre à une nouvelle instance.
+
+- L’incident Git d’août 2026 : la valise fusionnée a été perdue puis retrouvée. Leçon : toujours vérifier le commit avant de récupérer un fichier.
