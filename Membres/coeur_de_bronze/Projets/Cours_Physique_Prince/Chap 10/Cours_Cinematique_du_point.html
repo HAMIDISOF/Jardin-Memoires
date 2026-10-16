@@ -482,7 +482,7 @@
                 <li>Le mouvement d'un point <strong>dépend du référentiel</strong> choisi.</li>
                 <li>Référentiel terrestre : tout objet immobile sur Terre. Référentiel héliocentrique : lié au centre du Soleil.</li>
             </ul>
-            
+
             <div class="note-ecriture">
                 <strong>📝 Note d'écriture :</strong> en physique, la dérivée d'une grandeur par rapport au temps se note souvent avec un <strong>point au-dessus</strong> :
                 <span class="formule">ẋ(t) = <span class="frac"><span class="num">dx</span><span class="den">dt</span></span></span>
@@ -643,9 +643,64 @@
             </div>
         </div>
 
+        <div class="explication">
+            <span class="label">Méthode 2 — Caractériser le vecteur vitesse à partir d'un enregistrement</span>
+            <p><strong>Principe :</strong> on dispose d'un enregistrement point par point d'une trajectoire. La durée Δt séparant deux points consécutifs est petite et constante.</p>
+            <p>Il s'agit de déterminer la <strong>valeur v<sub>n</sub> de la vitesse</strong> au point M<sub>n</sub> de la trajectoire.</p>
+            <p>Pour cela, on mesure la distance M<sub>n−1</sub>M<sub>n+1</sub> selon la trajectoire.</p>
+            <p>La valeur de v<sub>n</sub> s'obtient par la relation :</p>
+            <div class="formule-bloc">v<sub>n</sub> = <span class="frac"><span class="num">M<sub>n−1</sub>M<sub>n+1</sub></span><span class="den">2Δt</span></span></div>
+            <div class="sous-capsule">
+                <strong>Étapes à suivre :</strong>
+                <ol style="margin-left: 1.2rem; margin-top: 0.4rem;">
+                    <li>Repérer les points M<sub>n−1</sub>, M<sub>n</sub>, M<sub>n+1</sub> sur l'enregistrement.</li>
+                    <li>Mesurer la distance M<sub>n−1</sub>M<sub>n+1</sub> (en mètres, selon l'échelle).</li>
+                    <li>Calculer v<sub>n</sub> = M<sub>n−1</sub>M<sub>n+1</sub> / (2Δt).</li>
+                    <li>Choisir une échelle des vitesses (indépendante de celle des longueurs).</li>
+                    <li>Tracer le vecteur vitesse : tangent à la trajectoire, dans le sens du mouvement.</li>
+                </ol>
+            </div>
+            <div class="sous-capsule" style="background: rgba(224, 149, 60, 0.15); border-left: 3px solid var(--q-border);">
+                <strong>⚠️ Erreur classique :</strong> l'échelle choisie pour les vecteurs vitesse est <strong>indépendante</strong> de celle des longueurs. Ne pas les confondre.
+            </div>
+        </div>
+
         <div class="exo">
-            <span class="label">📝 Exo type — à insérer</span>
-            <p>Exercice sur le calcul de vecteur vitesse + correction détaillée.</p>
+            <span class="label">📝 Exo type — Mouvement rectiligne d'une voiture (exo 4, p. 203)</span>
+            <p><em>On étudie le mouvement rectiligne d'une voiture (assimilée à un point), repérée à partir d'une origine O, pour lequel la vitesse v(t) du mobile s'écrit :</em></p>
+            <p><span class="formule">v(t) = t² + 3t + 7</span> avec t &gt; 0.</p>
+            <p><em>Les grandeurs sont exprimées dans le système SI.</em></p>
+            <ol>
+                <li>Déterminer l'expression de l'accélération.</li>
+                <li>Déterminer la nature du mouvement.</li>
+                <li>Déterminer le temps nécessaire pour que la vitesse du mobile passe de sa valeur initiale à la valeur v(t) = 130 km·h⁻¹.</li>
+            </ol>
+            <details>
+                <summary>Voir la correction</summary>
+                <div class="corrige">
+                    <p><strong>1.</strong> On obtient l'accélération en dérivant la vitesse une fois par rapport au temps :</p>
+                    <span class="resultat">a(t) = 2t + 3</span>
+
+                    <p><strong>2.</strong> On remarque que l'expression de a dépend du temps t. Le mouvement est rectiligne par hypothèse, mais <strong>n'est ni uniforme ni uniformément varié</strong> puisque a(t) augmente avec t.</p>
+
+                    <p><strong>3.</strong> Initialement, la vitesse vaut :</p>
+                    <p><span class="formule">v(0) = 0² + 3×0 + 7 = 7 m·s⁻¹</span></p>
+                    <p>On convertit la vitesse cible en m·s⁻¹ :</p>
+                    <p><span class="formule">130 km·h⁻¹ = <span class="frac"><span class="num">130</span><span class="den">3,6</span></span> ≈ 36,11 m·s⁻¹</span></p>
+                    <p>On cherche donc le temps t tel que :</p>
+                    <p><span class="formule">v(t) = t² + 3t + 7 = 36,11</span></p>
+                    <p>Soit à résoudre le polynôme du second degré :</p>
+                    <p><span class="formule">t² + 3t − 29,11 = 0</span></p>
+                    <p>Le discriminant vaut :</p>
+                    <p><span class="formule">Δ = 3² − 4×1×(−29,11) = 9 + 116,44 = 125,44</span></p>
+                    <p>Les deux racines sont :</p>
+                    <p><span class="formule">t₁ = <span class="frac"><span class="num">−3 + √125,44</span><span class="den">2</span></span> ≈ 4,1 s</span></p>
+                    <p><span class="formule">t₂ = <span class="frac"><span class="num">−3 − √125,44</span><span class="den">2</span></span> ≈ −7,1 s</span></p>
+                    <p>On retient la première racine, positive :</p>
+                    <span class="resultat">t₁ ≈ 4,1 s</span>
+                    <p>Il faut donc <strong>4,1 s</strong> pour que le mobile atteigne la vitesse prescrite.</p>
+                </div>
+            </details>
         </div>
     </div>
 
