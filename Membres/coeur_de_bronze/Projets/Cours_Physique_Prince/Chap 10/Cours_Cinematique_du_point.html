@@ -223,6 +223,24 @@
         margin: 0.6rem 0;
         font-size: 0.95rem;
     }
+    /* Note d'écriture (notation physique) */
+    .note-ecriture {
+        background: rgba(26, 58, 107, 0.08);
+        border-left: 3px solid #1a3a6b;
+        border-radius: 0.6rem;
+        padding: 0.7rem 1rem;
+        margin: 0.7rem 0;
+        font-size: 0.9rem;
+        color: #1c2a45;
+    }
+    .note-ecriture strong { color: #1a3a6b; }
+    .note-ecriture .formule {
+        background: rgba(26, 58, 107, 0.12);
+        color: #1a3a6b;
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.3rem;
+        font-family: 'Cambria Math', monospace;
+    }
 
     .examples { margin-top: 0.9rem; }
     .example {
@@ -260,6 +278,47 @@
         margin-bottom: 0.4rem;
     }
     .exo p { color: var(--text); font-size: 0.92rem; }
+
+        /* Corrigé dépliable */
+    .corrige {
+        background: rgba(22, 48, 31, 0.5);
+        border-left: 3px solid var(--ex-border);
+        border-radius: 0.6rem;
+        padding: 0.8rem 1rem;
+        margin-top: 0.6rem;
+        font-size: 0.9rem;
+        color: var(--text);
+    }
+    .corrige p { margin-bottom: 0.5rem; color: var(--text); }
+    .corrige p:last-child { margin-bottom: 0; }
+    .corrige .resultat {
+        display: block;
+        background: rgba(90, 216, 165, 0.15);
+        border: 1px solid var(--ex-border);
+        border-radius: 0.4rem;
+        padding: 0.5rem 0.8rem;
+        margin: 0.6rem 0;
+        text-align: center;
+        font-family: 'Cambria Math', monospace;
+        color: var(--ex-label);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    details > summary {
+        cursor: pointer;
+        color: var(--violet);
+        font-weight: 600;
+        font-size: 0.85rem;
+        padding: 0.3rem 0;
+        list-style: none;
+    }
+    details > summary::-webkit-details-marker { display: none; }
+    details > summary::before {
+        content: '▸ ';
+        transition: 0.2s;
+        display: inline-block;
+    }
+    details[open] > summary::before { transform: rotate(90deg); }
 
     .revisions {
         background: var(--rev-bg);
@@ -423,12 +482,16 @@
                 <li>Le mouvement d'un point <strong>dépend du référentiel</strong> choisi.</li>
                 <li>Référentiel terrestre : tout objet immobile sur Terre. Référentiel héliocentrique : lié au centre du Soleil.</li>
             </ul>
+            
+            <div class="note-ecriture">
+                <strong>📝 Note d'écriture :</strong> en physique, la dérivée d'une grandeur par rapport au temps se note souvent avec un <strong>point au-dessus</strong> :
+                <span class="formule">ẋ(t) = <span class="frac"><span class="num">dx</span><span class="den">dt</span></span></span>
+                et
+                <span class="formule">ẍ(t) = <span class="frac"><span class="num">d²x</span><span class="den">dt²</span></span></span>.
+                Les deux notations <span class="formule">dx/dt</span> et <span class="formule">ẋ</span> veulent dire exactement la même chose.
+            </div>
         </div>
 
-        <div class="exo">
-            <span class="label">📝 Exo type — à insérer</span>
-            <p>Exercice d'application sur la relativité + correction détaillée (à prendre dans le livre d'exercices résolus, chap. 8).</p>
-        </div>
     </div>
 
     <!-- ================================================ -->
@@ -472,9 +535,56 @@
             </div>
         </div>
 
+        <div class="explication">
+            <span class="label">Méthode 1 — Coordonnées cartésiennes du vecteur vitesse</span>
+            <p><strong>Rappel :</strong> le vecteur vitesse <span class="vec">v</span> est la dérivée du vecteur position <span class="vec">OM</span> par rapport au temps.</p>
+            <div class="formule-bloc">v<sub>x</sub> = <span class="frac"><span class="num">dx</span><span class="den">dt</span></span> &nbsp;;&nbsp; v<sub>y</sub> = <span class="frac"><span class="num">dy</span><span class="den">dt</span></span> &nbsp;;&nbsp; v<sub>z</sub> = <span class="frac"><span class="num">dz</span><span class="den">dt</span></span></div>
+            <p>Norme : <span class="formule">v = √( v<sub>x</sub>² + v<sub>y</sub>² + v<sub>z</sub>² )</span></p>
+            <div class="sous-capsule">
+                <strong>Étapes à suivre :</strong>
+                <ol style="margin-left: 1.2rem; margin-top: 0.4rem;">
+                    <li>Repérer les équations horaires x(t), y(t), z(t) données dans l'énoncé.</li>
+                    <li>Dériver chaque coordonnée par rapport au temps (une fois).</li>
+                    <li>Calculer la norme si nécessaire.</li>
+                </ol>
+            </div>
+        </div>
+
         <div class="exo">
-            <span class="label">📝 Exo type — à insérer</span>
-            <p>Exercice sur les équations horaires de position + correction détaillée.</p>
+            <span class="label">📝 Exo type — Un mouvement rectiligne (exo 2, p. 202)</span>
+            <p><em>On étudie un mouvement rectiligne pour lequel la position x(t) du mobile repéré à partir d'une origine O s'écrit :</em></p>
+            <p><span class="formule">x(t) = 12t² + 3t + 7</span> avec t &gt; 0.</p>
+            <p><em>Les coefficients constants sont tous exprimés dans les unités SI.</em></p>
+            <ol>
+                <li>Déterminer les expressions de la vitesse et de l'accélération.</li>
+                <li>Déterminer la nature du mouvement.</li>
+                <li>Déterminer le temps nécessaire pour que le mobile parcoure la distance Δx = 3,0 km.</li>
+            </ol>
+            <details>
+                <summary>Voir la correction</summary>                
+                <div class="corrige">
+                    <p><strong>1.</strong> La vitesse et l'accélération s'évaluent sur l'axe Ox (portant le vecteur unitaire <span class="vec">i </span> ) puisque le mouvement est rectiligne.</p>
+                    <p>On dérive une première fois x(t) pour trouver la vitesse :</p>
+                    <p><span class="formule">v(t) = ẋ(t) = 24t + 3</span></p>
+                    <p>On dérive une seconde fois pour trouver l'accélération :</p>
+                    <p><span class="formule">a(t) = ẍ(t) = 24</span></p>
+
+                    <p><strong>2.</strong> Le vecteur accélération est constant mais non nul : <span class="formule"><span class="vec">a</span> = 24<span class="vec">i</span></span>.</p>
+                    <p>Le mouvement est donc <strong>rectiligne uniformément accéléré</strong> (car a &gt; 0).</p>
+
+                    <p><strong>3.</strong> On cherche à déterminer le temps t pour lequel :</p>
+                    <p><span class="formule">Δx = x(t) − x<sub>0</sub> = 3 000 m</span></p>
+                    <p>Soit en fait :</p>
+                    <p><span class="formule">Δx = (12t² + 3t + 7) − 7 = 3 000 m</span></p>
+                    <p>Ce qui donne à résoudre le polynôme du second degré :</p>
+                    <p><span class="formule">12t² + 3t − 3 000 = 0</span></p>
+                    <p>avec le discriminant <span class="formule">Δ = 144 009</span>.</p>
+                    <p>On a deux racines :</p>
+                    <p><span class="formule">t₁ ≈ 15,69 s</span> et <span class="formule">t₂ ≈ −15,93 s</span></p>
+                    <p>On retient la première racine, positive :</p>
+                    <span class="resultat">t₁ ≈ 15,69 s</span>
+                </div>
+            </details>
         </div>
     </div>
 
