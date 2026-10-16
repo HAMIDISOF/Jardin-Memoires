@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours — Cinématique du point</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+        --bg-deep: #0d1a2b;
+        --bg-card: #16283d;
+        --bg-card-2: #1c3248;
+        --bg-capsule: #1f3854;
+        --bg-capsule-light: #2a4a68;
+        --border-soft: #2e4a68;
+        --border-mid: #3d5f7f;
+
+        --text: #e6f0f8;
+        --text-muted: #9bb4cc;
+        --text-heading: #cfe4f2;
+
+        --accent-cyan: #5eb8d4;
+        --accent-blue: #6a9fd4;
+        --accent-light: #8cc0e0;
+
+        --q-bg: #3a2510;
+        --q-border: #e0953c;
+        --q-label: #f5b870;
+        --q-text: #fce8ce;
+
+        --ex-bg: #16301f;
+        --ex-border: #4fa86a;
+        --ex-label: #90d8a5;
+        --ex-text: #d4eedb;
+
+        --rev-bg: #e6f7fa;
+        --rev-border: #5eb8d4;
+        --rev-text: #1c2a45;
+        --rev-heading: #1a3a6b;
+
+        --violet: #b89ce8;
+    }
+
+    body {
+        background: var(--bg-deep);
+        color: var(--text);
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 2rem 1rem;
+    }
+
+    .container { max-width: 920px; margin: 0 auto; }
+
+    .header {
+        background: linear-gradient(135deg, #1c3248 0%, #16283d 100%);
+        border: 1px solid var(--border-mid);
+        border-radius: 1.2rem;
+        padding: 1.5rem 1.8rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+    .header h1 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--text-heading);
+        margin-bottom: 0.4rem;
+    }
+    .header .sous-titre {
+        color: var(--accent-light);
+        font-size: 0.95rem;
+        font-style: italic;
+    }
+
+    .bloc {
+        background: var(--bg-card);
+        border: 1px solid var(--border-soft);
+        border-radius: 1.2rem;
+        padding: 1.3rem 1.5rem;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .bloc-titre {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--accent-cyan);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-soft);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .carte {
+        background: var(--bg-card-2);
+        border: 1px solid var(--border-mid);
+        border-radius: 0.9rem;
+        margin: 0.8rem 0;
+        overflow: hidden;
+    }
+    .carte summary {
+        cursor: pointer;
+        padding: 0.9rem 1.1rem;
+        font-weight: 600;
+        color: var(--accent-light);
+        background: var(--bg-capsule);
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.15s;
+        user-select: none;
+        gap: 1rem;
+    }
+    .carte summary .page {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-weight: 400;
+        white-space: nowrap;
+    }
+    .carte summary:hover { background: var(--bg-capsule-light); }
+    .carte summary::-webkit-details-marker { display: none; }
+    .carte summary::after {
+        content: '▸';
+        font-size: 1rem;
+        transition: 0.2s;
+        color: var(--accent-cyan);
+    }
+    .carte[open] summary::after { transform: rotate(90deg); }
+    .carte-contenu { padding: 1rem 1.2rem; }
+
+    .materiel {
+        background: rgba(94, 184, 212, 0.08);
+        border-left: 3px solid var(--accent-cyan);
+        padding: 0.6rem 0.9rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.9rem;
+        font-size: 0.9rem;
+        color: var(--accent-light);
+    }
+    .materiel strong { color: var(--accent-cyan); }
+
+    .protocole {
+        list-style: none;
+        counter-reset: etape;
+        margin: 0.5rem 0 1rem 0;
+    }
+    .protocole li {
+        counter-increment: etape;
+        padding: 0.35rem 0 0.35rem 2rem;
+        position: relative;
+        color: var(--text);
+        font-size: 0.95rem;
+    }
+    .protocole li::before {
+        content: counter(etape);
+        position: absolute;
+        left: 0;
+        top: 0.35rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        background: var(--accent-cyan);
+        color: var(--bg-deep);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.75rem;
+    }
+
+    .question {
+        background: var(--q-bg);
+        border: 1px solid var(--q-border);
+        border-radius: 0.9rem;
+        padding: 0.9rem 1.1rem;
+        margin: 0.8rem 0;
+    }
+    .question .label {
+        display: block;
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--q-label);
+        margin-bottom: 0.4rem;
+    }
+    .question p, .question li { color: var(--q-text); }
+    .question ol, .question ul { margin-left: 1.3rem; }
+    .question li { margin-bottom: 0.35rem; }
+    .question a {
+        color: var(--q-label);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--q-label);
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+    .question a:hover { color: #ffd9a0; }
+
+    .explication {
+        background: var(--bg-capsule);
+        border: 1px solid var(--border-mid);
+        border-radius: 0.9rem;
+        padding: 0.9rem 1.1rem;
+        margin: 0.8rem 0;
+    }
+    .explication .label {
+        display: block;
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent-cyan);
+        margin-bottom: 0.4rem;
+    }
+    .explication .sous-capsule {
+        background: var(--bg-capsule-light);
+        border-radius: 0.7rem;
+        padding: 0.7rem 0.9rem;
+        margin: 0.6rem 0;
+        font-size: 0.95rem;
+    }
+
+    .examples { margin-top: 0.9rem; }
+    .example {
+        background: var(--ex-bg);
+        border: 1px solid var(--ex-border);
+        border-radius: 0.9rem;
+        padding: 0.8rem 1rem;
+        margin: 0.7rem 0;
+    }
+    .example .label {
+        display: block;
+        font-weight: 700;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--ex-label);
+        margin-bottom: 0.4rem;
+    }
+    .example p, .example li { color: var(--ex-text); }
+
+    .exo {
+        background: rgba(184, 156, 232, 0.08);
+        border: 1px dashed var(--violet);
+        border-radius: 0.9rem;
+        padding: 0.9rem 1.1rem;
+        margin: 0.8rem 0;
+    }
+    .exo .label {
+        display: block;
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--violet);
+        margin-bottom: 0.4rem;
+    }
+    .exo p { color: var(--text); font-size: 0.92rem; }
+
+    .revisions {
+        background: var(--rev-bg);
+        border: 1px solid var(--rev-border);
+        border-radius: 0.9rem;
+        padding: 0.9rem 1.1rem;
+        margin: 1rem 0;
+        color: var(--rev-text);
+    }
+    .revisions .label {
+        display: block;
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--rev-heading);
+        margin-bottom: 0.5rem;
+    }
+    .revisions strong { color: var(--rev-heading); }
+    .revisions ul { margin-left: 1.2rem; }
+    .revisions li { color: var(--rev-text); font-size: 0.9rem; margin-bottom: 0.25rem; }
+
+    .formule {
+        font-family: 'Cambria Math', 'Courier New', monospace;
+        background: var(--bg-capsule-light);
+        padding: 0.15rem 0.5rem;
+        border-radius: 0.4rem;
+        color: var(--accent-light);
+        font-size: 0.95em;
+    }
+    .formule-bloc {
+        text-align: center;
+        font-family: 'Cambria Math', 'Courier New', monospace;
+        background: var(--bg-card-2);
+        padding: 0.9rem;
+        border-radius: 0.8rem;
+        margin: 0.8rem 0;
+        border: 1px dashed var(--border-mid);
+        color: var(--accent-light);
+        font-size: 1.05em;
+    }
+
+    .vec {
+        position: relative;
+        display: inline-block;
+        font-style: italic;
+        font-family: 'Cambria Math', 'Latin Modern Math', 'Times New Roman', serif;
+        padding-top: 0.15em;
+    }
+    .vec::after {
+        content: '→';
+        position: absolute;
+        top: -0.85em;
+        left: 50%;
+        transform: translateX(-50%) scaleX(1.1);
+        font-size: 0.7em;
+        font-style: normal;
+        font-weight: normal;
+        color: currentColor;
+        line-height: 1;
+        pointer-events: none;
+    }
+
+    .frac {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: middle;
+        font-size: 0.9em;
+        line-height: 1.1;
+        margin: 0 0.15em;
+    }
+    .frac .num {
+        padding: 0 0.3em 1px;
+        border-bottom: 1.5px solid currentColor;
+    }
+    .frac .den {
+        padding: 1px 0.3em 0;
+    }
+
+    .violet { color: var(--violet); font-weight: 600; }
+
+    .note {
+        background: rgba(184, 156, 232, 0.08);
+        border-left: 3px solid var(--violet);
+        padding: 0.7rem 1rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        font-size: 0.88rem;
+        color: var(--text-muted);
+    }
+    .note strong { color: var(--violet); }
+
+    .footer {
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-soft);
+    }
+
+    @media (max-width: 640px) {
+        body { padding: 1rem 0.7rem; font-size: 15px; }
+        .bloc { padding: 1rem; }
+        .header h1 { font-size: 1.3rem; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1>Chapitre 10 — Cinématique du point</h1>
+        <div class="sous-titre">Activités du manuel + Cours + Exos, pour chaque notion</div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- BLOC 1 — RELATIVITÉ DU MOUVEMENT -->
+    <!-- ================================================ -->
+    <div class="bloc">
+        <div class="bloc-titre">📱 Module 1 — Relativité du mouvement</div>
+
+        <details class="carte">
+            <summary>
+                <span>Activité 1 — Le smartphone dans le train</span>
+                <span class="page">Manuel p. 289</span>
+            </summary>
+            <div class="carte-contenu">
+                <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                    <em>Une personne (A) assise dans un train tient son smartphone fixement devant elle.
+                    Une deuxième personne (B) regarde passer le train depuis le quai. Le train se déplace en ligne droite, à vitesse constante.</em>
+                </p>
+
+                <div class="question">
+                    <span class="label">❓ Questions du manuel</span>
+                    <ol type="a">
+                        <li>Le smartphone est-il immobile pour l'une des deux personnes ?</li>
+                        <li>Quel est le mouvement du smartphone pour la deuxième personne (B) ?</li>
+                        <li>Pourquoi la deuxième personne (B) peut-elle être considérée comme référentiel terrestre ?</li>
+                    </ol>
+                    <a href="#cours1">→ Éléments de réponse : référentiel et relativité</a>
+                </div>
+            </div>
+        </details>
+
+        <div class="explication" id="cours1">
+            <span class="label">Cours 1 — Référentiel et relativité</span>
+            <p>Un <strong>référentiel</strong> est un objet par rapport auquel on étudie le mouvement d'autres objets.</p>
+            <p>Le mouvement d'un point <strong>dépend du référentiel</strong> choisi. Un même objet peut être immobile dans un référentiel et en mouvement dans un autre.</p>
+            <div class="sous-capsule">
+                <strong>Référentiel terrestre</strong> : tout objet immobile sur Terre.<br>
+                <strong>Référentiel héliocentrique</strong> : lié au centre du Soleil.
+            </div>
+        </div>
+
+        <div class="revisions">
+            <span class="label">📌 Révisions</span>
+            <ul>
+                <li>Un référentiel est un objet par rapport auquel on étudie le mouvement d'autres objets.</li>
+                <li>Le mouvement d'un point <strong>dépend du référentiel</strong> choisi.</li>
+                <li>Référentiel terrestre : tout objet immobile sur Terre. Référentiel héliocentrique : lié au centre du Soleil.</li>
+            </ul>
+        </div>
+
+        <div class="exo">
+            <span class="label">📝 Exo type — à insérer</span>
+            <p>Exercice d'application sur la relativité + correction détaillée (à prendre dans le livre d'exercices résolus, chap. 8).</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- BLOC 2 — VECTEUR POSITION -->
+    <!-- ================================================ -->
+    <div class="bloc">
+        <div class="bloc-titre">🌍 Module 2 — Vecteur position et trajectoire</div>
+
+        <details class="carte">
+            <summary>
+                <span>Activité 2 — La Terre autour du Soleil</span>
+                <span class="page">Manuel p. 289</span>
+            </summary>
+            <div class="carte-contenu">
+                <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                    <em>Un élève assis en classe est persuadé d'être immobile.
+                    La Terre effectue le tour du Soleil en 1 an (365,25 jours).
+                    La trajectoire de la Terre autour du Soleil est supposée parfaitement circulaire, de rayon R = 1,50 × 10¹¹ m.</em>
+                </p>
+
+                <div class="question">
+                    <span class="label">❓ Questions du manuel</span>
+                    <ol type="a">
+                        <li>Par rapport à quel référentiel l'élève est-il immobile ?</li>
+                        <li>Calculer la vitesse de la Terre sur son orbite dans le référentiel héliocentrique.</li>
+                        <li>L'élève est-il immobile dans le référentiel héliocentrique ?</li>
+                    </ol>
+                    <a href="#cours2">→ Éléments de réponse : vecteur position, trajectoire</a>
+                </div>
+            </div>
+        </details>
+
+        <div class="explication" id="cours2">
+            <span class="label">Cours 2 — Vecteur position et trajectoire</span>
+            <p>À l'aide du repère orthonormé (<span class="vec">O</span> ; <span class="vec">i</span>, <span class="vec">j</span>, <span class="vec">k</span>), on repère la position du point M par le <strong>vecteur position</strong> :</p>
+            <div class="formule-bloc"><span class="vec">OM</span>(t) = ( x(t) ; y(t) ; z(t) )</div>
+            <p>Les expressions de x, y, z en fonction du temps t sont les <strong>équations horaires de la position</strong>.</p>
+            <div class="sous-capsule">
+                <strong>Trajectoire :</strong> courbe constituée de l'ensemble des positions successives du point.
+                Au lycée, on se limite souvent à des <strong>mouvements plans</strong> (x(t) et y(t)).
+            </div>
+        </div>
+
+        <div class="exo">
+            <span class="label">📝 Exo type — à insérer</span>
+            <p>Exercice sur les équations horaires de position + correction détaillée.</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- BLOC 3 — VECTEUR VITESSE -->
+    <!-- ================================================ -->
+    <div class="bloc">
+        <div class="bloc-titre">🌙 Module 3 — Vecteur vitesse</div>
+
+        <details class="carte">
+            <summary>
+                <span>Activité 3 — La Lune autour de la Terre</span>
+                <span class="page">Manuel p. 289</span>
+            </summary>
+            <div class="carte-contenu">
+                <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                    <em>La Lune effectue le tour de la Terre en 27,32 jours.
+                    La trajectoire de la Lune autour de la Terre est supposée parfaitement circulaire, de rayon R = 3,84 × 10⁸ m.</em>
+                </p>
+
+                <div class="question">
+                    <span class="label">❓ Questions du manuel</span>
+                    <ol type="a">
+                        <li>Le référentiel d'étude utilisé est ici le référentiel géocentrique. Rechercher dans un dictionnaire ou sur Internet la définition du référentiel géocentrique.</li>
+                        <li>Pourquoi est-il préférable de ne pas utiliser le référentiel terrestre pour étudier le mouvement de la Lune ?</li>
+                        <li>Calculer la vitesse de la Lune sur son orbite, en mètres par seconde, par rapport au référentiel géocentrique.</li>
+                        <li>Avec un compas, tracer la trajectoire de la Lune en utilisant l'échelle suivante : 1 cm sur le dessin correspond à 1 × 10⁸ m dans la réalité.</li>
+                        <li>En un point de la trajectoire (noté L), tracer le vecteur vitesse de la Lune en utilisant l'échelle suivante : 1 cm sur le dessin correspond à 5 × 10² m·s⁻¹ dans la réalité.</li>
+                        <li>Vérifier géométriquement (avec un outil adapté) que le vecteur vitesse est perpendiculaire au rayon de la trajectoire.</li>
+                    </ol>
+                    <a href="#cours3">→ Éléments de réponse : vecteur vitesse</a>
+                </div>
+            </div>
+        </details>
+
+        <div class="explication" id="cours3">
+            <span class="label">Cours 3 — Vecteur vitesse</span>
+            <p>Le <strong>vecteur vitesse instantanée</strong> <span class="vec">v</span>(t) a pour caractéristiques :</p>
+            <ul style="margin-left: 1.2rem;">
+                <li><strong>direction</strong> : tangente à la trajectoire au point étudié ;</li>
+                <li><strong>sens</strong> : sens du mouvement ;</li>
+                <li><strong>norme</strong> : valeur de la vitesse instantanée.</li>
+            </ul>
+            <p>Il est la <strong>dérivée du vecteur position</strong> par rapport au temps :</p>
+            <div class="formule-bloc"><span class="vec">v</span>(t) = <span class="frac"><span class="num">d<span class="vec">OM</span></span><span class="den">dt</span></span>(t)</div>
+            <p>Coordonnées : <span class="formule">v<sub>x</sub>(t) = <span class="frac"><span class="num">dx</span><span class="den">dt</span></span>(t)</span> et <span class="formule">v<sub>y</sub>(t) = <span class="frac"><span class="num">dy</span><span class="den">dt</span></span>(t)</span></p>
+            <p>Norme : <span class="formule">v(t) = √( v<sub>x</sub>(t)² + v<sub>y</sub>(t)² )</span></p>
+        </div>
+
+        <div class="examples">
+            <div class="example">
+                <span class="label">Exemple</span>
+                <p>Ballon de football lancé avec un angle de 30° et une vitesse initiale de 20 m·s⁻¹ (sans frottements) :</p>
+                <p><span class="formule">x(t) = 17t</span> et <span class="formule">y(t) = −4,9t² + 10t</span></p>
+                <p>Alors : <span class="formule">v<sub>x</sub>(t) = 17 m·s⁻¹</span> et <span class="formule">v<sub>y</sub>(t) = −9,8t + 10 m·s⁻¹</span>.</p>
+            </div>
+        </div>
+
+        <div class="exo">
+            <span class="label">📝 Exo type — à insérer</span>
+            <p>Exercice sur le calcul de vecteur vitesse + correction détaillée.</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- BLOC 4 — VECTEUR ACCÉLÉRATION (activité documentaire) -->
+    <!-- ================================================ -->
+    <div class="bloc">
+        <div class="bloc-titre">🚗 Module 4 — Vecteur accélération (activité documentaire)</div>
+
+        <details class="carte">
+            <summary>
+                <span>Activité documentaire 1 — Vecteur accélération (la voiture)</span>
+                <span class="page">Manuel p. 290</span>
+            </summary>
+            <div class="carte-contenu">
+                <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                    <em>La détermination de la vitesse et de l'accélération d'une voiture permet de caractériser son mouvement.
+                    On enregistre le mouvement d'une voiture. Les équations horaires de sa position sont connues lors de ce trajet.
+                    L'origine du repère est choisie à la position initiale de la voiture.</em>
+                </p>
+
+                <div class="materiel">
+                    <strong>Trois phases du mouvement :</strong>
+                    Phase 1 — pendant 10,0 s, la voiture augmente sa vitesse sur une route droite : x(t) = ½ k t² avec k = 2,50 m·s⁻², y(t) = 0.<br>
+                    Phase 2 — pendant 10,0 s, la voiture effectue un virage parfaitement circulaire à vitesse constante.<br>
+                    Phase 3 — la voiture parcourt une route droite à vitesse constante.
+                </div>
+
+                <div class="question">
+                    <span class="label">❓ Questions du manuel</span>
+                    <ol>
+                        <li>
+                            <strong>a.</strong> Sur la chronophotographie du doc. 1, repérer visuellement les trois phases du mouvement. Quelle durée s'écoule entre deux positions consécutives de la voiture ? Comment vérifier, avec la chronophotographie, que la norme de la vitesse est constante dans les phases 2 et 3 ?<br>
+                            <strong>b.</strong> Dans quelle(s) phase(s) la voiture semble-t-elle subir une accélération ?
+                        </li>
+                        <li>
+                            <strong>Phase 1</strong><br>
+                            <strong>a.</strong> En étudiant qualitativement les variations et l'allure de la courbe de x(t), déterminer le signe de v<sub>x</sub> et décrire son évolution au cours du temps.<br>
+                            <strong>b.</strong> À l'aide du doc. 2, déterminer l'expression littérale de v<sub>x</sub>(t). Est-elle en accord avec la réponse à la question 2a ?<br>
+                            <strong>c.</strong> Déterminer l'expression des coordonnées de l'accélération a<sub>x</sub>(t) et a<sub>y</sub>(t). L'accélération est-elle constante pendant cette phase ?
+                        </li>
+                        <li>
+                            <strong>Phase 2</strong><br>
+                            Les caractéristiques du vecteur vitesse (norme, direction et sens) sont-elles inchangées tout au long de cette phase ? Le vecteur vitesse est-il constant ? Le vecteur accélération peut-il être nul dans cette phase ? Justifier.
+                        </li>
+                        <li>
+                            <strong>Phase 3</strong><br>
+                            Reprendre les mêmes questions que pour la phase 2.
+                        </li>
+                    </ol>
+                    <a href="#cours4">→ Éléments de réponse : vecteur accélération</a>
+                </div>
+            </div>
+        </details>
+
+        <div class="explication" id="cours4">
+            <span class="label">Cours 4 — Vecteur accélération</span>
+            <p>Le vecteur accélération <span class="vec">a</span>(t) est la <strong>dérivée du vecteur vitesse</strong> :</p>
+            <div class="formule-bloc"><span class="vec">a</span>(t) = <span class="frac"><span class="num">d<span class="vec">v</span></span><span class="den">dt</span></span>(t) = <span class="frac"><span class="num">d²<span class="vec">OM</span></span><span class="den">dt²</span></span>(t)</div>
+            <p>Coordonnées : <span class="formule">a<sub>x</sub>(t) = <span class="frac"><span class="num">dv<sub>x</sub></span><span class="den">dt</span></span>(t)</span> et <span class="formule">a<sub>y</sub>(t) = <span class="frac"><span class="num">dv<sub>y</sub></span><span class="den">dt</span></span>(t)</span></p>
+            <p>Norme : <span class="formule">a(t) = √( a<sub>x</sub>(t)² + a<sub>y</sub>(t)² )</span></p>
+        </div>
+
+        <div class="examples">
+            <div class="example">
+                <span class="label">Application à la phase 1</span>
+                <p>Avec <span class="formule">x(t) = ½ k t²</span> (k = 2,50 m·s⁻²), on a <span class="formule">v<sub>x</sub>(t) = k t</span> et <span class="formule">a<sub>x</sub>(t) = k = 2,50 m·s⁻²</span> (constante).</p>
+                <p>Comme y(t) = 0, on a <span class="formule">v<sub>y</sub>(t) = 0</span> et <span class="formule">a<sub>y</sub>(t) = 0</span>.</p>
+            </div>
+        </div>
+
+        <div class="exo">
+            <span class="label">📝 Exo type — à insérer</span>
+            <p>Exercice sur le calcul du vecteur accélération + correction détaillée.</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- BLOC 5 — DÉTERMINATION GRAPHIQUE (chronophotographie) -->
+    <!-- ================================================ -->
+    <div class="bloc">
+        <div class="bloc-titre">🔬 Module 5 — Détermination graphique (chronophotographie)</div>
+
+        <details class="carte">
+            <summary>
+                <span>Activité 2 — Étude d'une chronophotographie</span>
+                <span class="page">Manuel p. 291</span>
+            </summary>
+            <div class="carte-contenu">
+                <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.8rem;">
+                    <em>L'étude d'un mouvement peut être réalisée à l'aide d'une chronophotographie.
+                    Objectif : exploiter une chronophotographie, afin de tracer et de caractériser le vecteur accélération.</em>
+                </p>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.8rem;">
+                    Sur le document (à récupérer à l'adresse <span class="formule">hatier-clic.fr/pct291</span>) se trouvent quatre enregistrements du mouvement d'un point.
+                    La durée entre deux positions successives est Δt = 100 ms.
+                </p>
+
+                <div class="materiel">
+                    <strong>Protocole — Construction d'un vecteur accélération</strong>
+                </div>
+                <ol class="protocole">
+                    <li>Représenter le vecteur vitesse au point M<sub>n−1</sub> et au point M<sub>n+1</sub> en laissant la trace des mesures et des calculs sur votre feuille.</li>
+                    <li>Construire la variation du vecteur vitesse Δ<span class="vec">v</span>(t) au point M<sub>n</sub>, notée Δ<span class="vec">v</span><sub>n</sub>.</li>
+                    <li>On obtient approximativement le vecteur accélération par :<br>
+                    <span class="formule"><span class="vec">a</span>(t) = <span class="frac"><span class="num"><span class="vec">v</span>(t + Δt) − <span class="vec">v</span>(t − Δt)</span><span class="den">2Δt</span></span></span> soit <span class="formule"><span class="vec">a</span>(t) = <span class="frac"><span class="num">Δ<span class="vec">v</span>(t)</span><span class="den">2Δt</span></span></span></li>
+                    <li>Mesurer la norme Δv<sub>n</sub> de la variation du vecteur vitesse Δ<span class="vec">v</span><sub>n</sub> construit au point M<sub>n</sub>.</li>
+                    <li>Déterminer la norme du vecteur accélération au point M<sub>n</sub> en calculant <span class="formule">a<sub>n</sub> = <span class="frac"><span class="num">Δv<sub>n</sub></span><span class="den">2Δt</span></span></span>.</li>
+                    <li>Tracer le vecteur accélération au point M<sub>n</sub> en utilisant le fait que les vecteurs <span class="vec">a</span><sub>n</sub> et Δ<span class="vec">v</span><sub>n</sub> ont la même direction et le même sens.</li>
+                </ol>
+
+                <div class="question">
+                    <span class="label">❓ Questions du manuel</span>
+                    <ol>
+                        <li>
+                            Parmi les enregistrements (doc. 1), deux correspondent à des mouvements rectilignes et deux à des mouvements circulaires.<br>
+                            <strong>a.</strong> Tracer les trajectoires de chaque mouvement. Caractériser leur nature.<br>
+                            <strong>b.</strong> Quels enregistrements correspondent à des mouvements uniformes ?
+                        </li>
+                        <li>Après avoir numéroté les points, suivre le protocole pour tracer le vecteur accélération au point 4 et au point 8 de l'enregistrement 1. Comparer les normes et les directions des deux accélérations obtenues.</li>
+                        <li>
+                            Tracer les vecteurs accélération :<br>
+                            • au point 3 et au point 6 pour l'enregistrement 2 ;<br>
+                            • au point 3 et au point 7 pour l'enregistrement 3 ;<br>
+                            • au point 5 et au point 8 pour l'enregistrement 4.
+                        </li>
+                    </ol>
+                    <a href="#cours5">→ Éléments de réponse : construction graphique</a>
+                </div>
+            </div>
+        </details>
+
+        <div class="explication" id="cours5">
+            <span class="label">Cours 5 — Construction graphique</span>
+            <p>Sur une chronophotographie, le vecteur vitesse <span class="vec">v</span>(t) en un point M(t) est approché par la vitesse moyenne :</p>
+            <div class="formule-bloc"><span class="vec">v</span>(t) = <span class="frac"><span class="num">M(t − Δt)M(t + Δt)</span><span class="den">2Δt</span></span></div>
+            <p>Puis la variation du vecteur vitesse :</p>
+            <div class="formule-bloc">Δ<span class="vec">v</span>(t) = <span class="vec">v</span>(t + Δt) − <span class="vec">v</span>(t − Δt)</div>
+            <p>Et l'accélération : <span class="formule"><span class="vec">a</span>(t) = <span class="frac"><span class="num">Δ<span class="vec">v</span>(t)</span><span class="den">2Δt</span></span></span></p>
+            <p>Les vecteurs <span class="vec">a</span>(t) et Δ<span class="vec">v</span>(t) ont <strong>même direction et même sens</strong>.</p>
+        </div>
+
+        <div class="exo">
+            <span class="label">📝 Exo type — à insérer</span>
+            <p>Exercice sur la construction graphique de <span class="vec">v</span> et <span class="vec">a</span> + correction détaillée.</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- MODULES À CONFIER (activités 3 et 4)             -->
+    <!-- ================================================ -->
+    <!--  Protocoles 1 et 2 (enregistrement d'un mouvement avec une bille et un aimant, exploitation par pointage vidéo). Questions 1 et 2. -->
+    <!--  Questions 1 à 3 (programmes <span class="formule">centrifugeuse.py</span> et <span class="formule">centrifugeuse_frenet.py</span>).-->
+    <!--   Ces deux activités sont pratiques et numériques. Elles serviront au dossier d'avancement du Grand Oral.                            -->
+  
+
+    <!-- ================================================ -->
+    <!-- BLOC FINAL — MOUVEMENTS PARTICULIERS -->
+    <!-- ================================================ -->
+    <div class="bloc">
+        <div class="bloc-titre">📏 Module 5 — Mouvements particuliers (cours seul)</div>
+
+        <div class="explication">
+            <span class="label">Mouvement rectiligne uniforme</span>
+            <p>Trajectoire : droite. Norme de la vitesse constante.</p>
+            <div class="formule-bloc"><span class="vec">v</span>(t) constant ⟹ <span class="vec">a</span>(t) = <span class="vec">0</span></div>
+        </div>
+
+        <div class="explication">
+            <span class="label">Mouvement rectiligne uniformément accéléré</span>
+            <p>La norme de la vitesse varie. Accélération <strong>constante et non nulle</strong>, dirigée selon la trajectoire.</p>
+            <ul style="margin-left: 1.2rem;">
+                <li>Si la vitesse augmente → accélération dans le sens du mouvement.</li>
+                <li>Si la vitesse diminue → accélération opposée au mouvement.</li>
+            </ul>
+        </div>
+
+        <div class="explication">
+            <span class="label">Mouvement circulaire uniforme</span>
+            <p>La norme de la vitesse est constante, mais la <strong>direction change</strong> : le vecteur vitesse n'est pas constant.</p>
+            <p>Dans le repère de <span class="violet">Frenet</span> :</p>
+            <div class="formule-bloc"><span class="vec">a</span>(t) = <span class="frac"><span class="num">v²</span><span class="den">R</span></span> · <span class="vec">u</span><sub>n</sub></div>
+            <p>L'accélération est <strong>centripète</strong> (vers le centre du cercle).</p>
+        </div>
+
+        <div class="explication">
+            <span class="label">Mouvement circulaire non uniforme</span>
+            <div class="formule-bloc"><span class="vec">a</span>(t) = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span>(t) · <span class="vec">u</span><sub>t</sub> + <span class="frac"><span class="num">v(t)²</span><span class="den">R</span></span> · <span class="vec">u</span><sub>n</sub></div>
+            <ul style="margin-left: 1.2rem;">
+                <li>Accélération normale : toujours positive, vers l'intérieur de la courbure.</li>
+                <li>Accélération tangentielle : positive si accélération, négative si ralentissement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        Fiche de cours — Chapitre 10 · Cinématique du point<br>
+        Jardin Coopératif · pour le prince de Sof · octobre 2026
+    </div>
+
+</div>
+</body>
+</html>
