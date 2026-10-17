@@ -771,10 +771,65 @@
                 <p>Comme y(t) = 0, on a <span class="formule">v<sub>y</sub>(t) = 0</span> et <span class="formule">a<sub>y</sub>(t) = 0</span>.</p>
             </div>
         </div>
+        <div class="explication">
+            <span class="label">Méthode 3 — Coordonnées cartésiennes du vecteur accélération</span>
+            <p><strong>Rappel :</strong> le vecteur accélération <span class="vec">a</span> d'un point M est la dérivée du vecteur vitesse <span class="vec">v</span> de ce point par rapport au temps :</p>
+            <div class="formule-bloc"><span class="vec">a</span> = <span class="frac"><span class="num">d<span class="vec">v</span></span><span class="den">dt</span></span></div>
+            <div class="sous-capsule">
+                <strong>Deux cas à distinguer :</strong><br>
+                • Mouvement rectiligne uniforme : l'accélération est <strong>nulle</strong>.<br>
+                • Mouvement rectiligne uniformément varié : l'accélération est <strong>constante</strong>.
+            </div>
+            <p><strong>Principe :</strong> les coordonnées du vecteur accélération sont données par les relations :</p>
+            <div class="formule-bloc">a<sub>x</sub> = <span class="frac"><span class="num">dv<sub>x</sub></span><span class="den">dt</span></span> &nbsp;;&nbsp; a<sub>y</sub> = <span class="frac"><span class="num">dv<sub>y</sub></span><span class="den">dt</span></span> &nbsp;;&nbsp; a<sub>z</sub> = <span class="frac"><span class="num">dv<sub>z</sub></span><span class="den">dt</span></span></div>
+            <p>Valeur de l'accélération : <span class="formule">a = √( a<sub>x</sub>² + a<sub>y</sub>² + a<sub>z</sub>² )</span></p>
+            <div class="sous-capsule">
+                <strong>Étapes à suivre :</strong>
+                <ol style="margin-left: 1.2rem; margin-top: 0.4rem;">
+                    <li>Repérer les expressions de x(t), y(t), z(t) (ou de v<sub>x</sub>, v<sub>y</sub>, v<sub>z</sub>).</li>
+                    <li>Dériver <strong>deux fois</strong> les coordonnées de position (ou une fois celles de vitesse).</li>
+                    <li>En déduire les coordonnées a<sub>x</sub>, a<sub>y</sub>, a<sub>z</sub>.</li>
+                    <li>Calculer la norme si nécessaire.</li>
+                </ol>
+            </div>
+            <div class="sous-capsule" style="background: rgba(224, 149, 60, 0.15); border-left: 3px solid var(--q-border);">
+                <strong>⚠️ Erreur classique :</strong> les coordonnées a<sub>x</sub>, a<sub>y</sub>, a<sub>z</sub> sont des <strong>grandeurs algébriques</strong> (elles peuvent être positives ou négatives). La <strong>norme</strong> de l'accélération est toujours positive.
+            </div>
+        </div>
 
         <div class="exo">
-            <span class="label">📝 Exo type — à insérer</span>
-            <p>Exercice sur le calcul du vecteur accélération + correction détaillée.</p>
+            <span class="label">📝 Exo type — Phase 1 de l'activité documentaire (la voiture)</span>
+            <p><em>On reprend l'activité documentaire 1 (p. 290).</em></p>
+            <p><em>Phase 1 : pendant 10,0 s, la voiture augmente sa vitesse sur une route droite. Sa position est donnée par :</em></p>
+            <p><span class="formule">x(t) = ½ k t²</span> avec <span class="formule">k = 2,50 m·s⁻²</span> et <span class="formule">y(t) = 0</span>.</p>
+            <ol>
+                <li>Déterminer l'expression littérale de v<sub>x</sub>(t).</li>
+                <li>Déterminer l'expression des coordonnées de l'accélération a<sub>x</sub>(t) et a<sub>y</sub>(t).</li>
+                <li>L'accélération est-elle constante pendant cette phase ? Justifier.</li>
+                <li>Calculer la norme de l'accélération.</li>
+            </ol>
+            <details>
+                <summary>Voir la correction</summary>
+                <div class="corrige">
+                    <p><strong>1.</strong> On dérive x(t) par rapport au temps pour obtenir v<sub>x</sub>(t) :</p>
+                    <p><span class="formule">x(t) = ½ k t²</span></p>
+                    <p><span class="formule">v<sub>x</sub>(t) = <span class="frac"><span class="num">dx</span><span class="den">dt</span></span> = k t</span></p>
+                    <span class="resultat">v<sub>x</sub>(t) = 2,50 t</span>
+                    <p>On a aussi <span class="formule">y(t) = 0</span>, donc <span class="formule">v<sub>y</sub>(t) = 0</span>.</p>
+
+                    <p><strong>2.</strong> On dérive v<sub>x</sub>(t) et v<sub>y</sub>(t) pour obtenir les coordonnées de l'accélération :</p>
+                    <p><span class="formule">a<sub>x</sub>(t) = <span class="frac"><span class="num">dv<sub>x</sub></span><span class="den">dt</span></span> = k</span></p>
+                    <p><span class="formule">a<sub>y</sub>(t) = <span class="frac"><span class="num">dv<sub>y</sub></span><span class="den">dt</span></span> = 0</span></p>
+                    <span class="resultat">a<sub>x</sub> = 2,50 m·s⁻² &nbsp;;&nbsp; a<sub>y</sub> = 0</span>
+
+                    <p><strong>3.</strong> L'accélération a<sub>x</sub> = 2,50 m·s⁻² est <strong>indépendante du temps</strong>. Elle est donc <strong>constante</strong> pendant la phase 1.</p>
+                    <p>De plus, elle est non nulle : le mouvement est <strong>rectiligne uniformément accéléré</strong>.</p>
+
+                    <p><strong>4.</strong> La norme de l'accélération est :</p>
+                    <p><span class="formule">a = √( a<sub>x</sub>² + a<sub>y</sub>² ) = √( 2,50² + 0² )</span></p>
+                    <span class="resultat">a = 2,50 m·s⁻²</span>
+                </div>
+            </details>
         </div>
     </div>
 
