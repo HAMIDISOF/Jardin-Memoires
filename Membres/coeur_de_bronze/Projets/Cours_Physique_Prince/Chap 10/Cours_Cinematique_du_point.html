@@ -833,9 +833,9 @@
         </div>
     </div>
 
-    <!-- ================================================ -->
-    <!-- BLOC 5 — DÉTERMINATION GRAPHIQUE (chronophotographie) -->
-    <!-- ================================================ -->
+    <!-- ======================================================== -->
+    <!-- BLOC 5 — DÉTERMINATION GRAPHIQUE (chronophotographie)    -->
+    <!-- ======================================================== -->
     <div class="bloc">
         <div class="bloc-titre">🔬 Module 5 — Détermination graphique (chronophotographie)</div>
 
@@ -850,9 +850,11 @@
                     Objectif : exploiter une chronophotographie, afin de tracer et de caractériser le vecteur accélération.</em>
                 </p>
                 <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.8rem;">
-                    Sur le document (à récupérer à l'adresse <span class="formule">hatier-clic.fr/pct291</span>) se trouvent quatre enregistrements du mouvement d'un point.
+                    Sur le document ci-dessous se trouvent quatre enregistrements du mouvement d'un point.
                     La durée entre deux positions successives est Δt = 100 ms.
                 </p>
+
+                <img src="images/chronophotographies.png" alt="Chronophotographies des 4 enregistrements" style="width: 100%; max-width: 700px; display: block; margin: 1rem auto; border-radius: 0.8rem; border: 1px solid var(--border-mid); background: white; padding: 0.5rem;">
 
                 <div class="materiel">
                     <strong>Protocole — Construction d'un vecteur accélération</strong>
@@ -898,6 +900,25 @@
             <p>Les vecteurs <span class="vec">a</span>(t) et Δ<span class="vec">v</span>(t) ont <strong>même direction et même sens</strong>.</p>
         </div>
 
+                <div class="explication">
+            <span class="label">Méthode 4 — Caractériser le vecteur accélération à partir d'un enregistrement</span>
+            <p><strong>Principe :</strong> de même que pour la méthode 2, on dispose de l'enregistrement point par point d'une trajectoire. La durée Δt séparant deux points consécutifs est petite et constante.</p>
+            <p>Il s'agit de déterminer les caractéristiques du vecteur accélération <span class="vec">a</span><sub>n</sub> au point M<sub>n</sub> de la trajectoire.</p>
+            <p>Cette accélération peut s'écrire :</p>
+            <div class="formule-bloc"><span class="vec">a</span><sub>n</sub> = <span class="frac"><span class="num"><span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub></span><span class="den">2Δt</span></span></div>
+            <div class="sous-capsule">
+                <strong>Étapes à suivre :</strong>
+                <ol style="margin-left: 1.2rem; margin-top: 0.4rem;">
+                    <li>Tracer les vecteurs vitesse <span class="vec">v</span><sub>n−1</sub> et <span class="vec">v</span><sub>n+1</sub> (méthode 2).</li>
+                    <li>Tracer le vecteur <span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub> au point M<sub>n</sub>.</li>
+                    <li>On connaît alors la direction, le sens et la norme de ce vecteur.</li>
+                    <li>En déduire les caractéristiques du vecteur <span class="vec">a</span><sub>n</sub> : direction, sens, norme.</li>
+                </ol>
+            </div>
+            <div class="sous-capsule" style="background: rgba(224, 149, 60, 0.15); border-left: 3px solid var(--q-border);">
+                <strong>⚠️ Erreur classique :</strong> la norme du vecteur <span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub> n'est <strong>pas égale</strong> à v<sub>n+1</sub> − v<sub>n−1</sub>, sauf dans le cas très particulier où les deux vecteurs ont même direction et même sens.
+            </div>
+        </div>
         <div class="exo">
             <span class="label">📝 Exo type — à insérer</span>
             <p>Exercice sur la construction graphique de <span class="vec">v</span> et <span class="vec">a</span> + correction détaillée.</p>
