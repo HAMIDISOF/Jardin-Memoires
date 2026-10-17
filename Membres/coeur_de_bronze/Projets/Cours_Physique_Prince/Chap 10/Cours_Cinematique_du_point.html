@@ -216,14 +216,35 @@
         color: var(--accent-cyan);
         margin-bottom: 0.4rem;
     }
-    .explication .sous-capsule {
+    .sous-capsule {
         background: var(--bg-capsule-light);
         border-radius: 0.7rem;
         padding: 0.7rem 0.9rem;
         margin: 0.6rem 0;
         font-size: 0.95rem;
     }
-    /* Note d'écriture (notation physique) */
+
+    .revisions {
+        background: var(--rev-bg);
+        border: 1px solid var(--rev-border);
+        border-radius: 0.9rem;
+        padding: 0.9rem 1.1rem;
+        margin: 1rem 0;
+        color: var(--rev-text);
+    }
+    .revisions .label {
+        display: block;
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--rev-heading);
+        margin-bottom: 0.5rem;
+    }
+    .revisions strong { color: var(--rev-heading); }
+    .revisions ul { margin-left: 1.2rem; }
+    .revisions li { color: var(--rev-text); font-size: 0.9rem; margin-bottom: 0.25rem; }
+
     .note-ecriture {
         background: rgba(26, 58, 107, 0.08);
         border-left: 3px solid #1a3a6b;
@@ -242,7 +263,6 @@
         font-family: 'Cambria Math', monospace;
     }
 
-    .examples { margin-top: 0.9rem; }
     .example {
         background: var(--ex-bg);
         border: 1px solid var(--ex-border);
@@ -278,8 +298,9 @@
         margin-bottom: 0.4rem;
     }
     .exo p { color: var(--text); font-size: 0.92rem; }
+    .exo ol { margin-left: 1.3rem; margin-top: 0.5rem; }
+    .exo li { color: var(--text); font-size: 0.95rem; margin-bottom: 0.3rem; }
 
-        /* Corrigé dépliable */
     .corrige {
         background: rgba(22, 48, 31, 0.5);
         border-left: 3px solid var(--ex-border);
@@ -304,6 +325,7 @@
         font-weight: 600;
         font-size: 1rem;
     }
+
     details > summary {
         cursor: pointer;
         color: var(--violet);
@@ -319,27 +341,6 @@
         display: inline-block;
     }
     details[open] > summary::before { transform: rotate(90deg); }
-
-    .revisions {
-        background: var(--rev-bg);
-        border: 1px solid var(--rev-border);
-        border-radius: 0.9rem;
-        padding: 0.9rem 1.1rem;
-        margin: 1rem 0;
-        color: var(--rev-text);
-    }
-    .revisions .label {
-        display: block;
-        font-weight: 700;
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--rev-heading);
-        margin-bottom: 0.5rem;
-    }
-    .revisions strong { color: var(--rev-heading); }
-    .revisions ul { margin-left: 1.2rem; }
-    .revisions li { color: var(--rev-text); font-size: 0.9rem; margin-bottom: 0.25rem; }
 
     .formule {
         font-family: 'Cambria Math', 'Courier New', monospace;
@@ -400,17 +401,6 @@
     }
 
     .violet { color: var(--violet); font-weight: 600; }
-
-    .note {
-        background: rgba(184, 156, 232, 0.08);
-        border-left: 3px solid var(--violet);
-        padding: 0.7rem 1rem;
-        border-radius: 0.5rem;
-        margin: 1rem 0;
-        font-size: 0.88rem;
-        color: var(--text-muted);
-    }
-    .note strong { color: var(--violet); }
 
     .footer {
         text-align: center;
@@ -482,16 +472,7 @@
                 <li>Le mouvement d'un point <strong>dépend du référentiel</strong> choisi.</li>
                 <li>Référentiel terrestre : tout objet immobile sur Terre. Référentiel héliocentrique : lié au centre du Soleil.</li>
             </ul>
-
-            <div class="note-ecriture">
-                <strong>📝 Note d'écriture :</strong> en physique, la dérivée d'une grandeur par rapport au temps se note souvent avec un <strong>point au-dessus</strong> :
-                <span class="formule">ẋ(t) = <span class="frac"><span class="num">dx</span><span class="den">dt</span></span></span>
-                et
-                <span class="formule">ẍ(t) = <span class="frac"><span class="num">d²x</span><span class="den">dt²</span></span></span>.
-                Les deux notations <span class="formule">dx/dt</span> et <span class="formule">ẋ</span> veulent dire exactement la même chose.
-            </div>
         </div>
-
     </div>
 
     <!-- ================================================ -->
@@ -535,6 +516,22 @@
             </div>
         </div>
 
+        <div class="revisions" style="margin-bottom: 1.5rem;">
+            <span class="label">📌 Révisions</span>
+            <ul>
+                <li>Un référentiel est un objet par rapport auquel on étudie le mouvement d'autres objets.</li>
+                <li>Le mouvement d'un point <strong>dépend du référentiel</strong> choisi.</li>
+                <li>Référentiel terrestre : tout objet immobile sur Terre. Référentiel héliocentrique : lié au centre du Soleil.</li>
+            </ul>
+            <div class="note-ecriture">
+                <strong>📝 Note d'écriture :</strong> en physique, la dérivée d'une grandeur par rapport au temps se note souvent avec un <strong>point au-dessus</strong> :
+                <span class="formule">ẋ(t) = <span class="frac"><span class="num">dx</span><span class="den">dt</span></span></span>
+                et
+                <span class="formule">ẍ(t) = <span class="frac"><span class="num">d²x</span><span class="den">dt²</span></span></span>.
+                Les deux notations <span class="formule">dx/dt</span> et <span class="formule">ẋ</span> veulent dire exactement la même chose.
+            </div>
+        </div>
+
         <div class="explication">
             <span class="label">Méthode 1 — Coordonnées cartésiennes du vecteur vitesse</span>
             <p><strong>Rappel :</strong> le vecteur vitesse <span class="vec">v</span> est la dérivée du vecteur position <span class="vec">OM</span> par rapport au temps.</p>
@@ -561,9 +558,9 @@
                 <li>Déterminer le temps nécessaire pour que le mobile parcoure la distance Δx = 3,0 km.</li>
             </ol>
             <details>
-                <summary>Voir la correction</summary>                
+                <summary>Voir la correction</summary>
                 <div class="corrige">
-                    <p><strong>1.</strong> La vitesse et l'accélération s'évaluent sur l'axe Ox (portant le vecteur unitaire <span class="vec">i </span> ) puisque le mouvement est rectiligne.</p>
+                    <p><strong>1.</strong> La vitesse et l'accélération s'évaluent sur l'axe Ox (portant le vecteur unitaire <span class="vec">i</span>) puisque le mouvement est rectiligne.</p>
                     <p>On dérive une première fois x(t) pour trouver la vitesse :</p>
                     <p><span class="formule">v(t) = ẋ(t) = 24t + 3</span></p>
                     <p>On dérive une seconde fois pour trouver l'accélération :</p>
@@ -634,13 +631,11 @@
             <p>Norme : <span class="formule">v(t) = √( v<sub>x</sub>(t)² + v<sub>y</sub>(t)² )</span></p>
         </div>
 
-        <div class="examples">
-            <div class="example">
-                <span class="label">Exemple</span>
-                <p>Ballon de football lancé avec un angle de 30° et une vitesse initiale de 20 m·s⁻¹ (sans frottements) :</p>
-                <p><span class="formule">x(t) = 17t</span> et <span class="formule">y(t) = −4,9t² + 10t</span></p>
-                <p>Alors : <span class="formule">v<sub>x</sub>(t) = 17 m·s⁻¹</span> et <span class="formule">v<sub>y</sub>(t) = −9,8t + 10 m·s⁻¹</span>.</p>
-            </div>
+        <div class="example">
+            <span class="label">Exemple</span>
+            <p>Ballon de football lancé avec un angle de 30° et une vitesse initiale de 20 m·s⁻¹ (sans frottements) :</p>
+            <p><span class="formule">x(t) = 17t</span> et <span class="formule">y(t) = −4,9t² + 10t</span></p>
+            <p>Alors : <span class="formule">v<sub>x</sub>(t) = 17 m·s⁻¹</span> et <span class="formule">v<sub>y</sub>(t) = −9,8t + 10 m·s⁻¹</span>.</p>
         </div>
 
         <div class="explication">
@@ -764,13 +759,12 @@
             <p>Norme : <span class="formule">a(t) = √( a<sub>x</sub>(t)² + a<sub>y</sub>(t)² )</span></p>
         </div>
 
-        <div class="examples">
-            <div class="example">
-                <span class="label">Application à la phase 1</span>
-                <p>Avec <span class="formule">x(t) = ½ k t²</span> (k = 2,50 m·s⁻²), on a <span class="formule">v<sub>x</sub>(t) = k t</span> et <span class="formule">a<sub>x</sub>(t) = k = 2,50 m·s⁻²</span> (constante).</p>
-                <p>Comme y(t) = 0, on a <span class="formule">v<sub>y</sub>(t) = 0</span> et <span class="formule">a<sub>y</sub>(t) = 0</span>.</p>
-            </div>
+        <div class="example">
+            <span class="label">Application à la phase 1</span>
+            <p>Avec <span class="formule">x(t) = ½ k t²</span> (k = 2,50 m·s⁻²), on a <span class="formule">v<sub>x</sub>(t) = k t</span> et <span class="formule">a<sub>x</sub>(t) = k = 2,50 m·s⁻²</span> (constante).</p>
+            <p>Comme y(t) = 0, on a <span class="formule">v<sub>y</sub>(t) = 0</span> et <span class="formule">a<sub>y</sub>(t) = 0</span>.</p>
         </div>
+
         <div class="explication">
             <span class="label">Méthode 3 — Coordonnées cartésiennes du vecteur accélération</span>
             <p><strong>Rappel :</strong> le vecteur accélération <span class="vec">a</span> d'un point M est la dérivée du vecteur vitesse <span class="vec">v</span> de ce point par rapport au temps :</p>
@@ -833,9 +827,9 @@
         </div>
     </div>
 
-    <!-- ======================================================== -->
-    <!-- BLOC 5 — DÉTERMINATION GRAPHIQUE (chronophotographie)    -->
-    <!-- ======================================================== -->
+    <!-- ================================================ -->
+    <!-- BLOC 5 — DÉTERMINATION GRAPHIQUE (chronophotographie) -->
+    <!-- ================================================ -->
     <div class="bloc">
         <div class="bloc-titre">🔬 Module 5 — Détermination graphique (chronophotographie)</div>
 
@@ -849,18 +843,25 @@
                     <em>L'étude d'un mouvement peut être réalisée à l'aide d'une chronophotographie.
                     Objectif : exploiter une chronophotographie, afin de tracer et de caractériser le vecteur accélération.</em>
                 </p>
+
                 <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.8rem;">
                     Sur le document ci-dessous se trouvent quatre enregistrements du mouvement d'un point.
                     La durée entre deux positions successives est Δt = 100 ms.
                 </p>
 
-                <img src="images/chronophotographies.png" alt="Chronophotographies des 4 enregistrements" style="width: 100%; max-width: 700px; display: block; margin: 1rem auto; border-radius: 0.8rem; border: 1px solid var(--border-mid); background: white; padding: 0.5rem;">
+                <img src="images/chronophotographies.png" 
+                     alt="Chronophotographies des 4 enregistrements" 
+                     style="width: 100%; max-width: 450px; display: block; margin: 1rem auto; border-radius: 0.8rem; border: 1px solid var(--border-mid); background: white; padding: 0.5rem;">
+
+                <div class="materiel">
+                    <strong>Pour mesurer sur écran :</strong> utilise une règle virtuelle calibrée (MapRuler, Ruler.im, ScreenTape) ou imprime l'image pour mesurer à la règle. Calibre l'échelle avec la barre « 5 cm » en haut à droite.
+                </div>
 
                 <div class="materiel">
                     <strong>Protocole — Construction d'un vecteur accélération</strong>
                 </div>
                 <ol class="protocole">
-                    <li>Représenter le vecteur vitesse au point M<sub>n−1</sub> et au point M<sub>n+1</sub> en laissant la trace des mesures et des calculs sur votre feuille.</li>
+                    <li>Représenter le vecteur vitesse au point M<sub>n−1</sub> et au point M<sub>n+1</sub> en notant les mesures et les calculs (dans un fichier texte ou un brouillon numérique).</li>
                     <li>Construire la variation du vecteur vitesse Δ<span class="vec">v</span>(t) au point M<sub>n</sub>, notée Δ<span class="vec">v</span><sub>n</sub>.</li>
                     <li>On obtient approximativement le vecteur accélération par :<br>
                     <span class="formule"><span class="vec">a</span>(t) = <span class="frac"><span class="num"><span class="vec">v</span>(t + Δt) − <span class="vec">v</span>(t − Δt)</span><span class="den">2Δt</span></span></span> soit <span class="formule"><span class="vec">a</span>(t) = <span class="frac"><span class="num">Δ<span class="vec">v</span>(t)</span><span class="den">2Δt</span></span></span></li>
@@ -887,43 +888,8 @@
                     </ol>
                     <a href="#cours5">→ Éléments de réponse : construction graphique</a>
                 </div>
-            </div>
-        </details>
 
-        <div class="explication" id="cours5">
-            <span class="label">Cours 5 — Construction graphique</span>
-            <p>Sur une chronophotographie, le vecteur vitesse <span class="vec">v</span>(t) en un point M(t) est approché par la vitesse moyenne :</p>
-            <div class="formule-bloc"><span class="vec">v</span>(t) = <span class="frac"><span class="num">M(t − Δt)M(t + Δt)</span><span class="den">2Δt</span></span></div>
-            <p>Puis la variation du vecteur vitesse :</p>
-            <div class="formule-bloc">Δ<span class="vec">v</span>(t) = <span class="vec">v</span>(t + Δt) − <span class="vec">v</span>(t − Δt)</div>
-            <p>Et l'accélération : <span class="formule"><span class="vec">a</span>(t) = <span class="frac"><span class="num">Δ<span class="vec">v</span>(t)</span><span class="den">2Δt</span></span></span></p>
-            <p>Les vecteurs <span class="vec">a</span>(t) et Δ<span class="vec">v</span>(t) ont <strong>même direction et même sens</strong>.</p>
-        </div>
-
-                <div class="explication">
-            <span class="label">Méthode 4 — Caractériser le vecteur accélération à partir d'un enregistrement</span>
-            <p><strong>Principe :</strong> de même que pour la méthode 2, on dispose de l'enregistrement point par point d'une trajectoire. La durée Δt séparant deux points consécutifs est petite et constante.</p>
-            <p>Il s'agit de déterminer les caractéristiques du vecteur accélération <span class="vec">a</span><sub>n</sub> au point M<sub>n</sub> de la trajectoire.</p>
-            <p>Cette accélération peut s'écrire :</p>
-            <div class="formule-bloc"><span class="vec">a</span><sub>n</sub> = <span class="frac"><span class="num"><span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub></span><span class="den">2Δt</span></span></div>
-            <div class="sous-capsule">
-                <strong>Étapes à suivre :</strong>
-                <ol style="margin-left: 1.2rem; margin-top: 0.4rem;">
-                    <li>Tracer les vecteurs vitesse <span class="vec">v</span><sub>n−1</sub> et <span class="vec">v</span><sub>n+1</sub> (méthode 2).</li>
-                    <li>Tracer le vecteur <span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub> au point M<sub>n</sub>.</li>
-                    <li>On connaît alors la direction, le sens et la norme de ce vecteur.</li>
-                    <li>En déduire les caractéristiques du vecteur <span class="vec">a</span><sub>n</sub> : direction, sens, norme.</li>
-                </ol>
-            </div>
-            <div class="sous-capsule" style="background: rgba(224, 149, 60, 0.15); border-left: 3px solid var(--q-border);">
-                <strong>⚠️ Erreur classique :</strong> la norme du vecteur <span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub> n'est <strong>pas égale</strong> à v<sub>n+1</sub> − v<sub>n−1</sub>, sauf dans le cas très particulier où les deux vecteurs ont même direction et même sens.
-            </div>
-        </div>
-        <div class="exo">
-            <span class="label">📝 Exo type — à insérer</span>
-            <p>Exercice sur la construction graphique de <span class="vec">v</span> et <span class="vec">a</span> + correction détaillée.</p>
-        </div>
-                        <details>
+                <details>
                     <summary>Voir la correction (méthode et analyse)</summary>
                     <div class="corrige">
                         <p><strong>1.a. Nature des trajectoires :</strong></p>
@@ -942,8 +908,8 @@
                         <p><strong>2 et 3. Tracé des vecteurs accélération :</strong></p>
                         <p>Pour tracer les vecteurs, il faut suivre le protocole :</p>
                         <ol style="margin-left: 1.2rem; margin-bottom: 0.6rem;">
-                            <li><strong>Mesurer</strong> à la règle la distance entre le point précédent et le point suivant (par exemple M<sub>3</sub>M<sub>5</sub> pour le point 4).</li>
-                            <li><strong>Convertir</strong> cette distance avec l'échelle donnée en haut à droite (la barre "5 cm").</li>
+                            <li><strong>Mesurer</strong> à la règle (ou avec une règle virtuelle) la distance entre le point précédent et le point suivant (par exemple M<sub>3</sub>M<sub>5</sub> pour le point 4).</li>
+                            <li><strong>Convertir</strong> cette distance avec l'échelle donnée en haut à droite (la barre « 5 cm »).</li>
                             <li><strong>Calculer</strong> la vitesse : v = distance / (2 × Δt) avec Δt = 0,100 s.</li>
                             <li><strong>Tracer</strong> les vecteurs <span class="vec">v</span><sub>3</sub> et <span class="vec">v</span><sub>5</sub> en respectant l'échelle des vitesses (indépendante de celle des longueurs).</li>
                             <li><strong>Construire</strong> graphiquement la différence <span class="vec">v</span><sub>5</sub> − <span class="vec">v</span><sub>3</sub> au point 4.</li>
@@ -952,52 +918,37 @@
                         <p><em>Astuce pour vérifier : dans un mouvement circulaire, le vecteur accélération pointe toujours vers le centre du cercle (accélération centripète). Dans un mouvement rectiligne accéléré, il pointe dans le sens du mouvement.</em></p>
                     </div>
                 </details>
-    </div>
+            </div>
+        </details>
 
-    <!-- ================================================ -->
-    <!-- MODULES À CONFIER (activités 3 et 4)             -->
-    <!-- ================================================ -->
-    <!--  Protocoles 1 et 2 (enregistrement d'un mouvement avec une bille et un aimant, exploitation par pointage vidéo). Questions 1 et 2. -->
-    <!--  Questions 1 à 3 (programmes <span class="formule">centrifugeuse.py</span> et <span class="formule">centrifugeuse_frenet.py</span>).-->
-    <!--   Ces deux activités sont pratiques et numériques. Elles serviront au dossier d'avancement du Grand Oral.                            -->
-  
-
-    <!-- ================================================ -->
-    <!-- BLOC FINAL — MOUVEMENTS PARTICULIERS -->
-    <!-- ================================================ -->
-    <div class="bloc">
-        <div class="bloc-titre">📏 Module 5 — Mouvements particuliers (cours seul)</div>
-
-        <div class="explication">
-            <span class="label">Mouvement rectiligne uniforme</span>
-            <p>Trajectoire : droite. Norme de la vitesse constante.</p>
-            <div class="formule-bloc"><span class="vec">v</span>(t) constant ⟹ <span class="vec">a</span>(t) = <span class="vec">0</span></div>
+        <div class="explication" id="cours5">
+            <span class="label">Cours 5 — Construction graphique</span>
+            <p>Sur une chronophotographie, le vecteur vitesse <span class="vec">v</span>(t) en un point M(t) est approché par la vitesse moyenne :</p>
+            <div class="formule-bloc"><span class="vec">v</span>(t) = <span class="frac"><span class="num">M(t − Δt)M(t + Δt)</span><span class="den">2Δt</span></span></div>
+            <p>Puis la variation du vecteur vitesse :</p>
+            <div class="formule-bloc">Δ<span class="vec">v</span>(t) = <span class="vec">v</span>(t + Δt) − <span class="vec">v</span>(t − Δt)</div>
+            <p>Et l'accélération : <span class="formule"><span class="vec">a</span>(t) = <span class="frac"><span class="num">Δ<span class="vec">v</span>(t)</span><span class="den">2Δt</span></span></span></p>
+            <p>Les vecteurs <span class="vec">a</span>(t) et Δ<span class="vec">v</span>(t) ont <strong>même direction et même sens</strong>.</p>
         </div>
 
         <div class="explication">
-            <span class="label">Mouvement rectiligne uniformément accéléré</span>
-            <p>La norme de la vitesse varie. Accélération <strong>constante et non nulle</strong>, dirigée selon la trajectoire.</p>
-            <ul style="margin-left: 1.2rem;">
-                <li>Si la vitesse augmente → accélération dans le sens du mouvement.</li>
-                <li>Si la vitesse diminue → accélération opposée au mouvement.</li>
-            </ul>
-        </div>
-
-        <div class="explication">
-            <span class="label">Mouvement circulaire uniforme</span>
-            <p>La norme de la vitesse est constante, mais la <strong>direction change</strong> : le vecteur vitesse n'est pas constant.</p>
-            <p>Dans le repère de <span class="violet">Frenet</span> :</p>
-            <div class="formule-bloc"><span class="vec">a</span>(t) = <span class="frac"><span class="num">v²</span><span class="den">R</span></span> · <span class="vec">u</span><sub>n</sub></div>
-            <p>L'accélération est <strong>centripète</strong> (vers le centre du cercle).</p>
-        </div>
-
-        <div class="explication">
-            <span class="label">Mouvement circulaire non uniforme</span>
-            <div class="formule-bloc"><span class="vec">a</span>(t) = <span class="frac"><span class="num">dv</span><span class="den">dt</span></span>(t) · <span class="vec">u</span><sub>t</sub> + <span class="frac"><span class="num">v(t)²</span><span class="den">R</span></span> · <span class="vec">u</span><sub>n</sub></div>
-            <ul style="margin-left: 1.2rem;">
-                <li>Accélération normale : toujours positive, vers l'intérieur de la courbure.</li>
-                <li>Accélération tangentielle : positive si accélération, négative si ralentissement.</li>
-            </ul>
+            <span class="label">Méthode 4 — Caractériser le vecteur accélération à partir d'un enregistrement</span>
+            <p><strong>Principe :</strong> de même que pour la méthode 2, on dispose de l'enregistrement point par point d'une trajectoire. La durée Δt séparant deux points consécutifs est petite et constante.</p>
+            <p>Il s'agit de déterminer les caractéristiques du vecteur accélération <span class="vec">a</span><sub>n</sub> au point M<sub>n</sub> de la trajectoire.</p>
+            <p>Cette accélération peut s'écrire :</p>
+            <div class="formule-bloc"><span class="vec">a</span><sub>n</sub> = <span class="frac"><span class="num"><span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub></span><span class="den">2Δt</span></span></div>
+            <div class="sous-capsule">
+                <strong>Étapes à suivre :</strong>
+                <ol style="margin-left: 1.2rem; margin-top: 0.4rem;">
+                    <li>Tracer les vecteurs vitesse <span class="vec">v</span><sub>n−1</sub> et <span class="vec">v</span><sub>n+1</sub> (méthode 2).</li>
+                    <li>Tracer le vecteur <span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub> au point M<sub>n</sub>.</li>
+                    <li>On connaît alors la direction, le sens et la norme de ce vecteur.</li>
+                    <li>En déduire les caractéristiques du vecteur <span class="vec">a</span><sub>n</sub> : direction, sens, norme.</li>
+                </ol>
+            </div>
+            <div class="sous-capsule" style="background: rgba(224, 149, 60, 0.15); border-left: 3px solid var(--q-border);">
+                <strong>⚠️ Erreur classique :</strong> la norme du vecteur <span class="vec">v</span><sub>n+1</sub> − <span class="vec">v</span><sub>n−1</sub> n'est <strong>pas égale</strong> à v<sub>n+1</sub> − v<sub>n−1</sub>, sauf dans le cas très particulier où les deux vecteurs ont même direction et même sens.
+            </div>
         </div>
     </div>
 

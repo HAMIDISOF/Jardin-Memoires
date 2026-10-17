@@ -142,29 +142,25 @@ Chapitres ★ (non évalués à l'écrit mais au programme du Grand Oral) : 4§6
 
 | Chapitre | Fiche cours | Exos corrigés | Validé par Sof |
 |----------|-------------|---------------|----------------|
-| **10 — Cinématique du point** | 🟡 En cours (BLOC 1 + 2 faits) | 🟡 En cours (exo 2 corrigé) | 🟡 Partiel |
+| **10 — Cinématique du point** | 🟢 Terminé (Modules 1 à 5) | 🟢 Exo 2, Exo 4, Activité 2 | 🟢 Oui |
 
 ### Détail du chapitre 10
 
-| Bloc | Activité | Cours | Méthode | Exo corrigé | Statut |
-|------|----------|-------|---------|-------------|--------|
-| 1 — Relativité du mouvement | Act. 1 (smartphone/train) | ✅ | — (culture) | — | ✅ |
+| Bloc | Activité | Cours | Méthode | Exo / Activité corrigée | Statut |
+|------|----------|-------|---------|-------------------------|--------|
+| 1 — Relativité | Act. 1 (smartphone/train) | ✅ | — | — | ✅ |
 | 2 — Vecteur position | Act. 2 (Terre/Soleil) | ✅ | Méthode 1 | Exo 2 | ✅ |
-| 3 — Vecteur vitesse | Act. 3 (Lune/Terre) | ✅ | Méthode 2 | Exo 4 | ⏳ À faire |
-| 4 — Vecteur accélération | Act. doc. 1 (voiture) | ✅ | Méthode 3 | Exo 2 (phases) | ⏳ À faire |
-| 5 — Détermination graphique | Act. 2 (chronophotographie) | ✅ | Méthode 4 | Palet (act. 2) | ⏳ À faire |
-| 6 — Mouvements particuliers | — | ✅ | Méthode 5 | Exo 3 ou 5 (satellite) | ⏳ À faire |
+| 3 — Vecteur vitesse | Act. 3 (Lune/Terre) | ✅ | Méthode 2 | Exo 4 | ✅ |
+| 4 — Vecteur accélération | Act. doc. 1 (voiture) | ✅ | Méthode 3 | Exo 2 (phases) | ✅ |
+| 5 — Détermination graphique | Act. 2 (chronophotographie) | ✅ | Méthode 4 | Activité 2 (corrigé méthode) | ✅ |
 
 ### Modules confiés au Grand Oral
 - Activité 3 (p. 292) — Étude d'un mouvement filmé
 - Activité 4 (p. 293) — Mouvement circulaire (Python)
 
 ### Prochaines étapes
-1. BLOC 3 — Méthode 2 + exo 4 (voiture).
-2. BLOC 4 — Méthode 3 + exo 2 (phases).
-3. BLOC 5 — Méthode 4 + palet (activité 2).
-4. BLOC 6 — Méthode 5 + exo satellite.
-5. Mise à jour du SUIVI, allègement, passage au chapitre 11 (Mouvement et forces).
+1. Mettre à jour le SUIVI, alléger la session.
+2. Passer au chapitre 11 — Mouvement et forces.
 
 ---
 
